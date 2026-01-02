@@ -1,7 +1,7 @@
 {
   "meta": {
     "home": {
-      "title": "Ziba's - Enjoy your Ziba's at any moment",
+      "title": "Zambos - Enjoy your Zambos at any moment",
       "description": "Your favorite potato chip flakes come with naturally authentic flavors for all tastes."
     },
     "contact": {
@@ -10,46 +10,46 @@
     },
     "recipes": {
       "title": "Recipes",
-      "description": "Discover delicious recipes with Ziba's. From traditional dishes to innovative creations."
+      "description": "Discover delicious recipes with Zambos. From traditional dishes to innovative creations."
     },
     "news": {
       "title": "News",
-      "description": "Stay up to date with the latest news and events from Ziba's."
+      "description": "Stay up to date with the latest news and events from Zambos."
     },
     "products": {
       "title": "Products",
-      "description": "Discover our complete line of Ziba's products. Authentic flavor for the whole family."
+      "description": "Discover our complete line of Zambos products. Authentic flavor for the whole family."
     },
     "brands": {
       "title": "Our Snack Brands",
-      "description": "Discover Ziba's, Zambos, Ranchitas. Each brand with unique and authentic flavors that conquer Central America."
+      "description": "Discover Zambos, Zambos, Ranchitas. Each brand with unique and authentic flavors that conquer Central America."
     },
     "about_us": {
       "title": "About Us - History and Values",
-      "description": "Learn about the history of Ziba's, a leading snack company in Central America since 1990. Our mission, values and commitment to quality."
+      "description": "Learn about the history of Zambos, a leading snack company in Central America since 1990. Our mission, values and commitment to quality."
     },
     "yummiesone": {
-      "title": "Ziba's One",
-      "description": "Discover Ziba's One, our new exclusive platform for true snack lovers."
+      "title": "Zambos One",
+      "description": "Discover Zambos One, our new exclusive platform for true snack lovers."
     }
   },
   "social_media": {
    "facebook": {
       "name": "Facebook",
       "url": "https://www.facebook.com/zibaslatam",
-      "alt": "Facebook de Ziba's",
+      "alt": "Facebook de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/facebook.svg"
     },
     "instagram": {
       "name": "Instagram",
       "url": "https://www.instagram.com/zibaslatam",
-      "alt": "Instagram de Ziba's",
+      "alt": "Instagram de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/instagram.svg"
     },
     "tiktok": {
       "name": "TikTok",
       "url": "https://www.tiktok.com/@zibaslatam",
-      "alt": "TikTok de Ziba's",
+      "alt": "TikTok de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/tiktok.svg"
     }
   },
@@ -70,7 +70,7 @@
         "id": "slide2",
         "desktop": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
         "mobile": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
-        "alt": "Ziba's",
+        "alt": "Zambos",
         "title": "",
         "description": "",
         "link": "#"
@@ -79,7 +79,7 @@
         "id": "slide1",
         "desktop": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
         "mobile": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
-        "alt": "Ziba's",
+        "alt": "Zambos",
         "title": "",
         "description": "",
         "link": "#"
@@ -124,7 +124,7 @@
   },
   "home": {
     "meta": {
-      "title": " Ziba's - Disfruta tus Ziba's en todo momento",
+      "title": " Zambos - Disfruta tus Zambos en todo momento",
       "description": "Tus hojuelas de papa frita favoritas llegan con sabores naturalmente auténticos para todos los gustos."
     },
     "newsletter":{
@@ -134,7 +134,7 @@
     "socialmedia":{
       "title":"Follow us",
       "tagtitle":"on social media",
-      "description":"Follow us on our social media - Snacks Yummies",
+      "description":"Follow us on our social media - Zambos",
       "newsletter":"Stay up to date with all our news and promotions",
       "instagramLinks":[
         {
@@ -154,27 +154,22 @@
   },
   "footer": {
     "main_text": "Unfiltered vibes.",
-    "description": "Live your life to the fullest, express what you feel, explore the world and see the best in you. Because today Ziba's going to be you! Enjoy your Ziba's at all times.",
+    "description": "Live your life to the fullest, express what you feel, explore the world and see the best in you. Because today Zambos going to be you! Enjoy your Zambos at all times.",
     "choose": "Choose",
     "follow_us": "Follow us",
     "contact_us": "Contact us",
     "instagram_text": "Instagram",
     "facebook_text": "Facebook",
     "email": "ayudacliente@zibas.com",
-    "copyright": "Copyright 2025. Ziba's. All rights reserved.",
+    "copyright": "Copyright 2025. Zambos. All rights reserved.",
     "privacy_policy_text": "Privacy Policy",
     "privacy_policy_url": "/es/politica-privacidad"
   },
   "messagetop":[
     {
       "id":"1",
-      "title":"😎 Welcome to Ziba's! If you're craving a snack, you're in the right place 🎉",
+      "title":"😎 Welcome to Zambos! If you're craving a snack, you're in the right place 🎉",
       "link":""
-    },
-    {
-      "id":"2",
-      "title":"🎨 Ziba's Creators: Join with your creativity and win prizes!",
-      "link":"/en/zibas-creators"
     }
   ],
   "form_validation": {

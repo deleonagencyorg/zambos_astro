@@ -52,7 +52,7 @@ const product = products.find((item: Product) => item.id === productId);
 const brandsAssets = t('', { namespace: 'brands', locale: currentLang }) || {};
 const newsAssets =  t('', { namespace: 'news', locale: currentLang }) || {};
 const brandsList = brandsAssets.brands || [];
-const zibasBrand = brandsList.find((brand: any) => brand.id === 'zibas');
+const zibasBrand = brandsList.find((brand: any) => brand.id === 'zambos');
 const zibasProducts = (zibasBrand?.products || []).filter((product: any) => product.id !== productId);
 
 // Si el producto no existe, lanzar error

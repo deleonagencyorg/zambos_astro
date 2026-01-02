@@ -25,7 +25,7 @@
   "items": [
     {
       "id": "zibas-clasicas",
-      "name": "Ziba's Clásicas",
+      "name": "Zambos Clásicas",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-clasicas-2.webp",
       "background_color": "#FDE820",
       "header_color": "#FDE820",
@@ -52,7 +52,7 @@
     },
     {
       "id": "zibas-chile-toreado",
-      "name": "Ziba's Chile Toreado",
+      "name": "Zambos Chile Toreado",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-chile-toreado-2.webp",
       "background_color": "#147a2f",  
       "header_color": "#FFFFFF",
@@ -79,7 +79,7 @@
     },
     {
       "id": "zibas-queso",
-      "name": "Ziba's Queso",
+      "name": "Zambos Queso",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-queso-2.webp",
       "background_color": "#FE5A00",
       "header_color": "#FFFFFF",
@@ -106,7 +106,7 @@
     },
     {
       "id": "zibas-crema-y-especias",
-      "name": "Ziba's Crema y Especias",
+      "name": "Zambos Crema y Especias",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-crema-y-especias-2.webp",
       "background_color": "#BEDE89",
       "header_color": "#1C1C1C",
@@ -133,7 +133,7 @@
     },
     {
       "id": "zibas-miel-mostaza",
-      "name": "Ziba's Miel Mostaza",
+      "name": "Zambos Miel Mostaza",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-miel-mostasa-2.webp",
       "background_color": "#0167F7",
       "header_color": "#FFFFFF",

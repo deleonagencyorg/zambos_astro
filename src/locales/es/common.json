@@ -1,7 +1,7 @@
 {
   "meta": {
     "home": {
-      "title": "Ziba's - Disfruta tus Ziba's en todo momento",
+      "title": "Zambos - Disfruta tus Zambos en todo momento",
       "description": "Tus hojuelas de papa frita favoritas llegan con sabores naturalmente auténticos para todos los gustos."
     },
     "contact": {
@@ -10,50 +10,46 @@
     },
     "recipes": {
       "title": "Recetas",
-      "description": "Descubre deliciosas recetas con Ziba's. Desde platos tradicionales hasta creaciones innovadoras."
+      "description": "Descubre deliciosas recetas con Zambos. Desde platos tradicionales hasta creaciones innovadoras."
     },
     "news": {
       "title": "Noticias",
-      "description": "Mantente al día con las últimas noticias y eventos de Ziba's."
+      "description": "Mantente al día con las últimas noticias y eventos de Zambos."
     },
     "products": {
       "title": "Productos",
-      "description": "Descubre nuestra línea completa de productos Ziba's. Sabor auténtico para toda la familia."
+      "description": "Descubre nuestra línea completa de productos Zambos. Sabor auténtico para toda la familia."
     },
     "brands": {
       "title": "Nuestras Marcas de Snacks",
-      "description": "Descubre Ziba's, Zambos, Ranchitas. Cada marca con sabores únicos y auténticos que conquistan Centroamérica."
+      "description": "Descubre Zambos, Zambos, Ranchitas. Cada marca con sabores únicos y auténticos que conquistan Centroamérica."
     },
     "about_us": {
       "title": "Nosotros - Historia y Valores",
-      "description": "Conoce la historia de Ziba's, empresa líder en snacks de Centroamérica desde 1990. Nuestra misión, valores y compromiso con la calidad."
+      "description": "Conoce la historia de Zambos, empresa líder en snacks de Centroamérica desde 1990. Nuestra misión, valores y compromiso con la calidad."
     },
     "yummiesone": {
-      "title": "Ziba's One",
-      "description": "Descubre Ziba's One, nuestra nueva plataforma exclusiva para los verdaderos amantes de los snacks."
-    },
-    "zibas_creators": {
-      "title": "Ziba's Creators - Concurso de Creatividad",
-      "description": "Participa en el concurso de creatividad de Ziba's. Sube tu contenido en video, baile, música, arte, memes e inteligencia artificial y gana premios increíbles."
+      "title": "Zambos One",
+      "description": "Descubre Zambos One, nuestra nueva plataforma exclusiva para los verdaderos amantes de los snacks."
     }
   },
   "social_media": {
    "facebook": {
       "name": "Facebook",
       "url": "https://www.facebook.com/zibaslatam/",
-      "alt": "Facebook de Ziba's",
+      "alt": "Facebook de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/facebook.svg"
     },
     "instagram": {
       "name": "Instagram",
       "url": "https://www.instagram.com/zibaslatam",
-      "alt": "Instagram de Ziba's",
+      "alt": "Instagram de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/instagram.svg"
     },
     "tiktok": {
       "name": "TikTok",
       "url": "https://www.tiktok.com/@zibaslatam",
-      "alt": "TikTok de Ziba's",
+      "alt": "TikTok de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/tiktok.svg"
     }
   },
@@ -74,7 +70,7 @@
         "id": "slide2",
         "desktop": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
         "mobile": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
-        "alt": "Ziba's",
+        "alt": "Zambos",
         "title": "",
         "description": "",
         "link": "#"
@@ -84,7 +80,7 @@
         "id": "slide1",
         "desktop": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
         "mobile": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
-        "alt": "Ziba's",
+        "alt": "Zambos",
         "title": "",
         "description": "",
         "link": "#"
@@ -97,11 +93,6 @@
     "explore": "Explorar"
   },
   "menu_items": [
-     {
-      "id": "zibas_creators",
-      "text": "Ziba's Creators",
-      "href": "/es/zibas-creators"
-    },
     {
       "id": "products",
       "text": "Productos",
@@ -138,7 +129,7 @@
   },
   "home": {
     "meta": {
-      "title": " Ziba's - Disfruta tus Ziba's en todo momento",
+      "title": " Zambos - Disfruta tus Zambos en todo momento",
       "description": "Tus hojuelas de papa frita favoritas llegan con sabores naturalmente auténticos para todos los gustos."
     },
     "newsletter":{
@@ -148,7 +139,7 @@
     "socialmedia":{
       "title":"Síguenos",
       "tagtitle":"en redes",
-      "description":"Síguenos en nuestras redes sociales - Ziba's",
+      "description":"Síguenos en nuestras redes sociales - Zambos",
       "newsletter":"Entérate de las noticias y promociones",
       "instagramLinks":[
         {
@@ -168,27 +159,22 @@
   },
   "footer": {
     "main_text": "Vibras sin filtro.",
-    "description": "Vive tu vida al máximo, expresa lo que sientes, explora el mundo y ve lo mejor de ti. Porque ¡Hoy Ziba's a ser tú! Disfruta tus Ziba's en todo momento.",
+    "description": "Vive tu vida al máximo, expresa lo que sientes, explora el mundo y ve lo mejor de ti. Porque ¡Hoy Zambos a ser tú! Disfruta tus Zambos en todo momento.",
     "choose": "Elige",
     "follow_us": "Síguenos",
     "contact_us": "Contáctanos",
     "instagram_text": "Instagram",
     "facebook_text": "Facebook",
     "email": "ayudacliente@zibas.com",
-    "copyright": "Copyright 2025. Ziba's. Todos los derechos reservados.",
+    "copyright": "Copyright 2025. Zambos. Todos los derechos reservados.",
     "privacy_policy_text": "Política de Privacidad",
     "privacy_policy_url": "/es/politica-privacidad"
   },
   "messagetop":[
     {
       "id":"1",
-      "title":"😎 ¡Bienvenidos a Ziba's! Si se te antoja un snack, estás en el lugar correcto 🎉",
+      "title":"😎 ¡Bienvenidos a Zambos! Si se te antoja un snack, estás en el lugar correcto 🎉",
       "link":""
-    },
-    {
-      "id":"2",
-      "title":"🎨 Ziba's Creators: ¡Participa con tu creatividad y gana premios!",
-      "link":"/es/zibas-creators"
     }
   ],
   "form_validation": {

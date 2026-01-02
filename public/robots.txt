@@ -3,8 +3,6 @@ User-agent: *
 # Allow only pages in navigation menu
 Allow: /es/$
 Allow: /en/$
-Allow: /es/zibas-creators
-Allow: /en/zibas-creators
 Allow: /es/recetas
 Allow: /en/recipes
 Allow: /es/blog

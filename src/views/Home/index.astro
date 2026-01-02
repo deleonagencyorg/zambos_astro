@@ -35,7 +35,7 @@ const brandsAssets = t('', { namespace: 'brands', locale: currentLang }) || {};
 const newsAssets =  t('', { namespace: 'news', locale: currentLang }) || {};
 const products = t('items', { namespace: 'products', locale: currentLang }) || [];
 const brandsList = brandsAssets.brands || [];
-const zibasBrand = brandsList.find((brand: any) => brand.id === 'zibas');
+const zibasBrand = brandsList.find((brand: any) => brand.id === 'zambos');
 const zibasProducts = zibasBrand?.products || [];
 
 const commonAssets = t('assets.slider', { namespace: 'common', locale: currentLang }) || [];
@@ -45,7 +45,7 @@ const slides = Array.isArray(commonAssets)
     .map(asset => ({
       desktop: asset.desktop,
       mobile: asset.mobile,
-      alt: asset.alt || "Ziba's",
+      alt: asset.alt || "Zambos",
       title: asset.title || '',
       subtitle: asset.description || '',
       link: asset.url || asset.link || ''
@@ -267,10 +267,10 @@ const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
         <p class="text-white font-sans  text-xl leading-relaxed w-100%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante bibendum finibus. Nullam nec metus vel ante bibendum finibus.</p>
       </div>
       <div>
-        <LazyImage src="https://snack.yummiespromociones.com/zibas/gallery16.webp" class="py-4" alt="Ziba's" />
+        <LazyImage src="https://snack.yummiespromociones.com/zibas/gallery16.webp" class="py-4" alt="Zambos" />
       </div>
       <div>
-        <LazyImage src="https://snack.yummiespromociones.com/zibas/gallery15.webp" class="py-4" alt="Ziba's" />
+        <LazyImage src="https://snack.yummiespromociones.com/zibas/gallery15.webp" class="py-4" alt="Zambos" />
         <h4 class="md:text-4xl text-lg font-bold text-white font-title">LOREM IPSUM DOLOR</h4>
         <p class="text-white font-sans text-xl  leading-relaxed w-100%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante bibendum finibus. Nullam nec metus vel ante bibendum finibus.</p>
       </div>
