@@ -6,6 +6,7 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 import LazyImage from '../../components/common/LazyImage.astro';
 import FormContact from '../../components/contact/FormContact.astro';
+import ContactSchema from '../../components/seo/ContactSchema.astro';
 import { fade } from 'astro:transitions';
 
 // Import locale files statically
@@ -40,6 +41,8 @@ const headerColors = {
   textColor: '#FFFFFF'
 };
 ---
+
+<ContactSchema lang={locale} slot="head" />
 
 <MainLayout title={title} class="bg-white" description={metaDescription} headerColorConfig={headerColors}>
   <div class=" w-[100%] mx-auto ">

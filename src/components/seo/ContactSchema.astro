@@ -1,0 +1,47 @@
+---
+// Schema JSON-LD para Contact Page
+interface Props {
+  lang: 'es' | 'en';
+}
+
+const { lang } = Astro.props;
+
+const baseUrl = lang === 'es' ? 'https://www.zambos.com/es/contacto/' : 'https://www.zambos.com/en/contact/';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": lang === 'es' ? "Contacto Zambos" : "Contact Zambos",
+  "description": lang === 'es' 
+    ? "Página de contacto de Zambos Snacks para consultas y sugerencias"
+    : "Contact page for Zambos Snacks for inquiries and suggestions",
+  "url": baseUrl,
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Zambos Snacks",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "telephone": "+504-2275-3370",
+      "email": lang === 'es' ? "contacto@zambos.com" : "contact@zambos.com",
+      "areaServed": ["HN", "GT", "SV", "CR", "NI", "DO", "US"],
+      "availableLanguage": ["es", "en"]
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Barrio Morazán, Frente a Plantas Tropicales, Bulevar Suyapa",
+      "addressLocality": "Tegucigalpa",
+      "addressRegion": "Francisco Morazán",
+      "postalCode": "Honduras",
+      "addressCountry": "HN"
+    },
+    "sameAs": [
+      "https://www.facebook.com/zibaslatam",
+      "https://www.instagram.com/zibaslatam",
+      "https://www.tiktok.com/@zibaslatam"
+    ]
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

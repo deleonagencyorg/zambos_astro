@@ -8,6 +8,7 @@ import ProductsCarousel from '../../components/common/ProductsCarousel/index.ast
 import MasonryGallery from '../../components/gallery/MasonryGallery.astro';
 import PixelGrid from '../../components/atoms/PixelGrid.astro';
 import BlogCard from '../../components/blog/BlogCard.astro';
+import OrganizationSchema from '../../components/seo/OrganizationSchema.astro';
 
 
 // Style Imports
@@ -82,6 +83,8 @@ const topNewsLabel = currentLang==='es' ? 'NOTICIAS MÁS IMPORTANTES' : 'TOP NEW
 const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
 
 ---
+
+  <OrganizationSchema lang={currentLang} slot="head" />
 
   <main class="w-full flex flex-col items-center justify-center mt-0">
     <!-- Slider Section con VideoCarousel -->
