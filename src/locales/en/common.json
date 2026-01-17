@@ -68,8 +68,8 @@
     "slider": [
       {
         "id": "slide2",
-        "desktop": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
-        "mobile": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
+        "desktop": "/images/es/slider1.png",
+        "mobile": "/images/es/slider1.png",
         "alt": "Ziba's",
         "title": "",
         "description": "",
@@ -92,16 +92,20 @@
     "explore": "Explorar"
   },
   "menu_items": [
- 
+    {
+      "id": "home",
+      "text": "Home",
+      "href": "/en/"
+    },
+    {
+      "id": "history",
+      "text": "History",
+      "href": "/en/history"
+    },
     {
       "id": "products",
       "text": "Products",
       "href": "/en/#products"
-    },
-    {
-      "id": "gallery",
-      "text": "Gallery",
-      "href": "/en/#gallery"
     },
     {
       "id": "recipes",
@@ -112,8 +116,29 @@
       "id": "contact",
       "text": "Contact",
       "href": "/en/contact"
+    },
+    {
+      "id": "blog",
+      "text": "Blog",
+      "href": "/en/blog"
     }
-   
+  ],
+  "menu_items_header": [
+    {
+      "id": "home",
+      "text": "Home",
+      "href": "/en/"
+    },
+    {
+      "id": "contact",
+      "text": "Contact",
+      "href": "/en/contact"
+    },
+    {
+      "id": "Zambos",
+      "text": "Zambos Truck",
+      "href": "/en/"
+    }
   ],
   "about_us": {
     "title": "Conoce Nuestra",

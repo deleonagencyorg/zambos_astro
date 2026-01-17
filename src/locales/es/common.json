@@ -72,14 +72,13 @@
     "slider": [
       {
         "id": "slide2",
-        "desktop": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
-        "mobile": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
+        "desktop": "/images/es/slider1.png",
+        "mobile": "/images/es/slider1.png",
         "alt": "Ziba's",
         "title": "",
         "description": "",
         "link": "#"
       },
-   
       {
         "id": "slide1",
         "desktop": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
@@ -98,9 +97,14 @@
   },
   "menu_items": [
      {
-      "id": "zibas_creators",
-      "text": "Ziba's Creators",
-      "href": "/es/zibas-creators"
+      "id": "home",
+      "text": "Inicio",
+      "href": "/es/"
+    },
+    {
+      "id": "history",
+      "text": "Historia",
+      "href": "/es/historia"
     },
     {
       "id": "products",
@@ -108,26 +112,37 @@
       "href": "/es/#products"
     },
     {
-      "id": "gallery",
-      "text": "Galería",
-      "href": "/es/#gallery"
-    },
-    {
       "id": "recipes",
       "text": "Recetas",
       "href": "/es/recetas"
     },
     {
+      "id": "contact",
+      "text": "Contacto",
+      "href": "/es/contacto"
+    },
+    {
       "id": "blog",
       "text": "Blog",
       "href": "/es/blog"
+    }
+  ],
+  "menu_items_header": [
+    {
+      "id": "home",
+      "text": "Inicio",
+      "href": "/es/"
     },
     {
       "id": "contact",
       "text": "Contacto",
       "href": "/es/contacto"
+    },
+    {
+      "id": "Zambos",
+      "text": "Zambos Truck",
+      "href": "/es/"
     }
-   
   ],
   "about_us": {
     "title": "Conoce Nuestra",

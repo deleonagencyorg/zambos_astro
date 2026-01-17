@@ -1,0 +1,14 @@
+{
+    "experiences": [
+      {
+        "id": "zambos-truck",
+        "title": "Zambos Truck",
+        "description": "Our truck arrives loaded with flavor, great vibes, and experiences that turn any moment into a party. Find us in your city and enjoy the flavor on the move.",
+        "image": "/images/en/experiences/zambos-truck.png",
+        "imageMobile": "/images/en/experiences/zambos-truck.png",
+        "link": "/en/experiences/zambos-truck",
+        "buttonText": "Learn more"
+      }
+    ]
+  }
+  

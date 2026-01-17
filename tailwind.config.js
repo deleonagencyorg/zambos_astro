@@ -15,6 +15,14 @@ module.exports = {
     'bg-green', 'text-green', 'border-green',
     ],
   theme: {
+    screens: {
+      'xs': '390px',      // Teléfono
+      'sm': '640px',      // Teléfono grande
+      'md': '768px',      // Tablet
+      'lg': '1024px',     // Laptop
+      'xl': '1440px',     // Desktop
+      '2xl': '1920px',    // Desktop grande
+    },
     extend: {
       colors: {
         primary: '#FD6600',
@@ -26,12 +34,12 @@ module.exports = {
         white: '#FFFFFF',
         brown: '#5B3F2E',
         blue: '#0167F7',
-        green: '#10b981',
+        green: '#0DB04A',
         orange: '#FD6600',
         yellow: '#FDE820',
         pink: '#FF4DFF',
         lemon: '#BEDE89',
-        
+        greenDark: '#009337'
     
       },
       fontFamily: {

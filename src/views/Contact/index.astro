@@ -7,6 +7,7 @@ import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 import LazyImage from '../../components/common/LazyImage.astro';
 import FormContact from '../../components/contact/FormContact.astro';
 import { fade } from 'astro:transitions';
+import Subscription from '../../components/subscription/index.astro';
 
 // Import locale files statically
 import contactEs from '../../locales/es/contact.json';
@@ -36,7 +37,7 @@ const title = contact.title;
 const metaDescription = contact.description;
 console.log('headerColorConfig in Contact:', headerColorConfig);
 const headerColors = {
-  backgroundColor: '#FE5A00',
+  backgroundColor: '#0DB04A',
   textColor: '#FFFFFF'
 };
 ---
@@ -46,18 +47,21 @@ const headerColors = {
     
 
     <!-- Main Contact Section -->
-    <div class="flex flex-col justify-center px-4 items-start lg:flex-row gap-12 py-12" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgcontactzibas.webp'); background-size: cover; background-position: center;">
+    <div class="flex flex-col justify-center px-4 items-start lg:flex-row gap-12 py-12 bg-[#0DB04A]">
       
       <!-- Left Column - Contact Info -->
-    <div class="w-[100%] lg:w-[40%] pl-8 lg:pl-16 flex flex-col justify-center h-[100%] lg:h-[600px]">
-        <h1 class="text-white font-title text-7xl uppercase md:text-6xl lg:text-7xl font-bold mb-6">
+    <div class="w-[100%] lg:w-[50%] pl-8 lg:pl-16 flex flex-col justify-center h-[100%] lg:h-[600px]">
+        <h2 class="text-white font-title text-2xl uppercase md:text-2xl lg:text-2xl font-bold mb-6">
           {contact.title}
+        </h2>
+
+        <h1 class="text-white font-title text-5xl uppercase md:text-6xl lg:text-7xl font-bold mb-6">
+          {contact.subtitle}
         </h1>
-        
+
         <p class="text-white font-bold text-2xl lg:text-2xl mb-8 leading-relaxed ">
           {contact.description}
         </p>
-     
       </div>
       
       <!-- Right Column - Contact Form -->
@@ -67,11 +71,11 @@ const headerColors = {
     </div>
     
     <!-- Offices Section -->
-    <div class="mx-auto bg-blue p-8">
-      <h3 class="text-white md:text-4xl text-4xl italic font-title uppercase font-bold mb-4 flex items-center justify-center gap-1">
+    <div class="mx-auto bg-[#0DB04A] p-8">
+      <h3 class="text-white md:text-4xl text-4xl italic font-title uppercase font-bold mb-4 flex items-center justify-start gap-1">
         <span class="font-title">{contact.offices.title.split(' ')[0]} {contact.offices.title.split(' ')[1]}</span>
       </h3>
-      <h1 class="text-white md:text-9xl text-12xl italic font-title uppercase font-bold mb-4 flex items-center justify-center gap-1">
+      <h1 class="text-white md:text-4xl text-4xl italic font-title uppercase font-bold mb-4 flex items-center justify-start gap-1">
         <span class="font-title">{contact.offices.title.split(' ').slice(2).join(' ')}</span>
       </h1>
       
@@ -79,7 +83,7 @@ const headerColors = {
       <div class="flex flex-col mb-4">
         <!-- Office Details -->
         <div class="order-2 w-[80%] mx-auto">
-          <div id="officeInfo" class="bg-blue rounded-2xl p-8 ">
+          <div id="officeInfo" class="bg-[#0DB04A] rounded-2xl p-8 ">
             <div class="flex flex-col lg:flex-row justify-between items-center">
               <div class="space-y-4">
                 <h3 id="officeName" class="text-white font-sans text-6xl md:text-7xl uppercase font-extrabold  mb-4">
@@ -99,15 +103,6 @@ const headerColors = {
                     ))}
                   </div>
                 </div>
-                
-                <!-- <div class="flex items-center space-x-3">
-                  <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                  </svg>
-                  <a id="officeEmail" href={`mailto:${contact.offices.locations["+504"].email}`} class="text-primary hover:text-secondary transition-colors">
-                    {contact.offices.locations["+504"].email}
-                  </a>
-                </div> -->
               </div>
               <div class="mt-6 lg:mt-0">
                 <LazyImage 
@@ -123,15 +118,15 @@ const headerColors = {
         <!-- Map and Tabs -->
         <div class="order-1 mt-4">
           <!-- Country Tabs -->
-          <div class="mb-6 flex flex-wrap justify-center gap-2">
+          <div class="mb-6 flex flex-wrap justify-start gap-2">
           {Object.entries(contact.offices.locations).map(([countryCode, location]: [string, any], index: number) => (
             <button 
               data-country-code={countryCode}
               class={`country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5
                 ${index === 0 
-                  ? 'h-[54px] bg-[#005ADA] opacity-100 border border-white' 
-                  : 'h-[54px] bg-[#005ADA] opacity-75 hover:opacity-100'
-                } rounded-[47px]`}
+                  ? 'h-[54px] bg-[#FF0001] opacity-100 border border-white border-[1px] border-[#FF0001] rounded-full ' 
+                  : 'h-[54px] bg-[#0DB04A] opacity-75 hover:opacity-100 border-[1px] border-[#FF0001] text-[#FF0001] rounded-full'
+                }`}
             >
               {location.tab}
             </button>
@@ -253,15 +248,16 @@ const headerColors = {
         
         // Function to handle tab selection
         function handleTabSelection(tab) {
-          // Remove active class and border from all tabs
+          // Recorrer todos los tabs
           tabs.forEach(t => {
-            t.classList.remove('border', 'border-white');
-            t.style.opacity = '0.75';
+            if (t === tab) {
+              // ESTILO SELECCIONADO - Tab activo
+              t.className = `country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-[#FF0001] opacity-100 border border-white border-[1px] border-[#FF0001] rounded-full`;
+            } else {
+              // ESTILO NO SELECCIONADO - Tab inactivo
+              t.className = `country-tab px-10 py-4 uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-[#0DB04A] opacity-75 hover:opacity-100 border-[1px] border-[#FF0001] text-[#FF0001] rounded-full`;
+            }
           });
-          
-          // Add active class and border to clicked tab
-          tab.classList.add('border', 'border-white');
-          tab.style.opacity = '1';
           
           // Update office info based on country code
           const countryCode = tab.getAttribute('data-country-code');
@@ -286,8 +282,11 @@ const headerColors = {
         
         // Initialize with first country
         if (tabs.length > 0) {
-          const firstTabCountry = tabs[0].getAttribute('data-country-code');
+          const firstTab = tabs[0];
+          const firstTabCountry = firstTab.getAttribute('data-country-code');
           if (firstTabCountry) {
+            // Establecer el primer tab como seleccionado
+            firstTab.className = `country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-[#FF0001] opacity-100 border border-white border-[1px] border-[#FF0001] rounded-full`;
             updateOfficeInfo(firstTabCountry);
           }
         }
@@ -307,4 +306,7 @@ const headerColors = {
       setTimeout(initializeCountryTabs, 500);
     </script>
   </div>
+  <section class="w-full">
+    <Subscription />
+  </section>
 </MainLayout>

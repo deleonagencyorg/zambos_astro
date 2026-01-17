@@ -1,174 +1,66 @@
 ---
-// src/components/common/Footer/index.astro
 import { t, type Locale } from '../../../i18n/i18n';
-import { logos } from '../../../config/assets';
-import './styles.css';
-import Skeleton from './Skeleton.astro';
 import LazyImage from '../LazyImage.astro';
-import { span } from 'framer-motion/m';
 
 export interface Props {
   currentLang: Locale;
-  loading?: boolean;
 }
 
-const { currentLang, loading = false } = Astro.props;
+const { currentLang } = Astro.props;
 
-// Obtener textos del footer desde los archivos de traducción
-const mainText = t('footer.main_text', { namespace: 'common', locale: currentLang });
-const description = t('footer.description', { namespace: 'common', locale: currentLang });
-const followUs = t('footer.follow_us', { namespace: 'common', locale: currentLang });
-const contactUs = t('footer.contact_us', { namespace: 'common', locale: currentLang });
-const choose = t('footer.choose', { namespace: 'common', locale: currentLang });
-const instagramText = t('footer.instagram_text', { namespace: 'common', locale: currentLang });
-const facebookText = t('footer.facebook_text', { namespace: 'common', locale: currentLang });
-const email = t('footer.email', { namespace: 'common', locale: currentLang });
-const copyrightText = t('footer.copyright', { namespace: 'common', locale: currentLang });
+const menuItems = t('menu_items_header', { namespace: 'common', locale: currentLang }) as any[];
 
-
-// Social media URLs
 const instagramUrl = t('social_media.instagram.url', { namespace: 'common', locale: currentLang });
 const facebookUrl = t('social_media.facebook.url', { namespace: 'common', locale: currentLang });
-const instagramIconUrl = t('social_media.instagram.iconUrl', { namespace: 'common', locale: currentLang });
-const facebookIconUrl = t('social_media.facebook.iconUrl', { namespace: 'common', locale: currentLang });
-
-// Obtener el logo específico de Zibas desde brands.json
-const zibasLogo = 'https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp';
+const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: currentLang });
 ---
 
-{loading ? (
-  <Skeleton />
-) : (
-  <footer class="bg-secondary text-white relative overflow-hidden z-10">
-    <div class="container mx-auto px-6 py-8 md:py-8 flex md:flex-row flex-col items-center justify-center md:gap-20 lg:gap-80">
-      <div class="w-full md:w-1/3 mb-8 md:mb-0 flex justify-start items-start flex-col">
-        <h3 class="font-title text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            {mainText}
-          </h3>
-          <p class="font-sans italic text-sm md:text-base leading-relaxed w-100%">
-            {description}
-          </p>
-      </div>
-      <div class="w-full md:w-1/3 flex justify-start items-start flex-col">
-       <div class="md:flex flex-row items-center hidden ">
-        <h3 class="font-title text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight mr-4 ">
-            {choose}
-          </h3>
-        <a href={`/${currentLang}/`} >
-            <LazyImage 
-              src={logos.principal.url} 
-              alt={logos.principal.alt || 'Zibas Logo'} 
-              class="h-16 md:h-20 lg:h-24 w-auto -mt-4"
-            />
+<footer class="bg-[#009337] w-full">
+  <div class="container mx-auto px-6 h-[64px] flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href={`/${currentLang}/`} class="flex items-center">
+      <LazyImage
+        src="/images/es/logo.svg"
+        alt="Zambos"
+        class="h-8 w-auto"
+      />
+    </a>
+
+    <!-- Links -->
+    <div class="flex flex-row gap-8 pr-[25px]">
+      <nav class="hidden md:flex items-center space-x-8">
+        {menuItems.map(item => (
+          <a
+            href={item.href}
+            class="text-white font-sans text-[18px] font-medium hover:opacity-80 transition"
+          >
+            {item.text}
+          </a>
+        ))}
+      </nav>
+  
+      <!-- Social -->
+      <div class="flex items-center space-x-4">
+        <a href={instagramUrl} target="_blank" aria-label="Instagram">
+          <svg class="w-5 h-5 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
+          </svg>
         </a>
-       </div> 
-       <div class="flex justify-start items-start flex-row md:space-x-4 space-x-24">
-        <div class="text-center lg:text-right">
-            <h3 class="font-title text-lg md:text-xl font-bold mb-3">
-              {followUs}
-            </h3>
-            <div class="flex flex-col space-y-1">
-              <div>
-                <a 
-                href={instagramUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="font-sans text-sm md:text-base hover:underline transition-all duration-200 hover:opacity-80 flex items-center justify-center lg:justify-end space-x-2"
-              >                
-                <LazyImage 
-                  src={instagramIconUrl} 
-                  alt={instagramText} 
-                    class="h-6 md:h-2 lg:h-8 w-auto"
-                    color="white"
-                />
-                <span>{instagramText}</span>
-              </a>
-              </div>
-              <div class="flex items-center justify-start space-x-2">
-              <a 
-                href={facebookUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="font-sans text-sm md:text-base hover:underline transition-all duration-200 hover:opacity-80 flex items-center justify-center lg:justify-end space-x-2"
-              >
-                <LazyImage 
-                  src={facebookIconUrl} 
-                  alt={facebookText} 
-                  color="white"
-                  class="h-6 md:h-2 lg:h-8 w-auto"
-                />
-                <span>{facebookText}</span>
-              </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Contáctanos -->
-          <div class="text-start">
-            <h3 class="font-title text-lg md:text-xl font-bold mb-3">
-              {contactUs}
-            </h3>
-            <div class="flex flex-col space-y-1">
-              <a 
-                href={`mailto:${email}`}
-                class="font-sans text-sm md:text-base hover:underline transition-all duration-200 hover:opacity-80"
-              >
-                {email}
-              </a>
-            </div>
-          </div>
-       </div>
+  
+        <a href={facebookUrl} target="_blank" aria-label="Facebook">
+          <svg class="w-5 h-5 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H16l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+  
+        <a href={tiktokUrl} target="_blank" aria-label="TikTok">
+          <svg class="w-5 h-5 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21 8.3a6.7 6.7 0 0 1-4.3-1.5v8.6a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2.1 2.7V2h3.3A6.7 6.7 0 0 0 21 6.3v2z"/>
+          </svg>
+        </a>
       </div>
-     
     </div>
-    <div class="w-full text-center container mx-auto px-6 py-4 flex items-center justify-center flex-col">
-        <div class="flex items-center md:space-x-16 lg:space-x-24 flex-col md:flex-row">
-          <div class="hidden md:block"><LazyImage src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-derecho 2.webp" alt="Ziba's papas" class="h-16 md:h-20 lg:h-24 w-auto -mt-4 transform rotate-180" /></div>
-          <div class="text-center text-2xl">{currentLang=='es' ? `Copyright ${new Date().getFullYear()} Zibas. Todos los derechos reservados.` : `Copyright ${new Date().getFullYear()} Zibas. All rights reserved.`}</div>
-          <div class="hidden md:block"><LazyImage src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-derecho 2.webp" alt="Ziba's papas" class="h-16 md:h-20 lg:h-32 w-auto -mt-4 " /></div>
-        </div>
-      <div class="hidden md:block"><LazyImage src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-derecho 2.webp" alt="Ziba's papas" class="h-16 md:h-20 lg:h-24 w-auto -mt-4 transform -rotate-45" /></div>
-    </div>
-    <!-- Chips decorativos (sin línea separadora superior) -->
-    <div class="w-full border-t-0 mt-0 pt-0">
-        <div class="container mx-auto">
-          <div class="text-center mb-4">
-            <h3 class="text-white  font-sans text-xl font-medium">DINANT - Contacto</h3>
-          </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 justify-items-center">
-            <!-- Guatemala -->
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl" role="img" aria-label="Guatemala">🇬🇹</span>
-              <span>(+502) 2502-7050</span>
-            </div>
-            <!-- El Salvador -->
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl" role="img" aria-label="El Salvador">🇸🇻</span>
-              <span>(+503) 2510-8300</span>
-            </div>
-            <!-- Costa Rica -->
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl" role="img" aria-label="Costa Rica">🇨🇷</span>
-              <span>(+506) 2234-7259</span>
-            </div>
-            <!-- República Dominicana -->
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl" role="img" aria-label="República Dominicana">🇩🇴</span>
-              <span>(+1809) 473-1212</span>
-            </div>
-            <!-- Nicaragua -->
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl" role="img" aria-label="Nicaragua">🇳🇮</span>
-              <span>(+505) 2251-4069</span>
-            </div>
-            <!-- Honduras -->
-            <div class="flex items-center space-x-2">
-              <span class="text-2xl" role="img" aria-label="Honduras">🇭🇳</span>
-              <span>(+504) 2275-3370</span>
-            </div>
-          </div>
-        </div>
-      </div>
-  </footer>
-)}
 
+  </div>
+</footer>

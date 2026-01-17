@@ -1,39 +1,40 @@
 {
-  "title": "Contact Us",
-  "subtitle": "Get in Touch",
-  "description": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
-  "email": "info@yummies.com",
-  "phone": "+504 2275-3370",
+  "title": "Contact",
+  "subtitle": "Do you have any questions?",
+  "description": "Our truck arrives loaded with flavor, good vibes, and experiences that turn any moment into a party. Find us in your city and enjoy flavor on the move.",
+  "email": "contacto@yummies.com",
+  "phone": "1234-56789",
   "form": {
-    "title": "Send us a message",
+    "title": "Do you have questions? We are here for you!",
     "contactReason": {
       "label": "Reason for contact",
-      "placeholder": "I want to be a client",
+      "placeholder": "I want to become a client",
       "required": true,
       "options": [
         "I am a client",
-        "I want to be a client",
+        "I want to become a client",
         "Exports",
-        "I want to be a supplier",
-        "Send Resume",
-        "I am a University Student",
-        "I am a Journalist/Media",
+        "I want to become a supplier",
+        "Submit resume",
+        "I am a university student",
+        "I am a journalist / media",
         "YUMMIES Ethics Line",
+        "I am a winner",
         "Others"
       ]
     },
     "fullName": {
-      "label": "Full Name",
-      "placeholder": "Enter your full name",
+      "label": "Full name",
+      "placeholder": "First and last name",
       "required": true
     },
     "email": {
-      "label": "Email",
-      "placeholder": "your@email.com",
+      "label": "Email address",
+      "placeholder": "email@example.com",
       "required": true
     },
     "phone": {
-      "label": "Mobile Number",
+      "label": "Mobile number",
       "placeholder": "XXXXXXXX",
       "required": false
     },
@@ -42,15 +43,15 @@
       "placeholder": "Write your message here...",
       "required": true
     },
-    "submit": "Send"
+    "submit": "Send message"
   },
   "offices": {
-    "title": "Our Offices",
+    "title": "Discover Our Offices",
     "locations": {
       "+504": {
         "tab": "Honduras",
         "name": "Yummies Honduras",
-        "address": "Corporación Dinant, In front of Tropical Plants, Suyapa Blvd., 11101 Tegucigalpa, Francisco Morazán, Honduras",
+        "address": "Corporación Dinant, In front of Plantas Tropicales, Blvd. Suyapa, 11101 Tegucigalpa, Francisco Morazán, Honduras",
         "phones": ["2275-3370", "2239-5869", "2235-7521"],
         "email": "contacto.honduras@yummies.com",
         "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/oficina-honduras.webp",
@@ -58,8 +59,8 @@
       },
       "+502": {
         "tab": "Guatemala",
-          "name": "Yummies Guatemala",
-        "address": "Corporación Dinant, 4 Industrial Complex, El Naranjo Blvd. 16-61, Guatemala City",
+        "name": "Yummies Guatemala",
+        "address": "Corporación Dinant, 4 Industrial Complex, Bulevar El Naranjo 16-61, Guatemala City",
         "phones": ["2502-7050"],
         "email": "contacto.guatemala@yummies.com",
         "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/oficina-guatemala.webp",
@@ -68,7 +69,7 @@
       "+503": {
         "tab": "El Salvador",
         "name": "Yummies El Salvador",
-        "address": "Dinant de El Salvador, S.A. de C.V., National Army Blvd., km 9 1/2, San Bartolo Free Zone entrance, El Salvador",
+        "address": "Dinant de El Salvador, S.A. de C.V., Bulevar del Ejército Nacional, km 9 1/2, entrance to Zona Franca San Bartolo, El Salvador",
         "phones": ["2510-8300"],
         "fax": "2295-8243",
         "email": "contacto.elsalvador@yummies.com",
@@ -96,7 +97,7 @@
       "+1809": {
         "tab": "Dominican Republic",
         "name": "Yummies Dominican Republic",
-        "address": "Corporacion Dinant (Yummies), F2R8+G25, Santo Domingo 10408, Dominican Republic",
+        "address": "Corporación Dinant (Yummies), F2R8+G25, Santo Domingo 10408, Dominican Republic",
         "phones": ["473-1212"],
         "email": "contacto.dominicana@yummies.com",
         "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/oficina-dominicana.webp",
@@ -106,6 +107,6 @@
   },
   "map": {
     "title": "Find Us",
-    "description": "Visit our main offices in Central America"
+    "description": "Visit our main offices in Honduras"
   }
 }

@@ -48,14 +48,14 @@
         "40g",
         "80g",
         "190g"
-      ]
+      ],
+      "category": "snacks"
     },
     {
       "id": "zibas-chile-toreado",
       "name": "Ziba's Chile Toreado",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-chile-toreado-2.webp",
       "background_color": "#147a2f",  
-      "header_color": "#FFFFFF",
       "text_color":"#147a2f",
       "header_background": "#147a2f",
       "header_color": "#FFFFFF",
@@ -75,7 +75,8 @@
         "40g",
         "80g",
         "190g"
-      ]
+      ],
+      "category": "snacks"
     },
     {
       "id": "zibas-queso",
@@ -102,7 +103,8 @@
         "40g",
         "80g",
         "190g"
-      ]
+      ],
+      "category": "snacks"
     },
     {
       "id": "zibas-crema-y-especias",
@@ -129,7 +131,8 @@
         "40g",
         "80g",
         "190g"
-      ]
+      ],
+      "category": "snacks"
     },
     {
       "id": "zibas-miel-mostaza",
@@ -156,7 +159,8 @@
         "40g",
         "80g",
         "190g"
-      ]
+      ],
+      "category": "snacks"
     }
   ]
 }

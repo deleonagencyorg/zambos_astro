@@ -8,6 +8,8 @@ import ProductsCarousel from '../../components/common/ProductsCarousel/index.ast
 import MasonryGallery from '../../components/gallery/MasonryGallery.astro';
 import PixelGrid from '../../components/atoms/PixelGrid.astro';
 import BlogCard from '../../components/blog/BlogCard.astro';
+import ExperiencesCarousel from '../../components/common/Experiences/index.astro';
+import Subscription from '../../components/subscription/index.astro';
 
 
 // Style Imports
@@ -34,6 +36,7 @@ const aboutAssets = t('', { namespace: 'aboutus', locale: currentLang }) || {};
 const brandsAssets = t('', { namespace: 'brands', locale: currentLang }) || {};
 const newsAssets =  t('', { namespace: 'news', locale: currentLang }) || {};
 const products = t('items', { namespace: 'products', locale: currentLang }) || [];
+const experiences = t('experiences', { namespace: 'experiences', locale: currentLang }) || [];
 const brandsList = brandsAssets.brands || [];
 const zibasBrand = brandsList.find((brand: any) => brand.id === 'zibas');
 const zibasProducts = zibasBrand?.products || [];
@@ -96,20 +99,28 @@ const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
     
     <!-- Sección de Productos Zibas -->
     {zibasProducts.length > 0 && (
-      <section id="products" class="w-full py-4 bg-blue pt-16">
-        <div class="container mx-auto px-4">
+      <section id="products" class="w-full py-4 bg-[#0DB14A] pt-16 relative overflow-hidden">
+        <div 
+          class="hidden lg:block absolute top-[-15%] left-1/2 -translate-x-1/2 w-[1238px] h-[1238px] rounded-full opacity-20 z-0 pointer-events-none"
+          style="background: linear-gradient(270deg, #009337 0%, #006626 100%);"
+        ></div>
+
+        <div 
+          class="hidden md:block lg:hidden xl:hidden absolute top-[-10%] left-1/2 -translate-x-1/2 w-[900px] h-[1100px] rounded-full opacity-20 z-0 pointer-events-none"
+          style="background: linear-gradient(270deg, #009337 0%, #006626 100%);"
+        ></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
           {brandsAssets.home?.title && (
-          <div class="text-center mb-2 relative z-20" >
-            <h2 class="text-3xl md:text-4xl italic font-bold mb-3" style={`color: white`}>
-              {brandsAssets.home?.title}
-            </h2>
-            {brandsAssets.home?.subtitle && (
-              <h1 class="text-6xl md:text-9xl italic font-bold " style={`color: white`}>
-                {brandsAssets.home?.subtitle}
-              </h1>
-            )}
-          </div>
-        )}
+            <div class="text-center mb-2 relative z-20">
+              {brandsAssets.home?.subtitle && (
+                <h1 class="lg:text-[84px] text-[64px] italic font-bold uppercase text-white">
+                  {brandsAssets.home?.subtitle}
+                </h1>
+              )}
+            </div>
+          )}
+      
           <ProductsCarousel 
             products={products}
             color={'white'}
@@ -124,7 +135,7 @@ const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
       </section>
     )}
     <!-- Sección de recetas con carrusel -->
-    <section id="recipes" class="w-full py-12" transition:animate="slide">
+    <!-- <section id="recipes" class="w-full py-12" transition:animate="slide">
       <div class="container mx-auto px-4">
         {recipesAssets.home?.title && (
           <div class="text-center mb-16 relative z-20" >
@@ -143,15 +154,23 @@ const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
           textButton={recipesAssets.home?.view_more || 'Ver Todas'}
         />
       </div>
+    </section> -->
+
+
+
+
+    <section>
+      <ExperiencesCarousel 
+        experiences={experiences}
+      />
     </section>
 
-
     <!-- Sección Gallery -->
-    <section id="gallery" class="bg-pink w-full py-12" transition:animate="slide">
+    <section id="gallery" class="bg-[#0AA544] w-full py-12" transition:animate="slide">
       <div class="container mx-auto px-4">
         {Array.isArray(galleryAssets.images) && galleryAssets.images.length > 0 && (
           <MasonryGallery 
-            items={galleryAssets.images}
+            posts={galleryAssets.images}
             columns={3}
             title={galleryAssets.title}
             className=""
@@ -160,7 +179,9 @@ const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
       </div>
     </section>
 
-
+    <section class="w-full">
+      <Subscription />
+    </section>
 
 
     <!-- Sección News -->

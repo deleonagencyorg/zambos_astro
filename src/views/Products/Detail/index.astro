@@ -6,6 +6,8 @@ import './styles.css';
 import { initProductDetail } from './scripts.js';
 import ProductsCarousel from '../../../components/common/ProductsCarousel/index.astro';
 import LazyImage from '../../../components/common/LazyImage.astro';
+import Subscription from '../../../components/subscription/index.astro';
+import ExperiencesCarousel from '../../../components/common/Experiences/index.astro';
 
 
 // Interfaces locales
@@ -54,6 +56,7 @@ const newsAssets =  t('', { namespace: 'news', locale: currentLang }) || {};
 const brandsList = brandsAssets.brands || [];
 const zibasBrand = brandsList.find((brand: any) => brand.id === 'zibas');
 const zibasProducts = (zibasBrand?.products || []).filter((product: any) => product.id !== productId);
+const experiences = t('experiences', { namespace: 'experiences', locale: currentLang }) || [];
 
 // Si el producto no existe, lanzar error
 if (!product || Object.keys(product).length === 0) {
@@ -89,135 +92,226 @@ if (allProductsArray.length > 1) {
     .slice(0, 3);
 }
 
-
 ---
 
 {safeProduct.background_color && (
   <article
     id="product-detail"
-    class="product-detail pt-12 md:pt-29 pb-32 bg-cover bg-center relative"
-    style={{ backgroundColor: safeProduct.background_color }}
+    class="product-detail min-h-screen relative overflow-hidden"
+    style={{ backgroundColor: '#0DB04A' }}
     transition:animate="slide"
   >
-    <div class="md:mt-[0] container mx-auto px-6 py-5 flex flex-col lg:flex-row gap-5">
-      {/* Contenedor de la imagen del lado izquierdo */}
-      <div class="relative flex justify-center items-center w-full lg:w-[605px] p-4 lg:px-28 lg:py-8 rounded-[85px] gap-2 cursor-pointer overflow-hidden group" style={{ backgroundColor: safeProduct.color_button }}>
-        {/* Overlay para el efecto de oscurecimiento */}
-        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 rounded-[85px]"></div>
-        <img id="product-image" class="relative z-10 max-w-full h-auto transition-transform duration-300 group-hover:scale-110" src={safeProduct.image} alt={safeProduct.name} transition:name={`product-image-${safeProduct.id}`} />
-      </div>
-      
-      {/* Contenido del lado derecho */}
-      <div class="w-full lg:w-1/2  h-auto">
-        <div class="flex justify-between items-center mb-6">
-          <h1 class="lg:text-6xl text-6xl font-bold uppercase italic" style={{ color: safeProduct.header_text_color }}>{safeProduct.name}</h1>
-      
+    <div class="container mx-auto px-6 md:px-12 py-8 md:py-16">
+      <!-- Enlace "Ir a Productos" -->
+      <a 
+        href={`/${currentLang}/products`} 
+        class="inline-flex items-center text-sm font-medium mb-6 hover:opacity-80 transition-opacity"
+        style={{ color: '#FFF' }}
+      >
+        {currentLang === 'es' ? 'Ir a Productos' : 'Go to Products'}
+      </a>
+
+      <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
+        <!-- Contenido del lado izquierdo -->
+        <div class="w-full lg:w-1/2 order-2 lg:order-1">
+          <!-- Título del producto -->
+          <h1 
+            class="text-4xl md:text-5xl lg:text-6xl font-bold italic leading-tight mb-8"
+            style={{ color: '#FFF' }}
+          >
+            {safeProduct.name}
+          </h1>
+
+        <div class="hidden lg:block absolute top-[70px] left-[800px]">
+          <svg width="607" height="525" viewBox="0 0 607 525" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M49.6617 48.914C49.5758 48.9742 49.4865 48.9962 49.4171 48.9928C49.362 48.9901 49.2824 48.9716 49.183 48.8712L24.8946 24.3455C24.7385 24.1879 24.7486 23.9282 24.9165 23.7827L34.8154 15.2104C35.0071 15.0444 35.3017 15.1121 35.4033 15.3457L49.793 48.4438C49.8495 48.574 49.8389 48.6562 49.8217 48.7095C49.8001 48.7767 49.7476 48.8537 49.6617 48.914Z" stroke="white" stroke-opacity="0.4" stroke-width="2.27696"/>
+            <path d="M494.031 374.583C493.949 374.518 493.903 374.438 493.886 374.37C493.873 374.317 493.869 374.235 493.937 374.112L523.845 319.994C523.952 319.8 524.204 319.737 524.391 319.857L544.118 332.549C544.331 332.686 544.349 332.987 544.154 333.15L494.519 374.577C494.41 374.667 494.328 374.68 494.272 374.679C494.201 374.677 494.113 374.648 494.031 374.583Z" stroke="white" stroke-opacity="0.4" stroke-width="2.27696"/>
+            <path d="M43.473 513.681C43.3839 513.737 43.2935 513.754 43.2244 513.747C43.1695 513.741 43.0911 513.718 42.9973 513.613L1.93482 467.384C1.78751 467.218 1.8117 466.96 1.98726 466.823L20.526 452.452C20.7264 452.297 21.0162 452.38 21.1052 452.618L43.6295 513.219C43.6789 513.352 43.6638 513.433 43.6438 513.486C43.6186 513.552 43.5619 513.626 43.473 513.681Z" stroke="white" stroke-opacity="0.4" stroke-width="2.27696"/>
+            <path d="M63.2413 40.6892C63.138 40.7075 63.0485 40.6892 62.9887 40.6563C62.9413 40.6303 62.879 40.5789 62.8361 40.4441L51.836 5.87232C51.769 5.66171 51.8944 5.42911 52.108 5.36863L65.2086 1.66095C65.4519 1.59215 65.6812 1.77904 65.6674 2.03488L63.5679 40.315C63.56 40.4586 63.5132 40.5293 63.4743 40.5706C63.4252 40.6226 63.3444 40.6709 63.2413 40.6892Z" stroke="white" stroke-opacity="0.4" stroke-width="2.27696"/>
+            <path d="M511.548 390.145C511.501 390.051 511.494 389.96 511.508 389.893C511.52 389.84 511.553 389.766 511.67 389.687L565.335 353.487C565.518 353.364 565.777 353.419 565.895 353.607L578.823 374.174C578.958 374.388 578.842 374.661 578.593 374.72L511.999 390.353C511.859 390.385 511.778 390.36 511.727 390.335C511.664 390.302 511.595 390.238 511.548 390.145Z" stroke="white" stroke-opacity="0.4" stroke-width="2.27696"/>
+            <path d="M63.9838 502.349C63.8797 502.362 63.7913 502.339 63.7333 502.303C63.6874 502.274 63.6289 502.219 63.5934 502.082L47.3396 439.423C47.2842 439.209 47.422 438.984 47.6385 438.935L71.3377 433.597C71.5845 433.541 71.8036 433.741 71.7757 433.996L64.3302 501.993C64.3146 502.137 64.264 502.204 64.2229 502.244C64.171 502.293 64.0879 502.337 63.9838 502.349Z" stroke="white" stroke-opacity="0.4" stroke-width="2.27696"/>
+            <path d="M539.435 53.2855C539.336 53.2481 539.266 53.1865 539.229 53.1271C539.2 53.0802 539.17 53.0034 539.195 52.8624L548.557 1.98235C548.597 1.76449 548.815 1.6269 549.029 1.68423L567.023 6.50575C567.266 6.57084 567.38 6.85005 567.251 7.06626L539.895 53.1245C539.821 53.2477 539.748 53.2855 539.695 53.3017C539.628 53.3222 539.535 53.3228 539.435 53.2855Z" stroke="white" stroke-opacity="0.6" stroke-width="2.27696"/>
+            <path d="M557.493 61.7014C557.42 61.6243 557.386 61.5381 557.379 61.4684C557.373 61.4134 557.379 61.3311 557.464 61.2161L589.239 18.0996C589.37 17.9212 589.626 17.8929 589.793 18.0385L604.623 30.954C604.814 31.1196 604.792 31.4219 604.581 31.5591L557.976 61.7594C557.856 61.8371 557.773 61.8394 557.718 61.8305C557.649 61.8192 557.565 61.7784 557.493 61.7014Z" stroke="white" stroke-opacity="0.6" stroke-width="2.27696"/>
+          </svg>
         </div>
-        <h1 
-          class="uppercase italic font-title lg:text-4xl text-xl  font-medium text-[${safeProduct.header_text_color}] py-4"
-          style={{ color: safeProduct.header_text_color }}>
-         {currentLang === 'es' ? 'DESCRIPCIÓN' : 'DESCRIPTION'}
-        </h1>
-        <h2 
-          class=" lg:text-3xl text-2xl italic font-text font-medium gap-30 py-5"
-          style={{ color: safeProduct.header_text_color }}
-        >
-            {safeProduct.description}
-        </h2>
 
-        <h1 
-          class="uppercase italic font-title lg:text-4xl text-xl  font-medium text-[${safeProduct.header_text_color}] py-4"
-          style={{ color: safeProduct.header_text_color }}>
-          {currentLang === 'es' ? 'PRESENTACIONES' : 'PRESENTATIONS'}
-        </h1>
-        <h2 
-          class=" lg:text-3xl text-2xl italic font-text font-medium py-5"
-          style={{ color: safeProduct.header_text_color }}
-        >
-            {currentLang === 'es' ? 'Tamaño por presentación varía de acuerdo al país.​' : 'The size of the presentation varies according to the country.'}
-        </h2>
 
-        {safeProduct.weight && safeProduct.weight.length > 0 && (
-          <div class="my-4 max-w-full">
-            <div class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+          <!-- Botones de peso/presentaciones -->
+          {safeProduct.weight && safeProduct.weight.length > 0 && (
+            <div class="flex flex-wrap gap-3 mb-10">
               {safeProduct.weight.map((weight) => (
-                <div class="w-full min-w-0">
-                  <span class="block w-full h-[60px] md:h-[70px] px-4 lg:px-5 py-3 md:py-4 text-center rounded-[15px] border text-base md:text-xl font-bold"
-                        style={{ color: safeProduct.header_text_color, borderColor: safeProduct.header_text_color, backgroundColor: safeProduct.color_button }}>
-                    {weight}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Sección de Stockists */}
-        {stockists && stockists.length > 0 && (
-          <div class="stockists-section mt-8 mb-4">
-            <h1 
-              class="uppercase italic font-title lg:text-4xl text-xl font-medium py-2"
-              style={{ color: safeProduct.header_text_color }}>
-              {currentLang === 'es' ? productsAssets.product_available || 'DISPONIBLE EN' : 'AVAILABLE AT'}
-            </h1>
-            <div class="flex flex-wrap gap-4 my-4 mb-8">
-              {stockists.map((stockist: Stockist) => (
-                <div 
-                  class="flex items-center justify-center h-[100px] w-[100px] p-2 rounded-[15px] border hover:scale-105 transition-transform"
-                  style={{ borderColor: safeProduct.header_text_color, backgroundColor: safeProduct.color_button }}
+                <button 
+                  class="px-10 py-4 rounded-full text-white font-semibold text-sm hover:opacity-90 transition-opacity"
+                  style={{ backgroundColor: '#FF0001' }}
                 >
-                  <a href={stockist.link} target="_blank" rel="noopener noreferrer">  
-                  <LazyImage
-                    src={stockist.icon} 
-                    alt={stockist.name}
-                    color={['#FDE820', '#BEDE89'].includes(safeProduct.background_color) ? 'black' : 'white'}
-                    class="w-full h-full object-contain"
-                    title={stockist.name}
-                  />
-                  </a>
-                </div>
+                  {weight}
+                </button>
               ))}
             </div>
+          )}
+
+          <!-- Sección Descripción (Acordeón) -->
+          <div class="border-t py-4" style={{ borderColor: `${safeProduct.header_text_color}40` }}>
+            <button 
+              class="accordion-trigger w-full flex justify-between items-center text-left"
+              data-accordion="description"
+              style={{ color: '#FFF' }}
+            >
+              <span class="text-3xl font-semibold">
+                {currentLang === 'es' ? 'Descripcion' : 'Description'}
+              </span>
+              <span class="accordion-icon text-4xl font-light transition-transform duration-300">+</span>
+            </button>
+            <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="description">
+              <p 
+                class="pt-4 text-base leading-relaxed"
+                style={{ color: '#FFF' }}
+              >
+                {safeProduct.description}
+              </p>
+            </div>
           </div>
-        )}
-     
+
+          <!-- Sección Datos Nutricionales (Acordeón) -->
+          <div class="border-t border-b py-4" style={{ borderColor: `${safeProduct.header_text_color}40` }}>
+            <button 
+              class="accordion-trigger w-full flex justify-between items-center text-left"
+              data-accordion="nutrition"
+            >
+              <span class="text-3xl font-semibold text-white">
+                {currentLang === 'es' ? 'Datos nutricionales' : 'Nutritional information'}
+              </span>
+              <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-white">+</span>
+            </button>
+            <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="nutrition">
+              <div 
+                class="pt-4 text-base leading-relaxed"
+                style={{ color: '#FFF' }}
+              >
+                <!-- Aquí puedes agregar los datos nutricionales -->
+                <p>{currentLang === 'es' ? 'Información nutricional del producto.' : 'Product nutritional information.'}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen del producto (lado derecho) -->
+        <div class="w-full lg:w-1/2 order-1 lg:order-2 flex justify-center items-center">
+          <div class="relative">
+            <img 
+              id="product-image" 
+              class="max-w-full h-auto w-[300px] md:w-[400px] lg:w-[400px] object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-105" 
+              src={safeProduct.image} 
+              alt={safeProduct.name} 
+              transition:name={`product-image-${safeProduct.id}`} 
+            />
+          </div>
+        </div>
       </div>
     </div>
+
+    <section>
+      <ExperiencesCarousel 
+        experiences={experiences}
+        mainTitleColor='#FFF'
+        backgroundColor='#FF0001'
+        textColor='#FFF'
+        buttonColor='#FFF'
+        textButtonColor='#FF0001'
+      />
+    </section>
+
+    <section class="w-full">
+      <Subscription />
+    </section>
   </article>
 )}
-<!-- Sección de Productos Zibas -->
-    {products.length > 0 && (
-      <section class="w-full py-16 bg-blue">
-        <div class="container mx-auto px-4">
-          {brandsAssets.home?.title && (
-          <div class="text-center mb-8 relative z-20" >
-            <h2 class="text-3xl md:text-4xl italic font-bold mb-4" style={`color: white`}>
-              {brandsAssets.home?.title}
-            </h2>
-            {brandsAssets.home?.subtitle && (
-              <h1 class="text-6xl md:text-9xl italic font-bold mb-4" style={`color: white`}>
-                {brandsAssets.home?.subtitle}
-              </h1>
-            )}
-          </div>
-        )}
-          <ProductsCarousel 
-            products={products}
-            color={'white'}
-            autoplay={true}
-            speed={4000}
-            slidesPerView={3}
-            spaceBetween={30}
-            loop={true}
-            className="max-w-7xl mx-auto"
-          />
+
+<!-- Sección de Productos Relacionados -->
+{products.length > 0 && (
+  <section class="w-full py-16 bg-blue">
+    <div class="container mx-auto px-4">
+      {brandsAssets.home?.title && (
+        <div class="text-center mb-8 relative z-20">
+          <h2 class="text-3xl md:text-4xl italic font-bold mb-4" style="color: white">
+            {brandsAssets.home?.title}
+          </h2>
+          {brandsAssets.home?.subtitle && (
+            <h1 class="text-6xl md:text-9xl italic font-bold mb-4" style="color: white">
+              {brandsAssets.home?.subtitle}
+            </h1>
+          )}
         </div>
-      </section>
-    )}
+      )}
+      <ProductsCarousel 
+        products={products}
+        color={'white'}
+        autoplay={true}
+        speed={4000}
+        slidesPerView={3}
+        spaceBetween={30}
+        loop={true}
+        className="max-w-7xl mx-auto"
+      />
+    </div>
+  </section>
+)}
+
 <script>
-  // Este script se ejecuta solo en el navegador
   import { initProductDetail } from './scripts.js';
+  
   document.addEventListener('DOMContentLoaded', () => {
     initProductDetail();
+    
+    // Accordion functionality
+    const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+    
+    accordionTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const accordionId = trigger.getAttribute('data-accordion');
+        const content = document.querySelector(`[data-content="${accordionId}"]`);
+        const icon = trigger.querySelector('.accordion-icon');
+        
+        if (content && icon) {
+          const isOpen = content.classList.contains('max-h-96');
+          
+          // Close all accordions first (optional - remove if you want multiple open)
+          // document.querySelectorAll('.accordion-content').forEach(c => {
+          //   c.classList.remove('max-h-96');
+          //   c.classList.add('max-h-0');
+          // });
+          // document.querySelectorAll('.accordion-icon').forEach(i => {
+          //   i.textContent = '+';
+          //   i.classList.remove('rotate-45');
+          // });
+          
+          if (isOpen) {
+            content.classList.remove('max-h-96');
+            content.classList.add('max-h-0');
+            icon.textContent = '+';
+            icon.classList.remove('rotate-45');
+          } else {
+            content.classList.remove('max-h-0');
+            content.classList.add('max-h-96');
+            icon.textContent = '−';
+            icon.classList.add('rotate-45');
+          }
+        }
+      });
+    });
   });
 </script>
+
+<style>
+  .accordion-content {
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .accordion-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .rotate-45 {
+    transform: rotate(45deg);
+  }
+</style>

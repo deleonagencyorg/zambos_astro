@@ -48,7 +48,7 @@ export const headerColors: HeaderColors = {
   
   // Configuración para la página de brands
   brands: {
-    textColor: 'text-primary',
+    textColor: 'text-white',
     backgroundColor: 'bg-transparent',
     hoverTextColor: 'hover:text-primary',
     hoverBackgroundColor: 'hover:bg-blue-800',
@@ -66,7 +66,7 @@ export const headerColors: HeaderColors = {
   
   // Configuración para la página de productos
   products: {
-    textColor: 'text-black',
+    textColor: 'text-white',
     backgroundColor: 'bg-lemon',
     hoverTextColor: 'hover:text-white',
     hoverBackgroundColor: 'hover:bg-black',
@@ -129,7 +129,7 @@ export const headerColors: HeaderColors = {
 
   // Configuración para la página de nosotros
   about: {
-    textColor: 'text-primary',
+    textColor: 'text-white',
     backgroundColor: 'bg-brown',
     hoverTextColor: 'hover:text-white',
     hoverBackgroundColor: 'hover:bg-secondary',
