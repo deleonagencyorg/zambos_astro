@@ -1,24 +1,24 @@
 {
   "meta": {
     "home": {
-      "title": "Zambos | Chips de Plátano Premium Crujientes | Snacks Yummies",
-      "description": "Descubre Zambos, los chips de plátano premium con más de 40 años de tradición. Sabores auténticos como Chile Limón, Tajín y Chicharrón. ¡Crujiente y satisfactorio!"
+      "title": "Zambos - Disfruta tus Zambos en todo momento",
+      "description": "Tus hojuelas de papa frita favoritas llegan con sabores naturalmente auténticos para todos los gustos."
     },
     "contact": {
-      "title": "Contacto Zambos | Comunícate con Nosotros | Snacks Yummies",
-      "description": "¿Preguntas sobre Zambos? Contáctanos por teléfono, correo o formulario. Estamos disponibles para ayudarte. ¡Queremos escuchar tu opinión!"
+      "title": "Contacto",
+      "description": "Contáctanos para más información sobre nuestros productos y promociones."
     },
     "recipes": {
-      "title": "Recetas con Zambos | Ideas Creativas con Chips de Plátano",
-      "description": "Descubre recetas deliciosas y creativas con Zambos. Desde platos tradicionales hasta preparaciones modernas. ¡Inspírate con nuestras mejores recetas!"
+      "title": "Recetas",
+      "description": "Descubre deliciosas recetas con Zambos. Desde platos tradicionales hasta creaciones innovadoras."
     },
     "news": {
       "title": "Noticias",
       "description": "Mantente al día con las últimas noticias y eventos de Zambos."
     },
     "products": {
-      "title": "Productos Zambos | Chips de Plátano Chile Limón, Tajín y Chicharrón",
-      "description": "Explora toda la variedad de productos Zambos: Chile Limón, Tajín, Plátano con Chicharrón, Maduros y más. Sabores auténticos y crujientes desde 1973."
+      "title": "Productos",
+      "description": "Descubre nuestra línea completa de productos Zambos. Sabor auténtico para toda la familia."
     },
     "brands": {
       "title": "Nuestras Marcas de Snacks",
@@ -36,19 +36,19 @@
   "social_media": {
    "facebook": {
       "name": "Facebook",
-      "url": "https://www.facebook.com/zibaslatam/",
+      "url": "https://www.facebook.com/zamboslatam",
       "alt": "Facebook de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/facebook.svg"
     },
     "instagram": {
       "name": "Instagram",
-      "url": "https://www.instagram.com/zibaslatam",
+      "url": "https://www.instagram.com/zamboslatam",
       "alt": "Instagram de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/instagram.svg"
     },
     "tiktok": {
       "name": "TikTok",
-      "url": "https://www.tiktok.com/@zibaslatam",
+      "url": "https://www.tiktok.com/@zamboslatam",
       "alt": "TikTok de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/tiktok.svg"
     }
@@ -61,21 +61,20 @@
     "preferences": "Preferencias"
   },
   "assets": {
-    "logo": "/images/es/logo.svg",
+    "logo": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp",
     "hero": "/images/es/hero.jpg",
     "slidermask": "https://snack.yummiespromociones.com/snacksyummies/BGHeader_1_.webp",
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
       {
         "id": "slide2",
-        "desktop": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
-        "mobile": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
+        "desktop": "/images/es/slider1.png",
+        "mobile": "/images/es/slider1.png",
         "alt": "Zambos",
         "title": "",
         "description": "",
         "link": "#"
       },
-   
       {
         "id": "slide1",
         "desktop": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
@@ -93,15 +92,20 @@
     "explore": "Explorar"
   },
   "menu_items": [
+     {
+      "id": "home",
+      "text": "Inicio",
+      "href": "/es/"
+    },
+    {
+      "id": "history",
+      "text": "Historia",
+      "href": "/es/nosotros"
+    },
     {
       "id": "products",
       "text": "Productos",
-      "href": "/es/#products"
-    },
-    {
-      "id": "gallery",
-      "text": "Galería",
-      "href": "/es/#gallery"
+      "href": "/es/productos"
     },
     {
       "id": "recipes",
@@ -109,16 +113,32 @@
       "href": "/es/recetas"
     },
     {
+      "id": "contact",
+      "text": "Contacto",
+      "href": "/es/contacto"
+    },
+    {
       "id": "blog",
       "text": "Blog",
       "href": "/es/blog"
+    }
+  ],
+  "menu_items_header": [
+    {
+      "id": "home",
+      "text": "Inicio",
+      "href": "/es/"
     },
     {
       "id": "contact",
       "text": "Contacto",
       "href": "/es/contacto"
+    },
+    {
+      "id": "Zambos",
+      "text": "Zambos Truck",
+      "href": "/es/zambostruck"
     }
-   
   ],
   "about_us": {
     "title": "Conoce Nuestra",
@@ -136,23 +156,44 @@
       "placeholder":"tucorreo@email.com",
       "buttonText":"Suscribirse"
     },
-    "socialmedia":{
-      "title":"Síguenos",
-      "tagtitle":"en redes",
-      "description":"Síguenos en nuestras redes sociales - Zambos",
-      "newsletter":"Entérate de las noticias y promociones",
-      "instagramLinks":[
+       "socialmedia":{
+      "title":"MIRA NUESTRO FEED",
+      "images":[],
+      "tagtitle":"on social media",
+      "description":"Follow us on our social media - Snacks Yummies",
+      "newsletter":"Stay up to date with all our news and promotions",
+      "instagramPosts": [
         {
-          "url":"https://www.instagram.com/reel/DNT6raEoqzD/?igsh=MXJsdmh4YWxpMGZseA=="
+          "id": "post1",
+          "postUrl": "https://www.instagram.com/reel/DTyFbg1ETV-/?igsh=ZXF0ZG44azY4dGVp",
+          "embedUrl": "https://www.instagram.com/reel/DTyFbg1ETV-/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-1.jpg",
+          "fallbackImage": "/images/instagram-fallback-1.jpg",
+          "alt": "Zambos Instagram Post 1"
         },
         {
-          "url":"https://www.instagram.com/reel/DNL-gGZOW09/?igsh=MTY4eDVzazc5YTliaA=="
+          "id": "post2",
+          "postUrl": "https://www.instagram.com/reel/DTgz67QCT8M/?igsh=dDBqNGxoaDdya2ht",
+          "embedUrl": "https://www.instagram.com/reel/DTgz67QCT8M/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-2.jpg",
+          "fallbackImage": "/images/instagram-fallback-2.jpg",
+          "alt": "Zambos Instagram Post 2"
         },
         {
-          "url":"https://www.instagram.com/reel/DNHd_ltM-pc/?igsh=OWpnamQ4Y3FmN3Vz"
+          "id": "post3",
+          "postUrl": "https://www.instagram.com/reel/DTbD-fKEcGU/?igsh=MXJseGNwZzR0YXN2cg",
+          "embedUrl": "https://www.instagram.com/reel/DTbD-fKEcGU/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-3.jpg",
+          "fallbackImage": "/images/instagram-fallback-3.jpg",
+          "alt": "Zambos Instagram Post 3"
         },
         {
-          "url":"https://www.instagram.com/reel/DNEaatBuSfZ/?igsh=MTZuZjgzZnZ4dzg0dw=="
+          "id": "post4",
+          "postUrl": "https://www.instagram.com/reel/DR-IwH6CXvK/?igsh=MWQ5YTFqYXlkeXRnOA",
+          "embedUrl": "https://www.instagram.com/reel/DR-IwH6CXvK/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-4.jpg",
+          "fallbackImage": "/images/instagram-fallback-4.jpg",
+          "alt": "Zambos Instagram Post 4"
         }
       ]
     }
@@ -165,7 +206,7 @@
     "contact_us": "Contáctanos",
     "instagram_text": "Instagram",
     "facebook_text": "Facebook",
-    "email": "ayudacliente@zibas.com",
+    "email": "",
     "copyright": "Copyright 2025. Zambos. Todos los derechos reservados.",
     "privacy_policy_text": "Política de Privacidad",
     "privacy_policy_url": "/es/politica-privacidad"

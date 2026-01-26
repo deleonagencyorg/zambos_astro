@@ -15,7 +15,7 @@ interface Props {
 const { currentLang } = Astro.props;
 
 // Get current locale if not provided
-const locale = currentLang || getLocale(Astro.url);
+const locale = currentLang || getLocale();
 
 // Get contact data from locale
 const contact = locale === 'es' ? contactEs : contactEn;
@@ -104,8 +104,20 @@ const options = dynamicOptions[locale];
   }
 </style>
 
-<div class="bg-[#F04F00] rounded-2xl p-8" transition:name="contact-form">
-  <h2 class="text-white text-center md:text-2xl uppercase font-sans text-2xl font-bold mb-6">
+<div
+  id="contactFormContainer"
+  class="bg-[#FFED7A] rounded-[40px] p-8"
+  transition:name="contact-form"
+  data-locale={locale}
+  data-api-host={apiHost}
+  data-api-token={apiToken}
+  data-contact-form-path={contactFormPath}
+  data-department-placeholder={departmentPlaceholder}
+  data-country-placeholder={countryPlaceholder}
+  data-labels={JSON.stringify(labels)}
+  data-options={JSON.stringify(options)}
+>
+  <h2 class="text-[#009337] text-center md:text-2xl uppercase font-sans text-2xl font-bold mb-6">
     {contact.form.title}
   </h2>
 
@@ -114,14 +126,14 @@ const options = dynamicOptions[locale];
   <div class="flex flex-col md:flex-row gap-6">
     <!-- Contact Reason Dropdown -->
     <div class="flex-1">
-      <label class="block text-white uppercase font-semibold  mb-2">
+      <label class="block text-[#009337] uppercase font-semibold  mb-2">
         {contact.form.contactReason.label} *
       </label>
       <select 
         name="contactReason" 
         id="contactReasonSelect"
         required
-        class="w-full font-semibold uppercase flex justify-center text-white items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#F04F00] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
       >
         <option value="">{contactReasonPlaceholder}</option>
         {locale === 'es' ? (
@@ -143,14 +155,14 @@ const options = dynamicOptions[locale];
 
     <!-- Country Selector -->
     <div class="flex-1">
-      <label class="block text-white uppercase font-semibold  mb-2">
+      <label class="block text-[#009337] uppercase font-semibold  mb-2">
         {countryLabel} *
       </label>
       <select 
         name="country" 
         id="countrySelect"
         required
-        class="w-full font-semibold uppercase flex justify-center text-white items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#F04F00] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full  bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
       >
         <option value="">{countryPlaceholder}</option>
       </select>
@@ -161,7 +173,7 @@ const options = dynamicOptions[locale];
   <div class="flex flex-col md:flex-row gap-6">
     <!-- City Selector -->
     <div class="flex-1">
-      <label class="block text-white uppercase font-semibold  mb-2">
+      <label class="block text-[#009337] uppercase font-semibold  mb-2">
         {cityLabel} *
       </label>
       <select 
@@ -169,7 +181,7 @@ const options = dynamicOptions[locale];
         id="departmentSelect"
         required
         disabled
-        class="w-full font-semibold uppercase flex justify-center text-white items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#F04F00] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full  bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
       >
         <option value="">{departmentPlaceholder}</option>
       </select>
@@ -177,7 +189,7 @@ const options = dynamicOptions[locale];
     
     <!-- Name -->
     <div class="flex-1">
-      <label class="block text-white uppercase font-semibold  mb-2">
+      <label class="block text-[#009337] uppercase font-semibold  mb-2">
         {contact.form.fullName.label} *
       </label>
       <input 
@@ -185,7 +197,7 @@ const options = dynamicOptions[locale];
         name="name" 
         required
         placeholder={contact.form.fullName.placeholder}
-        class="w-full font-semibold uppercase placeholder:text-white flex justify-center text-white items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#F04F00] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        class="w-full font-semibold uppercase placeholder:text-[#009337] flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full  bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
       />
     </div>
   </div>
@@ -194,7 +206,7 @@ const options = dynamicOptions[locale];
   <div class="flex flex-col md:flex-row gap-6">
     <!-- Email -->
     <div class="flex-1">
-      <label class="block text-white uppercase font-semibold  mb-2">
+      <label class="block text-[#009337] uppercase font-semibold  mb-2">
         {contact.form.email.label} *
       </label>
       <input 
@@ -202,20 +214,20 @@ const options = dynamicOptions[locale];
         name="email" 
         required
         placeholder={contact.form.email.placeholder}
-        class="w-full px-4 py-3 placeholder:text-white bg-[#F04F00] text-white uppercase border-[1.5px] border-white rounded-full focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        class="w-full px-4 py-3 placeholder:text-[#009337]  bg-[#FFED7A] border-[#009337] text-[#009337] uppercase border-[1.5px] border-white rounded-full focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
       />
     </div>
     
     <!-- Phone -->
     <div class="flex-1">
-      <label class="block text-white uppercase font-semibold  mb-2">
+      <label class="block text-[#009337] uppercase font-semibold  mb-2">
         {contact.form.phone.label}
       </label>
       <input 
         type="number" 
         name="phone" 
         placeholder={contact.form.phone.placeholder}
-        class="w-full px-4 py-3 border-[1.5px] border-white rounded-full placeholder:text-white bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        class="w-full px-4 py-3 border-[1.5px] border-white rounded-full placeholder:text-[#009337]  bg-[#FFED7A] border-[#009337] text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
       />
     </div>
   </div>
@@ -223,7 +235,7 @@ const options = dynamicOptions[locale];
   <!-- Fila para comentario -->
   <div class="flex flex-col md:flex-row gap-6">
     <div class="flex-1">
-      <label class="block text-white uppercase font-semibold  mb-2">
+      <label class="block text-[#009337] uppercase font-semibold  mb-2">
         {contact.form.message.label} *
       </label>
       <textarea 
@@ -231,7 +243,7 @@ const options = dynamicOptions[locale];
         required
         rows="4"
         placeholder={contact.form.message.placeholder}
-        class="w-full px-4 py-3 border-[1.5px] border-white rounded-2xl bg-[#F04F00] text-white placeholder:text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+        class="w-full px-4 py-3 border-[1.5px] border-white rounded-2xl  bg-[#FFED7A] border-[#009337] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
       ></textarea>
     </div>
   </div>
@@ -246,7 +258,7 @@ const options = dynamicOptions[locale];
     <button 
       type="submit"
       id="submitButton"
-      class="w-full py-3 px-6 bg-[#FE5A00] text-white rounded-xl uppercase font-bold text-2xl hover:bg-primary-dark transition-all"
+      class="w-full py-3 px-6 bg-[#009337] text-white uppercase font-bold text-2xl hover:bg-primary-dark transition-all rounded-full"
     >
       {contact.form.submit}
     </button>
@@ -261,7 +273,69 @@ const options = dynamicOptions[locale];
   buttonText={locale === 'es' ? "Cerrar" : "Close"}
 />
 
-<script define:vars={{ departmentPlaceholder, countryPlaceholder, labels, options, locale, apiHost, apiToken, contactFormPath }}>
+<script is:inline data-astro-rerun>
+  // @ts-nocheck
+  (function () {
+    'use strict';
+
+    function hydrateConfig() {
+      const container = document.getElementById('contactFormContainer');
+      if (!(container instanceof HTMLElement)) return null;
+
+      let parsedLabels = {};
+      let parsedOptions = {};
+
+      try {
+        parsedLabels = JSON.parse(container.dataset.labels || '{}');
+      } catch (e) {
+        parsedLabels = {};
+      }
+
+      try {
+        parsedOptions = JSON.parse(container.dataset.options || '{}');
+      } catch (e) {
+        parsedOptions = {};
+      }
+
+      return {
+        locale: container.dataset.locale,
+        apiHost: container.dataset.apiHost,
+        apiToken: container.dataset.apiToken,
+        contactFormPath: container.dataset.contactFormPath,
+        departmentPlaceholder: container.dataset.departmentPlaceholder,
+        countryPlaceholder: container.dataset.countryPlaceholder,
+        labels: parsedLabels,
+        options: parsedOptions
+      };
+    }
+
+    // Variables usadas por la lógica existente (antes venían por define:vars)
+    let departmentPlaceholder;
+    let countryPlaceholder;
+    let labels;
+    let options;
+    let locale;
+    let apiHost;
+    let apiToken;
+    let contactFormPath;
+
+    function bootWithConfig() {
+      const cfg = hydrateConfig();
+      if (!cfg) return;
+
+      departmentPlaceholder = cfg.departmentPlaceholder;
+      countryPlaceholder = cfg.countryPlaceholder;
+      labels = cfg.labels;
+      options = cfg.options;
+      locale = cfg.locale;
+      apiHost = cfg.apiHost;
+      apiToken = cfg.apiToken;
+      contactFormPath = cfg.contactFormPath;
+
+      // Ejecuta la inicialización existente
+      bootFormFunctionality();
+    }
+
   // Countries data
   const countriesData = {
     'Guatemala': [
@@ -360,6 +434,17 @@ const options = dynamicOptions[locale];
       const template = getTemplateByContactReason(formData.contactReason);
       multipartData.append('template', template);
       multipartData.append('site', "Zambos");
+      
+      // Special handling for "Soy un ganador" - concatenate prefixes
+      if (formData.contactReason === 'Soy un ganador') {
+        if (formData.dynamicOrPromotion) {
+          formData.dynamicOrPromotion = 'Dinámica o promoción: ' + formData.dynamicOrPromotion;
+        }
+        if (formData.award) {
+          formData.award = 'Premio adjudicado: ' + formData.award;
+        }
+      }
+      
       // Add all form fields according to the API structure
       Object.entries(formData).forEach(([key, value]) => {
         if (value !== undefined && value !== null && value !== '') {
@@ -417,16 +502,28 @@ const options = dynamicOptions[locale];
     }
   }
 
+  let contactReasonSelect;
+  let countrySelect;
+  let citySelect;
+  let dynamicFields;
+  let form;
+
   // Initialize the form functionality
   function initFormFunctionality() {
-    const contactReasonSelect = document.getElementById('contactReasonSelect');
-    const countrySelect = document.getElementById('countrySelect');
-    const citySelect = document.getElementById('departmentSelect');
-    const dynamicFields = document.getElementById('dynamicFields');
-    const form = document.getElementById('contactForm');
+    console.log('=== INITIALIZING CONTACT FORM ===');
+    contactReasonSelect = document.getElementById('contactReasonSelect');
+    countrySelect = document.getElementById('countrySelect');
+    citySelect = document.getElementById('departmentSelect');
+    dynamicFields = document.getElementById('dynamicFields');
+    form = document.getElementById('contactForm');
+
+    if (form && form.dataset.jsInitialized === 'true') {
+      console.log('✓ Form already initialized, skipping');
+      return;
+    }
 
     // Debug: Check if elements exist
-    console.log('Form elements found:', {
+    console.log('✓ Form elements found:', {
       contactReasonSelect: !!contactReasonSelect,
       countrySelect: !!countrySelect,
       citySelect: !!citySelect,
@@ -442,6 +539,8 @@ const options = dynamicOptions[locale];
       console.error('Required form elements not found');
       return;
     }
+
+    form.dataset.jsInitialized = 'true';
 
     // Populate countries
     if (countrySelect) {
@@ -460,6 +559,17 @@ const options = dynamicOptions[locale];
     contactReasonSelect.onchange = function() {
       const selectedReason = this.value;
       console.log('Contact reason changed to:', selectedReason);
+      
+      // Reset phone field requirement when changing contact reason
+      const phoneInput = document.querySelector('input[name="phone"]');
+      if (phoneInput) {
+        phoneInput.removeAttribute('required');
+        const phoneLabel = phoneInput.closest('.flex-1')?.querySelector('label');
+        if (phoneLabel) {
+          phoneLabel.innerHTML = phoneLabel.innerHTML.replace(' *', '');
+        }
+      }
+      
       updateDynamicFields(selectedReason);
     };
 
@@ -561,17 +671,42 @@ const options = dynamicOptions[locale];
       }
     };
     
+    form.dataset.jsInitialized = 'true';
+    
+    console.log('✓ Event listeners attached');
+    
     // Initialize dynamic fields with default contact reason if selected
     if (contactReasonSelect.value) {
+      console.log('→ Initializing with selected reason:', contactReasonSelect.value);
       updateDynamicFields(contactReasonSelect.value);
     }
+    
+    console.log('=== CONTACT FORM INITIALIZED ===');
   }
 
-  // Initialize on DOMContentLoaded (initial page load)
-  document.addEventListener('DOMContentLoaded', initFormFunctionality);
-  
-  // Also initialize on astro:page-load (for client-side navigation)
-  document.addEventListener('astro:page-load', initFormFunctionality);
+  function bootFormFunctionality() {
+    initFormFunctionality();
+  }
+
+  const safeBoot = () => {
+    try {
+      bootWithConfig();
+    } catch (err) {
+      console.error('Error initializing contact form:', err);
+    }
+  };
+
+  document.addEventListener('astro:page-load', safeBoot);
+  document.addEventListener('astro:after-swap', safeBoot);
+  window.addEventListener('load', safeBoot);
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', safeBoot, { once: true });
+  } else {
+    safeBoot();
+  }
+
+  setTimeout(safeBoot, 0);
 
   // Function to update dynamic fields based on contact reason
   function updateDynamicFields(contactReason) {
@@ -634,24 +769,24 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.clientCode}</label>
-        <input type="text" name="clientCode" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <label class="block text-[#009337] font-medium mb-2">${labels.clientCode}</label>
+        <input type="text" name="clientCode" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.areaOfInterest} *</label>
-        <select name="interestArea" required class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+        <label class="block text-[#009337] font-medium mb-2">${labels.areaOfInterest} *</label>
+        <select name="interestArea" required class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
           <option value="">${locale === 'es' ? 'Selecciona una opción' : 'Select an option'}</option>
           ${options.clientAreaOfInterest.map(option => `<option value="${option}">${option}</option>`).join('')}
         </select>
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.message}</label>
-        <textarea name="message" rows="4" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
+        <label class="block text-[#009337] font-medium mb-2">${labels.message}</label>
+        <textarea name="message" rows="4" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.file}</label>
-        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
-        <p class="text-sm text-white mt-1">${labels.fileHelp}</p>
+        <label class="block text-[#009337] font-medium mb-2">${labels.file}</label>
+        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <p class="text-sm text-[#009337] mt-1">${labels.fileHelp}</p>
       </div>
     `;
   }
@@ -661,16 +796,16 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.requestType} *</label>
-        <select name="requestType" required class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+        <label class="block text-[#009337] font-medium mb-2">${labels.requestType} *</label>
+        <select name="requestType" required class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
           <option value="">${locale === 'es' ? 'Selecciona una opción' : 'Select an option'}</option>
           ${options.requestTypes.map(option => `<option value="${option}">${option}</option>`).join('')}
         </select>
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.file}</label>
-        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
-        <p class="text-sm text-white mt-1">${labels.fileHelp}</p>
+        <label class="block text-[#009337] font-medium mb-2">${labels.file}</label>
+        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <p class="text-sm text-[#009337] mt-1">${labels.fileHelp}</p>
       </div>
     `;
   }
@@ -680,8 +815,8 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.interest} *</label>
-        <select name="interest" required class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+        <label class="block text-[#009337] font-medium mb-2">${labels.interest} *</label>
+        <select name="interest" required class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
           <option value="">${locale === 'es' ? 'Selecciona una opción' : 'Select an option'}</option>
           ${options.exportInterests.map(option => `<option value="${option}">${option}</option>`).join('')}
         </select>
@@ -694,13 +829,13 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.areaOfInterestSupplier} *</label>
-        <input type="text" name="areaOfInterest" required class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <label class="block text-[#009337] font-medium mb-2">${labels.areaOfInterestSupplier} *</label>
+        <input type="text" name="areaOfInterest" required class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.file}</label>
-        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
-        <p class="text-sm text-white mt-1">${labels.fileHelp}</p>
+        <label class="block text-[#009337] font-medium mb-2">${labels.file}</label>
+        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <p class="text-sm text-[#009337] mt-1">${labels.fileHelp}</p>
       </div>
     `;
   }
@@ -710,13 +845,13 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.question} *</label>
-        <textarea name="question" required rows="4" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
+        <label class="block text-[#009337] font-medium mb-2">${labels.question} *</label>
+        <textarea name="question" required rows="4" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.file}</label>
-        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
-        <p class="text-sm text-white mt-1">${labels.fileHelp}</p>
+        <label class="block text-[#009337] font-medium mb-2">${labels.file}</label>
+        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <p class="text-sm text-[#009337] mt-1">${labels.fileHelp}</p>
       </div>
     `;
   }
@@ -726,15 +861,15 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.areaOfInterest} *</label>
-        <select name="areaOfInterest" required class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+        <label class="block text-[#009337] font-medium mb-2">${labels.areaOfInterest} *</label>
+        <select name="areaOfInterest" required class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
           <option value="">${locale === 'es' ? 'Selecciona una opción' : 'Select an option'}</option>
           ${options.journalistAreas.map(option => `<option value="${option}">${option}</option>`).join('')}
         </select>
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.question} *</label>
-        <textarea name="question" required rows="4" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
+        <label class="block text-[#009337] font-medium mb-2">${labels.question} *</label>
+        <textarea name="question" required rows="4" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
       </div>
     `;
   }
@@ -744,14 +879,14 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.comments || 'Comentarios'} *</label>
-        <textarea name="message" required rows="4" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
-        <p class="text-sm text-white mt-1">${labels.ethicsLineHelp || 'Si eres empleado Dinant, especifica tu cargo.'}</p>
+        <label class="block text-[#009337] font-medium mb-2">${labels.comments || 'Comentarios'} *</label>
+        <textarea name="message" required rows="4" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
+        <p class="text-sm text-[#009337] mt-1">${labels.ethicsLineHelp || 'Si eres empleado Dinant, especifica tu cargo.'}</p>
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.file || 'Adjuntar archivo'}</label>
-        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
-        <p class="text-sm text-white mt-1">${labels.fileHelp || 'Formatos permitidos: PDF, JPG, PNG (max 10MB)'}</p>
+        <label class="block text-[#009337] font-medium mb-2">${labels.file || 'Adjuntar archivo'}</label>
+        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <p class="text-sm text-[#009337] mt-1">${labels.fileHelp || 'Formatos permitidos: PDF, JPG, PNG (max 10MB)'}</p>
       </div>
     `;
   }
@@ -769,14 +904,33 @@ const options = dynamicOptions[locale];
       return;
     }
     
+    // Hacer el campo de teléfono obligatorio
+    const phoneInput = document.querySelector('input[name="phone"]');
+    if (phoneInput) {
+      phoneInput.setAttribute('required', 'required');
+      const phoneLabel = phoneInput.closest('.flex-1')?.querySelector('label');
+      if (phoneLabel && !phoneLabel.textContent?.includes('*')) {
+        phoneLabel.innerHTML = phoneLabel.innerHTML + ' *';
+      }
+    }
+    
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">Dinámica o promoción en la que ganó *</label>
-        <input type="text" name="dynamicOrPromotion" required class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <label class="block text-[#009337] font-medium mb-2">Dinámica o promoción en la que ganó *</label>
+        <input type="text" name="dynamicOrPromotion" required class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">Premio adjudicado *</label>
-        <input type="text" name="award" required class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <label class="block text-[#009337] font-medium mb-2">Premio adjudicado *</label>
+        <input type="text" name="award" required class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+      </div>
+      <div>
+        <label class="block text-[#009337] font-medium mb-2">Mensaje</label>
+        <textarea name="winnerMessage" rows="4" placeholder="Escribe la promoción en la que ganaste o detalla el premio que ganaste. Ej: PS5, giftcards, etc." class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] placeholder:opacity-70 focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
+      </div>
+      <div>
+        <label class="block text-[#009337] font-medium mb-2">${labels.file || 'Adjuntar archivo'}</label>
+        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <p class="text-sm text-[#009337] mt-1">${labels.fileHelp || 'Formatos permitidos: PDF, JPG, PNG (max 10MB)'}</p>
       </div>
     `;
   }
@@ -786,14 +940,15 @@ const options = dynamicOptions[locale];
     
     dynamicFields.innerHTML = `
       <div>
-        <label class="block text-white font-medium mb-2">${labels.message}</label>
-        <textarea name="message" rows="4" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
+        <label class="block text-[#009337] font-medium mb-2">${labels.message}</label>
+        <textarea name="message" rows="4" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"></textarea>
       </div>
       <div>
-        <label class="block text-white font-medium mb-2">${labels.file}</label>
-        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-white rounded-lg bg-[#F04F00] text-white focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
-        <p class="text-sm text-white mt-1">${labels.fileHelp}</p>
+        <label class="block text-[#009337] font-medium mb-2">${labels.file}</label>
+        <input type="file" name="file" accept=".pdf,.jpg,.jpeg,.png" class="w-full px-4 py-3 border-[1.5px] border-[#009337] rounded-2xl bg-[#FFED7A] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all" />
+        <p class="text-sm text-[#009337] mt-1">${labels.fileHelp}</p>
       </div>
     `;
   }
+  })();
 </script>

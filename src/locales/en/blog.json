@@ -1,0 +1,100 @@
+{
+    "posts": [
+      {
+        "id": "1",
+        "slug": "zambos-sin-fronteras-ep2",
+        "title": "ZAMBOS WITHOUT BORDERS X RADIO HOUSE EP. 2",
+        "summary": "New chapter of Zambos without borders: Fearless from Guatemala to the world for everyone.",
+        "image": "/images/blog/zambos-fronteras-2.webp",
+        "published_date": "2024-12-17",
+        "date_display": "December 17",
+        "category": "events",
+        "content_intro": "<p>In this second episode of Zambos Without Borders, we continue our musical journey bringing Guatemalan flavor to every corner of the world. A special collaboration with Radio House that marks a before and after in our history.</p>",
+        "quote": "Music and snacks have something in common: both have the power to unite people no matter where they come from.",
+        "content_after_quote": "<p>This episode was recorded live from our facilities, featuring local artists who shared their passion for music and Zambos. A unique experience that shows that when there's passion, there are no borders.</p>"
+      },
+      {
+        "id": "2",
+        "slug": "zambos-sin-fronteras-ep1",
+        "title": "ZAMBOS WITHOUT BORDERS X RADIO HOUSE EP. 1",
+        "summary": "The beginning of a new musical adventure with Zambos.",
+        "image": "/images/blog/yummies-recolectores.webp",
+        "published_date": "2024-12-17",
+        "date_display": "December 17",
+        "category": "events",
+        "content_intro": "<p>Zambos Without Borders was born as a project that fuses our passion for snacks with music. In collaboration with Radio House, we present the first episode of this series that promises to bring the Guatemalan spirit to all corners.</p>",
+        "quote": "Every great journey begins with a first step, and this is ours towards a world without borders.",
+        "content_after_quote": "<p>With special guests and lots of energy, this first episode laid the foundation for what will be an unforgettable series. Thanks to everyone who joined us on this adventure!</p>"
+      },
+      {
+        "id": "3",
+        "slug": "escuelas-beneficiadas",
+        "title": "MORE THAN 100 PUBLIC SCHOOLS BENEFITED",
+        "summary": "Our social responsibility program continues to grow.",
+        "image": "/images/blog/torneo-tds.webp",
+        "published_date": "2024-12-17",
+        "date_display": "December 17",
+        "category": "social",
+        "content_intro": "<p>As part of our commitment to Guatemalan education, we have managed to benefit more than 100 public schools throughout the country. This program includes donations of educational materials, infrastructure improvements, and school feeding programs.</p>",
+        "quote": "Investing in education is investing in Guatemala's future. Every child who learns is a seed of hope.",
+        "content_after_quote": "<p>Our team has worked tirelessly with local communities to identify the most urgent needs and provide effective solutions. This is just the beginning of a commitment that will last for generations.</p>"
+      },
+      {
+        "id": "4",
+        "slug": "apoyo-jovenes-futbolistas-1",
+        "title": "WE SUPPORT 150 YOUNG SOCCER PLAYERS AT TDS",
+        "summary": "Boosting youth sports talent in Guatemala.",
+        "image": "/images/blog/zambos-red.webp",
+        "published_date": "2024-12-17",
+        "date_display": "December 17",
+        "category": "sports",
+        "content_intro": "<p>Sports are a powerful tool for the integral development of young people. That's why Zambos is proud to support 150 young soccer players participating in the Social Sports Tournament, providing them with equipment, hydration, and food throughout the competition.</p>",
+        "quote": "Soccer teaches values that last a lifetime: teamwork, discipline, and the importance of never giving up.",
+        "content_after_quote": "<p>These young athletes represent the future of Guatemalan sports. With proper support, we are confident that many of them will go far, not only in soccer but in life.</p>"
+      },
+      {
+        "id": "5",
+        "slug": "apoyo-jovenes-futbolistas-2",
+        "title": "WE SUPPORT 150 YOUNG SOCCER PLAYERS AT TDS",
+        "summary": "Second delivery of support for young talents.",
+        "image": "/images/blog/yummies-basura.webp",
+        "published_date": "2024-12-17",
+        "date_display": "December 17",
+        "category": "sports",
+        "content_intro": "<p>Continuing our sports commitment, we made the second delivery of support to young TDS soccer players. This time, in addition to sports equipment, we included nutrition sessions and motivational talks.</p>",
+        "quote": "A healthy body and a positive mind are the perfect combination to achieve any goal.",
+        "content_after_quote": "<p>The young people enthusiastically received this new delivery, demonstrating their commitment not only to sports but to their personal development. Let's keep moving forward!</p>"
+      },
+      {
+        "id": "6",
+        "slug": "apoyo-jovenes-futbolistas-3",
+        "title": "WE SUPPORT 150 YOUNG SOCCER PLAYERS AT TDS",
+        "summary": "We continue supporting Guatemalan sports.",
+        "image": "/images/blog/torneo-tds-2.webp",
+        "published_date": "2024-12-17",
+        "date_display": "December 17",
+        "category": "sports",
+        "content_intro": "<p>The third and final delivery of support to young soccer players marks the close of a successful season. During these months, we have witnessed the sporting and personal growth of each of these athletes.</p>",
+        "quote": "Success is not measured only in goals, but in the people we shape along the way.",
+        "content_after_quote": "<p>We thank all the families, coaches, and organizers who made this program possible. Zambos will remain committed to sports and Guatemalan youth.</p>"
+      }
+    ],
+    "filters": {
+      "oldest": "OLDEST",
+      "newest": "NEWEST",
+      "all": "VIEW ALL"
+    },
+    "search": {
+      "placeholder": "Search blog..."
+    },
+    "labels": {
+      "readMore": "READ MORE",
+      "topNews": "TOP NEWS",
+      "featured": "FEATURED",
+      "noPosts": "No blog posts available at this time."
+    },
+    "page": {
+      "title": "News",
+      "description": "Stay updated with our latest news and articles."
+    }
+  }

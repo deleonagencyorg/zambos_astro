@@ -1,0 +1,11 @@
+---
+// src/pages/[lang]/legacy-redirect.astro
+const { currentLang } = Astro.props || { currentLang: 'es' };
+
+return Astro.redirect(`/${currentLang}/`);
+
+export function getStaticPaths() {
+  return [];
+}
+---
+

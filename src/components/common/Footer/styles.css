@@ -1,8 +1,8 @@
 /* Estilos para el Footer */
 
 footer {
-  background-color: #000;
-  color: #fff;
+  background-color: inherit;
+  color: inherit;
   font-family: var(--font-sans);
 }
 

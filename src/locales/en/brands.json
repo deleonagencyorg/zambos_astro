@@ -77,12 +77,26 @@
                     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp",
                     "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp"
                 },
+                  {
+                    "id": "zambos-yuquitas-con-ajo-parmesano",
+                    "slug": "zambos-yuquitas-con-ajo-parmesano",
+                    "title": "Zambos Yuquitas Con Ajo Parmesano",
+                    "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_yuquita_ajo_parmesano.webp",
+                    "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_yuquita_ajo_parmesano.webp"
+                },
                 {
                     "id": "zambos-ceviche",
                     "slug": "zambos-ceviche",
                     "title": "Zambos Ceviche",
                     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-2.webp",
                     "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-2.webp"
+                },
+                {
+                    "id": "zambos-salsa-verde-fam",
+                    "slug": "zambos-salsa-verde-fam",
+                    "title": "Zambos Salsa Verde Fam",
+                    "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos%2BSalsa%2BVerde%2BFam.webp",
+                    "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos%2BSalsa%2BVerde%2BFam.webp"
                 },
                 {
                     "id": "zambos-con-chicharron-del-rancho",
@@ -124,12 +138,6 @@
                     "title": "Zambos Yuquitas Originales",
                     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-originales-2.webp",
                     "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-originales-2.webp"
-                },{
-                    "id": "zambos-yuquitas-tostones",
-                    "slug": "zambos-yuquitas-tostones",
-                    "title": "Zambos Yuquitas Tostones",
-                    "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-tostones-2.webp",
-                    "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-tostones-2.webp"
                 }
             ]
         },
@@ -147,7 +155,7 @@
             "imageMobile": "https://snack.yummiespromociones.com/snacksyummies/zibas-peque.webp",
             "bgColor": "#F08C00",
             "title": "Zibas",
-            "url": "https://zibaspapas.com",
+            "url": "https://zambos.com",
             "alt": "Zibas",
             "products": [
                {

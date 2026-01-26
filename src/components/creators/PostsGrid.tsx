@@ -185,7 +185,7 @@ export default function PostsGrid({
             <div className={`grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-6 ${loading ? 'opacity-30' : 'opacity-100'} transition-opacity duration-300`}>
             {participations.map((p) => {
               const author = `${p.contact?.firstName || ''} ${p.contact?.lastName || ''}`.trim() || 'Anónimo';
-              const displayImage = p.thumbnail || p.image || 'https://via.placeholder.com/400x600/ff6b35/ffffff?text=Ziba\'s+Creators';
+              const displayImage = p.thumbnail || p.image || 'https://via.placeholder.com/400x600/ff6b35/ffffff?text=Post';
               const countryInfo = getCountryInfo(p.country);
               const socialLinkBg = 'https://snack.yummiespromociones.com/zibas/socialmedia.webp';
 

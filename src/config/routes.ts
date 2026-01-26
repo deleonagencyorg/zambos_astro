@@ -78,6 +78,13 @@ export const routesConfig: RouteConfig[] = [
     metaTitleKey: 'meta.jurados.title',
     metaDescriptionKey: 'meta.jurados.description',
   },
+  {
+    id: 'truck',
+    slugs: { es: 'camion', en: 'truck' },
+    contentComponent: '@/views/Truck/index.astro',
+    metaTitleKey: 'meta.truck.title',
+    metaDescriptionKey: 'meta.truck.description',
+  }
   // ... Agrega más rutas aquí
 ];
 

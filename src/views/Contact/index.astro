@@ -6,8 +6,8 @@ import MainLayout from '../../layouts/MainLayout.astro';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 import LazyImage from '../../components/common/LazyImage.astro';
 import FormContact from '../../components/contact/FormContact.astro';
-import ContactSchema from '../../components/seo/ContactSchema.astro';
 import { fade } from 'astro:transitions';
+import Subscription from '../../components/subscription/index.astro';
 
 // Import locale files statically
 import contactEs from '../../locales/es/contact.json';
@@ -37,30 +37,31 @@ const title = contact.title;
 const metaDescription = contact.description;
 console.log('headerColorConfig in Contact:', headerColorConfig);
 const headerColors = {
-  backgroundColor: '#FE5A00',
+  backgroundColor: '#0DB04A',
   textColor: '#FFFFFF'
 };
 ---
 
-<ContactSchema lang={locale} slot="head" />
-
-<MainLayout title={title} class="bg-white" description={metaDescription} headerColorConfig={headerColors}>
+<MainLayout title={title} class="bg-white" description={metaDescription} headerColors={headerColors}>
   <div class=" w-[100%] mx-auto ">
     
 
     <!-- Main Contact Section -->
-    <div class="flex flex-col justify-center px-4 items-start lg:flex-row gap-12 py-12" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgcontactzibas.webp'); background-size: cover; background-position: center;">
+    <div class="flex flex-col justify-center px-4 items-start lg:flex-row gap-12 py-12 bg-[#0DB04A]">
       
       <!-- Left Column - Contact Info -->
-    <div class="w-[100%] lg:w-[40%] pl-8 lg:pl-16 flex flex-col justify-center h-[100%] lg:h-[600px]">
-        <h1 class="text-white font-title text-7xl uppercase md:text-6xl lg:text-7xl font-bold mb-6">
+    <div class="w-[100%] lg:w-[50%] pl-8 lg:pl-16 flex flex-col justify-center h-[100%] lg:h-[600px]">
+        <h2 class="text-white font-title text-2xl uppercase md:text-2xl lg:text-2xl font-bold mb-6">
           {contact.title}
+        </h2>
+
+        <h1 class="text-white font-title text-5xl uppercase md:text-6xl lg:text-7xl font-bold mb-6">
+          {contact.subtitle}
         </h1>
-        
+
         <p class="text-white font-bold text-2xl lg:text-2xl mb-8 leading-relaxed ">
           {contact.description}
         </p>
-     
       </div>
       
       <!-- Right Column - Contact Form -->
@@ -70,11 +71,11 @@ const headerColors = {
     </div>
     
     <!-- Offices Section -->
-    <div class="mx-auto bg-blue p-8">
-      <h3 class="text-white md:text-4xl text-4xl italic font-title uppercase font-bold mb-4 flex items-center justify-center gap-1">
+    <div class="mx-auto bg-[#0DB04A] p-8" data-contact-offices data-contact-locations={JSON.stringify(contact.offices.locations)}>
+      <h3 class="text-white md:text-4xl text-4xl italic font-title uppercase font-bold mb-4 flex items-center justify-start gap-1">
         <span class="font-title">{contact.offices.title.split(' ')[0]} {contact.offices.title.split(' ')[1]}</span>
       </h3>
-      <h1 class="text-white md:text-9xl text-12xl italic font-title uppercase font-bold mb-4 flex items-center justify-center gap-1">
+      <h1 class="text-white md:text-4xl text-4xl italic font-title uppercase font-bold mb-4 flex items-center justify-start gap-1">
         <span class="font-title">{contact.offices.title.split(' ').slice(2).join(' ')}</span>
       </h1>
       
@@ -82,7 +83,7 @@ const headerColors = {
       <div class="flex flex-col mb-4">
         <!-- Office Details -->
         <div class="order-2 w-[80%] mx-auto">
-          <div id="officeInfo" class="bg-blue rounded-2xl p-8 ">
+          <div id="officeInfo" class="bg-[#0DB04A] rounded-2xl p-8 ">
             <div class="flex flex-col lg:flex-row justify-between items-center">
               <div class="space-y-4">
                 <h3 id="officeName" class="text-white font-sans text-6xl md:text-7xl uppercase font-extrabold  mb-4">
@@ -102,15 +103,6 @@ const headerColors = {
                     ))}
                   </div>
                 </div>
-                
-                <!-- <div class="flex items-center space-x-3">
-                  <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                  </svg>
-                  <a id="officeEmail" href={`mailto:${contact.offices.locations["+504"].email}`} class="text-primary hover:text-secondary transition-colors">
-                    {contact.offices.locations["+504"].email}
-                  </a>
-                </div> -->
               </div>
               <div class="mt-6 lg:mt-0">
                 <LazyImage 
@@ -126,15 +118,15 @@ const headerColors = {
         <!-- Map and Tabs -->
         <div class="order-1 mt-4">
           <!-- Country Tabs -->
-          <div class="mb-6 flex flex-wrap justify-center gap-2">
+          <div class="mb-6 flex flex-wrap justify-start gap-2" data-country-tabs-container>
           {Object.entries(contact.offices.locations).map(([countryCode, location]: [string, any], index: number) => (
             <button 
               data-country-code={countryCode}
               class={`country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5
                 ${index === 0 
-                  ? 'h-[54px] bg-[#005ADA] opacity-100 border border-white' 
-                  : 'h-[54px] bg-[#005ADA] opacity-75 hover:opacity-100'
-                } rounded-[47px]`}
+                  ? 'h-[54px] bg-[#FF0001] opacity-100 border border-white border-[1px] border-[#FF0001] rounded-full ' 
+                  : 'h-[54px] bg-[#0DB04A] opacity-75 hover:opacity-100 border-[1px] border-[#FF0001] text-[#FF0001] rounded-full'
+                }`}
             >
               {location.tab}
             </button>
@@ -170,144 +162,116 @@ const headerColors = {
       </div>
     </div>
 
-    <script define:vars={{ contactLocations: contact.offices.locations }}>
-      // Función que se ejecutará cuando el DOM esté listo o cuando se llame manualmente
-      function initializeCountryTabs() {
-        // Get references to all elements that need to be updated
-        const tabs = document.querySelectorAll('.country-tab');
-        const officeName = document.getElementById('officeName');
-        const officeAddress = document.getElementById('officeAddress');
-        const officePhones = document.getElementById('officePhones');
-        const officeEmail = document.getElementById('officeEmail');
-        const officeImage = document.getElementById('officeImage');
-        
-        // Get all map containers
-        const mapContainers = document.querySelectorAll('[data-map-country]');
-        
-        // Contact data is directly available from Astro's define:vars
-        const contactData = contactLocations;
-        
-        // For debugging
-        console.log('Contact locations:', contactData);
-        console.log('Tabs found:', tabs.length);
-        console.log('Map containers found:', mapContainers.length);
-        
-        // Function to update office information
-        function updateOfficeInfo(countryCode) {
-          console.log('Updating office for:', countryCode);
-          const office = contactData[countryCode];
-          
-          if (!office) {
-            console.error('No office data found for', countryCode);
-            return;
+    <script is:inline data-astro-rerun>
+      (function () {
+        'use strict';
+
+        function initializeCountryTabs() {
+          const root = document.querySelector('[data-contact-offices]');
+          if (!(root instanceof HTMLElement)) return;
+
+          const rawLocations = root.getAttribute('data-contact-locations') || '{}';
+          let contactData = {};
+          try {
+            contactData = JSON.parse(rawLocations);
+          } catch (err) {
+            console.error('Invalid contact locations JSON:', err);
+            contactData = {};
           }
-          
-          console.log('Office data:', office);
-          
-          // Update text content and attributes
-          if (officeName) officeName.textContent = office.name;
-          if (officeAddress) officeAddress.textContent = `+ ${office.address}`;
-          
-          // Update phone numbers
-          if (officePhones) {
-            officePhones.innerHTML = '';
-            
-            // Luego añadir los teléfonos
-            office.phones.forEach(phone => {
-              const phoneContainer = document.createElement('div');
-              const phoneLink = document.createElement('a');
-              phoneLink.href = `tel:${phone}`;
-              phoneLink.textContent = `+${phone}`;
-              phoneLink.className = 'text-white hover:text-primary font-medium font-semibold transition-colors';
-              phoneContainer.appendChild(phoneLink);
-              officePhones.appendChild(phoneContainer);
+
+          const tabs = root.querySelectorAll('.country-tab');
+          const officeName = root.querySelector('#officeName');
+          const officeAddress = root.querySelector('#officeAddress');
+          const officePhones = root.querySelector('#officePhones');
+          const mapContainers = root.querySelectorAll('[data-map-country]');
+
+          function updateOfficeInfo(countryCode) {
+            const office = contactData[countryCode];
+            if (!office) return;
+
+            if (officeName) officeName.textContent = office.name;
+            if (officeAddress) officeAddress.textContent = `+ ${office.address}`;
+
+            if (officePhones) {
+              officePhones.innerHTML = '';
+              office.phones.forEach((phone) => {
+                const phoneContainer = document.createElement('div');
+                const phoneLink = document.createElement('a');
+                phoneLink.href = `tel:${phone}`;
+                phoneLink.textContent = `+${phone}`;
+                phoneLink.className = 'text-white hover:text-primary font-medium font-semibold transition-colors';
+                phoneContainer.appendChild(phoneLink);
+                officePhones.appendChild(phoneContainer);
+              });
+            }
+
+            mapContainers.forEach((container) => {
+              container.style.display = 'none';
             });
+
+            const selectedMap = root.querySelector(`[data-map-country="${countryCode}"]`);
+            if (selectedMap) selectedMap.style.display = 'block';
           }
-          
-          // Update email
-          if (officeEmail) {
-            officeEmail.href = `mailto:${office.email}`;
-            officeEmail.textContent = office.email;
+
+          function handleTabSelection(tab) {
+            tabs.forEach((t) => {
+              if (t === tab) {
+                t.className = `country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-[#FF0001] opacity-100 border border-white border-[1px] border-[#FF0001] rounded-full`;
+              } else {
+                t.className = `country-tab px-10 py-4 uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-[#0DB04A] opacity-75 hover:opacity-100 border-[1px] border-[#FF0001] text-[#FF0001] rounded-full`;
+              }
+            });
+
+            const countryCode = tab.getAttribute('data-country-code');
+            if (countryCode) updateOfficeInfo(countryCode);
           }
-          
-          // Update image
-          if (officeImage instanceof HTMLImageElement) {
-            officeImage.src = office.image;
-            officeImage.alt = office.name;
-          }
-          
-          // Update map iframe visibility
-          console.log('Updating map visibility for country:', countryCode);
-          
-          // First hide all maps
-          mapContainers.forEach(container => {
-            container.style.display = 'none';
+
+          // Re-bind direct handlers every init (overwrites previous)
+          tabs.forEach((tab, index) => {
+            tab.onclick = (e) => {
+              if (e && typeof e.preventDefault === 'function') e.preventDefault();
+              const now = Date.now();
+              const lastTouch = Number(root.dataset.lastTouch || '0');
+              if (now - lastTouch < 500) return;
+              handleTabSelection(tab);
+            };
+
+            tab.ontouchend = (e) => {
+              if (e && typeof e.preventDefault === 'function') e.preventDefault();
+              root.dataset.lastTouch = String(Date.now());
+              handleTabSelection(tab);
+            };
+
+            if (index === 0) {
+              // Ensure first tab initial state
+              handleTabSelection(tab);
+            }
           });
-          
-          // Then show the selected one
-          const selectedMap = document.querySelector(`[data-map-country="${countryCode}"]`);
-          if (selectedMap) {
-            selectedMap.style.display = 'block';
-            console.log('Showing map container:', countryCode);
-          } else {
-            console.error('No map container found for country code:', countryCode);
-          }
         }
-        
-        // Function to handle tab selection
-        function handleTabSelection(tab) {
-          // Remove active class and border from all tabs
-          tabs.forEach(t => {
-            t.classList.remove('border', 'border-white');
-            t.style.opacity = '0.75';
-          });
-          
-          // Add active class and border to clicked tab
-          tab.classList.add('border', 'border-white');
-          tab.style.opacity = '1';
-          
-          // Update office info based on country code
-          const countryCode = tab.getAttribute('data-country-code');
-          if (countryCode) {
-            updateOfficeInfo(countryCode);
+
+        const safeInit = () => {
+          try {
+            initializeCountryTabs();
+          } catch (err) {
+            console.error('Error initializing country tabs:', err);
           }
+        };
+
+        document.addEventListener('astro:page-load', safeInit);
+        document.addEventListener('astro:after-swap', safeInit);
+        window.addEventListener('load', safeInit);
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', safeInit, { once: true });
+        } else {
+          safeInit();
         }
-        
-        // Add click and touch event listeners to tabs for better mobile compatibility
-        tabs.forEach(tab => {
-          // Función para manejar ambos tipos de eventos
-          const handleEvent = (e) => {
-            e.preventDefault();
-            console.log('Tab interaction:', tab.getAttribute('data-country-code'));
-            handleTabSelection(tab);
-          };
-          
-          // Agregar múltiples listeners para mayor compatibilidad
-          tab.addEventListener('click', handleEvent);
-          tab.addEventListener('touchend', handleEvent);
-        });
-        
-        // Initialize with first country
-        if (tabs.length > 0) {
-          const firstTabCountry = tabs[0].getAttribute('data-country-code');
-          if (firstTabCountry) {
-            updateOfficeInfo(firstTabCountry);
-          }
-        }
-      }
-      
-      // Intentar inicializar inmediatamente
-      if (document.readyState === 'loading') {
-        // Si el documento aún se está cargando, esperar al evento DOMContentLoaded
-        document.addEventListener('DOMContentLoaded', initializeCountryTabs);
-      } else {
-        // Si el documento ya está cargado, ejecutar inmediatamente
-        initializeCountryTabs();
-      }
-      
-      // Como respaldo, intentar inicializar después de un breve retraso
-      // para asegurarnos de que todo esté correctamente cargado
-      setTimeout(initializeCountryTabs, 500);
+
+        setTimeout(safeInit, 0);
+      })();
     </script>
   </div>
+  <section class="w-full">
+    <Subscription />
+  </section>
 </MainLayout>

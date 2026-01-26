@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import { getLocale } from '../../../i18n/i18n';
+import esCommon from '../../../locales/es/common.json';
+import enCommon from '../../../locales/en/common.json';
+
+export interface Props {
+  title: string;
+  images: Array<{
+    id: string;
+    desktop: string;
+    mobile: string;
+    alt: string;
+    title: string;
+    description: string;
+    link: string;
+  }>;
+}
+
+const { title, images } = Astro.props;
+const locale = getLocale(Astro.url.pathname) || 'es';
+
+// Get Instagram posts from locale
+const instagramPosts = locale === 'es' 
+  ? esCommon.home.socialmedia.instagramPosts
+  : enCommon.home.socialmedia.instagramPosts;
+---
+
+<div class="box-border flex flex-col gap-12 items-left justify-start container mx-auto  py-0 relative w-full ">
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full">
+    {instagramPosts.map((post: any) => (
+      <div class="w-full aspect-[9/16] overflow-hidden rounded-xl">
+        <iframe
+          src={post.embedUrl}
+          class="w-full h-full"
+          allowtransparency="true"
+          allowfullscreen
+          frameborder="0"
+          scrolling="no"
+        ></iframe>  <a href={post.postUrl} class="bg-red text-white px-4 py-2 rounded-lg block text-center mt-2" target="_blank" rel="noopener noreferrer">
+        {locale === 'es' ? 'Ver post' : 'View post'}
+      </a>
+    
+      </div>
+     
+    ))}
+  </div>
+</div>

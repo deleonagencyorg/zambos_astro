@@ -24,76 +24,22 @@
   ],
   "items": [
     {
-      "id": "zibas-clasicas",
-      "name": "Zambos Clásicas",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-clasicas-2.webp",
-      "background_color": "#FDE820",
-      "header_color": "#FDE820",
-      "text_color":"#FDE820",
-      "header_background": "#FDE820",
-      "header_text_color": "#5B3F2E",
-      "color_button": "#FDE820",
-      "description": "Hojuelas de Papa Fritas con sabor a Queso.",
-      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zibas-grande2.webp",
-      "sizes": [
-        {
-          "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-clasicas-2.webp"
-        }
-      ],
-      "weight": [
-        "23g",
-        "26g",
-        "40g",
-        "80g",
-        "190g"
-      ]
-    },
-    {
-      "id": "zibas-chile-toreado",
-      "name": "Zambos Chile Toreado",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-chile-toreado-2.webp",
-      "background_color": "#147a2f",  
+      "id": "zambos-picositas-con-chile-limon-y-sal",
+      "name": "Zambos Picositas Con Chile Limón Y Sal",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp",
+      "background_color": "#64A70B",
       "header_color": "#FFFFFF",
-      "text_color":"#147a2f",
-      "header_background": "#147a2f",
-      "header_color": "#FFFFFF",
-      "color_button": "#147a2f",
-      "description": "Hojuelas de Papa Fritas con sabor a Queso.",
-      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zibas-grande2.webp",
-      "sizes": [
-        {
-          "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-clasicas-2.webp"
-        }
-      ],
-      "weight": [
-        "23g",
-        "26g",
-        "40g",
-        "80g",
-        "190g"
-      ]
-    },
-    {
-      "id": "zibas-queso",
-      "name": "Zambos Queso",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-queso-2.webp",
-      "background_color": "#FE5A00",
-      "header_color": "#FFFFFF",
-      "text_color":"#FE5A00",
-      "header_background": "#FE5A00",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
       "header_text_color": "#FFFFFF",
-      "color_button": "#FE5A00",
-      "description": "Hojuelas de Papa Fritas con sabor a Queso.",
+      "color_button": "#64A70B",
+      "description": "Picositas con chile, limón y sal.",
       "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zibas-grande2.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
       "sizes": [
         {
           "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-clasicas-2.webp"
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp"
         }
       ],
       "weight": [
@@ -102,52 +48,26 @@
         "40g",
         "80g",
         "190g"
-      ]
-    },
-    {
-      "id": "zibas-crema-y-especias",
-      "name": "Zambos Crema y Especias",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-crema-y-especias-2.webp",
-      "background_color": "#BEDE89",
-      "header_color": "#1C1C1C",
-      "text_color":"#BEDE89",
-      "header_background": "#BEDE89",
-      "header_text_color": "#1C1C1C",
-      "color_button": "#BEDE89",
-      "description": "Hojuelas de Papa Fritas con sabor a Queso.",
-      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zibas-grande2.webp",
-      "sizes": [
-        {
-          "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-clasicas-2.webp"
-        }
       ],
-      "weight": [
-        "23g",
-        "26g",
-        "40g",
-        "80g",
-        "190g"
-      ]
+      "category": "snacks"
     },
     {
-      "id": "zibas-miel-mostaza",
-      "name": "Zambos Miel Mostaza",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-miel-mostasa-2.webp",
-      "background_color": "#0167F7",
+      "id": "zambos-yuquitas-con-ajo-parmesano",
+      "name": "Zambos Yuquitas Con Ajo Parmesano",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_yuquita_ajo_parmesano.webp",
+      "background_color": "#64A70B",
       "header_color": "#FFFFFF",
-      "text_color":"#FFFFFF",
-      "header_background": "#0167F7",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
       "header_text_color": "#FFFFFF",
-      "color_button": "#0167F7",
-      "description": "Hojuelas de Papa Fritas con sabor a Queso.",
+      "color_button": "#64A70B",
+      "description": "Yuquitas con ajo y parmesano.",
       "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zibas-grande2.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
       "sizes": [
         {
           "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-clasicas-2.webp"
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_yuquita_ajo_parmesano.webp"
         }
       ],
       "weight": [
@@ -156,7 +76,232 @@
         "40g",
         "80g",
         "190g"
-      ]
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-ceviche",
+      "name": "Zambos Ceviche",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Sabor a ceviche.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-2.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-salsa-verde-fam",
+      "name": "Zambos Salsa Verde Fam",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos%2BSalsa%2BVerde%2BFam.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Sabor salsa verde familiar.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos%2BSalsa%2BVerde%2BFam.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-con-chicharron-del-rancho",
+      "name": "Zambos Con Chicharron Del Rancho",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-con-chicharron-del-rancho-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Con chicharrón del rancho.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-con-chicharron-del-rancho-2.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-maduritos",
+      "name": "Zambos Maduritos",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Sabor maduritos.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-2.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-originales-onduladas",
+      "name": "Zambos Originales Onduladas",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-originales-onduladas-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Onduladas originales.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-originales-onduladas-2.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-tajin",
+      "name": "Zambos Tajin",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tajin-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Sabor a Tajín.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tajin-2.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-yuquitas-chile-toreado",
+      "name": "Zambos Yuquitas Chile Toreado",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-chile-toreado-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Yuquitas con chile toreado.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-chile-toreado-2.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
+    },
+    {
+      "id": "zambos-yuquitas-originales",
+      "name": "Zambos Yuquitas Originales",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-originales-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Yuquitas originales.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-originales-2.webp"
+        }
+      ],
+      "weight": [
+        "23g",
+        "26g",
+        "40g",
+        "80g",
+        "190g"
+      ],
+      "category": "snacks"
     }
   ]
 }

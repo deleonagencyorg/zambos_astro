@@ -19,8 +19,8 @@ const socialMedia = t('social_media', { namespace: 'common', locale: currentLang
 // Default values
 const pageTitle = title || meta.home.title;
 const pageDescription = description || meta.home.description;
-const pageImage = imageUrl || 'https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp';
-const pageUrl = canonicalUrl || `https://zibaspapas.com/${currentLang}`;
+const pageImage = imageUrl || 'https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp';
+const pageUrl = canonicalUrl || `https://zambos.com/${currentLang}`;
 
 // Social media URLs
 const facebookUrl = socialMedia?.facebook?.url || '';
@@ -49,7 +49,7 @@ const twitterUrl = socialMedia?.twitter?.url || '';
 <!-- Image Optimization -->
 <meta name="og:image:width" content="1200" />
 <meta name="og:image:height" content="630" />
-<meta name="og:image:alt" content="Zambos - ${title || 'Delicious snacks from Central America'}" />
+<meta name="og:image:alt" content="Snacks Yummies - ${title || 'Delicious snacks from Central America'}" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -68,8 +68,8 @@ const twitterUrl = socialMedia?.twitter?.url || '';
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zambos",
-  "url": "https://zibaspapas.com",
-  "logo": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp",
+  "url": "https://zambos.com",
+  "logo": "https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp",
   "sameAs": [
     socialMedia.facebook?.url,
     socialMedia.instagram?.url,
@@ -86,7 +86,7 @@ const twitterUrl = socialMedia?.twitter?.url || '';
       "@type": "ListItem",
       "position": 1,
       "name": currentLang === 'es' ? 'Inicio' : 'Home',
-      "item": `https://zibaspapas.com/${currentLang}`
+      "item": `https://zambos.com/${currentLang}`
     }
   ]
 })}></script>

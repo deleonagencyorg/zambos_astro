@@ -1,0 +1,178 @@
+---
+import { routesConfig, getRouteById } from '../../config/routes';
+import { setLocale, t, type Locale } from '../../i18n/i18n';
+import MainLayout from '../../layouts/MainLayout.astro';
+import ProductsCarousel from '../../components/common/ProductsCarousel/index.astro';
+import Subscription from '../../components/subscription/index.astro';
+import LazyImage from '../../components/common/LazyImage.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } }
+  ];
+}
+
+const { lang } = Astro.params as { lang: Locale };
+setLocale(lang);
+
+const pageTitle = lang === 'es' ? 'Página No Encontrada - Zambos' : 'Page Not Found - Zambos';
+const pageDescription = lang === 'es' 
+  ? '¡Ups! Esta página de Zambos no existe. Explora nuestros deliciosos snacks.'
+  : 'Oops! This Zambos page doesn\'t exist. Explore our delicious snacks.';
+
+const products = t('items', { namespace: 'products', locale: lang }) || [];
+const homeAssets = t('home', { namespace: 'common', locale: lang }) || {};
+
+// SEO Keywords based on language
+const seoKeywords = lang === 'es' 
+  ? 'página no encontrada, error 404, snacks centroamérica, taqueritos, zambos, ranchitas, snacks honduras, snacks guatemala'
+  : 'page not found, error 404, central america snacks, food, honduras snacks, guatemala snacks, taqueritos, zambos, ranchitas';
+---
+
+<MainLayout title={pageTitle} description={pageDescription}>
+  <Fragment slot="head">
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content={seoKeywords}>
+    <meta name="author" content="Zambos">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href={`https://zambos.com/${lang}/404`}>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content={`Zambos - ${pageTitle}`}>
+    <meta property="og:description" content={pageDescription}>
+    <meta property="og:image" content="https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp">
+    <meta property="og:url" content={`https://zambos.com/${lang}/404`}>
+    <meta property="og:type" content="website">
+  </Fragment>
+
+  <div class="min-h-screen bg-gradient-to-b from-green-50 to-white">
+    <!-- Hero Section 404 -->
+    <section class="relative py-20 px-4">
+      <div class="container mx-auto text-center">
+        <!-- 404 Number -->
+        <div class="relative mb-8">
+          <h1 class="text-9xl md:text-[12rem] font-bold text-green-600 opacity-20">
+            404
+          </h1>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <LazyImage
+              src={homeAssets?.snackImage || "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-grande2.webp"}
+              alt="Zambos Snack"
+              class="w-32 h-32 md:w-48 md:h-48 object-contain animate-bounce"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+        <!-- Error Message -->
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          {lang === 'es' ? '¡Snack-tastrofia!' : 'Snack-tastrophe!'}
+        </h2>
+        
+        <p class="text-xl md:text-2xl text-gray-600 mb-6 max-w-2xl mx-auto">
+          {lang === 'es' 
+            ? '¡Ups! Parece que esta página se perdió en el camino... igual que ese último chip en el fondo de la bolsa!'
+            : 'Oops! It seems this page got lost on its way... just like that last chip at the bottom of the bag!'
+          }
+        </p>
+
+        <p class="text-lg text-gray-500 mb-8 max-w-xl mx-auto">
+          {lang === 'es' 
+            ? 'Mientras tanto, ¿qué tal si exploras algunos de nuestros deliciosos productos Zambos?'
+            : 'Meanwhile, how about exploring some of our delicious Zambos products?'
+          }
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a 
+            href={`/${lang}/`}
+            class="inline-flex items-center px-8 py-4 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            {lang === 'es' ? 'Volver al Inicio' : 'Go Home'}
+          </a>
+          
+          <a 
+            href={`/${lang}/products`}
+            class="inline-flex items-center px-8 py-4 bg-yellow-400 text-gray-800 font-semibold rounded-lg hover:bg-yellow-300 transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+            {lang === 'es' ? 'Ver Productos' : 'View Products'}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Carousel Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            {lang === 'es' ? 'Descubre Nuestros Snacks Favoritos' : 'Discover Our Favorite Snacks'}
+          </h3>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            {lang === 'es' 
+              ? 'No te quedes con las ganas. Explora nuestra deliciosa variedad de snacks Zambos y encuentra tu próximo favorito.'
+              : 'Don\'t miss out. Explore our delicious variety of Zambos snacks and find your next favorite.'
+            }
+          </p>
+        </div>
+        
+        <!-- Products Carousel -->
+        <ProductsCarousel 
+          products={products}
+          title={""}
+        />
+      </div>
+    </section>
+
+    <!-- Fun Section -->
+    <section class="py-16 bg-green-50">
+      <div class="container mx-auto px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+            {lang === 'es' ? '¿Sabías que...?' : 'Did You Know...?'}
+          </h3>
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <p class="text-lg text-gray-700 mb-4">
+              {lang === 'es' 
+                ? 'El snack promedio dura aproximadamente 3.7 segundos en la mano antes de ser devorado. ¡La página que buscabas duró aún menos!'
+                : 'The average snack lasts approximately 3.7 seconds in hand before being devoured. The page you were looking for lasted even less!'
+              }
+            </p>
+            <div class="text-6xl mb-4">
+              🌮🍟🥨
+            </div>
+            <p class="text-sm text-gray-500 italic">
+              {lang === 'es' ? '*Datos 100% científicos no verificados' : '*100% scientifically unverified data'}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <Subscription />
+      </div>
+    </section>
+  </div>
+
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</MainLayout>

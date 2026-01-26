@@ -31,8 +31,8 @@ const ContentComponent = HomePageContent; // Asignación directa para la página
 
 // SEO Keywords based on language
 const seoKeywords = lang === 'es' 
-  ? 'snacks centroamérica, taqueritos, zambos, ranchitas, snacks honduras, snacks guatemala, marca líder snacks, Zambos'
-  : 'central america snacks, food, honduras snacks, guatemala snacks, leading snack brand, Zambos, taqueritos, zambos, ranchitas';
+  ? 'snacks centroamérica, taqueritos, zambos, ranchitas, snacks honduras, snacks guatemala, marca líder snacks, snacks yummies'
+  : 'central america snacks, food, honduras snacks, guatemala snacks, leading snack brand, snacks yummies, taqueritos, zambos, ranchitas';
 ---
 <MainLayout title={pageTitle} description={pageDescription}>
   <Fragment slot="head">
@@ -40,13 +40,13 @@ const seoKeywords = lang === 'es'
     <meta name="keywords" content={seoKeywords}>
     <meta name="author" content="Zambos">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href={`https://zibaspapas.com/${lang}`}>
+    <link rel="canonical" href={`https://zambos.com/${lang}`}>
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content={`Zambos - ${pageTitle}`}>
     <meta property="og:description" content={pageDescription}>
     <meta property="og:image" content="https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp">
-    <meta property="og:url" content={`https://zibaspapas.com/${lang}`}>
+    <meta property="og:url" content={`https://zambos.com/${lang}`}>
     <meta property="og:type" content="website"> 
     <meta property="og:site_name" content="Zambos">
     <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'}>
@@ -64,7 +64,7 @@ const seoKeywords = lang === 'es'
       "@type": "Organization",
       "name": "Zambos",
       "alternateName": "Zambos",
-      "url": "https://zibaspapas.com",
+      "url": "https://zambos.com",
       "logo": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp",
       "description": lang === 'es' ? "Marca líder de snacks en Centroamérica. Taqueritos, Zambos, Ranchitas. Calidad y sabor inigualable." : "Leading snack brand in Central America. Taqueritos, Zambos, Ranchitas. Unmatched quality and flavor.",
       "foundingDate": "1990",
@@ -80,7 +80,7 @@ const seoKeywords = lang === 'es'
         {
           "@type": "Brand",
           "name": "Zambos",
-          "url": "https://zibaspapas.com"
+          "url": "https://zambos.com"
         }
       ],
       "sameAs": [
@@ -107,12 +107,12 @@ const seoKeywords = lang === 'es'
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Zambos",
-      "url": "https://zibaspapas.com",
+      "url": "https://zambos.com",
       "description": lang === 'es' ? "Sitio web oficial de Zambos, la marca líder de snacks en Centroamérica" : "Official website of Zambos, the leading snack brand in Central America",
       "inLanguage": lang === 'es' ? "es-ES" : "en-US",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": `https://zibaspapas.com/${lang}/search?q={search_term_string}`,
+        "target": `https://zambos.com/${lang}/search?q={search_term_string}`,
         "query-input": "required name=search_term_string"
       }
     })}></script>
@@ -125,7 +125,7 @@ const seoKeywords = lang === 'es'
           "@type": "ListItem",
           "position": 1,
           "name": lang === 'es' ? "Inicio" : "Home",
-          "item": `https://zibaspapas.com/${lang}`
+          "item": `https://zambos.com/${lang}`
         }
       ]
     })}></script>

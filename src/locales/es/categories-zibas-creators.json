@@ -1,0 +1,58 @@
+{
+  "title": "Categorías",
+  "description": "Listado de categorías.",
+  "categories": [
+    {
+      "id": "baile",
+      "title": "BAILE",
+      "description": "Muestra tu flow, tus pasos y tu estilo. Grábate moviendo el cuerpo al ritmo que más te guste.",
+      "subtitle": "Muestra tu flow, tus pasos y tu estilo. Grábate moviendo el cuerpo al ritmo que más te guste.",
+      "longDescription": "Muestra tu flow, tus pasos y tu estilo. Grábate moviendo el cuerpo al ritmo que más te guste.",
+      "image": "",
+      "imageMobile": "",
+      "url": "",
+      "color": "#FB923C",
+      "gradient": "from-orange-400 to-red-400"
+    },
+    {
+      "id": "musica",
+      "title": "MÚSICA",
+      "description": "Deja que el ritmo no pare. Canta, toca un instrumento, haz un cover o crea una canción.",
+      "subtitle": "Deja que el ritmo no pare. Canta, toca un instrumento, haz un cover o crea una canción.",
+      "longDescription": "Deja que el ritmo no pare. Canta, toca un instrumento, haz un cover o crea una canción.",
+      "image": "",
+      "imageMobile": "",
+      "url": "",
+      "color": "#3B82F6",
+      "gradient": "from-blue-400 to-indigo-400"
+    },
+    {
+      "id": "arte",
+      "title": "ARTE",
+      "description": "Dibuja, pinta o ilustra como tú quieras. Dale vida a tu imaginación con cualquier técnica o formato.",
+      "subtitle": "Dibuja, pinta o ilustra como tú quieras. Dale vida a tu imaginación con cualquier técnica o formato.",
+      "longDescription": "Dibuja, pinta o ilustra como tú quieras. Dale vida a tu imaginación con cualquier técnica o formato.",
+      "image": "",
+      "imageMobile": "",
+      "url": "",
+      "color": "#10B981",
+      "gradient": "from-green-400 to-emerald-400"
+    },
+    {
+      "id": "cortometraje",
+      "title": "CORTOMETRAJE",
+      "description": "Crea historias en formato corto y cinematográfico. Usa cualquier estilo que muestre tu creatividad.",
+      "subtitle": "Crea historias en formato corto y cinematográfico. Usa cualquier estilo que muestre tu creatividad.",
+      "longDescription": "Crea historias en formato corto y cinematográfico. Usa cualquier estilo que muestre tu creatividad.",
+      "image": "",
+      "imageMobile": "",
+      "url": "",
+      "color": "#6366F1",
+      "gradient": "from-indigo-400 to-purple-400"
+    }
+  ],
+  "meta": {
+    "title": "Categorías",
+    "description": "Explora todas las categorías disponibles."
+  }
+}

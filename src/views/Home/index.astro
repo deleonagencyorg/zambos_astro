@@ -1,24 +1,22 @@
-<!-- src/views/Home/index.astro -->
 ---
-import LazyImage from '../../components/common/LazyImage.astro';
+import LazyImage from "../../components/common/LazyImage.astro";
 // Component Imports
-import VideoCarousel from '../../components/common/VideoCarousel/index.astro';
+import VideoCarousel from "../../components/common/VideoCarousel/index.astro";
 import RecipesCarousel from "../../components/recipes/RecipesCarousel.astro";
-import ProductsCarousel from '../../components/common/ProductsCarousel/index.astro';
-import MasonryGallery from '../../components/gallery/MasonryGallery.astro';
-import PixelGrid from '../../components/atoms/PixelGrid.astro';
-import BlogCard from '../../components/blog/BlogCard.astro';
-import OrganizationSchema from '../../components/seo/OrganizationSchema.astro';
-
+import ProductsCarousel from "../../components/common/ProductsCarousel/index.astro";
+import MasonryGallery from "../../components/gallery/MasonryGallery.astro";
+import PixelGrid from "../../components/atoms/PixelGrid.astro";
+import BlogCard from "../../components/blog/BlogCard.astro";
+import ExperiencesCarousel from "../../components/common/Experiences/index.astro";
+import Subscription from "../../components/subscription/index.astro";
+import Discover from "../../components/common/Discover/index.astro";
 
 // Style Imports
-import './styles.css';
+import "./styles.css";
 
 // i18n and Data Imports
-import { t, getLocale } from '../../i18n/i18n';
-import { InstagramEmbed } from 'react-social-media-embed';
-
-
+import { t, getLocale } from "../../i18n/i18n";
+import { InstagramEmbed } from "react-social-media-embed";
 
 // Props
 export interface Props {
@@ -28,36 +26,55 @@ const { loading = false } = Astro.props;
 
 // Language and Data Setup
 const currentLang = getLocale();
-const homeAssets = t('home', { namespace: 'common', locale: currentLang }) || {};
-const recipesAssets = t('', { namespace: 'recipes', locale: currentLang }) || {};
-const galleryAssets = t('', { namespace: 'gallery', locale: currentLang }) || {};
-const aboutAssets = t('', { namespace: 'aboutus', locale: currentLang }) || {};
-const brandsAssets = t('', { namespace: 'brands', locale: currentLang }) || {};
-const newsAssets =  t('', { namespace: 'news', locale: currentLang }) || {};
-const products = t('items', { namespace: 'products', locale: currentLang }) || [];
+const homeAssets =
+  t("home", { namespace: "common", locale: currentLang }) || {};
+const recipesAssets =
+  t("", { namespace: "recipes", locale: currentLang }) || {};
+const galleryAssets =
+  t("", { namespace: "gallery", locale: currentLang }) || {};
+const aboutAssets = t("", { namespace: "aboutus", locale: currentLang }) || {};
+const brandsAssets = t("", { namespace: "brands", locale: currentLang }) || {};
+const newsAssets = t("", { namespace: "news", locale: currentLang }) || {};
+const products =
+  t("items", { namespace: "products", locale: currentLang }) || [];
+const experiences =
+  t("experiences", { namespace: "experiences", locale: currentLang }) || [];
 const brandsList = brandsAssets.brands || [];
-const zibasBrand = brandsList.find((brand: any) => brand.id === 'zambos');
-const zibasProducts = zibasBrand?.products || [];
+const zambosBrand = brandsList.find((brand: any) => brand.id === "zambos");
+const zambosProducts = zambosBrand?.products || [];
 
-const commonAssets = t('assets.slider', { namespace: 'common', locale: currentLang }) || [];
+const commonAssets =
+  t("assets.slider", { namespace: "common", locale: currentLang }) || [];
+const discoverAssets =
+  t("home.socialmedia", { namespace: "common", locale: currentLang }) || {};
+
 const slides = Array.isArray(commonAssets)
   ? commonAssets
-    .filter(asset => asset && typeof asset === 'object' && asset.desktop && asset.mobile)
-    .map(asset => ({
-      desktop: asset.desktop,
-      mobile: asset.mobile,
-      alt: asset.alt || "Zambos",
-      title: asset.title || '',
-      subtitle: asset.description || '',
-      link: asset.url || asset.link || ''
-    }))
+      .filter(
+        (asset) =>
+          asset && typeof asset === "object" && asset.desktop && asset.mobile,
+      )
+      .map((asset) => ({
+        desktop: asset.desktop,
+        mobile: asset.mobile,
+        alt: asset.alt || "Zambos",
+        title: asset.title || "",
+        subtitle: asset.description || "",
+        link: asset.url || asset.link || "",
+      }))
   : [];
 
 // Load latest blog posts by current language from markdown
-const blogModules = import.meta.glob('../../locales/*/blog/*.md');
-let latestBlogPosts: Array<{ id: string; slug: string; title: string; image?: string; published_date?: string; }>= [];
+const blogModules = import.meta.glob("../../locales/*/blog/*.md");
+let latestBlogPosts: Array<{
+  id: string;
+  slug: string;
+  title: string;
+  image?: string;
+  published_date?: string;
+}> = [];
 for (const path in blogModules) {
-  const lang = path.split('/')[3];
+  const lang = path.split("/")[3];
   if (lang === currentLang) {
     const mod: any = await blogModules[path]();
     const fm = mod.frontmatter || {};
@@ -66,56 +83,76 @@ for (const path in blogModules) {
         id: String(fm.id),
         slug: String(fm.slug),
         title: String(fm.title),
-        image: fm.image ? String(fm.image) : '/images/blog/placeholder.jpg',
-        published_date: fm.published_date ? String(fm.published_date) : ''
+        image: fm.image ? String(fm.image) : "/images/blog/placeholder.jpg",
+        published_date: fm.published_date ? String(fm.published_date) : "",
       });
     }
   }
 }
-function toDate(s?: string){
-  if(!s) return 0; 
-  if(/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(s)){ const [d,m,y]=s.split('/').map(Number); return new Date(y,(m||1)-1,d||1).getTime(); }
-  const t=Date.parse(s); return isNaN(t)?0:t;
+function toDate(s?: string) {
+  if (!s) return 0;
+  if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(s)) {
+    const [d, m, y] = s.split("/").map(Number);
+    return new Date(y, (m || 1) - 1, d || 1).getTime();
+  }
+  const t = Date.parse(s);
+  return isNaN(t) ? 0 : t;
 }
-latestBlogPosts = latestBlogPosts.sort((a,b)=> toDate(b.published_date)-toDate(a.published_date)).slice(0,5);
-const noNewsText = currentLang==='es' ? 'No se encuentra novedades aún para mostrar' : 'There are no updates to show yet';
-const topNewsLabel = currentLang==='es' ? 'NOTICIAS MÁS IMPORTANTES' : 'TOP NEWS';
-const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
-
+latestBlogPosts = latestBlogPosts
+  .sort((a, b) => toDate(b.published_date) - toDate(a.published_date))
+  .slice(0, 5);
+const noNewsText =
+  currentLang === "es"
+    ? "No se encuentra novedades aún para mostrar"
+    : "There are no updates to show yet";
+const topNewsLabel =
+  currentLang === "es" ? "NOTICIAS MÁS IMPORTANTES" : "TOP NEWS";
+const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
 ---
 
-  <OrganizationSchema lang={currentLang} slot="head" />
+<!-- src/views/Home/index.astro -->
+<main class="w-full flex flex-col items-center justify-center mt-0">
+  <!-- Slider Section con VideoCarousel -->
+  <div class="relative w-full overflow-hidden">
+    <VideoCarousel
+      slides={slides}
+      height="100vh"
+      mobileHeight="300px"
+      showOverlay={true}
+    />
+  </div>
 
-  <main class="w-full flex flex-col items-center justify-center mt-0">
-    <!-- Slider Section con VideoCarousel -->
-    <div class="relative w-full overflow-hidden">
-      <VideoCarousel 
-        slides={slides} 
-        height="100vh" 
-        mobileHeight="300px" 
-        showOverlay={true} 
-      />
-    </div>
-    
-    <!-- Sección de Productos Zibas -->
-    {zibasProducts.length > 0 && (
-      <section id="products" class="w-full py-4 bg-blue pt-16">
-        <div class="container mx-auto px-4">
+  <!-- Sección de Productos Zibas -->
+  {
+    zambosProducts.length > 0 && (
+      <section
+        id="products"
+        class="w-full py-4 bg-primary pt-16 relative overflow-hidden"
+      >
+        <div
+          class="hidden lg:block absolute top-[-15%] left-1/2 -translate-x-1/2 w-[1238px] h-[1238px] rounded-full opacity-20 z-0 pointer-events-none"
+          style="background: linear-gradient(270deg, #009337 0%, #006626 100%);"
+        />
+
+        <div
+          class="hidden md:block lg:hidden xl:hidden absolute top-[-10%] left-1/2 -translate-x-1/2 w-[900px] h-[1100px] rounded-full opacity-20 z-0 pointer-events-none"
+          style="background: linear-gradient(270deg, #009337 0%, #006626 100%);"
+        />
+
+        <div class="container mx-auto px-4 relative z-10">
           {brandsAssets.home?.title && (
-          <div class="text-center mb-2 relative z-20" >
-            <h2 class="text-3xl md:text-4xl italic font-bold mb-3" style={`color: white`}>
-              {brandsAssets.home?.title}
-            </h2>
-            {brandsAssets.home?.subtitle && (
-              <h1 class="text-6xl md:text-9xl italic font-bold " style={`color: white`}>
-                {brandsAssets.home?.subtitle}
-              </h1>
-            )}
-          </div>
-        )}
-          <ProductsCarousel 
+            <div class="text-center mb-2 relative z-20">
+              {brandsAssets.home?.subtitle && (
+                <h1 class="lg:text-[84px] text-[64px] italic font-bold uppercase text-white">
+                  {brandsAssets.home?.subtitle}
+                </h1>
+              )}
+            </div>
+          )}
+
+          <ProductsCarousel
             products={products}
-            color={'white'}
+            color={"white"}
             autoplay={true}
             speed={4000}
             slidesPerView={3}
@@ -125,164 +162,44 @@ const featuredLabel = currentLang==='es' ? 'DESTACADOS' : 'FEATURED';
           />
         </div>
       </section>
-    )}
-    <!-- Sección de recetas con carrusel -->
-    <section id="recipes" class="w-full py-12" transition:animate="slide">
+    )
+  }
+
+  <section class="w-full bg-yellow flex justify-center items-center py-8">
+    <div class="container text-center">
+       <h2  class='titles text-greenDark'>
+        {
+          currentLang === "es"
+            ? "CONOCE MAS DE LAS EXPERIENCIAS ZAMBOS"
+            : "LEARN MORE ABOUT ZAMBOS EXPERIENCES"
+        }
+      </h2>
+    <ExperiencesCarousel experiences={experiences} />
+    </div>
+  </section>
+
+  <!-- Sección instagram-->
+  <section
+    id="instagram"
+    class="bg-green w-full py-12"
+    transition:animate="slide"
+  >
+    <div class="container mx-auto px-4 text-center">
+      <h2
+        class="titles text-white"
+      >
+        {discoverAssets.title}
+      </h2>
       <div class="container mx-auto px-4">
-        {recipesAssets.home?.title && (
-          <div class="text-center mb-16 relative z-20" >
-            <h2 class="text-3xl md:text-4xl italic font-bold mb-4" style={`color: #5B3F2E`}>
-              {recipesAssets.home?.title}
-            </h2>
-            {recipesAssets.home?.subtitle && (
-              <h1 class="text-6xl md:text-9xl italic font-bold mb-4" style={`color: #5B3F2E`}>
-                {recipesAssets.home?.subtitle}
-              </h1>
-            )}
-          </div>
-        )}
-        <RecipesCarousel 
-          title={recipesAssets.home?.title || 'DESCUBRE NUEVOS SABORES CON NUESTRAS'}
-          textButton={recipesAssets.home?.view_more || 'Ver Todas'}
+        <Discover
+          title={discoverAssets.title}
+          images={discoverAssets.images || []}
         />
       </div>
-    </section>
-
-
-    <!-- Sección Gallery -->
-    <section id="gallery" class="bg-pink w-full py-12" transition:animate="slide">
-      <div class="container mx-auto px-4">
-        {Array.isArray(galleryAssets.images) && galleryAssets.images.length > 0 && (
-          <MasonryGallery 
-            items={galleryAssets.images}
-            columns={3}
-            title={galleryAssets.title}
-            className=""
-          />
-        )}
-      </div>
-    </section>
-
-
-
-
-    <!-- Sección News -->
-      <section id="news" class="bg-yellow w-full py-12 hidden" transition:animate="slide">
-  <div class="container mx-auto px-4">
-    {newsAssets.home.title && (
-      <div class="text-center mb-16 relative z-20 overflow-hidden" >
-          <div class="absolute left-0 top-0 w-[100%] h-[100%] -z-10 pointer-events-none -ml-[250px]">
-            <PixelGrid
-               pixelSize={20}
-               density={0.7}
-               introDuration={800}
-               loopInterval={1100}
-               mutateAmount={50}
-             />
-          </div>
-        <h2 class="text-3xl md:text-4xl italic font-bold mb-4 text-brown relative z-10">
-          {newsAssets.home.title}
-        </h2>
-        {newsAssets.home.subtitle && (
-          <h1 class="text-6xl md:text-9xl italic font-bold mb-4 text-brown relative z-10 flex items-center justify-center">
-            
-            <span class="font-title pl-2 relative z-10">{newsAssets.home.subtitle}</span>
-          </h1>
-        
-        )}
-      </div>
-    )}
-
-    {latestBlogPosts.length === 0 ? (
-      <div class="max-w-5xl mx-auto text-center py-12">
-        <p class="text-brown text-lg md:text-xl font-semibold">{noNewsText}</p>
-      </div>
-    ) : (
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 items-start">
-          <!-- Columna izquierda: 3 más recientes -->
-          <div class="md:col-span-2">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-brown font-title text-lg md:text-xl font-bold uppercase tracking-wide">{topNewsLabel}</h3>
-              <div class="flex-1 ml-4 border-b border-brown/40"></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {latestBlogPosts.slice(0,3).map((post) => (
-                <BlogCard
-                  image={post.image || '/images/blog/placeholder.jpg'}
-                  title={post.title}
-                  id={post.id}
-                  slug={post.slug}
-                />
-              ))}
-            </div>
-          </div>
-
-          <!-- Columna derecha: destacados (posiciones 3 y 4) -->
-          <div class="md:col-span-1">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-brown font-title text-lg md:text-xl font-bold uppercase tracking-wide">{featuredLabel}</h3>
-              <div class="flex-1 ml-4 border-b border-brown/40"></div>
-            </div>
-            <div class="grid grid-cols-1 gap-6">
-              {latestBlogPosts.slice(3,5).map((post) => (
-                <BlogCard
-                  image={post.image || '/images/blog/placeholder.jpg'}
-                  title={post.title}
-                  id={post.id}
-                  slug={post.slug}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div class="flex justify-center mt-10">
-          <a href={`/${currentLang}/blog`} class="border-2 border-brown text-brown py-2 px-8 rounded-full text-center text-sm md:text-base font-medium hover:bg-brown hover:text-white transition-colors">
-            {currentLang==='es' ? 'Ver más' : 'View more'}
-          </a>
-        </div>
-      </div>
-    )}
-  </div>
-</section>
-
-
-    <!-- Sección Abaout -->
-<!-- <section id="about" class="bg-red w-full py-12" transition:animate="slide">
-  <div class="container mx-auto px-4">
-    <div class="text-center mb-8">
-      {aboutAssets.title && (
-        <div class="text-center mb-16 relative z-20" >
-          <h2 class="text-3xl md:text-4xl italic font-bold mb-4 text-white">
-            {aboutAssets.title}
-          </h2>
-          {aboutAssets.subtitle && (
-            <h1 class="text-6xl md:text-9xl italic font-bold mb-4 text-white">
-              {aboutAssets.subtitle}
-            </h1>
-          )}
-        </div>
-      )}
     </div>
-    <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-      <div>
-        <h4 class="md:text-4xl text-lg font-bold text-white font-title">LOREM IPSUM DOLOR</h4>
-        <p class="text-white font-sans  text-xl leading-relaxed w-100%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante bibendum finibus. Nullam nec metus vel ante bibendum finibus.</p>
-      </div>
-      <div>
-        <LazyImage src="https://snack.yummiespromociones.com/zibas/gallery16.webp" class="py-4" alt="Zambos" />
-      </div>
-      <div>
-        <LazyImage src="https://snack.yummiespromociones.com/zibas/gallery15.webp" class="py-4" alt="Zambos" />
-        <h4 class="md:text-4xl text-lg font-bold text-white font-title">LOREM IPSUM DOLOR</h4>
-        <p class="text-white font-sans text-xl  leading-relaxed w-100%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante bibendum finibus. Nullam nec metus vel ante bibendum finibus.</p>
-      </div>
-    </div>
-  </div>
-</section> -->
+  </section>
 
-
-
-
-
-  </main>
+  <section class="w-full">
+    <Subscription />
+  </section>
+</main>

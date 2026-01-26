@@ -2,7 +2,6 @@
 // src/views/Participacion/index.astro
 import { type Locale } from '../../i18n/i18n';
 import MainLayout from '../../layouts/MainLayout.astro';
-import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 
 interface Props {
   currentLang: Locale;
@@ -22,7 +21,7 @@ const metaDescription = 'Formulario de participación.';
     <div class="w-full h-full">
       <div class="iframe-container h-full" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
         <iframe 
-          src="https://zibascreators.yummiespromociones.com/" 
+          src="" 
           style="position: absolute; inset: 0; width: 100%; height: 100%; border: none;"
           title="Formulario de Participación"
           loading="lazy"

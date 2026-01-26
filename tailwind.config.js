@@ -15,23 +15,31 @@ module.exports = {
     'bg-green', 'text-green', 'border-green',
     ],
   theme: {
+    screens: {
+      'xs': '390px',      // Teléfono
+      'sm': '640px',      // Teléfono grande
+      'md': '768px',      // Tablet
+      'lg': '1024px',     // Laptop
+      'xl': '1440px',     // Desktop
+      '2xl': '1920px',    // Desktop grande
+    },
     extend: {
       colors: {
-        primary: '#FD6600',
-        secondary: '#0167F7',
-        tertiary: '#FDE820',
-        cuaternary: '#FF4DFF',
+        primary: '#0DB14A',
+        secondary: '#FFED7A',
+        tertiary: '#FF0001',
+        cuaternary: '#009337',
         quinary: '#0167F7',
-        red: '#FC4238',
+        red: '#FF0001',
         white: '#FFFFFF',
         brown: '#5B3F2E',
         blue: '#0167F7',
-        green: '#10b981',
+        green: '#0DB14A',
         orange: '#FD6600',
-        yellow: '#FDE820',
+        yellow: '#FFED7A',
         pink: '#FF4DFF',
         lemon: '#BEDE89',
-        
+        greenDark: '#009337'
     
       },
       fontFamily: {

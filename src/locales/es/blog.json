@@ -1,0 +1,100 @@
+{
+    "posts": [
+      {
+        "id": "1",
+        "slug": "zambos-sin-fronteras-ep2",
+        "title": "ZAMBOS SIN FRONTERAS X RADIO HOUSE EP. 2",
+        "summary": "Nuevo capítulo de Zambos sin fronteras: Sin miedo desde Guatemala al mundo para todos.",
+        "image": "/images/blog/zambos-fronteras-2.webp",
+        "published_date": "2024-12-17",
+        "date_display": "17 Diciembre",
+        "category": "eventos",
+        "content_intro": "<p>En este segundo episodio de Zambos Sin Fronteras, continuamos nuestra travesía musical llevando el sabor guatemalteco a cada rincón del mundo. Una colaboración especial con Radio House que marca un antes y un después en nuestra historia.</p>",
+        "quote": "La música y los snacks tienen algo en común: ambos tienen el poder de unir a las personas sin importar de dónde vengan.",
+        "content_after_quote": "<p>Este episodio fue grabado en vivo desde nuestras instalaciones, contando con la participación de artistas locales que compartieron su pasión por la música y por Zambos. Una experiencia única que demuestra que cuando hay pasión, no existen fronteras.</p>"
+      },
+      {
+        "id": "2",
+        "slug": "zambos-sin-fronteras-ep1",
+        "title": "ZAMBOS SIN FRONTERAS X RADIO HOUSE EP. 1",
+        "summary": "El inicio de una nueva aventura musical con Zambos.",
+        "image": "/images/blog/yummies-recolectores.webp",
+        "published_date": "2024-12-17",
+        "date_display": "17 Diciembre",
+        "category": "eventos",
+        "content_intro": "<p>Zambos Sin Fronteras nace como un proyecto que fusiona nuestra pasión por los snacks con la música. En colaboración con Radio House, presentamos el primer episodio de esta serie que promete llevar el espíritu guatemalteco a todos los rincones.</p>",
+        "quote": "Todo gran viaje comienza con un primer paso, y este es el nuestro hacia un mundo sin fronteras.",
+        "content_after_quote": "<p>Con invitados especiales y mucha energía, este primer episodio sentó las bases de lo que será una serie inolvidable. ¡Gracias a todos los que nos acompañaron en esta aventura!</p>"
+      },
+      {
+        "id": "3",
+        "slug": "escuelas-beneficiadas",
+        "title": "MAS DE 100 ESCUELAS PUBLICAS BENEFICIADAS",
+        "summary": "Nuestro programa de responsabilidad social sigue creciendo.",
+        "image": "/images/blog/torneo-tds.webp",
+        "published_date": "2024-12-17",
+        "date_display": "17 Diciembre",
+        "category": "social",
+        "content_intro": "<p>Como parte de nuestro compromiso con la educación guatemalteca, hemos logrado beneficiar a más de 100 escuelas públicas en todo el país. Este programa incluye donaciones de materiales educativos, mejoras en infraestructura y programas de alimentación escolar.</p>",
+        "quote": "Invertir en educación es invertir en el futuro de Guatemala. Cada niño que aprende es una semilla de esperanza.",
+        "content_after_quote": "<p>Nuestro equipo ha trabajado incansablemente junto a las comunidades locales para identificar las necesidades más urgentes y brindar soluciones efectivas. Este es solo el comienzo de un compromiso que durará por generaciones.</p>"
+      },
+      {
+        "id": "4",
+        "slug": "apoyo-jovenes-futbolistas-1",
+        "title": "APOYAMOS A 150 JOVENES FUTBOLISTAS EN LA TDS",
+        "summary": "Impulsando el talento deportivo juvenil en Guatemala.",
+        "image": "/images/blog/zambos-red.webp",
+        "published_date": "2024-12-17",
+        "date_display": "17 Diciembre",
+        "category": "deportes",
+        "content_intro": "<p>El deporte es una herramienta poderosa para el desarrollo integral de los jóvenes. Por eso, Zambos se enorgullece en apoyar a 150 jóvenes futbolistas que participan en el Torneo Deportivo Social, brindándoles equipamiento, hidratación y alimentación durante toda la competencia.</p>",
+        "quote": "El fútbol enseña valores que duran toda la vida: trabajo en equipo, disciplina y la importancia de nunca rendirse.",
+        "content_after_quote": "<p>Estos jóvenes atletas representan el futuro del deporte guatemalteco. Con el apoyo adecuado, estamos seguros de que muchos de ellos llegarán lejos, no solo en el fútbol, sino en la vida.</p>"
+      },
+      {
+        "id": "5",
+        "slug": "apoyo-jovenes-futbolistas-2",
+        "title": "APOYAMOS A 150 JOVENES FUTBOLISTAS EN LA TDS",
+        "summary": "Segunda entrega de apoyo a jóvenes talentos.",
+        "image": "/images/blog/yummies-basura.webp",
+        "published_date": "2024-12-17",
+        "date_display": "17 Diciembre",
+        "category": "deportes",
+        "content_intro": "<p>Continuando con nuestro compromiso deportivo, realizamos la segunda entrega de apoyo a los jóvenes futbolistas del TDS. Esta vez, además del equipamiento deportivo, incluimos sesiones de nutrición y charlas motivacionales.</p>",
+        "quote": "Un cuerpo sano y una mente positiva son la combinación perfecta para alcanzar cualquier meta.",
+        "content_after_quote": "<p>Los jóvenes recibieron con entusiasmo esta nueva entrega, demostrando su compromiso no solo con el deporte, sino con su desarrollo personal. ¡Seguimos adelante!</p>"
+      },
+      {
+        "id": "6",
+        "slug": "apoyo-jovenes-futbolistas-3",
+        "title": "APOYAMOS A 150 JOVENES FUTBOLISTAS EN LA TDS",
+        "summary": "Continuamos apoyando el deporte guatemalteco.",
+        "image": "/images/blog/torneo-tds-2.webp",
+        "published_date": "2024-12-17",
+        "date_display": "17 Diciembre",
+        "category": "deportes",
+        "content_intro": "<p>La tercera y última entrega de apoyo a los jóvenes futbolistas marca el cierre de una temporada exitosa. Durante estos meses, hemos sido testigos del crecimiento deportivo y personal de cada uno de estos atletas.</p>",
+        "quote": "El éxito no se mide solo en goles, sino en las personas que formamos en el camino.",
+        "content_after_quote": "<p>Agradecemos a todas las familias, entrenadores y organizadores que hicieron posible este programa. Zambos seguirá comprometido con el deporte y la juventud guatemalteca.</p>"
+      }
+    ],
+    "filters": {
+      "oldest": "MÁS ANTIGUAS",
+      "newest": "MÁS RECIENTES",
+      "all": "VER TODOS"
+    },
+    "search": {
+      "placeholder": "Buscar blog..."
+    },
+    "labels": {
+      "readMore": "LEER MÁS",
+      "topNews": "NOTICIAS MÁS IMPORTANTES",
+      "featured": "DESTACADOS",
+      "noPosts": "No hay noticias disponibles en este momento."
+    },
+    "page": {
+      "title": "Noticias",
+      "description": "Mantente al día con nuestras últimas noticias y artículos."
+    }
+  }
