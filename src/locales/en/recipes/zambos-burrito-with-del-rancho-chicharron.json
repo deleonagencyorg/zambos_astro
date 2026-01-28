@@ -1,0 +1,26 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-burrito-with-del-rancho-chicharron",
+  "slug": "zambos-burrito-with-del-rancho-chicharron",
+  "title": "Zambos Burrito with Del Rancho Chicharrón",
+  "people": "9",
+  "difficulty": "Medium",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/burrito-zambos-con-chicharron.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/burrito-zambos-con-chicharron.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 25,
+  "ingredients": [
+    "1 large wheat tortilla.",
+    "2 tablespoons refried beans.",
+    "2 tablespoons diced avocado.",
+    "2 tablespoons chorizo.",
+    "3 tablespoons crushed Zambos with Del Rancho Chicharrón."
+  ],
+  "instructions": [
+    "Step 1. Spread the beans on the tortilla. Add the avocado, then the chorizo, and finish with the Zambos. Roll up and enjoy."
+  ],
+  "brand": ["zambos"]
+}

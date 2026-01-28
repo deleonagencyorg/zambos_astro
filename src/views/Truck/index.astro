@@ -1,123 +1,63 @@
 ---
-// src/views/Blog/index.astro
-import { getLocale, t} from '../../i18n/i18n';
+// src/views/Truck/index.astro
+import { getLocale } from '../../i18n/i18n';
 import './styles.css';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
-
-interface Recipe {
-  id: string;
-  title: string;
-  image?: string;
-  slug?: string;
-  preparation_time: number;
-  type?: string;
-}
+import truckEs from '../../locales/es/zambostruck.json';
 
 const currentLang = getLocale();
-const recipeModules = import.meta.glob<{default: Recipe}>('../../locales/*/recipes/*.json');
-const allRecipes: Recipe[] = [];
-
-for (const path in recipeModules) {
-  const lang = path.split('/')[3];
-  if (lang === currentLang) {
-    const module = await recipeModules[path]();
-    allRecipes.push(module.default);
-  }
-}
-
-function normalizeType(r: Recipe): string {
-  const rawCategory = String((r as any).category || '').toLowerCase().trim();
-  const rawType = String((r as any).type || '').toLowerCase().trim();
-  const raw = rawCategory || rawType;
-  if (['breakfast', 'desayuno'].includes(raw)) return 'breakfast';
-  if (['brunch'].includes(raw)) return 'brunch';
-  if (['lunch', 'almuerzo'].includes(raw)) return 'lunch';
-  return 'other';
-}
-
-const pageTitle = currentLang === 'es' ? 'Noticias' : 'News';
-const pageDescription = currentLang === 'es' 
-  ? 'Mantente al día con nuestras últimas noticias y artículos.' 
-  : 'Stay updated with our latest news and articles.';
-
-const posts = t('posts', { namespace: 'blog', locale: currentLang });
+const data = truckEs; // Solo ES
 ---
 
 <div class="bg-[#0DB04A] min-h-screen">
-  <!-- Hero Section Rojo -->
-  <div class="container mx-auto px-4 pt-8 pb-12">
-    <div class="pt-4 mb-8">
+  <!-- Hero -->
+  <div class="container mx-auto px-4 pt-8 pb-10">
+    <div class="pt-4 mb-6">
       <Breadcrumb bgColor="bg-transparent" textColor="text-white" hoverColor="hover:text-white" />
     </div>
 
-    <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-3xl p-12 md:p-20 text-center shadow-2xl relative overflow-hidden">
-      <!-- Decorative circles -->
-      <div class="absolute top-10 right-10 w-32 h-32 bg-red-500 rounded-full opacity-20"></div>
-      <div class="absolute bottom-10 left-10 w-40 h-40 bg-red-800 rounded-full opacity-20"></div>
-      
-      <div class="relative z-10">
-        <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-12 rounded-full text-lg transition-all transform hover:scale-105 shadow-lg">
-          SOLICITAR INFORMACIÓN
-        </button>
+    <div class="rounded-3xl overflow-hidden bg-red-600 shadow-2xl">
+      {data.hero.videoUrl ? (
+        <div class="relative w-full aspect-video">
+          <video class="w-full h-full object-cover" src={data.hero.videoUrl} autoplay muted playsinline loop></video>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        </div>
+      ) : (
+        <img src={data.hero.bannerImage} alt={data.hero.title} class="w-full h-64 md:h-96 object-cover" />
+      )}
+      <div class="p-6 md:p-10 text-center">
+        <h1 class="text-white text-3xl md:text-5xl font-black font-title uppercase">{data.hero.title}</h1>
+        <p class="text-white/90 mt-2 md:mt-3">{data.hero.subtitle}</p>
+        <div class="mt-5">
+          <a href="#truck-form" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition">
+            {data.hero.cta}
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Sección de Paquetes -->
+  <!-- Paquetes dinámicos -->
   <div class="container mx-auto px-4 pb-12">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
       <div>
-        <h2 class="text-4xl md:text-5xl font-black text-white mb-2">DESCUBRE PAQUETES</h2>
-        <p class="text-white text-lg">Elige el paquete ideal para cualquier ocasión.</p>
+        <h2 class="text-3xl md:text-5xl font-black text-white mb-1">{data.packages.title.toUpperCase()}</h2>
+        <p class="text-white/90 text-sm md:text-base">{data.packages.subtitle}</p>
       </div>
-      <button class="mt-4 md:mt-0 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg">
-        DESCARGAR CATÁLOGO
-      </button>
     </div>
-
-    <!-- Tarjetas de Paquetes -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-      <!-- Paquete 200 -->
-      <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all">
-        <h3 class="text-4xl font-black text-red-900 mb-6">200 PACKS</h3>
-        <div class="flex items-center justify-center mb-4">
-          <div class="bg-green-600 text-white px-6 py-2 rounded-full text-2xl font-bold shadow-lg transform -rotate-3">
-            ₡13,000
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
+      {data.packages.items.map((p) => (
+        <div class="bg-[#FFF7D1] rounded-2xl p-6 shadow-xl">
+          <h3 class="text-2xl md:text-3xl font-black text-red-700 mb-4">{p.label}</h3>
+          <div class="flex items-center justify-center mb-2">
+            <div class="bg-[#009337] text-white px-5 py-2 rounded-full text-xl font-bold shadow">{p.price}</div>
+          </div>
+          <p class="text-center text-[#0A6A2E] font-bold mb-4">{p.note}</p>
+          <div class="bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-3 rounded-xl">
+            <span class="text-xl font-black">{p.badge}</span>
           </div>
         </div>
-        <p class="text-center text-green-700 font-bold text-lg mb-6">Precio de venta</p>
-        <div class="bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-4 rounded-b-2xl -mx-8 -mb-8 mt-8">
-          <span class="text-3xl font-black">No. 8</span>
-        </div>
-      </div>
-
-      <!-- Paquete 250 -->
-      <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all">
-        <h3 class="text-4xl font-black text-red-900 mb-6">250 PACKS</h3>
-        <div class="flex items-center justify-center mb-4">
-          <div class="bg-green-600 text-white px-6 py-2 rounded-full text-2xl font-bold shadow-lg transform rotate-2">
-            ₡16,250
-          </div>
-        </div>
-        <p class="text-center text-green-700 font-bold text-lg mb-6">Precio de venta</p>
-        <div class="bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-4 rounded-b-2xl -mx-8 -mb-8 mt-8">
-          <span class="text-3xl font-black">No. 9</span>
-        </div>
-      </div>
-
-      <!-- Paquete 300 -->
-      <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-8 shadow-xl transform hover:scale-105 transition-all">
-        <h3 class="text-4xl font-black text-red-900 mb-6">300 PACKS</h3>
-        <div class="flex items-center justify-center mb-4">
-          <div class="bg-green-600 text-white px-6 py-2 rounded-full text-2xl font-bold shadow-lg transform -rotate-2">
-            ₡19,500
-          </div>
-        </div>
-        <p class="text-center text-green-700 font-bold text-lg mb-6">Precio de venta</p>
-        <div class="bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-4 rounded-b-2xl -mx-8 -mb-8 mt-8">
-          <span class="text-3xl font-black">No. 10</span>
-        </div>
-      </div>
+      ))}
     </div>
 
     <!-- Sección Cómo Disfrutar -->

@@ -168,24 +168,14 @@ for (let i = 0; i < recipeItems.length; i += 1) {
           ))}
         </div>
       </div>
-      
-      <!-- Controles de navegación desktop (flechas y puntos en la parte inferior) -->
-      <div class="flex justify-center items-center gap-4 mt-8">
-        <!-- Flecha anterior -->
-        <button class="carousel-prev bg-white text-brown p-2 rounded-full shadow-lg z-10" aria-label="Anterior" id="prevBtnDesktop">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        
-        <!-- Puntos indicadores -->
-        <div class="carousel-dots-desktop flex gap-2"></div>
-        
-        <!-- Flecha siguiente -->
-        <button class="carousel-next bg-white text-brown p-2 rounded-full shadow-lg z-10" aria-label="Siguiente" id="nextBtnDesktop">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
+
+      <div class="flex justify-center mt-8">
+        <button
+          type="button"
+          id="loadMoreDesktop"
+          class="bg-yellow text-brown font-bold py-3 px-10 rounded-full hover:border-brown hover:border-2 hover:bg-brown hover:text-yellow transition-colors"
+        >
+          {currentLang === 'es' ? 'Cargar más' : 'Load more'}
         </button>
       </div>
     </div>
@@ -357,71 +347,39 @@ for (let i = 0; i < recipeItems.length; i += 1) {
 
     function applyFilterDesktop(initial = false) {
       const track = root.querySelector('#recipesTrackDesktop');
-      const prevBtn = root.querySelector('#prevBtnDesktop');
-      const nextBtn = root.querySelector('#nextBtnDesktop');
-      const dotsContainer = root.querySelector('.carousel-dots-desktop');
+      const loadMoreBtn = root.querySelector('#loadMoreDesktop');
 
-      if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+      if (!track || !loadMoreBtn) return;
 
       const allSlides = Array.from(track.querySelectorAll('.recipe-slide'));
-      // Mostrar/ocultar slides según filtro
-      allSlides.forEach((slide) => {
-        const cat = slide.getAttribute('data-category') || '';
-        const visible = (currentFilter === 'all') || (cat === currentFilter);
-        slide.style.display = visible ? 'block' : 'none';
-      });
+      const pageSize = 4;
+      let revealedCount = pageSize;
 
-      const visibleSlides = allSlides.filter(s => s.style.display !== 'none');
-      let currentSlide = 0;
-      let autoplayInterval;
+      const loadMoreClone = loadMoreBtn.cloneNode(true);
+      loadMoreBtn.parentNode?.replaceChild(loadMoreClone, loadMoreBtn);
 
-      // Resetear listeners para evitar acumulación
-      const prevClone = prevBtn.cloneNode(true);
-      const nextClone = nextBtn.cloneNode(true);
-      prevBtn.parentNode?.replaceChild(prevClone, prevBtn);
-      nextBtn.parentNode?.replaceChild(nextClone, nextBtn);
+      const computeFilteredSlides = () => {
+        allSlides.forEach((slide) => {
+          const cat = slide.getAttribute('data-category') || '';
+          const matches = (currentFilter === 'all') || (cat === currentFilter);
+          slide.dataset.matchesFilter = matches ? 'true' : 'false';
+        });
+        return allSlides.filter(s => s.dataset.matchesFilter === 'true');
+      };
 
-      updateDesktopCarousel();
-      createDesktopDots();
-      startAutoplay();
+      const filteredSlides = computeFilteredSlides();
 
-      prevClone.addEventListener('click', () => {
-        stopAutoplay();
-        if (currentSlide > 0) {
-          currentSlide--;
-          updateDesktopCarousel();
-        }
-        startAutoplay();
-      });
+      function updateDesktopView() {
+        const slidesToShow = filteredSlides.slice(0, revealedCount);
+        allSlides.forEach((slide) => {
+          if (slide.dataset.matchesFilter === 'true' && slidesToShow.includes(slide)) {
+            slide.style.display = 'block';
+          } else {
+            slide.style.display = 'none';
+          }
+        });
 
-      nextClone.addEventListener('click', () => {
-        stopAutoplay();
-        if (currentSlide < Math.max(0, visibleSlides.length - 4)) {
-          currentSlide++;
-          updateDesktopCarousel();
-        }
-        startAutoplay();
-      });
-
-      function createDesktopDots() {
-        dotsContainer.innerHTML = '';
-        const totalDots = Math.max(0, visibleSlides.length - 3); // totalSlides - 4 + 1
-        for (let i = 0; i < totalDots; i++) {
-          const dot = document.createElement('button');
-          dot.classList.add('w-3', 'h-3', 'rounded-full', i === currentSlide ? 'bg-white' : 'bg-gray-300');
-          dot.addEventListener('click', () => {
-            stopAutoplay();
-            currentSlide = i;
-            updateDesktopCarousel();
-            startAutoplay();
-          });
-          dotsContainer.appendChild(dot);
-        }
-      }
-
-      function updateDesktopCarousel() {
-        // Resetear todas las tarjetas visibles
-        visibleSlides.forEach((slide, index) => {
+        slidesToShow.forEach((slide) => {
           let card = slide.querySelector('a');
           if (card) {
             // Asegurar ancho base del wrapper slide y transición suave
@@ -461,7 +419,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
             card.addEventListener('mouseenter', () => {
               const baseW = 310;
               const bigW = 560; // ancho cuando se expande
-              visibleSlides.forEach((s) => {
+              slidesToShow.forEach((s) => {
                 const c2 = s.querySelector('a');
                 const cc2 = c2?.querySelector('div');
                 const imgC2 = cc2?.querySelector('div[class*="rounded-t-"]');
@@ -498,7 +456,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
             card.addEventListener('mouseleave', () => {
               // Restaurar estado base igualado para las 4 visibles
               const baseW = 310;
-              visibleSlides.forEach((s) => {
+              slidesToShow.forEach((s) => {
                 const c2 = s.querySelector('a');
                 const cc2 = c2?.querySelector('div');
                 const imgC2 = cc2?.querySelector('div[class*="rounded-t-"]');
@@ -518,55 +476,17 @@ for (let i = 0; i < recipeItems.length; i += 1) {
               });
             });
           }
-
-          // Mostrar/ocultar slides visibles en ventana
-          if (index >= currentSlide && index < currentSlide + 4) {
-            slide.style.display = 'block';
-          } else {
-            slide.style.display = 'none';
-          }
-        });
-        
-        // Actualizar dots
-        const dots = dotsContainer.querySelectorAll('button');
-        dots.forEach((dot, i) => {
-          if (i === currentSlide) {
-            dot.classList.remove('bg-gray-300');
-            dot.classList.add('bg-white');
-          } else {
-            dot.classList.remove('bg-white');
-            dot.classList.add('bg-gray-300');
-          }
         });
 
-        // Habilitar/deshabilitar botones
-        prevClone.classList.toggle('opacity-50', currentSlide === 0);
-        nextClone.classList.toggle('opacity-50', currentSlide >= Math.max(0, visibleSlides.length - 4));
+        loadMoreClone.classList.toggle('hidden', revealedCount >= filteredSlides.length);
       }
 
-      function startAutoplay() {
-        stopAutoplay();
-        autoplayInterval = setInterval(() => {
-          const maxSlide = Math.max(0, visibleSlides.length - 4);
-          if (currentSlide < maxSlide) {
-            currentSlide++;
-          } else {
-            currentSlide = 0;
-          }
-          updateDesktopCarousel();
-        }, 4000);
-      }
+      loadMoreClone.addEventListener('click', () => {
+        revealedCount = Math.min(filteredSlides.length, revealedCount + pageSize);
+        updateDesktopView();
+      });
 
-      function stopAutoplay() {
-        if (autoplayInterval) {
-          clearInterval(autoplayInterval);
-          autoplayInterval = null;
-        }
-      }
-
-      // Pausar autoplay cuando el usuario interactúa
-      track.addEventListener('mouseenter', stopAutoplay);
-      track.addEventListener('mouseleave', startAutoplay);
+      updateDesktopView();
     }
   }
 

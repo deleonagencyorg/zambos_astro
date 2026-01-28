@@ -1,0 +1,44 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-preparados-del-rancho",
+  "slug": "zambos-preparados-del-rancho",
+  "title": "Zambos Preparados Del Rancho",
+  "people": "4",
+  "difficulty": "Media",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-del-rancho.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-del-rancho.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 35,
+  "ingredients": [
+    "Ingredientes para armar los Zambos®:",
+    "1 bolsa de Chicharrón del Rancho",
+    "2 tazas de repollo picado",
+    "Ingredientes para el chirmol:",
+    "Tomate",
+    "Chile dulce verde",
+    "Culantro",
+    "Limón",
+    "Sal",
+    "Ingredientes para el aderezo:",
+    "¼ de taza de miltomate",
+    "2 cucharadas de chile pimiento verde en juliana",
+    "2 cucharadas de cebolla en juliana",
+    "1 diente de ajo",
+    "1 jalapeño en juliana",
+    "4 cucharadas de cilantro picado",
+    "1 cucharadita de sal",
+    "1 cucharada de consomé",
+    "½ taza de crema",
+    "½ taza de mayonesa"
+  ],
+  "instructions": [
+    "Paso 1: Coloca todos los vegetales en una olla con un poco de agua y cocina a fuego medio por 20 minutos.",
+    "Paso 2: Retira del fuego, escurre y coloca en una licuadora.",
+    "Paso 3: Agrega la sal, el consomé, la crema y la mayonesa.",
+    "Paso 4: Licúa hasta tener una mezcla homogénea. Si está muy espeso agrega un poco de agua."
+  ],
+  "brand": ["zambos", "delrancho"]
+}

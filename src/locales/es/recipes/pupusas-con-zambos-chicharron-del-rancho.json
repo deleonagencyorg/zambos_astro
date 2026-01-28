@@ -1,0 +1,28 @@
+{
+      "date": "2025-09-11",
+      "id": "pupusas-con-zambos-chicharron-del-rancho",
+      "slug": "pupusas-con-zambos-chicharron-del-rancho",
+      "title": "Pupusas con Zambos Chicharrón Del Rancho",
+      "people": "6",
+      "difficulty": "Medio",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/pupusas-con-zambos-chicharron-del-rancho.webp",
+      "gallery": [
+         "https://snack.yummiespromociones.com/SnacksyummiesAssets/pupusas-con-zambos-chicharron-del-rancho.webp"
+      ],      
+      "type": "image",
+      "category": "lunch",
+      "preparation_time": 30,
+      "ingredients": [
+        "1 porción de masa preparada para tortillas según instrucciones del paquete",
+        "1 quesillo desmenuzado o cortado en trozos",
+        "Zambos Chicharrón Del Rancho triturados",
+        "Repollo y salsa para servir"
+      ],
+      "instructions": [
+        "Paso 1. Divide la masa en bolitas y aplástalas con tu mano como que vas a hacer una tortilla.",
+        "Paso 2. Rellena con quesillo y Zambos Chicharrón Del Rancho. Cubre con más masa y cierra bien las pupusas para que no se salga el relleno.",
+        "Paso 3. Calienta una plancha o un sartén y dora las pupusas a fuego medio hasta que la masa esté completamente cocinada.",
+        "Paso 4. Sirve con repollo cocido y salsa roja."
+      ],
+      "brand": ["zambos"]
+    }

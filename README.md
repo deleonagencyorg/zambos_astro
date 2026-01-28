@@ -62,7 +62,7 @@ const locale = getLocale();
 
 ### Metadatos multilingües
 
-Los metadatos (títulos, descripciones) están organizados en una sección `meta` en los archivos de traducción:
+Los metadatos (títulos, Descripciónes) están organizados en una sección `meta` en los archivos de traducción:
 
 ```json
 {

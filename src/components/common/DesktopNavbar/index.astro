@@ -17,6 +17,22 @@ const currentPath = pathname;
 
 // Obtener los datos de social media y menú desde las traducciones
 const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) as any[];
+
+// Reordenar: asegurar que "Blog" esté antes de "Contacto/Contact"
+const orderedMenuItems = (() => {
+  const arr = Array.isArray(menuItems) ? [...menuItems] : [];
+  const isEs = currentLang === 'es';
+  const blogIdx = arr.findIndex(i => (i.text || '').toLowerCase() === 'blog');
+  const contactIdx = arr.findIndex(i => {
+    const txt = (i.text || '').toLowerCase();
+    return txt === (isEs ? 'contacto' : 'contact');
+  });
+  if (blogIdx >= 0 && contactIdx >= 0 && blogIdx > contactIdx) {
+    const [blogItem] = arr.splice(blogIdx, 1);
+    arr.splice(contactIdx, 0, blogItem);
+  }
+  return arr;
+})();
 ---
 
 <!-- Desktop Navigation -->
@@ -31,7 +47,7 @@ const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) 
   <!-- Right Side - Language Switcher and Yummies One -->
   <div class="flex items-center ">
     <div class="flex space-x-3" id="desktop-menu-items">
-      {menuItems && menuItems.map((item: any) => (
+      {orderedMenuItems && orderedMenuItems.map((item: any) => (
         <div class="relative group">
           <a 
             href={item.href} 
@@ -72,9 +88,11 @@ const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) 
   </div>
 
   <div class="flex-shrink-0">
-    <a href={`/${currentLang}/`} class="block">
-      <img src={logos.secondary.url} alt={logos.secondary.alt} class="h-12 w-auto" />
-    </a>
+    {currentLang === 'es' && (
+      <a href="/zambostruck" class="block">
+        <img src={logos.secondary.url} alt={logos.secondary.alt} class="h-12 w-auto" />
+      </a>
+    )}
   </div>
 
 </nav>

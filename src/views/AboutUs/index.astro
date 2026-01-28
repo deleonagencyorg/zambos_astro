@@ -49,17 +49,31 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
         
         <!-- Content Card -->
         <div class="timeline-content-wrapper relative md:mb-12 mb-[400px]">
-          {historyItems.map((item: { year: string; image: string; text: string }, index: number) => (
+          {historyItems.map((item: { year?: string; title?: string; image: string; text: string }, index: number) => (
             <div 
               class={`timeline-slide ${index === 0 ? '' : 'hidden'}`}
               data-slide={index}
             >
               <div class="flex flex-col md:flex-row gap-8 items-center pl-24 pr-24">
                 
-                <div class="w-full md:w-[50%]">
-                  <h2 class="text-white font-title text-6xl md:text-8xl mb-6 animate-fade-in-up">
-                    {item.year}
-                  </h2>
+                <div class="w-full md:w-[50%] max-w-[900px]">
+                  {item.year && item.title ? (
+                    <div class={`text-white font-title mb-4 flex flex-wrap items-baseline gap-4 animate-fade-in-up leading-tight tracking-tight break-words ${(((item.title ?? '').length + (item.year ?? '').length) > 28)
+                      ? 'text-[clamp(1.5rem,4.5vw,2.5rem)] md:text-[clamp(2rem,3.5vw,3rem)]'
+                      : 'text-[clamp(1.75rem,5.5vw,3rem)] md:text-[clamp(2.5rem,4vw,3.5rem)]'}`}>
+                      <span class="font-title">{item.year}</span>
+                      <span class="px-2" aria-hidden="true">|</span>
+                      <span class="font-title">{item.title}</span>
+                    </div>
+                  ) : item.year ? (
+                    <h2 class={`text-white font-title mb-4 animate-fade-in-up leading-tight tracking-tight break-words ${((item.year ?? '').length > 8)
+                      ? 'text-[clamp(1.5rem,4.5vw,2.5rem)] md:text-[clamp(2rem,3.5vw,3rem)]'
+                      : 'text-[clamp(1.75rem,5.5vw,3rem)] md:text-[clamp(2.5rem,4vw,3.5rem)]'}`}>{item.year}</h2>
+                  ) : item.title ? (
+                    <h3 class={`text-white font-title mb-4 animate-fade-in-up leading-tight tracking-tight break-words ${((item.title ?? '').length > 28)
+                      ? 'text-[clamp(1.5rem,4.5vw,2.5rem)] md:text-[clamp(2rem,3.5vw,3rem)]'
+                      : 'text-[clamp(1.75rem,5.5vw,3rem)] md:text-[clamp(2.5rem,4vw,3.5rem)]'}`}>{item.title}</h3>
+                  ) : null}
                   <p class="text-white text-lg md:text-xl leading-relaxed">
                     {item.text}
                   </p>
@@ -71,7 +85,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
                     <LazyImage 
                       class="rounded-2xl transform hover:scale-105 transition-transform duration-300 object-cover" 
                       src={item.image} 
-                      alt={item.year}
+                      alt={item.title ?? item.year ?? 'about-us item'}
                       style="width: 450px; height: 450px;"
                     />
                   </div>
@@ -179,14 +193,14 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
             
             <!-- Points -->
             <div class="relative flex justify-between items-center">
-              {historyItems.map((item: { year: string; image: string; text: string }, index: number) => (
+              {historyItems.map((item: { year?: string; title?: string; image: string; text: string }, index: number) => (
                 <button
                   class="timeline-point-btn relative z-10"
                   data-index={index}
-                  aria-label={`Ver año ${item.year}`}
+                  aria-label={`Ver ${item.year ? `año ${item.year}` : (item.title ?? 'elemento')}`}
                 >
                   <div class="timeline-point bg-[#FFF] border-4 rounded-full transition-all duration-300 hover:scale-125 hover:bg-primary cursor-pointer"
-                    data-year={item.year}>
+                    data-year={item.year ?? ''}>
                   </div>
                 </button>
               ))}
@@ -218,11 +232,11 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
 
         <!-- Pagination Dots -->
         <div class="hidden flex justify-center gap-3 mt-2">
-          {historyItems.map((item: any, index: number) => (
+          {historyItems.map((item: { year?: string; title?: string }, index: number) => (
             <button
               class={`pagination-dot w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? 'bg-primary w-8' : 'bg-quinary hover:bg-primary'}`}
               data-dot={index}
-              aria-label={`Ir a ${item.year}`}
+              aria-label={`Ir a ${item.year ? `año ${item.year}` : (item.title ?? `elemento ${index + 1}`)}`}
             ></button>
           ))}
         </div>

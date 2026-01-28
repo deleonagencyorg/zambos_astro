@@ -1,0 +1,30 @@
+{
+  "date": "2025-09-11",
+  "id": "chips-de-platano-enchocolatadas",
+  "slug": "chips-de-platano-enchocolatadas",
+  "title": "Chips de Plátano Enchocolatadas",
+  "people": "8",
+  "difficulty": "Medio",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/chips-de-platano-enchocolatadas.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/chips-de-platano-enchocolatadas.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 15,
+  "ingredients": [
+    "1 bolsa de Zambos Originales",
+    "1 ½ taza de chocolate semiamargo",
+    "1 cucharada de aceite de coco"
+  ],
+  "instructions": [
+    "Paso 1. Llena una olla a la mitad con agua y coloca un recipiente que aguante calor encima. Enciende la hornilla a fuego medio alto para que hierva el agua.",
+    "Paso 2. Coloca el chocolate el aceite de coco y calienta hasta que se derrita.",
+    "Paso 3. Engrasa un molde para mini cupcakes.",
+    "Paso 4. Rompe los Zambos y déjalos caer en el chocolate. Revuelve y divide la mezcla en partes iguales en el molde para cupcakes.",
+    "Paso 5. Deja enfriar en el refrigerador hasta que estén completamente firmes y desmolda."
+  ],
+  "brand": [
+    "zambos"
+  ]
+}

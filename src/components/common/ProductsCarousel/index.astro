@@ -36,7 +36,7 @@ const currentLang = Astro.url.pathname.split('/')[1] === 'es' ? 'es' : 'en';
 // Textos según idioma
 const texts = {
   es: {
-    viewDetail: 'Ver Detalle'
+    viewDetail: 'Ver detalles'
   },
   en: {
     viewDetail: 'View Detail'
@@ -180,7 +180,7 @@ const productsItems = Array.isArray(products) ? products : [];
     line-height: 1.4;
   }
 
-  /* Botón Ver Detalle */
+  /* Botón Ver detalles */
   .view-detail-btn {
     display: inline-flex;
     align-items: center;
@@ -191,7 +191,6 @@ const productsItems = Array.isArray(products) ? products : [];
     border-radius: 50px;
     font-size: 1.5rem;
     font-weight: 700;
-    text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 51, 51, 0.4);

@@ -1,0 +1,44 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-prepared-del-rancho",
+  "slug": "zambos-prepared-del-rancho",
+  "title": "Zambos Prepared Del Rancho",
+  "people": "4",
+  "difficulty": "Intermediate",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-del-rancho.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-del-rancho.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 35,
+  "ingredients": [
+    "Ingredients to assemble the Zambos®:",
+    "1 bag of Chicharrón del Rancho® pork rinds",
+    "2 cups of chopped cabbage",
+    "Ingredients for the chismol:",
+    "Tomato",
+    "Green sweet chile",
+    "Cilantro",
+    "Lemon",
+    "Salt",
+    "Ingredients for the dressing:",
+    "¼ cup of miltomato",
+    "2 tablespoons green chili peppers, julienned",
+    "2 tablespoons julienned onion",
+    "1 clove garlic",
+    "1 jalapeño, julienned",
+    "4 tablespoons chopped cilantro",
+    "1 teaspoon salt",
+    "1 tablespoon bouillon",
+    "½ cup cream",
+    "½ cup mayonnaise"
+  ],
+  "instructions": [
+    "Step 1: Place all the vegetables in a pot with a little water and cook over medium heat for 20 minutes.",
+    "Step 2: Remove from heat, drain and place in a blender.",
+    "Step 3: Add salt, bouillon, cream and mayonnaise.",
+    "Step 4: Blend until you have a homogeneous mixture. If it is too thick, add a little water."
+  ],
+  "brand": ["zambos", "delrancho"]
+}

@@ -1,0 +1,29 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-picositas-preparados",
+  "slug": "zambos-picositas-preparados",
+  "title": "Zambos Picositas Preparados",
+  "people": "1",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-preparados.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-preparados.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 15,
+  "ingredients": [
+    "1 taza de repollo y zanahoria picados",
+    "1 filete de carne de cerdo con salsa barbacoa",
+    "1 cebolla morada encurtida",
+    "Aderezo rosado",
+    "1 Zambos Plátano Picositas"
+  ],
+  "instructions": [
+    "Paso 1: Colocar en un sartén el filete de cerdo cortado en cubos, sofreír y sazonar con sal y pimienta.",
+    "Paso 2: Agregar la salsa barbacoa.",
+    "Paso 3: Agregar los ingredientes dentro del empaque de Zambos, agregar el repollo, la carne y la cebolla encurtida.",
+    "Paso 4: Verter aderezo rosado al gusto."
+  ],
+  "brand": ["zambos"]
+}

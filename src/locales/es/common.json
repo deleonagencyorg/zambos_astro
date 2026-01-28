@@ -61,30 +61,62 @@
     "preferences": "Preferencias"
   },
   "assets": {
-    "logo": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp",
+    "logo": "https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp",
     "hero": "/images/es/hero.jpg",
     "slidermask": "https://snack.yummiespromociones.com/snacksyummies/BGHeader_1_.webp",
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
-      {
-        "id": "slide2",
-        "desktop": "/images/es/slider1.png",
-        "mobile": "/images/es/slider1.png",
+      {  "id": "slide0",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/bannerzambosnew.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/bgzambosmobile.webp",
         "alt": "Zambos",
         "title": "",
+        "type":"image",
         "description": "",
         "link": "#"
       },
+ 
+
       {
         "id": "slide1",
-        "desktop": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
-        "mobile": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_112_Web_IMG_Zambos_Slider_02-1.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_112_Web_IMG_Zambos_Slider_02-1.webp",
         "alt": "Zambos",
         "title": "",
+        "type": "image",
         "description": "",
-        "link": "#"
+        "link": "/es/productos/zambos-platano-ceviche"
+      },
+      {
+        "id": "slide2",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_113_2560X1088_Felipe-1-png.png",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_113_2560X1088_Felipe-1-png.png",
+        "alt": "Zambos",
+        "title": "",
+        "type": "image",
+        "description": "",
+        "link": "http://zambos.com/wp-content/uploads/2025/03/2560X1088_Felipe-1-png.avif"
+      },
+      {
+        "id": "slide3",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_banner-estadio-zambos.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_banner-estadio-zambos.webp",
+        "alt": "Zambos",
+        "title": "",
+        "type": "image",
+        "description": "",
+        "link": "https://zambos.com/wp-content/uploads/2024/04/banner-estadio-zambos.webp"
+      },
+      {
+        "id": "slide4",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_3_Banner_Web_Tostones_Jun.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_3_Banner_Web_Tostones_Jun.webp",
+        "alt": "Zambos",
+        "title": "",
+        "type": "image",
+        "description": "",
+        "link": "/es/productos/zambos-tostones-originales"
       }
-     
     ]
   },
   "menu_labels": {
@@ -165,32 +197,32 @@
       "instagramPosts": [
         {
           "id": "post1",
-          "postUrl": "https://www.instagram.com/reel/DTyFbg1ETV-/?igsh=ZXF0ZG44azY4dGVp",
-          "embedUrl": "https://www.instagram.com/reel/DTyFbg1ETV-/embed",
+          "postUrl": "https://www.instagram.com/reel/DTtQ9z4jzam/?igsh=ODdvcjBhYmxnYXZ2",
+          "embedUrl": "https://www.instagram.com/reel/DTtQ9z4jzam/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-1.jpg",
           "fallbackImage": "/images/instagram-fallback-1.jpg",
           "alt": "Zambos Instagram Post 1"
         },
         {
           "id": "post2",
-          "postUrl": "https://www.instagram.com/reel/DTgz67QCT8M/?igsh=dDBqNGxoaDdya2ht",
-          "embedUrl": "https://www.instagram.com/reel/DTgz67QCT8M/embed",
+          "postUrl": "https://www.instagram.com/reel/DTn0Ec4D8nR/?igsh=MXRhcWlqY3ZxY2hhaQ==",
+          "embedUrl": "https://www.instagram.com/reel/DTn0Ec4D8nR/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-2.jpg",
           "fallbackImage": "/images/instagram-fallback-2.jpg",
           "alt": "Zambos Instagram Post 2"
         },
         {
           "id": "post3",
-          "postUrl": "https://www.instagram.com/reel/DTbD-fKEcGU/?igsh=MXJseGNwZzR0YXN2cg",
-          "embedUrl": "https://www.instagram.com/reel/DTbD-fKEcGU/embed",
+          "postUrl": "https://www.instagram.com/reel/DTdvDZMj3gT/?igsh=MTRhYW1waThwa21ucw==",
+          "embedUrl": "https://www.instagram.com/reel/DTdvDZMj3gT/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-3.jpg",
           "fallbackImage": "/images/instagram-fallback-3.jpg",
           "alt": "Zambos Instagram Post 3"
         },
         {
           "id": "post4",
-          "postUrl": "https://www.instagram.com/reel/DR-IwH6CXvK/?igsh=MWQ5YTFqYXlkeXRnOA",
-          "embedUrl": "https://www.instagram.com/reel/DR-IwH6CXvK/embed",
+          "postUrl": "https://www.instagram.com/reel/DTOsANljZUa/?igsh=cDA5eWtqN2pkaHJ4",
+          "embedUrl": "https://www.instagram.com/reel/DTOsANljZUa/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-4.jpg",
           "fallbackImage": "/images/instagram-fallback-4.jpg",
           "alt": "Zambos Instagram Post 4"
@@ -226,5 +258,34 @@
   },
   "subscribe": {
     "success": "¡Gracias por suscribirte!"
+  },
+  "videos": {
+    "items": [
+      {
+        "title": "Zambos Preparados",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4"
+      },
+            {
+        "title": "¡Unos ZAMBOS con CHOCOLATE!",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be"
+      },
+            {
+        "title": "¡Disfrutá de este platillo tradicional de una forma diferente!",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be"
+      },
+            {
+        "title": "Deliciosa receta con Zambos Ceviche 🍤",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be"
+      },
+            {
+        "title": "Zambos Costeños",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=DEDSda5mneA"
+      }
+    ]
   }
 }

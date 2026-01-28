@@ -17,6 +17,22 @@ const { currentLang, headerColorConfig } = Astro.props;
 const socialMedia = t('social_media', { namespace: 'common', locale: currentLang }) as any;
 const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) as any[];
 
+// Reordenar: asegurar que "Blog" esté antes de "Contacto/Contact"
+const orderedMenuItems = (() => {
+  const arr = Array.isArray(menuItems) ? [...menuItems] : [];
+  const isEs = currentLang === 'es';
+  const blogIdx = arr.findIndex(i => (i.text || '').toLowerCase() === 'blog');
+  const contactIdx = arr.findIndex(i => {
+    const txt = (i.text || '').toLowerCase();
+    return txt === (isEs ? 'contacto' : 'contact');
+  });
+  if (blogIdx >= 0 && contactIdx >= 0 && blogIdx > contactIdx) {
+    const [blogItem] = arr.splice(blogIdx, 1);
+    arr.splice(contactIdx, 0, blogItem);
+  }
+  return arr;
+})();
+
 // Traducciones
 const openMenuLabel = t('menu_labels.open_main_menu', { namespace: 'common', locale: currentLang }) || 'Open main menu';
 const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', locale: currentLang }) || 'Close main menu';
@@ -38,7 +54,7 @@ const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', l
       </button>
     </div>
     <nav class="flex flex-col items-center space-y-3 text-center w-full text-white" id="mobile-menu-items">
-      {menuItems && menuItems.map((item: any) => (
+      {orderedMenuItems && orderedMenuItems.map((item: any) => (
         <div class="w-full">
           <div class="flex items-center justify-center text-white">
             {item.submenu ? (

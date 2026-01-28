@@ -1,0 +1,30 @@
+{
+  "date": "2025-09-11",
+  "id": "empanizambos-chicken-nuggets-using-zambos-chile-limon",
+  "slug": "empanizambos-chicken-nuggets-using-zambos-chile-limon",
+  "title": "EmpaniZambos (Chicken Nuggets) Using Zambos Chile Limón",
+  "people": "4",
+  "difficulty": "Easy",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/empanizambos-nuggets-de-pollo-utilizando-zambos-platano-picositas.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/empanizambos-nuggets-de-pollo-utilizando-zambos-platano-picositas.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 25,
+  "ingredients": [
+    "Vegetable oil for frying",
+    "2 chicken breasts",
+    "1 cup of BBQ sauce",
+    "2 cups of crushed Zambos Chile Limón"
+  ],
+  "instructions": [
+    "Step 1: Cut the chicken breasts widthwise into strips",
+    "Step 2: Pass the strips through BBQ sauce until well covered",
+    "Step 3: Crush the Zambos Chile Limón as finely as possible",
+    "Step 4: Cover the chicken pieces with the crushed Zambos",
+    "Step 5: Heat the oil and fry each piece until golden",
+    "Step 6: Serve with BBQ sauce to taste or drizzle with additional sauce"
+  ],
+  "brand": ["zambos"]
+}

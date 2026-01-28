@@ -1,0 +1,48 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-preparados-con-pollo",
+  "slug": "zambos-preparados-con-pollo",
+  "title": "Zambos Preparados con pollo",
+  "people": "4",
+  "difficulty": "Media",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-con-pollo.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-con-pollo.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 35,
+  "ingredients": [
+    "Ingredientes para el pollo:",
+    "1 bolsa de Zambos®",
+    "1 cucharada de margarina",
+    "2 tazas de pollo desmenuzado",
+    "½ cebolla picada",
+    "1 diente de ajo picado",
+    "½ taza de salsa de tomate",
+    "1 cucharada de consomé de pollo",
+    "Ingredientes para las cebollas curtidas:",
+    "1 cebolla morada cortada en juliana",
+    "¼ de taza de vinagre blanco",
+    "Jugo de 1 limón",
+    "Sal y pimienta al gusto",
+    "Ingredientes para armar los Zambos®:",
+    "2 tazas de repollo rallado",
+    "Ingredientes para el aderezo:",
+    "½ taza de mayonesa",
+    "¼ de crema",
+    "1 taza de cilantro picado",
+    "1 cucharada de jugo de limón",
+    "½ cucharadita de sal"
+  ],
+  "instructions": [
+    "Paso 1: Calienta la margarina en una olla y fríe el ajo y la cebolla a fuego medio.",
+    "Paso 2: Agrega el pollo y dóralo por unos minutos.",
+    "Paso 3: Agrega la salsa de tomate y el consomé y cocina por 2 minutos.",
+    "Paso 4: Para preparar las cebollas, mézclalas en un recipiente y déjalas macerar por unos minutos.",
+    "Paso 5: Para preparar la salsa mezcla todo en un recipiente.",
+    "Paso 6: Para armar los Zambos®, colócalos en un plato o abre la bolsa de la parte horizontal.",
+    "Paso 7: Agrega el pollo, luego el repollo, sigue con las cebollas, y por último sirve el aderezo."
+  ],
+  "brand": ["zambos"]
+}

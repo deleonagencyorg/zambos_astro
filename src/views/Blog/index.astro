@@ -71,6 +71,7 @@ const noPostsText = currentLang === 'es'
 // Labels and splits for the two-column layout below
 const topNewsLabel = currentLang === 'es' ? 'NOTICIAS MÁS IMPORTANTES' : 'TOP NEWS';
 const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
+const loadMoreText = currentLang === 'es' ? 'VER MÁS' : 'LOAD MORE';
 ---
 <MainLayout title={pageTitle} description={pageDescription} class="bg-[#0DB04A]">
   <ViewTransitions />
@@ -80,13 +81,13 @@ const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
         <Breadcrumb bgColor="bg-transparent" textColor="text-white" hoverColor="hover:text-white" />
       </div>
       <!-- News Carousel listing 4 per slide -->
-      <div class="max-w-6xl mx-auto mb-16">
-        <NewsCarousel />
+      <div class=" mx-auto mb-16">
+        <NewsCarousel currentLang={currentLang} items={posts} />
       </div>
 
       <div class="flex flex-col md:flex-row gap-4 mb-8">
         <!-- Search Bar -->
-        <div class="flex-1">
+        <!-- <div class="flex-1">
           <div class="relative">
             <input
               type="text"
@@ -98,14 +99,14 @@ const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
             </svg>
           </div>
-        </div>
+        </div> -->
 
         <!-- Category Filters -->
-        <div id="recipeFilters" class="flex flex-wrap gap-3">
+        <div id="blogFilters" class="flex flex-wrap gap-3">
           <button 
             type="button" 
             class="filter-btn px-8 py-4 rounded-full bg-red text-white font-bold transition-all whitespace-nowrap" 
-            data-filter="all"
+            data-filter="oldest"
           >
             {filterLabels.oldest}
           </button>
@@ -119,7 +120,7 @@ const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
           <button 
             type="button" 
             class="filter-btn px-8 py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
-            data-filter="brunch"
+            data-filter="all"
           >
             {filterLabels.all}
           </button>
@@ -127,9 +128,15 @@ const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
       </div>
 
 
-      <div id="recipesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-        {posts.map((recipe: Recipe) => (
-          <div class="recipe-card" data-type={normalizeType(recipe)}>
+      <div id="recipesGrid" class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+        {posts.map((recipe: any, index: number) => (
+          <div
+            class="recipe-card"
+            data-type={normalizeType(recipe)}
+            data-date={String((recipe as any).published_date || '')}
+            data-order={String(index)}
+            style={index < 4 ? '' : 'display:none'}
+          >
             <BlogCard
               image={recipe.image || '/images/recipes/placeholder.jpg'}
               title={recipe.title}
@@ -140,6 +147,16 @@ const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
             />
           </div>
         ))}
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <button
+          id="loadMoreBtn"
+          type="button"
+          class="bg-red text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition"
+        >
+          {loadMoreText}
+        </button>
       </div>
     </div>
   </div>
@@ -152,63 +169,102 @@ const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
   }
 </style>
 
-<script define:vars={{ initialPosts: currentLang }}>
-  function initBlogFilters(){
+<script>
+  function initBlogLoadMore() {
+    const grid = document.getElementById('recipesGrid');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
     const filterButtons = Array.from(document.querySelectorAll('#blogFilters .filter-btn'));
-    const data = Array.isArray(initialPosts) ? initialPosts : [];
 
-    function getCarousel(){ return (window)._newsCarousels && (window)._newsCarousels['news-list']; }
+    if (!(grid instanceof HTMLElement) || !(loadMoreBtn instanceof HTMLButtonElement)) return;
+
+    const cards = Array.from(grid.querySelectorAll('.recipe-card'));
+    const pageSize = 4;
+    let revealedCount = 0;
+    let currentMode = 'all';
+
+    function parseDate(v) {
+      const s = String(v || '').trim();
+      const t = Date.parse(s);
+      return Number.isFinite(t) ? t : 0;
+    }
+
+    function hideAll() {
+      cards.forEach((c) => {
+        c.style.display = 'none';
+      });
+    }
+
+    function sortedCards() {
+      const list = cards.slice();
+      if (currentMode === 'newest') {
+        list.sort((a, b) => parseDate(b.dataset.date) - parseDate(a.dataset.date));
+      } else if (currentMode === 'oldest') {
+        list.sort((a, b) => parseDate(a.dataset.date) - parseDate(b.dataset.date));
+      } else {
+        list.sort((a, b) => Number(a.dataset.order || 0) - Number(b.dataset.order || 0));
+      }
+      return list;
+    }
+
+    function reorderDom(list) {
+      list.forEach((el) => grid.appendChild(el));
+    }
+
+    function revealNextPage() {
+      const ordered = sortedCards();
+      reorderDom(ordered);
+
+      const nextBatch = ordered.slice(revealedCount, revealedCount + pageSize);
+      nextBatch.forEach((card) => {
+        card.style.display = '';
+      });
+      revealedCount += nextBatch.length;
+
+      loadMoreBtn.classList.toggle('hidden', revealedCount >= ordered.length);
+    }
 
     function setActive(btn) {
-      filterButtons.forEach(b => { b.classList.remove('opacity-40'); b.classList.add('text-white'); });
-      filterButtons.forEach(b => { if (b!==btn) b.classList.add('opacity-40'); });
+      filterButtons.forEach((b) => {
+        b.classList.remove('bg-red', 'text-white');
+        b.classList.add('bg-white', 'text-gray-700');
+      });
+      btn.classList.remove('bg-white', 'text-gray-700');
+      btn.classList.add('bg-red', 'text-white');
     }
-    function applyFilter(filter) {
-      const carousel = getCarousel();
-      if (!carousel) return; // will be re-applied on ready
-      const filtered = filter === 'all' 
-        ? data 
-        : data.filter(p => (p.category || 'other').toLowerCase() === filter);
-      carousel.setData(filtered);
+
+    function applyMode(mode) {
+      currentMode = mode;
+      revealedCount = 0;
+      hideAll();
+      revealNextPage();
     }
+
     filterButtons.forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
-        const filter = btn.getAttribute('data-filter') || 'all';
+        const mode = btn.getAttribute('data-filter') || 'all';
         setActive(btn);
-        applyFilter(filter);
+        applyMode(mode);
       });
     });
-    // init
-    const defaultBtn = filterButtons.find(b => b.getAttribute('data-filter') === 'all');
-    if (defaultBtn) setActive(defaultBtn);
 
-    // Ensure carousel receives initial data when ready
-    const applyInitial = () => {
-      const c = getCarousel();
-      if (c) { 
-        c.setData(data); 
-        // Also apply the "all" filter to show all posts initially
-        const defaultBtn = filterButtons.find(b => b.getAttribute('data-filter') === 'all');
-        if (defaultBtn) setActive(defaultBtn);
-        return true; 
-      }
-      return false;
-    };
-    
-    // Try immediate application
-    if (!applyInitial()) {
-      // If carousel not ready, retry with polling
-      const start = Date.now();
-      const timer = setInterval(() => {
-        if (applyInitial() || Date.now() - start > 3000) clearInterval(timer);
-      }, 100);
+    loadMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      revealNextPage();
+    });
+
+    const defaultBtn = filterButtons.find((b) => b.getAttribute('data-filter') === 'all');
+    if (defaultBtn) {
+      setActive(defaultBtn);
+      applyMode('all');
     }
   }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBlogFilters);
+    document.addEventListener('DOMContentLoaded', initBlogLoadMore);
   } else {
-    initBlogFilters();
+    initBlogLoadMore();
   }
-  document.addEventListener('astro:page-load', initBlogFilters);
+  document.addEventListener('astro:page-load', initBlogLoadMore);
+  document.addEventListener('astro:after-swap', initBlogLoadMore);
 </script>

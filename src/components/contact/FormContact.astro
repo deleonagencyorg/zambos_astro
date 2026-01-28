@@ -10,9 +10,11 @@ import contactEn from '../../locales/en/contact.json';
 
 interface Props {
   currentLang?: Locale;
+  formType?: string;
+  hideContactReason?: boolean;
 }
 
-const { currentLang } = Astro.props;
+const { currentLang, formType = 'default', hideContactReason = false } = Astro.props;
 
 // Get current locale if not provided
 const locale = currentLang || getLocale();
@@ -109,6 +111,8 @@ const options = dynamicOptions[locale];
   class="bg-[#FFED7A] rounded-[40px] p-8"
   transition:name="contact-form"
   data-locale={locale}
+  data-form-type={formType}
+  data-hide-contact-reason={hideContactReason ? 'true' : 'false'}
   data-api-host={apiHost}
   data-api-token={apiToken}
   data-contact-form-path={contactFormPath}
@@ -126,47 +130,71 @@ const options = dynamicOptions[locale];
   <div class="flex flex-col md:flex-row gap-6">
     <!-- Contact Reason Dropdown -->
     <div class="flex-1">
-      <label class="block text-[#009337] uppercase font-semibold  mb-2">
-        {contact.form.contactReason.label} *
-      </label>
-      <select 
-        name="contactReason" 
-        id="contactReasonSelect"
-        required
-        class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-      >
-        <option value="">{contactReasonPlaceholder}</option>
-        {locale === 'es' ? (
-          // En español, mostrar todas las opciones incluido "Soy un ganador"
-          dynamicOptions.es.contactReason.map((reason) => (
-            <option value={reason}>{reason}</option>
-          ))
-        ) : (
-          // En inglés, mostrar solo las opciones que tienen texto (filtrar vacías)
-          dynamicOptions.en.contactReason.map((reason, index) => {
-            if (reason) { // Solo mostrar si tiene texto
-              return <option value={dynamicOptions.es.contactReason[index]}>{reason}</option>;
-            }
-            return null;
-          })
-        )}
-      </select>
+      {hideContactReason ? (
+        <input type="hidden" name="contactReason" value={formType} />
+      ) : (
+        <>
+          <label class="block text-[#009337] uppercase font-semibold  mb-2">
+            {contact.form.contactReason.label} *
+          </label>
+          <select 
+            name="contactReason" 
+            id="contactReasonSelect"
+            required
+            class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+          >
+            <option value="">{contactReasonPlaceholder}</option>
+            {locale === 'es' ? (
+              // En español, mostrar todas las opciones incluido "Soy un ganador"
+              dynamicOptions.es.contactReason.map((reason) => (
+                <option value={reason}>{reason}</option>
+              ))
+            ) : (
+              // En inglés, mostrar solo las opciones que tienen texto (filtrar vacías)
+              dynamicOptions.en.contactReason.map((reason, index) => {
+                if (reason) { // Solo mostrar si tiene texto
+                  return <option value={dynamicOptions.es.contactReason[index]}>{reason}</option>;
+                }
+                return null;
+              })
+            )}
+          </select>
+        </>
+      )}
     </div>
 
     <!-- Country Selector -->
-    <div class="flex-1">
-      <label class="block text-[#009337] uppercase font-semibold  mb-2">
-        {countryLabel} *
-      </label>
-      <select 
-        name="country" 
-        id="countrySelect"
-        required
-        class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full  bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-      >
-        <option value="">{countryPlaceholder}</option>
-      </select>
-    </div>
+    {hideContactReason && formType === 'zambostruck' ? (
+      <>
+        <div class="flex-1">
+          <select 
+            name="country" 
+            id="countrySelect"
+            required
+            class="hidden"
+          >
+            <option value="">{countryPlaceholder}</option>
+          </select>
+        </div>
+        <div class="flex-1">
+          <input type="hidden" name="contactReason" value={formType} />
+        </div>
+      </>
+    ) : (
+      <div class="flex-1">
+        <label class="block text-[#009337] uppercase font-semibold  mb-2">
+          {countryLabel} *
+        </label>
+        <select 
+          name="country" 
+          id="countrySelect"
+          required
+          class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full  bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        >
+          <option value="">{countryPlaceholder}</option>
+        </select>
+      </div>
+    )}
   </div>
 
   <!-- Fila para City y Name -->
@@ -233,25 +261,44 @@ const options = dynamicOptions[locale];
   </div>
 
   <!-- Fila para comentario -->
-  <div class="flex flex-col md:flex-row gap-6">
-    <div class="flex-1">
-      <label class="block text-[#009337] uppercase font-semibold  mb-2">
-        {contact.form.message.label} *
-      </label>
-      <textarea 
-        name="message" 
-        required
-        rows="4"
-        placeholder={contact.form.message.placeholder}
-        class="w-full px-4 py-3 border-[1.5px] border-white rounded-2xl  bg-[#FFED7A] border-[#009337] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-      ></textarea>
+  {hideContactReason && formType === 'zambostruck' ? null : (
+    <div class="flex flex-col md:flex-row gap-6">
+      <div class="flex-1">
+        <label class="block text-[#009337] uppercase font-semibold  mb-2">
+          {contact.form.message.label} *
+        </label>
+        <textarea 
+          name="message" 
+          required
+          rows="4"
+          placeholder={contact.form.message.placeholder}
+          class="w-full px-4 py-3 border-[1.5px] border-white rounded-2xl  bg-[#FFED7A] border-[#009337] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+        ></textarea>
+      </div>
     </div>
-  </div>
+  )}
 
   <!-- Dynamic Fields Container -->
   <div id="dynamicFields" class="space-y-6">
     <!-- Dynamic fields will be inserted here -->
   </div>
+
+  {hideContactReason && formType === 'zambostruck' ? (
+    <div class="flex flex-col md:flex-row gap-6">
+      <div class="flex-1">
+        <label class="block text-[#009337] uppercase font-semibold  mb-2">
+          {contact.form.message.label} *
+        </label>
+        <textarea 
+          name="message" 
+          required
+          rows="4"
+          placeholder={contact.form.message.placeholder}
+          class="w-full px-4 py-3 border-[1.5px] border-white rounded-2xl  bg-[#FFED7A] border-[#009337] text-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+        ></textarea>
+      </div>
+    </div>
+  ) : null}
   
   <!-- Submit Button -->
   <div>
@@ -299,6 +346,8 @@ const options = dynamicOptions[locale];
 
       return {
         locale: container.dataset.locale,
+        formType: container.dataset.formType,
+        hideContactReason: container.dataset.hideContactReason,
         apiHost: container.dataset.apiHost,
         apiToken: container.dataset.apiToken,
         contactFormPath: container.dataset.contactFormPath,
@@ -315,6 +364,8 @@ const options = dynamicOptions[locale];
     let labels;
     let options;
     let locale;
+    let formType;
+    let hideContactReason;
     let apiHost;
     let apiToken;
     let contactFormPath;
@@ -328,6 +379,8 @@ const options = dynamicOptions[locale];
       labels = cfg.labels;
       options = cfg.options;
       locale = cfg.locale;
+      formType = cfg.formType;
+      hideContactReason = cfg.hideContactReason;
       apiHost = cfg.apiHost;
       apiToken = cfg.apiToken;
       contactFormPath = cfg.contactFormPath;
@@ -410,7 +463,8 @@ const options = dynamicOptions[locale];
           'Soy Periodista/ Medio de comunicación': 'periodista_medio',
           'Línea Ética YUMMIES': 'linea_etica',
           'Otros': 'otros',
-          'Soy un ganador': 'ganador'
+          'Soy un ganador': 'ganador',
+          'zambostruck': 'zambostruck'
         };
         
         return templateMap[contactReason] || 'otros';
@@ -528,14 +582,18 @@ const options = dynamicOptions[locale];
       countrySelect: !!countrySelect,
       citySelect: !!citySelect,
       dynamicFields: !!dynamicFields,
-      form: !!form
+      form: !!form,
+      hideContactReason,
+      formType
     });
 
     // Debug: Check if variables are passed correctly
     console.log('Script variables:', { labels, options, locale, apiHost, apiToken, contactFormPath });
 
     // If any of the required elements are missing, exit early
-    if (!contactReasonSelect || !countrySelect || !citySelect || !dynamicFields || !form) {
+    // contactReasonSelect is optional when hideContactReason is enabled
+    const requiresContactReasonSelect = hideContactReason !== 'true';
+    if ((requiresContactReasonSelect && !contactReasonSelect) || !countrySelect || !citySelect || !dynamicFields || !form) {
       console.error('Required form elements not found');
       return;
     }
@@ -556,22 +614,24 @@ const options = dynamicOptions[locale];
     }
 
     // Handle contact reason change
-    contactReasonSelect.onchange = function() {
-      const selectedReason = this.value;
-      console.log('Contact reason changed to:', selectedReason);
-      
-      // Reset phone field requirement when changing contact reason
-      const phoneInput = document.querySelector('input[name="phone"]');
-      if (phoneInput) {
-        phoneInput.removeAttribute('required');
-        const phoneLabel = phoneInput.closest('.flex-1')?.querySelector('label');
-        if (phoneLabel) {
-          phoneLabel.innerHTML = phoneLabel.innerHTML.replace(' *', '');
+    if (contactReasonSelect) {
+      contactReasonSelect.onchange = function() {
+        const selectedReason = this.value;
+        console.log('Contact reason changed to:', selectedReason);
+        
+        // Reset phone field requirement when changing contact reason
+        const phoneInput = document.querySelector('input[name="phone"]');
+        if (phoneInput) {
+          phoneInput.removeAttribute('required');
+          const phoneLabel = phoneInput.closest('.flex-1')?.querySelector('label');
+          if (phoneLabel) {
+            phoneLabel.innerHTML = phoneLabel.innerHTML.replace(' *', '');
+          }
         }
-      }
-      
-      updateDynamicFields(selectedReason);
-    };
+        
+        updateDynamicFields(selectedReason);
+      };
+    }
 
     // Handle country change
     countrySelect.onchange = function() {
@@ -598,6 +658,14 @@ const options = dynamicOptions[locale];
         citySelect.classList.add('disabled:bg-gray-100', 'disabled:cursor-not-allowed');
       }
     };
+
+    // ZambosTruck: auto-select Honduras and populate cities
+    if (hideContactReason === 'true' && formType === 'zambostruck' && countrySelect) {
+      countrySelect.value = 'Honduras';
+      if (typeof countrySelect.onchange === 'function') {
+        countrySelect.onchange();
+      }
+    }
 
     // Handle form submission
     form.onsubmit = async function(e) {
@@ -675,8 +743,10 @@ const options = dynamicOptions[locale];
     
     console.log('✓ Event listeners attached');
     
-    // Initialize dynamic fields with default contact reason if selected
-    if (contactReasonSelect.value) {
+    // Initialize dynamic fields
+    if (hideContactReason === 'true' && formType === 'zambostruck') {
+      updateDynamicFields('zambostruck');
+    } else if (contactReasonSelect && contactReasonSelect.value) {
       console.log('→ Initializing with selected reason:', contactReasonSelect.value);
       updateDynamicFields(contactReasonSelect.value);
     }
@@ -755,8 +825,157 @@ const options = dynamicOptions[locale];
       case 'Otros':
         createOthersFields();
         break;
+      case 'zambostruck':
+        createZambosTruckFields();
+        break;
       default:
         console.log('No specific fields for reason:', contactReason);
+    }
+  }
+
+  function createZambosTruckFields() {
+    const labelEventPlace = locale === 'es' ? 'Lugar del evento' : 'Event location';
+    const labelPack = locale === 'es' ? 'Pack para cotizar' : 'Pack to quote';
+    const labelEventType = locale === 'es' ? 'Tipo de evento' : 'Event type';
+    const labelSchedule = locale === 'es' ? 'Horario de evento' : 'Event schedule';
+    const labelDate = locale === 'es' ? 'Fecha de evento' : 'Event date';
+
+    const placeholderEventPlace = locale === 'es' ? 'Ingresa el lugar del evento' : 'Enter event location';
+
+    const packOptions = ['35 packs', '50 packs', '75 packs', '100 packs', '125 packs', '150 packs', '175 packs', '200 packs', '250 packs', '300 packs'];
+    const eventTypes = locale === 'es'
+      ? ['Bodas', 'Cumpleaños', 'Aniversarios', 'Eventos Corporativos', 'Conciertos', 'Eventos Deportivos', 'Reuniones Privadas']
+      : ['Weddings', 'Birthdays', 'Anniversaries', 'Corporate events', 'Concerts', 'Sports events', 'Private meetings'];
+
+    dynamicFields.innerHTML = `
+      <div>
+        <label class="block text-[#009337] uppercase font-semibold mb-2">${labelEventPlace} *</label>
+        <input
+          type="text"
+          name="eventPlace"
+          required
+          placeholder="${placeholderEventPlace}"
+          class="w-full font-semibold uppercase placeholder:text-[#009337] flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        />
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class="flex-1">
+          <label class="block text-[#009337] uppercase font-semibold mb-2">${labelPack} *</label>
+          <select
+            name="quotePack"
+            required
+            class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+          >
+            <option value="">${locale === 'es' ? 'Selecciona una opción' : 'Select an option'}</option>
+            ${packOptions.map(p => `<option value="${p}">${p}</option>`).join('')}
+          </select>
+        </div>
+
+        <div class="flex-1">
+          <label class="block text-[#009337] uppercase font-semibold mb-2">${labelEventType} *</label>
+          <select
+            name="eventType"
+            required
+            class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+          >
+            <option value="">${locale === 'es' ? 'Selecciona una opción' : 'Select an option'}</option>
+            ${eventTypes.map(t => `<option value="${t}">${t}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class="flex-1">
+          <label class="block text-[#009337] uppercase font-semibold mb-2">${labelSchedule} *</label>
+          <input
+            type="time"
+            name="eventSchedule"
+            required
+            class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+          />
+        </div>
+
+        <div class="flex-1">
+          <label class="block text-[#009337] uppercase font-semibold mb-2">${labelDate} *</label>
+          <input
+            type="text"
+            name="eventDate"
+            required
+            inputmode="numeric"
+            autocomplete="off"
+            maxlength="10"
+            placeholder="DD/MM/YYYY"
+            pattern="\\d{2}/\\d{2}/\\d{4}"
+            class="w-full font-semibold uppercase flex justify-center text-[#009337] items-center gap-5 p-[15px_20px] border-[1.5px] border-white rounded-full bg-[#FFED7A] border-[#009337] focus:text-black focus:bg-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+          />
+        </div>
+      </div>
+    `;
+
+    const eventDateInput = dynamicFields.querySelector('input[name="eventDate"]');
+
+    const formatEventDate = (digits) => {
+      const d = digits.slice(0, 8);
+      const dd = d.slice(0, 2);
+      const mm = d.slice(2, 4);
+      const yyyy = d.slice(4, 8);
+      let out = '';
+      if (dd) out += dd;
+      if (mm) out += `/${mm}`;
+      if (yyyy) out += `/${yyyy}`;
+      return out;
+    };
+
+    const parseEventDate = (value) => {
+      const m = String(value || '').match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+      if (!m) return null;
+      const day = Number(m[1]);
+      const month = Number(m[2]);
+      const year = Number(m[3]);
+      if (!Number.isFinite(day) || !Number.isFinite(month) || !Number.isFinite(year)) return null;
+      if (year < 1900 || year > 3000) return null;
+      if (month < 1 || month > 12) return null;
+      if (day < 1 || day > 31) return null;
+      const date = new Date(year, month - 1, day);
+      if (
+        date.getFullYear() !== year ||
+        date.getMonth() !== month - 1 ||
+        date.getDate() !== day
+      ) return null;
+      return date;
+    };
+
+    const validateEventDate = () => {
+      if (!eventDateInput) return;
+
+      const value = eventDateInput.value;
+      const parsed = parseEventDate(value);
+      if (!parsed) {
+        eventDateInput.setCustomValidity(locale === 'es' ? 'Fecha inválida. Usa DD/MM/YYYY.' : 'Invalid date. Use DD/MM/YYYY.');
+        return;
+      }
+      const today = new Date();
+      const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      if (parsed.getTime() <= todayStart.getTime()) {
+        eventDateInput.setCustomValidity(locale === 'es' ? 'La fecha debe ser mayor a hoy.' : 'Date must be greater than today.');
+        return;
+      }
+      eventDateInput.setCustomValidity('');
+    };
+
+    if (eventDateInput) {
+      eventDateInput.addEventListener('input', (e) => {
+        const target = e.currentTarget;
+        if (!(target instanceof HTMLInputElement)) return;
+        const digits = target.value.replace(/\D/g, '');
+        target.value = formatEventDate(digits);
+        validateEventDate();
+      });
+      eventDateInput.addEventListener('blur', () => {
+        validateEventDate();
+        eventDateInput.reportValidity();
+      });
     }
   }
 

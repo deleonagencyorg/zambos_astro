@@ -10,6 +10,15 @@ export interface Props {
 
 const { currentLang, id, items } = Astro.props;
 
+const data = Array.isArray(items) ? items : [];
+const latestPost = data
+  .slice()
+  .sort((a, b) => String(b?.published_date || '').localeCompare(String(a?.published_date || '')))[0];
+const latestTitle = String(latestPost?.title || '');
+const latestSummary = String(latestPost?.summary || '');
+const latestSlug = String(latestPost?.slug || latestPost?.id || '');
+const latestHref = latestSlug ? `/${currentLang || 'es'}/blog/${latestSlug}` : '';
+
 const content = {
   es: {
     bannerTitle: 'Tu nuevo sabor favorito: Zambos Ajo Parmesano',
@@ -45,13 +54,30 @@ const t = content[currentLang || 'es'];
     
     <!-- Red Banner at Bottom -->
     <div class="absolute bottom-0 left-0 right-0 bg-red px-6 py-4">
-      <p class="text-white font-bold text-sm md:text-base">{t.bannerTitle}</p>
-      <p class="text-white text-xs md:text-sm">{t.bannerSubtitle}</p>
+      <div class="flex items-end justify-between gap-4">
+        <div class="min-w-0">
+          <p class="text-white font-bold text-sm md:text-base truncate">
+            {latestTitle || t.bannerTitle}
+          </p>
+          <p class="text-white text-xs md:text-sm line-clamp-2">
+            {latestSummary || t.bannerSubtitle}
+          </p>
+        </div>
+
+        {latestHref && (
+          <a
+            href={latestHref}
+            class="shrink-0 bg-white text-red font-bold px-6 py-3 rounded-full hover:opacity-90 transition"
+          >
+            {currentLang === 'es' ? 'Leer más' : 'Read more'}
+          </a>
+        )}
+      </div>
     </div>
   </div>
 
   <!-- Green Newsletter Section -->
-  <div class="bg-[#009337] text-center py-10 px-6 rounded-[40px] mt-[30px]">
+  <div class="bg-[#009337] text-center py-10 px-6 rounded-xl mt-[30px]">
     <h2 class="text-white text-2xl md:text-3xl font-bold mb-3 uppercase tracking-wider">
       {t.title}
     </h2>
@@ -59,33 +85,30 @@ const t = content[currentLang || 'es'];
       {t.subtitle}
     </p>
     
-    <form class="flex flex-col sm:flex-row gap-3 items-center justify-center max-w-md mx-auto">
-      <input 
-        type="email" 
-        placeholder={t.placeholder}
-        required
-        class="w-full sm:flex-1 px-4 py-3 rounded-full bg-[#0DB04A] text-white placeholder-white"
-      />
-      <button 
-        type="submit"
-        class="w-full sm:w-auto px-6 py-3 bg-red hover:bg-red-700 text-white font-bold rounded-full transition-colors"
-      >
-        {t.button}
-      </button>
-    </form>
+           <a 
+          href="https://www.snacksyummies.com/es/yummiesone" 
+          class="submit-button bg-red"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {currentLang === 'es' ? 'Suscríbeme' : 'Subscribe'}
+        </a>
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('.bg-primary form');
-    form?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = form.querySelector('input[type="email"]') as HTMLInputElement;
-      if (input?.value) {
-        alert('¡Gracias por suscribirte!');
-        input.value = '';
-      }
-    });
-  });
-</script>
+<style>
+    .submit-button {
+    padding: 12px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+   
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    position: relative;
+    z-index: 25;
+  }
+</style>

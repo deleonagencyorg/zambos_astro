@@ -1,0 +1,53 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-preparados-con-carne",
+  "slug": "zambos-preparados-con-carne",
+  "title": "Zambos Preparados con carne",
+  "people": "4",
+  "difficulty": "Media",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-con-carne.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-preparados-con-carne.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 40,
+  "ingredients": [
+    "Ingredientes:",
+    "1 bolsa de Zambos®",
+    "1 cucharada de margarina",
+    "1 libra de carne molida",
+    "½ taza de cebolla picada",
+    "1 diente de ajo picado",
+    "½ taza de chile pimiento verde",
+    "½ taza de tomate en cubos",
+    "2 cucharadas de pasta de tomate",
+    "1 taza de agua",
+    "1 taza de papa en cubos",
+    "1 cucharada de consomé de pollo",
+    "sal y pimienta al gusto",
+    "Repollo",
+    "Ingredientes para el chirmol:",
+    "Tomate",
+    "Pepino",
+    "Chile dulce verde",
+    "Culantro",
+    "Limón",
+    "Ingredientes para el aderezo:",
+    "½ taza de Mayonesa",
+    "½ taza de Mostaza",
+    "½ taza de Kétchup"
+  ],
+  "instructions": [
+    "Paso 1: Calienta la margarina en una olla y dora la cebolla, el ajo y el chile por 3 minutos a fuego medio.",
+    "Paso 2: Agrega la carne y fríe hasta dorar.",
+    "Paso 3: Agrega el resto de ingredientes, menos el repollo, y cocina hasta que la papa esté suave.",
+    "Paso 4: Para preparar el chismol mezcla todos los ingredientes en un recipiente.",
+    "Paso 5: Para armar los Zambos®, colócalos en un plato o abre la bolsa de la parte horizontal.",
+    "Paso 6: Agrega el repollo encima de los zambos, luego la carne, y termina con el chismol.",
+    "Paso 7: Para preparar el aderezo, mezcla todos los ingredientes en un recipiente y sírvelos encima."
+  ],
+  "brand": [
+    "zambos"
+  ]
+}

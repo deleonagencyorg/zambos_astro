@@ -1,0 +1,27 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-maduritos-with-ice-cream",
+  "slug": "zambos-maduritos-with-ice-cream",
+  "title": "Zambos Maduritos with Ice Cream",
+  "people": "2",
+  "difficulty": "Easy",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-con-helado.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-con-helado.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 5,
+  "ingredients": [
+    "Crushed and whole Madurito Zambos",
+    "Vanilla ice cream",
+    "Caramel or chocolate sauce"
+  ],
+  "instructions": [
+    "Step 1: Place whole Zambos Maduritos on a deep plate.",
+    "Step 2: Serve a scoop of ice cream on top.",
+    "Step 3: Add crushed Maduritos.",
+    "Step 4: Pour caramel or chocolate sauce to taste."
+  ],
+  "brand": ["zambos"]
+}

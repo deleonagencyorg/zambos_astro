@@ -1,6 +1,5 @@
 ---
 // NewsletterSignup.astro
-import LazyImage from '../common/LazyImage.astro';
 import { getLocale } from '../../i18n/i18n';
 
 export interface Props {
@@ -8,15 +7,14 @@ export interface Props {
 }
 
 const { currentLang = getLocale() } = Astro.props;
+
+const backgroundImageSrc = '/images/es/subscription.png';
 ---
 
-<section class="newsletter-section">
-  <!-- Imagen de fondo -->
-  <LazyImage
-    src="/images/es/subscription.png"
-    alt="Subscription"
-    class="waves"
-  />
+<section
+  class="newsletter-section"
+  style={`background-image: url('${backgroundImageSrc}');`}
+>
 
   <!-- Contenido Principal - Por encima de la imagen -->
   <div class="content">
@@ -27,22 +25,16 @@ const { currentLang = getLocale() } = Astro.props;
         {currentLang === 'es' ? 'Entérate de nuestras últimas novedades en experiencias, sabores y más.' : 'Stay updated on our latest news in experiences, flavors, and more.'}
       </p>
 
-      <form class="form" id="newsletterForm">
-        <input
-          type="email"
-          class="email-input"
-          placeholder="Correo electrónico"
-          required
-          aria-label="Correo electrónico"
-        />
-        <button type="submit" class="submit-button">
+        <a 
+          href="https://www.snacksyummies.com/es/yummiesone" 
+          class="submit-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {currentLang === 'es' ? 'Suscríbeme' : 'Subscribe'}
-        </button>
-      </form>
+        </a>
 
-      <div class="success-message" id="successMessage">
-        {currentLang === 'es' ? '¡Gracias por suscribirte!' : 'Thank you for subscribing!'}
-      </div>
+     
     </div>
   </div>
 
@@ -59,17 +51,9 @@ const { currentLang = getLocale() } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  /* Imagen de fondo */
-  .waves {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
   }
 
   /* Contenido por encima de la imagen */
@@ -227,24 +211,3 @@ const { currentLang = getLocale() } = Astro.props;
     }
   }
 </style>
-
-<script>
-  const form = document.getElementById('newsletterForm');
-  const successMessage = document.getElementById('successMessage');
-  const emailInput = form.querySelector('input[type="email"]');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    if (emailInput.value) {
-      // Mostrar mensaje de éxito
-      successMessage.classList.add('show');
-      emailInput.value = '';
-
-      // Ocultar mensaje después de 3 segundos
-      setTimeout(() => {
-        successMessage.classList.remove('show');
-      }, 3000);
-    }
-  });
-</script>

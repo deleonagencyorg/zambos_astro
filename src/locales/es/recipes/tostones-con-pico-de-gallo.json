@@ -1,0 +1,28 @@
+{
+  "date": "2025-09-11",
+  "id": "tostones-con-pico-de-gallo",
+  "slug": "tostones-con-pico-de-gallo",
+  "title": "Tostones con pico de gallo",
+  "people": "4",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/tostones-con-pico-de-gallo.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/tostones-con-pico-de-gallo.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 15,
+  "ingredients": [
+    "2 tazas de tomate picado",
+    "1 taza de cebolla morada picada",
+    "1 taza de culantro picado",
+    "1 taza de vinagre",
+    "Salpimentar al gusto",
+    "1 bolsa de TOSTONES de YUMMIES"
+  ],
+  "instructions": [
+    "Paso 1: En un tazón mezclamos el tomate, la cebolla, el cilantro, el vinagre, la sal y la pimienta.",
+    "Paso 2: Revolvemos bien todos los ingredientes y después mantenemos refrigerado para poder servir con los tostones."
+  ],
+  "brand": ["zambos"]
+}

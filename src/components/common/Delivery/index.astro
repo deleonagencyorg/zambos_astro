@@ -11,9 +11,13 @@ export interface Props {
     app_url: string;
     country: string;
   }>;
+  amazonBuyUrl?: string;
 }
 
-const { deliveryTitle, deliverySubTitle, deliveryApps } = Astro.props;
+const { deliveryTitle, deliverySubTitle, deliveryApps, amazonBuyUrl } = Astro.props;
+
+const langFromUrl = Astro.url.pathname.split('/')[1];
+const isEn = langFromUrl === 'en';
 ---
 
 <section id="delivery" class="w-full py-12 flex flex-col items-center justify-center relative overflow-hidden" style="background-color: #008ddd;">
@@ -40,6 +44,25 @@ const { deliveryTitle, deliverySubTitle, deliveryApps } = Astro.props;
       <h3 class="text-white font-title uppercase font-bold text-3xl md:text-6xl">
         {deliverySubTitle}
       </h3>
+
+      {isEn && amazonBuyUrl && (
+        <div class="mt-6 flex justify-center">
+          <a
+            href={amazonBuyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-red text-white font-bold px-8 py-4 rounded-full shadow-lg hover:opacity-90 transition"
+          >
+            <span class="text-lg">BUY</span>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+              alt="Amazon"
+              class="h-5 w-auto bg-white rounded px-2 py-1"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      )}
     </div>
 
     <!-- Contenedor para las apps de delivery -->

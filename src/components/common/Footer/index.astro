@@ -17,7 +17,7 @@ const facebookUrl = t('social_media.facebook.url', { namespace: 'common', locale
 const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: currentLang });
 ---
 
-<footer class="bg-[#009337] w-full">
+<footer class="bg-greenDark w-full ">
   <div class="container mx-auto px-6 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
     <!-- Logo -->
@@ -25,7 +25,7 @@ const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: cu
       <LazyImage
         src={logoSrc}
         alt="Zambos"
-        class="h-16 md:h-20 w-auto"
+        class="h-16 md:h-28 w-auto"
       />
     </a>
 
@@ -35,7 +35,7 @@ const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: cu
         {menuItems.map(item => (
           <a
             href={item.href}
-            class="text-white font-sans text-[18px] font-medium hover:opacity-80 transition"
+            class="text-white font-sans text-[20px] md:text-[22px] font-medium hover:opacity-80 transition"
           >
             {item.text}
           </a>
@@ -45,19 +45,19 @@ const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: cu
       <!-- Social -->
       <div class="flex items-center space-x-4">
         <a href={instagramUrl} target="_blank" aria-label="Instagram">
-          <svg class="w-5 h-5 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6 md:w-7 md:h-7 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
             <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
           </svg>
         </a>
   
         <a href={facebookUrl} target="_blank" aria-label="Facebook">
-          <svg class="w-5 h-5 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6 md:w-7 md:h-7 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
             <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H16l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
           </svg>
         </a>
   
         <a href={tiktokUrl} target="_blank" aria-label="TikTok">
-          <svg class="w-5 h-5 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6 md:w-7 md:h-7 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
             <path d="M21 8.3a6.7 6.7 0 0 1-4.3-1.5v8.6a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2.1 2.7V2h3.3A6.7 6.7 0 0 0 21 6.3v2z"/>
           </svg>
         </a>
@@ -66,40 +66,42 @@ const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: cu
 
   </div>
 
-  <div class="w-full bg-[#0167F7]">
-    <div class="container mx-auto px-6 py-6">
+  <div class="w-full bg-greenDark text-center flex items-center justify-center">
+    <div class="container mx-auto px-6 py-6 flex flex-col items-center justify-center">
       <h3 class="text-white text-center font-title font-bold text-xl md:text-2xl mb-6">DINANT - Contacto</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 text-white font-sans">
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🇬🇹</span>
-            <span class="font-semibold">(+502) 2502-7050</span>
+      <div class="flex justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 text-white font-sans">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🇬🇹</span>
+              <span class="font-semibold text-[18px] md:text-[20px]">(+502) 2502-7050</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🇩🇴</span>
+              <span class="font-semibold text-[18px] md:text-[20px]">(+001) 809-2731042</span>
+            </div>
           </div>
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🇩🇴</span>
-            <span class="font-semibold">(+001) 809-2731042</span>
-          </div>
-        </div>
 
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🇸🇻</span>
-            <span class="font-semibold">(+503) 2510-8300</span>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🇸🇻</span>
+              <span class="font-semibold text-[18px] md:text-[20px]">(+503) 2510-8300</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🇳🇮</span>
+              <span class="font-semibold text-[18px] md:text-[20px]">(+505) 2255-7480</span>
+            </div>
           </div>
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🇳🇮</span>
-            <span class="font-semibold">(+505) 2255-7480</span>
-          </div>
-        </div>
 
-        <div class="space-y-4">
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🇨🇷</span>
-            <span class="font-semibold">(+506) 2271-0665</span>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-lg">🇭🇳</span>
-            <span class="font-semibold">(+504) 2275-3370</span>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🇨🇷</span>
+              <span class="font-semibold text-[18px] md:text-[20px]">(+506) 2271-0665</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🇭🇳</span>
+              <span class="font-semibold text-[18px] md:text-[20px]">(+504) 2275-3370</span>
+            </div>
           </div>
         </div>
       </div>

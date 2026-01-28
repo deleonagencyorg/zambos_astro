@@ -1,0 +1,31 @@
+{
+  "date": "2025-09-11",
+  "id": "surimi-salad-with-zambos-tostones",
+  "slug": "surimi-salad-with-zambos-tostones",
+  "title": "Surimi Salad with Zambos Tostones",
+  "people": "3",
+  "difficulty": "Easy",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ensalada-de-surimi-con-zambos-tostones.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/ensalada-de-surimi-con-zambos-tostones.webp"
+  ],
+  "type": "image",
+  "category": "brunch",
+  "preparation_time": 15,
+  "ingredients": [
+    "1 package of surimi or imitation crab sticks",
+    "¼ cup of mayonnaise",
+    "1 teaspoon of Sriracha or hot sauce",
+    "½ teaspoon of fresh ginger",
+    "1 tablespoon of sesame oil",
+    "1 teaspoon of soy sauce",
+    "Plantain Chips"
+  ],
+  "instructions": [
+    "Step 1: Cut the surimi into small strips. Place it in a bowl.",
+    "Step 2: In another bowl, pour the mayonnaise, hot sauce, ginger, sesame oil, and soy sauce. Whisk until desired consistency is achieved.",
+    "Step 3: Mix the surimi strips with the sauce.",
+    "Step 4: Place the surimi strips with sauce on each plantain chip and enjoy the homemade-style flavor."
+  ],
+  "brand": ["zambos"]
+}

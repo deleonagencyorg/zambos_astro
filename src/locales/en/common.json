@@ -61,30 +61,75 @@
     "preferences": "Preferences"
   },
   "assets": {
-    "logo": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zibas-logo-3.webp",
+    "logo": "https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp",
     "hero": "/images/es/hero.jpg",
     "slidermask": "https://snack.yummiespromociones.com/snacksyummies/BGHeader_1_.webp",
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
       {
+        "id": "slide1",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_110_ZAMBOS-TAJIN_BANNER-WEB_INGLES.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_110_ZAMBOS-TAJIN_BANNER-WEB_INGLES.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/productos/zambos-tajin"
+      },
+      {
         "id": "slide2",
-        "desktop": "/images/es/slider1.png",
-        "mobile": "/images/es/slider1.png",
-        "alt": "Zambos",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_111_2_Banner_Web_Tostones_Jun.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_111_2_Banner_Web_Tostones_Jun.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/zambos-tostones-originales"
+      },
+      {
+        "id": "slide4",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_Banner1_zambos_en.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_Banner1_zambos_en.webp",
+        "alt": "Zambos USA",
         "title": "",
         "description": "",
         "link": "#"
       },
       {
-        "id": "slide1",
-        "desktop": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
-        "mobile": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
-        "alt": "Zambos",
+        "id": "slide5",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
+        "alt": "Zambos USA",
         "title": "",
         "description": "",
         "link": "#"
+      },
+      {
+        "id": "slide6",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/"
+      },
+      {
+        "id": "slide7",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_117_Banner4_zambos_en.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_117_Banner4_zambos_en.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/zambos-yuquitas-originales"
       }
-     
+      ,
+      {
+        "id": "slide8",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_zambos_chile_limon-.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_zambos_chile_limon-.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/zambos-chile-limon"
+      }
     ]
   },
   "menu_labels": {
@@ -165,32 +210,32 @@
       "instagramPosts": [
         {
           "id": "post1",
-          "postUrl": "https://www.instagram.com/reel/DTyFbg1ETV-/?igsh=ZXF0ZG44azY4dGVp",
-          "embedUrl": "https://www.instagram.com/reel/DTyFbg1ETV-/embed",
+          "postUrl": "https://www.instagram.com/reel/DT-tbxilM0f/?igsh=MXJxbXRhZWNlN3U4bA==",
+          "embedUrl": "https://www.instagram.com/reel/DT-tbxilM0f/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-1.jpg",
           "fallbackImage": "/images/instagram-fallback-1.jpg",
           "alt": "Yummi Nuts Instagram Post 1"
         },
         {
           "id": "post2",
-          "postUrl": "https://www.instagram.com/reel/DTgz67QCT8M/?igsh=dDBqNGxoaDdya2ht",
-          "embedUrl": "https://www.instagram.com/reel/DTgz67QCT8M/embed",
+          "postUrl": "https://www.instagram.com/p/DT3hRbEgfZ9/?igsh=MW1lMnYzbHpvOGsxYw==",
+          "embedUrl": "https://www.instagram.com/p/DT3hRbEgfZ9/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-2.jpg",
           "fallbackImage": "/images/instagram-fallback-2.jpg",
           "alt": "Yummi Nuts Instagram Post 2"
         },
         {
           "id": "post3",
-          "postUrl": "https://www.instagram.com/reel/DTbD-fKEcGU/?igsh=MXJseGNwZzR0YXN2cg",
-          "embedUrl": "https://www.instagram.com/reel/DTbD-fKEcGU/embed",
+          "postUrl": "https://www.instagram.com/reel/DTwB6rWiXyO/?igsh=cGM1Yjl5NGUxd2hl",
+          "embedUrl": "https://www.instagram.com/reel/DTwB6rWiXyO/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-3.jpg",
           "fallbackImage": "/images/instagram-fallback-3.jpg",
           "alt": "Yummi Nuts Instagram Post 3"
         },
         {
           "id": "post4",
-          "postUrl": "https://www.instagram.com/reel/DR-IwH6CXvK/?igsh=MWQ5YTFqYXlkeXRnOA",
-          "embedUrl": "https://www.instagram.com/reel/DR-IwH6CXvK/embed",
+          "postUrl": "https://www.instagram.com/p/DTtAXcRgV5y/?igsh=MTFpenNmZGJvejI5bw==",
+          "embedUrl": "https://www.instagram.com/p/DTtAXcRgV5y/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-4.jpg",
           "fallbackImage": "/images/instagram-fallback-4.jpg",
           "alt": "Yummi Nuts Instagram Post 4"
@@ -226,5 +271,37 @@
   },
   "subscribe": {
     "success": "Thank you for subscribing!"
+  },
+  "videos": {
+    "items": [
+           {
+        "title": "Zambos Preparados",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4"
+      },
+            {
+        "title": "¡Unos ZAMBOS con CHOCOLATE!",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be"
+      },
+            {
+        "title": "¡Disfrutá de este platillo tradicional de una forma diferente!",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be"
+      },
+            {
+        "title": "Deliciosa receta con Zambos Ceviche 🍤",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be"
+      },
+            {
+        "title": "Zambos Costeños",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=DEDSda5mneA"
+      }
+    ]
+  },
+  "delivery": {
+    "amazon_buy_url": "https://www.amazon.com/stores/Zambos/Homepage/page/AB6B3C05-CBE2-49FD-8A2C-E5A7B1F57E2D?utm_source=Publicidad+Movil&utm_medium=Amazon&utm_campaign=Zambos&utm_term=Standard+Botton"
   }
 }

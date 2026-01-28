@@ -8,12 +8,24 @@ import ProductsCarousel from '../../../components/common/ProductsCarousel/index.
 import LazyImage from '../../../components/common/LazyImage.astro';
 import Subscription from '../../../components/subscription/index.astro';
 import ExperiencesCarousel from '../../../components/common/Experiences/index.astro';
+import RecipeCard from '../../../components/recipes/RecipeCard.astro';
 
 
 // Interfaces locales
 interface ProductSize {
   value: string;
   image: string;
+}
+
+interface Recipe {
+  id: string;
+  title: string;
+  image?: string;
+  preparation_time: number;
+  type?: string;
+  category?: string;
+  isNew?: boolean;
+  description?: string;
 }
 
 interface Stockist {
@@ -35,6 +47,7 @@ interface Product {
   sizes: ProductSize[];
   description?: string;
   short_description?: string;
+  nutrition?: any;
   presentaciones?: Array<{
     value: string;
     icono: string;
@@ -54,9 +67,36 @@ const product = products.find((item: Product) => item.id === productId);
 const brandsAssets = t('', { namespace: 'brands', locale: currentLang }) || {};
 const newsAssets =  t('', { namespace: 'news', locale: currentLang }) || {};
 const brandsList = brandsAssets.brands || [];
-const zibasBrand = brandsList.find((brand: any) => brand.id === 'zibas');
-const zibasProducts = (zibasBrand?.products || []).filter((product: any) => product.id !== productId);
+const zambosBrand = brandsList.find((brand: any) => brand.id === 'Zambos');
+const zambosProducts = (zambosBrand?.products || []).filter((product: any) => product.id !== productId);
 const experiences = t('experiences', { namespace: 'experiences', locale: currentLang }) || [];
+
+// Recetas (mismo origen que src/views/Recipes)
+const recipeModules = import.meta.glob<{ default: Recipe }>("../../../locales/*/recipes/*.json");
+const recommendedRecipes: Recipe[] = [];
+for (const path in recipeModules) {
+  const parts = path.split('/');
+  const localesIdx = parts.lastIndexOf('locales');
+  const lang = localesIdx >= 0 ? parts[localesIdx + 1] : '';
+  if (lang === currentLang) {
+    const mod = await recipeModules[path]();
+    recommendedRecipes.push(mod.default);
+  }
+}
+
+// Limitar cantidad para el carrusel
+const recommendedRecipesSlice = recommendedRecipes.slice(0, 8);
+
+// Normaliza categoría (mismo criterio que Recipes view)
+function normalizeRecipeType(r: Recipe): string {
+  const rawCategory = String((r as any).category || '').toLowerCase().trim();
+  const rawType = String((r as any).type || '').toLowerCase().trim();
+  const raw = rawCategory || rawType;
+  if (['breakfast', 'desayuno'].includes(raw)) return 'BREAKFAST';
+  if (['brunch'].includes(raw)) return 'BRUNCH';
+  if (['lunch', 'almuerzo'].includes(raw)) return 'LUNCH';
+  return (raw || 'OTHER').toUpperCase();
+}
 
 // Si el producto no existe, lanzar error
 if (!product || Object.keys(product).length === 0) {
@@ -75,9 +115,25 @@ const safeProduct: Product = {
   sizes: Array.isArray(product.sizes) ? product.sizes : [],
   available: product.available || '',
   description: product.description || '',
+  nutrition: (product as any).nutrition,
   weight: Array.isArray(product.weight) ? product.weight : [],
   
 };
+
+function hasNutrition(nutrition: any): boolean {
+  if (nutrition === undefined || nutrition === null) return false;
+  if (typeof nutrition === 'string') return nutrition.trim().length > 0;
+  if (Array.isArray(nutrition)) return nutrition.length > 0;
+  if (typeof nutrition === 'object') return Object.keys(nutrition).length > 0;
+  return false;
+}
+
+const nutritionData = safeProduct.nutrition;
+const nutritionIsString = typeof nutritionData === 'string';
+const nutritionIsArray = Array.isArray(nutritionData);
+const nutritionIsObject =
+  !!nutritionData && typeof nutritionData === 'object' && !Array.isArray(nutritionData);
+const nutritionEntries = nutritionIsObject ? Object.entries(nutritionData) : [];
 
 // Obtener todos los productos como un array
 const productsData = t('items', { locale: currentLang, namespace: 'products' }) || [];
@@ -158,7 +214,7 @@ if (allProductsArray.length > 1) {
               style={{ color: '#FFF' }}
             >
               <span class="text-3xl font-semibold">
-                {currentLang === 'es' ? 'Descripcion' : 'Description'}
+                {currentLang === 'es' ? 'Descripción' : 'Description'}
               </span>
               <span class="accordion-icon text-4xl font-light transition-transform duration-300">+</span>
             </button>
@@ -173,26 +229,45 @@ if (allProductsArray.length > 1) {
           </div>
 
           <!-- Sección Datos Nutricionales (Acordeón) -->
-          <div class="border-t border-b py-4" style={{ borderColor: `${safeProduct.header_text_color}40` }}>
-            <button 
-              class="accordion-trigger w-full flex justify-between items-center text-left"
-              data-accordion="nutrition"
-            >
-              <span class="text-3xl font-semibold text-white">
-                {currentLang === 'es' ? 'Datos nutricionales' : 'Nutritional information'}
-              </span>
-              <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-white">+</span>
-            </button>
-            <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="nutrition">
-              <div 
-                class="pt-4 text-base leading-relaxed"
-                style={{ color: '#FFF' }}
+          {hasNutrition(safeProduct.nutrition) && (
+            <div class="border-t border-b py-4" style={{ borderColor: `${safeProduct.header_text_color}40` }}>
+              <button 
+                class="accordion-trigger w-full flex justify-between items-center text-left"
+                data-accordion="nutrition"
               >
-                <!-- Aquí puedes agregar los datos nutricionales -->
-                <p>{currentLang === 'es' ? 'Información nutricional del producto.' : 'Product nutritional information.'}</p>
+                <span class="text-3xl font-semibold text-white">
+                  {currentLang === 'es' ? 'Datos nutricionales' : 'Nutritional information'}
+                </span>
+                <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-white">+</span>
+              </button>
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="nutrition">
+                <div 
+                  class="pt-4 text-base leading-relaxed text-white"
+                >
+                  {nutritionIsString && <p>{nutritionData}</p>}
+
+                  {nutritionIsArray && (
+                    <div class="space-y-2">
+                      {(nutritionData as any[]).map((row: any) => (
+                        <p>{typeof row === 'string' ? row : JSON.stringify(row)}</p>
+                      ))}
+                    </div>
+                  )}
+
+                  {nutritionEntries.length > 0 && (
+                    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                      {nutritionEntries.map(([key, value]) => (
+                        <div>
+                          <dt class="font-semibold">{key}</dt>
+                          <dd class="opacity-90">{String(value)}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
 
         <!-- Imagen del producto (lado derecho) -->
@@ -210,7 +285,7 @@ if (allProductsArray.length > 1) {
       </div>
     </div>
 
-    <section>
+    <section id="product-detail-experiences" data-country-target class="hidden">
       <ExperiencesCarousel 
         experiences={experiences}
         mainTitleColor='#FFF'
@@ -221,6 +296,60 @@ if (allProductsArray.length > 1) {
       />
     </section>
 
+    <section id="product-detail-recipes" data-country-target class="hidden bg-red w-full py-16">
+      <div class="container mx-auto px-6 md:px-12">
+        <h2 class="text-white titles text-2xl md:text-4xl mb-8 text-center">
+          {currentLang === 'es' ? 'Recetas Recomendadas' : 'Recommended Recipes'}
+        </h2>
+
+        {recommendedRecipesSlice.length ? (
+          <div class="relative" data-recommended-recipes-carousel>
+            <div class="overflow-hidden">
+              <div class="flex transition-transform duration-300" data-rr-track>
+                {recommendedRecipesSlice.map((recipe: Recipe) => (
+                  <div class="w-full md:w-1/2 flex-shrink-0 px-3">
+                    <RecipeCard
+                      image={recipe.image || '/images/recipes/placeholder.jpg'}
+                      title={recipe.title}
+                      time={`${recipe.preparation_time}MIN`}
+                      id={recipe.id}
+                      description={(recipe as any).description}
+                      category={normalizeRecipeType(recipe)}
+                      isNew={(recipe as any).isNew || false}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div class="flex justify-center items-center gap-4 mt-8">
+              <button class="bg-white text-brown p-2 rounded-full shadow-lg" aria-label="Anterior" data-rr-prev>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <div class="flex gap-2" data-rr-dots></div>
+
+              <button class="bg-white text-brown p-2 rounded-full shadow-lg" aria-label="Siguiente" data-rr-next>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div class="w-full flex justify-center">
+            <p class="text-white/90 text-center font-semibold">
+              {currentLang === 'es'
+                ? 'No hay recetas disponibles en este momento.'
+                : 'No recipes available at the moment.'}
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
+
     <section class="w-full">
       <Subscription />
     </section>
@@ -228,8 +357,8 @@ if (allProductsArray.length > 1) {
 )}
 
 <!-- Sección de Productos Relacionados -->
-{products.length > 0 && (
-  <section class="w-full py-16 bg-blue">
+<!-- {products.length > 0 && (
+  <section class="w-full py-16 bg-green">
     <div class="container mx-auto px-4">
       {brandsAssets.home?.title && (
         <div class="text-center mb-8 relative z-20">
@@ -255,7 +384,8 @@ if (allProductsArray.length > 1) {
       />
     </div>
   </section>
-)}
+  
+)} -->
 
 <script>
   import { initProductDetail } from './scripts.js';
@@ -300,6 +430,122 @@ if (allProductsArray.length > 1) {
       });
     });
   });
+</script>
+
+<script type="module">
+  async function applyCountryBlocks() {
+    const experiences = document.getElementById('product-detail-experiences');
+    const recipes = document.getElementById('product-detail-recipes');
+
+    if (!experiences || !recipes) return;
+
+    try {
+      const response = await fetch('/api/geo-headers', { cache: 'no-store' });
+      const geo = response.ok ? await response.json() : null;
+      const isHonduras = geo?.country === 'HN';
+
+      experiences.classList.toggle('hidden', !isHonduras);
+      recipes.classList.toggle('hidden', isHonduras);
+    } catch (e) {
+      experiences.classList.add('hidden');
+      recipes.classList.remove('hidden');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyCountryBlocks);
+  } else {
+    applyCountryBlocks();
+  }
+  document.addEventListener('astro:page-load', applyCountryBlocks);
+  document.addEventListener('astro:after-swap', applyCountryBlocks);
+</script>
+
+<script>
+  function initRecommendedRecipesCarousel() {
+    const root = document.querySelector('[data-recommended-recipes-carousel]');
+    if (!(root instanceof HTMLElement)) return;
+    if (root.dataset.rrInitialized === 'true') return;
+    root.dataset.rrInitialized = 'true';
+
+    const trackEl = root.querySelector('[data-rr-track]');
+    const prevBtnEl = root.querySelector('[data-rr-prev]');
+    const nextBtnEl = root.querySelector('[data-rr-next]');
+    const dotsEl = root.querySelector('[data-rr-dots]');
+    if (!(trackEl instanceof HTMLElement)) return;
+    if (!(prevBtnEl instanceof HTMLElement)) return;
+    if (!(nextBtnEl instanceof HTMLElement)) return;
+    if (!(dotsEl instanceof HTMLElement)) return;
+
+    const track = trackEl as HTMLElement;
+    const prevBtn = prevBtnEl as HTMLElement;
+    const nextBtn = nextBtnEl as HTMLElement;
+    const dots = dotsEl as HTMLElement;
+
+    const items = Array.from(track.children);
+    if (!items.length) return;
+
+    let index = 0;
+
+    function perView() {
+      return window.matchMedia('(min-width: 768px)').matches ? 2 : 1;
+    }
+
+    function maxIndex() {
+      return Math.max(0, Math.ceil(items.length / perView()) - 1);
+    }
+
+    function renderDots() {
+      dots.innerHTML = '';
+      const total = maxIndex() + 1;
+      for (let i = 0; i < total; i++) {
+        const b = document.createElement('button');
+        b.className = `w-3 h-3 rounded-full transition-all ${i === index ? 'bg-white w-8' : 'bg-white/50'}`;
+        b.addEventListener('click', () => {
+          index = i;
+          update();
+        });
+        dots.appendChild(b);
+      }
+    }
+
+    function update() {
+      const pct = index * 100;
+      track.style.transform = `translateX(-${pct}%)`;
+      renderDots();
+      prevBtn.classList.toggle('opacity-50', index === 0);
+      nextBtn.classList.toggle('opacity-50', index >= maxIndex());
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (index > 0) {
+        index--;
+        update();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (index < maxIndex()) {
+        index++;
+        update();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      index = Math.min(index, maxIndex());
+      update();
+    });
+
+    update();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRecommendedRecipesCarousel);
+  } else {
+    initRecommendedRecipesCarousel();
+  }
+  document.addEventListener('astro:page-load', initRecommendedRecipesCarousel);
+  document.addEventListener('astro:after-swap', initRecommendedRecipesCarousel);
 </script>
 
 <style>

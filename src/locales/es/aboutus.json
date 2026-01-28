@@ -4,34 +4,33 @@
   "intro": "Descubre cómo Snacks Yummies se convirtió en la marca líder de snacks en Centroamérica, desde nuestros humildes inicios hasta la actualidad.",
   "items": [
     {
-      "year": "1973",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/1973.webp",
-      "text": "Con una freidora industrial tipo chip cooker, con capacidad de 175 libras de producto frito y una rebanadora de plátano, Dinant produce sus primeros chips de plátano que se cortaban en rodajas como barras largas y rectangulares."
+
+      "title": "Antecedentes",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/historiazambos.png",
+      "text": "Es una marca con más de 40 años en el mercado. Posicionada como una línea de productos de la más alta calidad. Generaciones de consumidores han crecido con Zambos y la han convertido en una marca Hondureña e icónica de los centroamericanos y nostálgica en el mundo."
     },
     {
-      "year": "1979",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/1979.webp",
+      "year": "1973",
+      "title": "¿Dónde y cuándo se produjo Zambos por primera vez?",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/historiazambos2.png",
       "text": "Yummies, que inicio operaciones con 10 empleados, fue fundada en San Pedro Sula en 1976 con el objetivo de abastecer el mercado hondureño con bocadillos variados y de alta calidad."
     },
     {
-      "year": "1980",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/1980.webp",
-      "text": "La producción de Snacks salados comenzó con la elaboración de los Churritos, Corn Chips, Popcorn Acaramelado y Caramelo Leche de Burra bajo la marca Yummies con una parte de maquinaria alquilada y por medio de procesos bastante artesanales."
+
+      "title":"Inicios de Zambos",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/historiazambos3.png",
+      "text": "Dinant comenzó a producir sus primeros chips de plátano a partir de materia prima local, se pelaron en la planta de producción y se cortaron en rodajas, como palos largos y rectangulares. Luego se creó la marca “Sambos“ con una “S“, que comenzó a producir plátano redondo para diferenciarse de la familia de Yummies y luego cambiar a la marca Zambos con “Z“.Es aquí donde se empiezan a seleccionar las variedades de plátanos que mejor resistencia y rendimiento tenían."
     },
     {
-      "year": "2013",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/2013.webp",
-      "text": "Nace un ícono. Lanzamos Taqueritos, un snack que rápidamente conquistó el paladar de miles. Desde su llegada, se ha convertido en una marca icónica que une generaciones y ha puesto el sabor único de Yummies en lo más alto de toda la región."
+      "title":"Materia Prima",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/historiazambos3.png",
+      "text": "El plátano utilizado en la elaboración de Zambos es creado de un injerto de dos plantas. Adaptado y desarrollado a través de más de 30 años para plantarse y crecer en los microclimas en las plantaciones que Dinant tiene ubicadas en Nicaragua (Nandaime) y en la parte norte de Honduras. Esta variedad de plátano es la única que usamos para Zambos."
     },
     {
-      "year": "2020",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/2020.webp",
-      "text": "En el transcurso de estos años, siempre bajo la marca Yummies se ha evolucionado en la creación y consolidación de marcas líderes como Ranchitas, Zambos, Ziba’s, Taqueritos, Del Rancho y Cappy, para lo cual se cuenta con maquinaria y equipo de alta tecnología, procesos estandarizados, certificaciones internacionales y una amplia red de distribución."
-    },
-    {
-      "year": "2025",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/2025.webp",
-      "text": "Comienza un nuevo capítulo. Renovamos nuestra imagen para reflejar la evolución de Yummies y nuestra pasión por innovar. Nueva imagen, misma pasión por el sabor. Una identidad que celebra nuestra historia y mira al futuro con energía y cercanía, manteniendo el compromiso de siempre con la calidad que nos distingue."
+      "year": "2023",
+      "title":"Nace Zambos Truck",
+      "image": "/images/es/experiences/zambos-truck.png",
+      "text": "En junio arrancamos con un sueno sobre ruedas: el proyecto Zambos Truck. Comenzamos recorriendo ciudades y participando en eventos privados, llevando nuestros sabores a donde estuvieran los fans. Lo que empezo como una idea movil se convirtio rapidamente en una experiencia que todos querían tener en sus celebraciones."
     }
   ],
   "conclusion": "Nuestra historia es un testimonio de innovación, calidad y compromiso con nuestros consumidores. En Snacks Yummies seguimos trabajando cada día para llevar los mejores productos a tu mesa, manteniendo siempre el sabor auténtico que nos caracteriza."

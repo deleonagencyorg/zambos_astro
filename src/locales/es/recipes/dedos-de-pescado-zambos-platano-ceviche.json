@@ -1,0 +1,33 @@
+{
+  "date": "2025-09-11",
+  "id": "dedos-de-pescado-zambos-platano-ceviche",
+  "slug": "dedos-de-pescado-zambos-platano-ceviche",
+  "title": "Dedos de pescado con Zambos plátano ceviche",
+  "people": "5",
+  "difficulty": "Media",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/dedos-de-pescado-zambos-platano-ceviche.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/dedos-de-pescado-zambos-platano-ceviche.webp"
+  ],
+  "type": "image",
+  "category": "brunch",
+  "preparation_time": 30,
+  "ingredients": [
+    "2 libras de filete de pescado cocido",
+    "½ cebolla picada",
+    "½ taza de culantro picado",
+    "3 cucharadas de jugo de limón",
+    "Salpimienta al gusto",
+    "1 taza de harina",
+    "2 huevos batidos",
+    "2 tazas de Zambos Plátano Ceviche triturados finamente",
+    "Aceite para freír"
+  ],
+  "instructions": [
+    "Paso 1: En un procesador de alimentos colocamos el pescado cocido previamente",
+    "Paso 2: Las cebollas, cilantro, jugo de limón, sal y pimienta. Dejamos procesar hasta tener una pasta.",
+    "Paso 3: Formar los dedos y pasar por la harina, huevo y miga triturada de Zambos. Luego freír y servir.",
+    "Paso 4: Puedes acompañar con una salsa tártara o disfrutar con una tortilla y limón."
+  ],
+  "brand": ["zambos"]
+}
