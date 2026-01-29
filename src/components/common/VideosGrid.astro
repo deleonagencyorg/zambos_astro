@@ -54,7 +54,7 @@ function getYouTubeThumbnail(url: string): string | null {
         href={video.url}
         target="_blank"
         rel="noopener noreferrer"
-        class="h-full rounded-3xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] flex flex-col"
+        class="h-full rounded-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] flex flex-col"
       >
         <div class="relative w-full overflow-hidden" style="aspect-ratio: 16 / 9;">
           <LazyImage
@@ -71,17 +71,10 @@ function getYouTubeThumbnail(url: string): string | null {
             </div>
           </div>
         </div>
-        <div class="bg-[#FFED7A] p-6 flex flex-col flex-1">
-          <h3 class="text-gray-900 font-bold text-xl md:text-2xl mb-2 uppercase">
+        <div class="bg-[#FFED7A] py-4 md:p-6  flex flex-col flex-1 items-center justify-center text-center">
+          <h3 class="w-full text-center text-greenDark font-bold text-md md:text-2xl mb-2 uppercase">
             {video.title}
           </h3>
-          {video.description && (
-            <div class="flex-1 flex items-center">
-              <p class="text-gray-900 text-sm leading-tight">
-                {video.description}
-              </p>
-            </div>
-          )}
         </div>
       </a>
     );

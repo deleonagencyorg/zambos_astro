@@ -28,9 +28,9 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
 
 <a 
   href={recipeLink} 
-  class="block group"
+  class="block group h-full"
 >
-  <div class="overflow-hidden rounded-3xl transition-transform duration-300 hover:scale-[1.02]">
+  <div class="overflow-hidden rounded-3xl transition-transform duration-300 hover:scale-[1.02] h-full flex flex-col">
     <!-- Imagen -->
     <div class="relative h-[200px] md:h-[250px] overflow-hidden">
       <LazyImage
@@ -41,7 +41,7 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
     </div>
     
     <!-- Sección amarilla separada -->
-    <div class="bg-[#FFED7A] p-6">
+    <div class="bg-[#FFED7A] p-6 flex flex-col flex-1">
       <!-- Category Tags -->
       <div class="flex gap-2 mb-3">
         <span class="inline-block px-4 py-2 bg-[#0DB04A] text-white font-bold rounded-full text-xs uppercase">
@@ -61,7 +61,7 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
       </h3>
       
       <!-- Description -->
-      <p class="text-gray-900 text-sm leading-tight">
+      <p class="text-gray-900 text-sm leading-tight flex-1">
         {description || (currentLocale === 'es' ? 'Deliciosa receta cargada de sabor perfecta para compartir en familia.' : 'Delicious recipe full of flavor perfect for sharing with family.')}
       </p>
     </div>

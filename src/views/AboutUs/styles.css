@@ -101,79 +101,62 @@
   align-items: center;
 }
 
-/* Estilos para el efecto interactivo de scroll */
-.timeline-item.active .timeline-year {
-  color: #0A3D7E !important; /* primary color */
-  transform: scale(1.1);
+.timeline-point {
+  width: 16px;
+  height: 16px;
 }
 
-.timeline-item.active .timeline-text {
-  color: #0A3D7E !important; /* primary color */
-  transform: scale(1.05);
+@media (min-width: 640px) {
+  .timeline-point {
+    width: 18px;
+    height: 18px;
+  }
 }
 
-.timeline-item.active .timeline-image {
-  transform: rotate(2deg) scale(1);
-  opacity: 1.0; /* 100% opacidad cuando está activo */
+@media (min-width: 768px) {
+  .timeline-point {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-/* Solo cambio de color del gradiente para la línea */
-.timeline-item.active #line {
-  background: linear-gradient(to bottom, #FAF1E9, #0A3D7E, #FAF1E9) !important;
+.timeline-point.active {
+  width: 22px;
+  height: 22px;
+  background-color: var(--quinary-color, #009337);
 }
 
-/* Opacidad por defecto de la imagen */
-.timeline-image {
-  opacity: 0.5; /* 80% opacidad por defecto */
+@media (min-width: 640px) {
+  .timeline-point.active {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-/* Transiciones suaves para todos los elementos */
-.timeline-year,
-.timeline-text,
-.timeline-image {
-  transition: all 0.4s ease-in-out;
+@media (min-width: 768px) {
+  .timeline-point.active {
+    width: 28px;
+    height: 28px;
+  }
 }
 
-
-/* Cambio de color del SVG cuando esté activo */
-.timeline-item.active .timeline-svg path {
-  fill: #D23627 !important; /* primary color cuando activo */
+.timeline-point-btn:hover .timeline-point {
+  width: 22px;
+  height: 22px;
 }
 
-/* Color por defecto del SVG */
-.timeline-svg path {
-  fill: #91CAE9; /* brown color por defecto */
-  transition: fill 0.4s ease-in-out;
+@media (min-width: 640px) {
+  .timeline-point-btn:hover .timeline-point {
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.timeline-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background-color: #0073C1; /* Color cuaternary */
-  height: 100%;
-  min-height: 0;
-}
-
-.timeline-icon {
-  position: relative;
-  background-color: white;
-  border: 2px solid var(--color-primary);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  margin-top: 10px;
-}
-
-.timeline-icon svg {
-  color: var(--color-primary);
-  width: 24px;
-  height: 24px;
+@media (min-width: 768px) {
+  .timeline-point-btn:hover .timeline-point {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 /* Columna derecha - Contenido */

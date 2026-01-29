@@ -62,13 +62,14 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
     {products.length === 0 ? (
       <p class="text-center text-white text-lg">{currentLang === 'es' ? 'No hay productos disponibles' : 'No products available'}</p>
     ) : (
-      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto" id="products-grid">
-        {products.map((product: any) => (
-          <div 
-            class="product-card bg-[#FFF176] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative" 
-            data-category={product.category} 
-            transition:animate="fade"
-          >
+      <>
+        <div class="grid max-[319px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto" id="products-grid">
+          {products.map((product: any) => (
+            <div 
+              class="product-card bg-[#FFF176] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative" 
+              data-category={product.category} 
+              transition:animate="fade"
+            >
             <!-- Badge de categoría -->
             <div class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 md:top-4 md:right-4 z-10">
               <span class="bg-[#E31E24] text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase tracking-wide">
@@ -117,9 +118,17 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
                 {pageAssets?.view_details || 'Ver detalles'}
               </a>
             </div>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
+        <button
+          id="products-load-more"
+          type="button"
+          class="mt-8 mx-auto block w-fit bg-[#FCD34D] text-[#008C44] font-bold uppercase tracking-wide px-8 py-3 rounded-full transition-opacity duration-300"
+        >
+          {currentLang === 'es' ? 'Cargar más' : 'Load more'}
+        </button>
+      </>
     )}
   </div>
   <section class="w-full">
@@ -232,6 +241,69 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
     // Filtro de categorías
     const filterButtons = document.querySelectorAll('.category-filter');
     const productCards = document.querySelectorAll('.product-card');
+    const loadMoreButton = document.getElementById('products-load-more') as HTMLButtonElement | null;
+
+    let currentCategory = 'all';
+    let visibleCount = 0;
+
+    function isMobile() {
+      return window.matchMedia('(max-width: 767px)').matches;
+    }
+
+    function isTablet() {
+      return window.matchMedia('(min-width: 768px) and (max-width: 1023px)').matches;
+    }
+
+    function getInitialCount() {
+      if (isMobile()) return 4;
+      if (isTablet()) return 3;
+      return 6;
+    }
+
+    function getPageSize() {
+      return 6;
+    }
+
+    function updateProductsVisibility(resetAnimation: boolean) {
+      const limit = visibleCount;
+      let visibleIndex = 0;
+      let shown = 0;
+      let totalMatching = 0;
+
+      productCards.forEach((cardEl) => {
+        const card = cardEl as HTMLElement;
+        const cardCategory = card.getAttribute('data-category');
+        const matches = currentCategory === 'all' || cardCategory === currentCategory;
+
+        if (matches) {
+          totalMatching++;
+
+          if (shown >= limit) {
+            card.style.display = 'none';
+            return;
+          }
+
+          card.style.display = 'block';
+          if (resetAnimation) {
+            card.style.animation = 'none';
+            card.offsetHeight;
+            card.style.animation = `fadeInUp 0.5s ease-out forwards`;
+          }
+          card.style.animationDelay = `${visibleIndex * 0.05}s`;
+          visibleIndex++;
+          shown++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (!loadMoreButton) return;
+      if (limit >= totalMatching) {
+        loadMoreButton.style.display = 'none';
+      } else {
+        loadMoreButton.style.display = 'block';
+      }
+    }
     
     filterButtons.forEach(button => {
       button.addEventListener('click', (e) => {
@@ -241,27 +313,26 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
         
-        const category = button.getAttribute('data-category') || 'all';
-        
-        // Filtrar productos con animación
-        let visibleIndex = 0;
-        productCards.forEach((cardEl) => {
-          const card = cardEl as HTMLElement;
-          const cardCategory = card.getAttribute('data-category');
-          
-          if (category === 'all' || cardCategory === category) {
-            card.style.display = 'block';
-            // Re-trigger animation
-            card.style.animation = 'none';
-            card.offsetHeight; // Trigger reflow
-            card.style.animation = `fadeInUp 0.5s ease-out forwards`;
-            card.style.animationDelay = `${visibleIndex * 0.05}s`;
-            visibleIndex++;
-          } else {
-            card.style.display = 'none';
-          }
-        });
+        currentCategory = button.getAttribute('data-category') || 'all';
+        visibleCount = getInitialCount();
+        updateProductsVisibility(true);
       });
     });
+
+    if (loadMoreButton) {
+      loadMoreButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        visibleCount += getPageSize();
+        updateProductsVisibility(false);
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      visibleCount = getInitialCount();
+      updateProductsVisibility(false);
+    });
+
+    visibleCount = getInitialCount();
+    updateProductsVisibility(false);
   });
 </script>
