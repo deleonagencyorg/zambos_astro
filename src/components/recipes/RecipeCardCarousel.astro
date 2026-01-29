@@ -40,22 +40,22 @@ const viewRecipeText = currentLocale === 'es' ? 'Ver Receta' : 'View Recipe';
 <a 
   href={recipeLink} 
   class={`block group relative transition-all duration-500 ease-in-out flex-shrink-0 ${
-    isMainCard ? 'w-[530px] h-[562px]' : 'w-[310px] h-[562px]'
+    isMainCard ? 'w-full h-[562px]' : 'w-full h-[562px]'
   }`}
   transition:animate="fade"
 >
   <!-- Container principal con las medidas específicas -->
-  <div class={`flex flex-col ${isMainCard ? 'w-[530px] h-[562px]' : 'w-[310px] h-[562px]'} relative`}>
+  <div class={`flex flex-col ${isMainCard ? 'w-full h-[562px]' : 'w-full h-[562px]'} relative`}>
     <!-- Overlay gris para tarjetas no principales: oculto en mobile para tener estado activo por defecto -->
     {!isMainCard && (
-      <div class="absolute inset-0 bg-[#0A0A0A40] z-10 rounded-[30px] hidden md:block"></div>
+      <div class="absolute inset-0 bg-[#0A0A0A40] z-10 rounded-[30px] hidden"></div>
     )}
     
     <!-- Imagen -->
     <div class={`relative overflow-hidden flex-shrink-0 ${
       isMainCard 
-        ? 'w-[530px] h-[300px] rounded-t-[30px] border-t border-r border-l border-[#388BFF]' 
-        : 'w-[310px] h-[300px] rounded-t-[30px] border-t border-r border-l border-black border-opacity-50'
+        ? 'w-full h-[300px] rounded-t-[30px] border-t border-r border-l border-[#388BFF]' 
+        : 'w-full h-[300px] rounded-t-[30px] border-t border-r border-l border-black border-opacity-50'
     }`}>
       <LazyImage
         src={image}
@@ -68,8 +68,8 @@ const viewRecipeText = currentLocale === 'es' ? 'Ver Receta' : 'View Recipe';
     <!-- Información -->
     <div class={`flex-shrink-0 ${
       isMainCard 
-        ? 'w-[530px] h-[262px] bg-[#F8E31F] rounded-b-[30px] border-r border-b border-l border-black border-opacity-50' 
-        : 'w-[310px] h-[262px] bg-[#F8E31F] rounded-b-[30px] border border-black border-opacity-50'
+        ? 'w-full h-[262px] bg-[#F8E31F] rounded-b-[30px] border-r border-b border-l border-black border-opacity-50' 
+        : 'w-full h-[262px] bg-[#F8E31F] rounded-b-[30px] border border-black border-opacity-50'
     } p-6 flex flex-col justify-between`}>
       <!-- Título -->
       <h3 class="font-title font-bold text-black leading-tight flex-1 flex items-center text-2xl">{title}</h3>

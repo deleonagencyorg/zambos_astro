@@ -43,18 +43,18 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
 <Layout title={title} class="bg-[#0DB04A]" description={metaDescription}>
 <div>
   <div class="mx-auto ">
-    <div class="">
+    <div class="mt-12">
       <!-- Timeline Container -->
       <div class="timeline-horizontal-container ">
         
         <!-- Content Card -->
-        <div class="timeline-content-wrapper relative md:mb-12 mb-[400px]">
+        <div class="timeline-content-wrapper relative md:mb-12 mb-24">
           {historyItems.map((item: { year?: string; title?: string; image: string; text: string }, index: number) => (
             <div 
               class={`timeline-slide ${index === 0 ? '' : 'hidden'}`}
               data-slide={index}
             >
-              <div class="flex flex-col md:flex-row gap-8 items-center pl-24 pr-24">
+              <div class="flex flex-col md:flex-row gap-8 items-center px-4 sm:px-8 md:px-12 lg:px-24">
                 
                 <div class="w-full md:w-[50%] max-w-[900px]">
                   {item.year && item.title ? (
@@ -79,14 +79,13 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
                   </p>
                 </div>
 
-                <div class="w-full md:w-[50%] flex justify-center md:justify-end pt-24">
+                <div class="w-full md:w-[50%] flex justify-center md:justify-end pt-8 md:pt-24">
                   <!-- Container amarillo -->
-                  <div class="bg-[#FFED7A] rounded-2xl shadow-lg p-8 flex items-center justify-center" style="width: 583px; height: 400px; opacity: 1;">
+                  <div class="bg-[#FFED7A] rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 flex items-center justify-center w-full max-w-[583px] aspect-[583/400]">
                     <LazyImage 
-                      class="rounded-2xl transform hover:scale-105 transition-transform duration-300 object-cover" 
+                      class="rounded-2xl transform hover:scale-105 transition-transform duration-300 object-cover w-full h-full max-w-[450px] max-h-[450px]" 
                       src={item.image} 
                       alt={item.title ?? item.year ?? 'about-us item'}
-                      style="width: 450px; height: 450px;"
                     />
                   </div>
                 </div>
@@ -96,14 +95,14 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
           ))}
 
             <div
-            class="absolute z-30 top-[470px] left-[100px]  hidden lg:block"
+            class="absolute z-30 bottom-[60px] left-4 sm:left-8 md:left-12 lg:left-[100px] hidden lg:block"
             >
-              <p class="text-white pb-2">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
+              <p class="text-white pb-2 text-sm md:text-base">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
               <div class="flex flex-row gap-5">
                 {socialMediaArray.map((social: any) => {
                   const platform = String(social?.name ?? '').toLowerCase();
                   return (
-                  <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-[15px] rounded-full flex items-center justify-center">
+                  <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-3 md:p-[15px] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                     {(platform.includes('insta')) && (
                       <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
@@ -126,14 +125,14 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
             </div>
 
             <div
-            class="absolute z-30 top-[470px] left-[100px]  hidden md:block lg:hidden"
+            class="absolute z-30 bottom-[60px] left-4 sm:left-8 md:left-12 hidden md:block lg:hidden"
             >
-              <p class="text-white pb-2">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
+              <p class="text-white pb-2 text-sm md:text-base">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
               <div class="flex flex-row gap-5">
                 {socialMediaArray.map((social: any) => {
                   const platform = String(social?.name ?? '').toLowerCase();
                   return (
-                  <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-[15px] rounded-full flex items-center justify-center">
+                  <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-3 md:p-[15px] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                     {(platform.includes('insta')) && (
                       <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
@@ -156,14 +155,14 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
             </div>
 
             <div
-            class="absolute z-30 top-[340px] left-[100px]  block md:hidden"
+            class="relative z-30 left-4 block md:hidden mt-12 mb-8"
             >
-              <p class="text-white pb-2">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
+              <p class="text-white pb-2 text-sm">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
               <div class="flex flex-row gap-5">
                 {socialMediaArray.map((social: any) => {
                   const platform = String(social?.name ?? '').toLowerCase();
                   return (
-                  <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-[15px] rounded-full flex items-center justify-center">
+                  <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-3 md:p-[15px] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
                     {(platform.includes('insta')) && (
                       <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
@@ -187,9 +186,9 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
         </div>
 
           <!-- Timeline Line with Points -->
-          <div class="timeline-line-wrapper relative mb-16 px-12 md:px-20 mx-auto max-w-[90%] md:max-w-[100%]">
+          <div class="timeline-line-wrapper relative -mt-[50px] md:mt-0 mb-10 px-4 sm:px-8 md:px-12 lg:px-20 mx-auto max-w-[90%] md:max-w-[100%]">
             <!-- Line - Ahora es blanca -->
-            <div class="absolute top-1/2 left-[80px] right-[59px] md:right-[80px] h-[4px] bg-white transform -translate-y-1/2"></div>
+            <div class="absolute top-1/2 left-[40px] sm:left-[60px] md:left-[80px] right-[40px] sm:right-[50px] md:right-[80px] h-[3px] md:h-[4px] bg-white transform -translate-y-1/2"></div>
             
             <!-- Points -->
             <div class="relative flex justify-between items-center">
@@ -208,30 +207,30 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
           </div>
 
         <!-- Navigation Arrows - Ahora son blancos -->
-        <div class="navigation-arrows flex justify-end gap-4 mt-4 mb-[40px] pr-[60px]">
+        <div class="navigation-arrows flex justify-end gap-3 md:gap-4 mt-4 mb-8 md:mb-[40px] pr-4 sm:pr-8 md:pr-12 lg:pr-[60px]">
           <button 
             id="prevBtn"
-            class="nav-arrow bg-white hover:bg-quinary text-black rounded-2xl w-12 h-12 transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            class="nav-arrow bg-white hover:bg-quinary text-black rounded-2xl w-10 h-10 md:w-12 md:h-12 transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Anterior"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
             </svg>
           </button>
           
           <button 
             id="nextBtn"
-            class="nav-arrow bg-white hover:bg-quinary text-black rounded-2xl w-12 h-12 transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+            class="nav-arrow bg-white hover:bg-quinary text-black rounded-2xl w-10 h-10 md:w-12 md:h-12 transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             aria-label="Siguiente"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
             </svg>
           </button>
         </div>
 
         <!-- Pagination Dots -->
-        <div class="hidden flex justify-center gap-3 mt-2">
+        <div class="hidden justify-center gap-3 mt-2">
           {historyItems.map((item: { year?: string; title?: string }, index: number) => (
             <button
               class={`pagination-dot w-3 h-3 rounded-full transition-all duration-300 ${index === 0 ? 'bg-primary w-8' : 'bg-quinary hover:bg-primary'}`}
@@ -259,17 +258,63 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
   }
   
   .timeline-point {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: 640px) {
+    .timeline-point {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .timeline-point {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   .timeline-point-btn:hover .timeline-point {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
+  }
+
+  @media (min-width: 640px) {
+    .timeline-point-btn:hover .timeline-point {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .timeline-point-btn:hover .timeline-point {
+      width: 28px;
+      height: 28px;
+    }
   }
 
   .timeline-content-wrapper {
-    min-height: 550px;
+    min-height: 400px;
+  }
+
+  @media (min-width: 640px) {
+    .timeline-content-wrapper {
+      min-height: 450px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .timeline-content-wrapper {
+      min-height: 500px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .timeline-content-wrapper {
+      min-height: 550px;
+    }
   }
 
   .timeline-slide {
@@ -287,9 +332,23 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
   }
 
   .timeline-point.active {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
     background-color: var(--quinary-color, #009337);
+  }
+
+  @media (min-width: 640px) {
+    .timeline-point.active {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .timeline-point.active {
+      width: 28px;
+      height: 28px;
+    }
   }
 </style>
 

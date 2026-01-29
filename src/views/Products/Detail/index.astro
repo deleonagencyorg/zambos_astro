@@ -8,8 +8,7 @@ import ProductsCarousel from '../../../components/common/ProductsCarousel/index.
 import LazyImage from '../../../components/common/LazyImage.astro';
 import Subscription from '../../../components/subscription/index.astro';
 import ExperiencesCarousel from '../../../components/common/Experiences/index.astro';
-import RecipeCard from '../../../components/recipes/RecipeCard.astro';
-
+import RecipesCarousel from '../../../components/recipes/RecipesCarousel.astro';
 
 // Interfaces locales
 interface ProductSize {
@@ -85,18 +84,9 @@ for (const path in recipeModules) {
 }
 
 // Limitar cantidad para el carrusel
-const recommendedRecipesSlice = recommendedRecipes.slice(0, 8);
-
-// Normaliza categoría (mismo criterio que Recipes view)
-function normalizeRecipeType(r: Recipe): string {
-  const rawCategory = String((r as any).category || '').toLowerCase().trim();
-  const rawType = String((r as any).type || '').toLowerCase().trim();
-  const raw = rawCategory || rawType;
-  if (['breakfast', 'desayuno'].includes(raw)) return 'BREAKFAST';
-  if (['brunch'].includes(raw)) return 'BRUNCH';
-  if (['lunch', 'almuerzo'].includes(raw)) return 'LUNCH';
-  return (raw || 'OTHER').toUpperCase();
-}
+const recommendedRecipesSlice = recommendedRecipes
+  .filter((r) => r && typeof r.id === 'string')
+  .slice(0, 8);
 
 // Si el producto no existe, lanzar error
 if (!product || Object.keys(product).length === 0) {
@@ -303,41 +293,7 @@ if (allProductsArray.length > 1) {
         </h2>
 
         {recommendedRecipesSlice.length ? (
-          <div class="relative" data-recommended-recipes-carousel>
-            <div class="overflow-hidden">
-              <div class="flex transition-transform duration-300" data-rr-track>
-                {recommendedRecipesSlice.map((recipe: Recipe) => (
-                  <div class="w-full md:w-1/2 flex-shrink-0 px-3">
-                    <RecipeCard
-                      image={recipe.image || '/images/recipes/placeholder.jpg'}
-                      title={recipe.title}
-                      time={`${recipe.preparation_time}MIN`}
-                      id={recipe.id}
-                      description={(recipe as any).description}
-                      category={normalizeRecipeType(recipe)}
-                      isNew={(recipe as any).isNew || false}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div class="flex justify-center items-center gap-4 mt-8">
-              <button class="bg-white text-brown p-2 rounded-full shadow-lg" aria-label="Anterior" data-rr-prev>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              <div class="flex gap-2" data-rr-dots></div>
-
-              <button class="bg-white text-brown p-2 rounded-full shadow-lg" aria-label="Siguiente" data-rr-next>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          <RecipesCarousel items={recommendedRecipesSlice} />
         ) : (
           <div class="w-full flex justify-center">
             <p class="text-white/90 text-center font-semibold">
@@ -356,36 +312,6 @@ if (allProductsArray.length > 1) {
   </article>
 )}
 
-<!-- Sección de Productos Relacionados -->
-<!-- {products.length > 0 && (
-  <section class="w-full py-16 bg-green">
-    <div class="container mx-auto px-4">
-      {brandsAssets.home?.title && (
-        <div class="text-center mb-8 relative z-20">
-          <h2 class="text-3xl md:text-4xl italic font-bold mb-4" style="color: white">
-            {brandsAssets.home?.title}
-          </h2>
-          {brandsAssets.home?.subtitle && (
-            <h1 class="text-6xl md:text-9xl italic font-bold mb-4" style="color: white">
-              {brandsAssets.home?.subtitle}
-            </h1>
-          )}
-        </div>
-      )}
-      <ProductsCarousel 
-        products={products}
-        color={'white'}
-        autoplay={true}
-        speed={4000}
-        slidesPerView={3}
-        spaceBetween={30}
-        loop={true}
-        className="max-w-7xl mx-auto"
-      />
-    </div>
-  </section>
-  
-)} -->
 
 <script>
   import { initProductDetail } from './scripts.js';
@@ -459,93 +385,6 @@ if (allProductsArray.length > 1) {
   }
   document.addEventListener('astro:page-load', applyCountryBlocks);
   document.addEventListener('astro:after-swap', applyCountryBlocks);
-</script>
-
-<script>
-  function initRecommendedRecipesCarousel() {
-    const root = document.querySelector('[data-recommended-recipes-carousel]');
-    if (!(root instanceof HTMLElement)) return;
-    if (root.dataset.rrInitialized === 'true') return;
-    root.dataset.rrInitialized = 'true';
-
-    const trackEl = root.querySelector('[data-rr-track]');
-    const prevBtnEl = root.querySelector('[data-rr-prev]');
-    const nextBtnEl = root.querySelector('[data-rr-next]');
-    const dotsEl = root.querySelector('[data-rr-dots]');
-    if (!(trackEl instanceof HTMLElement)) return;
-    if (!(prevBtnEl instanceof HTMLElement)) return;
-    if (!(nextBtnEl instanceof HTMLElement)) return;
-    if (!(dotsEl instanceof HTMLElement)) return;
-
-    const track = trackEl as HTMLElement;
-    const prevBtn = prevBtnEl as HTMLElement;
-    const nextBtn = nextBtnEl as HTMLElement;
-    const dots = dotsEl as HTMLElement;
-
-    const items = Array.from(track.children);
-    if (!items.length) return;
-
-    let index = 0;
-
-    function perView() {
-      return window.matchMedia('(min-width: 768px)').matches ? 2 : 1;
-    }
-
-    function maxIndex() {
-      return Math.max(0, Math.ceil(items.length / perView()) - 1);
-    }
-
-    function renderDots() {
-      dots.innerHTML = '';
-      const total = maxIndex() + 1;
-      for (let i = 0; i < total; i++) {
-        const b = document.createElement('button');
-        b.className = `w-3 h-3 rounded-full transition-all ${i === index ? 'bg-white w-8' : 'bg-white/50'}`;
-        b.addEventListener('click', () => {
-          index = i;
-          update();
-        });
-        dots.appendChild(b);
-      }
-    }
-
-    function update() {
-      const pct = index * 100;
-      track.style.transform = `translateX(-${pct}%)`;
-      renderDots();
-      prevBtn.classList.toggle('opacity-50', index === 0);
-      nextBtn.classList.toggle('opacity-50', index >= maxIndex());
-    }
-
-    prevBtn.addEventListener('click', () => {
-      if (index > 0) {
-        index--;
-        update();
-      }
-    });
-
-    nextBtn.addEventListener('click', () => {
-      if (index < maxIndex()) {
-        index++;
-        update();
-      }
-    });
-
-    window.addEventListener('resize', () => {
-      index = Math.min(index, maxIndex());
-      update();
-    });
-
-    update();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initRecommendedRecipesCarousel);
-  } else {
-    initRecommendedRecipesCarousel();
-  }
-  document.addEventListener('astro:page-load', initRecommendedRecipesCarousel);
-  document.addEventListener('astro:after-swap', initRecommendedRecipesCarousel);
 </script>
 
 <style>

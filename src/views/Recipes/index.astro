@@ -95,7 +95,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
       </div>
 
       <!-- Search and Filters -->
-      <div class="flex flex-col md:flex-row gap-4 mb-8">
+      <div class="flex flex-col lg:flex-row gap-4 mb-8">
         <!-- Search Bar -->
         <div class="flex-1">
           <RecipeSearch
@@ -105,38 +105,38 @@ const featuredRecipes = allRecipes.slice(0, 3);
         </div>
 
         <!-- Category Filters -->
-        <div id="recipeFilters" class="flex flex-wrap gap-3">
+        <div id="recipeFilters" class="flex flex-wrap gap-3 justify-center lg:justify-start">
           <button 
             type="button" 
-            class="filter-btn px-8 py-4 rounded-full bg-red text-white font-bold transition-all whitespace-nowrap" 
+            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-red text-white font-bold transition-all whitespace-nowrap" 
             data-filter="all"
           >
             {filterLabels.all}
           </button>
           <button 
             type="button" 
-            class="filter-btn px-8 py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
             data-filter="breakfast"
           >
             {filterLabels.breakfast}
           </button>
           <button 
             type="button" 
-            class="filter-btn px-8 py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
             data-filter="brunch"
           >
             {filterLabels.brunch}
           </button>
           <button 
             type="button" 
-            class="filter-btn px-8 py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
             data-filter="lunch"
           >
             {filterLabels.lunch}
           </button>
           <button 
             type="button" 
-            class="filter-btn px-8 py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
             data-filter="snack"
           >
             {filterLabels.snack}
@@ -162,7 +162,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
                   <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   
                   <!-- Recipe Info Overlay -->
-                  <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                  <div class="absolute bottom-0 left-0 p-8 md:p-12 pb-20 md:pb-12">
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
                       <span class="px-4 py-2 bg-[#0DB04A] text-white font-bold rounded-full text-sm">
@@ -185,17 +185,42 @@ const featuredRecipes = allRecipes.slice(0, 3);
                       {(recipe as any).description || `${currentLang === 'es' ? 'Deliciosa receta preparada con nuestros Zambos favoritos. Perfecta para compartir en familia.' : 'Delicious recipe prepared with our favorite Zambos. Perfect for sharing with family.'}`}
                     </p>
                   </div>
+
+                  <!-- Carousel Navigation - Desktop only (inside carousel) -->
+                  {featuredRecipes.length > 1 && (
+                    <div class="hidden md:flex absolute bottom-[40px] right-[10px] gap-4">
+                      <button 
+                        id="prevBtn-desktop"
+                        class="carousel-prev-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label="Anterior"
+                      >
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                      </button>
+                      
+                      <button 
+                        id="nextBtn-desktop"
+                        class="carousel-next-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label="Siguiente"
+                      >
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
           </div>
 
-          <!-- Carousel Navigation - Inside carousel, bottom right -->
+          <!-- Carousel Navigation - Mobile only (outside carousel) -->
           {featuredRecipes.length > 1 && (
-           <div class="absolute bottom-[0px] -right-[50px]  md:bottom-[40px] md:right-[10px] flex justify-end gap-4 mt-4 mb-[40px] pr-[60px]">
+            <div class="flex md:hidden justify-center gap-4 mt-6">
               <button 
-                id="prevBtn"
-                class="bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                id="prevBtn-mobile"
+                class="carousel-prev-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Anterior"
               >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,8 +229,8 @@ const featuredRecipes = allRecipes.slice(0, 3);
               </button>
               
               <button 
-                id="nextBtn"
-                class="bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                id="nextBtn-mobile"
+                class="carousel-next-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Siguiente"
               >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -240,7 +265,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
         <p class="text-center text-white">{noRecipesText}</p>
       ) : (
         <>
-          <div id="recipesGrid" class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+          <div id="recipesGrid" class="grid max-[319px]:grid-cols-1 grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
             {allRecipes.map((recipe: Recipe, index) => (
               <div class="recipe-card" data-type={normalizeType(recipe)} data-title={recipe.title.toLowerCase()} style={index < 4 ? '' : 'display:none'}>
                 <RecipeCard
@@ -301,8 +326,8 @@ const featuredRecipes = allRecipes.slice(0, 3);
     const featuredCarousel = document.getElementById('featuredCarousel') as HTMLElement | null;
     const carouselSlides = document.querySelectorAll('.carousel-slide');
     const carouselDots = document.querySelectorAll('.carousel-dot');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+    const prevBtns = document.querySelectorAll('.carousel-prev-btn');
+    const nextBtns = document.querySelectorAll('.carousel-next-btn');
     let currentSlide = 0;
 
     function showSlide(index: number) {
@@ -337,9 +362,9 @@ const featuredRecipes = allRecipes.slice(0, 3);
       showSlide(prev);
     }
 
-    // Carousel controls
-    prevBtn?.addEventListener('click', prevSlide);
-    nextBtn?.addEventListener('click', nextSlide);
+    // Carousel controls - attach to all prev/next buttons (mobile and desktop)
+    prevBtns.forEach(btn => btn.addEventListener('click', prevSlide));
+    nextBtns.forEach(btn => btn.addEventListener('click', nextSlide));
 
     carouselDots.forEach((dot, index) => {
       dot.addEventListener('click', () => showSlide(index));
@@ -374,7 +399,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
 
     function setFeaturedCarouselVisibility() {
       if (!featuredCarousel) return;
-      const shouldHide = !!currentQuery;
+      const shouldHide = !!currentQuery || currentFilter !== 'all';
       featuredCarousel.classList.toggle('hidden', shouldHide);
       if (shouldHide) {
         stopCarouselAutoplay();
@@ -422,6 +447,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
     function applyFilter(filter: string) {
       currentFilter = filter;
       revealedCount = 0;
+      setFeaturedCarouselVisibility();
       hideAll();
       revealNextPage();
     }

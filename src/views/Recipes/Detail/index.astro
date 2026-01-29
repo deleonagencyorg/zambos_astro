@@ -1,14 +1,12 @@
 ---
 // src/views/Recipes/Detail/index.astro
-import { getLocale } from '../../../i18n/i18n';
 import './styles.css';
-import RecipeCard from '../../../components/recipes/RecipeCard.astro';
-import RelatedRecipesCarousel from '../../../components/recipes/RelatedRecipesCarousel.astro';
+import RecipesCarousel from '../../../components/recipes/RecipesCarousel.astro';
 import Breadcrumb from '../../../components/common/Breadcrumb/Breadcrumb.astro';
 import LazyImage from '../../../components/common/LazyImage.astro';
-import { div } from 'framer-motion/m';
 import IngredientsCarousel from '../../../components/recipes/IngredientsCarousel.astro';
 import ShareModal from '../../../components/common/ShareModal.astro';
+import ShareButton from '../../../components/common/ShareButton.astro';
 import Subscription from '../../../components/subscription/index.astro';
 
 interface RecipeItem {
@@ -42,6 +40,8 @@ const recipe = allRecipes.find((item: RecipeItem) => item.id === recipeId);
 
 const relatedRecipes = allRecipes.filter((item: RecipeItem) => item.id !== recipeId);
 const RELATED_PAGE_SIZE = 12;
+
+const canonicalShareUrl = new URL(`${Astro.url.pathname}${Astro.url.search}${Astro.url.hash}`, 'https://zambos.com').href;
 
 if (!recipe) {
   throw new Error(`Recipe with id ${recipeId} not found`);
@@ -79,8 +79,8 @@ function formatTime(minutes: number): string {
   </div>
 
   <!-- Main Recipe Card -->
-  <section class="flex justify-center items-center py-8 px-4">
-    <div class="bg-[#FFED7A] rounded-3xl p-8 md:p-12 w-full max-w-6xl">
+  <section class="flex justify-center items-center py-6 sm:py-8 px-2 sm:px-4">
+    <div class="bg-[#FFED7A] rounded-3xl p-4 sm:p-6 md:p-12 w-full max-w-6xl">
       <div class="flex flex-col md:flex-row gap-8">
         
         <!-- Left Side - Images -->
@@ -91,7 +91,7 @@ function formatTime(minutes: number): string {
               <LazyImage
                 src={recipe.image} 
                 alt={recipe.title}
-                class="w-full h-[400px] object-cover"
+                class="w-full h-[320px] sm:h-[400px] object-cover"
                 transition:name={`recipe-image-${recipe.id}`}
               />
             )}
@@ -105,28 +105,6 @@ function formatTime(minutes: number): string {
                 NUEVO
               </span>
             </div>
-
-            <!-- Arrow button -->
-            <button class="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-gray-100 transition">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </button>
-          </div>
-
-          <!-- Thumbnail Gallery -->
-          <div class="grid grid-cols-3 gap-4">
-            {[1, 2, 3].map((i) => (
-              <div class="rounded-2xl overflow-hidden h-24">
-                {recipe.image && (
-                  <img 
-                    src={recipe.image} 
-                    alt={`${recipe.title} ${i}`}
-                    class="w-full h-full object-cover cursor-pointer hover:opacity-80 transition"
-                  />
-                )}
-              </div>
-            ))}
           </div>
         </div>
 
@@ -138,14 +116,14 @@ function formatTime(minutes: number): string {
           </h1>
 
           <!-- Time & Difficulty -->
-          <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <!-- Time -->
             <div class="bg-white rounded-2xl p-4">
               <div class="flex items-center gap-2 text-gray-600 mb-1">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span class="text-sm font-bold uppercase">Tiempo</span>
+                <span class="text-xs sm:text-sm font-bold uppercase">Tiempo</span>
               </div>
               <p class="text-gray-900 font-bold">{formatTime(recipe.preparation_time)}</p>
             </div>
@@ -156,7 +134,7 @@ function formatTime(minutes: number): string {
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
-                <span class="text-sm font-bold uppercase">Dificultad</span>
+                <span class="text-xs sm:text-sm font-bold uppercase">Dificultad</span>
               </div>
               <p class="text-gray-900 font-bold">
                 {currentLang === 'es' ? 'Fácil' : 'Easy'}
@@ -165,23 +143,23 @@ function formatTime(minutes: number): string {
           </div>
 
           <!-- Tab Buttons -->
-          <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
             <button 
               id="ingredientsTab"
-              class="tab-btn bg-[#0DB04A] text-white font-bold py-3 px-6 rounded-xl uppercase hover:bg-opacity-90 transition"
+              class="tab-btn bg-[#0DB04A] text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:bg-opacity-90 transition text-sm sm:text-base"
             >
               {recipesAssets.recipes}
             </button>
             <button 
               id="preparationTab"
-              class="tab-btn bg-white text-gray-900 font-bold py-3 px-6 rounded-xl uppercase hover:bg-gray-100 transition"
+              class="tab-btn bg-white text-gray-900 font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:bg-gray-100 transition text-sm sm:text-base"
             >
               {recipesAssets.preparation}
             </button>
           </div>
 
           <!-- Content Area -->
-          <div class="bg-white rounded-2xl p-6 mb-6 min-h-[200px]">
+          <div class="bg-white rounded-2xl p-4 sm:p-6 mb-6 min-h-[200px]">
             <!-- Ingredients Content -->
             <div id="ingredientsContent" class="tab-content">
               <ul class="space-y-3">
@@ -209,25 +187,15 @@ function formatTime(minutes: number): string {
 
           <!-- Social Buttons -->
           <div class="flex gap-3">
-            <button class="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition shadow-md">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </button>
-            <button class="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition shadow-md">
-              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-              </svg>
-            </button>
-            <button 
-              type="button"
-              class="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition shadow-md"
-              onclick="window.showShareModal && window.showShareModal('shareModal-recipe')"
-            >
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
-              </svg>
-            </button>
+            <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition shadow-md">
+              <ShareButton platform="facebook" url={canonicalShareUrl} className="w-6 h-6" />
+            </div>
+            <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition shadow-md">
+              <ShareButton platform="instagram" url={canonicalShareUrl} className="w-6 h-6" />
+            </div>
+            <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-gray-100 transition shadow-md">
+              <ShareButton platform="whatsapp" url={canonicalShareUrl} className="w-6 h-6" />
+            </div>
           </div>
         </div>
       </div>
@@ -237,10 +205,10 @@ function formatTime(minutes: number): string {
   <!-- Related Recipes Section -->
   <section class="py-12 px-4">
     <div class="w-full max-w-6xl mx-auto">
-      <div class="flex items-center justify-between mb-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
         <div>
           <h2 class="text-3xl md:text-5xl font-bold text-white font-title uppercase">
-            {currentLang === 'es' ? 'Recetas similares' : 'Similar recipes'}
+            {currentLang === 'es' ? 'Recetas recomendadas' : 'Recommended recipes'}
           </h2>
           <p class="text-white text-sm md:text-base mt-2">
             {currentLang === 'es' ? 'Descubre mas recetas de la familia Zambos' : 'Discover more recipes from the Zambos family'}
@@ -248,40 +216,13 @@ function formatTime(minutes: number): string {
         </div>
         <a 
           href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}`}
-          class="bg-red text-white font-bold py-3 px-6 rounded-full uppercase hover:bg-opacity-90 transition whitespace-nowrap"
+          class="bg-red text-white font-bold py-3 px-6 rounded-full uppercase hover:bg-opacity-90 transition whitespace-nowrap w-full sm:w-auto text-center"
         >
           {currentLang === 'es' ? 'Ver todas' : 'View all'}
         </a>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {relatedRecipes.map((relatedRecipe: RecipeItem, index: number) => (
-          <div
-            class={index >= RELATED_PAGE_SIZE ? 'hidden' : ''}
-            data-related-recipe-item
-          >
-            <RecipeCard
-              image={relatedRecipe.image || ''}
-              title={relatedRecipe.title}
-              id={relatedRecipe.id}
-              description={relatedRecipe.description}
-              category={(relatedRecipe as any).category}
-            />
-          </div>
-        ))}
-      </div>
-
-      {relatedRecipes.length > RELATED_PAGE_SIZE && (
-        <div class="flex justify-center mt-10">
-          <button
-            id="loadMoreRelated"
-            type="button"
-            class="bg-red text-white font-bold py-3 px-8 rounded-full uppercase hover:bg-opacity-90 transition"
-          >
-            {currentLang === 'es' ? 'Ver más' : 'View more'}
-          </button>
-        </div>
-      )}
+      <RecipesCarousel items={relatedRecipes} />
     </div>
   </section>
 
@@ -292,67 +233,43 @@ function formatTime(minutes: number): string {
 
 <!-- Tab Switching Script -->
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const ingredientsTab = document.getElementById('ingredientsTab');
-    const preparationTab = document.getElementById('preparationTab');
-    const ingredientsContent = document.getElementById('ingredientsContent');
-    const preparationContent = document.getElementById('preparationContent');
+  function initRecipeTabs() {
+    const ingredientsTab = document.getElementById('ingredientsTab') as HTMLElement | null;
+    const preparationTab = document.getElementById('preparationTab') as HTMLElement | null;
+    const ingredientsContent = document.getElementById('ingredientsContent') as HTMLElement | null;
+    const preparationContent = document.getElementById('preparationContent') as HTMLElement | null;
 
-    ingredientsTab?.addEventListener('click', () => {
+    if (!ingredientsTab || !preparationTab || !ingredientsContent || !preparationContent) return;
+    if (ingredientsTab.dataset.bound === 'true') return;
+    ingredientsTab.dataset.bound = 'true';
+
+    ingredientsTab.addEventListener('click', () => {
       ingredientsTab.classList.add('bg-[#0DB04A]', 'text-white');
       ingredientsTab.classList.remove('bg-white', 'text-gray-900');
-      preparationTab?.classList.add('bg-white', 'text-gray-900');
-      preparationTab?.classList.remove('bg-[#0DB04A]', 'text-white');
-      ingredientsContent?.classList.remove('hidden');
-      preparationContent?.classList.add('hidden');
+      preparationTab.classList.add('bg-white', 'text-gray-900');
+      preparationTab.classList.remove('bg-[#0DB04A]', 'text-white');
+      ingredientsContent.classList.remove('hidden');
+      preparationContent.classList.add('hidden');
     });
 
-    preparationTab?.addEventListener('click', () => {
+    preparationTab.addEventListener('click', () => {
       preparationTab.classList.add('bg-[#0DB04A]', 'text-white');
       preparationTab.classList.remove('bg-white', 'text-gray-900');
-      ingredientsTab?.classList.add('bg-white', 'text-gray-900');
-      ingredientsTab?.classList.remove('bg-[#0DB04A]', 'text-white');
-      preparationContent?.classList.remove('hidden');
-      ingredientsContent?.classList.add('hidden');
+      ingredientsTab.classList.add('bg-white', 'text-gray-900');
+      ingredientsTab.classList.remove('bg-[#0DB04A]', 'text-white');
+      preparationContent.classList.remove('hidden');
+      ingredientsContent.classList.add('hidden');
     });
+  }
 
-    // Related recipes: Load more (12 + 12)
-    const pageSize = 12;
-    const items = Array.from(document.querySelectorAll('[data-related-recipe-item]')) as HTMLElement[];
-    const loadMoreBtn = document.getElementById('loadMoreRelated') as HTMLButtonElement | null;
-    let visibleCount = Math.min(pageSize, items.length);
-
-    function updateRelatedVisibility() {
-      items.forEach((el, idx) => {
-        if (idx < visibleCount) {
-          el.classList.remove('hidden');
-        } else {
-          el.classList.add('hidden');
-        }
-      });
-
-      if (loadMoreBtn) {
-        if (visibleCount >= items.length) {
-          loadMoreBtn.classList.add('hidden');
-        } else {
-          loadMoreBtn.classList.remove('hidden');
-        }
-      }
-    }
-
-    loadMoreBtn?.addEventListener('click', () => {
-      visibleCount = Math.min(visibleCount + pageSize, items.length);
-      updateRelatedVisibility();
-    });
-
-    updateRelatedVisibility();
-  });
+  document.addEventListener('DOMContentLoaded', initRecipeTabs);
+  document.addEventListener('astro:page-load', initRecipeTabs);
 </script>
 
 <!-- Share Modal -->
 <ShareModal
   id="shareModal-recipe"
-  url={Astro.url.href}
+  url={canonicalShareUrl}
   title={recipe.title}
   description={recipe.description}
   hashtags={recipe.tags || []}

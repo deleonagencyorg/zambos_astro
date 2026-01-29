@@ -34,7 +34,10 @@ const {
 } = Astro.props;
 ---
 
-<div class="video-carousel-container">
+<div
+  class="video-carousel-container"
+  style={`--vc-mobile-height: ${mobileHeight}; --vc-tablet-height: ${tabletHeight}; --vc-desktop-height: ${height};`}
+>
   <div class="swiper-container video-carousel">
     <div class="swiper-wrapper">
       {slides.map((slide, index) => {
@@ -230,7 +233,7 @@ const {
   /* Responsive visibility - SOLUCIÓN AL PROBLEMA */
   .mobile-only {
     display: flex;
-    height: 550px;
+    height: var(--vc-mobile-height);
   }
 
   .tablet-only,
@@ -389,34 +392,13 @@ const {
   /* Video responsive heights */
   @media (max-width: 767px) {
     .video-container {
-      height: 400px;
+      height: var(--vc-mobile-height);
     }
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
     .video-container {
       height: 600px;
-    }
-  }
-
-  /* Custom mobile range: 314px to 517px */
-  @media (min-width: 314px) and (max-width: 517px) {
-    /* Ensure non-video mobile slides have 550px height */
-    .mobile-only {
-      height: 550px;
-    }
-
-    /* Ensure video slides also have 500px height */
-    .video-container {
-      height: 500px;
-    }
-
-    /* Make images fill height and stay centered */
-    .image-wrapper .slide-image {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      object-position: center;
     }
   }
 </style>
