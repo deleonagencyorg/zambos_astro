@@ -1,6 +1,6 @@
 {
-  "title": "Ziba's Creators Categories",
-  "description": "Discover all available categories to participate in Ziba's creativity contest",
+  "title": "Categories",
+  "description": "Categories list.",
   "categories": [
     {
       "id": "audiovisual",
@@ -10,7 +10,7 @@
       "longDescription": "Share your best videos, short films, documentaries and audiovisual content that tell unique and exciting stories.",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-audiovisual.webp",
       "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-audiovisual-mobile.webp",
-      "url": "/en/zibas-creators/category/audiovisual",
+      "url": "",
       "color": "#8B5CF6",
       "gradient": "from-purple-400 to-pink-400"
     },
@@ -22,7 +22,7 @@
       "longDescription": "Show your talent in dance, choreography, freestyle and any artistic expression that involves body movement.",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-baile.webp",
       "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-baile-mobile.webp",
-      "url": "/en/zibas-creators/category/dance",
+      "url": "",
       "color": "#FB923C",
       "gradient": "from-orange-400 to-red-400"
     },
@@ -34,7 +34,7 @@
       "longDescription": "Upload your covers, original compositions, instrumentals and any musical creation that demonstrates your artistic talent.",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-musica.webp",
       "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-musica-mobile.webp",
-      "url": "/en/zibas-creators/category/music",
+      "url": "",
       "color": "#3B82F6",
       "gradient": "from-blue-400 to-indigo-400"
     },
@@ -46,7 +46,7 @@
       "longDescription": "Share your drawings, paintings, digital sculptures, illustrations and any form of visual artistic expression.",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-arte.webp",
       "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-arte-mobile.webp",
-      "url": "/en/zibas-creators/category/art",
+      "url": "",
       "color": "#10B981",
       "gradient": "from-green-400 to-emerald-400"
     },
@@ -58,7 +58,7 @@
       "longDescription": "Share your most creative memes, funny videos, parodies and any content that makes the community laugh.",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-memes.webp",
       "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-memes-mobile.webp",
-      "url": "/en/zibas-creators/category/memes",
+      "url": "",
       "color": "#F59E0B",
       "gradient": "from-yellow-400 to-orange-400"
     },
@@ -70,13 +70,13 @@
       "longDescription": "Share your AI creations, generated images, videos with special effects and content that combines technology and creativity.",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-ia.webp",
       "imageMobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/category-ia-mobile.webp",
-      "url": "/en/zibas-creators/category/artificial-intelligence",
+      "url": "",
       "color": "#EC4899",
       "gradient": "from-pink-400 to-rose-400"
     }
   ],
   "meta": {
-    "title": "Categories - Ziba's Creators",
-    "description": "Explore all available categories to participate in Ziba's creativity contest. From audiovisual to artificial intelligence, find your passion."
+    "title": "Categories",
+    "description": "Explore all available categories."
   }
 }

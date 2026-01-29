@@ -1,0 +1,37 @@
+{
+  "date": "2025-09-11",
+  "id": "tortitas-de-atun-con-zambos-platano-picositas",
+  "slug": "tortitas-de-atun-con-zambos-platano-picositas",
+  "title": "Tortitas de Atún con Zambos Plátano Picositas",
+  "people": "4",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/tortitas-de-atun-con-zambos-platano-picositas.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/tortitas-de-atun-con-zambos-platano-picositas.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 30,
+  "ingredients": [
+    "2 huevos",
+    "1 cucharadita de sal",
+    "1 cucharadita de pimienta",
+    "2 papas cocidas machacadas",
+    "½ taza de Zambos Picositas trituradas",
+    "2 cucharadas de perejil picado",
+    "2 latas de atún escurridas (puede ser en aceite o en agua)",
+    "2 cucharadas de cebolla picada",
+    "Harina",
+    "Aceite vegetal"
+  ],
+  "instructions": [
+    "Paso 1: En un recipiente bate con un tenedor o batidor de mano los huevos con la sal y la pimienta.",
+    "Paso 2: En otro recipiente machaca bien las papas, agregando la sal, la pimienta, los zambos y el perejil.",
+    "Paso 3: Mezcla todo bien y poco a poco agrega los huevos batidos.",
+    "Paso 4: Agrega el atún y la cebolla asegurándote que todo quede bien mezclado.",
+    "Paso 5: Coloca un poco de harina en tus manos y forma tortitas del tamaño que consideres apropiado.",
+    "Paso 6: Pásalas por harina cubriéndolas bien y colócalas separadas en una bandeja o molde tipo “Pyrex”.",
+    "Paso 7: Calienta abundante aceite en un sartén, y cuando esté caliente, reduce la temperatura a fuego medio y fríe las tortitas de lado y lado hasta que estén doradas."
+  ],
+  "brand": ["zambos"]
+}

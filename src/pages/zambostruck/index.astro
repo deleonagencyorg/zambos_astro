@@ -1,0 +1,19 @@
+---
+import TruckView from '../../views/Truck/index.astro';
+import MainLayout from '../../layouts/MainLayout.astro';
+import { setLocale } from '../../i18n/i18n';
+import { getHeaderColors } from '../../config/headerColors';
+import FormContact from '../../components/contact/FormContact.astro';
+
+// Forzar idioma español
+setLocale('es');
+
+const headerColorConfig = getHeaderColors('truck');
+---
+
+<MainLayout title="Zambos Truck" description="Descubre los paquetes de Zambos Truck" headerColors={headerColorConfig}>
+  <TruckView />
+  <section id="truck-form" class="container mx-auto px-4 pb-16">
+    <FormContact currentLang="es" formType="zambostruck" hideContactReason={true} />
+  </section>
+</MainLayout>

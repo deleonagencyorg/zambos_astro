@@ -1,7 +1,7 @@
 {
   "meta": {
     "home": {
-      "title": "Ziba's - Enjoy your Ziba's at any moment",
+      "title": "Zambos - Enjoy your Zambos at any moment",
       "description": "Your favorite potato chip flakes come with naturally authentic flavors for all tastes."
     },
     "contact": {
@@ -10,46 +10,46 @@
     },
     "recipes": {
       "title": "Recipes",
-      "description": "Discover delicious recipes with Ziba's. From traditional dishes to innovative creations."
+      "description": "Discover delicious recipes with Zambos. From traditional dishes to innovative creations."
     },
     "news": {
       "title": "News",
-      "description": "Stay up to date with the latest news and events from Ziba's."
+      "description": "Stay up to date with the latest news and events from Zambos."
     },
     "products": {
       "title": "Products",
-      "description": "Discover our complete line of Ziba's products. Authentic flavor for the whole family."
+      "description": "Discover our complete line of Zambos products. Authentic flavor for the whole family."
     },
     "brands": {
       "title": "Our Snack Brands",
-      "description": "Discover Ziba's, Zambos, Ranchitas. Each brand with unique and authentic flavors that conquer Central America."
+      "description": "Discover Zambos, Zambos, Ranchitas. Each brand with unique and authentic flavors that conquer Central America."
     },
     "about_us": {
       "title": "About Us - History and Values",
-      "description": "Learn about the history of Ziba's, a leading snack company in Central America since 1990. Our mission, values and commitment to quality."
+      "description": "Learn about the history of Zambos, a leading snack company in Central America since 1990. Our mission, values and commitment to quality."
     },
     "yummiesone": {
-      "title": "Ziba's One",
-      "description": "Discover Ziba's One, our new exclusive platform for true snack lovers."
+      "title": "Zambos One",
+      "description": "Discover Zambos One, our new exclusive platform for true snack lovers."
     }
   },
   "social_media": {
    "facebook": {
       "name": "Facebook",
-      "url": "https://www.facebook.com/zibaslatam",
-      "alt": "Facebook de Ziba's",
+      "url": "https://www.facebook.com/zambosusa/",
+      "alt": "Facebook de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/facebook.svg"
     },
     "instagram": {
       "name": "Instagram",
-      "url": "https://www.instagram.com/zibaslatam",
-      "alt": "Instagram de Ziba's",
+      "url": "https://www.instagram.com/zambosusa/",
+      "alt": "Instagram de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/instagram.svg"
     },
     "tiktok": {
       "name": "TikTok",
-      "url": "https://www.tiktok.com/@zibaslatam",
-      "alt": "TikTok de Ziba's",
+      "url": "https://www.tiktok.com/@zambosusa",
+      "alt": "TikTok de Zambos",
       "iconUrl": "https://snack.yummiespromociones.com/snacksyummies/tiktok.svg"
     }
   },
@@ -61,30 +61,75 @@
     "preferences": "Preferences"
   },
   "assets": {
-    "logo": "/images/es/logo.svg",
+    "logo": "https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp",
     "hero": "/images/es/hero.jpg",
     "slidermask": "https://snack.yummiespromociones.com/snacksyummies/BGHeader_1_.webp",
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
       {
+        "id": "slide1",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_110_ZAMBOS-TAJIN_BANNER-WEB_INGLES.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_110_ZAMBOS-TAJIN_BANNER-WEB_INGLES.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/productos/zambos-tajin"
+      },
+      {
         "id": "slide2",
-        "desktop": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
-        "mobile": "https://snack.yummiespromociones.com/zibas/bgzibasnuevo.webp",
-        "alt": "Ziba's",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_111_2_Banner_Web_Tostones_Jun.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_111_2_Banner_Web_Tostones_Jun.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/zambos-tostones-originales"
+      },
+      {
+        "id": "slide4",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_Banner1_zambos_en.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_Banner1_zambos_en.webp",
+        "alt": "Zambos USA",
         "title": "",
         "description": "",
         "link": "#"
       },
       {
-        "id": "slide1",
-        "desktop": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
-        "mobile": "https://snack.yummiespromociones.com/zibas/ZIBAS-360_TVC2.mp4",
-        "alt": "Ziba's",
+        "id": "slide5",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
+        "alt": "Zambos USA",
         "title": "",
         "description": "",
         "link": "#"
+      },
+      {
+        "id": "slide6",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/"
+      },
+      {
+        "id": "slide7",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_117_Banner4_zambos_en.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_117_Banner4_zambos_en.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/zambos-yuquitas-originales"
       }
-     
+      ,
+      {
+        "id": "slide8",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_zambos_chile_limon-.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_zambos_chile_limon-.webp",
+        "alt": "Zambos USA",
+        "title": "",
+        "description": "",
+        "link": "/en/products/zambos-chile-limon"
+      }
     ]
   },
   "menu_labels": {
@@ -92,16 +137,20 @@
     "explore": "Explorar"
   },
   "menu_items": [
- 
+    {
+      "id": "home",
+      "text": "Home",
+      "href": "/en/"
+    },
+    {
+      "id": "history",
+      "text": "History",
+      "href": "/en/about-us"
+    },
     {
       "id": "products",
       "text": "Products",
-      "href": "/en/#products"
-    },
-    {
-      "id": "gallery",
-      "text": "Gallery",
-      "href": "/en/#gallery"
+      "href": "/en/products"
     },
     {
       "id": "recipes",
@@ -112,8 +161,29 @@
       "id": "contact",
       "text": "Contact",
       "href": "/en/contact"
+    },
+    {
+      "id": "blog",
+      "text": "Blog",
+      "href": "/en/blog"
     }
-   
+  ],
+  "menu_items_header": [
+    {
+      "id": "home",
+      "text": "Home",
+      "href": "/en/"
+    },
+    {
+      "id": "contact",
+      "text": "Contact",
+      "href": "/en/contact"
+    },
+    {
+      "id": "Zambos",
+      "text": "Zambos Truck",
+      "href": "/en/truck"
+    }
   ],
   "about_us": {
     "title": "Conoce Nuestra",
@@ -124,7 +194,7 @@
   },
   "home": {
     "meta": {
-      "title": " Ziba's - Disfruta tus Ziba's en todo momento",
+      "title": " Zambos - Disfruta tus Zambos en todo momento",
       "description": "Tus hojuelas de papa frita favoritas llegan con sabores naturalmente auténticos para todos los gustos."
     },
     "newsletter":{
@@ -132,49 +202,65 @@
       "buttonText":"Subscribe"
     },
     "socialmedia":{
-      "title":"Follow us",
+      "title":"CHECK OUT OUR FEED",
       "tagtitle":"on social media",
       "description":"Follow us on our social media - Snacks Yummies",
       "newsletter":"Stay up to date with all our news and promotions",
-      "instagramLinks":[
+      "images":[],
+      "instagramPosts": [
         {
-          "url":"https://www.instagram.com/reel/DLYiMsKtKon/?igsh=MXRza3ByZmlxbmtndw=="
+          "id": "post1",
+          "postUrl": "https://www.instagram.com/reel/DT-tbxilM0f/?igsh=MXJxbXRhZWNlN3U4bA==",
+          "embedUrl": "https://www.instagram.com/reel/DT-tbxilM0f/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-1.jpg",
+          "fallbackImage": "/images/instagram-fallback-1.jpg",
+          "alt": "Yummi Nuts Instagram Post 1"
         },
         {
-          "url":"https://www.instagram.com/reel/DLTEEQXvxkG/?igsh=MTQ4MzVkMnQxNWRrZA=="
+          "id": "post2",
+          "postUrl": "https://www.instagram.com/p/DT3hRbEgfZ9/?igsh=MW1lMnYzbHpvOGsxYw==",
+          "embedUrl": "https://www.instagram.com/p/DT3hRbEgfZ9/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-2.jpg",
+          "fallbackImage": "/images/instagram-fallback-2.jpg",
+          "alt": "Yummi Nuts Instagram Post 2"
         },
         {
-          "url":"https://www.instagram.com/reel/DKiDRYgtggB/?igsh=Ym9yNHdtbzJhczdi"
+          "id": "post3",
+          "postUrl": "https://www.instagram.com/reel/DTwB6rWiXyO/?igsh=cGM1Yjl5NGUxd2hl",
+          "embedUrl": "https://www.instagram.com/reel/DTwB6rWiXyO/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-3.jpg",
+          "fallbackImage": "/images/instagram-fallback-3.jpg",
+          "alt": "Yummi Nuts Instagram Post 3"
         },
         {
-          "url":"https://www.instagram.com/p/DKaTrbKRfmO/?igsh=bTIyMGd5Y3kxYzY0"
+          "id": "post4",
+          "postUrl": "https://www.instagram.com/p/DTtAXcRgV5y/?igsh=MTFpenNmZGJvejI5bw==",
+          "embedUrl": "https://www.instagram.com/p/DTtAXcRgV5y/embed",
+          "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-4.jpg",
+          "fallbackImage": "/images/instagram-fallback-4.jpg",
+          "alt": "Yummi Nuts Instagram Post 4"
         }
       ]
     }
   },
   "footer": {
     "main_text": "Unfiltered vibes.",
-    "description": "Live your life to the fullest, express what you feel, explore the world and see the best in you. Because today Ziba's going to be you! Enjoy your Ziba's at all times.",
+    "description": "Live your life to the fullest, express what you feel, explore the world and see the best in you. Because today Zambos going to be you! Enjoy your Zambos at all times.",
     "choose": "Choose",
     "follow_us": "Follow us",
     "contact_us": "Contact us",
     "instagram_text": "Instagram",
     "facebook_text": "Facebook",
     "email": "ayudacliente@zibas.com",
-    "copyright": "Copyright 2025. Ziba's. All rights reserved.",
+    "copyright": "Copyright 2025. Zambos. All rights reserved.",
     "privacy_policy_text": "Privacy Policy",
     "privacy_policy_url": "/es/politica-privacidad"
   },
   "messagetop":[
     {
       "id":"1",
-      "title":"😎 Welcome to Ziba's! If you're craving a snack, you're in the right place 🎉",
+      "title":"😎 Welcome to Zambos! If you're craving a snack, you're in the right place 🎉",
       "link":""
-    },
-    {
-      "id":"2",
-      "title":"🎨 Ziba's Creators: Join with your creativity and win prizes!",
-      "link":"/en/zibas-creators"
     }
   ],
   "form_validation": {
@@ -185,5 +271,37 @@
   },
   "subscribe": {
     "success": "Thank you for subscribing!"
+  },
+  "videos": {
+    "items": [
+           {
+        "title": "Zambos Preparados",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4"
+      },
+            {
+        "title": "¡Unos ZAMBOS con CHOCOLATE!",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be"
+      },
+            {
+        "title": "¡Disfrutá de este platillo tradicional de una forma diferente!",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be"
+      },
+            {
+        "title": "Deliciosa receta con Zambos Ceviche 🍤",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be"
+      },
+            {
+        "title": "Zambos Costeños",
+        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "url": "https://www.youtube.com/watch?v=DEDSda5mneA"
+      }
+    ]
+  },
+  "delivery": {
+    "amazon_buy_url": "https://www.amazon.com/stores/Zambos/Homepage/page/AB6B3C05-CBE2-49FD-8A2C-E5A7B1F57E2D?utm_source=Publicidad+Movil&utm_medium=Amazon&utm_campaign=Zambos&utm_term=Standard+Botton"
   }
 }

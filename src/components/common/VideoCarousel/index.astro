@@ -15,28 +15,29 @@ interface Props {
   slides: SlideItem[];
   height?: string;
   mobileHeight?: string;
+  tabletHeight?: string;
   overlayOpacity?: string;
   textColor?: string;
   showOverlay?: boolean;
+  fitMode?: 'cover' | 'contain';
 }
 
 const {
   slides = [],
-  height = "100vh",
-  mobileHeight = "300px",
+  height = "800px",
+  mobileHeight = "400px",
+  tabletHeight = "600px",
   overlayOpacity = "50",
   textColor = "text-white",
-  showOverlay = true
+  showOverlay = true,
+  fitMode = "contain"
 } = Astro.props;
-
-// Identificar el primer slide para precargar
-const firstSlide = slides[0] || {};
-const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') || 
-                         firstSlide.desktop?.toLowerCase().endsWith('.webm');
 ---
 
-<div class="video-carousel-container">
-  <!-- Swiper container -->
+<div
+  class="video-carousel-container"
+  style={`--vc-mobile-height: ${mobileHeight}; --vc-tablet-height: ${tabletHeight}; --vc-desktop-height: ${height};`}
+>
   <div class="swiper-container video-carousel">
     <div class="swiper-wrapper">
       {slides.map((slide, index) => {
@@ -46,20 +47,8 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
         
         return (
           <div class="swiper-slide" id={slideId}>
-            <div class="slide-content" style={`height: ${height};`}>
-              <!-- Fallback image that shows while video loads or if video fails -->
-              <div class="fallback-image">
-                <img 
-                  src={isVideo ? slide.desktop.replace(/\.(mp4|webm)$/i, '.jpg') : slide.desktop} 
-                  alt={slide.alt || "Slide background"} 
-                  width="1920" 
-                  height="1080"
-                  loading={index === 0 ? "eager" : "lazy"}
-                />
-              </div>
-              
+            <div class="slide-content">
               {isVideo ? (
-                <!-- Video background -->
                 <div class="video-container">
                   <video 
                     autoplay 
@@ -71,29 +60,97 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
                     preload={index === 0 ? "auto" : "metadata"}
                   >
                     <source src={slide.desktop} type={slide.desktop.toLowerCase().endsWith('.webm') ? 'video/webm' : 'video/mp4'}>
-                    <!-- If the browser doesn't support video, the fallback image will remain visible -->
                     Your browser does not support the video tag.
                   </video>
                 </div>
+              ) : slide.link && slide.link !== '#' ? (
+                <a href={slide.link} class="slide-link-wrapper">
+                  <!-- Mobile: 0px hasta 768px -->
+                  <div 
+                    class="image-wrapper mobile-only"
+                    data-fit={fitMode}
+                  >
+                    <img 
+                      src={slide.mobile || slide.desktop} 
+                      alt={slide.alt || "Slide background"} 
+                      class="slide-image"
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+
+                  <!-- Tablet: 768px hasta 1024px -->
+                  <div 
+                    class="image-wrapper tablet-only"
+                    style={`height: ${tabletHeight};`}
+                    data-fit={fitMode}
+                  >
+                    <img 
+                      src={slide.desktop} 
+                      alt={slide.alt || "Slide background"} 
+                      class="slide-image"
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+
+                  <!-- Desktop: 1024px en adelante -->
+                  <div 
+                    class="image-wrapper desktop-only z-0"
+                    style={`height: ${height};`}
+                    data-fit={fitMode}
+                  >
+                    <img 
+                      src={slide.desktop} 
+                      alt={slide.alt || "Slide background"} 
+                      class="slide-image"
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+                </a>
               ) : (
-                <!-- Image background for non-video slides -->
-                <div class="image-container">
-                  <img 
-                    src={slide.desktop} 
-                    alt={slide.alt || "Slide background"} 
-                    class="slide-image desktop-image"
-                    loading={index === 0 ? "eager" : "lazy"}
-                  />
-                  <img 
-                    src={slide.mobile} 
-                    alt={slide.alt || "Slide background"} 
-                    class="slide-image mobile-image"
-                    loading={index === 0 ? "eager" : "lazy"}
-                  />
-                </div>
+                <>
+                  <!-- Mobile: 0px hasta 768px -->
+                  <div 
+                    class="image-wrapper mobile-only"
+                    data-fit={fitMode}
+                  >
+                    <img 
+                      src={slide.mobile || slide.desktop} 
+                      alt={slide.alt || "Slide background"} 
+                      class="slide-image"
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+
+                  <!-- Tablet: 768px hasta 1024px -->
+                  <div 
+                    class="image-wrapper tablet-only"
+                    style={`height: ${tabletHeight};`}
+                    data-fit={fitMode}
+                  >
+                    <img 
+                      src={slide.desktop} 
+                      alt={slide.alt || "Slide background"} 
+                      class="slide-image"
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+
+                  <!-- Desktop: 1024px en adelante -->
+                  <div 
+                    class="image-wrapper desktop-only z-0"
+                    style={`height: ${height};`}
+                    data-fit={fitMode}
+                  >
+                    <img 
+                      src={slide.desktop} 
+                      alt={slide.alt || "Slide background"} 
+                      class="slide-image"
+                      loading={index === 0 ? "eager" : "lazy"}
+                    />
+                  </div>
+                </>
               )}
               
-              <!-- Overlay with text (conditional) -->
               {showOverlay && (slide.title || slide.subtitle) && (
                 <div class={`overlay bg-black bg-opacity-${overlayOpacity}`}>
                   <div class="text-content">
@@ -117,7 +174,6 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
       })}
     </div>
     
-    <!-- Navigation controls -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
@@ -125,7 +181,7 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
 </div>
 
 <style>
-  /* Estilos para flechas y puntos de navegación blancos */
+  /* Navigation styles */
   :global(.swiper-button-next),
   :global(.swiper-button-prev) {
     color: white !important;
@@ -142,40 +198,118 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
     background: white !important;
   }
   
+  /* Container styles */
   .video-carousel-container {
     position: relative;
     width: 100%;
     overflow: hidden;
   }
+
+  /* Link wrapper for clickable slides */
+  .slide-link-wrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+  }
   
   .slide-content {
     position: relative;
     width: 100%;
+  }
+
+  /* Image wrapper con fondo */
+  .image-wrapper {
+    position: relative;
+    width: 100%;
     overflow: hidden;
+    background: #0DB04A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .fallback-image {
-    position: absolute;
-    top: 0;
-    left: 0;
+  /* Responsive visibility - SOLUCIÓN AL PROBLEMA */
+  .mobile-only {
+    display: flex;
+    height: var(--vc-mobile-height);
+  }
+
+  .tablet-only,
+  .desktop-only {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-only {
+      display: none;
+    }
+    
+    .tablet-only {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .tablet-only {
+      display: none;
+    }
+    
+    .desktop-only {
+      display: flex;
+    }
+  }
+  
+  /* Imagen que se ajusta al contenedor */
+  .slide-image {
     width: 100%;
     height: 100%;
-    z-index: 1;
+    display: block;
+    object-fit: cover;
+    object-position: center;
   }
-  
-  .fallback-image img {
+
+  /* Modo contain: muestra la imagen completa */
+  .image-wrapper[data-fit="contain"] .slide-image {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* Modo cover: recorta la imagen para llenar el espacio */
+  .image-wrapper[data-fit="cover"] .slide-image {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Normalize banners by breakpoint:
+     - Mobile: fill 100% height (crop overflow)
+     - Desktop: fill 100% width (crop overflow)
+     These rules override fitMode="contain" when needed.
+  */
+  .mobile-only[data-fit="contain"] .slide-image,
+  .mobile-only[data-fit="cover"] .slide-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
   }
-  
-  .video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .tablet-only[data-fit="contain"] .slide-image,
+  .tablet-only[data-fit="cover"] .slide-image,
+  .desktop-only[data-fit="contain"] .slide-image,
+  .desktop-only[data-fit="cover"] .slide-image {
     width: 100%;
     height: 100%;
-    z-index: 2;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  /* Video container */
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
   }
   
   .slide-video {
@@ -184,30 +318,7 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
     object-fit: cover;
   }
   
-  .image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-  }
-  
-  .slide-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .desktop-image {
-    display: none;
-  }
-  
-  .mobile-image {
-    display: block;
-  }
-  
+  /* Overlay */
   .overlay {
     position: absolute;
     top: 0;
@@ -228,13 +339,13 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
   }
   
   .slide-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
   }
   
   .slide-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
     margin-bottom: 2rem;
   }
@@ -257,16 +368,18 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
     transform: translateY(-2px);
   }
   
-  /* Responsive styles */
+  /* Responsive adjustments */
   @media (min-width: 768px) {
-    .desktop-image {
-      display: block;
+    .slide-title {
+      font-size: 2.5rem;
     }
     
-    .mobile-image {
-      display: none;
+    .slide-subtitle {
+      font-size: 1.5rem;
     }
-    
+  }
+
+  @media (min-width: 1024px) {
     .slide-title {
       font-size: 3.5rem;
     }
@@ -275,10 +388,17 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
       font-size: 2rem;
     }
   }
-  
+
+  /* Video responsive heights */
   @media (max-width: 767px) {
-    .slide-content {
-      height: 300px !important;
+    .video-container {
+      height: var(--vc-mobile-height);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .video-container {
+      height: 600px;
     }
   }
 </style>
@@ -291,7 +411,6 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
   import 'swiper/css/pagination';
   
   document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Swiper
     const swiper = new Swiper('.video-carousel', {
       modules: [Navigation, Pagination, Autoplay],
       slidesPerView: 1,
@@ -311,12 +430,9 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
       },
     });
     
-    // Handle video playback
-    const videos = document.querySelectorAll('.slide-video');
-    const fallbackImages = document.querySelectorAll('.fallback-image');
+    const videos = document.querySelectorAll<HTMLVideoElement>('.slide-video');
     
-    // Function to play video
-    function playVideo(video) {
+    function playVideo(video: HTMLVideoElement | null) {
       if (!video) return;
       
       const playPromise = video.play();
@@ -324,63 +440,34 @@ const isFirstSlideVideo = firstSlide.desktop?.toLowerCase().endsWith('.mp4') ||
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            // Video playback started successfully
-            const slideId = video.getAttribute('data-slide-id');
-            const fallbackImage = document.querySelector(`#${slideId} .fallback-image`);
-            if (fallbackImage) {
-              fallbackImage.style.opacity = '0';
-            }
+            console.log('Video playing');
           })
-          .catch(error => {
-            // Auto-play was prevented
+          .catch((error: unknown) => {
             console.warn('Video playback was prevented:', error);
           });
       }
     }
     
-    // Function to pause all videos
     function pauseAllVideos() {
       videos.forEach(video => {
         video.pause();
       });
     }
     
-    // Play video on active slide
     swiper.on('slideChange', () => {
       pauseAllVideos();
       
       const activeSlide = swiper.slides[swiper.activeIndex];
-      const activeVideo = activeSlide?.querySelector('.slide-video');
+      const activeVideo = activeSlide?.querySelector('.slide-video') as HTMLVideoElement | null;
       
       if (activeVideo) {
         setTimeout(() => playVideo(activeVideo), 300);
       }
     });
     
-    // Play initial video
-    const initialVideo = swiper.slides[swiper.activeIndex]?.querySelector('.slide-video');
+    const initialVideo = swiper.slides[swiper.activeIndex]?.querySelector('.slide-video') as HTMLVideoElement | null;
     if (initialVideo) {
       playVideo(initialVideo);
     }
-    
-    // Handle video loading and fallback
-    videos.forEach((video) => {
-      const slideId = video.getAttribute('data-slide-id');
-      const fallbackImage = document.querySelector(`#${slideId} .fallback-image`);
-      
-      // Hide fallback image once video can play
-      video.addEventListener('canplay', () => {
-        if (fallbackImage) {
-          fallbackImage.style.opacity = '0';
-        }
-      });
-      
-      // Show fallback image if video errors
-      video.addEventListener('error', () => {
-        if (fallbackImage) {
-          fallbackImage.style.opacity = '1';
-        }
-      });
-    });
   });
 </script>

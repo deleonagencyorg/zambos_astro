@@ -1,0 +1,27 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-maduritos-con-helado",
+  "slug": "zambos-maduritos-con-helado",
+  "title": "Zambos Maduritos con helado",
+  "people": "2",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-con-helado.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-con-helado.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 5,
+  "ingredients": [
+    "Zambos Maduritos triturados y enteros",
+    "Helado de vainilla",
+    "Salsa de caramelo o chocolate"
+  ],
+  "instructions": [
+    "Paso 1: Coloca Zambos Maduritos enteros sobre un plato hondo.",
+    "Paso 2: Sirve una bola de helado encima.",
+    "Paso 3: Agrega Maduritos triturados.",
+    "Paso 4: Vierte salsa de caramelo o chocolate al gusto."
+  ],
+  "brand": ["zambos"]
+}

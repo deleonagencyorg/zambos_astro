@@ -38,7 +38,7 @@ Todos los cambios notables en este proyecto serán documentados en este archivo.
 - Componente `LanguageSwitcher` con banderas de países (🇭🇳 para español, 🇺🇸 para inglés)
 - Detección automática de idioma basada en geolocalización por IP usando `geoip-lite`
 - Redirección inteligente que mantiene la ruta actual al cambiar de idioma
-- Soporte para metadatos multilingües (títulos, descripciones, etc.)
+- Soporte para metadatos multilingües (títulos, Descripciónes, etc.)
 - Soporte para assets multilingües (imágenes específicas por idioma)
 
 #### Efectos Parallax y Animaciones

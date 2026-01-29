@@ -1,0 +1,33 @@
+{
+  "date": "2025-09-11",
+  "id": "carne-endiablada-con-zambos-platano-picositas",
+  "slug": "carne-endiablada-con-zambos-platano-picositas",
+  "title": "Carne Endiablada con Zambos Plátano Picositas",
+  "people": "4",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/carne-endiablada-con-zambos-platano-picositas.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/carne-endiablada-con-zambos-platano-picositas.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 1440,
+  "ingredients": [
+    "1 libra de carne molida de res",
+    "1 taza de tomate picado",
+    "1 taza de cebolla morada picada",
+    "1 taza de chile dulce picado",
+    "1 cucharadita de comino",
+    "1 taza de cilantro picado",
+    "Salpimentar al gusto",
+    "1 taza de jugo de limón",
+    "2 cucharadas de salsa negra",
+    "1 taza de agua",
+    "1 bolsa familiar de Zambos Plátano Picositas"
+  ],
+  "instructions": [
+    "Paso 1: Colocar todos los ingredientes en un tazón y dejar reposar en la Refrigeradora por lo menos 24 horas.",
+    "Paso 2: Servir acompañado de Zambos Plátano Picositas"
+  ],
+  "brand": ["zambos"]
+}

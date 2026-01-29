@@ -1,0 +1,31 @@
+{
+  "date": "2025-09-11",
+  "id": "guacamole-con-zambos-platano-originales",
+  "slug": "guacamole-con-zambos-platano-originales",
+  "title": "Guacamole con Zambos Plátano Originales",
+  "people": "4",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/guacamole-con-zambos-platano-originales.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/guacamole-con-zambos-platano-originales.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 20,
+  "ingredients": [
+    "2 aguacates maduros",
+    "1/2 taza de cebolla picada",
+    "1/4 taza de culantro picado",
+    "1/4 taza de mantequilla crema",
+    "Salpimentar al gusto",
+    "2 cucharadas de jugo de limón",
+    "1 huevo cocido picado",
+    "1 bolsa familiar de Zambos Plátano Originales"
+  ],
+  "instructions": [
+    "Paso 1: En el procesador de alimentos colocar el aguacate, la cebolla, el culantro, mantequilla crema, el limón y huevo. Luego procesar hasta tener una mezcla homogénea.",
+    "Paso 2: Sazonar con sal y pimienta al gusto.",
+    "Paso 3: Refrigerar y servir colocando una porción en las canastitas. Acompañar con los Zambos Plátano Originales."
+  ],
+  "brand": ["zambos"]
+}

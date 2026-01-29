@@ -17,6 +17,22 @@ const { currentLang, headerColorConfig } = Astro.props;
 const socialMedia = t('social_media', { namespace: 'common', locale: currentLang }) as any;
 const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) as any[];
 
+// Reordenar: asegurar que "Blog" esté antes de "Contacto/Contact"
+const orderedMenuItems = (() => {
+  const arr = Array.isArray(menuItems) ? [...menuItems] : [];
+  const isEs = currentLang === 'es';
+  const blogIdx = arr.findIndex(i => (i.text || '').toLowerCase() === 'blog');
+  const contactIdx = arr.findIndex(i => {
+    const txt = (i.text || '').toLowerCase();
+    return txt === (isEs ? 'contacto' : 'contact');
+  });
+  if (blogIdx >= 0 && contactIdx >= 0 && blogIdx > contactIdx) {
+    const [blogItem] = arr.splice(blogIdx, 1);
+    arr.splice(contactIdx, 0, blogItem);
+  }
+  return arr;
+})();
+
 // Traducciones
 const openMenuLabel = t('menu_labels.open_main_menu', { namespace: 'common', locale: currentLang }) || 'Open main menu';
 const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', locale: currentLang }) || 'Close main menu';
@@ -24,7 +40,7 @@ const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', l
 ---
 
 <!-- Menú Móvil Global -->
-<div id="mobile-menu" class="hidden md:hidden fixed inset-0 w-screen h-screen z-[2147483647] bg-primary bg-opacity-80 overflow-y-auto" data-current-lang={currentLang}>
+<div id="mobile-menu" class="hidden md:hidden fixed inset-0 w-screen h-screen z-[2147483647] bg-greenDark  overflow-y-auto" data-current-lang={currentLang}>
   <div class="container mx-auto px-4 py-8">
     <div class="flex justify-between items-center mb-8">
       <a href={`/${currentLang}/`} class="block">
@@ -38,7 +54,7 @@ const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', l
       </button>
     </div>
     <nav class="flex flex-col items-center space-y-3 text-center w-full text-white" id="mobile-menu-items">
-      {menuItems && menuItems.map((item: any) => (
+      {orderedMenuItems && orderedMenuItems.map((item: any) => (
         <div class="w-full">
           <div class="flex items-center justify-center text-white">
             {item.submenu ? (
@@ -144,6 +160,26 @@ function toggleSubmenu(submenuContainer: Element, toggleButton: Element): void {
   }
 }
 
+// Cerrar el menú cuando se hace clic en un link real del menú
+function handleMenuLinkClick(e: Event): void {
+  const target = e.target as Element | null;
+  const link = target?.closest('a') as HTMLAnchorElement | null;
+  if (!link) return;
+
+  const href = link.getAttribute('href') || '';
+  // Ignorar links que solo abren submenús
+  if (!href || href === '#' || href.startsWith('#')) return;
+
+  handleCloseButtonClick();
+}
+
+// Cerrar menú al cambiar a desktop (por resize)
+function handleResizeCloseIfDesktop(): void {
+  if (window.innerWidth >= 768) {
+    handleCloseButtonClick();
+  }
+}
+
 // Función para manejar el clic en el botón de cierre del menú móvil
 function handleCloseButtonClick() {
   const mobileMenu = document.getElementById('mobile-menu');
@@ -222,6 +258,17 @@ function initMobileMenu() {
     closeButton.removeEventListener('click', handleCloseButtonClick);
     closeButton.addEventListener('click', handleCloseButtonClick);
   }
+
+  // Cerrar al hacer clic en un enlace del menú
+  const menuItems = document.getElementById('mobile-menu-items');
+  if (menuItems) {
+    menuItems.removeEventListener('click', handleMenuLinkClick);
+    menuItems.addEventListener('click', handleMenuLinkClick);
+  }
+
+  // Cerrar al redimensionar hacia desktop
+  window.removeEventListener('resize', handleResizeCloseIfDesktop);
+  window.addEventListener('resize', handleResizeCloseIfDesktop);
   
   // Toggles del menú (primer nivel)
   const menuToggles = document.querySelectorAll('.menu-toggle');
@@ -258,4 +305,9 @@ document.addEventListener('DOMContentLoaded', initMobileMenu);
 // Ejecutar cuando Astro navega a una nueva página
 document.addEventListener('astro:page-load', initMobileMenu);
 document.addEventListener('astro:after-swap', initMobileMenu);
+
+// Inicialización inmediata si el DOM ya está listo
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  setTimeout(initMobileMenu, 50);
+}
 </script>

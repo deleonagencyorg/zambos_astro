@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { currentLang } = Astro.props;
 
 // Set header color config for participacion page
-const headerColorConfig = getHeaderColors('zibas-creators');
+const headerColorConfig = getHeaderColors('participacion');
 ---
 
 <ParticipacionView currentLang={currentLang} headerColorConfig={headerColorConfig} />

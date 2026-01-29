@@ -1,6 +1,6 @@
-# Zibas Astro
+# Zambos Astro
 
-Sitio web multilingüe para Zibas, construido con Astro y Tailwind CSS. Incluye sistema de internacionalización, efectos parallax, animaciones, y más.
+Sitio web multilingüe para Zambos, construido con Astro y Tailwind CSS. Incluye sistema de internacionalización, efectos parallax, animaciones, y más.
 
 ![Versión](https://img.shields.io/badge/versión-1.0.0-brightgreen)
 ![Astro](https://img.shields.io/badge/Astro-5.8.0-orange)
@@ -62,7 +62,7 @@ const locale = getLocale();
 
 ### Metadatos multilingües
 
-Los metadatos (títulos, descripciones) están organizados en una sección `meta` en los archivos de traducción:
+Los metadatos (títulos, Descripciónes) están organizados en una sección `meta` en los archivos de traducción:
 
 ```json
 {

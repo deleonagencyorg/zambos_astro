@@ -4,101 +4,335 @@ import { t } from '../../i18n/i18n';
 import type { Locale } from '../../i18n/i18n';
 import { getLocale } from '../../i18n/i18n';
 import './styles.css';
+import Subscription from '../../components/subscription/index.astro';
 
 const currentLang = getLocale();
 const products = t('items', { namespace: 'products', locale: currentLang });
 const categories = t('categories', { namespace: 'products', locale: currentLang });
+const pageAssets = t('page', { namespace: 'products', locale: currentLang });
 
-// Obtener categorías únicas de los productos
-const uniqueCategories = Object.keys(categories);
+// Obtener categorías únicas de los productos desde los items
+const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.category))).filter(Boolean);
 ---
 
-<div class="bg-white py-12">
-  
-  <div class="container mx-auto px-4">
-    <h1 class="text-4xl font-bold text-center mb-4">{t('page.title', { namespace: 'products' })}</h1>
-    <p class="text-lg text-gray-600 text-center mb-10 max-w-3xl mx-auto">{t('page.description', { namespace: 'products' })}</p>
+<div class="products-page min-h-screen bg-[#00A650] relative overflow-hidden">
+  <!-- Decoración superior izquierda (imagen de plátano/chip) -->
+  <!-- <div class="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 pointer-events-none z-20">
+    <img 
+      src="/images/decorations/platano-decoration.png" 
+      alt="" 
+      class="w-full h-full object-contain"
+      aria-hidden="true"
+    />
+  </div> -->
+
+  <div class="container mx-auto px-4 py-12 relative z-10">
+    <!-- Encabezado -->
+    <div class="text-center mb-8">
+      <h1 class="text-5xl md:text-7xl font-black italic text-white mb-3 tracking-wide font-title">
+        {currentLang === 'es' ? 'PRODUCTOS' : 'PRODUCTS'}
+      </h1>
+      <p class="text-white text-lg md:text-xl italic">
+        {currentLang === 'es' ? 'Descubre toda nuestra variedad de sabores' : 'Discover our wide variety of flavors'}
+      </p>
+    </div>
     
     <!-- Filtro de categorías -->
-    <div class="flex flex-wrap justify-center mb-8 gap-2">
-      <button type="button" class="category-filter active" data-category="all">
-        {categories.all}
+    <div class="flex flex-wrap justify-center mb-10 gap-3">
+      <!-- Botón TODOS LOS PRODUCTOS - Borde verde, fondo blanco -->
+      <button 
+        type="button" 
+        class="category-filter category-filter--all active px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 uppercase tracking-wide"
+        data-category="all"
+      >
+        {currentLang === 'es' ? 'TODOS LOS PRODUCTOS' : 'ALL PRODUCTS'}
       </button>
-      {uniqueCategories.filter(cat => cat !== 'all').map((category) => (
-        <button type="button" class="category-filter" data-category={category}>
-          {categories[category]}
+
+      {uniqueCategories.map((cat: string) => (
+        <button
+          type="button"
+          class="category-filter category-filter--normal px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 uppercase tracking-wide"
+          data-category={cat}
+        >
+          {categories?.[cat] || cat}
         </button>
       ))}
     </div>
     
     {products.length === 0 ? (
-      <p class="text-center text-gray-500">{t('page.no_products', { namespace: 'products' })}</p>
+      <p class="text-center text-white text-lg">{currentLang === 'es' ? 'No hay productos disponibles' : 'No products available'}</p>
     ) : (
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
-        {products.map((product: any) => (
-          <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300" data-category={product.category} transition:animate="fade">
-            <div class="relative h-48 overflow-hidden">
+      <>
+        <div class="grid max-[319px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto" id="products-grid">
+          {products.map((product: any) => (
+            <div 
+              class="product-card bg-[#FFF176] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative" 
+              data-category={product.category} 
+              transition:animate="fade"
+            >
+            <!-- Badge de categoría -->
+            <div class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 md:top-4 md:right-4 z-10">
+              <span class="bg-[#E31E24] text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase tracking-wide">
+                {categories[product.category] || product.category}
+              </span>
+            </div>
+
+            {product.new && (
+              <div class="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 md:top-4 md:left-4 z-10">
+                <span class="bg-[#FCD34D] text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 tracking-wide">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none" class="w-3 h-3 sm:w-[13px] sm:h-[13px] md:w-[15px] md:h-[15px]">
+<path d="M6.88572 1.75884C6.9125 1.61547 6.98858 1.48598 7.10078 1.39279C7.21298 1.29961 7.35424 1.2486 7.50009 1.2486C7.64595 1.2486 7.7872 1.29961 7.89941 1.39279C8.01161 1.48598 8.08769 1.61547 8.11447 1.75884L8.77134 5.23259C8.818 5.47956 8.93802 5.70673 9.11574 5.88445C9.29346 6.06217 9.52063 6.18219 9.76759 6.22884L13.2413 6.88572C13.3847 6.9125 13.5142 6.98858 13.6074 7.10078C13.7006 7.21298 13.7516 7.35424 13.7516 7.50009C13.7516 7.64595 13.7006 7.7872 13.6074 7.89941C13.5142 8.01161 13.3847 8.08769 13.2413 8.11447L9.76759 8.77134C9.52063 8.818 9.29346 8.93802 9.11574 9.11574C8.93802 9.29346 8.818 9.52063 8.77134 9.76759L8.11447 13.2413C8.08769 13.3847 8.01161 13.5142 7.89941 13.6074C7.7872 13.7006 7.64595 13.7516 7.50009 13.7516C7.35424 13.7516 7.21298 13.7006 7.10078 13.6074C6.98858 13.5142 6.9125 13.3847 6.88572 13.2413L6.22884 9.76759C6.18219 9.52063 6.06217 9.29346 5.88445 9.11574C5.70673 8.93802 5.47956 8.818 5.23259 8.77134L1.75884 8.11447C1.61547 8.08769 1.48598 8.01161 1.39279 7.89941C1.29961 7.7872 1.2486 7.64595 1.2486 7.50009C1.2486 7.35424 1.29961 7.21298 1.39279 7.10078C1.48598 6.98858 1.61547 6.9125 1.75884 6.88572L5.23259 6.22884C5.47956 6.18219 5.70673 6.06217 5.88445 5.88445C6.06217 5.70673 6.18219 5.47956 6.22884 5.23259L6.88572 1.75884Z" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5001 1.25006V3.75006" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.75 2.49994H11.25" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.50006 13.75C3.19042 13.75 3.75006 13.1904 3.75006 12.5C3.75006 11.8096 3.19042 11.25 2.50006 11.25C1.80971 11.25 1.25006 11.8096 1.25006 12.5C1.25006 13.1904 1.80971 13.75 2.50006 13.75Z" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                  {currentLang === 'es' ? 'Nuevo' : 'New'}
+                </span>
+              </div>
+            )}
+
+            <!-- Imagen del producto -->
+            <div class="relative h-48 sm:h-56 md:h-80 flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-hidden">
               <img 
-                src={product.image || '/images/products/placeholder.jpg'} 
-                alt={product.title} 
-                class="w-full h-full object-cover"
+                src={product.image} 
+                alt={product.name || product.title} 
+                class="max-h-full max-w-full object-contain drop-shadow-xl transition-transform duration-300 hover:scale-105"
                 transition:name={`product-image-${product.id}`}
               />
             </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">{product.title}</h3>
-              <p class="text-gray-600 mb-4 line-clamp-2">{product.short_description}</p>
-              <div class="flex justify-between items-center">
-                <div class="text-sm text-gray-500 capitalize">{categories[product.category]}</div>
-                <a 
-                  href={`/${currentLang}/productos/${product.id}`} 
-                  class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded-md transition-colors duration-300"
-                >
-                  {t('page.view_details', { namespace: 'products' })}
-                </a>
-              </div>
+
+            <!-- Contenido -->
+            <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6">
+              <h3 class="text-base sm:text-lg md:text-xl font-black text-black mb-2 md:mb-3 uppercase leading-tight tracking-wide">
+                {product.name || product.title}
+              </h3>
+              <p class="text-gray-700 text-xs sm:text-sm mb-3 md:mb-5 line-clamp-2 min-h-[36px] sm:min-h-[44px] leading-relaxed">
+                {product.short_description || product.description}
+              </p>
+              
+              <!-- Botón Ver detalles - VERDE -->
+              <a 
+                href={`/${currentLang}/productos/${product.id}`} 
+                class="block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300"
+              >
+                {pageAssets?.view_details || 'Ver detalles'}
+              </a>
             </div>
-          </div>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
+        <button
+          id="products-load-more"
+          type="button"
+          class="mt-8 mx-auto block w-fit bg-[#FCD34D] text-[#008C44] font-bold uppercase tracking-wide px-8 py-3 rounded-full transition-opacity duration-300"
+        >
+          {currentLang === 'es' ? 'Cargar más' : 'Load more'}
+        </button>
+      </>
     )}
   </div>
+  <section class="w-full">
+    <Subscription />
+  </section>
 </div>
+
+<style>
+  /* Estilos de tags de categoría */
+  /* Inactivo: fondo verde oscuro, texto blanco */
+  .category-filter--all,
+  .category-filter--normal {
+    background-color: #008C44; /* greenDark */
+    border: 2px solid #008C44;
+    color: #FFFFFF;
+  }
+
+  /* Hover inactivo: mantiene verde oscuro */
+  .category-filter--all:hover,
+  .category-filter--normal:hover {
+    background-color: #008C44;
+    border-color: #008C44;
+    color: #FFFFFF;
+  }
+
+  /* Activo: fondo amarillo, texto verde oscuro */
+  .category-filter--all.active,
+  .category-filter--normal.active {
+    background-color: #FCD34D; /* yellow */
+    border-color: #FCD34D;
+    color: #008C44; /* greenDark text */
+  }
+
+  /* Compactar filtros en mobile */
+  @media (max-width: 640px) {
+    .category-filter {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.75rem; /* 12px */
+      border-radius: 0.5rem; /* rounded-md */
+    }
+  }
+
+  /* Botones de categoría nueva - Gris oscuro */
+  .category-filter--new {
+    background-color: #4A5568;
+    border: 2px solid #4A5568;
+    color: white;
+  }
+  
+  .category-filter--new:hover {
+    background-color: #2D3748;
+    border-color: #2D3748;
+  }
+  
+  .category-filter--new.active {
+    background-color: #2D3748;
+    border-color: #2D3748;
+  }
+
+  /* Animación para las cards */
+  .product-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Delay escalonado para las cards */
+  .product-card:nth-child(1) { animation-delay: 0.1s; }
+  .product-card:nth-child(2) { animation-delay: 0.15s; }
+  .product-card:nth-child(3) { animation-delay: 0.2s; }
+  .product-card:nth-child(4) { animation-delay: 0.25s; }
+  .product-card:nth-child(5) { animation-delay: 0.3s; }
+  .product-card:nth-child(6) { animation-delay: 0.35s; }
+  .product-card:nth-child(7) { animation-delay: 0.4s; }
+  .product-card:nth-child(8) { animation-delay: 0.45s; }
+  .product-card:nth-child(9) { animation-delay: 0.5s; }
+  .product-card:nth-child(10) { animation-delay: 0.55s; }
+  .product-card:nth-child(11) { animation-delay: 0.6s; }
+  .product-card:nth-child(12) { animation-delay: 0.65s; }
+
+  /* Line clamp para descripción */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
 
 <script>
   // Fix para las imágenes que no cargan
-document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    img.addEventListener('error', function() {
-      this.src = '/images/products/placeholder.jpg';
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      img.addEventListener('error', function() {
+        this.src = '/images/products/placeholder.jpg';
+      });
     });
-  });
-  
-  // Filtro de categorías
-  const filterButtons = document.querySelectorAll('.category-filter');
-  const productCards = document.querySelectorAll('.product-card');
-  
-  filterButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      // Actualizar estado activo de los botones
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      
-      const category = button.getAttribute('data-category') || 'all';
-      
-      // Filtrar productos
-      productCards.forEach(cardEl => {
+    
+    // Filtro de categorías
+    const filterButtons = document.querySelectorAll('.category-filter');
+    const productCards = document.querySelectorAll('.product-card');
+    const loadMoreButton = document.getElementById('products-load-more') as HTMLButtonElement | null;
+
+    let currentCategory = 'all';
+    let visibleCount = 0;
+
+    function isMobile() {
+      return window.matchMedia('(max-width: 767px)').matches;
+    }
+
+    function isTablet() {
+      return window.matchMedia('(min-width: 768px) and (max-width: 1023px)').matches;
+    }
+
+    function getInitialCount() {
+      if (isMobile()) return 4;
+      if (isTablet()) return 3;
+      return 6;
+    }
+
+    function getPageSize() {
+      return 6;
+    }
+
+    function updateProductsVisibility(resetAnimation: boolean) {
+      const limit = visibleCount;
+      let visibleIndex = 0;
+      let shown = 0;
+      let totalMatching = 0;
+
+      productCards.forEach((cardEl) => {
         const card = cardEl as HTMLElement;
-        if (category === 'all' || card.getAttribute('data-category') === category) {
+        const cardCategory = card.getAttribute('data-category');
+        const matches = currentCategory === 'all' || cardCategory === currentCategory;
+
+        if (matches) {
+          totalMatching++;
+
+          if (shown >= limit) {
+            card.style.display = 'none';
+            return;
+          }
+
           card.style.display = 'block';
+          if (resetAnimation) {
+            card.style.animation = 'none';
+            card.offsetHeight;
+            card.style.animation = `fadeInUp 0.5s ease-out forwards`;
+          }
+          card.style.animationDelay = `${visibleIndex * 0.05}s`;
+          visibleIndex++;
+          shown++;
         } else {
           card.style.display = 'none';
         }
       });
-    });
-  });
-});
-</script>
 
+      if (!loadMoreButton) return;
+      if (limit >= totalMatching) {
+        loadMoreButton.style.display = 'none';
+      } else {
+        loadMoreButton.style.display = 'block';
+      }
+    }
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Actualizar estado activo de los botones
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        currentCategory = button.getAttribute('data-category') || 'all';
+        visibleCount = getInitialCount();
+        updateProductsVisibility(true);
+      });
+    });
+
+    if (loadMoreButton) {
+      loadMoreButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        visibleCount += getPageSize();
+        updateProductsVisibility(false);
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      visibleCount = getInitialCount();
+      updateProductsVisibility(false);
+    });
+
+    visibleCount = getInitialCount();
+    updateProductsVisibility(false);
+  });
+</script>

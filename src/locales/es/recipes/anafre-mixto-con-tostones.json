@@ -1,0 +1,29 @@
+{
+  "date": "2025-09-11",
+  "id": "anafre-mixto-con-tostones",
+  "slug": "anafre-mixto-con-tostones",
+  "title": "Anafre mixto con tostones",
+  "people": "4",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/anafre-mixto-con-tostones.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/anafre-mixto-con-tostones.webp"
+  ],
+  "type": "image",
+  "category": "brunch",
+  "preparation_time": 20,
+  "ingredients": [
+    "1 libra de frijoles licuados",
+    "½ libra de quesillo rallado",
+    "1 bolsa de Chicharrón del Rancho picado",
+    "Mantequilla crema opcional",
+    "1 bolsa de TOSTONES DE YUMMIES"
+  ],
+  "instructions": [
+    "Paso 1: En una olla colocamos los frijoles y le agregamos el quesillo para mezclar y que se derrita al mismo tiempo.",
+    "Paso 2: Una vez que el quesillo y los frijoles estén bien mezclados agregamos los chicharrones y volvemos a mezclar.",
+    "Paso 3: Una vez listos transferimos a un anafre para servir con los tostones.",
+    "Paso 4: Agregar un punto de mantequilla si se desea."
+  ],
+  "brand": ["yummies", "delrancho"]
+}

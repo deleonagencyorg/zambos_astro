@@ -1,0 +1,28 @@
+{
+      "date": "2025-09-11",
+      "id": "canasta-de-tortilla-de-maiz-con-zambos-platano-maduritos",
+      "slug": "canasta-de-tortilla-de-maiz-con-zambos-platano-maduritos",
+      "title": "Canasta de Tortilla de Maíz con Zambos Plátano Maduritos",
+      "people": "8",
+      "difficulty": "Fácil",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/canasta-de-tortilla-de-maiz-con-zambos.webp",
+      "gallery": [
+         "https://snack.yummiespromociones.com/SnacksyummiesAssets/canasta-de-tortilla-de-maiz-con-zambos.webp"
+      ],      
+      "type": "image",
+      "category": "snack",
+      "preparation_time": 15,
+      "ingredients": [
+        "1 tazas de maíz dulce",
+        "½ taza de cebolla morada",
+        "½ taza de culantro picado",
+        "1 taza de tomate picado",
+        "2 cucharadas de mantequilla crema",
+        "1 bolsa familiar de Zambos Plátano Maduritos"
+      ],
+      "instructions": [
+        "Paso 1. Colocar en un tazón todos los ingredientes y mezclarlos.",
+        "Paso 2. Servir en una canastilla de tortilla acompañado con Zambos Plátano Madurito."
+      ],
+      "brand": ["zambos"]
+    }

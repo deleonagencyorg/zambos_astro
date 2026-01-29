@@ -1,0 +1,30 @@
+{
+  "date": "2025-09-11",
+  "id": "tostones-con-guacamole",
+  "slug": "tostones-con-guacamole",
+  "title": "Tostones con guacamole",
+  "people": "3",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/tostones-con-guacamole.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/tostones-con-guacamole.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 20,
+  "ingredients": [
+    "2 Aguacates en su punto",
+    "Jugo de un limón",
+    "2 huevos cocidos",
+    "Salpimentar al gusto",
+    "4 cucharadas de cilantro picado",
+    "1 bolsa de TOSTONES de YUMMIES"
+  ],
+  "instructions": [
+    "Paso 1: En un tazón colocamos el aguacate y con los dientes de un tenedor las machacamos.",
+    "Paso 2: Los huevos una vez que le quitamos la concha también los picamos y se los agregamos al aguacate.",
+    "Paso 3: Sazonamos con la sal, la pimienta, el culantro y el jugo de limón.",
+    "Paso 4: Mezclamos todos los ingredientes perfectamente bien y refrigeramos para ser servidos después con los tostones."
+  ],
+  "brand": ["zambos"]
+}

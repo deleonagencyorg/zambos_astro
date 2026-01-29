@@ -65,13 +65,6 @@ export const routesConfig: RouteConfig[] = [
     metaDescriptionKey: 'meta.about_us.description',
   },
   {
-    id: 'zibas_creators',
-    slugs: { es: 'zibas-creators',},
-    contentComponent: '@/views/ZibasCreators/index.astro',
-    metaTitleKey: 'meta.zibas_creators.title',
-    metaDescriptionKey: 'meta.zibas_creators.description',
-  },
-  {
     id: 'participacion',
     slugs: { es: 'participacion',},
     contentComponent: '@/views/Participacion/index.astro',
@@ -85,6 +78,13 @@ export const routesConfig: RouteConfig[] = [
     metaTitleKey: 'meta.jurados.title',
     metaDescriptionKey: 'meta.jurados.description',
   },
+  {
+    id: 'truck',
+    slugs: { es: 'camion', en: 'truck' },
+    contentComponent: '@/views/Truck/index.astro',
+    metaTitleKey: 'meta.truck.title',
+    metaDescriptionKey: 'meta.truck.description',
+  }
   // ... Agrega más rutas aquí
 ];
 

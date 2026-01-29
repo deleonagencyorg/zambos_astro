@@ -1,226 +1,455 @@
 ---
 import LazyImage from '../common/LazyImage.astro';
+import { getLocale } from '../../i18n/i18n';
 
 export interface GalleryItem {
   url: string;
   alt?: string;
+  likes?: number;
+  postUrl?: string;
 }
 
 export interface Props {
-  items: GalleryItem[];
-  columns?: number; // desktop columns
+  posts: GalleryItem[];
   title?: string;
+  titleColor?: string;
+  backgroundColor?: string;
+  buttonColor?: string;
+  buttonText?: string;
   className?: string;
 }
 
 const {
-  items = [],
-  columns = 3,
-  title = '',
+  posts = [],
+  title = 'MIRA NUESTRO FEED',
+  titleColor = '#FFFFFF',
+  backgroundColor = '#0AA544',
+  buttonColor = '#FF3333',
+  buttonText = 'Ver post',
   className = ''
-} = Astro.props as Props;
+} = Astro.props;
+
+const currentLang = getLocale();
+
+// Limitar a máximo 4 posts para el diseño
+const displayPosts = posts.slice(0, 4);
 ---
 
-<section class={`w-full ${className}`} data-gallery-root> 
-  
-  <div class="gallery-viewport">
-    <div class="masonry" style={`--cols: ${columns}; --gap: 1rem;`}>
-      {items.map((item, idx) => (
-        <div class="masonry-item">
-          <button class="block w-full text-left focus:outline-none" data-index={idx} aria-label={item.alt || 'Abrir imagen'}>
-            <LazyImage src={item.url} alt={item.alt || ''} class="w-full h-auto rounded-lg block" />
-          </button>
-        </div>
-      ))}
-    </div>
+<section 
+  class={`instagram-feed-section ${className}`}
+  style={`background-color: ${backgroundColor}`}
+  data-feed-root
+>
+  <!-- Título -->
+  <div class="feed-header">
+    <h2 class="feed-title" style={`color: ${titleColor}`}>
+      {currentLang === 'es' ? 'MIRA NUESTRO FEED' : 'CHECK OUT OUR FEED'}
+    </h2>
   </div>
 
-  <!-- Modal Slider -->
-  <div id="gallery-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/80 p-4">
-    <div class="relative w-full max-w-5xl">
-      <!-- Close -->
-      <button id="gallery-close" class="absolute -top-2 -right-2 md:top-0 md:right-0 bg-white/90 hover:bg-white text-black rounded-full w-9 h-9 flex items-center justify-center shadow" aria-label="Cerrar">
-        ✕
-      </button>
-      <!-- Prev -->
-      <button id="gallery-prev" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow" aria-label="Anterior">
-        ‹
-      </button>
-      <!-- Next -->
-      <button id="gallery-next" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black rounded-full w-10 h-10 flex items-center justify-center shadow" aria-label="Siguiente">
-        ›
-      </button>
-      <!-- Image -->
-      <div class="bg-transparent rounded-lg overflow-hidden">
-        <img id="gallery-image" alt="" class="mx-auto max-h-[80vh] w-auto rounded-lg shadow-lg" />
-        <p id="gallery-caption" class="mt-3 text-center text-white/90 text-sm"></p>
+  <!-- Grid de Posts -->
+  <div class="posts-grid">
+    {displayPosts.map((post, index) => (
+      <div class="post-item">
+        <!-- Card con Imagen -->
+        <div class="post-card" data-post-index={index}>
+          <div class="post-image-wrapper">
+            <!-- Icono de Instagram -->
+            <div class="instagram-icon">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                width="48" 
+                height="48" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="currentColor" 
+                stroke-width="2" 
+                stroke-linecap="round" 
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </div>
+
+            <LazyImage 
+              src={post.url} 
+              alt={post.alt || 'Instagram post'} 
+              class="post-image"
+            />
+            
+            <!-- Overlay con gradiente -->
+            <div class="post-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Contenido Abajo (Likes + Botón) -->
+        <div class="post-content">
+          <!-- Likes -->
+          <div class="post-likes">
+            <svg width="22" height="20" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16.622 9.54998L10.965 15.208C10.5899 15.5829 10.0813 15.7936 9.55098 15.7936C9.02066 15.7936 8.51204 15.5829 8.13698 15.208L2.47998 9.55098C2.01235 9.08743 1.64089 8.53608 1.38691 7.92858C1.13294 7.32108 1.00145 6.6694 1.00001 6.01095C0.99857 5.3525 1.1272 4.70025 1.37851 4.09164C1.62982 3.48304 1.99887 2.93006 2.46447 2.46447C2.93006 1.99887 3.48304 1.62982 4.09164 1.37851C4.70025 1.1272 5.3525 0.99857 6.01095 1.00001C6.6694 1.00145 7.32108 1.13294 7.92858 1.38691C8.53608 1.64089 9.08743 2.01235 9.55098 2.47998C10.4926 1.56185 11.7579 1.05165 13.073 1.05989C14.3881 1.06813 15.647 1.59415 16.577 2.52401C17.507 3.45386 18.0332 4.71268 18.0416 6.02776C18.05 7.34284 17.54 8.60829 16.622 9.54998Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>{post.likes || 130} likes</span>
+          </div>
+
+          <!-- Botón Ver Post -->
+          <a 
+            href={post.postUrl || '#'}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="view-post-btn"
+            style={`background-color: ${buttonColor}`}
+          >
+            {buttonText}
+          </a>
+        </div>
       </div>
+    ))}
+  </div>
+
+  <!-- Modal para ver imagen completa -->
+  <div id="feed-modal" class="feed-modal hidden">
+    <button id="modal-close" class="modal-close" aria-label="Cerrar">
+      ✕
+    </button>
+    <div class="modal-content">
+      <img id="modal-image" alt="" class="modal-image" />
     </div>
   </div>
 </section>
 
 <style>
-  /* Fixed viewport with overflow hidden */
-  .gallery-viewport {
-    height: 400px; /* mobile */
+  .instagram-feed-section {
+    width: 100%;
+    padding: 4rem 2rem;
     overflow: hidden;
   }
-  @media (min-width: 768px) {
-    .gallery-viewport { height: 500px; }
-  }
-  @media (min-width: 1024px) {
-    .gallery-viewport { height: 800px; }
+
+  /* Header */
+  .feed-header {
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
-  .masonry {
-    column-count: 1;
-    column-gap: var(--gap, 1rem);
-  }
-  .masonry-item {
-    break-inside: avoid;
-    -webkit-column-break-inside: avoid;
-    margin-bottom: var(--gap, 1rem);
-    transition: opacity 300ms ease; /* smooth fade */
-  }
-  .fade-out { opacity: 0; }
-  .fade-in { opacity: 1; }
-
-  @media (min-width: 768px) {
-    .masonry { column-count: var(--cols, 3); }
+  .feed-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    margin: 0;
   }
 
-  /* Reduce motion preference */
-  @media (prefers-reduced-motion: reduce) {
-    .masonry-item { transition: none; }
+  /* Grid de Posts */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Item que contiene la card + contenido */
+  .post-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Card de Post (solo imagen) */
+  .post-card {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Efecto de borde en el cuarto elemento */
+  .post-item:nth-child(4) .post-card {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* Imagen de Fondo */
+  .post-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .post-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Overlay con gradiente */
+  .post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+  }
+
+  /* Icono de Instagram dentro de la imagen */
+  .instagram-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+  }
+
+  /* Contenido ABAJO de la imagen */
+  .post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  /* Likes */
+  .post-likes {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .post-likes svg {
+    color: white;
+  }
+
+  /* Botón Ver Post */
+  .view-post-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .view-post-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Modal */
+  .feed-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .feed-modal.hidden {
+    display: none;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+
+  .modal-close:hover {
+    transform: scale(1.1);
+  }
+
+  .modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  /* Responsive: Tablet */
+  @media (max-width: 1024px) {
+    .feed-title {
+      font-size: 3rem;
+    }
+
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .instagram-icon svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  /* Responsive: Mobile */
+  @media (max-width: 768px) {
+    .instagram-feed-section {
+      padding: 2rem 1rem;
+    }
+
+    .feed-header {
+      margin-bottom: 2rem;
+    }
+
+    .feed-title {
+      font-size: 2rem;
+    }
+
+    .posts-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .post-item {
+      gap: 0.75rem;
+    }
+
+    .instagram-icon svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    .post-likes {
+      font-size: 0.875rem;
+    }
+
+    .view-post-btn {
+      font-size: 0.875rem;
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  /* Responsive: Small Mobile */
+  @media (max-width: 480px) {
+    .feed-title {
+      font-size: 1.5rem;
+    }
+
+    .posts-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .post-card {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .instagram-icon svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .post-likes {
+      font-size: 0.75rem;
+    }
+
+    .view-post-btn {
+      font-size: 0.75rem;
+      padding: 0.625rem 1rem;
+    }
   }
 </style>
 
-<script is:inline>
-  (() => {
-    function init(section) {
-      if (!section || section.dataset.galleryInit === '1') return;
-      section.dataset.galleryInit = '1';
+<script>
+  function initFeed() {
+    const section = document.querySelector('[data-feed-root]');
+    if (!section || section.dataset.feedInit === '1') return;
+    section.dataset.feedInit = '1';
 
-      const grid = section.querySelector('.masonry');
-      if (!grid) return;
+    const modal = section.querySelector('#feed-modal') as HTMLElement;
+    const modalImage = section.querySelector('#modal-image') as HTMLImageElement;
+    const modalClose = section.querySelector('#modal-close') as HTMLButtonElement;
+    const postCards = section.querySelectorAll('.post-card');
 
-      const modal = section.querySelector('#gallery-modal');
-      const imgEl = section.querySelector('#gallery-image');
-      const capEl = section.querySelector('#gallery-caption');
-      const btnClose = section.querySelector('#gallery-close');
-      const btnPrev = section.querySelector('#gallery-prev');
-      const btnNext = section.querySelector('#gallery-next');
+    // Abrir modal al hacer click en la imagen
+    postCards.forEach((card) => {
+      const img = card.querySelector('.post-image') as HTMLImageElement;
+      if (!img) return;
 
-      const thumbs = Array.from(grid.querySelectorAll('button[data-index] img'));
-      const data = thumbs.map((img) => ({ url: img.currentSrc || img.src, alt: img.alt || '' }));
-      let index = 0;
-      let isOpen = false;
+      card.addEventListener('click', (e) => {
+        // No abrir modal si se clickeó el botón
+        const target = e.target as HTMLElement;
+        if (target.closest('.view-post-btn')) return;
 
-      function show(i) {
-        if (!imgEl) return;
-        index = (i + data.length) % data.length;
-        const item = data[index];
-        imgEl.src = item.url;
-        imgEl.alt = item.alt || '';
-        if (capEl) capEl.textContent = item.alt || '';
-      }
+        if (modal && modalImage) {
+          modalImage.src = img.src;
+          modalImage.alt = img.alt;
+          modal.classList.remove('hidden');
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    });
 
-      function onOpen(i) {
-        if (!modal) return;
-        isOpen = true;
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-        show(i);
-      }
-
-      function onClose() {
-        if (!modal) return;
-        isOpen = false;
+    // Cerrar modal
+    const closeModal = () => {
+      if (modal) {
         modal.classList.add('hidden');
-        modal.classList.remove('flex');
+        modal.style.display = 'none';
         document.body.style.overflow = '';
       }
+    };
 
-      function onPrev() { show(index - 1); }
-      function onNext() { show(index + 1); }
+    modalClose?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
 
-      // Click handlers on thumbnails
-      grid.addEventListener('click', (e) => {
-        const target = e.target instanceof Element ? e.target : null;
-        const btn = target ? target.closest('button[data-index]') : null;
-        if (!btn) return;
-        const i = Number(btn.getAttribute('data-index') || '0');
-        pauseRotation();
-        onOpen(i);
-      });
-
-      // Controls
-      btnClose && btnClose.addEventListener('click', onClose);
-      btnPrev && btnPrev.addEventListener('click', onPrev);
-      btnNext && btnNext.addEventListener('click', onNext);
-
-      // Close when clicking backdrop
-      modal && modal.addEventListener('click', (e) => {
-        if (e.target === modal) onClose();
-      });
-
-      // Keyboard navigation
-      document.addEventListener('keydown', (e) => {
-        if (!isOpen) return;
-        if (e.key === 'Escape') onClose();
-        else if (e.key === 'ArrowLeft') onPrev();
-        else if (e.key === 'ArrowRight') onNext();
-      });
-
-      // Auto-rotation
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const ROTATE_MS = 4000;
-      let rotateTimer = null;
-
-      function cycleOnce() {
-        const firstItem = grid.querySelector('.masonry-item');
-        if (!firstItem) return;
-        firstItem.classList.add('fade-out');
-        setTimeout(() => {
-          firstItem.classList.remove('fade-out');
-          grid.appendChild(firstItem);
-          firstItem.classList.add('fade-in');
-          setTimeout(() => firstItem.classList.remove('fade-in'), 300);
-        }, 300);
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+        closeModal();
       }
+    });
+  }
 
-      function startRotation() {
-        if (reduceMotion || rotateTimer) return;
-        rotateTimer = window.setInterval(cycleOnce, ROTATE_MS);
-      }
-      function pauseRotation() {
-        if (rotateTimer) { clearInterval(rotateTimer); rotateTimer = null; }
-      }
-
-      if (!reduceMotion) {
-        setTimeout(cycleOnce, 800);
-        startRotation();
-      }
-
-      document.addEventListener('visibilitychange', () => {
-        if (reduceMotion) return;
-        if (document.hidden) pauseRotation();
-        else startRotation();
-      });
-
-      btnClose && btnClose.addEventListener('click', () => { if (!reduceMotion) startRotation(); });
-    }
-
-    function tryInit() {
-      const section = document.querySelector('[data-gallery-root]');
-      init(section);
-    }
-
-    // Initial load and after swaps
-    document.addEventListener('astro:page-load', tryInit);
-    document.addEventListener('astro:after-swap', tryInit);
-    // Fallback for full reload
-    tryInit();
-  })();
+  // Inicializar
+  document.addEventListener('DOMContentLoaded', initFeed);
+  document.addEventListener('astro:page-load', initFeed);
+  document.addEventListener('astro:after-swap', initFeed);
+  initFeed();
 </script>

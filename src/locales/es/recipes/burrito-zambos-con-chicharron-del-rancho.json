@@ -1,0 +1,26 @@
+{
+      "date": "2025-09-11",
+      "id": "burrito-zambos-con-chicharron-del-rancho",
+      "slug": "burrito-zambos-con-chicharron-del-rancho",
+      "title": "Burrito Zambos con Chicharrón del Rancho",
+      "people": "9",
+      "difficulty": "Medio",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/burrito-zambos-con-chicharron.webp",
+      "gallery": [
+         "https://snack.yummiespromociones.com/SnacksyummiesAssets/burrito-zambos-con-chicharron.webp"
+      ],      
+      "type": "image",
+      "category": "lunch",
+      "preparation_time": 25,
+      "ingredients": [
+        "1 tortilla de trigo grande",
+        "2 cucharadas de frijol volteado",
+        "2 cucharadas de aguacate partido en cubos",
+        "2 cucharadas de chorizo",
+        "3 cucharadas de Zambos con Chicharrón del rancho triturados."
+      ],
+      "instructions": [
+        "Paso 1. Unta los frijoles en la tortilla. Sigue con el aguacate, luego agrega el chorizo y termina con los Zambos. Enrolla y disfruta."
+      ],
+      "brand": ["zambos", "delrancho"]
+    }

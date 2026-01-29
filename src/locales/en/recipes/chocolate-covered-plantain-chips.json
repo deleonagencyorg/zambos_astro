@@ -1,0 +1,28 @@
+{
+  "date": "2025-09-11",
+  "id": "chocolate-covered-plantain-chips",
+  "slug": "chocolate-covered-plantain-chips",
+  "title": "Chocolate-Covered Plantain Chips",
+  "people": "8",
+  "difficulty": "Medium",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/chips-de-platano-enchocolatadas.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/chips-de-platano-enchocolatadas.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 15,
+  "ingredients": [
+    "1 bag Zambos Original.",
+    "1 ½ cups semi-sweet chocolate.",
+    "1 tablespoon coconut oil."
+  ],
+  "instructions": [
+    "Step 1. Fill a pot halfway with water and place a heatproof bowl on top. Turn the burner to medium-high heat until the water boils.",
+    "Step 2. Add the chocolate and coconut oil, heating until melted.",
+    "Step 3. Grease a mini cupcake mold.",
+    "Step 4. Break the Zambos and drop them into the chocolate. Stir and divide the mixture evenly into the cupcake mold.",
+    "Step 5. Refrigerate until completely firm, then remove from the mold."
+  ],
+  "brand": ["zambos"]
+}

@@ -2,7 +2,6 @@
 // src/views/Participacion/index.astro
 import { type Locale } from '../../i18n/i18n';
 import MainLayout from '../../layouts/MainLayout.astro';
-import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 
 interface Props {
   currentLang: Locale;
@@ -12,20 +11,17 @@ interface Props {
 const { currentLang, headerColorConfig } = Astro.props;
 
 // Meta information
-const title = 'Participación - Ziba\'s Creators';
-const metaDescription = 'Participa en el concurso de creatividad de Ziba\'s. Formulario de participación para subir tu contenido creativo.';
+const title = 'Participación';
+const metaDescription = 'Formulario de participación.';
 ---
 
 <MainLayout title={title} description={metaDescription} headerColors={headerColorConfig}>
-  <!-- Hero Section with same background as zibas-creators -->
-  
-
   <!-- Content Section -->
   <section class="bg-white flex-1 min-h-0">
     <div class="w-full h-full">
       <div class="iframe-container h-full" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
         <iframe 
-          src="https://zibascreators.yummiespromociones.com/" 
+          src="" 
           style="position: absolute; inset: 0; width: 100%; height: 100%; border: none;"
           title="Formulario de Participación"
           loading="lazy"
@@ -62,7 +58,7 @@ const metaDescription = 'Participa en el concurso de creatividad de Ziba\'s. For
     }
   }
 
-  /* Animation classes for consistency with zibas-creators */
+  /* Animation classes */
   @keyframes fadeInUp {
     from {
       opacity: 0;

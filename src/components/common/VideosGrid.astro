@@ -1,0 +1,82 @@
+---
+import LazyImage from './LazyImage.astro';
+
+interface VideoItem {
+  title: string;
+  description?: string;
+  url: string;
+}
+
+export interface Props {
+  items: VideoItem[];
+}
+
+const { items } = Astro.props;
+
+function getYouTubeId(url: string): string | null {
+  try {
+    const u = new URL(url);
+    if (u.hostname === 'youtu.be') {
+      const id = u.pathname.replace('/', '').trim();
+      return id || null;
+    }
+
+    if (u.hostname.endsWith('youtube.com')) {
+      const v = u.searchParams.get('v');
+      if (v) return v;
+
+      const parts = u.pathname.split('/').filter(Boolean);
+      const embedIndex = parts.indexOf('embed');
+      if (embedIndex >= 0 && parts[embedIndex + 1]) return parts[embedIndex + 1];
+
+      const shortsIndex = parts.indexOf('shorts');
+      if (shortsIndex >= 0 && parts[shortsIndex + 1]) return parts[shortsIndex + 1];
+    }
+
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function getYouTubeThumbnail(url: string): string | null {
+  const id = getYouTubeId(url);
+  if (!id) return null;
+  return `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
+}
+---
+
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+  {Array.isArray(items) && items.map((video) => {
+    const thumb = getYouTubeThumbnail(video.url) || '/images/recipes/placeholder.jpg';
+    return (
+      <a
+        href={video.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="h-full rounded-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] flex flex-col"
+      >
+        <div class="relative w-full overflow-hidden" style="aspect-ratio: 16 / 9;">
+          <LazyImage
+            src={thumb}
+            alt={video.title}
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 7.5V16.5L17 12L9 7.5Z" fill="#FF0001" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#FFED7A] py-4 md:p-6  flex flex-col flex-1 items-center justify-center text-center">
+          <h3 class="w-full text-center text-greenDark font-bold text-md md:text-2xl mb-2 uppercase">
+            {video.title}
+          </h3>
+        </div>
+      </a>
+    );
+  })}
+</div>

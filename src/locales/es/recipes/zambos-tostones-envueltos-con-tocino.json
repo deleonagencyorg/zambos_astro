@@ -1,0 +1,29 @@
+{
+  "date": "2025-09-11",
+  "id": "zambos-tostones-envueltos-con-tocino",
+  "slug": "zambos-tostones-envueltos-con-tocino",
+  "title": "Zambos Tostones envueltos con Tocino",
+  "people": "3",
+  "difficulty": "Media",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tostones-envueltos-con-tocino.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tostones-envueltos-con-tocino.webp"
+  ],
+  "type": "image",
+  "category": "snack",
+  "preparation_time": 30,
+  "ingredients": [
+    "2 Aguacates",
+    "Aceitunas",
+    "Camarones",
+    "Lascas de tocino",
+    "Zambos Tostones"
+  ],
+  "instructions": [
+    "Paso 1: Coloca las Lascas de tocino en una bandeja, meterlas al horno y hornéalas a 350º F por 15 minutos.",
+    "Paso 2: En un reciente, echa el aguacate. Y vierte limón y sal al gusto. Mezcla hasta tener listo el guacamol.",
+    "Paso 3: Coloca un Zambos sobre la lasca de tocino, unta los tostones con guacamol, coloca uno o dos camarones encima. Por último, enrolla la lasca de tocino.",
+    "Paso 4: Coloca un palillo y una aceituna para darle el toque final a tu receta."
+  ],
+  "brand": ["zambos"]
+}

@@ -1,0 +1,28 @@
+{
+  "date": "2025-09-11",
+  "id": "pupusas-with-zambos-del-rancho-chicharron",
+  "slug": "pupusas-with-zambos-del-rancho-chicharron",
+  "title": "Pupusas with Zambos Del Rancho Chicharrón",
+  "people": "6",
+  "difficulty": "Medium",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/pupusas-con-zambos-chicharron-del-rancho.webp",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/pupusas-con-zambos-chicharron-del-rancho.webp"
+  ],
+  "type": "image",
+  "category": "lunch",
+  "preparation_time": 30,
+  "ingredients": [
+    "1 portion tortilla dough prepared according to package instructions.",
+    "1 quesillo, shredded or cut into pieces.",
+    "Crushed Zambos Del Rancho Chicharrón.",
+    "Cabbage and sauce for serving."
+  ],
+  "instructions": [
+    "Step 1. Divide the dough into small balls and flatten them with your hand as if making a tortilla.",
+    "Step 2. Fill with quesillo and Zambos Del Rancho Chicharrón. Cover with more dough and seal the pupusas well so the filling doesn’t spill out.",
+    "Step 3. Heat a griddle or skillet and cook the pupusas over medium heat until the dough is fully cooked.",
+    "Step 4. Serve with cooked cabbage and red sauce."
+  ],
+  "brand": ["zambos"]
+}

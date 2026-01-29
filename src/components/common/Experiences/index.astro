@@ -1,0 +1,484 @@
+---
+// ExperiencesCarousel.astro
+import { getLocale } from '../../../i18n/i18n';
+
+interface Experience {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  imageMobile?: string;
+  link?: string;
+  buttonText?: string;
+}
+
+export interface Props {
+  experiences: Experience[];
+  mainTitle?: string;
+  mainTitleColor?: string;
+  backgroundColor?: string;
+  buttonColor?: string;
+  textColor?: string;
+  textButtonColor?: string;
+  className?: string;
+  autoplay?: boolean;
+  speed?: number;
+  loop?: boolean;
+  currentLang?: string;
+}
+
+const {
+  experiences = [],
+  mainTitle = '',
+  mainTitleColor = '#009337',
+  backgroundColor = '#FFED7A',
+  buttonColor = '#FF3333',
+  textColor = '#009337',
+  textButtonColor = '#FFF',
+  className = '',
+  autoplay = true,
+  speed = 5000,
+  loop = true,
+  currentLang = getLocale()
+} = Astro.props;
+
+// Textos según idioma
+const texts = {
+  es: {
+    knowMore: 'Conoce más'
+  },
+  en: {
+    knowMore: 'Learn more'
+  }
+};
+
+const currentTexts = texts[currentLang as keyof typeof texts];
+---
+
+<section class={`experiences-carousel-section ${className}`} style={`background-color: ${backgroundColor}`}>
+  <!-- Título Principal -->
+ 
+
+  <!-- Carrusel -->
+  <div class="experiences-carousel" data-autoplay={autoplay} data-speed={speed}>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {experiences.map((experience) => (
+          <div class="swiper-slide">
+            <div class="experience-slide">
+              <div class="slide-content">
+                <!-- Lado Izquierdo: Texto y Botón -->
+                <div class="left-content">
+                  <h3 class="experience-title" style={`color: ${textColor}`}>
+                    {experience.title}
+                  </h3>
+                  
+                  <p class="experience-description" style={`color: ${textColor}`}>
+                    {experience.description}
+                  </p>
+                  
+                  <a 
+                    href={experience.link || '#'}
+                    class="know-more-btn"
+                    style={`background-color: ${buttonColor}`}
+                    data-no-swipe="true"
+                  >
+                    <p style={`color: ${textButtonColor}`}>{experience.buttonText || currentTexts.knowMore}</p>
+                  </a>
+                </div>
+
+                <!-- Lado Derecho: Imagen -->
+                <div class="right-content">
+                  <div class="image-wrapper">
+                    <picture>
+                      {experience.imageMobile && (
+                        <source 
+                          media="(max-width: 768px)" 
+                          srcset={experience.imageMobile}
+                        />
+                      )}
+                      <img 
+                        src={experience.image}
+                        alt={experience.title}
+                        class="experience-image"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experiences-carousel-section {
+    width: 100%;
+
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Título Principal */
+  .title-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+  }
+
+  .main-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  /* Carrusel */
+  .experiences-carousel {
+    width: 100%;
+    position: relative;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+  }
+
+  /* Slide de Experiencia */
+  .experience-slide {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .slide-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 500px;
+  }
+
+  /* Lado Izquierdo */
+  .left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+    order: 1;
+  }
+
+  .experience-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .experience-description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  /* Botón Conoce Más */
+  .know-more-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 3rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    cursor: pointer;
+  }
+
+  .know-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Lado Derecho */
+  .right-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .experience-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Paginación */
+  :global(.experiences-carousel-section .swiper-pagination) {
+    bottom: 0 !important;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  :global(.experiences-carousel-section .swiper-pagination-bullet) {
+    background: #009337 !important;
+    opacity: 0.3 !important;
+    width: 12px !important;
+    height: 12px !important;
+    transition: all 0.3s ease !important;
+    margin: 0 6px !important;
+  }
+
+  :global(.experiences-carousel-section .swiper-pagination-bullet-active) {
+    opacity: 1 !important;
+    width: 30px !important;
+    border-radius: 6px !important;
+  }
+
+  /* Responsive: Tablet */
+  @media (max-width: 1024px) {
+    .main-title {
+      font-size: 3rem;
+    }
+
+    .slide-content {
+      gap: 2rem;
+      min-height: 400px;
+    }
+
+    .experience-title {
+      font-size: 3rem;
+    }
+
+    .experience-description {
+      font-size: 1.25rem;
+    }
+
+    .know-more-btn {
+      font-size: 1.25rem;
+      padding: 1rem 2.5rem;
+    }
+
+    .image-wrapper {
+      max-width: 500px;
+    }
+  }
+
+  /* Responsive: Mobile */
+  @media (max-width: 768px) {
+    .experiences-carousel-section {
+      padding: 2rem 0;
+    }
+
+    .title-container {
+      margin-bottom: 2rem;
+      padding: 0 1rem;
+    }
+
+    .main-title {
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+
+    .experience-slide {
+      padding: 1rem;
+    }
+
+    .slide-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      min-height: auto;
+    }
+
+    /* Cambiar orden: imagen arriba, texto abajo */
+    .left-content {
+      order: 2;
+      padding: 0 1rem;
+      text-align: center;
+      align-items: center;
+    }
+
+    .right-content {
+      order: 1;
+    }
+
+    .experience-title {
+      font-size: 3rem;
+    }
+
+    .experience-description {
+      font-size: 1rem;
+    }
+
+    .know-more-btn {
+      font-size: 1rem;
+      padding: 0.875rem 2rem;
+      max-width: 250px;
+      width: 100%;
+    }
+
+    .image-wrapper {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+  }
+
+  /* Responsive: Small Mobile */
+  @media (max-width: 480px) {
+    .main-title {
+      font-size: 1.5rem;
+    }
+
+    .experience-title {
+      font-size: 2rem;
+    }
+
+    .experience-description {
+      font-size: 0.9rem;
+    }
+
+    .know-more-btn {
+      font-size: 0.875rem;
+      padding: 0.75rem 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Pagination, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/pagination';
+
+  interface ExperiencesCarouselOptions {
+    autoplay?: boolean;
+    speed?: number;
+    loop?: boolean;
+  }
+
+  class ExperiencesCarousel {
+    private container: HTMLElement;
+    private swiper: Swiper | null = null;
+    private options: ExperiencesCarouselOptions;
+
+    constructor(container: HTMLElement, options: ExperiencesCarouselOptions = {}) {
+      this.container = container;
+      this.options = options;
+      this.init();
+    }
+
+    private init(): void {
+      const swiperContainer = this.container.querySelector('.swiper-container') as HTMLElement;
+      
+      if (!swiperContainer) return;
+
+      // Prevenir que swiper maneje los clicks en los enlaces
+      const links = swiperContainer.querySelectorAll('a[data-no-swipe]');
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.stopPropagation();
+        });
+        link.classList.add('swiper-no-swiping');
+      });
+
+      this.swiper = new Swiper(swiperContainer, {
+        modules: [Pagination, Autoplay],
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: this.options.loop !== false,
+        autoplay: this.options.autoplay ? {
+          delay: this.options.speed || 5000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        } : false,
+        pagination: {
+          el: '.experiences-carousel-section .swiper-pagination',
+          clickable: true,
+          dynamicBullets: false,
+        },
+        speed: 800,
+        effect: 'slide',
+        preventClicksPropagation: true,
+        preventClicks: false,
+        noSwiping: true,
+        noSwipingClass: 'swiper-no-swiping',
+      });
+    }
+
+    public destroy(): void {
+      if (this.swiper) {
+        this.swiper.destroy();
+        this.swiper = null;
+      }
+    }
+  }
+
+  // Variables globales
+  let carouselInstances: ExperiencesCarousel[] = [];
+
+  // Limpiar instancias
+  function cleanupCarousels() {
+    carouselInstances.forEach(instance => instance.destroy());
+    carouselInstances = [];
+  }
+
+  // Inicializar carruseles
+  function initializeCarousels() {
+    cleanupCarousels();
+    
+    const carousels = document.querySelectorAll('.experiences-carousel');
+    carousels.forEach((element: Element) => {
+      if (element instanceof HTMLElement) {
+        const instance = new ExperiencesCarousel(element, {
+          autoplay: element.dataset.autoplay !== 'false',
+          speed: parseInt(element.dataset.speed || '5000', 10),
+          loop: true,
+        });
+        carouselInstances.push(instance);
+      }
+    });
+  }
+
+  // Event listeners
+  document.addEventListener('DOMContentLoaded', initializeCarousels);
+  document.addEventListener('astro:page-load', initializeCarousels);
+  document.addEventListener('astro:after-swap', initializeCarousels);
+  document.addEventListener('astro:before-swap', cleanupCarousels);
+</script>
