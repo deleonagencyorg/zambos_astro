@@ -85,5 +85,9 @@
   "ctaJoin": {
     "title": "Únete a nuestra familia",
     "button": "Ver oportunidades"
+  },
+  "whatsapp": {
+    "phone": "50231234567",
+    "message": "🚚 ¡Hola! Quiero llevar el Zambos Truck a mi evento. ¿Me pueden dar más información?"
   }
 }
