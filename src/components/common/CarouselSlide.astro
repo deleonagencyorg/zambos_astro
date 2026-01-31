@@ -72,10 +72,12 @@ const slideId = `slide-${Math.random().toString(36).substring(2, 11)}`;
           />
         )}
       </div>
-      <div class="absolute inset-x-0 bottom-8 flex flex-col items-center justify-center text-center text-white px-4">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 drop-shadow-lg">{slide.title}</h2>
-        <p class="text-lg md:text-xl max-w-2xl drop-shadow">{slide.subtitle}</p>
-      </div>
+      {(slide.title || slide.subtitle) && (
+        <div class="absolute inset-x-0 bottom-8 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 drop-shadow-lg">{slide.title}</h2>
+          <p class="text-lg md:text-xl max-w-2xl drop-shadow">{slide.subtitle}</p>
+        </div>
+      )}
     </a>
   ) : (
     <>
@@ -124,10 +126,12 @@ const slideId = `slide-${Math.random().toString(36).substring(2, 11)}`;
           />
         )}
       </div>
-      <div class="absolute inset-x-0 bottom-8 flex flex-col items-center justify-center text-center text-white px-4">
-        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 drop-shadow-lg">{slide.title}</h2>
-        <p class="text-lg md:text-xl max-w-2xl drop-shadow">{slide.subtitle}</p>
-      </div>
+      {(slide.title || slide.subtitle) && (
+        <div class="absolute inset-x-0 bottom-8 flex flex-col items-center justify-center text-center text-white px-4">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 md:mb-4 drop-shadow-lg">{slide.title}</h2>
+          <p class="text-lg md:text-xl max-w-2xl drop-shadow">{slide.subtitle}</p>
+        </div>
+      )}
     </>
   )}
 </div>

@@ -1,0 +1,231 @@
+---
+interface GalleryImage {
+  url: string;
+  category: string;
+}
+
+interface Props {
+  images: GalleryImage[];
+  title?: string;
+  filters?: string[];
+}
+
+const { images = [], title = '', filters = [] } = Astro.props as Props;
+---
+<section class="w-full bg-green py-10 sm:py-12">
+  <div class="w-[95%] sm:w-[92%] lg:w-[90%] xl:w-[85%] mx-auto">
+    {title && (<h2 class="titles text-white mb-4">{title}</h2>)}
+    
+    {filters.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-3 sm:gap-4" data-gallery-filters>
+        {filters.map((f: string, i: number) => (
+          <button
+            type="button"
+            class="px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base font-black transition-colors bg-white text-greenDark data-[active='true']:bg-[#CA0203] data-[active='true']:text-white uppercase"
+            data-gallery-filter={f}
+            data-active={i === 0 ? 'true' : 'false'}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+    )}
+
+    <!-- Carousel container -->
+    <div class="relative mt-8">
+      <!-- Botones prev/next -->
+      <button
+        type="button"
+        class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-greenDark rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-md"
+        aria-label="Anterior"
+        data-gallery-prev
+      >
+        ‹
+      </button>
+      <button
+        type="button"
+        class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-greenDark rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center shadow-md"
+        aria-label="Siguiente"
+        data-gallery-next
+      >
+        ›
+      </button>
+
+      <!-- Carousel track -->
+      <div class="overflow-hidden">
+        <div class="flex transition-transform duration-500 ease-out justify-center" data-gallery-track>
+          {images.map((img: GalleryImage, i: number) => (
+            <div
+              class="shrink-0"
+              data-gallery-item
+              data-category={img.category}
+              data-index={i}
+              style="width: 50%; padding: 0 1%; display: none;"
+            >
+              <div class="rounded-2xl overflow-hidden bg-white/5 cursor-pointer hover:scale-105 transition-transform w-full" data-gallery-image={img.url}>
+                <div class="w-full aspect-[4/3] overflow-hidden">
+                  <img
+                    src={img.url}
+                    alt={`Gallery ${i + 1}`}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal de previsualización -->
+<div
+  id="gallery-modal"
+  class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-4"
+  data-gallery-modal
+>
+  <button
+    type="button"
+    class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 z-10"
+    data-modal-close
+  >
+    ×
+  </button>
+  <img
+    src=""
+    alt="Preview"
+    class="max-w-full max-h-full object-contain"
+    data-modal-image
+  />
+</div>
+
+<script>
+  // Variables globales
+  const filterButtons = Array.from(document.querySelectorAll('[data-gallery-filter]')) as HTMLButtonElement[];
+  const galleryItems = Array.from(document.querySelectorAll('[data-gallery-item]')) as HTMLElement[];
+  const track = document.querySelector('[data-gallery-track]') as HTMLElement;
+  const prevBtn = document.querySelector('[data-gallery-prev]') as HTMLButtonElement;
+  const nextBtn = document.querySelector('[data-gallery-next]') as HTMLButtonElement;
+  const modal = document.querySelector('[data-gallery-modal]') as HTMLElement;
+  const modalImage = document.querySelector('[data-modal-image]') as HTMLImageElement;
+  const modalClose = document.querySelector('[data-modal-close]') as HTMLButtonElement;
+
+  let currentIndex = 0;
+  let visibleItems: HTMLElement[] = [];
+  let itemsPerView = window.innerWidth >= 768 ? 4 : 2;
+
+  // Actualizar items por vista según tamaño de pantalla
+  const updateItemsPerView = () => {
+    itemsPerView = window.innerWidth >= 768 ? 4 : 2;
+    const itemWidth = 100 / itemsPerView;
+    const padding = itemsPerView === 4 ? 1 : 1; // 1% padding para ambos
+    
+    galleryItems.forEach((item) => {
+      (item as HTMLElement).style.width = `${itemWidth}%`;
+      (item as HTMLElement).style.padding = `0 ${padding}%`;
+    });
+  };
+
+  // Filtrar por categoría
+  const applyFilter = (label: string) => {
+    const target = label.toLowerCase();
+    visibleItems = [];
+    
+    galleryItems.forEach((el) => {
+      const cat = (el.getAttribute('data-category') || '').toLowerCase();
+      const show = target === 'todos' || cat === target;
+      (el as HTMLElement).style.display = show ? '' : 'none';
+      if (show) visibleItems.push(el as HTMLElement);
+    });
+
+    currentIndex = 0;
+    updateCarousel();
+  };
+
+  // Actualizar posición del carousel
+  const updateCarousel = () => {
+    if (!track || visibleItems.length === 0) return;
+    const offset = -(currentIndex * (100 / itemsPerView));
+    track.style.transform = `translateX(${offset}%)`;
+  };
+
+  // Navegación
+  const goNext = () => {
+    const maxIndex = Math.max(0, visibleItems.length - itemsPerView);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateCarousel();
+    }
+  };
+
+  const goPrev = () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  };
+
+  // Modal
+  const openModal = (url: string) => {
+    if (modal && modalImage) {
+      modalImage.src = url;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+  };
+
+  const closeModal = () => {
+    if (modal) {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  };
+
+  // Event listeners
+  if (filterButtons.length && galleryItems.length) {
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.setAttribute('data-active', 'false'));
+        btn.setAttribute('data-active', 'true');
+        const label = btn.getAttribute('data-gallery-filter') || 'Todos';
+        applyFilter(label);
+      });
+    });
+
+    // Inicial
+    const initial = filterButtons.find((b) => b.getAttribute('data-active') === 'true');
+    applyFilter(initial?.getAttribute('data-gallery-filter') || 'Todos');
+  }
+
+  prevBtn?.addEventListener('click', goPrev);
+  nextBtn?.addEventListener('click', goNext);
+
+  // Click en imágenes para abrir modal
+  galleryItems.forEach((item) => {
+    const imageContainer = item.querySelector('[data-gallery-image]') as HTMLElement;
+    if (imageContainer) {
+      imageContainer.addEventListener('click', () => {
+        const url = imageContainer.getAttribute('data-gallery-image') || '';
+        openModal(url);
+      });
+    }
+  });
+
+  // Cerrar modal
+  modalClose?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Resize
+  window.addEventListener('resize', () => {
+    updateItemsPerView();
+    updateCarousel();
+  });
+
+  // Init
+  updateItemsPerView();
+</script>
