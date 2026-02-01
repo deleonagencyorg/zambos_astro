@@ -76,10 +76,8 @@ const loadMoreText = currentLang === 'es' ? 'VER MÁS' : 'LOAD MORE';
 <MainLayout title={pageTitle} description={pageDescription} class="bg-[#0DB04A]">
   <ViewTransitions />
   <div class="-mt-px -mb-px overflow-hidden pb-15" >
-    <div class="container mx-auto px-4 mt-0 pb-16">
-      <div class="pt-4">
-        <Breadcrumb bgColor="bg-transparent" textColor="text-white" hoverColor="hover:text-white" />
-      </div>
+    <div class="container mx-auto px-4  pb-16 mt-12">
+     
       <!-- News Carousel listing 4 per slide -->
       <div class=" mx-auto mb-16">
         <NewsCarousel currentLang={currentLang} items={posts} />

@@ -535,9 +535,17 @@ const featuredRecipes = allRecipes.slice(0, 3);
 
   .recipe-card {
     transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
   }
 
   .recipe-card:hover {
     transform: translateY(-4px);
+  }
+
+  @media (max-width: 767px) {
+    #recipesGrid {
+      grid-auto-rows: 1fr;
+    }
   }
 </style>

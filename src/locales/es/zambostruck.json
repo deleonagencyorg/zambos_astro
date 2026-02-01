@@ -3,16 +3,24 @@
     "title": "Zambos Truck",
     "subtitle": "Lleva la experiencia Zambos a tu evento",
     "cta": "Descúbrelo",
+    "ctaUrl": "#truck-form",
     "videoUrl": "https://snack.yummiespromociones.com/videos/zambostruck-demo.mp4",
-    "bannerImage": "/images/zambostruck/hero.jpg"
+    "bannerImage": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Bannerzambostruck.avif"
   },
   "packages": {
     "title": "Descubre paquetes",
     "subtitle": "Elige el plan que más se ajusta a tu evento",
     "items": [
-      { "id": "p200", "label": "200 Packs", "price": "Q3,400", "note": "Precio de venta", "badge": "No. 8" },
-      { "id": "p250", "label": "250 Packs", "price": "Q4,250", "note": "Precio de venta", "badge": "No. 9" },
-      { "id": "p300", "label": "300 Packs", "price": "Q5,100", "note": "Precio de venta", "badge": "No. 10" }
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck1.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck2.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck3.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck4.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck5.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck6.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck7.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck8.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck9.avif",
+      "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck10.avif"
     ]
   },
   "howTo": {
@@ -36,19 +44,26 @@
     "title": "Descubre recetas",
     "subtitle": "Ideas para tu evento",
     "items": [
-      { "id": "r1", "title": "Zambos con queso", "desc": "Crujiente con topping de queso.", "image": "/images/zambostruck/recipes/1.jpg", "price": "Q12.00" },
-      { "id": "r2", "title": "Zambos con chile", "desc": "Toque picante irresistible.", "image": "/images/zambostruck/recipes/2.jpg", "price": "Q12.00" },
-      { "id": "r3", "title": "Zambos con crema", "desc": "Suave y delicioso.", "image": "/images/zambostruck/recipes/3.jpg", "price": "Q12.00" }
+      { "id": "r1", "title": "Zambos con queso", "desc": "ZAMBOS CARNE MOLIDA", "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS-TRUCK_CARRUSEL-RECETA_MOLIDA.avif", "price": "Q12.00" },
+      { "id": "r2", "title": "Zambos con chile", "desc": "ZAMBOS CHILI CRIOLLO", "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS-TRUCK_CARRUSEL-RECETA_CHILLI.avif", "price": "Q12.00" },
+      { "id": "r3", "title": "Zambos con crema", "desc": "ZAMBOS POLLO CREMOSO", "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS-TRUCK_CARRUSEL-RECETA_pollo.avif ", "price": "Q12.00" },
+      { "id": "r4", "title": "Zambos con crema", "desc": "ZAMBOS PRIME PUYAZO", "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS-TRUCK_CARRUSEL-RECETA_PUYAZO.avif ", "price": "Q12.00" }
     ]
   },
   "gallery": {
     "title": "Descubre nuestra galería de eventos",
-    "filters": ["Todos", "Food Trucks", "Eventos", "Zambos Truck"],
+    "filters": ["Todos", "Bodas", "Eventos Empresariales", "Cumpleaños"],
     "images": [
-      "/images/zambostruck/gallery/1.jpg",
-      "/images/zambostruck/gallery/2.jpg",
-      "/images/zambostruck/gallery/3.jpg",
-      "/images/zambostruck/gallery/4.jpg"
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck1.avif", "category": "Bodas" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck2.avif", "category": "Eventos Empresariales" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck3.avif", "category": "Cumpleaños" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck4.avif", "category": "Bodas" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck5.avif", "category": "Eventos Empresariales" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck6.avif", "category": "Cumpleaños" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck7.avif", "category": "Bodas" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck8.avif", "category": "Eventos Empresariales" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck9.avif", "category": "Cumpleaños" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck10.avif", "category": "Bodas" }
     ]
   },
   "form": {
@@ -70,5 +85,9 @@
   "ctaJoin": {
     "title": "Únete a nuestra familia",
     "button": "Ver oportunidades"
+  },
+  "whatsapp": {
+    "phone": "50231234567",
+    "message": "🚚 ¡Hola! Quiero llevar el Zambos Truck a mi evento. ¿Me pueden dar más información?"
   }
 }

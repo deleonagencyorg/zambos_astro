@@ -45,9 +45,21 @@ const preloadFirstImage = true && firstSlide.mobile && firstSlide.desktop;
       try {
         const swiper = new Swiper(carouselSelector, {
           loop: true,
+          slidesPerView: 1,
+          spaceBetween: 16,
           autoplay: {
             delay: 5000,
             disableOnInteraction: false,
+          },
+          breakpoints: {
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 16,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
           },
           navigation: {
             nextEl: '.swiper-button-next',
@@ -90,7 +102,7 @@ const preloadFirstImage = true && firstSlide.mobile && firstSlide.desktop;
 {loading ? (
   <Skeleton items={3} />
 ) : (
-  <div class="relative overflow-hidden w-screen" transition:animate="fade">
+  <div class="relative overflow-hidden w-full" transition:animate="fade">
     {preloadFirstImage && (
       <>
         <!-- Precargar la primera imagen para dispositivos móviles -->

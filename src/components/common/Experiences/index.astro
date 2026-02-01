@@ -10,6 +10,9 @@ interface Experience {
   imageMobile?: string;
   link?: string;
   buttonText?: string;
+  type?: string;
+  video?: string;
+  video_image?: string;
 }
 
 export interface Props {
@@ -87,23 +90,36 @@ const currentTexts = texts[currentLang as keyof typeof texts];
                   </a>
                 </div>
 
-                <!-- Lado Derecho: Imagen -->
+                <!-- Lado Derecho: Media (Video o Imagen) -->
                 <div class="right-content">
                   <div class="image-wrapper">
-                    <picture>
-                      {experience.imageMobile && (
-                        <source 
-                          media="(max-width: 768px)" 
-                          srcset={experience.imageMobile}
+                    {experience.type === 'video' && experience.video ? (
+                      <video 
+                        class="experience-image" 
+                        poster={experience.video_image || experience.image} 
+                        autoplay 
+                        muted 
+                        loop 
+                        playsinline
+                      >
+                        <source src={experience.video} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <picture>
+                        {experience.imageMobile && (
+                          <source 
+                            media="(max-width: 768px)" 
+                            srcset={experience.imageMobile}
+                          />
+                        )}
+                        <img 
+                          src={experience.image}
+                          alt={experience.title}
+                          class="experience-image"
+                          loading="lazy"
                         />
-                      )}
-                      <img 
-                        src={experience.image}
-                        alt={experience.title}
-                        class="experience-image"
-                        loading="lazy"
-                      />
-                    </picture>
+                      </picture>
+                    )}
                   </div>
                 </div>
               </div>
