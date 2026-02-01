@@ -90,9 +90,22 @@ if (headerColors) {
         </a>
       </div>
       
-      <!-- Mobile Menu Button -->
-      <div class="menu-button-container">
-        <MobileMenuButton currentLang={currentLang} headerColorConfig={customHeaderConfig} />
+      <!-- Acciones derechas: Icono Zambos Truck + Botón menú -->
+      <div class="flex items-center gap-3">
+        {currentLang === 'es' && (
+          <a href="/zambostruck" class="block" aria-label="Zambos Truck">
+            <LocalizedImage
+              src={logosData.secondary.url}
+              alt={logosData.secondary.alt || "Zambos Truck"}
+              class="h-10 w-auto object-contain"
+              width="100"
+              height="40"
+            />
+          </a>
+        )}
+        <div class="menu-button-container">
+          <MobileMenuButton currentLang={currentLang} headerColorConfig={customHeaderConfig} />
+        </div>
       </div>
     </nav>
   </div>

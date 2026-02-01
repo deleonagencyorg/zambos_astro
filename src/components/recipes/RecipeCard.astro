@@ -28,11 +28,11 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
 
 <a 
   href={recipeLink} 
-  class="block group h-full"
+  class="block group h-full w-full"
 >
-  <div class="overflow-hidden rounded-3xl transition-transform duration-300 hover:scale-[1.02] h-full flex flex-col">
+  <div class="overflow-hidden rounded-3xl transition-transform duration-300 hover:scale-[1.02] h-full flex flex-col w-full">
     <!-- Imagen -->
-    <div class="relative h-[200px] md:h-[250px] overflow-hidden">
+    <div class="relative h-[160px] sm:h-[180px] md:h-[250px] overflow-hidden">
       <LazyImage
         src={image}
         alt={title}
@@ -41,27 +41,27 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
     </div>
     
     <!-- Sección amarilla separada -->
-    <div class="bg-[#FFED7A] p-6 flex flex-col flex-1">
+    <div class="bg-[#FFED7A] p-3 md:p-6 flex flex-col flex-1">
       <!-- Category Tags -->
-      <div class="flex gap-2 mb-3">
-        <span class="inline-block px-4 py-2 bg-[#0DB04A] text-white font-bold rounded-full text-xs uppercase">
+      <div class="flex gap-2 mb-2 md:mb-3">
+        <span class="inline-block px-3 py-1 md:px-4 md:py-2 bg-[#0DB04A] text-white font-bold rounded-full text-xs uppercase">
           {category}
         </span>
         <!-- Tag NUEVO -->
         {isNew && (
-          <span class="inline-block px-4 py-2 bg-red text-white font-bold rounded-full text-xs uppercase">
+          <span class="inline-block px-3 py-1 md:px-4 md:py-2 bg-red text-white font-bold rounded-full text-xs uppercase">
             {currentLocale === 'es' ? 'NUEVO' : 'NEW'}
           </span>
         )}
       </div>
       
       <!-- Title -->
-      <h3 class="text-gray-900 font-bold text-xl md:text-2xl mb-2 uppercase">
+      <h3 class="text-gray-900 font-bold text-base leading-tight sm:text-lg md:text-xl lg:text-2xl uppercase line-clamp-3 md:line-clamp-2">
         {title}
       </h3>
       
-      <!-- Description -->
-      <p class="text-gray-900 text-sm leading-tight flex-1">
+      <!-- Description - Solo visible en tablet+ -->
+      <p class="hidden md:block text-gray-900 text-sm leading-tight mt-2 line-clamp-2">
         {description || (currentLocale === 'es' ? 'Deliciosa receta cargada de sabor perfecta para compartir en familia.' : 'Delicious recipe full of flavor perfect for sharing with family.')}
       </p>
     </div>

@@ -18,7 +18,7 @@ export interface Props {
 }
 
 const { title, images } = Astro.props;
-const locale = getLocale(Astro.url.pathname) || 'es';
+const locale = getLocale() || 'es';
 
 // Get Instagram posts from locale
 const instagramPosts = locale === 'es' 
@@ -26,22 +26,22 @@ const instagramPosts = locale === 'es'
   : enCommon.home.socialmedia.instagramPosts;
 ---
 
-<div class="box-border flex flex-col gap-12 items-left justify-start container mx-auto  py-0 relative w-full ">
+<div class="box-border flex flex-col gap-12 items-left justify-center container mx-auto  py-0 relative w-full text-center ">
 
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full">
+  <div class="max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full">
     {instagramPosts.map((post: any) => (
-      <div class="w-full aspect-[9/16] overflow-hidden rounded-xl">
+      <div class="w-full overflow-hidden rounded-xl">
         <iframe
           src={post.embedUrl}
-          class="w-full h-full"
+          class="w-full h-[380px] sm:h-[380px] md:h-[370px] lg:h-[500px] rounded-md"
           allowtransparency="true"
           allowfullscreen
           frameborder="0"
           scrolling="no"
-        ></iframe>  <a href={post.postUrl} class="bg-red text-white px-4 py-2 rounded-lg block text-center mt-2" target="_blank" rel="noopener noreferrer">
-        {locale === 'es' ? 'Ver post' : 'View post'}
-      </a>
-    
+        ></iframe>
+        <a href={post.postUrl} class="bg-red text-white px-4 py-2 rounded-lg block text-center mt-2" target="_blank" rel="noopener noreferrer">
+          {locale === 'es' ? 'Ver post' : 'View post'}
+        </a>
       </div>
      
     ))}
