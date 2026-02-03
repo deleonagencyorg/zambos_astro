@@ -1,6 +1,12 @@
 // Animaciones para las páginas principales
-document.addEventListener('DOMContentLoaded', () => {
-  // Función para aplicar animaciones a elementos específicos
+(function() {
+  function initPageAnimations() {
+    if (document.body.dataset.pageAnimationsInitialized === 'true') return;
+    document.body.dataset.pageAnimationsInitialized = 'true';
+
+    applyAnimations();
+  }
+
   function applyAnimations() {
     // Home page animations
     const homeElements = {
@@ -114,6 +120,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  // Ejecutar animaciones
-  applyAnimations();
-});
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPageAnimations);
+  } else {
+    initPageAnimations();
+  }
+
+  document.addEventListener('astro:page-load', function() {
+    document.body.dataset.pageAnimationsInitialized = 'false';
+    initPageAnimations();
+  });
+  document.addEventListener('astro:after-swap', function() {
+    document.body.dataset.pageAnimationsInitialized = 'false';
+    initPageAnimations();
+  });
+})();

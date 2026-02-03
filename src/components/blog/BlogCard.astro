@@ -34,9 +34,10 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
     <!-- Image Container -->
     <div class="blog-card__image-container">
       <LazyImage
-        src={image || '/images/blog/placeholder.jpg'}
+        src={image || `/images/${currentLang}/slider1.png`}
         alt={title}
         class="blog-card__image"
+        fallbackSrc={`/images/${currentLang}/slider1.png`}
       />
       
       <!-- Gradient Overlay -->

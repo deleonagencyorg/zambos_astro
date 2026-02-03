@@ -522,33 +522,6 @@ for (let i = 0; i < recipeItems.length; i += 1) {
           slide.style.transition = 'none';
         });
 
-        slidesToShow.forEach((slide) => {
-          let card = slide.querySelector('a');
-          if (card) {
-            // Remover listeners previos clonando el elemento
-            const newCard = card.cloneNode(true) as any;
-            card.parentNode?.replaceChild(newCard, card);
-            card = newCard;
-
-            // Resetear a estado normal (sin opacidad baja ni expansión)
-            card.style.opacity = '1';
-            card.style.zIndex = '';
-            card.className = 'block group relative transition-all duration-300 ease-in-out flex-shrink-0 w-full';
-
-            const cardContainer = card.querySelector('div');
-            const imgContainer = cardContainer?.querySelector('div[class*="rounded-t-"]');
-            const infoContainer = cardContainer?.querySelector('div[class*="bg-[#F8E31F]"]');
-            const title = card.querySelector('h3');
-            const imgTag = imgContainer?.querySelector('img');
-
-            if (cardContainer) cardContainer.style.width = '100%';
-            if (imgContainer) imgContainer.style.width = '100%';
-            if (infoContainer) infoContainer.style.width = '100%';
-            if (title) title.className = 'font-title font-bold text-black leading-tight flex-1 flex items-center text-brown text-2xl';
-            if (imgTag) imgTag.className = 'w-full h-full object-cover';
-          }
-        });
-
         loadMoreClone.classList.toggle('hidden', revealedCount >= filteredSlides.length);
       }
 

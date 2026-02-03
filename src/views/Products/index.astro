@@ -32,7 +32,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
       <h1 class="text-5xl md:text-7xl font-black italic text-white mb-3 tracking-wide font-title">
         {currentLang === 'es' ? 'PRODUCTOS' : 'PRODUCTS'}
       </h1>
-      <p class="text-white text-lg md:text-xl italic">
+      <p class="text-white text-lg md:text-2xl italic">
         {currentLang === 'es' ? 'Descubre toda nuestra variedad de sabores' : 'Discover our wide variety of flavors'}
       </p>
     </div>
@@ -42,7 +42,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
       <!-- Botón TODOS LOS PRODUCTOS - Borde verde, fondo blanco -->
       <button 
         type="button" 
-        class="category-filter category-filter--all active px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 uppercase tracking-wide"
+        class="category-filter category-filter--all active px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 uppercase tracking-wide"
         data-category="all"
       >
         {currentLang === 'es' ? 'TODOS LOS PRODUCTOS' : 'ALL PRODUCTS'}
@@ -51,7 +51,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
       {uniqueCategories.map((cat: string) => (
         <button
           type="button"
-          class="category-filter category-filter--normal px-8 py-3 rounded-full text-sm font-bold transition-all duration-300 uppercase tracking-wide"
+          class="category-filter category-filter--normal px-8 py-3 rounded-full text-sm md:text-base font-bold transition-all duration-300 uppercase tracking-wide"
           data-category={cat}
         >
           {categories?.[cat] || cat}
@@ -103,17 +103,17 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
 
             <!-- Contenido -->
             <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6">
-              <h3 class="text-base sm:text-lg md:text-xl font-black text-black mb-2 md:mb-3 uppercase leading-tight tracking-wide">
+              <h3 class="text-lg sm:text-xl md:text-2xl font-black text-black mb-2 md:mb-3 uppercase leading-tight tracking-wide">
                 {product.name || product.title}
               </h3>
-              <p class="text-gray-700 text-xs sm:text-sm mb-3 md:mb-5 line-clamp-2 min-h-[36px] sm:min-h-[44px] leading-relaxed">
+              <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed">
                 {product.short_description || product.description}
               </p>
               
               <!-- Botón Ver detalles - VERDE -->
               <a 
                 href={`/${currentLang}/productos/${product.id}`} 
-                class="block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-xs sm:text-sm uppercase tracking-wider transition-colors duration-300"
+                class="block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"
               >
                 {pageAssets?.view_details || 'Ver detalles'}
               </a>

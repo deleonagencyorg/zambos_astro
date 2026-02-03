@@ -91,27 +91,40 @@ const hearts = Array.from({ length: count }).map((_, i) => {
 </style>
 
 <script>
-  // Use requestAnimationFrame for smoother animation
-  // This helps optimize the animation performance
-  document.addEventListener('DOMContentLoaded', () => {
-    const hearts = document.querySelectorAll('.anim-heart');
-    
-    // Check if the browser supports Intersection Observer
-    if ('IntersectionObserver' in window) {
-      // Only animate hearts when they're visible in viewport
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.animationPlayState = 'running';
-          } else {
-            entry.target.style.animationPlayState = 'paused';
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      hearts.forEach(heart => {
-        observer.observe(heart);
+  (function() {
+    function initAnimHeart() {
+      var containers = document.querySelectorAll('.anim-heart-container');
+      containers.forEach(function(container) {
+        if (container.dataset.animHeartInitialized === 'true') return;
+        container.dataset.animHeartInitialized = 'true';
+
+        var hearts = container.querySelectorAll('.anim-heart');
+        
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+              } else {
+                entry.target.style.animationPlayState = 'paused';
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          hearts.forEach(function(heart) {
+            observer.observe(heart);
+          });
+        }
       });
     }
-  });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAnimHeart);
+    } else {
+      initAnimHeart();
+    }
+
+    document.addEventListener('astro:page-load', initAnimHeart);
+    document.addEventListener('astro:after-swap', initAnimHeart);
+  })();
 </script>

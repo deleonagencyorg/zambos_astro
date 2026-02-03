@@ -1,23 +1,28 @@
 // Scripts para el Footer
-document.addEventListener('DOMContentLoaded', () => {
-  // Aquí se pueden agregar interacciones específicas para el footer
-  // Por ejemplo, animaciones al hacer scroll, validación de formularios, etc.
-  
-  // Ejemplo: Detectar cuando el footer es visible en viewport
-  const footer = document.querySelector('footer');
-  
-  if (footer) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+(function() {
+  function initFooter() {
+    var footer = document.querySelector('footer');
+    if (!footer) return;
+    if (footer.dataset.footerScriptInitialized === 'true') return;
+    footer.dataset.footerScriptInitialized = 'true';
+    
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          // El footer es visible
           footer.classList.add('footer-visible');
         }
       });
-    }, {
-      threshold: 0.1 // Visible cuando al menos 10% del footer está en viewport
-    });
+    }, { threshold: 0.1 });
     
     observer.observe(footer);
   }
-});
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFooter);
+  } else {
+    initFooter();
+  }
+
+  document.addEventListener('astro:page-load', initFooter);
+  document.addEventListener('astro:after-swap', initFooter);
+})();

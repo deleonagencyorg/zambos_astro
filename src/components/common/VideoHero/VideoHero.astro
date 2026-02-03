@@ -182,29 +182,37 @@ const {
 </style>
 
 <script>
-  // Handle video loading and fallback
-  document.addEventListener('DOMContentLoaded', () => {
-    const videoElement = document.getElementById('heroVideo') as HTMLVideoElement;
-    const fallbackImage = document.querySelector('.fallback-image') as HTMLElement;
-    
-    if (videoElement) {
-      // Hide fallback image once video can play
-      videoElement.addEventListener('canplay', () => {
+  (function() {
+    function initVideoHero() {
+      var videoElement = document.getElementById('heroVideo');
+      var fallbackImage = document.querySelector('.fallback-image');
+      
+      if (!videoElement || !fallbackImage) return;
+      if (videoElement.dataset.videoHeroInitialized === 'true') return;
+      videoElement.dataset.videoHeroInitialized = 'true';
+      
+      videoElement.addEventListener('canplay', function() {
         fallbackImage.style.opacity = '0';
       });
       
-      // Show fallback image if video errors
-      videoElement.addEventListener('error', () => {
+      videoElement.addEventListener('error', function() {
         fallbackImage.style.opacity = '1';
       });
       
-      // Set a timeout to show video anyway if it takes too long
-      setTimeout(() => {
-        if (videoElement.readyState < 3) { // HAVE_FUTURE_DATA = 3
-          // Video is taking too long, keep fallback visible
+      setTimeout(function() {
+        if (videoElement.readyState < 3) {
           fallbackImage.style.opacity = '1';
         }
       }, 3000);
     }
-  });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initVideoHero);
+    } else {
+      initVideoHero();
+    }
+
+    document.addEventListener('astro:page-load', initVideoHero);
+    document.addEventListener('astro:after-swap', initVideoHero);
+  })();
 </script>

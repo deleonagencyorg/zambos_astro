@@ -1,10 +1,22 @@
 // Fix para las imágenes que no cargan
-document.addEventListener('DOMContentLoaded', () => {
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    img.addEventListener('error', function() {
-      // Ensure this placeholder path is correct and accessible
-      this.src = '/images/news/placeholder.jpg'; 
+(function() {
+  function initBlogImages() {
+    var images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (img.dataset.errorHandlerAttached) return;
+      img.dataset.errorHandlerAttached = 'true';
+      img.addEventListener('error', function() {
+        this.src = '/images/news/placeholder.jpg';
+      });
     });
-  });
-});
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBlogImages);
+  } else {
+    initBlogImages();
+  }
+
+  document.addEventListener('astro:page-load', initBlogImages);
+  document.addEventListener('astro:after-swap', initBlogImages);
+})();

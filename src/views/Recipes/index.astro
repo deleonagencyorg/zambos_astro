@@ -162,10 +162,15 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
                     alt={recipe.title}
                     class="w-full h-full object-cover"
                   />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
+                  <a
+                    href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`}
+                    aria-label={recipe.title}
+                    class="absolute inset-0 z-20"
+                  ></a>
                   
                   <!-- Recipe Info Overlay -->
-                  <div class="absolute bottom-0 left-0 p-8 md:p-12 pb-20 md:pb-12">
+                  <div class="absolute bottom-0 left-0 p-8 md:p-12 pb-20 md:pb-12 z-10 pointer-events-none">
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
                       <span class="px-4 py-2 bg-[#0DB04A] text-white font-bold rounded-full text-sm">
@@ -188,31 +193,32 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
                       {(recipe as any).description || `${currentLang === 'es' ? 'Deliciosa receta preparada con nuestros Zambos favoritos. Perfecta para compartir en familia.' : 'Delicious recipe prepared with our favorite Zambos. Perfect for sharing with family.'}`}
                     </p>
                   </div>
-                </a>
 
-                <!-- Carousel Navigation - Desktop only (inside carousel) -->
-                {featuredRecipes.length > 1 && (
-                  <div class="hidden md:flex absolute bottom-[40px] right-[10px] gap-4 z-10">
-                    <button 
-                      class="carousel-prev-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                      aria-label="Anterior"
-                    >
-                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                      </svg>
-                    </button>
-                    
-                    <button 
-                      class="carousel-next-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                      aria-label="Siguiente"
-                    >
-                      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                      </svg>
-                    </button>
-                  </div>
-                )}
-              </div>
+                  <!-- Carousel Navigation - Desktop only (inside carousel) -->
+                  {featuredRecipes.length > 1 && (
+                    <div class="hidden md:flex absolute bottom-[40px] right-[10px] gap-4 z-40 pointer-events-auto">
+                      <button 
+                        id="prevBtn-desktop"
+                        class="carousel-prev-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label="Anterior"
+                      >
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                      </button>
+                      
+                      <button 
+                        id="nextBtn-desktop"
+                        class="carousel-next-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label="Siguiente"
+                      >
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

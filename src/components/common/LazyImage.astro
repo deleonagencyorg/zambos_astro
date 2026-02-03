@@ -12,6 +12,7 @@ interface Props {
   sizes?: string;
   context?: string;
   decorative?: boolean;
+  fallbackSrc?: string;
   [key: string]: any;
 }
 
@@ -32,8 +33,17 @@ const {
   priority: explicitPriority,
   sizes: explicitSizes,
   decorative = false,
+  fallbackSrc,
   ...rest 
 } = Astro.props;
+
+const { onerror: restOnError, ...imgRest } = rest;
+
+const fallbackOnError = fallbackSrc
+  ? `this.onerror=null;this.src=${JSON.stringify(fallbackSrc)};`
+  : undefined;
+
+const onerror = restOnError ?? fallbackOnError;
 
 // Si no hay src, no renderizar nada
 if (!src) return null;
@@ -190,6 +200,7 @@ if (isExternal && src.includes('assets.doguiygatibienestar.com')) {
   }}
   aria-hidden={decorative ? 'true' : undefined}
   role={decorative ? 'presentation' : undefined}
+  onerror={onerror}
   loading={priority ? undefined : "lazy"}
   decoding="async"
   fetchpriority={priority ? "high" : "auto"}
@@ -197,5 +208,5 @@ if (isExternal && src.includes('assets.doguiygatibienestar.com')) {
   height={height}
   srcset={srcset || undefined}
   sizes={sizes || undefined}
-  {...rest}
+  {...imgRest}
 />
