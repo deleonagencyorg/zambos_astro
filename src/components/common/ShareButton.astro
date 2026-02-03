@@ -20,7 +20,64 @@ const shareHref = (() => {
     type="button"
     class={`inline-flex items-center justify-center text-black hover:opacity-80 transition ${className}`}
     aria-label="Instagram"
-    onclick={`(function(){try{if(navigator.share){navigator.share({url: '${url.replace(/'/g, "\\'")}'});return;}}catch(e){}window.open('https://www.instagram.com/', '_blank');})()`}
+    onclick={`(function(){
+      var u='${url.replace(/'/g, "\\'")}';
+      function toast(msg){
+        try{
+          var id='zambos-share-toast';
+          var prev=document.getElementById(id);
+          if(prev){prev.remove();}
+          var el=document.createElement('div');
+          el.id=id;
+          el.textContent=msg;
+          el.style.position='fixed';
+          el.style.left='50%';
+          el.style.bottom='24px';
+          el.style.transform='translateX(-50%)';
+          el.style.background='rgba(17,24,39,.95)';
+          el.style.color='#fff';
+          el.style.padding='10px 14px';
+          el.style.borderRadius='9999px';
+          el.style.fontWeight='700';
+          el.style.fontSize='14px';
+          el.style.zIndex='2147483647';
+          el.style.boxShadow='0 10px 20px rgba(0,0,0,.25)';
+          el.style.maxWidth='calc(100vw - 24px)';
+          el.style.textAlign='center';
+          document.body.appendChild(el);
+          setTimeout(function(){try{el.remove();}catch(e){}}, 2600);
+        }catch(e){}
+      }
+      function msg(){
+        var isEn = (typeof u==='string' && u.indexOf('/en/') !== -1);
+        return isEn
+          ? 'Link copied. Paste it on Instagram to share.'
+          : 'Link copiado. Pégalo en Instagram para compartir.';
+      }
+      function openInstagram(){
+        try{window.open('https://www.instagram.com/', '_blank', 'noopener,noreferrer');}catch(e){}
+      }
+      function copyThenToast(){
+        try{
+          if(navigator.clipboard && navigator.clipboard.writeText){
+            navigator.clipboard.writeText(u).then(function(){toast(msg());}).catch(function(){toast(msg());});
+          } else {
+            toast(msg());
+          }
+        }catch(e){toast(msg());}
+      }
+      try{
+        if(navigator.share){
+          var p=navigator.share({url:u});
+          if(p && p.then){
+            p.catch(function(){openInstagram();copyThenToast();});
+          }
+          return;
+        }
+      }catch(e){}
+      openInstagram();
+      copyThenToast();
+    })()`}
   >
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />

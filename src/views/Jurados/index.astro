@@ -119,79 +119,75 @@ const socialMedia = t('social_media', { namespace: 'common', locale: lang as Loc
     </div>
 
     <script is:inline>
-      function initJurorsCarousel() {
-        const el = document.querySelector('.swiper-container.jurors-carousel');
-        if (!el) {
-          console.log('Swiper container not found');
-          return;
+      (function() {
+        var jurorsCarouselInstance = null;
+
+        function initJurorsCarousel() {
+          var el = document.querySelector('.swiper-container.jurors-carousel');
+          if (!el) return;
+
+          if (el.dataset.swiperInitialized === 'true' && jurorsCarouselInstance) {
+            jurorsCarouselInstance.update();
+            return;
+          }
+          
+          if (typeof Swiper === 'undefined') {
+            setTimeout(initJurorsCarousel, 100);
+            return;
+          }
+
+          if (jurorsCarouselInstance) {
+            jurorsCarouselInstance.destroy(true, true);
+            jurorsCarouselInstance = null;
+          }
+
+          try {
+            jurorsCarouselInstance = new Swiper('.swiper-container.jurors-carousel', {
+              loop: true,
+              slidesPerView: 1,
+              spaceBetween: 20,
+              autoplay: { 
+                delay: 5000, 
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+              },
+              pagination: { 
+                el: '.jurors-carousel .swiper-pagination', 
+                clickable: true,
+                dynamicBullets: true
+              },
+              navigation: { 
+                nextEl: '.jurors-carousel .swiper-button-next', 
+                prevEl: '.jurors-carousel .swiper-button-prev' 
+              },
+              breakpoints: {
+                768: { 
+                  slidesPerView: 1,
+                  spaceBetween: 30
+                },
+              },
+            });
+
+            el.dataset.swiperInitialized = 'true';
+            
+            setTimeout(function() {
+              if (jurorsCarouselInstance) jurorsCarouselInstance.update();
+            }, 100);
+            
+          } catch (error) {
+            console.error('Error initializing jurors carousel:', error);
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initJurorsCarousel);
+        } else {
+          initJurorsCarousel();
         }
         
-        // Check if Swiper is available
-        if (typeof Swiper === 'undefined') {
-          console.log('Swiper not loaded, retrying...');
-          setTimeout(initJurorsCarousel, 100);
-          return;
-        }
-
-        try {
-          const swiper = new Swiper('.swiper-container.jurors-carousel', {
-            loop: true, // Enable loop for continuous navigation
-            slidesPerView: 1,
-            spaceBetween: 20,
-            autoplay: { 
-              delay: 5000, 
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true
-            },
-            pagination: { 
-              el: '.jurors-carousel .swiper-pagination', 
-              clickable: true,
-              dynamicBullets: true
-            },
-            navigation: { 
-              nextEl: '.jurors-carousel .swiper-button-next', 
-              prevEl: '.jurors-carousel .swiper-button-prev' 
-            },
-            breakpoints: {
-              768: { 
-                slidesPerView: 1,
-                spaceBetween: 30
-              },
-            },
-            on: {
-              init: function () {
-                console.log('Jurors carousel initialized');
-                // Force show navigation buttons
-                const nextBtn = document.querySelector('.jurors-carousel .swiper-button-next');
-                const prevBtn = document.querySelector('.jurors-carousel .swiper-button-prev');
-                if (nextBtn) nextBtn.style.display = 'flex';
-                if (prevBtn) prevBtn.style.display = 'flex';
-              }
-            }
-          });
-          
-          // Force update after initialization
-          setTimeout(() => {
-            swiper.update();
-          }, 100);
-          
-        } catch (error) {
-          console.error('Error initializing jurors carousel:', error);
-        }
-      }
-
-      // Try multiple initialization methods
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initJurorsCarousel);
-      } else {
-        initJurorsCarousel();
-      }
-      
-      // Also try on window load
-      window.addEventListener('load', initJurorsCarousel);
-      
-      // For Astro page transitions
-      document.addEventListener('astro:page-load', initJurorsCarousel);
+        document.addEventListener('astro:page-load', initJurorsCarousel);
+        document.addEventListener('astro:after-swap', initJurorsCarousel);
+      })();
     </script>
 
     <style is:global>

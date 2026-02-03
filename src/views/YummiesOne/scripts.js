@@ -1,85 +1,68 @@
 // src/views/YummiesOne/scripts.js
+(function() {
+  function initYummiesOne() {
+    var container = document.querySelector('.yummies-one-container, main');
+    if (container && container.dataset.yummiesOneInitialized === 'true') return;
+    if (container) container.dataset.yummiesOneInitialized = 'true';
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Smooth scroll for anchor links
-  const smoothScroll = (target) => {
-    const element = document.querySelector(target);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+    function smoothScroll(target) {
+      var element = document.querySelector(target);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
-  };
 
-  // Add click handlers for buttons
-  const buttons = document.querySelectorAll('button');
-  buttons.forEach(button => {
-    button.addEventListener('click', function(e) {
-      const text = this.textContent.trim();
-      
-      switch(text) {
-        case 'Únete Ahora':
-          // Handle join now action
-          console.log('Join now clicked');
-          // Add your join logic here
-          break;
-        case 'Saber Más':
-          // Scroll to features section
+    var buttons = document.querySelectorAll('button');
+    buttons.forEach(function(button) {
+      if (button.dataset.yummiesClickAttached) return;
+      button.dataset.yummiesClickAttached = 'true';
+      button.addEventListener('click', function() {
+        var text = this.textContent.trim();
+        if (text === 'Saber Más') {
           smoothScroll('.features-section');
-          break;
-        case 'Registrarse Gratis':
-          // Handle registration action
-          console.log('Register clicked');
-          // Add your registration logic here
-          break;
-      }
+        }
+      });
     });
-  });
 
-  // Add hover effects for feature cards
-  const featureCards = document.querySelectorAll('.feature-card');
-  featureCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-      this.style.transform = 'translateY(-5px)';
+    var featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach(function(card) {
+      if (card.dataset.hoverAttached) return;
+      card.dataset.hoverAttached = 'true';
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px)';
+      });
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+      });
     });
-    
-    card.addEventListener('mouseleave', function() {
-      this.style.transform = 'translateY(0)';
+
+    var observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    var animatedElements = document.querySelectorAll('.feature-card, .hero-section, .cta-section');
+    animatedElements.forEach(function(el) {
+      if (el.dataset.animObserved) return;
+      el.dataset.animObserved = 'true';
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
     });
-  });
+  }
 
-  // Add scroll animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initYummiesOne);
+  } else {
+    initYummiesOne();
+  }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, observerOptions);
-
-  // Observe elements for animation
-  const animatedElements = document.querySelectorAll('.feature-card, .hero-section, .cta-section');
-  animatedElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-  });
-
-  // Add parallax effect to hero section
-  window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    const heroSection = document.querySelector('.hero-section');
-    if (heroSection) {
-      const rate = scrolled * -0.5;
-      heroSection.style.transform = `translateY(${rate}px)`;
-    }
-  });
-}); 
+  document.addEventListener('astro:page-load', initYummiesOne);
+  document.addEventListener('astro:after-swap', initYummiesOne);
+})(); 
