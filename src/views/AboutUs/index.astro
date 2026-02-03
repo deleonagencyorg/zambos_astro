@@ -83,7 +83,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
                   <!-- Container amarillo -->
                   <div class="bg-[#FFED7A] rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 flex items-center justify-center w-full max-w-[583px] aspect-[583/400]">
                     <LazyImage 
-                      class="rounded-2xl transform hover:scale-105 transition-transform duration-300 object-cover w-full h-full max-w-[450px] max-h-[450px]" 
+                      class="rounded-2xl transform hover:scale-105 transition-transform duration-300 object-contain object-center w-full h-full max-w-[450px] max-h-[450px]" 
                       src={item.image} 
                       alt={item.title ?? item.year ?? 'about-us item'}
                     />
@@ -353,90 +353,100 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
 </style>
 
 <script>
-  // Timeline navigation functionality
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('.timeline-slide');
-  const dots = document.querySelectorAll('.pagination-dot');
-  const points = document.querySelectorAll('.timeline-point');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  const totalSlides = slides.length;
+  function initTimeline() {
+    const root = document.querySelector('.timeline-horizontal-container');
+    if (!root) return;
 
-  function updateTimeline(newIndex: number) {
-    if (newIndex < 0 || newIndex >= totalSlides) return;
+    if (root.dataset.timelineInitialized === 'true') return;
+    root.dataset.timelineInitialized = 'true';
 
-    // Ocultar el slide actual
-    slides[currentIndex].classList.remove('active');
-    slides[currentIndex].classList.add('hidden');
-    
-    // Remove active from dots and points
-    dots[currentIndex]?.classList.remove('active');
-    points[currentIndex]?.classList.remove('active');
+    let currentIndex = 0;
+    const slides = root.querySelectorAll('.timeline-slide');
+    const dots = root.querySelectorAll('.pagination-dot');
+    const points = root.querySelectorAll('.timeline-point');
+    const prevBtn = root.querySelector('#prevBtn');
+    const nextBtn = root.querySelector('#nextBtn');
+    const totalSlides = slides.length;
 
-    // Mostrar el nuevo slide
-    slides[newIndex].classList.remove('hidden');
-    setTimeout(() => {
-      slides[newIndex].classList.add('active');
-    }, 50);
-    
-    // Add active to new dots and points
-    dots[newIndex]?.classList.add('active');
-    points[newIndex]?.classList.add('active');
-    
-    currentIndex = newIndex;
+    function updateButtons() {
+      if (!prevBtn || !nextBtn) return;
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex === totalSlides - 1;
+    }
+
+    function updateTimeline(newIndex) {
+      if (newIndex < 0 || newIndex >= totalSlides) return;
+
+      if (slides[currentIndex]) {
+        slides[currentIndex].classList.remove('active');
+        slides[currentIndex].classList.add('hidden');
+      }
+
+      if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+      if (points[currentIndex]) points[currentIndex].classList.remove('active');
+
+      if (slides[newIndex]) {
+        slides[newIndex].classList.remove('hidden');
+        setTimeout(() => {
+          slides[newIndex]?.classList.add('active');
+        }, 50);
+      }
+
+      if (dots[newIndex]) dots[newIndex].classList.add('active');
+      if (points[newIndex]) points[newIndex].classList.add('active');
+
+      currentIndex = newIndex;
+      updateButtons();
+    }
+
+    if (slides.length > 0) {
+      slides[0].classList.add('active');
+      if (dots[0]) dots[0].classList.add('active');
+      if (points[0]) points[0].classList.add('active');
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        updateTimeline(currentIndex - 1);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        updateTimeline(currentIndex + 1);
+      });
+    }
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        updateTimeline(index);
+      });
+    });
+
+    root.querySelectorAll('.timeline-point-btn').forEach((btn) => {
+      const idx = Number(btn.getAttribute('data-index'));
+      btn.addEventListener('click', () => {
+        updateTimeline(idx);
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        updateTimeline(currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        updateTimeline(currentIndex + 1);
+      }
+    });
+
     updateButtons();
   }
 
-  function updateButtons() {
-    if (prevBtn && nextBtn) {
-      (prevBtn as HTMLButtonElement).disabled = currentIndex === 0;
-      (nextBtn as HTMLButtonElement).disabled = currentIndex === totalSlides - 1;
-    }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTimeline);
+  } else {
+    initTimeline();
   }
 
-  // Initialize first slide
-  if (slides.length > 0) {
-    slides[0].classList.add('active');
-    dots[0]?.classList.add('active');
-    points[0]?.classList.add('active');
-  }
-
-  // Navigation buttons
-  prevBtn?.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      updateTimeline(currentIndex - 1);
-    }
-  });
-
-  nextBtn?.addEventListener('click', () => {
-    if (currentIndex < totalSlides - 1) {
-      updateTimeline(currentIndex + 1);
-    }
-  });
-
-  // Pagination dots
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-      updateTimeline(index);
-    });
-  });
-
-  // Timeline points
-  document.querySelectorAll('.timeline-point-btn').forEach((btn, index) => {
-    btn.addEventListener('click', () => {
-      updateTimeline(index);
-    });
-  });
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft' && currentIndex > 0) {
-      updateTimeline(currentIndex - 1);
-    } else if (e.key === 'ArrowRight' && currentIndex < totalSlides - 1) {
-      updateTimeline(currentIndex + 1);
-    }
-  });
-
-  // Initialize button states
-  updateButtons();
+  document.addEventListener('astro:page-load', initTimeline);
+  document.addEventListener('astro:after-swap', initTimeline);
 </script>

@@ -95,7 +95,7 @@
         "title": "",
         "type": "image",
         "description": "",
-        "link": "http://zambos.com/wp-content/uploads/2025/03/2560X1088_Felipe-1-png.avif"
+        "link": "#"
       },
       {
         "id": "slide3",
@@ -105,7 +105,7 @@
         "title": "",
         "type": "image",
         "description": "",
-        "link": "https://zambos.com/wp-content/uploads/2024/04/banner-estadio-zambos.webp"
+        "link": "#"
       },
       {
         "id": "slide4",
@@ -169,7 +169,7 @@
     {
       "id": "Zambos",
       "text": "Zambos Truck",
-      "href": "/es/zambostruck"
+      "href": "/zambostruck"
     }
   ],
   "about_us": {

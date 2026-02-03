@@ -40,57 +40,81 @@ const preloadFirstImage = true && firstSlide.mobile && firstSlide.desktop;
 
 <!-- Cargar scripts del carrusel solo en el cliente -->
 <script is:inline define:vars={{ carouselSelector: '.swiper-container.main-carousel' }}>
-  document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      try {
-        const swiper = new Swiper(carouselSelector, {
-          loop: true,
-          autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          // Mejorar la respuesta táctil en móviles
-          touchRatio: 1.5,
-          touchAngle: 45,
-          touchMoveStopPropagation: true,
-          touchStartPreventDefault: false,
-          touchStartForcePreventDefault: false,
-          threshold: 5, // Umbral más bajo para detectar deslizamientos
-          on: {
-            init: function() {
-              console.log('Swiper inicializado correctamente');
-            }
-          }
-        });
-        
-        // Eliminar los event listeners adicionales para evitar conflictos
-        // y dejar que Swiper maneje directamente los eventos táctiles
-        
-        window.addEventListener('load', () => swiper.update());
-        
-        // Asegurar que el swiper se actualice cuando cambie la orientación del dispositivo
-        window.addEventListener('orientationchange', () => {
-          setTimeout(() => swiper.update(), 200);
-        });
-      } catch (error) {
-        console.error('Error al inicializar Swiper:', error);
+  (function() {
+    var mainCarouselInstance = null;
+
+    function initMainCarousel() {
+      var container = document.querySelector(carouselSelector);
+      if (!container) return;
+
+      if (container.dataset.swiperInitialized === 'true' && mainCarouselInstance) {
+        mainCarouselInstance.update();
+        return;
       }
-    }, 500);
-  });
+
+      if (mainCarouselInstance) {
+        mainCarouselInstance.destroy(true, true);
+        mainCarouselInstance = null;
+      }
+
+      setTimeout(function() {
+        try {
+          mainCarouselInstance = new Swiper(carouselSelector, {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 16,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            touchRatio: 1.5,
+            touchAngle: 45,
+            touchMoveStopPropagation: true,
+            touchStartPreventDefault: false,
+            touchStartForcePreventDefault: false,
+            threshold: 5,
+          });
+
+          container.dataset.swiperInitialized = 'true';
+        } catch (error) {
+          console.error('Error al inicializar Swiper:', error);
+        }
+      }, 100);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMainCarousel);
+    } else {
+      initMainCarousel();
+    }
+
+    document.addEventListener('astro:page-load', initMainCarousel);
+    document.addEventListener('astro:after-swap', initMainCarousel);
+  })();
 </script>
 
 {loading ? (
   <Skeleton items={3} />
 ) : (
-  <div class="relative overflow-hidden w-screen" transition:animate="fade">
+  <div class="relative overflow-hidden w-full" transition:animate="fade">
     {preloadFirstImage && (
       <>
         <!-- Precargar la primera imagen para dispositivos móviles -->

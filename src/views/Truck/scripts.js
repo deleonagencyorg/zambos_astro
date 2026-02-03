@@ -1,11 +1,23 @@
 // Fix para las imágenes que no cargan
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
+(function() {
+  function initTruckImages() {
+    var images = document.querySelectorAll('img');
+    images.forEach(function(img) {
+      if (img.dataset.errorHandlerAttached) return;
+      img.dataset.errorHandlerAttached = 'true';
       img.addEventListener('error', function() {
-        // Ensure this placeholder path is correct and accessible
-        this.src = '/images/news/placeholder.jpg'; 
+        this.src = '/images/news/placeholder.jpg';
       });
     });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTruckImages);
+  } else {
+    initTruckImages();
+  }
+
+  document.addEventListener('astro:page-load', initTruckImages);
+  document.addEventListener('astro:after-swap', initTruckImages);
+})();
   

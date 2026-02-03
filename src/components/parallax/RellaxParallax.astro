@@ -54,20 +54,28 @@ const {
 <script>
   import Rellax from 'rellax';
   
-  // Inicializar Rellax cuando el DOM esté cargado
-  document.addEventListener('DOMContentLoaded', () => {
-    const rellax = new Rellax('.rellax-element', {
-      // Las opciones se toman de los atributos data-rellax-*
-      callback: function(positions) {
-        // callback opcional después de cada actualización
+  (function() {
+    var rellaxInstance = null;
+
+    function initRellaxParallax() {
+      var elements = document.querySelectorAll('.rellax-element');
+      if (!elements.length) return;
+
+      if (rellaxInstance) {
+        rellaxInstance.destroy();
+        rellaxInstance = null;
       }
-    });
-    
-    // Actualizar Rellax en caso de cambios en el tamaño de la ventana
-    window.addEventListener('resize', () => {
-      if (rellax) {
-        rellax.refresh();
-      }
-    });
-  });
+
+      rellaxInstance = new Rellax('.rellax-element', {});
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initRellaxParallax);
+    } else {
+      initRellaxParallax();
+    }
+
+    document.addEventListener('astro:page-load', initRellaxParallax);
+    document.addEventListener('astro:after-swap', initRellaxParallax);
+  })();
 </script>

@@ -98,6 +98,8 @@ const t = texts[(locale as 'es'|'en')] || texts.es;
   function initShareModal(modalId){
     const modal = document.getElementById(modalId);
     if(!modal) return;
+    if (modal.dataset.shareModalInitialized === 'true') return;
+    modal.dataset.shareModalInitialized = 'true';
     const closes = modal.querySelectorAll('.modal-close');
     const backdrop = modal.querySelector('.modal-backdrop');
 
@@ -127,6 +129,9 @@ const t = texts[(locale as 'es'|'en')] || texts.es;
     initShareModal(modalId);
   });
   document.addEventListener('astro:page-load', ()=>{
+    initShareModal(modalId);
+  });
+  document.addEventListener('astro:after-swap', ()=>{
     initShareModal(modalId);
   });
 </script>

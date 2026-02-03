@@ -3,131 +3,526 @@
 import { getLocale } from '../../i18n/i18n';
 import './styles.css';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
+import Carousel from '../../components/common/Carousel/index.astro';
 import truckEs from '../../locales/es/zambostruck.json';
+import galleryEs from '../../locales/es/gallery.json';
+import FormContact from '../../components/contact/FormContact.astro';
+import Subscription from '../../components/subscription/index.astro';
+import SimpleGallery from '../../components/common/Gallery/SimpleGallery.astro';
 
 const currentLang = getLocale();
 const data = truckEs; // Solo ES
+
+const gallerySlides = (data.gallery?.images || []).map((url) => ({
+  desktop: url,
+  mobile: url,
+  alt: data.gallery?.title || 'Zambos Truck',
+  title: '',
+  subtitle: '',
+}));
+
+type RecipeItem = { id: string; title: string; image: string; price?: string };
+
+const recipeModules = import.meta.glob<{ default: RecipeItem }>("../../locales/*/recipes/*.json");
+const recipeItems: RecipeItem[] = [];
+
+for (const path in recipeModules) {
+  const parts = path.split('/');
+  const localesIndex = parts.lastIndexOf('locales');
+  const lang = localesIndex >= 0 ? parts[localesIndex + 1] : '';
+  if (lang === currentLang) {
+    const mod = await recipeModules[path]();
+    recipeItems.push(mod.default);
+  }
+}
+
+const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs as any).images : [];
 ---
-
-<div class="bg-[#0DB04A] min-h-screen">
-  <!-- Hero -->
-  <div class="container mx-auto px-4 pt-8 pb-10">
-    <div class="pt-4 mb-6">
-      <Breadcrumb bgColor="bg-transparent" textColor="text-white" hoverColor="hover:text-white" />
-    </div>
-
-    <div class="rounded-3xl overflow-hidden bg-red-600 shadow-2xl">
-      {data.hero.videoUrl ? (
-        <div class="relative w-full aspect-video">
-          <video class="w-full h-full object-cover" src={data.hero.videoUrl} autoplay muted playsinline loop></video>
-          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-        </div>
-      ) : (
-        <img src={data.hero.bannerImage} alt={data.hero.title} class="w-full h-64 md:h-96 object-cover" />
-      )}
-      <div class="p-6 md:p-10 text-center">
-        <h1 class="text-white text-3xl md:text-5xl font-black font-title uppercase">{data.hero.title}</h1>
-        <p class="text-white/90 mt-2 md:mt-3">{data.hero.subtitle}</p>
-        <div class="mt-5">
-          <a href="#truck-form" class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition">
-            {data.hero.cta}
-          </a>
+<div class="w-full text-center flex flex-col items-center justify-center">
+  <diV class=" md:container">
+<section class="md:max-w-8xl px-4 sm:px-6 lg:px-8 mt-6 py-12">
+    <div class=" mx-auto">
+      <div class="relative w-full overflow-hidden rounded-xl sm:rounded-[32px] lg:rounded-[40px] bg-black/5">
+        <div class="w-full">
+          <img
+            src={data.hero?.bannerImage}
+            alt={data.hero?.title || 'Zambos Truck'}
+            class="w-full h-auto object-cover block"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>
-  </div>
+  </section>
+  <section>
+  <section class="md:w-full bg-green py-10 sm:py-12">
+    <div class="w-[80%] md:max-w-6xl mx-auto px-4">
+      <h2 class="titles text-white text-center mb-6">
+        {currentLang === 'es' ? 'Paquetes disponibles' : 'Available packages'}
+      </h2>
 
-  <!-- Paquetes dinámicos -->
-  <div class="container mx-auto px-4 pb-12">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-      <div>
-        <h2 class="text-3xl md:text-5xl font-black text-white mb-1">{data.packages.title.toUpperCase()}</h2>
-        <p class="text-white/90 text-sm md:text-base">{data.packages.subtitle}</p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-12">
-      {data.packages.items.map((p) => (
-        <div class="bg-[#FFF7D1] rounded-2xl p-6 shadow-xl">
-          <h3 class="text-2xl md:text-3xl font-black text-red-700 mb-4">{p.label}</h3>
-          <div class="flex items-center justify-center mb-2">
-            <div class="bg-[#009337] text-white px-5 py-2 rounded-full text-xl font-bold shadow">{p.price}</div>
+      <div class="relative">
+        <!-- Botones prev/next -->
+        <button
+          type="button"
+          class="flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-greenDark rounded-full w-8 h-8 sm:w-10 sm:h-10 items-center justify-center shadow-md"
+          aria-label="Prev"
+          data-truck-packages-prev
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          class="flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-greenDark rounded-full w-8 h-8 sm:w-10 sm:h-10 items-center justify-center shadow-md"
+          aria-label="Next"
+          data-truck-packages-next
+        >
+          ›
+        </button>
+
+        <!-- MOBILE: 1 card por slide centrada, sin peeking del siguiente -->
+        <div class="overflow-hidden block sm:hidden">
+          <div
+            class="flex transition-transform duration-500 ease-out"
+            data-truck-packages-track-mobile
+          >
+            {data.packages.items.map((img: string, idx: number) => (
+              <div
+                class="w-full shrink-0 flex justify-center"
+                data-truck-packages-slide-mobile={idx}
+              >
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md w-[86%]">
+                  <div class="w-full aspect-square overflow-hidden">
+                    <img
+                      src={img}
+                      alt={`Package ${idx + 1}`}
+                      class="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <p class="text-center text-[#0A6A2E] font-bold mb-4">{p.note}</p>
-          <div class="bg-gradient-to-r from-red-600 to-red-700 text-white text-center py-3 rounded-xl">
-            <span class="text-xl font-black">{p.badge}</span>
+        </div>
+
+        <!-- DESKTOP/TABLET: 3 cards por slide con porcentajes -->
+        <div class="overflow-hidden hidden sm:block">
+          <div
+            class="flex transition-transform duration-500 ease-out"
+            data-truck-packages-track-desktop
+          >
+            {Array.from(
+              { length: Math.ceil(data.packages.items.length / 3) },
+              (_, slideIndex) => {
+                const start = slideIndex * 3;
+                const slideItems = data.packages.items.slice(start, start + 3);
+                return (
+                  <div
+                    class="w-full shrink-0"
+                    data-truck-packages-slide-desktop={slideIndex}
+                  >
+                    <div class="flex justify-center gap-[3%] px-[5%]">
+                      {slideItems.map((img: string, idx: number) => (
+                        <div class="w-[30%] bg-white rounded-2xl overflow-hidden shadow-md">
+                          <div class="w-full aspect-square overflow-hidden">
+                            <img
+                              src={img}
+                              alt={`Package ${start + idx + 1}`}
+                              class="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+            )}
+          </div>
+        </div>
+
+        <!-- Dots mobile -->
+        <div class="flex sm:hidden justify-center mt-6 gap-3">
+          {data.packages.items.map((_, i) => (
+            <button
+              type="button"
+              class="w-2 h-2 rounded-full bg-white/40 data-[active='true']:bg-white transition-colors"
+              data-truck-packages-dot-mobile={i}
+            />
+          ))}
+        </div>
+
+        <!-- Dots desktop -->
+        <div class="hidden sm:flex justify-center mt-6 gap-3">
+          {Array.from(
+            { length: Math.ceil(data.packages.items.length / 3) },
+            (_, i) => (
+              <button
+                type="button"
+                class="w-2 h-2 rounded-full bg-white/40 data-[active='true']:bg-white transition-colors"
+                data-truck-packages-dot-desktop={i}
+              />
+            )
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="w-full bg-green py-8 sm:py-12">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col items-center text-center lg:flex-row lg:items-center lg:justify-between gap-2 lg:gap-4 mb-8">
+        <div class="w-full lg:w-auto">
+          <h2 class="text-white font-black uppercase leading-[0.95] text-3xl sm:text-4xl md:text-5xl">
+            COMO DISFRUTAR TUS
+          </h2>
+          <h2 class="text-white font-black uppercase leading-[0.95] text-3xl sm:text-4xl md:text-5xl">
+            ZAMBOS PREPARADOS
+          </h2>
+          <p class="text-white/90 mt-2 text-sm sm:text-base">
+            Convierte cualquier ocasión en un momento delicioso e inolvidable.
+          </p>
+        </div>
+        <a
+          href="https://wa.link/hfop57"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-3 lg:mt-0 self-center lg:self-auto bg-[#CA0203] hover:bg-[#A50202] text-white font-bold py-3 px-6 lg:px-8 rounded-full transition-all shadow-none flex items-center gap-2 text-sm lg:text-base whitespace-nowrap"
+        >
+          <svg class="w-5 h-5 lg:w-6 lg:h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+            />
+          </svg>
+          CONVERSEMOS AHORA
+        </a>
+      </div>
+
+      <!-- Cards con flex cols y porcentajes -->
+     
+    </div>
+  </section>
+
+  <section class="w-full bg-green py-8 sm:py-12">
+    <div class="max-w-8xl mx-auto px-4">
+      
+
+      <!-- Cards con flex cols y porcentajes -->
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-[3%]">
+        <!-- Card 1 -->
+        <div class="w-full sm:w-[31%] bg-[#CA0203] rounded-2xl p-5 sm:p-6 text-white shadow-none">
+          <div class="flex justify-center mb-5">
+            <div class="bg-white/20 p-4 rounded-full">
+              <img
+                src="https://snack.yummiespromociones.com/SnacksyummiesAssets/evento.webp"
+                alt="Solicita tu evento"
+                class="w-12 h-12"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-black text-center mb-3">SOLICITA TU EVENTO PERSONALIZADOS</h3>
+          <p class="text-center text-sm leading-relaxed">
+            Creamos paquetes especiales adaptados a las necesidades de tu evento. Desde aniversarios hasta eventos corporativos.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="w-full sm:w-[31%] bg-[#CA0203] rounded-2xl p-5 sm:p-6 text-white shadow-none">
+          <div class="flex justify-center mb-5">
+                      <div class="bg-white/20 p-4 rounded-full w-24 h-24 flex items-center justify-center">
+            <img
+              src="https://snack.yummiespromociones.com/SnacksyummiesAssets/LOGO-PEDIDOS-1024x620.png"
+              alt="PedidosYa"
+              class="w-full h-full object-contain rounded-full"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-black text-center mb-3">ENCUENTRANOS EN PEDIDOSYA</h3>
+          <p class="text-center text-sm leading-relaxed">
+            Pide Zambos Preparados por medio de delivery en Tegucigalpa y San Pedro Sula fácilmente y sin complicaciones.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-full sm:w-[31%] bg-[#CA0203] rounded-2xl p-5 sm:p-6 text-white shadow-none">
+          <div class="flex justify-center mb-5">
+            <div class="bg-white/20 p-4 rounded-full">
+              <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-black text-center mb-3">ENCUENTRA UN PUNTO DE VENTA CERCANO</h3>
+          <p class="text-center text-sm leading-relaxed">
+            Ubícanos fácilmente en Tegucigalpa o San Pedro Sula, donde estamos listos para ayudarte en todo momento con rapidez y confianza.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </section>
+ <!-- Recetas: cards en fila con % y aspecto del mock -->
+<section class="w-full bg-red py-10 sm:py-12">
+  <div class="w-[95%] sm:w-[92%] lg:w-[90%] xl:w-[85%] mx-auto px-4">
+    <div class="w-full flex flex-col items-center text-center sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+      <h2 class="titles text-white">
+        {currentLang === 'es' ? 'Descubre nuestras Recetas' : 'Discover Recipes'}
+      </h2>
+      <a
+        href="https://snack.yummiespromociones.com/SnacksyummiesAssets/YUMMIES-Catalogo-Zambos-Truck.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-[#0DB04A] hover:bg-[#0A8A39] text-white font-title px-6 py-3 rounded-full text-md whitespace-nowrap text-center"
+      >
+        {currentLang === 'es' ? 'DESCARGA EL CATÁLOGO' : 'Download the catalog'}
+      </a>
+    </div>
+   
+    <div class="flex flex-wrap justify-center gap-4 sm:gap-[3%]">
+      {Array.isArray(data.recipes?.items) && data.recipes.items.map((r: any) => (
+        <div class="bg-yellow w-[92%] sm:w-[48%] lg:w-[22%] rounded-2xl overflow-hidden  mt-4 border-4 border-yellow">
+          <!-- Imagen -->
+          <div class="rounded-y-2xl overflow-hidden">
+            <img
+              src={r.image}
+              alt={r.title}
+              class="w-full h-auto object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <!-- Info -->
+          <div class="mt-3 rounded-xl px-4 py-4 text-center">
+            <p class="text-[#0A6A2E] font-title font-black uppercase text-sm sm:text-base text-center">{r.desc}</p>
           </div>
         </div>
       ))}
     </div>
+  </div>
+</section>
 
-    <!-- Sección Cómo Disfrutar -->
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-      <div>
-        <h2 class="text-4xl md:text-5xl font-black text-white mb-2">COMO DISFRUTAR TUS</h2>
-        <h2 class="text-4xl md:text-5xl font-black text-white mb-2">ZAMBOS PREPARADOS</h2>
-        <p class="text-white text-lg mt-4">Convierte cualquier ocasión en un momento delicioso e inolvidable.</p>
+<section class="w-full bg-green py-10 sm:py-12">
+    <div class="w-[95%] sm:w-[92%] lg:w-[90%] xl:w-[85%] max-w-6xl mx-auto">
+      <!-- Mapa responsive -->
+    
+ 
+      <!-- Acciones (cards blancas, botones rojos) -->
+      <div class="mt-10 flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-[4%] text-center">
+        <div class="w-[96%] sm:w-[48%] bg-white rounded-2xl p-6 shadow-sm mx-auto">
+          <h3 class="text-[#0A6A2E] font-black text-lg sm:text-2xl">Conoce nuestro menú de Zambos preparados</h3>
+          <div class="mt-4">
+            <a href="https://snack.yummiespromociones.com/SnacksyummiesAssets/MENU-TRUCK.pdf"  target="_blank" class="inline-block bg-[#CA0203] hover:bg-[#A50202] text-white font-bold py-3 px-6 rounded-full transition">Ver Menú</a>
+          </div>
+        </div>
+        <div class="w-[96%] sm:w-[48%] bg-white rounded-2xl p-6 shadow-sm mx-auto">
+          <h3 class="text-[#0A6A2E] font-black text-lg sm:text-2xl">Descarga nuestro catálogo con toda la información</h3>
+          <div class="mt-4">
+            <a href="https://snack.yummiespromociones.com/SnacksyummiesAssets/YUMMIES-Catalogo-Zambos-Truck.pdf" target="_blank" class="inline-block bg-[#CA0203] hover:bg-[#A50202] text-white font-bold py-3 px-6 rounded-full transition">Catálogo Zambos Truck</a>
+          </div>
+        </div>
       </div>
-      <button class="mt-4 md:mt-0 bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-        CONVERSEMOS AHORA
-      </button>
     </div>
-
-    <!-- Tarjetas de Información -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Eventos Personalizados -->
-      <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-8 text-white shadow-xl transform hover:scale-105 transition-all">
-        <div class="flex justify-center mb-6">
-          <div class="bg-white/20 p-4 rounded-full">
-            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18.5c-3.86-.96-7-5.29-7-9.5V8.3l7-3.11v15.31z"/>
-            </svg>
+  </section>
+  <section class="w-full bg-green py-8 sm:py-10">
+  <div class="w-[95%] sm:w-[92%] lg:w-[90%] xl:w-[85%] mx-auto text-center">
+    <h2 class="titles text-white">
+      {currentLang === 'es' ? 'Modelos disponibles' : 'Available models'}
+    </h2>
+  </div>
+</section>
+ 
+<!-- Modelos: dos columnas con imágenes responsive en % -->
+<section class="w-full bg-green pb-4 sm:pb-10">
+  <div class="w-[95%] sm:w-[92%] lg:w-[90%] xl:w-[85%] mx-auto">
+    <div class="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-[4%]">
+      <!-- Columna 1 -->
+      <div class="w-[96%] sm:w-[48%] bg-white/5 rounded-3xl p-3 sm:p-4 mx-auto">
+        <div class="rounded-2xl overflow-hidden bg-white/10">
+          <div class="w-full aspect-[4/3]">
+            <img
+              src="https://snack.yummiespromociones.com/SnacksyummiesAssets/TUCTUC-2.png"
+              alt="Tuc Tuc"
+              class="w-full h-full object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
-        <h3 class="text-2xl font-black text-center mb-4">SOLICITA TU EVENTO PERSONALIZADOS</h3>
-        <p class="text-center text-sm leading-relaxed">
-          Creamos paquetes especiales adaptados a las necesidades de tu evento. Desde aniversarios hasta eventos corporativos.
-        </p>
+        <p class="text-white font-title font-black uppercase text-center mt-3">TUC TUC</p>
       </div>
-
-      <!-- PedidosYa -->
-      <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-8 text-white shadow-xl transform hover:scale-105 transition-all">
-        <div class="flex justify-center mb-6">
-          <div class="bg-white/20 p-4 rounded-full">
-            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M18 18.5a1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5m1.5-9 1.96 2.5H17V9.5m-11 9A1.5 1.5 0 0 1 4.5 17 1.5 1.5 0 0 1 6 15.5 1.5 1.5 0 0 1 7.5 17 1.5 1.5 0 0 1 6 18.5M20 8h-3V4H3c-1.11 0-2 .89-2 2v11h2a3 3 0 0 0 3 3 3 3 0 0 0 3-3h6a3 3 0 0 0 3 3 3 3 0 0 0 3-3h2v-5l-3-4Z"/>
-            </svg>
+ 
+      <!-- Columna 2 -->
+      <div class="w-[96%] sm:w-[48%] bg-white/5 rounded-3xl p-3 sm:p-4 mx-auto">
+        <div class="rounded-2xl overflow-hidden bg-white/10">
+          <div class="w-full aspect-[4/3]">
+            <img
+              src="https://snack.yummiespromociones.com/SnacksyummiesAssets/CARRETILLA-2.png"
+              alt="Carretilla"
+              class="w-full h-full object-contain"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
-        <h3 class="text-2xl font-black text-center mb-4">ENCUENTRANOS EN PEDIDOSYA</h3>
-        <p class="text-center text-sm leading-relaxed">
-          Pide Zambos Preparados por medio de delivery en Tegucigalpa y San Pedro Sula fácilmente y sin complicaciones.
-        </p>
-      </div>
-
-      <!-- Puntos de Venta -->
-      <div class="bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-8 text-white shadow-xl transform hover:scale-105 transition-all">
-        <div class="flex justify-center mb-6">
-          <div class="bg-white/20 p-4 rounded-full">
-            <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-            </svg>
-          </div>
-        </div>
-        <h3 class="text-2xl font-black text-center mb-4">ENCUENTRA UN PUNTO DE VENTA CERCANO</h3>
-        <p class="text-center text-sm leading-relaxed">
-          Ubicanos fácilmente en Tegucigalpa o San Pedro Sula, donde estamos listos para ayudarte en todo momento con rapidez y confianza.
-        </p>
+        <p class="text-white font-title font-black uppercase text-center mt-3">CARRETILLA</p>
       </div>
     </div>
   </div>
+</section>
+
+<SimpleGallery 
+  images={Array.isArray(data.gallery?.images) ? data.gallery.images : []} 
+  title={data.gallery?.title} 
+  filters={Array.isArray(data.gallery?.filters) ? data.gallery.filters : []}
+/>
+
+    <section id="truck-form" class="truck-truck-form-section pb-16">
+      <div class="mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-[0.7fr_1.3fr] gap-8 lg:gap-12 xl:gap-16 items-stretch">
+          <!-- Columna de texto -->
+          <div class="flex items-center justify-center text-center">
+            <div class="max-w-md">
+              <h2 class="text-white font-black uppercase leading-[0.95] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+                {truckEs.form.title}
+              </h2>
+              <p class="text-white/90 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">
+                Completa el siguiente formulario
+              </p>
+            </div>
+          </div>
+
+          <!-- Columna de formulario -->
+          <div class="flex lg:justify-end">
+            <div class="w-full lg:w-[90%] xl:w-[80%]">
+              <FormContact currentLang="es" formType="zambostruck" hideContactReason={true} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+  </diV>
+
+<!-- Botón flotante de WhatsApp -->
+<a
+  href={`https://wa.me/${data.whatsapp?.phone}?text=${encodeURIComponent(data.whatsapp?.message || '')}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group"
+  aria-label="Contactar por WhatsApp"
+>
+  <div class="flex items-center gap-3 px-5 py-4">
+    <!-- Icono de WhatsApp -->
+    <svg class="w-7 h-7 sm:w-8 sm:h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    
+    <!-- Texto (oculto en mobile, visible en desktop) -->
+    <span class="hidden sm:block font-bold text-base whitespace-nowrap">
+      ¡Reserva tu Truck!
+    </span>
+  </div>
+  
+  <!-- Pulso animado -->
+  <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
+</a>
+
+<script>
+  (function() {
+      // Mobile carousel (1 card por slide)
+      const trackMobile = document.querySelector('[data-truck-packages-track-mobile]') as HTMLElement;
+      const slidesMobile = Array.from(document.querySelectorAll('[data-truck-packages-slide-mobile]'));
+      const dotsMobile = Array.from(document.querySelectorAll('[data-truck-packages-dot-mobile]'));
+
+      // Desktop carousel (3 cards por slide)
+      const trackDesktop = document.querySelector('[data-truck-packages-track-desktop]') as HTMLElement;
+      const slidesDesktop = Array.from(document.querySelectorAll('[data-truck-packages-slide-desktop]'));
+      const dotsDesktop = Array.from(document.querySelectorAll('[data-truck-packages-dot-desktop]'));
+
+      const prevBtn = document.querySelector('[data-truck-packages-prev]');
+      const nextBtn = document.querySelector('[data-truck-packages-next]');
+
+      let currentMobile = 0;
+      let currentDesktop = 0;
+
+      const isMobile = () => window.innerWidth < 640;
+
+      const updateMobile = () => {
+        if (!trackMobile) return;
+        const offset = -currentMobile * 100;
+        trackMobile.style.transform = `translateX(${offset}%)`;
+        dotsMobile.forEach((dot, i) =>
+          dot.setAttribute('data-active', i === currentMobile ? 'true' : 'false')
+        );
+      };
+
+      const updateDesktop = () => {
+        if (!trackDesktop) return;
+        const offset = -currentDesktop * 100;
+        trackDesktop.style.transform = `translateX(${offset}%)`;
+        dotsDesktop.forEach((dot, i) =>
+          dot.setAttribute('data-active', i === currentDesktop ? 'true' : 'false')
+        );
+      };
+
+      prevBtn?.addEventListener('click', () => {
+        if (isMobile()) {
+          currentMobile = (currentMobile - 1 + slidesMobile.length) % slidesMobile.length;
+          updateMobile();
+        } else {
+          currentDesktop = (currentDesktop - 1 + slidesDesktop.length) % slidesDesktop.length;
+          updateDesktop();
+        }
+      });
+
+      nextBtn?.addEventListener('click', () => {
+        if (isMobile()) {
+          currentMobile = (currentMobile + 1) % slidesMobile.length;
+          updateMobile();
+        } else {
+          currentDesktop = (currentDesktop + 1) % slidesDesktop.length;
+          updateDesktop();
+        }
+      });
+
+      dotsMobile.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          currentMobile = i;
+          updateMobile();
+        });
+      });
+
+      dotsDesktop.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          currentDesktop = i;
+          updateDesktop();
+        });
+      });
+
+      // Init
+      updateMobile();
+      updateDesktop();
+    })();
+  </script>
+
 </div>
 
 <style>
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+  
+  .animate-ping {
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 </style>

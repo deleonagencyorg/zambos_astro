@@ -41,5 +41,11 @@ import { getLocale, setLocale } from '../../i18n/i18n';
   }
 
   // Ejecutar la detección de idioma cuando se carga la página
-  document.addEventListener('DOMContentLoaded', detectAndSetLocale);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', detectAndSetLocale);
+  } else {
+    detectAndSetLocale();
+  }
+
+  document.addEventListener('astro:page-load', detectAndSetLocale);
 </script>

@@ -1,5 +1,5 @@
 ---
-import RecipeCardCarousel from './RecipeCardCarousel.astro';
+import RecipeCard from './RecipeCard.astro';
 import { getLocale } from '../../i18n/i18n';
 
 // Import all recipe files dynamically (use static glob and filter by lang)
@@ -113,17 +113,15 @@ for (let i = 0; i < recipeItems.length; i += 1) {
               style="transform: translateX(0);"
             >
               {recipeItems.map((recipe) => (
-                <div class="flex-shrink-0" data-recipes-provided-item>
-                  <RecipeCardCarousel
+                <div class="flex-shrink-0 w-full sm:w-[48%] md:w-[31%]" data-recipes-provided-item>
+                  <RecipeCard
                     image={recipe.image}
-                    hoverImage={recipe.hover_image || recipe.image}
                     title={recipe.title}
                     time={`${recipe.preparation_time}MIN`}
                     id={recipe.id}
-                    difficulty={recipe.difficulty || '---'}
-                    servings={recipe.servings || 0}
-                    rating={recipe.rating || 0}
-                    isMainCard={false}
+                    description={(recipe as any).description}
+                    category={(recipe as any).category || 'breakfast'}
+                    isNew={(recipe as any).isNew || false}
                   />
                 </div>
               ))}
@@ -165,16 +163,14 @@ for (let i = 0; i < recipeItems.length; i += 1) {
               <div class="recipe-slide-group flex-shrink-0 w-full flex justify-center items-center px-4">
                 {group.map((recipe: any) => (
                   <div class="recipe-slide flex justify-center" data-category={getCategoryKey(recipe)}>
-                    <RecipeCardCarousel
+                    <RecipeCard
                       image={recipe.image}
-                      hoverImage={recipe.hover_image || recipe.image}
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
-                      difficulty={recipe.difficulty || '---'}
-                      servings={recipe.servings || 0}
-                      rating={recipe.rating || 0}
-                      isMainCard={false}
+                      description={(recipe as any).description}
+                      category={getCategoryKey(recipe).toUpperCase()}
+                      isNew={(recipe as any).isNew || false}
                     />
                   </div>
                 ))}
@@ -207,16 +203,14 @@ for (let i = 0; i < recipeItems.length; i += 1) {
           <div class="recipes-carousel-track flex items-start justify-center w-full gap-4 md:gap-6 transition-transform duration-300" id="recipesTrackDesktop" style="transform: translateX(0);">
             {recipeItems.map((recipe, index) => (
               <div class="recipe-slide flex-shrink-0 group-hover-container" data-index={index} data-category={getCategoryKey(recipe)}>
-                <RecipeCardCarousel
+                <RecipeCard
                   image={recipe.image}
-                  hoverImage={recipe.hover_image || recipe.image}
                   title={recipe.title}
                   time={`${recipe.preparation_time}MIN`}
                   id={recipe.id}
-                  difficulty={recipe.difficulty || '---'}
-                  servings={recipe.servings || 0}
-                  rating={recipe.rating || 0}
-                  isMainCard={false}
+                  description={(recipe as any).description}
+                  category={getCategoryKey(recipe).toUpperCase()}
+                  isNew={(recipe as any).isNew || false}
                 />
               </div>
             ))}
@@ -526,33 +520,6 @@ for (let i = 0; i < recipeItems.length; i += 1) {
           slide.style.flex = `0 0 calc((100% - ${(pv - 1) * g}px) / ${pv})`;
           slide.style.maxWidth = `calc((100% - ${(pv - 1) * g}px) / ${pv})`;
           slide.style.transition = 'none';
-        });
-
-        slidesToShow.forEach((slide) => {
-          let card = slide.querySelector('a');
-          if (card) {
-            // Remover listeners previos clonando el elemento
-            const newCard = card.cloneNode(true) as any;
-            card.parentNode?.replaceChild(newCard, card);
-            card = newCard;
-
-            // Resetear a estado normal (sin opacidad baja ni expansión)
-            card.style.opacity = '1';
-            card.style.zIndex = '';
-            card.className = 'block group relative transition-all duration-300 ease-in-out flex-shrink-0 w-full';
-
-            const cardContainer = card.querySelector('div');
-            const imgContainer = cardContainer?.querySelector('div[class*="rounded-t-"]');
-            const infoContainer = cardContainer?.querySelector('div[class*="bg-[#F8E31F]"]');
-            const title = card.querySelector('h3');
-            const imgTag = imgContainer?.querySelector('img');
-
-            if (cardContainer) cardContainer.style.width = '100%';
-            if (imgContainer) imgContainer.style.width = '100%';
-            if (infoContainer) infoContainer.style.width = '100%';
-            if (title) title.className = 'font-title font-bold text-black leading-tight flex-1 flex items-center text-brown text-2xl';
-            if (imgTag) imgTag.className = 'w-full h-full object-cover';
-          }
         });
 
         loadMoreClone.classList.toggle('hidden', revealedCount >= filteredSlides.length);

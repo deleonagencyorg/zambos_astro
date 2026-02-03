@@ -146,13 +146,13 @@ function formatTime(minutes: number): string {
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
             <button 
               id="ingredientsTab"
-              class="tab-btn bg-[#0DB04A] text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:bg-opacity-90 transition text-sm sm:text-base"
+              class="tab-btn bg-[#0DB04A] text-white opacity-100 font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:bg-opacity-90 transition text-sm sm:text-base"
             >
               {recipesAssets.recipes}
             </button>
             <button 
               id="preparationTab"
-              class="tab-btn bg-white text-gray-900 font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:bg-gray-100 transition text-sm sm:text-base"
+              class="tab-btn bg-[#0DB04A] text-white opacity-70 font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:opacity-90 transition text-sm sm:text-base"
             >
               {recipesAssets.preparation}
             </button>
@@ -214,12 +214,6 @@ function formatTime(minutes: number): string {
             {currentLang === 'es' ? 'Descubre mas recetas de la familia Zambos' : 'Discover more recipes from the Zambos family'}
           </p>
         </div>
-        <a 
-          href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}`}
-          class="bg-red text-white font-bold py-3 px-6 rounded-full uppercase hover:bg-opacity-90 transition whitespace-nowrap w-full sm:w-auto text-center"
-        >
-          {currentLang === 'es' ? 'Ver todas' : 'View all'}
-        </a>
       </div>
 
       <RecipesCarousel items={relatedRecipes} />
@@ -234,29 +228,29 @@ function formatTime(minutes: number): string {
 <!-- Tab Switching Script -->
 <script>
   function initRecipeTabs() {
-    const ingredientsTab = document.getElementById('ingredientsTab') as HTMLElement | null;
-    const preparationTab = document.getElementById('preparationTab') as HTMLElement | null;
-    const ingredientsContent = document.getElementById('ingredientsContent') as HTMLElement | null;
-    const preparationContent = document.getElementById('preparationContent') as HTMLElement | null;
+    const ingredientsTab = document.getElementById('ingredientsTab');
+    const preparationTab = document.getElementById('preparationTab');
+    const ingredientsContent = document.getElementById('ingredientsContent');
+    const preparationContent = document.getElementById('preparationContent');
 
     if (!ingredientsTab || !preparationTab || !ingredientsContent || !preparationContent) return;
     if (ingredientsTab.dataset.bound === 'true') return;
     ingredientsTab.dataset.bound = 'true';
 
     ingredientsTab.addEventListener('click', () => {
-      ingredientsTab.classList.add('bg-[#0DB04A]', 'text-white');
-      ingredientsTab.classList.remove('bg-white', 'text-gray-900');
-      preparationTab.classList.add('bg-white', 'text-gray-900');
-      preparationTab.classList.remove('bg-[#0DB04A]', 'text-white');
+      ingredientsTab.classList.add('opacity-100');
+      ingredientsTab.classList.remove('opacity-70');
+      preparationTab.classList.add('opacity-70');
+      preparationTab.classList.remove('opacity-100');
       ingredientsContent.classList.remove('hidden');
       preparationContent.classList.add('hidden');
     });
 
     preparationTab.addEventListener('click', () => {
-      preparationTab.classList.add('bg-[#0DB04A]', 'text-white');
-      preparationTab.classList.remove('bg-white', 'text-gray-900');
-      ingredientsTab.classList.add('bg-white', 'text-gray-900');
-      ingredientsTab.classList.remove('bg-[#0DB04A]', 'text-white');
+      preparationTab.classList.add('opacity-100');
+      preparationTab.classList.remove('opacity-70');
+      ingredientsTab.classList.add('opacity-70');
+      ingredientsTab.classList.remove('opacity-100');
       preparationContent.classList.remove('hidden');
       ingredientsContent.classList.add('hidden');
     });
@@ -264,6 +258,7 @@ function formatTime(minutes: number): string {
 
   document.addEventListener('DOMContentLoaded', initRecipeTabs);
   document.addEventListener('astro:page-load', initRecipeTabs);
+  document.addEventListener('astro:after-swap', initRecipeTabs);
 </script>
 
 <!-- Share Modal -->
