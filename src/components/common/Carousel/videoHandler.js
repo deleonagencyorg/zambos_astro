@@ -1,8 +1,12 @@
 // Script para manejar la reproducción automática de videos en el carrusel
-document.addEventListener('DOMContentLoaded', () => {
-  // Obtener todos los videos del carrusel
-  const videos = document.querySelectorAll('.video-slide');
-  if (!videos.length) return;
+(function() {
+  function initVideoHandler() {
+    var videos = document.querySelectorAll('.video-slide');
+    if (!videos.length) return;
+    
+    var container = document.querySelector('.swiper-container.main-carousel');
+    if (container && container.dataset.videoHandlerInitialized === 'true') return;
+    if (container) container.dataset.videoHandlerInitialized = 'true';
   
   // Función para iniciar la reproducción de un video específico
   function playVideo(video) {
@@ -100,25 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  // Inicializar todo
-  optimizeForMobile();
-  setupSwiperVideoHandling();
-  
-  // Manejar cambios de visibilidad de la página
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      // Pausar todos los videos cuando la página no está visible
-      pauseAllVideos();
-    } else {
-      // Al volver a la página, intentar reproducir el video activo
-      const swiperInstance = document.querySelector('.swiper-container.main-carousel')?.swiper;
-      if (swiperInstance) {
-        const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
-        const activeVideo = activeSlide?.querySelector('.video-slide');
-        if (activeVideo) {
-          playVideo(activeVideo);
-        }
-      }
-    }
-  });
-});
+    optimizeForMobile();
+    setupSwiperVideoHandling();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideoHandler);
+  } else {
+    initVideoHandler();
+  }
+
+  document.addEventListener('astro:page-load', initVideoHandler);
+  document.addEventListener('astro:after-swap', initVideoHandler);
+})();

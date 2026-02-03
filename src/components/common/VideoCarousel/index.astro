@@ -410,8 +410,23 @@ const {
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
   
-  document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.video-carousel', {
+  let videoCarouselInstance = null;
+
+  function initVideoCarousel() {
+    const container = document.querySelector('.video-carousel');
+    if (!container) return;
+
+    if (container.dataset.swiperInitialized === 'true' && videoCarouselInstance) {
+      videoCarouselInstance.update();
+      return;
+    }
+
+    if (videoCarouselInstance) {
+      videoCarouselInstance.destroy(true, true);
+      videoCarouselInstance = null;
+    }
+
+    videoCarouselInstance = new Swiper('.video-carousel', {
       modules: [Navigation, Pagination, Autoplay],
       slidesPerView: 1,
       spaceBetween: 0,
@@ -429,22 +444,20 @@ const {
         clickable: true,
       },
     });
+
+    container.dataset.swiperInitialized = 'true';
     
-    const videos = document.querySelectorAll<HTMLVideoElement>('.slide-video');
+    const videos = document.querySelectorAll('.slide-video');
     
-    function playVideo(video: HTMLVideoElement | null) {
+    function playVideo(video) {
       if (!video) return;
       
       const playPromise = video.play();
       
       if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            console.log('Video playing');
-          })
-          .catch((error: unknown) => {
-            console.warn('Video playback was prevented:', error);
-          });
+        playPromise.catch((error) => {
+          console.warn('Video playback was prevented:', error);
+        });
       }
     }
     
@@ -454,20 +467,29 @@ const {
       });
     }
     
-    swiper.on('slideChange', () => {
+    videoCarouselInstance.on('slideChange', () => {
       pauseAllVideos();
       
-      const activeSlide = swiper.slides[swiper.activeIndex];
-      const activeVideo = activeSlide?.querySelector('.slide-video') as HTMLVideoElement | null;
+      const activeSlide = videoCarouselInstance.slides[videoCarouselInstance.activeIndex];
+      const activeVideo = activeSlide?.querySelector('.slide-video');
       
       if (activeVideo) {
         setTimeout(() => playVideo(activeVideo), 300);
       }
     });
     
-    const initialVideo = swiper.slides[swiper.activeIndex]?.querySelector('.slide-video') as HTMLVideoElement | null;
+    const initialVideo = videoCarouselInstance.slides[videoCarouselInstance.activeIndex]?.querySelector('.slide-video');
     if (initialVideo) {
       playVideo(initialVideo);
     }
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVideoCarousel);
+  } else {
+    initVideoCarousel();
+  }
+
+  document.addEventListener('astro:page-load', initVideoCarousel);
+  document.addEventListener('astro:after-swap', initVideoCarousel);
 </script>

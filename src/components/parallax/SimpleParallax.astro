@@ -71,24 +71,37 @@ const transitionSpeeds = {
 <script>
   import simpleParallax from 'simple-parallax-js';
   
-  // Inicializar Simple Parallax cuando el DOM esté cargado
-  document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.simple-parallax');
-    
-    images.forEach(img => {
-      const scale = parseFloat(img.getAttribute('data-parallax-scale') || '1.5');
-      const orientation = img.getAttribute('data-parallax-orientation') || 'up';
-      const overflow = img.getAttribute('data-parallax-overflow') === 'true';
-      const delay = parseInt(img.getAttribute('data-parallax-delay') || '0');
-      const speed = parseFloat(img.getAttribute('data-parallax-transition-speed') || '0.8');
+  (function() {
+    function initSimpleParallax() {
+      var images = document.querySelectorAll('.simple-parallax');
       
-      new simpleParallax(img, {
-        scale: scale,
-        orientation: orientation,
-        overflow: overflow,
-        delay: delay,
-        transition: `cubic-bezier(0,0,${speed},1)`
+      images.forEach(function(img) {
+        if (img.dataset.simpleParallaxInitialized === 'true') return;
+        img.dataset.simpleParallaxInitialized = 'true';
+
+        var scale = parseFloat(img.getAttribute('data-parallax-scale') || '1.5');
+        var orientation = img.getAttribute('data-parallax-orientation') || 'up';
+        var overflow = img.getAttribute('data-parallax-overflow') === 'true';
+        var delay = parseInt(img.getAttribute('data-parallax-delay') || '0');
+        var speed = parseFloat(img.getAttribute('data-parallax-transition-speed') || '0.8');
+        
+        new simpleParallax(img, {
+          scale: scale,
+          orientation: orientation,
+          overflow: overflow,
+          delay: delay,
+          transition: 'cubic-bezier(0,0,' + speed + ',1)'
+        });
       });
-    });
-  });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initSimpleParallax);
+    } else {
+      initSimpleParallax();
+    }
+
+    document.addEventListener('astro:page-load', initSimpleParallax);
+    document.addEventListener('astro:after-swap', initSimpleParallax);
+  })();
 </script>

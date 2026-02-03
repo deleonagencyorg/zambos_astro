@@ -53,56 +53,57 @@ const {
 </div>
 
 <script>
-  // Importamos ScrollReveal de forma dinámica para evitar errores en SSR
-  document.addEventListener('DOMContentLoaded', async () => {
-    try {
-      // Importación dinámica de ScrollReveal
-      const ScrollRevealModule = await import('scrollreveal');
-      const ScrollReveal = ScrollRevealModule.default;
-      
-      // Inicializar ScrollReveal
-      const sr = ScrollReveal({
-        reset: false, // Por defecto, no resetear las animaciones
-        mobile: true, // Habilitar en dispositivos móviles
-      });
-      
-      // Seleccionar todos los elementos con la clase scroll-reveal
-      const elements = document.querySelectorAll('.scroll-reveal');
-      
-      // Configurar cada elemento con sus propios parámetros
-      elements.forEach((el: Element) => {
-        // Convertir el elemento a HTMLElement para compatibilidad con ScrollReveal
-        const htmlEl = el as HTMLElement;
-        const delay = parseInt(el.getAttribute('data-sr-delay') || '0');
-        const duration = parseInt(el.getAttribute('data-sr-duration') || '800');
-        const distance = el.getAttribute('data-sr-distance') || '50px';
+  (function() {
+    async function initScrollReveal() {
+      try {
+        var ScrollRevealModule = await import('scrollreveal');
+        var ScrollReveal = ScrollRevealModule.default;
         
-        // Validar que el origen sea uno de los valores permitidos
-        const originAttr = el.getAttribute('data-sr-origin') || 'bottom';
-        const origin = (['top', 'right', 'bottom', 'left'].includes(originAttr) 
-          ? originAttr as 'top' | 'right' | 'bottom' | 'left'
-          : 'bottom');
-          
-        const opacity = parseFloat(el.getAttribute('data-sr-opacity') || '0');
-        const scale = parseFloat(el.getAttribute('data-sr-scale') || '1');
-        const easing = el.getAttribute('data-sr-easing') || 'cubic-bezier(0.5, 0, 0, 1)';
-        const reset = el.getAttribute('data-sr-reset') === 'true';
-        
-        // Configurar ScrollReveal para este elemento
-        sr.reveal(htmlEl, {
-          delay,
-          duration,
-          distance,
-          origin,
-          opacity,
-          scale,
-          easing,
-          reset,
-          cleanup: true // Limpiar estilos después de la animación
+        var sr = ScrollReveal({
+          reset: false,
+          mobile: true,
         });
-      });
-    } catch (error) {
-      console.error('Error al cargar ScrollReveal:', error);
+        
+        var elements = document.querySelectorAll('.scroll-reveal');
+        
+        elements.forEach(function(el) {
+          if (el.dataset.srInitialized === 'true') return;
+          el.dataset.srInitialized = 'true';
+
+          var delay = parseInt(el.getAttribute('data-sr-delay') || '0');
+          var duration = parseInt(el.getAttribute('data-sr-duration') || '800');
+          var distance = el.getAttribute('data-sr-distance') || '50px';
+          var originAttr = el.getAttribute('data-sr-origin') || 'bottom';
+          var origin = ['top', 'right', 'bottom', 'left'].includes(originAttr) ? originAttr : 'bottom';
+          var opacity = parseFloat(el.getAttribute('data-sr-opacity') || '0');
+          var scale = parseFloat(el.getAttribute('data-sr-scale') || '1');
+          var easing = el.getAttribute('data-sr-easing') || 'cubic-bezier(0.5, 0, 0, 1)';
+          var reset = el.getAttribute('data-sr-reset') === 'true';
+          
+          sr.reveal(el, {
+            delay: delay,
+            duration: duration,
+            distance: distance,
+            origin: origin,
+            opacity: opacity,
+            scale: scale,
+            easing: easing,
+            reset: reset,
+            cleanup: true
+          });
+        });
+      } catch (error) {
+        console.error('Error al cargar ScrollReveal:', error);
+      }
     }
-  });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initScrollReveal);
+    } else {
+      initScrollReveal();
+    }
+
+    document.addEventListener('astro:page-load', initScrollReveal);
+    document.addEventListener('astro:after-swap', initScrollReveal);
+  })();
 </script>

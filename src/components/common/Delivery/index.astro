@@ -267,18 +267,31 @@ const isEn = langFromUrl === 'en';
   }
 
   // Inicializar detección cuando se carga el DOM
-  document.addEventListener('DOMContentLoaded', async () => {
-    console.log('🚀 DOM cargado, iniciando detección de país para delivery...');
+  async function initDelivery() {
+    const container = document.getElementById('delivery-app-container');
+    if (!container) return;
+    if (container.dataset.deliveryInitialized === 'true') return;
+    container.dataset.deliveryInitialized = 'true';
+
+    console.log('🚀 Iniciando detección de país para delivery...');
     
     try {
       const geoResult = await detectUserCountry();
       showDeliveryApps(geoResult);
     } catch (error) {
       console.error('💥 Error en detección de país:', error);
-      // Mostrar todas las apps si hay error
       showDeliveryApps({ country: null, countryCode: null, success: false });
     }
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDelivery);
+  } else {
+    initDelivery();
+  }
+
+  document.addEventListener('astro:page-load', initDelivery);
+  document.addEventListener('astro:after-swap', initDelivery);
 </script>
 
 <style>

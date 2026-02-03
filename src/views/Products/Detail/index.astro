@@ -151,7 +151,7 @@ if (allProductsArray.length > 1) {
       <!-- Enlace "Ir a Productos" -->
       <a 
         href={`/${currentLang}/products`} 
-        class="inline-flex items-center text-sm font-medium mb-6 hover:opacity-80 transition-opacity"
+        class="inline-flex items-center text-sm md:text-base font-medium mb-6 hover:opacity-80 transition-opacity"
         style={{ color: '#FFF' }}
       >
         {currentLang === 'es' ? 'Ir a Productos' : 'Go to Products'}
@@ -187,7 +187,7 @@ if (allProductsArray.length > 1) {
             <div class="flex flex-wrap gap-3 mb-10">
               {safeProduct.weight.map((weight) => (
                 <button 
-                  class="px-10 py-4 rounded-full text-white font-semibold text-sm hover:opacity-90 transition-opacity"
+                  class="px-10 py-4 rounded-full text-white font-semibold text-sm md:text-base hover:opacity-90 transition-opacity"
                   style={{ backgroundColor: '#FF0001' }}
                 >
                   {weight}
@@ -203,14 +203,14 @@ if (allProductsArray.length > 1) {
               data-accordion="description"
               style={{ color: '#FFF' }}
             >
-              <span class="text-3xl font-semibold">
+              <span class="text-2xl sm:text-3xl md:text-4xl font-semibold">
                 {currentLang === 'es' ? 'Descripción' : 'Description'}
               </span>
-              <span class="accordion-icon text-4xl font-light transition-transform duration-300">+</span>
+              <span class="accordion-icon text-4xl font-light transition-transform duration-300">−</span>
             </button>
-            <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="description">
+            <div class="accordion-content overflow-hidden transition-all duration-300 max-h-96" data-content="description">
               <p 
-                class="pt-4 text-base leading-relaxed"
+                class="pt-4 text-base md:text-lg leading-relaxed"
                 style={{ color: '#FFF' }}
               >
                 {safeProduct.description}
@@ -225,14 +225,14 @@ if (allProductsArray.length > 1) {
                 class="accordion-trigger w-full flex justify-between items-center text-left"
                 data-accordion="nutrition"
               >
-                <span class="text-3xl font-semibold text-white">
+                <span class="text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
                   {currentLang === 'es' ? 'Datos nutricionales' : 'Nutritional information'}
                 </span>
                 <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-white">+</span>
               </button>
               <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="nutrition">
                 <div 
-                  class="pt-4 text-base leading-relaxed text-white"
+                  class="pt-4 text-base md:text-lg leading-relaxed text-white"
                 >
                   {nutritionIsString && <p>{nutritionData}</p>}
 
@@ -312,35 +312,38 @@ if (allProductsArray.length > 1) {
   </article>
 )}
 
-
 <script>
   import { initProductDetail } from './scripts.js';
-  
-  document.addEventListener('DOMContentLoaded', () => {
+
+  function initProductDetailPage() {
+    const root = document.getElementById('product-detail');
+    if (!root) return;
+
+    if (root.dataset.productDetailInitialized === 'true') return;
+    root.dataset.productDetailInitialized = 'true';
+
     initProductDetail();
-    
-    // Accordion functionality
-    const accordionTriggers = document.querySelectorAll('.accordion-trigger');
-    
-    accordionTriggers.forEach(trigger => {
+
+    const descriptionTrigger = root.querySelector('[data-accordion="description"]');
+    const descriptionContent = root.querySelector('[data-content="description"]');
+    const descriptionIcon = descriptionTrigger?.querySelector('.accordion-icon');
+    if (descriptionContent && descriptionIcon) {
+      descriptionContent.classList.remove('max-h-0');
+      descriptionContent.classList.add('max-h-96');
+      descriptionIcon.textContent = '−';
+      descriptionIcon.classList.remove('rotate-45');
+    }
+
+    const accordionTriggers = root.querySelectorAll('.accordion-trigger');
+    accordionTriggers.forEach((trigger) => {
       trigger.addEventListener('click', () => {
         const accordionId = trigger.getAttribute('data-accordion');
-        const content = document.querySelector(`[data-content="${accordionId}"]`);
+        if (!accordionId) return;
+        const content = root.querySelector(`[data-content="${accordionId}"]`);
         const icon = trigger.querySelector('.accordion-icon');
-        
+
         if (content && icon) {
           const isOpen = content.classList.contains('max-h-96');
-          
-          // Close all accordions first (optional - remove if you want multiple open)
-          // document.querySelectorAll('.accordion-content').forEach(c => {
-          //   c.classList.remove('max-h-96');
-          //   c.classList.add('max-h-0');
-          // });
-          // document.querySelectorAll('.accordion-icon').forEach(i => {
-          //   i.textContent = '+';
-          //   i.classList.remove('rotate-45');
-          // });
-          
           if (isOpen) {
             content.classList.remove('max-h-96');
             content.classList.add('max-h-0');
@@ -350,12 +353,21 @@ if (allProductsArray.length > 1) {
             content.classList.remove('max-h-0');
             content.classList.add('max-h-96');
             icon.textContent = '−';
-            icon.classList.add('rotate-45');
+            icon.classList.remove('rotate-45');
           }
         }
       });
     });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProductDetailPage);
+  } else {
+    initProductDetailPage();
+  }
+
+  document.addEventListener('astro:page-load', initProductDetailPage);
+  document.addEventListener('astro:after-swap', initProductDetailPage);
 </script>
 
 <script type="module">

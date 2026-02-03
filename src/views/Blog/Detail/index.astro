@@ -92,6 +92,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
           alt={blogPost.title}
           class="blog-detail__image"
           loading="eager"
+          fallbackSrc={`/images/${currentLang}/slider1.png`}
         />
       </div>
     </div>
@@ -157,6 +158,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
                   alt={`${blogPost.title} - ${index + 1}`}
                   class="blog-detail__gallery-image"
                   loading="lazy"
+                  fallbackSrc={`/images/${currentLang}/slider1.png`}
                 />
               </div>
             ))}
@@ -189,6 +191,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
                   alt={post.title}
                   class="related-card__img"
                   loading="lazy"
+                  fallbackSrc={`/images/${currentLang}/slider1.png`}
                 />
               </div>
               <div class="related-card__content">
