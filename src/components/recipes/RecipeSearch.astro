@@ -16,13 +16,14 @@ const currentLocale = getLocale();
 const basePath = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'recipes'}`;
 ---
 
-<div class="relative" data-recipe-search>
+<div class="relative recipe-search-component">
   <input
     type="text"
-    id="recipeSearch"
+    class="recipe-search-input w-full px-12 py-4 rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
     placeholder={placeholder}
     autocomplete="off"
-    class="w-full px-12 py-4 rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-white"
+    data-items={JSON.stringify(items)}
+    data-base-path={basePath}
   />
 
   <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -30,23 +31,36 @@ const basePath = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'reci
   </svg>
 
   <div
-    id="recipeSearchSuggestions"
-    class="hidden absolute left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl overflow-hidden z-50"
+    class="recipe-search-suggestions hidden absolute left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl overflow-hidden z-50"
   ></div>
 </div>
 
-<script define:vars={{ items, basePath }}>
-  const root = document.querySelector('[data-recipe-search]');
-  if (!root) {
-    // no-op
-  } else {
-    const input = root.querySelector('#recipeSearch');
-    const suggestions = root.querySelector('#recipeSearchSuggestions');
+<script>
+  function initializeRecipeSearch() {
+    const components = document.querySelectorAll('.recipe-search-component');
+    
+    components.forEach((root) => {
+      const input = root.querySelector('.recipe-search-input') as HTMLInputElement;
+      const suggestions = root.querySelector('.recipe-search-suggestions') as HTMLElement;
 
-    if (input instanceof HTMLInputElement && suggestions instanceof HTMLElement) {
-      const data = Array.isArray(items) ? items : [];
+      if (!input || !suggestions) return;
 
-      function escapeHtml(str) {
+      // Parse data from attributes
+      let data: Array<{id: string, title: string}> = [];
+      let basePath = '';
+      
+      try {
+        const itemsStr = input.getAttribute('data-items');
+        if (itemsStr) {
+          data = JSON.parse(itemsStr);
+        }
+        basePath = input.getAttribute('data-base-path') || '';
+      } catch (e) {
+        console.error('Error parsing recipe search data:', e);
+        return;
+      }
+
+      function escapeHtml(str: string) {
         return String(str)
           .replaceAll('&', '&amp;')
           .replaceAll('<', '&lt;')
@@ -60,12 +74,12 @@ const basePath = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'reci
         suggestions.innerHTML = '';
       }
 
-      function showSuggestions(html) {
+      function showSuggestions(html: string) {
         suggestions.innerHTML = html;
         suggestions.classList.remove('hidden');
       }
 
-      function buildSuggestions(query) {
+      function buildSuggestions(query: string) {
         const q = query.trim().toLowerCase();
         if (!q) {
           hideSuggestions();
@@ -103,18 +117,23 @@ const basePath = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'reci
         showSuggestions(html);
       }
 
-      input.addEventListener('input', () => {
-        buildSuggestions(input.value);
+      // Remove old listeners by cloning and replacing the input
+      const newInput = input.cloneNode(true) as HTMLInputElement;
+      input.parentNode?.replaceChild(newInput, input);
+
+      newInput.addEventListener('input', () => {
+        const query = newInput.value;
+        buildSuggestions(query);
         window.dispatchEvent(
-          new CustomEvent('recipe-search', { detail: { query: input.value } })
+          new CustomEvent('recipe-search', { detail: { query } })
         );
       });
 
-      input.addEventListener('focus', () => buildSuggestions(input.value));
+      newInput.addEventListener('focus', () => buildSuggestions(newInput.value));
 
-      input.addEventListener('keydown', (e) => {
+      newInput.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-          input.blur();
+          newInput.blur();
           hideSuggestions();
         }
       });
@@ -124,6 +143,17 @@ const basePath = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'reci
         if (!(target instanceof Node)) return;
         if (!root.contains(target)) hideSuggestions();
       });
-    }
+    });
   }
+
+  // Initialize on load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeRecipeSearch);
+  } else {
+    initializeRecipeSearch();
+  }
+
+  // Reinitialize on Astro page transitions
+  document.addEventListener('astro:page-load', initializeRecipeSearch);
+  document.addEventListener('astro:after-swap', initializeRecipeSearch);
 </script>
