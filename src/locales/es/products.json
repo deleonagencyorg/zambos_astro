@@ -7,7 +7,14 @@
     "title": "Descubre la variedad de nuestros",
     "subtitle": "Productos",
     "textButton": "Conoce más"
-},
+  },
+  "page": {
+    "view_details": "Ver detalles"
+  },
+  "categories": {
+    "Plátano": "Plátano",
+    "Yuquita": "Yuquita"
+  },
   "stockist":[
     {
       "id": "sompopopoapp",

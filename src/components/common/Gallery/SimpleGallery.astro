@@ -154,7 +154,7 @@ const { images = [], title = '', filters = [] } = Astro.props as Props;
 
   // Navegación
   const goNext = () => {
-    const maxIndex = Math.max(0, visibleItems.length - itemsPerView);
+    const maxIndex = Math.max(0, Math.ceil(visibleItems.length / itemsPerView) - 1);
     if (currentIndex < maxIndex) {
       currentIndex++;
       updateCarousel();
