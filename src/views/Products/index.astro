@@ -112,10 +112,10 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
               
               <!-- Botón Ver detalles - VERDE -->
               <a 
-                href={`/${currentLang}/productos/${product.id}`} 
+                href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`} 
                 class="block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"
               >
-                {pageAssets?.view_details || 'Ver detalles'}
+                {pageAssets?.view_details || (currentLang === 'es' ? 'Ver detalles' : 'View Details')}
               </a>
             </div>
             </div>
