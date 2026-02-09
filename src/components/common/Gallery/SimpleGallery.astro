@@ -103,129 +103,152 @@ const { images = [], title = '', filters = [] } = Astro.props as Props;
 </div>
 
 <script>
-  // Variables globales
-  const filterButtons = Array.from(document.querySelectorAll('[data-gallery-filter]')) as HTMLButtonElement[];
-  const galleryItems = Array.from(document.querySelectorAll('[data-gallery-item]')) as HTMLElement[];
-  const track = document.querySelector('[data-gallery-track]') as HTMLElement;
-  const prevBtn = document.querySelector('[data-gallery-prev]') as HTMLButtonElement;
-  const nextBtn = document.querySelector('[data-gallery-next]') as HTMLButtonElement;
-  const modal = document.querySelector('[data-gallery-modal]') as HTMLElement;
-  const modalImage = document.querySelector('[data-modal-image]') as HTMLImageElement;
-  const modalClose = document.querySelector('[data-modal-close]') as HTMLButtonElement;
+  // Función principal de inicialización del carrusel
+  function initGallery() {
+    // Variables del carrusel
+    const filterButtons = Array.from(document.querySelectorAll('[data-gallery-filter]')) as HTMLButtonElement[];
+    const galleryItems = Array.from(document.querySelectorAll('[data-gallery-item]')) as HTMLElement[];
+    const track = document.querySelector('[data-gallery-track]') as HTMLElement;
+    const prevBtn = document.querySelector('[data-gallery-prev]') as HTMLButtonElement;
+    const nextBtn = document.querySelector('[data-gallery-next]') as HTMLButtonElement;
+    const modal = document.querySelector('[data-gallery-modal]') as HTMLElement;
+    const modalImage = document.querySelector('[data-modal-image]') as HTMLImageElement;
+    const modalClose = document.querySelector('[data-modal-close]') as HTMLButtonElement;
 
-  let currentIndex = 0;
-  let visibleItems: HTMLElement[] = [];
-  let itemsPerView = window.innerWidth >= 768 ? 4 : 2;
+    // No hacer nada si los elementos no existen
+    if (!track || galleryItems.length === 0) return;
 
-  // Actualizar items por vista según tamaño de pantalla
-  const updateItemsPerView = () => {
-    itemsPerView = window.innerWidth >= 768 ? 4 : 2;
-    const itemWidth = 100 / itemsPerView;
-    const padding = itemsPerView === 4 ? 1 : 1; // 1% padding para ambos
+    let currentIndex = 0;
+    let visibleItems: HTMLElement[] = [];
+    let itemsPerView = window.innerWidth >= 768 ? 4 : 2;
     
-    galleryItems.forEach((item) => {
-      (item as HTMLElement).style.width = `${itemWidth}%`;
-      (item as HTMLElement).style.padding = `0 ${padding}%`;
-    });
-  };
+    // Limpiar listeners previos para evitar duplicados
+    const cleanup = () => {
+      // No hacemos nada aquí porque los elementos se recrean
+    };
 
-  // Filtrar por categoría
-  const applyFilter = (label: string) => {
-    const target = label.toLowerCase();
-    visibleItems = [];
-    
-    galleryItems.forEach((el) => {
-      const cat = (el.getAttribute('data-category') || '').toLowerCase();
-      const show = target === 'todos' || cat === target;
-      (el as HTMLElement).style.display = show ? '' : 'none';
-      if (show) visibleItems.push(el as HTMLElement);
-    });
-
-    currentIndex = 0;
-    updateCarousel();
-  };
-
-  // Actualizar posición del carousel
-  const updateCarousel = () => {
-    if (!track || visibleItems.length === 0) return;
-    const offset = -(currentIndex * (100 / itemsPerView));
-    track.style.transform = `translateX(${offset}%)`;
-  };
-
-  // Navegación
-  const goNext = () => {
-    const maxIndex = Math.max(0, Math.ceil(visibleItems.length / itemsPerView) - 1);
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      updateCarousel();
-    }
-  };
-
-  const goPrev = () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateCarousel();
-    }
-  };
-
-  // Modal
-  const openModal = (url: string) => {
-    if (modal && modalImage) {
-      modalImage.src = url;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-  };
-
-  const closeModal = () => {
-    if (modal) {
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-    }
-  };
-
-  // Event listeners
-  if (filterButtons.length && galleryItems.length) {
-    filterButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        filterButtons.forEach((b) => b.setAttribute('data-active', 'false'));
-        btn.setAttribute('data-active', 'true');
-        const label = btn.getAttribute('data-gallery-filter') || 'Todos';
-        applyFilter(label);
+    // Actualizar items por vista según tamaño de pantalla
+    const updateItemsPerView = () => {
+      itemsPerView = window.innerWidth >= 768 ? 4 : 2;
+      const itemWidth = 100 / itemsPerView;
+      const padding = itemsPerView === 4 ? 1 : 1;
+      
+      galleryItems.forEach((item) => {
+        (item as HTMLElement).style.width = `${itemWidth}%`;
+        (item as HTMLElement).style.padding = `0 ${padding}%`;
       });
+    };
+
+    // Filtrar por categoría
+    const applyFilter = (label: string) => {
+      const target = label.toLowerCase();
+      visibleItems = [];
+      
+      galleryItems.forEach((el) => {
+        const cat = (el.getAttribute('data-category') || '').toLowerCase();
+        const show = target === 'todos' || cat === target;
+        (el as HTMLElement).style.display = show ? '' : 'none';
+        if (show) visibleItems.push(el as HTMLElement);
+      });
+
+      currentIndex = 0;
+      updateCarousel();
+    };
+
+    // Actualizar posición del carousel
+    const updateCarousel = () => {
+      if (!track || visibleItems.length === 0) return;
+      const offset = -(currentIndex * (100 / itemsPerView));
+      track.style.transform = `translateX(${offset}%)`;
+    };
+
+    // Navegación
+    const goNext = () => {
+      const maxIndex = Math.max(0, Math.ceil(visibleItems.length / itemsPerView) - 1);
+      if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateCarousel();
+      }
+    };
+
+    const goPrev = () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateCarousel();
+      }
+    };
+
+    // Modal
+    const openModal = (url: string) => {
+      if (modal && modalImage) {
+        modalImage.src = url;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+    };
+
+    const closeModal = () => {
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+    };
+
+    // Event listeners para filtros
+    if (filterButtons.length && galleryItems.length) {
+      filterButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach((b) => b.setAttribute('data-active', 'false'));
+          btn.setAttribute('data-active', 'true');
+          const label = btn.getAttribute('data-gallery-filter') || 'Todos';
+          applyFilter(label);
+        });
+      });
+
+      // Aplicar filtro inicial
+      const initial = filterButtons.find((b) => b.getAttribute('data-active') === 'true');
+      applyFilter(initial?.getAttribute('data-gallery-filter') || 'Todos');
+    }
+
+    // Navegación prev/next
+    prevBtn?.addEventListener('click', goPrev);
+    nextBtn?.addEventListener('click', goNext);
+
+    // Click en imágenes para abrir modal
+    galleryItems.forEach((item) => {
+      const imageContainer = item.querySelector('[data-gallery-image]') as HTMLElement;
+      if (imageContainer) {
+        imageContainer.addEventListener('click', () => {
+          const url = imageContainer.getAttribute('data-gallery-image') || '';
+          openModal(url);
+        });
+      }
     });
 
-    // Inicial
-    const initial = filterButtons.find((b) => b.getAttribute('data-active') === 'true');
-    applyFilter(initial?.getAttribute('data-gallery-filter') || 'Todos');
+    // Cerrar modal
+    modalClose?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Resize handler
+    const resizeHandler = () => {
+      updateItemsPerView();
+      updateCarousel();
+    };
+    
+    window.addEventListener('resize', resizeHandler);
+
+    // Inicialización
+    updateItemsPerView();
+
+    return cleanup;
   }
 
-  prevBtn?.addEventListener('click', goPrev);
-  nextBtn?.addEventListener('click', goNext);
+  // Inicializar en carga inicial
+  document.addEventListener('DOMContentLoaded', initGallery);
 
-  // Click en imágenes para abrir modal
-  galleryItems.forEach((item) => {
-    const imageContainer = item.querySelector('[data-gallery-image]') as HTMLElement;
-    if (imageContainer) {
-      imageContainer.addEventListener('click', () => {
-        const url = imageContainer.getAttribute('data-gallery-image') || '';
-        openModal(url);
-      });
-    }
-  });
-
-  // Cerrar modal
-  modalClose?.addEventListener('click', closeModal);
-  modal?.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-
-  // Resize
-  window.addEventListener('resize', () => {
-    updateItemsPerView();
-    updateCarousel();
-  });
-
-  // Init
-  updateItemsPerView();
+  // Reinicializar después de cada transición de página (Astro View Transitions)
+  document.addEventListener('astro:page-load', initGallery);
+  document.addEventListener('astro:after-swap', initGallery);
 </script>
