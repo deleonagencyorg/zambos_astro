@@ -237,18 +237,20 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
     )
   }
 
-  <section class="w-full bg-yellow flex justify-center items-center py-8">
-    <div class="container text-center">
-       <h2  class='titles text-greenDark'>
-        {
-          currentLang === "es"
-            ? "Conoce más DE LAS EXPERIENCIAS ZAMBOS"
-            : "LEARN MORE ABOUT ZAMBOS EXPERIENCES"
-        }
-      </h2>
-    <ExperiencesCarousel experiences={experiences} />
-    </div>
-  </section>
+  {currentLang !== "en" && (
+    <section class="w-full bg-yellow flex justify-center items-center py-8">
+      <div class="container text-center">
+         <h2  class='titles text-greenDark'>
+          {
+            currentLang === "es"
+              ? "Conoce más DE LAS EXPERIENCIAS ZAMBOS"
+              : "LEARN MORE ABOUT ZAMBOS EXPERIENCES"
+          }
+        </h2>
+      <ExperiencesCarousel experiences={experiences} />
+      </div>
+    </section>
+  )}
 
   <!-- Sección instagram-->
   <section

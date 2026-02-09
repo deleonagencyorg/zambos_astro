@@ -450,82 +450,99 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
 </a>
 
 <script>
-  (function() {
-      // Mobile carousel (1 card por slide)
-      const trackMobile = document.querySelector('[data-truck-packages-track-mobile]') as HTMLElement;
-      const slidesMobile = Array.from(document.querySelectorAll('[data-truck-packages-slide-mobile]'));
-      const dotsMobile = Array.from(document.querySelectorAll('[data-truck-packages-dot-mobile]'));
+  // Función para inicializar el carrusel de paquetes
+  function initTruckPackagesCarousel() {
+    // Mobile carousel (1 card por slide)
+    const trackMobile = document.querySelector('[data-truck-packages-track-mobile]') as HTMLElement;
+    const slidesMobile = Array.from(document.querySelectorAll('[data-truck-packages-slide-mobile]'));
+    const dotsMobile = Array.from(document.querySelectorAll('[data-truck-packages-dot-mobile]'));
 
-      // Desktop carousel (3 cards por slide)
-      const trackDesktop = document.querySelector('[data-truck-packages-track-desktop]') as HTMLElement;
-      const slidesDesktop = Array.from(document.querySelectorAll('[data-truck-packages-slide-desktop]'));
-      const dotsDesktop = Array.from(document.querySelectorAll('[data-truck-packages-dot-desktop]'));
+    // Desktop carousel (3 cards por slide)
+    const trackDesktop = document.querySelector('[data-truck-packages-track-desktop]') as HTMLElement;
+    const slidesDesktop = Array.from(document.querySelectorAll('[data-truck-packages-slide-desktop]'));
+    const dotsDesktop = Array.from(document.querySelectorAll('[data-truck-packages-dot-desktop]'));
 
-      const prevBtn = document.querySelector('[data-truck-packages-prev]');
-      const nextBtn = document.querySelector('[data-truck-packages-next]');
+    const prevBtn = document.querySelector('[data-truck-packages-prev]');
+    const nextBtn = document.querySelector('[data-truck-packages-next]');
 
-      let currentMobile = 0;
-      let currentDesktop = 0;
+    // Verificar que los elementos existan
+    if (!trackMobile && !trackDesktop) return;
 
-      const isMobile = () => window.innerWidth < 640;
+    let currentMobile = 0;
+    let currentDesktop = 0;
 
-      const updateMobile = () => {
-        if (!trackMobile) return;
-        const offset = -currentMobile * 100;
-        trackMobile.style.transform = `translateX(${offset}%)`;
-        dotsMobile.forEach((dot, i) =>
-          dot.setAttribute('data-active', i === currentMobile ? 'true' : 'false')
-        );
-      };
+    const isMobile = () => window.innerWidth < 640;
 
-      const updateDesktop = () => {
-        if (!trackDesktop) return;
-        const offset = -currentDesktop * 100;
-        trackDesktop.style.transform = `translateX(${offset}%)`;
-        dotsDesktop.forEach((dot, i) =>
-          dot.setAttribute('data-active', i === currentDesktop ? 'true' : 'false')
-        );
-      };
+    const updateMobile = () => {
+      if (!trackMobile) return;
+      const offset = -currentMobile * 100;
+      trackMobile.style.transform = `translateX(${offset}%)`;
+      dotsMobile.forEach((dot, i) =>
+        dot.setAttribute('data-active', i === currentMobile ? 'true' : 'false')
+      );
+    };
 
-      prevBtn?.addEventListener('click', () => {
-        if (isMobile()) {
-          currentMobile = (currentMobile - 1 + slidesMobile.length) % slidesMobile.length;
-          updateMobile();
-        } else {
-          currentDesktop = (currentDesktop - 1 + slidesDesktop.length) % slidesDesktop.length;
-          updateDesktop();
-        }
+    const updateDesktop = () => {
+      if (!trackDesktop) return;
+      const offset = -currentDesktop * 100;
+      trackDesktop.style.transform = `translateX(${offset}%)`;
+      dotsDesktop.forEach((dot, i) =>
+        dot.setAttribute('data-active', i === currentDesktop ? 'true' : 'false')
+      );
+    };
+
+    const prevHandler = () => {
+      if (isMobile()) {
+        currentMobile = (currentMobile - 1 + slidesMobile.length) % slidesMobile.length;
+        updateMobile();
+      } else {
+        currentDesktop = (currentDesktop - 1 + slidesDesktop.length) % slidesDesktop.length;
+        updateDesktop();
+      }
+    };
+
+    const nextHandler = () => {
+      if (isMobile()) {
+        currentMobile = (currentMobile + 1) % slidesMobile.length;
+        updateMobile();
+      } else {
+        currentDesktop = (currentDesktop + 1) % slidesDesktop.length;
+        updateDesktop();
+      }
+    };
+
+    // Event listeners para navegación
+    prevBtn?.addEventListener('click', prevHandler);
+    nextBtn?.addEventListener('click', nextHandler);
+
+    // Event listeners para dots mobile
+    dotsMobile.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentMobile = i;
+        updateMobile();
       });
+    });
 
-      nextBtn?.addEventListener('click', () => {
-        if (isMobile()) {
-          currentMobile = (currentMobile + 1) % slidesMobile.length;
-          updateMobile();
-        } else {
-          currentDesktop = (currentDesktop + 1) % slidesDesktop.length;
-          updateDesktop();
-        }
+    // Event listeners para dots desktop
+    dotsDesktop.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentDesktop = i;
+        updateDesktop();
       });
+    });
 
-      dotsMobile.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-          currentMobile = i;
-          updateMobile();
-        });
-      });
+    // Inicializar
+    updateMobile();
+    updateDesktop();
+  }
 
-      dotsDesktop.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-          currentDesktop = i;
-          updateDesktop();
-        });
-      });
+  // Inicializar en carga inicial
+  document.addEventListener('DOMContentLoaded', initTruckPackagesCarousel);
 
-      // Init
-      updateMobile();
-      updateDesktop();
-    })();
-  </script>
+  // Reinicializar después de cada transición de página (Astro View Transitions)
+  document.addEventListener('astro:page-load', initTruckPackagesCarousel);
+  document.addEventListener('astro:after-swap', initTruckPackagesCarousel);
+</script>
 
 </div>
 
