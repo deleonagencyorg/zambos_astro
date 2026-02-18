@@ -52,19 +52,17 @@
   },
   "gallery": {
     "title": "Descubre nuestra galería de eventos",
-    "filters": ["Todos", "Bodas", "Eventos Empresariales", "Cumpleaños"],
+    "filters": ["Todos","Eventos"],
     "images": [
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck1.avif", "category": "Bodas" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck2.avif", "category": "Eventos Empresariales" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck3.avif", "category": "Cumpleaños" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck4.avif", "category": "Bodas" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck5.avif", "category": "Eventos Empresariales" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck6.avif", "category": "Cumpleaños" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck7.avif", "category": "Bodas" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck8.avif", "category": "Eventos Empresariales" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck9.avif", "category": "Cumpleaños" },
-      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/truck10.avif", "category": "Bodas" }
-    ]
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck1.webp", "category": "Eventos" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck2.webp", "category": "Eventos" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck3.webp", "category": "Eventos" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck4.webp", "category": "Eventos" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck5.webp", "category": "Eventos" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck6.webp", "category": "Eventos" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck7.webp", "category": "Eventos" },
+      { "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/gtruck9.webp", "category": "Eventos" }
+    ] 
   },
   "form": {
     "title": "Solicitar Información",

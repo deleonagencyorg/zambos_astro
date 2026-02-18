@@ -241,7 +241,8 @@
     "email": "",
     "copyright": "Copyright 2025. Zambos. Todos los derechos reservados.",
     "privacy_policy_text": "Política de Privacidad",
-    "privacy_policy_url": "/es/politica-privacidad"
+    "privacy_policy_url": "/es/politica-privacidad",
+    "contact_title": "DINANT - Contacto"
   },
   "messagetop":[
     {
@@ -260,6 +261,7 @@
     "success": "¡Gracias por suscribirte!"
   },
   "videos": {
+    "title": "NUESTROS VIDEOS",
     "items": [
       {
         "title": "Zambos Preparados",

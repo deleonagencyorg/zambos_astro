@@ -15,6 +15,7 @@ const logoSrc = t('assets.logo', { namespace: 'common', locale: currentLang });
 const instagramUrl = t('social_media.instagram.url', { namespace: 'common', locale: currentLang });
 const facebookUrl = t('social_media.facebook.url', { namespace: 'common', locale: currentLang });
 const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: currentLang });
+const footerContactTitle = t('footer.contact_title', { namespace: 'common', locale: currentLang }) as string;
 ---
 
 <footer class="bg-greenDark w-full ">
@@ -68,7 +69,7 @@ const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: cu
 
   <div class="w-full bg-greenDark text-center flex items-center justify-center">
     <div class="mx-auto max-w-[1200px] px-6 py-6 flex flex-col items-center justify-center">
-      <h3 class="text-white text-center font-title font-bold text-xl md:text-2xl mb-6">DINANT - Contacto</h3>
+      <h3 class="text-white text-center font-title font-bold text-xl md:text-2xl mb-6">{footerContactTitle}</h3>
       <div class="flex justify-center">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 text-white font-sans">
           <div class="space-y-4">
