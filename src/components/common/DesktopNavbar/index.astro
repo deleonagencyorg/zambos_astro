@@ -83,6 +83,17 @@ const orderedMenuItems = (() => {
         </div>
       ))}
     </div>
+    {currentLang === 'en' && (
+      <a
+        href="https://www.amazon.com/stores/Zambos/Homepage/page/AB6B3C05-CBE2-49FD-8A2C-E5A7B1F57E2D?utm_source=Publicidad+Movil&utm_medium=Amazon&utm_campaign=Zambos&utm_term=Standard+Botton"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ml-3 font-title text-xl uppercase font-bold py-2 px-4 rounded-md text-white transition-colors"
+        style="background-color: #dc2626;"
+      >
+        BUY
+      </a>
+    )}
     <!-- Language Switcher -->
     <LanguageSwitcher activeLocale={currentLang} headerColorConfig={headerColorConfig} />
   </div>
