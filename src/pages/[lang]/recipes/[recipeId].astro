@@ -36,6 +36,10 @@ const { lang, recipeId } = Astro.params;
 
 // Establecer el idioma para las traducciones
 setLocale(lang as Locale);
+
+if (!recipe) {
+  return Astro.redirect(`/${lang === 'en' ? 'en/recipes' : 'es/recetas'}`);
+}
 ---
 
 <MainLayout title={recipe.title}>

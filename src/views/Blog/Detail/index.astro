@@ -33,6 +33,10 @@ interface Props {
 
 const { blogPost, currentLang, allBlogPosts = [] } = Astro.props;
 
+if (!blogPost) {
+  return Astro.redirect(`/${currentLang}/blog`, 302);
+}
+
 // Filter out the current blog post and get up to 2 suggested posts
 const suggestedPosts = allBlogPosts
   .filter(post => post.id !== blogPost.id)

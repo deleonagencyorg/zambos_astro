@@ -37,6 +37,10 @@ const { blogPost, currentLang, allBlogPosts } = Astro.props;
 const { lang } = Astro.params;
 
 setLocale(lang as Locale);
+
+if (!blogPost) {
+  return Astro.redirect(`/${lang}/blog`);
+}
 ---
 
 <MainLayout title={blogPost.title}>
