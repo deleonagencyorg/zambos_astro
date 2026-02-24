@@ -89,6 +89,7 @@ const sortedForCarousel = posts
                 title={post.title}
                 id={post.id}
                 slug={post.slug}
+                currentLang={currentLang}
                 category={String(post.category || '').toUpperCase()}
                 date={post.published_date}
               />

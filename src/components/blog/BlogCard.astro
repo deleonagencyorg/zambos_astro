@@ -11,9 +11,10 @@ interface Props {
   date?: string;
   category?: string;
   isNew?: boolean;
+  currentLang?: string;
 }
 
-const { 
+const {
   image, 
   title, 
   id,
@@ -21,10 +22,11 @@ const {
   summary,
   date,
   category,
-  isNew = false
+  isNew = false,
+  currentLang: propLang
 } = Astro.props;
 
-const currentLang = getLocale();
+const currentLang = propLang || getLocale();
 const labels = t('labels', { namespace: 'blog', locale: currentLang });
 const blogLink = `/${currentLang}/blog/${slug || id}`;
 ---
