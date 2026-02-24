@@ -93,15 +93,7 @@
         "description": "",
         "link": "#"
       },
-      {
-        "id": "slide5",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "#"
-      },
+
       {
         "id": "slide6",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
@@ -274,7 +266,7 @@
     "success": "Thank you for subscribing!"
   },
   "videos": {
-    "title": "OUR VIDEOS",
+    "title": "OUR RECIPES",
     "items": [
            {
         "title": "Zambos Preparados",

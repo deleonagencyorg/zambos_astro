@@ -83,7 +83,7 @@
         "33g",
         "130g"
       ],
-      "category": "Yuquita",
+      "category": "Yuquitas",
       "new": true
     },
     {
@@ -268,7 +268,7 @@
         "16g",
         "130g"
       ],
-      "category": "Yuquita"
+      "category": "Yuquitas"
     },
     {
       "id": "zambos-yuquitas-originales",
@@ -293,35 +293,11 @@
         "16g",
         "130g"
       ],
-      "category": "Yuquita"
-    },
-       {
-      "id": "zambos-tostones-originales",
-      "name": "Zambos Tostones Originales",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tostones.webp",
-      "background_color": "#64A70B",
-      "header_color": "#FFFFFF",
-      "text_color": "#64A70B",
-      "header_background": "#64A70B",
-      "header_text_color": "#FFFFFF",
-      "color_button": "#64A70B",
-      "description": "Plátanos al estilo casero con 0% colesterol, sin azúcar y libre de gluten. ",
-      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
-      "sizes": [
-        {
-          "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tostones.webp"
-        }
-      ],
-      "weight": [
-        "100g"
-      ],
-      "category": "Plátano"
+      "category": "Yuquitas"
     },
       {
       "id": "zambos-fam-tajin",
-      "name": "Fam. Zambos Tajin",
+      "name": "Zambos Tajin",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_TAJIN_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -349,7 +325,7 @@
     },
       {
       "id": "zambos-fam-platano-ceviche",
-      "name": "Fam. Zambos Plátano Ceviche",
+      "name": "Zambos Plátano Ceviche",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CEVICHE_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -377,7 +353,7 @@
     },
         {
       "id": "zambos-fam-platano-con-chicharron-del-rancho",
-      "name": "Fam. Zambos Con Chicharron Del Rancho",
+      "name": "Zambos Con Chicharron Del Rancho",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CHICHARRON-DEL-RANCHO_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -405,7 +381,7 @@
     },
         {
       "id": "zambos-fam-platano-maduritos",
-      "name": "Fam. Zambos Plátano Maduritos",
+      "name": "Zambos Plátano Maduritos",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_MADURITOS_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -433,7 +409,7 @@
     },
         {
       "id": "zambos-fam-platano-picositas",
-      "name": "Fam. Zambos Plátano Picositas",
+      "name": "Zambos Plátano Picositas",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_PICOSITAS_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -461,7 +437,7 @@
     },
         {
       "id": "zambos-fam-platano-salsa-verde",
-      "name": "Fam. Zambos Plátano Salsa Verde",
+      "name": "Zambos Plátano Salsa Verde",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_SALSA-VERDE_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -487,37 +463,9 @@
       ],
       "category": "Plátano"
     },
-           {
-      "id": "zambos-fam-tostones-originales",
-      "name": "Fam. Zambos Tostones Originales",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_ORIGINALES_FAMILIAR.png",
-      "background_color": "#64A70B",
-      "header_color": "#FFFFFF",
-      "text_color": "#64A70B",
-      "header_background": "#64A70B",
-      "header_text_color": "#FFFFFF",
-      "color_button": "#64A70B",
-      "description": "Plátanos al estilo casero con 0% colesterol, sin azúcar y libre de gluten. ",
-      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
-      "sizes": [
-        {
-          "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_ORIGINALES_FAMILIAR.png"
-        }
-      ],
-      "weight": [
-        "19g",
-        "21g",
-        "33g",
-        "70g",
-        "140g"
-      ],
-      "category": "Plátano"
-    },
         {
       "id": "zambos-fam-yuquitas-chile-toreado",
-      "name": "Fam. Zambos Yuquitas Chile Toreado",
+      "name": "Zambos Yuquitas Chile Toreado",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-CHILE-TOREADO_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -539,11 +487,11 @@
         "33g",
         "130g"
       ],
-      "category": "Yuquita"
+      "category": "Yuquitas"
     },
         {
       "id": "zambos-fam-yuquitas-originales",
-      "name": "Fam. Zambos Yuquitas Originales",
+      "name": "Zambos Yuquitas Originales",
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-ORIGINALES_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
@@ -565,7 +513,7 @@
         "33g",
         "130g"
       ],
-      "category": "Yuquita"
+      "category": "Yuquitas"
     }
   ]
 }
