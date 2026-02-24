@@ -76,17 +76,7 @@
         "link": "#"
       },
  
-
-      {
-        "id": "slide1",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_112_Web_IMG_Zambos_Slider_02-1.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_112_Web_IMG_Zambos_Slider_02-1.webp",
-        "alt": "Zambos",
-        "title": "",
-        "type": "image",
-        "description": "",
-        "link": "/es/productos/zambos-platano-ceviche"
-      },
+      
       {
         "id": "slide2",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_113_2560X1088_Felipe-1-png.png",
@@ -261,7 +251,7 @@
     "success": "¡Gracias por suscribirte!"
   },
   "videos": {
-    "title": "NUESTROS VIDEOS",
+    "title": "NUESTRAS RECETAS",
     "items": [
       {
         "title": "Zambos Preparados",
