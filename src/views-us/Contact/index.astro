@@ -1,0 +1,271 @@
+---
+// src/views/Contact/index.astro
+import { t, getLocale } from '../../i18n/i18n';
+import type { Locale } from '../../i18n/i18n';
+import MainLayout from '../../layouts/MainLayoutUS.astro';
+import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
+import LazyImage from '../../components/common/LazyImage.astro';
+import FormContact from '../../components/contact/FormContact.astro';
+import { fade } from 'astro:transitions';
+import Subscription from '../../components/subscription/index.astro';
+
+// Import locale files statically
+import contactEs from '../../locales/es/contact.json';
+import contactEn from '../../locales/us/contact.json';
+
+// Importar estilos separados
+import './styles.css';
+
+interface Props {
+  title: string;
+  class?: string;
+  description?: string;
+  currentLang: Locale;
+  headerColorConfig?: any;
+}
+
+const { currentLang, headerColorConfig } = Astro.props;
+
+// Get current locale if not provided
+const locale = currentLang || getLocale();
+
+// Get contact data from locale
+const contact = locale === 'es' ? contactEs : contactEn;
+
+// Meta information
+const title = contact.title;
+const metaDescription = contact.description;
+console.log('headerColorConfig in Contact:', headerColorConfig);
+const headerColors = {
+  backgroundColor: '#1B4D3E',
+  textColor: '#FFFFFF'
+};
+---
+
+<MainLayout title={title}  description={metaDescription} headerColors={headerColors}>
+  <div class=" w-[100%] mx-auto ">
+    
+
+    <!-- Main Contact Section -->
+    <div class="flex flex-col justify-center px-4 items-start lg:flex-row gap-12 py-12  bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgcontacto.webp');">
+      
+      <!-- Left Column - Contact Info -->
+    <div class="w-[100%] lg:w-[50%] pl-8 lg:pl-16 flex flex-col justify-center h-[100%] lg:h-[600px]">
+        <h2 class="text-us-red titles text-2xl md:text-2xl lg:text-5xl">
+          {contact.title}
+        </h2>
+
+  
+
+        <p class="text-us-green font-bold text-2xl lg:text-2xl mb-8 leading-relaxed ">
+          We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+        </p>
+      </div>
+      
+      <!-- Right Column - Contact Form -->
+      <div class="w-[100%] lg:w-[40%]">
+        <FormContact currentLang={locale} />
+      </div>
+    </div>
+    
+    <!-- Offices Section -->
+    <div class="container mx-auto  p-8" data-contact-offices data-contact-locations={JSON.stringify(contact.offices.locations)}>
+      <h2 class="text-us-green titles">
+        {contact.offices.title}
+      </h2>
+    
+      
+      <!-- Tabs and Office Info -->
+      <div class="flex flex-col mb-4">
+        <!-- Office Details -->
+        <div class="order-2 w-[100%] mx-auto">
+          <div id="officeInfo" class="rounded-2xl p-8 ">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+              <div class="w-1/2 space-y-4">
+                <h3 id="officeName" class="text-us-green titles">
+                  {contact.offices.locations["+504"].name}
+                </h3>
+                
+                <div class="flex items-start space-x-3">
+                  <p id="officeAddress" class="text-us-green leading-relaxed font-semibold ">  {`+ ${contact.offices.locations["+504"].address}`}</p>
+                </div>
+                
+                <div class="flex items-center space-x-3">
+                  <div id="officePhones" class="flex flex-col text-us-green">
+                    {contact.offices.locations["+504"].phones.map((phone: string) => (
+                     <div> <a href={`tel:${phone}`} class="text-us-green hover:text-us-red transition-colors">
+                        {phone}
+                      </a></div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div class="w-1/2 mt-6 lg:mt-0">
+                <LazyImage 
+                  src="https://snack.yummiespromociones.com/SnacksyummiesAssets/oficinas.webp"
+                  alt="Yummies Honduras"
+                  class="h-full h-48 object-cover rounded-xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Map and Tabs -->
+        <div class="order-1 mt-4">
+          <!-- Country Tabs -->
+          <div class="mb-6 flex flex-wrap justify-start gap-2" data-country-tabs-container>
+          {Object.entries(contact.offices.locations).map(([countryCode, location]: [string, any], index: number) => (
+            <button 
+              data-country-code={countryCode}
+              class={`country-tab px-5 py-4 text-white uppercase text-xs  transition-all duration-300 flex items-center justify-center gap-1
+                ${index === 0 
+                  ? 'h-[54px] bg-us-red opacity-100 border border-us-red border-[1px] rounded-full ' 
+                  : 'h-[54px] bg-white opacity-75 hover:opacity-100 border-[1px] border-us-red text-us-red rounded-full'
+                }`}
+            >
+              {location.tab}
+            </button>
+          ))}
+        </div>
+          
+          <!-- Map -->
+          <div class="bg-gradient-to-br  mx-auto bg-white rounded-2xl p-6 shadow-lg mb-4">
+            <div class="w-full  overflow-hidden rounded-xl" style="height: 500px;">
+              <!-- Container for all map iframes -->
+              <div id="maps-container" style="width: 100%; height: 100%;">
+                {Object.entries(contact.offices.locations).map(([countryCode, location]: [string, any], index: number) => (
+                  <div 
+                    data-map-country={countryCode}
+                    style={`width: 100%; height: 100%; ${index === 0 ? 'display: block;' : 'display: none;'}`}
+                  >
+                    <iframe
+                      src={location.mapEmbed}
+                      width="100%"
+                      height="100%"
+                      frameborder="0"
+                      allowfullscreen="allowfullscreen"
+                      aria-hidden="false"
+                      style="width: 100%; height: 100%; border: 0;"
+                      title={`${location.name} Map`}
+                    ></iframe>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline data-astro-rerun>
+      (function () {
+        'use strict';
+
+        function initializeCountryTabs() {
+          const root = document.querySelector('[data-contact-offices]');
+          if (!(root instanceof HTMLElement)) return;
+
+          const rawLocations = root.getAttribute('data-contact-locations') || '{}';
+          let contactData = {};
+          try {
+            contactData = JSON.parse(rawLocations);
+          } catch (err) {
+            console.error('Invalid contact locations JSON:', err);
+            contactData = {};
+          }
+
+          const tabs = root.querySelectorAll('.country-tab');
+          const officeName = root.querySelector('#officeName');
+          const officeAddress = root.querySelector('#officeAddress');
+          const officePhones = root.querySelector('#officePhones');
+          const mapContainers = root.querySelectorAll('[data-map-country]');
+
+          function updateOfficeInfo(countryCode) {
+            const office = contactData[countryCode];
+            if (!office) return;
+
+            if (officeName) officeName.textContent = office.name;
+            if (officeAddress) officeAddress.textContent = `+ ${office.address}`;
+
+            if (officePhones) {
+              officePhones.innerHTML = '';
+              office.phones.forEach((phone) => {
+                const phoneContainer = document.createElement('div');
+                const phoneLink = document.createElement('a');
+                phoneLink.href = `tel:${phone}`;
+                phoneLink.textContent = `+${phone}`;
+                phoneLink.className = 'text-white hover:text-primary font-medium font-semibold transition-colors';
+                phoneContainer.appendChild(phoneLink);
+                officePhones.appendChild(phoneContainer);
+              });
+            }
+
+            mapContainers.forEach((container) => {
+              container.style.display = 'none';
+            });
+
+            const selectedMap = root.querySelector(`[data-map-country="${countryCode}"]`);
+            if (selectedMap) selectedMap.style.display = 'block';
+          }
+
+          function handleTabSelection(tab) {
+            tabs.forEach((t) => {
+              if (t === tab) {
+                t.className = `country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-us-red opacity-100 border border-us-red border-[1px] rounded-full`;
+              } else {
+                t.className = `country-tab px-10 py-4 uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-white opacity-75 hover:opacity-100 border-[1px] border-us-red text-us-red rounded-full`;
+              }
+            });
+
+            const countryCode = tab.getAttribute('data-country-code');
+            if (countryCode) updateOfficeInfo(countryCode);
+          }
+
+          // Re-bind direct handlers every init (overwrites previous)
+          tabs.forEach((tab, index) => {
+            tab.onclick = (e) => {
+              if (e && typeof e.preventDefault === 'function') e.preventDefault();
+              const now = Date.now();
+              const lastTouch = Number(root.dataset.lastTouch || '0');
+              if (now - lastTouch < 500) return;
+              handleTabSelection(tab);
+            };
+
+            tab.ontouchend = (e) => {
+              if (e && typeof e.preventDefault === 'function') e.preventDefault();
+              root.dataset.lastTouch = String(Date.now());
+              handleTabSelection(tab);
+            };
+
+            if (index === 0) {
+              // Ensure first tab initial state
+              handleTabSelection(tab);
+            }
+          });
+        }
+
+        const safeInit = () => {
+          try {
+            initializeCountryTabs();
+          } catch (err) {
+            console.error('Error initializing country tabs:', err);
+          }
+        };
+
+        document.addEventListener('astro:page-load', safeInit);
+        document.addEventListener('astro:after-swap', safeInit);
+        window.addEventListener('load', safeInit);
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', safeInit, { once: true });
+        } else {
+          safeInit();
+        }
+
+        setTimeout(safeInit, 0);
+      })();
+    </script>
+  </div>
+
+</MainLayout>

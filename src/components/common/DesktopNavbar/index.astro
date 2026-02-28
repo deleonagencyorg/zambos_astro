@@ -11,6 +11,10 @@ export interface Props {
 
 const { currentLang, headerColorConfig } = Astro.props;
 
+// Detectar si el usuario es de Honduras por cookie
+const userCountry = Astro.cookies.get('user_country')?.value || '';
+const isHonduras = userCountry === 'HN';
+
 // Get current path to determine active menu item
 const { pathname } = Astro.url;
 const currentPath = pathname;
@@ -83,12 +87,25 @@ const orderedMenuItems = (() => {
         </div>
       ))}
     </div>
+    
+    <!-- WHERE TO BUY Button for US -->
+    {currentLang === 'us' && (
+      <a 
+        href={t('delivery.amazon_buy_url', { namespace: 'common', locale: currentLang })}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ml-4 bg-[#B71C1C] hover:bg-[#9A1616] text-white font-bold uppercase px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap text-sm"
+      >
+        Where to Buy
+      </a>
+    )}
+    
     <!-- Language Switcher -->
     <LanguageSwitcher activeLocale={currentLang} headerColorConfig={headerColorConfig} />
   </div>
 
   <div class="flex-shrink-0">
-    {currentLang === 'es' && (
+    {(currentLang === 'es' && isHonduras) && (
       <a href="/zambostruck" class="block">
         <img src={logos.secondary.url} alt={logos.secondary.alt} class="h-12 w-auto" />
       </a>

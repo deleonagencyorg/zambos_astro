@@ -1,17 +1,32 @@
 ---
 import BlogListing from '../../../views/Blog/index.astro';
+import BlogListingUS from '../../../views-us/Blog/index.astro';
 import { type Locale } from '../../../i18n/i18n';
 
 export async function getStaticPaths() {
-  const locales = ['en', 'es'];
+  const locales = ['us', 'es'];
+  const blogModules = import.meta.glob('../../../locales/*/blogs/*.json');
+  const postsByLocale: Record<string, any[]> = { us: [], es: [] };
+
+  for (const path in blogModules) {
+    const lang = path.split('/')[4];
+    if (locales.includes(lang)) {
+      const mod: any = await blogModules[path]();
+      postsByLocale[lang].push(mod.default || mod);
+    }
+  }
+
   return locales.map((locale) => ({
     params: { lang: locale },
-    props: { currentLang: locale as Locale }
+    props: { currentLang: locale as Locale, blogPosts: postsByLocale[locale] }
   }));
 }
 
-const { currentLang } = Astro.props;
-const blogPosts = (await import(`../../../locales/${currentLang}/news.json`)).items || [];
+const { currentLang, blogPosts } = Astro.props;
 ---
 
-<BlogListing blogPosts={blogPosts} currentLang={currentLang} />
+{currentLang === 'us' ? (
+  <BlogListingUS blogPosts={blogPosts} currentLang={currentLang} />
+) : (
+  <BlogListing blogPosts={blogPosts} currentLang={currentLang} />
+)}

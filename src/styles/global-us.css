@@ -1,0 +1,118 @@
+/* global-us.css: Estilos globales para versión US */
+@import "./fonts-us.css";
+
+/* ============================================
+   PALETA DE COLORES US
+   Sobrescribe las variables de color cuando
+   el body tiene la clase .us-layout
+   ============================================ */
+
+.us-layout {
+  /* Colores primarios US */
+  --color-primary: #0E6D20;
+  --color-secondary: #F5A623;
+  --color-tertiary: #B71C1C;
+  --color-cuaternary: #16A085;
+  --color-quinary: #2980B9;
+
+  /* Colores base US */
+  --color-red: #B71C1C;
+  --color-white: #FFFFFF;
+  --color-brown: #6D4C41;
+  --color-blue: #2980B9;
+  --color-green: #0E6D20;
+  --color-orange: #E67E22;
+  --color-yellow: #F5A623;
+  --color-pink: #E91E63;
+  --color-lemon: #A8D648;
+  --color-greenDark: #145A32;
+}
+
+/* ============================================
+   OVERRIDES DE COLORES TAILWIND PARA US
+   Usa clases bg-us-*, text-us-*, border-us-*
+   o sobrescribe las clases existentes bajo .us-layout
+   ============================================ */
+
+/* Background colors */
+.us-layout .bg-primary { background-color: var(--color-primary) !important; }
+.us-layout .bg-secondary { background-color: var(--color-secondary) !important; }
+.us-layout .bg-tertiary { background-color: var(--color-tertiary) !important; }
+.us-layout .bg-red { background-color: var(--color-red) !important; }
+.us-layout .bg-blue { background-color: var(--color-blue) !important; }
+.us-layout .bg-green { background-color: var(--color-green) !important; }
+.us-layout .bg-orange { background-color: var(--color-orange) !important; }
+.us-layout .bg-yellow { background-color: var(--color-yellow) !important; }
+.us-layout .bg-pink { background-color: var(--color-pink) !important; }
+.us-layout .bg-brown { background-color: var(--color-brown) !important; }
+.us-layout .bg-lemon { background-color: var(--color-lemon) !important; }
+.us-layout .bg-greenDark { background-color: var(--color-greenDark) !important; }
+
+/* Text colors */
+.us-layout .text-primary { color: var(--color-primary) !important; }
+.us-layout .text-secondary { color: var(--color-secondary) !important; }
+.us-layout .text-tertiary { color: var(--color-tertiary) !important; }
+.us-layout .text-red { color: var(--color-red) !important; }
+.us-layout .text-blue { color: var(--color-blue) !important; }
+.us-layout .text-green { color: var(--color-green) !important; }
+.us-layout .text-orange { color: var(--color-orange) !important; }
+.us-layout .text-yellow { color: var(--color-yellow) !important; }
+.us-layout .text-pink { color: var(--color-pink) !important; }
+.us-layout .text-brown { color: var(--color-brown) !important; }
+.us-layout .text-greenDark { color: var(--color-greenDark) !important; }
+
+/* Border colors */
+.us-layout .border-primary { border-color: var(--color-primary) !important; }
+.us-layout .border-secondary { border-color: var(--color-secondary) !important; }
+.us-layout .border-tertiary { border-color: var(--color-tertiary) !important; }
+.us-layout .border-red { border-color: var(--color-red) !important; }
+.us-layout .border-blue { border-color: var(--color-blue) !important; }
+.us-layout .border-green { border-color: var(--color-green) !important; }
+.us-layout .border-orange { border-color: var(--color-orange) !important; }
+.us-layout .border-yellow { border-color: var(--color-yellow) !important; }
+.us-layout .border-pink { border-color: var(--color-pink) !important; }
+.us-layout .border-brown { border-color: var(--color-brown) !important; }
+.us-layout .border-greenDark { border-color: var(--color-greenDark) !important; }
+
+/* ============================================
+   ESTILOS GENERALES US
+   ============================================ */
+
+.us-layout,
+.us-layout * {
+  font-family: 'Strelka Ultra', sans-serif !important;
+}
+
+.us-layout .titles {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-family: 'Strelka Ultra', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Header menu font size override for US */
+.us-layout #desktop-menu-items a {
+  font-size: 1rem !important;
+}
+
+@media (max-width: 1280px) {
+  .us-layout #desktop-menu-items a {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .us-layout #desktop-menu-items a {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .us-layout .titles {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+}

@@ -1,0 +1,209 @@
+---
+import { type Locale } from '../../i18n/i18n';
+import { ViewTransitions } from 'astro:transitions';
+import MainLayout from '../../layouts/MainLayoutUS.astro';
+import './styles.css';
+import BlogCard from '../../components/blog/BlogCard.astro';
+import NewsCarousel from '../../components/blog/NewsCarousel.astro';
+
+export interface Props {
+  currentLang: Locale;
+  blogPosts: any[];
+}
+
+const { currentLang, blogPosts } = Astro.props;
+
+const posts = Array.isArray(blogPosts) ? blogPosts : [];
+
+const filterLabels = {
+  oldest: 'OLDEST',
+  newest: 'NEWEST',
+  all: 'ALL'
+};
+
+const pageTitle = 'News';
+const pageDescription = 'Stay updated with our latest news and articles.';
+const noPostsText = 'No blog posts available at this time.';
+const loadMoreText = 'LOAD MORE';
+
+const sortedForCarousel = posts
+  .slice()
+  .sort((a, b) => String(b.published_date || '').localeCompare(String(a.published_date || '')));
+---
+<MainLayout title={pageTitle} description={pageDescription}>
+  <ViewTransitions />
+  <div class="-mt-px -mb-px overflow-hidden pb-15 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/blogus.webp');">
+    <div class="container mx-auto px-4 pb-16 mt-12">
+
+      <!-- News Carousel: shows the latest post as featured -->
+      <div class="mx-auto mb-16">
+        <NewsCarousel currentLang={currentLang} items={sortedForCarousel} />
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-4 mb-8">
+        <!-- Sort Filters -->
+        <div id="blogFilters" class="flex flex-wrap gap-3">
+          <button
+            type="button"
+            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-us-red text-white font-bold transition-all whitespace-nowrap"
+            data-filter="newest"
+          >
+            {filterLabels.newest}
+          </button>
+          <button
+            type="button"
+            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap"
+            data-filter="oldest"
+          >
+            {filterLabels.oldest}
+          </button>
+          <button
+            type="button"
+            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap"
+            data-filter="all"
+          >
+            {filterLabels.all}
+          </button>
+        </div>
+      </div>
+
+      {posts.length === 0 ? (
+        <p class="text-white text-center py-12">{noPostsText}</p>
+      ) : (
+        <div id="recipesGrid" class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+          {posts.map((post: any, index: number) => (
+            <div
+              class="recipe-card"
+              data-date={String(post.published_date || '')}
+              data-order={String(index)}
+              style={index < 4 ? '' : 'display:none'}
+            >
+              <BlogCard
+                image={post.image || `/images/${currentLang}/slider1.png`}
+                title={post.title}
+                id={post.id}
+                slug={post.slug}
+                currentLang={currentLang}
+                category={String(post.category || '').toUpperCase()}
+                date={post.published_date}
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
+      {posts.length > 4 && (
+        <div class="flex justify-center mt-8">
+          <button
+            id="loadMoreBtn"
+            type="button"
+            class="bg-us-red text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition"
+          >
+            {loadMoreText}
+          </button>
+        </div>
+      )}
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function initBlogLoadMore() {
+    const grid = document.getElementById('recipesGrid');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const filterButtons = Array.from(document.querySelectorAll<HTMLElement>('#blogFilters .filter-btn'));
+
+    if (!(grid instanceof HTMLElement) || !(loadMoreBtn instanceof HTMLButtonElement)) return;
+
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>('.recipe-card'));
+    const pageSize = 4;
+    let revealedCount = 0;
+    let currentMode = 'newest';
+
+    function parseDate(v: unknown): number {
+      const s = String(v || '').trim();
+      const ts = Date.parse(s);
+      return Number.isFinite(ts) ? ts : 0;
+    }
+
+    function hideAll() {
+      cards.forEach((c) => { c.style.display = 'none'; });
+    }
+
+    function sortedCards(): HTMLElement[] {
+      const list = cards.slice();
+      if (currentMode === 'newest') {
+        list.sort((a, b) => parseDate(b.dataset.date) - parseDate(a.dataset.date));
+      } else if (currentMode === 'oldest') {
+        list.sort((a, b) => parseDate(a.dataset.date) - parseDate(b.dataset.date));
+      } else {
+        list.sort((a, b) => Number(a.dataset.order || 0) - Number(b.dataset.order || 0));
+      }
+      return list;
+    }
+
+    function reorderDom(list: HTMLElement[]) {
+      list.forEach((el) => grid!.appendChild(el));
+    }
+
+    function revealNextPage() {
+      const ordered = sortedCards();
+      reorderDom(ordered);
+      const nextBatch = ordered.slice(revealedCount, revealedCount + pageSize);
+      nextBatch.forEach((card) => { card.style.display = ''; });
+      revealedCount += nextBatch.length;
+      loadMoreBtn!.classList.toggle('hidden', revealedCount >= ordered.length);
+    }
+
+    function setActive(btn: HTMLElement) {
+      filterButtons.forEach((b) => {
+        b.classList.remove('bg-us-red', 'text-white');
+        b.classList.add('bg-white', 'text-gray-700');
+      });
+      btn.classList.remove('bg-white', 'text-gray-700');
+      btn.classList.add('bg-us-red', 'text-white');
+    }
+
+    function applyMode(mode: string) {
+      currentMode = mode;
+      revealedCount = 0;
+      hideAll();
+      revealNextPage();
+    }
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const mode = btn.getAttribute('data-filter') || 'newest';
+        setActive(btn);
+        applyMode(mode);
+      });
+    });
+
+    loadMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      revealNextPage();
+    });
+
+    const defaultBtn = filterButtons.find((b) => b.getAttribute('data-filter') === 'newest');
+    if (defaultBtn) {
+      setActive(defaultBtn);
+      applyMode('newest');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBlogLoadMore);
+  } else {
+    initBlogLoadMore();
+  }
+  document.addEventListener('astro:page-load', initBlogLoadMore);
+  document.addEventListener('astro:after-swap', initBlogLoadMore);
+</script>

@@ -41,14 +41,14 @@ const texts = {
     helper: openTextEs,
     accept: acceptTextEs,
   },
-  en: {
+  us: {
     header: 'Share this recipe',
     helper: openTextEn,
     accept: acceptTextEn,
   }
 };
 
-const t = texts[(locale as 'es'|'en')] || texts.es;
+const t = texts[(locale as 'es'|'us')] || texts.es;
 ---
 
 <div id={id} class="fixed inset-0 flex items-center justify-center z-50 hidden">

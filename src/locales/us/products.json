@@ -1,0 +1,535 @@
+{
+  "meta": {
+    "title": "Products - Zambos",
+    "description": "Discover our complete line of Zambos products. Authentic flavor for the whole family."
+  },
+  "home": {
+    "title": "Discover the variety of our",
+    "subtitle": "Products",
+    "textButton": "Learn more"
+  },
+  "page": {
+    "view_details": "View Details"
+  },
+  "categories": {
+    "Plátano": "Plantain",
+    "Yuquita": "Cassava"
+  },
+  "stockist":[
+    {
+      "id": "sompopopoapp",
+      "name": "Sompopop App",
+      "link": "https://sompopo.app.link/yummies",
+      "icon": "https://snack.yummiespromociones.com/SnacksyummiesAssets/sompopoapp.webp"
+    },
+    {
+      "id": "latorreapp",
+      "name": "La Torre",
+      "link": "https://www.latorre.com.gt/458?map=productClusterIds",
+      "icon": "https://snack.yummiespromociones.com/SnacksyummiesAssets/latorreapp.webp"
+    }
+  ],
+  "items": [
+    {
+      "id": "zambos-platano-picositas",
+      "name": "Zambos plátano picositas",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried plantain chips with chili, lemon and salt flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz",
+        "10oz"
+      ],
+      "category": "Plantain"
+    },
+    {
+      "id": "zambos-yuquitas-con-ajo-parmesano",
+      "name": "Zambos Yuquitas Con Ajo Parmesano",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_yuquita_ajo_parmesano.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Cassava chips with garlic and parmesan.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_yuquita_ajo_parmesano.webp"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz",
+        "10oz"
+      ],
+      "category": "Yuquitas",
+      "new": true
+    },
+    {
+      "id": "zambos-platano-ceviche",
+      "name": "Zambos Plátano Ceviche",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried plantain chips with seafood flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-2.webp"
+        }
+      ],
+      "weight": [
+        "5.3oz"
+      ],
+      "category": "Plantain"
+    },
+    {
+      "id": "zambos-platano-salsa-verde",
+      "name": "Zambos Plátano Salsa Verde",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos%2BSalsa%2BVerde%2BFam.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Plantain chips with green salsa flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos%2BSalsa%2BVerde%2BFam.webp"
+        }
+      ],
+      "weight": [
+        "70g",
+        "140g"
+      ],
+      "category": "Plantain"
+    },
+    {
+      "id": "zambos-platano-con-chicharron-del-rancho",
+      "name": "Zambos Con Chicharron Del Rancho",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-con-chicharron-del-rancho-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried plantain chips with pork crackling flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-con-chicharron-del-rancho-2.webp"
+        }
+      ],
+      "weight": [
+        "21g",
+        "138g"
+      ],
+      "category": "Plantain"
+    },
+    {
+      "id": "zambos-platano-maduritos",
+      "name": "Zambos Plátano Maduritos",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Sweet ripe plantain slices.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-maduritos-2.webp"
+        }
+      ],
+      "weight": [
+        "19g",
+        "36g",
+        "140g"
+      ],
+      "category": "Plantain"
+    },
+    {
+      "id": "zambos-platano-originales",
+      "name": "Zambos Plátano Originales",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-originales-onduladas-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Original fried plantain chips.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-originales-onduladas-2.webp"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Plantain"
+    },
+    {
+      "id": "zambos-tajin",
+      "name": "Zambos Tajin",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tajin-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Premium plantain seasoned with chili and lime.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tajin-2.webp"
+        }
+      ],
+      "weight": [
+        "2.29oz",
+        "4.9oz",
+        "9oz"
+      ],
+      "category": "Plantain"
+    },
+    {
+      "id": "zambos-yuquitas-chile-toreado",
+      "name": "Zambos Yuquitas Chile Toreado",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-chile-toreado-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried cassava chips with roasted chili flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-chile-toreado-2.webp"
+        }
+      ],
+      "weight": [
+        "5.3oz"
+      ],
+      "category": "Yuquitas"
+    },
+    {
+      "id": "zambos-yuquitas-originales",
+      "name": "Zambos Yuquitas Originales",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-originales-2.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Salted cassava slices.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-yuquitas-originales-2.webp"
+        }
+      ],
+      "weight": [
+        "5.3oz"
+      ],
+      "category": "Yuquitas"
+    },
+          {
+      "id": "zambos-fam-tajin",
+      "name": "Zambos Tajin",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_TAJIN_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Premium Plantain seasoned with Chili and Lemon.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_TAJIN_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Plátano"
+    },
+      {
+      "id": "zambos-fam-platano-ceviche",
+      "name": "Zambos Plátano Ceviche",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CEVICHE_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried Plantain Chips with Seafood Flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CEVICHE_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-con-chicharron-del-rancho",
+      "name": "Zambos Con Chicharron Del Rancho",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CHICHARRON-DEL-RANCHO_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried Plantain Chips with Pork Cracklings.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CHICHARRON-DEL-RANCHO_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-maduritos",
+      "name": "Zambos Plátano Maduritos",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_MADURITOS_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Ripe Plantain Slices.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_MADURITOS_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-picositas",
+      "name": "Zambos Plátano Picositas",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_PICOSITAS_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried Plantain Chips with Chili, Lime, and Salt Flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-salsa-verde",
+      "name": "Zambos Plátano Salsa Verde",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_SALSA-VERDE_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Plantain Chips with Green Salsa Flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_SALSA-VERDE_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+         "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Plátano"
+    },
+
+        {
+      "id": "zambos-fam-yuquitas-chile-toreado",
+      "name": "Zambos Yuquitas Chile Toreado",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-CHILE-TOREADO_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Fried Cassava Chips with seared chili flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-CHILE-TOREADO_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Yuquitas"
+    },
+        {
+      "id": "zambos-fam-yuquitas-originales",
+      "name": "Zambos Yuquitas Originales",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-ORIGINALES_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Cassava Slices with Salt.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-ORIGINALES_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "2.47oz",
+        "5.3oz"
+      ],
+      "category": "Yuquitas"
+    },
+       {
+      "id": "pack-zambos-chile-limon",
+      "name": "Pack Zambos Chile Limón",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Pack_Chile.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Zambos Chile Limón 18 bags",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Pack_Chile.webp"
+        }
+      ],
+      "weight": [
+        "All bags of chile limón zambos 1 oz per bag of zambos 18 oz total"
+      ],
+      "category": "Plátano"
+    },
+           {
+      "id": "pack-zambos-classic-mix",
+      "name": "Pack Zambos Classic Mix",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Pack_Clasic.webp",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Zambos Chile Limon,  Zambos Originals,  Zambos Salsa Verde",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Pack_Clasic.webp"
+        }
+      ],
+      "weight": [
+        " Net weight 16.8 oz  Contains 8 bags of 1 oz,    10 bags of 0.88 oz"
+      ],
+      "category": "Plantain"
+    }
+  ]
+}

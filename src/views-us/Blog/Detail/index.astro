@@ -1,0 +1,668 @@
+---
+import { type Locale } from '../../../i18n/i18n';
+import Breadcrumb from '../../../components/common/Breadcrumb/Breadcrumb.astro';
+import LazyImage from '../../../components/common/LazyImage.astro';
+import { fade, slide } from 'astro:transitions';
+import Subscription from '../../../components/subscription/index.astro';
+
+interface Props {
+  blogPost: {
+    id: string;
+    slug: string;
+    title: string;
+    content?: string;
+    content_intro?: string;
+    content_after_quote?: string;
+    image: string;
+    gallery?: string[];
+    date?: string;
+    published_date?: string;
+    quote?: string;
+  };
+  currentLang: Locale;
+  allBlogPosts?: Array<{
+    id: string;
+    slug: string;
+    title: string;
+    summary?: string;
+    image: string;
+    date?: string;
+    category?: string;
+  }>;
+}
+
+const { blogPost, currentLang, allBlogPosts = [] } = Astro.props;
+
+// Filter out the current blog post and get up to 2 suggested posts
+const suggestedPosts = allBlogPosts
+  .filter(post => post.id !== blogPost.id)
+  .slice(0, 2);
+
+// Labels based on language
+const labels = {
+  storyTitle: currentLang === 'es' ? 'LA HISTORIA DETRÁS DEL EPISODIO' : 'THE STORY BEHIND THE EPISODE',
+  galleryTitle: currentLang === 'es' ? 'GALERÍA DEL EPISODIO' : 'EPISODE GALLERY',
+  relatedTitle: currentLang === 'es' ? 'Blogs relacionados' : 'Related Blogs',
+  relatedSubtitle: currentLang === 'es' ? 'Descubre mas historias y novedades de la familia Zambos.' : 'Discover more stories and news from the Zambos family.',
+  viewAll: currentLang === 'es' ? 'VER TODOS' : 'VIEW ALL',
+  readMore: currentLang === 'es' ? 'LEER MÁS' : 'READ MORE',
+};
+
+// Format date
+const formatDate = (dateStr: string | undefined) => {
+  if (!dateStr) return '';
+  const date = new Date(dateStr);
+  const day = date.getDate();
+  const month = date.toLocaleDateString(currentLang === 'es' ? 'es-ES' : 'en-US', { month: 'short' });
+  const year = date.getFullYear();
+  return `${day} ${month} ${year}`;
+};
+
+const displayDate = formatDate(blogPost.date || blogPost.published_date);
+---
+
+<div class="blog-detail bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgdetalleus.webp');">
+  <!-- Green Header Section -->
+  <section class="blog-detail__header">
+    <div class="blog-detail__container">
+
+      <!-- Date -->
+      {displayDate && (
+        <div class="blog-detail__date">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>{displayDate}</span>
+        </div>
+      )}
+      
+      <!-- Title -->
+      <h1 class="blog-detail__title" transition:name={`blog-title-${blogPost.id}`}>
+        {blogPost.title}
+      </h1>
+      
+      <!-- Main Image -->
+      <div class="blog-detail__image-wrapper" transition:animate={slide({ duration: '0.3s' })}>
+        <LazyImage 
+          src={blogPost.image} 
+          alt={blogPost.title}
+          class="blog-detail__image"
+          loading="eager"
+          fallbackSrc={`/images/${currentLang}/slider1.png`}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Yellow Content Section -->
+  <section class="blog-detail__content">
+    <div class="blog-detail__content-card">
+      <!-- Story Section -->
+      <div class="blog-detail__story">
+        <div class="blog-detail__story-header">
+          <div class="blog-detail__story-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            </svg>
+          </div>
+          <h2 class="blog-detail__story-title">{labels.storyTitle}</h2>
+        </div>
+        
+        <!-- Content Intro -->
+        {blogPost.content_intro && (
+          <div class="blog-detail__story-text">
+            <Fragment set:html={blogPost.content_intro} />
+          </div>
+        )}
+        
+        <!-- Quote -->
+        {blogPost.quote && (
+          <blockquote class="blog-detail__quote">
+            <div class="blog-detail__quote-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#1B4D3E">
+                <path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/>
+              </svg>
+            </div>
+            <p class="blog-detail__quote-text">{blogPost.quote}</p>
+          </blockquote>
+        )}
+
+        <!-- Content After Quote -->
+        {blogPost.content_after_quote && (
+          <div class="blog-detail__story-text blog-detail__story-text--after">
+            <Fragment set:html={blogPost.content_after_quote} />
+          </div>
+        )}
+
+        <!-- Fallback -->
+        {!blogPost.content_intro && !blogPost.content_after_quote && blogPost.content && (
+          <div class="blog-detail__story-text">
+            <Fragment set:html={blogPost.content} />
+          </div>
+        )}
+      </div>
+
+      <!-- Gallery Section -->
+      {blogPost.gallery && blogPost.gallery.length > 0 && (
+        <div class="blog-detail__gallery">
+          <h3 class="blog-detail__gallery-title">{labels.galleryTitle}</h3>
+          <div class="blog-detail__gallery-grid">
+            {blogPost.gallery.map((img, index) => (
+              <div class="blog-detail__gallery-item">
+                <LazyImage 
+                  src={img} 
+                  alt={`${blogPost.title} - ${index + 1}`}
+                  class="blog-detail__gallery-image"
+                  loading="lazy"
+                  fallbackSrc={`/images/${currentLang}/slider1.png`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Related Posts Section -->
+  {suggestedPosts.length > 0 && (
+    <section class="mt-16">
+      <div class="blog-detail__related-container">
+        <div class="blog-detail__related-header">
+          <div class="blog-detail__related-info">
+            <h2 class=" text-us-green text-4xl">{labels.relatedTitle}</h2>
+            <p class=" text-us-green text-xl">{labels.relatedSubtitle}</p>
+          </div>
+          <a href={`/${currentLang}/blog`} class="blog-detail__view-all text-us-green text-xl">
+            {labels.viewAll}
+          </a>
+        </div>
+        
+        <div class="blog-detail__related-grid">
+          {suggestedPosts.map((post) => (
+            <article class="related-card">
+              <div class="related-card__image">
+                <LazyImage 
+                  src={post.image} 
+                  alt={post.title}
+                  class="related-card__img"
+                  loading="lazy"
+                  fallbackSrc={`/images/${currentLang}/slider1.png`}
+                />
+              </div>
+              <div class="related-card__content">
+                <div class="related-card__meta">
+                  {post.category && (
+                    <span class="related-card__category">{post.category}</span>
+                  )}
+                  {post.date && (
+                    <span class="related-card__date">{formatDate(post.date)}</span>
+                  )}
+                </div>
+                <h4 class="related-card__title">{post.title}</h4>
+                {post.summary && (
+                  <p class="related-card__summary">{post.summary}</p>
+                )}
+                <a href={`/${currentLang}/blog/${post.slug || post.id}`} class="related-card__btn">
+                  {labels.readMore}
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+</div>
+
+<style>
+  /* ==================== Variables ==================== */
+  .blog-detail {
+    --color-primary: #1B4D3E;
+    --color-primary-dark: #163d31;
+    --color-secondary: #FFE500;
+    --color-yellow-light: #FFFFFF;
+    --color-accent: #C8102E;
+    --color-white: #FFFFFF;
+    --color-text: #1B4D3E;
+    --color-text-light: #1B4D3E;
+    --radius-lg: 1.5rem;
+    --radius-md: 1rem;
+    --radius-sm: 0.5rem;
+  }
+
+  /* ==================== Header Section ==================== */
+  .blog-detail__header {
+
+    padding: 1rem 0 2rem;
+  }
+
+  .blog-detail__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .blog-detail__date {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-white);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
+  }
+
+  .blog-detail__title {
+    color: var(--color-white);
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__title {
+      font-size: 2.5rem;
+    }
+  }
+
+  .blog-detail__image-wrapper {
+    width: 100%;
+    max-height: 560px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .blog-detail__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ==================== Content Section (Yellow) ==================== */
+  .blog-detail__content {
+    padding: 0 1rem 2rem;
+  }
+
+  .blog-detail__content-card {
+    max-width: 1250px;
+    margin: 0 auto;
+    background-color: var(--color-yellow-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__content-card {
+      padding: 2.5rem 3rem;
+    }
+  }
+
+  /* ==================== Story Section ==================== */
+  .blog-detail__story {
+    margin-bottom: 2rem;
+  }
+
+  .blog-detail__story-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-detail__story-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-sm);
+    color: var(--color-white);
+  }
+
+  .blog-detail__story-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__story-title {
+      font-size: 1.15rem;
+    }
+  }
+
+  /* ==================== Story Text ==================== */
+  .blog-detail__story-text {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .blog-detail__story-text--after {
+    margin-top: 1.25rem;
+  }
+
+  .blog-detail__story-text :global(p) {
+    margin: 0;
+  }
+
+  .blog-detail__story-text :global(a) {
+    color: var(--color-accent);
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
+  .blog-detail__story-text :global(a:hover) {
+    color: #c41530;
+  }
+
+  /* ==================== Quote ==================== */
+  .blog-detail__quote {
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin: 1.25rem 0;
+    border: none;
+  }
+
+  .blog-detail__quote-icon {
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-detail__quote-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--color-text);
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__quote-text {
+      font-size: 1rem;
+    }
+  }
+
+  /* ==================== Gallery ==================== */
+  .blog-detail__gallery {
+    margin-top: 2rem;
+  }
+
+  .blog-detail__gallery-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__gallery-title {
+      font-size: 1.15rem;
+    }
+  }
+
+  .blog-detail__gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .blog-detail__gallery-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .blog-detail__gallery-item {
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: #e0e0e0;
+  }
+
+  .blog-detail__gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .blog-detail__gallery-item:hover .blog-detail__gallery-image {
+    transform: scale(1.05);
+  }
+
+  /* ==================== Related Posts Section ==================== */
+  .blog-detail__related {
+    background-color: var(--color-primary);
+    padding: 3rem 1rem 4rem;
+  }
+
+  .blog-detail__related-container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .blog-detail__related-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__related-header {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  .blog-detail__related-info {
+    flex: 1;
+  }
+
+  .blog-detail__related-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin: 0 0 0.5rem 0;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__related-title {
+      font-size: 2.75rem;
+    }
+  }
+
+  .blog-detail__related-subtitle {
+    font-size: 0.9rem;
+    color: var(--color-white);
+    font-weight: 700;
+    margin: 0;
+    opacity: 1;
+    font-style: normal;
+  }
+
+  .blog-detail__view-all {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .blog-detail__view-all:hover {
+    background-color: #c41530;
+    transform: translateY(-2px);
+  }
+
+  .blog-detail__related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__related-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  }
+
+  /* ==================== Related Card (Yellow) ==================== */
+  .related-card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-primary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .related-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  .related-card__image {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 768px) {
+    .related-card__image {
+      width: 130px;
+      min-width: 130px;
+      height: 130px;
+    }
+  }
+
+  .related-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .related-card:hover .related-card__img {
+    transform: scale(1.05);
+  }
+
+  .related-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .related-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .related-card__category {
+    display: inline-block;
+    padding: 0.3rem 0.65rem;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.65rem;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .related-card__date {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+  }
+
+  .related-card__title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin: 0 0 0.4rem 0;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 768px) {
+    .related-card__title {
+      font-size: 1rem;
+    }
+  }
+
+  .related-card__summary {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.85);
+    margin: 0 0 0.75rem 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .related-card__summary {
+      font-size: 0.8rem;
+    }
+  }
+
+  .related-card__btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    letter-spacing: 0.02em;
+  }
+
+  .related-card__btn:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+</style>

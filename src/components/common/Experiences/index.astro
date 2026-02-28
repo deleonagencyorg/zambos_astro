@@ -234,7 +234,9 @@ const currentTexts = texts[currentLang as keyof typeof texts];
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     max-width: 300px;
-    cursor: pointer;
+      margin-top: 1.25rem;
+      align-self: center;
+      cursor: pointer;
   }
 
   .know-more-btn:hover {
@@ -492,9 +494,43 @@ const currentTexts = texts[currentLang as keyof typeof texts];
     });
   }
 
+  // ── Video autoplay on scroll ──────────────────────────────────────────────
+  let videoObserver: IntersectionObserver | null = null;
+
+  function setupVideoObserver() {
+    if (videoObserver) {
+      videoObserver.disconnect();
+    }
+
+    videoObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    document.querySelectorAll<HTMLVideoElement>('.experiences-carousel-section video').forEach((video) => {
+      // Ensure attributes are set
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      videoObserver!.observe(video);
+    });
+  }
+
   // Event listeners
-  document.addEventListener('DOMContentLoaded', initializeCarousels);
-  document.addEventListener('astro:page-load', initializeCarousels);
-  document.addEventListener('astro:after-swap', initializeCarousels);
-  document.addEventListener('astro:before-swap', cleanupCarousels);
+  document.addEventListener('DOMContentLoaded', () => { initializeCarousels(); setupVideoObserver(); });
+  document.addEventListener('astro:page-load', () => { initializeCarousels(); setupVideoObserver(); });
+  document.addEventListener('astro:after-swap', () => { initializeCarousels(); setupVideoObserver(); });
+  document.addEventListener('astro:before-swap', () => {
+    cleanupCarousels();
+    if (videoObserver) { videoObserver.disconnect(); videoObserver = null; }
+  });
 </script>

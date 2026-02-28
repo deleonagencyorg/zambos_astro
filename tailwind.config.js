@@ -25,6 +25,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        // ES (default) palette
         primary: '#0DB14A',
         secondary: '#FFED7A',
         tertiary: '#FF0001',
@@ -39,14 +40,35 @@ module.exports = {
         yellow: '#FFED7A',
         pink: '#FF4DFF',
         lemon: '#BEDE89',
-        greenDark: '#009337'
-    
+        greenDark: '#009337',
+
+        // US palette (use with bg-us-primary, text-us-secondary, etc.)
+        'us-primary': '#0E6D20',
+        'us-secondary': '#F5A623',
+        'us-tertiary': '#B71C1C',
+        'us-cuaternary': '#16A085',
+        'us-quinary': '#2980B9',
+        'us-red': '#B71C1C',
+        'us-brown': '#6D4C41',
+        'us-blue': '#2980B9',
+        'us-green': '#0E6D20',
+        'us-orange': '#E67E22',
+        'us-yellow': '#F5A623',
+        'us-pink': '#E91E63',
+        'us-lemon': '#A8D648',
+        'us-greenDark': '#145A32',
       },
       fontFamily: {
+        // ES (default) fonts
         sans: ['Rockeby regular', 'sans-serif'],
         title: ['Rockeby black', 'serif'],
         heading: ['Rockeby regular', 'sans-serif'],
-        text: ['Rockeby regular', 'sans-serif']
+        text: ['Rockeby regular', 'sans-serif'],
+        // US fonts
+        'us-sans': ['Strelka Ultra', 'sans-serif'],
+        'us-title': ['Strelka Ultra', 'sans-serif'],
+        'us-heading': ['Strelka Ultra', 'sans-serif'],
+        'us-text': ['Strelka Ultra', 'sans-serif'],
       },
       animation: {
         'spin-slow': 'spin 5s linear infinite',

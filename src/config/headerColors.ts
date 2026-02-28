@@ -182,7 +182,7 @@ export function getHeaderColors(pathname: string): HeaderColorConfig {
   }
   
   // Para la página de inicio (ruta raíz)
-  if (path === '/' || path === '/es' || path === '/en' || path.endsWith('/index')) {
+  if (path === '/' || path === '/es' || path === '/us' || path.endsWith('/index')) {
     return headerColors.home;
   }
   

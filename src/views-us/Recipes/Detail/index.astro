@@ -1,0 +1,270 @@
+---
+// src/views/Recipes/Detail/index.astro
+import './styles.css';
+import RecipesCarousel from '../../../components/recipes/RecipesCarousel.astro';
+import Breadcrumb from '../../../components/common/Breadcrumb/Breadcrumb.astro';
+import LazyImage from '../../../components/common/LazyImage.astro';
+import IngredientsCarousel from '../../../components/recipes/IngredientsCarousel.astro';
+import ShareModal from '../../../components/common/ShareModal.astro';
+import ShareButton from '../../../components/common/ShareButton.astro';
+import Subscription from '../../../components/subscription/index.astro';
+
+interface RecipeItem {
+  id: string;
+  title: string;
+  description: string;
+  ingredients: string[];
+  instructions: string[];
+  preparation_time: number;
+  servings: number;
+  image?: string;
+  tags?: string[];
+  product_image?: string;
+}
+
+const { currentLang, recipeId } = Astro.props;
+
+// Import all recipe files with static glob and filter by language
+const recipeModules = import.meta.glob<{ default: RecipeItem }>("../../../locales/*/recipes/*.json");
+const allRecipes: RecipeItem[] = [];
+for (const path in recipeModules) {
+  const lang = path.split('/') [4];
+  if (lang === currentLang) {
+    const mod = await recipeModules[path]();
+    allRecipes.push(mod.default);
+  }
+}
+
+// Find current recipe
+const recipe = allRecipes.find((item: RecipeItem) => item.id === recipeId);
+
+const relatedRecipes = allRecipes.filter((item: RecipeItem) => item.id !== recipeId);
+const RELATED_PAGE_SIZE = 12;
+
+const canonicalShareUrl = new URL(`${Astro.url.pathname}${Astro.url.search}${Astro.url.hash}`, 'https://zambos.com').href;
+
+if (!recipe) {
+  throw new Error(`Recipe with id ${recipeId} not found`);
+}
+
+// Load shared recipe assets (titles, labels etc)
+const recipesAssets = {
+  recipes: currentLang === 'es' ? 'Ingredientes' : 'Ingredients',
+  preparation: currentLang === 'es' ? 'Preparación' : 'Preparation',
+  related_recipes: currentLang === 'es' ? 'Recetas relacionadas' : 'Related recipes'
+};
+
+function formatTime(minutes: number): string {
+  const hours = Math.floor(minutes / 60);
+  const mins = minutes % 60;
+  
+  if (currentLang === 'es') {
+    return hours > 0 
+      ? `${hours}h ${mins}min` 
+      : `${mins}min`;
+  } else {
+    return hours > 0 
+      ? `${hours}h ${mins}m` 
+      : `${mins}m`;
+  }
+}
+---
+<div class=" min-h-screen   bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/recetasdetalleus.webp');">
+
+
+  <!-- Main Recipe Card -->
+  <section class="flex  justify-center items-center py-6 sm:py-8 px-2 sm:px-4">
+    <div class=" border-2 bg-us-green border-white/20 rounded-3xl p-4 sm:p-6 md:p-12 w-full max-w-6xl">
+      <div class="flex flex-col md:flex-row gap-8">
+        
+        <!-- Left Side - Images -->
+        <div class="w-full md:w-1/2">
+          <!-- Main Image -->
+          <div class="relative rounded-3xl overflow-hidden mb-4">
+            {recipe.image && (
+              <LazyImage
+                src={recipe.image} 
+                alt={recipe.title}
+                class="w-full h-[320px] sm:h-[400px] object-cover"
+                transition:name={`recipe-image-${recipe.id}`}
+              />
+            )}
+            
+            <!-- Tags on image -->
+            <div class="absolute top-4 left-4 flex gap-2">
+              <span class="px-4 py-2 bg-us-red text-white font-bold rounded-full text-xs uppercase">
+                APERITIVO
+              </span>
+              <span class="px-4 py-2 bg-us-red text-white font-bold rounded-full text-xs uppercase">
+                NUEVO
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side - Info -->
+        <div class="w-full md:w-1/2">
+          <!-- Title -->
+          <h1 class="font-title text-3xl md:text-5xl font-bold text-white mb-6 uppercase">
+            {recipe.title}
+          </h1>
+
+          <!-- Time & Difficulty -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <!-- Time -->
+            <div class="bg-white rounded-2xl p-4">
+              <div class="flex items-center gap-2 text-us-green mb-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="text-xs sm:text-sm font-bold uppercase">{currentLang === 'es' ? 'Tiempo' : 'Time'}</span>
+              </div>
+              <p class="text-us-green font-bold">{formatTime(recipe.preparation_time)}</p>
+            </div>
+
+            <!-- Difficulty -->
+            <div class="bg-white rounded-2xl p-4">
+              <div class="flex items-center gap-2 text-us-green mb-1">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+                <span class="text-xs sm:text-sm font-bold uppercase">{currentLang === 'es' ? 'Dificultad' : 'Difficulty'}</span>
+              </div>
+              <p class="text-us-green font-bold">
+                {currentLang === 'es' ? 'Fácil' : 'Easy'}
+              </p>
+            </div>
+          </div>
+
+          <!-- Tab Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
+            <button 
+              id="ingredientsTab"
+              class="tab-btn tab-active bg-us-red text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:opacity-90 transition text-sm sm:text-base"
+            >
+              {recipesAssets.recipes}
+            </button>
+            <button 
+              id="preparationTab"
+              class="tab-btn tab-inactive bg-white text-us-green border-2 border-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:bg-gray-100 transition text-sm sm:text-base"
+            >
+              {recipesAssets.preparation}
+            </button>
+          </div>
+
+          <!-- Content Area -->
+          <div class="bg-white rounded-2xl p-4 sm:p-6 mb-6 min-h-[200px]">
+            <!-- Ingredients Content -->
+            <div id="ingredientsContent" class="tab-content">
+              <ul class="space-y-3">
+                {recipe.ingredients.map((ingredient: string) => (
+                  <li class="flex items-start gap-3">
+                    <span class="text-us-green mt-1">•</span>
+                    <span class="text-us-green">{ingredient}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <!-- Preparation Content -->
+            <div id="preparationContent" class="tab-content hidden">
+              <ol class="space-y-4">
+                {recipe.instructions.map((instruction: string, index: number) => (
+                  <li class="flex items-start gap-3">
+                    <span class="font-bold text-us-green">{index + 1}.</span>
+                    <span class="text-us-green">{instruction}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+
+          <!-- Social Buttons -->
+          <div class="flex gap-3">
+            <div class="bg-us-red rounded-full w-12 h-12 flex items-center justify-center hover:opacity-90 transition shadow-md">
+              <ShareButton platform="instagram" url={canonicalShareUrl} className="w-6 h-6 text-white [&_svg]:fill-white [&_svg]:stroke-white" />
+            </div>
+            <div class="bg-us-red rounded-full w-12 h-12 flex items-center justify-center hover:opacity-90 transition shadow-md">
+              <ShareButton platform="facebook" url={canonicalShareUrl} className="w-6 h-6 text-white [&_svg]:fill-white [&_svg]:stroke-white" />
+            </div>
+            <div class="bg-us-red rounded-full w-12 h-12 flex items-center justify-center hover:opacity-90 transition shadow-md">
+              <ShareButton platform="whatsapp" url={canonicalShareUrl} className="w-6 h-6 text-white [&_svg]:fill-white [&_svg]:stroke-white" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Recipes Section -->
+  <section class="py-12 px-4">
+    <div class="w-full max-w-6xl mx-auto">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-bold font-title uppercase">
+            <span class="text-us-green">{currentLang === 'es' ? 'RECETAS ' : 'SIMILAR '}</span><span class="text-us-red">{currentLang === 'es' ? 'SIMILARES' : 'RECIPES'}</span>
+          </h2>
+          <p class="text-us-green font-bold text-sm md:text-base mt-2">
+            {currentLang === 'es' ? 'Descubre mas recetas de la familia Zambos.' : 'Discover more recipes from the Zambos family.'}
+          </p>
+        </div>
+      </div>
+
+      <RecipesCarousel items={relatedRecipes} />
+    </div>
+  </section>
+
+ 
+</div>
+
+<!-- Tab Switching Script -->
+<script>
+  function initRecipeTabs() {
+    const ingredientsTab = document.getElementById('ingredientsTab');
+    const preparationTab = document.getElementById('preparationTab');
+    const ingredientsContent = document.getElementById('ingredientsContent');
+    const preparationContent = document.getElementById('preparationContent');
+
+    if (!ingredientsTab || !preparationTab || !ingredientsContent || !preparationContent) return;
+    if (ingredientsTab.dataset.bound === 'true') return;
+    ingredientsTab.dataset.bound = 'true';
+
+    ingredientsTab.addEventListener('click', () => {
+      ingredientsTab.classList.add('tab-active', 'bg-us-red', 'text-white');
+      ingredientsTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
+      preparationTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
+      preparationTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
+      ingredientsContent.classList.remove('hidden');
+      preparationContent.classList.add('hidden');
+    });
+
+    preparationTab.addEventListener('click', () => {
+      preparationTab.classList.add('tab-active', 'bg-us-red', 'text-white');
+      preparationTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
+      ingredientsTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
+      ingredientsTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
+      preparationContent.classList.remove('hidden');
+      ingredientsContent.classList.add('hidden');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initRecipeTabs);
+  document.addEventListener('astro:page-load', initRecipeTabs);
+  document.addEventListener('astro:after-swap', initRecipeTabs);
+</script>
+
+<!-- Share Modal -->
+<ShareModal
+  id="shareModal-recipe"
+  url={canonicalShareUrl}
+  title={recipe.title}
+  description={recipe.description}
+  hashtags={recipe.tags || []}
+  showLabels={false}
+  iconSize={40}
+  round={true}
+  openTextEs="Comparte esta receta en tus redes sociales"
+  openTextEn="Share this recipe on your social networks"
+  acceptTextEs="Aceptar"
+  acceptTextEn="Accept"
+/>

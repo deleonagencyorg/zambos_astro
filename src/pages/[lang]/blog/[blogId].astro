@@ -1,43 +1,49 @@
 ---
 import BlogDetail from '../../../views/Blog/Detail/index.astro';
+import BlogDetailUS from '../../../views-us/Blog/Detail/index.astro';
 import { setLocale, type Locale } from '../../../i18n/i18n';
 import MainLayout from '../../../layouts/MainLayout.astro';
+import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
 
 export async function getStaticPaths() {
-  const locales = ['en', 'es'];
+  const locales = ['us', 'es'];
   const paths: any[] = [];
-  
-  // Importar archivos blog.json de cada locale
-  const modules = import.meta.glob('../../../locales/*/blog.json');
-  
+  const blogModules = import.meta.glob('../../../locales/*/blogs/*.json');
+  const postsByLocale: Record<string, any[]> = { us: [], es: [] };
+
+  for (const path in blogModules) {
+    const lang = path.split('/')[4];
+    if (locales.includes(lang)) {
+      const mod: any = await blogModules[path]();
+      postsByLocale[lang].push(mod.default || mod);
+    }
+  }
+
   for (const locale of locales) {
-    const modulePath = `../../../locales/${locale}/blog.json`;
-    const mod: any = modules[modulePath] ? await modules[modulePath]() : null;
-    
-    if (!mod) continue;
-    
-    const data = mod.default || mod;
-    const allPosts: any[] = data.posts || [];
-    
+    const allPosts = postsByLocale[locale];
     for (const blogPost of allPosts) {
-      if (blogPost.slug || blogPost.id) {
+      const blogId = blogPost.slug || blogPost.id;
+      if (blogId) {
         paths.push({
-          params: { lang: locale, blogId: blogPost.slug || blogPost.id },
+          params: { lang: locale, blogId },
           props: { blogPost, currentLang: locale as Locale, allBlogPosts: allPosts }
         });
       }
     }
   }
-  
+
   return paths;
 }
 
 const { blogPost, currentLang, allBlogPosts } = Astro.props;
-const { lang, blogId } = Astro.params;
+const { lang } = Astro.params;
 
 setLocale(lang as Locale);
+const isUS = currentLang === 'us';
+const Layout = isUS ? MainLayoutUS : MainLayout;
+const DetailComponent = isUS ? BlogDetailUS : BlogDetail;
 ---
 
-<MainLayout title={blogPost.title}>
-  <BlogDetail blogPost={blogPost} currentLang={currentLang} allBlogPosts={allBlogPosts} />
-</MainLayout>
+<Layout title={blogPost.title}>
+  <DetailComponent blogPost={blogPost} currentLang={currentLang} allBlogPosts={allBlogPosts} />
+</Layout>
