@@ -102,15 +102,7 @@
         "description": "",
         "link": "#"
       },
-      {
-        "id": "slide5",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_Web_IMG_Zambos_Slider_02-1.jpg",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "#"
-      },
+
       {
         "id": "slide6",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
@@ -259,7 +251,8 @@
     "email": "ayudacliente@zambos.com",
     "copyright": "Copyright 2026. Zambos. All rights reserved.",
     "privacy_policy_text": "Privacy Policy",
-    "privacy_policy_url": "/es/politica-privacidad"
+    "privacy_policy_url": "/es/politica-privacidad",
+    "contact_title": "DINANT - Contact"
   },
   "messagetop":[
     {
@@ -278,30 +271,31 @@
     "success": "Thank you for subscribing!"
   },
   "videos": {
+    "title": "OUR RECIPES",
     "items": [
            {
         "title": "Zambos Preparados",
-        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4"
       },
             {
-        "title": "¡Unos ZAMBOS con CHOCOLATE!",
-        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "title": "ZAMBOS with CHOCOLATE!",
+        "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be"
       },
             {
-        "title": "¡Disfrutá de este platillo tradicional de una forma diferente!",
-        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "title": "Enjoy this traditional dish in a different way!",
+        "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be"
       },
             {
-        "title": "Deliciosa receta con Zambos Ceviche 🍤",
-        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "title": "Delicious recipe with Zambos Ceviche 🍤",
+        "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be"
       },
             {
         "title": "Zambos Costeños",
-        "description": "Descubre ideas para preparar tus snacks Zambos.",
+        "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=DEDSda5mneA"
       }
     ]

@@ -1,15 +1,17 @@
 {
-  "date": "8 de enero, 2024",
+  "published_date": "2024-05-02",
   "id": "mas-de-100-escuelas-publicas-beneficiadas",
   "slug": "mas-de-100-escuelas-publicas-beneficiadas",
   "title": "Más de 100 escuelas públicas beneficiadas",
-  "category": "Comunicados",
-        "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_113_2560X1088_Felipe-1-png.png",
+  "category": "Comunicados Prensa",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/mas-de-100-escuelas-publicas-beneficiadas.webp",
+  "image_banner": "https://snack.yummiespromociones.com/SnacksyummiesAssets/mas-de-100-escuelas-publicas-beneficiadas.webp",
   "type": "image",
-  "content": "Snacks Yummies ha beneficiado a más de 100 escuelas públicas a través de programas de responsabilidad social.",
+  "content": "Zambos entrega recolectores de basura con diseños únicos. Snacks Yummies refuerza su compromiso con el medio ambiente y el bienestar de las comunidades hondureñas con la entrega de más de 200 recolectores de residuos en centros escolares en Tegucigalpa, Choluteca, Olancho, Danlí, Comayagua, San Pedro Sula, La Ceiba y la Tocoa; esto con el objetivo de promover prácticas sostenibles dentro de los establecimientos educativos y fomentar aún más la responsabilidad ambiental en todos los niños y niñas del país. Cada recolector de residuos tiene la presentación de un empaque Zambos en tamaño gigante, un diseño único y llamativo que incentive de forma lúdica la gestión de residuos en el entorno educativo. Esta acción se realizó en conjunto con aliados estratégicos como SERMUNAST (Servicio Municipal de Agua y Saneamiento en Tocoa) y ASIDE (Asociación de Investigación y Desarrollo), capacitando a más de 1,500 niños sobre el cuidado del medio ambiente, la protección de ecosistemas y el adecuado desecho de los residuos. Este es nuestro primer paso en esfuerzos continuos de Snacks Yummies para promover la sostenibilidad y la conservación del medio ambiente en Honduras.",
   "url": "https://zambos.com/noticia/mas-de-100-escuelas-publicas-beneficiadas/",
   "brand": [
-    "zambos"
+    "zambos",
+    "snacks-yummies"
   ],
   "product": [
     "zambos"

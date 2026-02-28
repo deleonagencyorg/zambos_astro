@@ -7,15 +7,13 @@
     "title": "Descubre la variedad de nuestros",
     "subtitle": "Productos",
     "textButton": "Conoce más"
-},
-  "categories": {
-    "Plátano": "Plátano",
-    "Yuquita": "Yuquita",
-    "Toston": "Tostón",
-    "Tostón": "Tostón"
   },
   "page": {
     "view_details": "Ver detalles"
+  },
+  "categories": {
+    "Plátano": "Plátano",
+    "Yuquita": "Yuquita"
   },
   "stockist":[
     {
@@ -52,8 +50,9 @@
         }
       ],
       "weight": [
+        "19g",
         "21g",
-        "36g",
+        "33g",
         "70g",
         "140g",
         "500g"
@@ -80,13 +79,11 @@
         }
       ],
       "weight": [
-        "23g",
-        "26g",
-        "40g",
-        "80g",
-        "190g"
+        "16g",
+        "33g",
+        "130g"
       ],
-      "category": "Yuquita",
+      "category": "Yuquitas",
       "new": true
     },
     {
@@ -110,7 +107,7 @@
       ],
       "weight": [
         "21g",
-        "36g",
+        "33g",
         "140g"
       ],
       "category": "Plátano"
@@ -186,7 +183,8 @@
       ],
       "weight": [
         "19g",
-        "36g",
+        "21g",
+        "33g",
         "140g"
       ],
       "category": "Plátano"
@@ -211,8 +209,9 @@
         }
       ],
       "weight": [
+        "19g",
         "21g",
-        "36g",
+        "33g",
         "70g",
         "140g"
       ],
@@ -240,7 +239,7 @@
       "weight": [
         "19g",
         "21g",
-        "36g",
+        "33g",
         "70g",
         "140g"
       ],
@@ -266,10 +265,10 @@
         }
       ],
       "weight": [
-        "163g",
+        "16g",
         "130g"
       ],
-      "category": "Yuquita"
+      "category": "Yuquitas"
     },
     {
       "id": "zambos-yuquitas-originales",
@@ -294,31 +293,227 @@
         "16g",
         "130g"
       ],
-      "category": "Yuquita"
+      "category": "Yuquitas"
     },
-       {
-      "id": "zambos-tostones-originales",
-      "name": "Zambos Tostones Originales",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tostones.webp",
+      {
+      "id": "zambos-fam-tajin",
+      "name": "Zambos Tajin",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_TAJIN_FAMILIAR.png",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",
       "text_color": "#64A70B",
       "header_background": "#64A70B",
       "header_text_color": "#FFFFFF",
       "color_button": "#64A70B",
-      "description": "Plátanos al estilo casero con 0% colesterol, sin azúcar y libre de gluten. ",
+      "description": "Plátano premium sazonado con chile y limón.",
       "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
       "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
       "sizes": [
         {
           "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tostones.webp"
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_TAJIN_FAMILIAR.png"
         }
       ],
       "weight": [
-        "100g"
+        "19g",
+        "21g",
+        "33g",
+        "70g",
+        "140g"
       ],
       "category": "Plátano"
+    },
+      {
+      "id": "zambos-fam-platano-ceviche",
+      "name": "Zambos Plátano Ceviche",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CEVICHE_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Hojuelas de plátano frito con sabor a frutos del mar.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CEVICHE_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "19g",
+        "21g",
+        "33g",
+        "70g",
+        "140g"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-con-chicharron-del-rancho",
+      "name": "Zambos Con Chicharron Del Rancho",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CHICHARRON-DEL-RANCHO_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Hojuelas de plátano frito con chicharrón de cerdo",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_CHICHARRON-DEL-RANCHO_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "19g",
+        "21g",
+        "33g",
+        "70g",
+        "138g"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-maduritos",
+      "name": "Zambos Plátano Maduritos",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_MADURITOS_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Tajadas de plátano maduro.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_MADURITOS_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "19g",
+        "21g",
+        "33g",
+        "70g",
+        "140g"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-picositas",
+      "name": "Zambos Plátano Picositas",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_PICOSITAS_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Hojuelas de plátano frito con sabor a chile, limón y sal.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-picositas-con-chile-limon-y-sal-2.webp"
+        }
+      ],
+      "weight": [
+        "19g",
+        "21g",
+        "33g",
+        "70g",
+        "140g"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-platano-salsa-verde",
+      "name": "Zambos Plátano Salsa Verde",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_SALSA-VERDE_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Hojuelas de plátano con sabor a salsa verde.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_SALSA-VERDE_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "19g",
+        "21g",
+        "33g",
+        "70g",
+        "140g"
+      ],
+      "category": "Plátano"
+    },
+        {
+      "id": "zambos-fam-yuquitas-chile-toreado",
+      "name": "Zambos Yuquitas Chile Toreado",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-CHILE-TOREADO_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Hojuelas de Yuca Frita con sabor a chiles toreados.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-CHILE-TOREADO_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "16g",
+        "33g",
+        "130g"
+      ],
+      "category": "Yuquitas"
+    },
+        {
+      "id": "zambos-fam-yuquitas-originales",
+      "name": "Zambos Yuquitas Originales",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-ORIGINALES_FAMILIAR.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Tajadas de yuca con sal.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ZAMBOS_YUQUITAS-ORIGINALES_FAMILIAR.png"
+        }
+      ],
+      "weight": [
+        "16g",
+        "33g",
+        "130g"
+      ],
+      "category": "Yuquitas"
     }
   ]
 }

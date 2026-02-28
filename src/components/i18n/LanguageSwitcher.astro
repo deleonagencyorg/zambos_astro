@@ -12,7 +12,7 @@ export interface Props {
 const { activeLocale, headerColorConfig } = Astro.props;
 
 // Mapeo de rutas equivalentes entre idiomas
-const routeTranslations = {
+const routeTranslations: Record<string, string> = {
   'recetas': 'recipes',
   'productos': 'products',
   'noticias': 'news',
@@ -20,7 +20,15 @@ const routeTranslations = {
   'marcas': 'brands',
   'nosotros': 'about-us',
   'blog': 'blog'
-  // Agregar más rutas según sea necesario
+};
+
+// Sections that have detail pages — switching lang on a detail page falls back to the listing
+// Key: es slug, Value: en slug
+const detailSections: Record<string, string> = {
+  'recetas': 'recipes',
+  'blog': 'blog',
+  'noticias': 'news',
+  'productos': 'products',
 };
 
 // Extraer la ruta actual y el idioma
@@ -35,7 +43,28 @@ const getTranslatedPath = (targetLocale: Locale) => {
   
   // Para la ruta raíz (/es o /us)
   if (pathParts.length <= 1) return `/${targetLocale}`;
-  
+
+  // Detect if we are on a detail page: /lang/section/id (3 segments)
+  if (pathParts.length >= 3) {
+    const section = pathParts[1];
+
+    // Build reverse map: en slug → es slug
+    const reverseDetail: Record<string, string> = {};
+    for (const [esSlug, enSlug] of Object.entries(detailSections)) {
+      reverseDetail[enSlug] = esSlug;
+    }
+
+    // Resolve the canonical es slug for the current section
+    const esSection = currentLocale === 'es' ? section : (reverseDetail[section] ?? section);
+    const enSection = detailSections[esSection] ?? esSection;
+
+    if (esSection in detailSections) {
+      // We are on a detail page — redirect to the listing in the target language
+      const targetSection = targetLocale === 'es' ? esSection : enSection;
+      return `/${targetLocale}/${targetSection}`;
+    }
+  }
+
   // Si estamos en una ruta mapeada, traducirla
   const translatedRoute = Object.entries(routeTranslations).reduce(
     (acc, [esRoute, enRoute]) => {
@@ -49,7 +78,7 @@ const getTranslatedPath = (targetLocale: Locale) => {
     },
     currentRoute
   );
-  
+
   return `/${targetLocale}/${translatedRoute}`;
 };
 

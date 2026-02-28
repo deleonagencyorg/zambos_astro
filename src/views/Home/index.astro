@@ -237,18 +237,20 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
     )
   }
 
-  <section class="w-full bg-yellow flex justify-center items-center py-8">
-    <div class="container text-center">
-       <h2  class='titles text-greenDark'>
-        {
-          currentLang === "es"
-            ? "Conoce más DE LAS EXPERIENCIAS ZAMBOS"
-            : "LEARN MORE ABOUT ZAMBOS EXPERIENCES"
-        }
-      </h2>
-    <ExperiencesCarousel experiences={experiences} />
-    </div>
-  </section>
+  {currentLang !== "en" && (
+    <section class="w-full bg-yellow flex justify-center items-center py-8">
+      <div class="container text-center">
+         <h2  class='titles text-greenDark'>
+          {
+            currentLang === "es"
+              ? "Conoce más DE LAS EXPERIENCIAS ZAMBOS"
+              : "LEARN MORE ABOUT ZAMBOS EXPERIENCES"
+          }
+        </h2>
+      <ExperiencesCarousel experiences={experiences} />
+      </div>
+    </section>
+  )}
 
   <!-- Sección instagram-->
   <section
@@ -272,7 +274,7 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
   </section>
   <section class="w-full bg-green py-16">
     <div class="container mx-auto px-4 md:px-4 lg:px-16">
-      <h2 class="titles text-white text-center mb-10">NUESTROS VIDEOS</h2>
+      <h2 class="titles text-white text-center mb-10">{videosAssets.title}</h2>
       <VideosGrid items={videoItems} />
     </div>
   </section>

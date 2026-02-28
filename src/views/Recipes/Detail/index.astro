@@ -44,7 +44,8 @@ const RELATED_PAGE_SIZE = 12;
 const canonicalShareUrl = new URL(`${Astro.url.pathname}${Astro.url.search}${Astro.url.hash}`, 'https://zambos.com').href;
 
 if (!recipe) {
-  throw new Error(`Recipe with id ${recipeId} not found`);
+  const listingPath = currentLang === 'es' ? `/${currentLang}/recetas` : `/${currentLang}/recipes`;
+  return Astro.redirect(listingPath, 302);
 }
 
 // Load shared recipe assets (titles, labels etc)

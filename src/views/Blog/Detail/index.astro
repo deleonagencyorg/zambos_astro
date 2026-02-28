@@ -26,12 +26,16 @@ interface Props {
     title: string;
     summary?: string;
     image: string;
-    date?: string;
+    published_date?: string;
     category?: string;
   }>;
 }
 
 const { blogPost, currentLang, allBlogPosts = [] } = Astro.props;
+
+if (!blogPost) {
+  return Astro.redirect(`/${currentLang}/blog`, 302);
+}
 
 // Filter out the current blog post and get up to 2 suggested posts
 const suggestedPosts = allBlogPosts
@@ -40,7 +44,7 @@ const suggestedPosts = allBlogPosts
 
 // Labels based on language
 const labels = {
-  storyTitle: currentLang === 'es' ? 'LA HISTORIA DETRÁS DEL EPISODIO' : 'THE STORY BEHIND THE EPISODE',
+  storyTitle: currentLang === 'es' ? '' : '',
   galleryTitle: currentLang === 'es' ? 'GALERÍA DEL EPISODIO' : 'EPISODE GALLERY',
   relatedTitle: currentLang === 'es' ? 'Blogs relacionados' : 'Related Blogs',
   relatedSubtitle: currentLang === 'es' ? 'Descubre mas historias y novedades de la familia Zambos.' : 'Discover more stories and news from the Zambos family.',
@@ -199,8 +203,8 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
                   {post.category && (
                     <span class="related-card__category">{post.category}</span>
                   )}
-                  {post.date && (
-                    <span class="related-card__date">{formatDate(post.date)}</span>
+                  {post.published_date && (
+                    <span class="related-card__date">{formatDate(post.published_date)}</span>
                   )}
                 </div>
                 <h4 class="related-card__title">{post.title}</h4>
@@ -255,7 +259,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
     align-items: center;
     gap: 0.5rem;
     color: var(--color-white);
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     opacity: 0.9;
   }
@@ -277,16 +281,34 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   .blog-detail__image-wrapper {
     width: 100%;
-    max-height: 560px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
   }
 
   .blog-detail__image {
     width: 100%;
     height: auto;
+    max-height: 70vh;
     display: block;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__image-wrapper {
+
+      width: fit-content;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .blog-detail__image {
+      width: 100%;
+      max-width: 480px;
+    }
   }
 
   /* ==================== Content Section (Yellow) ==================== */
@@ -334,7 +356,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
   }
 
   .blog-detail__story-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--color-text);
     margin: 0;
@@ -344,18 +366,24 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   @media (min-width: 768px) {
     .blog-detail__story-title {
-      font-size: 1.15rem;
+      font-size: 1.35rem;
     }
   }
 
   /* ==================== Story Text ==================== */
   .blog-detail__story-text {
-    font-size: 0.85rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.8;
     color: var(--color-text);
     border-left: 3px solid var(--color-primary);
     padding-left: 1rem;
     margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__story-text {
+      font-size: 1.1rem;
+    }
   }
 
   .blog-detail__story-text--after {
@@ -391,16 +419,16 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
   }
 
   .blog-detail__quote-text {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--color-text);
     margin: 0;
   }
 
   @media (min-width: 768px) {
     .blog-detail__quote-text {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -410,7 +438,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
   }
 
   .blog-detail__gallery-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--color-text);
     margin: 0 0 1rem 0;
@@ -419,7 +447,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   @media (min-width: 768px) {
     .blog-detail__gallery-title {
-      font-size: 1.15rem;
+      font-size: 1.35rem;
     }
   }
 
@@ -498,7 +526,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
   }
 
   .blog-detail__related-subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-white);
     margin: 0;
     opacity: 0.9;
@@ -510,7 +538,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
     padding: 1rem 2.5rem;
     background-color: var(--color-accent);
     color: var(--color-white);
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 700;
     text-decoration: none;
     border-radius: 50px;
@@ -601,10 +629,10 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   .related-card__category {
     display: inline-block;
-    padding: 0.3rem 0.65rem;
+    padding: 0.3rem 0.75rem;
     background-color: var(--color-primary);
     color: var(--color-white);
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     font-weight: 700;
     border-radius: 4px;
     text-transform: uppercase;
@@ -612,12 +640,12 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
   }
 
   .related-card__date {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: var(--color-text-light);
   }
 
   .related-card__title {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 800;
     color: var(--color-text);
     margin: 0 0 0.4rem 0;
@@ -627,12 +655,12 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   @media (min-width: 768px) {
     .related-card__title {
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
   }
 
   .related-card__summary {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: var(--color-text-light);
     margin: 0 0 0.75rem 0;
     line-height: 1.5;
@@ -644,17 +672,17 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   @media (min-width: 768px) {
     .related-card__summary {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
   }
 
   .related-card__btn {
     display: inline-block;
     width: fit-content;
-    padding: 0.5rem 1rem;
+    padding: 0.55rem 1.25rem;
     background-color: var(--color-primary);
     color: var(--color-white);
-    font-size: 0.7rem;
+    font-size: 0.875rem;
     font-weight: 700;
     border-radius: 6px;
     text-transform: uppercase;

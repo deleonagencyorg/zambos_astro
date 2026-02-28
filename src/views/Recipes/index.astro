@@ -73,6 +73,9 @@ function normalizeType(r: Recipe): string {
 
 // Get featured recipes for carousel (first 3)
 const featuredRecipes = allRecipes.slice(0, 3);
+
+// Base path for recipe details
+const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}`;
 ---
 
 <div class="bg-[#0DB04A] min-h-screen">
@@ -153,7 +156,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
                 class={`carousel-slide ${index === 0 ? '' : 'hidden'}`}
                 data-slide={index}
               >
-                <div class="relative h-[400px] md:h-[500px] lg:h-[600px]">
+                <a href={`${recipesBasePath}/${recipe.id}`} class="block relative h-[400px] md:h-[500px] lg:h-[600px] cursor-pointer">
                   <img 
                     src={recipe.image || '/images/recipes/placeholder.jpg'} 
                     alt={recipe.title}
@@ -224,7 +227,6 @@ const featuredRecipes = allRecipes.slice(0, 3);
           {featuredRecipes.length > 1 && (
             <div class="flex md:hidden justify-center gap-4 mt-6">
               <button 
-                id="prevBtn-mobile"
                 class="carousel-prev-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Anterior"
               >
@@ -234,7 +236,6 @@ const featuredRecipes = allRecipes.slice(0, 3);
               </button>
               
               <button 
-                id="nextBtn-mobile"
                 class="carousel-next-btn bg-red hover:bg-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 aria-label="Siguiente"
               >
@@ -283,17 +284,6 @@ const featuredRecipes = allRecipes.slice(0, 3);
                   isNew={(recipe as any).isNew || false}
                 />
               </div>
-            ))}
-          </div>
-      
-          <!-- Pagination Dots -->
-          <div class="flex justify-center gap-2 mt-8">
-            {allRecipes.slice(0, 5).map((_, index) => (
-              <button
-                class={`pagination-grid-dot w-3 h-3 rounded-full transition-all ${index === 0 ? 'bg-red w-8' : 'bg-white/50'}`}
-                data-grid-dot={index}
-                aria-label={`Page ${index + 1}`}
-              ></button>
             ))}
           </div>
       
@@ -368,8 +358,16 @@ const featuredRecipes = allRecipes.slice(0, 3);
     }
 
     // Carousel controls - attach to all prev/next buttons (mobile and desktop)
-    prevBtns.forEach(btn => btn.addEventListener('click', prevSlide));
-    nextBtns.forEach(btn => btn.addEventListener('click', nextSlide));
+    prevBtns.forEach(btn => btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      prevSlide();
+    }));
+    nextBtns.forEach(btn => btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      nextSlide();
+    }));
 
     carouselDots.forEach((dot, index) => {
       dot.addEventListener('click', () => showSlide(index));

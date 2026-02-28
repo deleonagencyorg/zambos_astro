@@ -55,12 +55,10 @@ const headerColors = {
           {contact.title}
         </h2>
 
-        <h1 class="text-us-green titles">
-          {contact.subtitle}
-        </h1>
+  
 
         <p class="text-us-green font-bold text-2xl lg:text-2xl mb-8 leading-relaxed ">
-          {contact.description}
+          We'd love to hear from you. Send us a message and we'll respond as soon as possible.
         </p>
       </div>
       
@@ -80,33 +78,33 @@ const headerColors = {
       <!-- Tabs and Office Info -->
       <div class="flex flex-col mb-4">
         <!-- Office Details -->
-        <div class="order-2 w-[80%] mx-auto">
-          <div id="officeInfo" class="bg-us-green rounded-2xl p-8 ">
+        <div class="order-2 w-[100%] mx-auto">
+          <div id="officeInfo" class="rounded-2xl p-8 ">
             <div class="flex flex-col lg:flex-row justify-between items-center">
-              <div class="space-y-4">
-                <h3 id="officeName" class="text-white titles">
+              <div class="w-1/2 space-y-4">
+                <h3 id="officeName" class="text-us-green titles">
                   {contact.offices.locations["+504"].name}
                 </h3>
                 
                 <div class="flex items-start space-x-3">
-                  <p id="officeAddress" class="text-white leading-relaxed font-semibold ">  {`+ ${contact.offices.locations["+504"].address}`}</p>
+                  <p id="officeAddress" class="text-us-green leading-relaxed font-semibold ">  {`+ ${contact.offices.locations["+504"].address}`}</p>
                 </div>
                 
                 <div class="flex items-center space-x-3">
-                  <div id="officePhones" class="flex flex-col text-white">
+                  <div id="officePhones" class="flex flex-col text-us-green">
                     {contact.offices.locations["+504"].phones.map((phone: string) => (
-                     <div> <a href={`tel:${phone}`} class="text-white hover:text-primary transition-colors">
+                     <div> <a href={`tel:${phone}`} class="text-us-green hover:text-us-red transition-colors">
                         {phone}
                       </a></div>
                     ))}
                   </div>
                 </div>
               </div>
-              <div class="mt-6 lg:mt-0">
+              <div class="w-1/2 mt-6 lg:mt-0">
                 <LazyImage 
                   src="https://snack.yummiespromociones.com/SnacksyummiesAssets/oficinas.webp"
                   alt="Yummies Honduras"
-                  class="w-full h-48 object-cover rounded-xl"
+                  class="h-full h-48 object-cover rounded-xl"
                 />
               </div>
             </div>
@@ -120,7 +118,7 @@ const headerColors = {
           {Object.entries(contact.offices.locations).map(([countryCode, location]: [string, any], index: number) => (
             <button 
               data-country-code={countryCode}
-              class={`country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5
+              class={`country-tab px-5 py-4 text-white uppercase text-xs  transition-all duration-300 flex items-center justify-center gap-1
                 ${index === 0 
                   ? 'h-[54px] bg-us-red opacity-100 border border-us-red border-[1px] rounded-full ' 
                   : 'h-[54px] bg-white opacity-75 hover:opacity-100 border-[1px] border-us-red text-us-red rounded-full'

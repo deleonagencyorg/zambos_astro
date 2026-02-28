@@ -75,12 +75,13 @@ function normalizeType(r: Recipe): string {
 const featuredRecipes = allRecipes.slice(0, 3);
 ---
 
-<div class="bg-us-green min-h-screen">
-  <div class="container mx-auto px-4 md:px-8 lg:px-16">
+<div class="min-h-screen">
+  <div class=" ">
     
     <!-- Hero Section with Featured Recipe Carousel -->
-    <section class="pt-12 pb-16">
-      <!-- Title -->
+    <section class="pt-12    bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgrecipesus.webp');">
+     <div class="container mx-auto">
+       <!-- Title -->
       <div class="mb-8">
         <h1 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
           {currentLang === 'es' 
@@ -259,11 +260,13 @@ const featuredRecipes = allRecipes.slice(0, 3);
           )}
         </div>
       )}
+     </div>
     </section>
 
     <!-- Recipes Grid Section -->
     <section class="pb-16">
-      <h2 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-8">
+      <div class="container mx-auto">
+        <h2 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-8">
         {currentLang === 'es' ? 'Explora mas recetas Zambos' : 'Explore more Zambos recipes'}
       </h2>
       {allRecipes.length === 0 ? (
@@ -314,6 +317,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
       
         </>
       )}
+      </div>
     </section>
   </div>
 

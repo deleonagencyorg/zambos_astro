@@ -61,12 +61,11 @@ const formatDate = (dateStr: string | undefined) => {
 const displayDate = formatDate(blogPost.date || blogPost.published_date);
 ---
 
-<div class="blog-detail">
+<div class="blog-detail bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgdetalleus.webp');">
   <!-- Green Header Section -->
   <section class="blog-detail__header">
     <div class="blog-detail__container">
-      <Breadcrumb bgColor="bg-transparent" textColor="text-white" hoverColor="hover:text-white" />
-      
+
       <!-- Date -->
       {displayDate && (
         <div class="blog-detail__date">
@@ -170,14 +169,14 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   <!-- Related Posts Section -->
   {suggestedPosts.length > 0 && (
-    <section class="blog-detail__related">
+    <section class="mt-16">
       <div class="blog-detail__related-container">
         <div class="blog-detail__related-header">
           <div class="blog-detail__related-info">
-            <h2 class="blog-detail__related-title">{labels.relatedTitle}</h2>
-            <p class="blog-detail__related-subtitle">{labels.relatedSubtitle}</p>
+            <h2 class=" text-us-green text-4xl">{labels.relatedTitle}</h2>
+            <p class=" text-us-green text-xl">{labels.relatedSubtitle}</p>
           </div>
-          <a href={`/${currentLang}/blog`} class="blog-detail__view-all">
+          <a href={`/${currentLang}/blog`} class="blog-detail__view-all text-us-green text-xl">
             {labels.viewAll}
           </a>
         </div>
@@ -238,7 +237,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   /* ==================== Header Section ==================== */
   .blog-detail__header {
-    background-color: var(--color-primary);
+
     padding: 1rem 0 2rem;
   }
 
@@ -289,7 +288,6 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   /* ==================== Content Section (Yellow) ==================== */
   .blog-detail__content {
-    background-color: var(--color-primary);
     padding: 0 1rem 2rem;
   }
 
