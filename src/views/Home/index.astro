@@ -238,8 +238,8 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
     )
   }
 
-  {currentLang !== "en" && isHonduras && (
-    <section class="w-full bg-yellow flex justify-center items-center py-8">
+  {currentLang !== "en" && (
+    <section id="experiencias-hn" class="hidden w-full bg-yellow justify-center items-center py-8">
       <div class="container text-center">
          <h2  class='titles text-greenDark'>
           {
@@ -254,10 +254,9 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
   )}
 
   <!-- Sección instagram — solo para Honduras -->
-
   <section
     id="instagram"
-    class="bg-green w-full py-12"
+    class=" bg-green w-full py-12"
     transition:animate="slide"
   >
     <div class="container mx-auto px-4">
@@ -284,3 +283,27 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
   <section class="w-full bg-green">
     <Subscription />
   </section>
+</main>
+
+<script is:inline>
+  (function() {
+    function getCookie(name) {
+      var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+      return m ? decodeURIComponent(m[1]) : null;
+    }
+    function showHnSections() {
+      var country = getCookie('user_country');
+      if (country === 'HN') {
+        var experiencias = document.getElementById('experiencias-hn');
+        if (experiencias) { experiencias.classList.remove('hidden'); experiencias.style.display = 'flex'; }
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', showHnSections);
+    } else {
+      showHnSections();
+    }
+    document.addEventListener('astro:page-load', showHnSections);
+    document.addEventListener('astro:after-swap', showHnSections);
+  })();
+</script>

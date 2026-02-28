@@ -1,33 +1,62 @@
 ---
-import { detectLocale, getDefaultLocaleByCountry } from '../services/geoService';
-
-const COOKIE_NAME = 'user_country';
-const COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 días
-
-// Leer cookie existente de país
-const existingCountry = Astro.cookies.get(COOKIE_NAME)?.value;
-
-let locale: 'us' | 'es';
-let countryCode: string;
-
-if (existingCountry && existingCountry !== 'UNKNOWN') {
-  // Cookie ya existe — derivar locale del país guardado
-  locale = getDefaultLocaleByCountry(existingCountry) as 'us' | 'es';
-  countryCode = existingCountry;
-} else {
-  // Primera visita — detectar por IP del request
-  const detected = detectLocale(Astro.request);
-  locale = detected.locale as 'us' | 'es';
-  countryCode = detected.country || 'UNKNOWN';
-
-  // Guardar cookie con el código de país (30 días)
-  Astro.cookies.set(COOKIE_NAME, countryCode, {
-    maxAge: COOKIE_MAX_AGE,
-    path: '/',
-    sameSite: 'lax',
-  });
-}
-
-// Redirigir inmediatamente sin renderizar nada
-return Astro.redirect(`/${locale}/`, 302);
 ---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script is:inline>
+    (function() {
+      const COOKIE_NAME = 'user_country';
+      const LOCALE_COOKIE = 'user_locale';
+      const COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
+      const ENGLISH_COUNTRIES = ['US','GB','CA','AU','NZ','IE','ZA','JM','BZ','BS','BB','AG','DM','GD','KN','LC','VC','TT','GY'];
+
+      function getCookie(name) {
+        const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+        return m ? decodeURIComponent(m[1]) : null;
+      }
+
+      function setCookie(name, value, maxAge) {
+        document.cookie = name + '=' + encodeURIComponent(value) + '; max-age=' + maxAge + '; path=/; samesite=lax';
+      }
+
+      function localeFromCountry(code) {
+        return ENGLISH_COUNTRIES.includes((code || '').toUpperCase()) ? 'us' : 'es';
+      }
+
+      function redirect(locale) {
+        window.location.replace('/' + locale + '/');
+      }
+
+      // 1. Cookie de locale ya guardada
+      var savedLocale = getCookie(LOCALE_COOKIE);
+      if (savedLocale === 'us' || savedLocale === 'es') {
+        return redirect(savedLocale);
+      }
+
+      // 2. Cookie de país ya guardada
+      var savedCountry = getCookie(COOKIE_NAME);
+      if (savedCountry && savedCountry !== 'UNKNOWN') {
+        var locale = localeFromCountry(savedCountry);
+        setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
+        return redirect(locale);
+      }
+
+      // 3. Primera visita — llamar API de detección
+      fetch('/api/detect-locale')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var country = data.country || 'UNKNOWN';
+          var locale = data.defaultLocale || 'es';
+          setCookie(COOKIE_NAME, country, COOKIE_MAX_AGE);
+          setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
+          redirect(locale);
+        })
+        .catch(function() {
+          redirect('es');
+        });
+    })();
+  </script>
+</head>
+<body></body>
+</html>
