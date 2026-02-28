@@ -40,8 +40,8 @@ const currentRoute = pathParts.slice(1).join('/');
 const getTranslatedPath = (targetLocale: Locale) => {
   const pathParts = currentPath.split('/').filter(Boolean);
   const currentRoute = pathParts.slice(1).join('/');
-
-  // Para la ruta raíz (/es o /en)
+  
+  // Para la ruta raíz (/es o /us)
   if (pathParts.length <= 1) return `/${targetLocale}`;
 
   // Detect if we are on a detail page: /lang/section/id (3 segments)
@@ -71,7 +71,7 @@ const getTranslatedPath = (targetLocale: Locale) => {
       if (currentLocale === 'es' && currentRoute.startsWith(esRoute)) {
         return currentRoute.replace(esRoute, enRoute);
       }
-      if (currentLocale === 'en' && currentRoute.startsWith(enRoute)) {
+      if (currentLocale === 'us' && currentRoute.startsWith(enRoute)) {
         return currentRoute.replace(enRoute, esRoute);
       }
       return acc;
@@ -83,7 +83,7 @@ const getTranslatedPath = (targetLocale: Locale) => {
 };
 
 const esUrl = activeLocale === 'es' ? currentPath : getTranslatedPath('es');
-const enUrl = activeLocale === 'en' ? currentPath : getTranslatedPath('en');
+const usUrl = activeLocale === 'us' ? currentPath : getTranslatedPath('us');
 
 // Usar colores por defecto si no se proporciona configuración
 const textColor = headerColorConfig?.textColor || 'text-white';
@@ -97,20 +97,20 @@ const textColorValue = headerColorConfig?.isSpecialBackground ? 'black' : (heade
   <div class="flex items-center space-x-2">
     {activeLocale === 'es' && (
       <a 
-        href={enUrl} 
+        href={usUrl} 
         class={`font-title language-link flex items-center ${activeLocale === 'es' ? 'font-bold' : ''}`} 
         style={`color: ${textColorValue};`}
         title="English" 
-        data-lang="en"
+        data-lang="us"
       >
         <span class="mr-1">🇺🇸</span>
         <span>USA</span>
       </a>
     )}
-    {activeLocale === 'en' && (
+    {activeLocale === 'us' && (
       <a 
         href={esUrl} 
-        class={`language-link flex items-center ${activeLocale === 'en' ? 'font-bold' : ''}`} 
+        class={`language-link flex items-center ${activeLocale === 'us' ? 'font-bold' : ''}`} 
         style={`color: ${textColorValue};`}
         title="Español" 
         data-lang="es"

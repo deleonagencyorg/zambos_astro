@@ -2,19 +2,21 @@
 // src/pages/[lang]/recipes/[recipeId].astro
 import { t, setLocale, type Locale } from '../../../i18n/i18n';
 import MainLayout from '../../../layouts/MainLayout.astro';
+import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
 import RecipeDetail from '../../../views/Recipes/Detail/index.astro';
+import RecipeDetailUS from '../../../views-us/Recipes/Detail/index.astro';
 
 export async function getStaticPaths() {
   const paths: any[] = [];
   // Cargar recetas EN
-  const enModules = import.meta.glob('../../../locales/en/recipes/*.json', { eager: true });
+  const enModules = import.meta.glob('../../../locales/us/recipes/*.json', { eager: true });
   const enFiles = Object.values(enModules) as any[];
   for (const mod of enFiles) {
     const recipe = (mod as any).default;
     if (!recipe?.id) continue;
     paths.push({
-      params: { lang: 'en', recipeId: recipe.id },
-      props: { recipe, currentLang: 'en' }
+      params: { lang: 'us', recipeId: recipe.id },
+      props: { recipe, currentLang: 'us' }
     });
   }
   // Cargar recetas ES
@@ -36,12 +38,11 @@ const { lang, recipeId } = Astro.params;
 
 // Establecer el idioma para las traducciones
 setLocale(lang as Locale);
-
-if (!recipe) {
-  return Astro.redirect(`/${lang === 'en' ? 'en/recipes' : 'es/recetas'}`);
-}
+const isUS = currentLang === 'us';
+const Layout = isUS ? MainLayoutUS : MainLayout;
+const Detail = isUS ? RecipeDetailUS : RecipeDetail;
 ---
 
-<MainLayout title={recipe.title}>
-  <RecipeDetail currentLang={currentLang} recipeId={recipeId} />
-</MainLayout>
+<Layout title={recipe.title}>
+  <Detail currentLang={currentLang} recipeId={recipeId} />
+</Layout>

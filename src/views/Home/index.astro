@@ -22,8 +22,9 @@ import { InstagramEmbed } from "react-social-media-embed";
 // Props
 export interface Props {
   loading?: boolean;
+  isHonduras?: boolean;
 }
-const { loading = false } = Astro.props;
+const { loading = false, isHonduras = false } = Astro.props;
 
 // Language and Data Setup
 const currentLang = getLocale();
@@ -252,7 +253,8 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
     </section>
   )}
 
-  <!-- Sección instagram-->
+  <!-- Sección instagram — solo para Honduras -->
+  {isHonduras && (
   <section
     id="instagram"
     class="bg-green w-full py-12"
@@ -272,6 +274,7 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
       </div>
     </div>
   </section>
+  )}
   <section class="w-full bg-green py-16">
     <div class="container mx-auto px-4 md:px-4 lg:px-16">
       <h2 class="titles text-white text-center mb-10">{videosAssets.title}</h2>

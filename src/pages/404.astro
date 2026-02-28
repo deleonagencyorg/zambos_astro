@@ -6,7 +6,7 @@ import Subscription from '../components/subscription/index.astro';
 import LazyImage from '../components/common/LazyImage.astro';
 
 const { pathname } = Astro.url;
-const lang: Locale = pathname.startsWith('/en') ? 'en' : 'es';
+const lang: Locale = pathname.startsWith('/us') ? 'us' : 'es';
 setLocale(lang);
 
 const pageTitle = lang === 'es' ? 'Página No Encontrada - Zambos' : 'Page Not Found - Zambos';

@@ -19,6 +19,10 @@ export interface Props {
 
 const { currentLang, headerColors } = Astro.props;
 
+// Detectar si el usuario es de Honduras por cookie
+const userCountry = Astro.cookies.get('user_country')?.value || '';
+const isHonduras = userCountry === 'HN';
+
 // Configuraciones
 const logosData = logos;
 
@@ -92,7 +96,7 @@ if (headerColors) {
       
       <!-- Acciones derechas: Icono Zambos Truck + Botón menú -->
       <div class="flex items-center gap-3">
-        {currentLang === 'es' && (
+        {(currentLang === 'es' && isHonduras) && (
           <a href="/zambostruck" class="block" aria-label="Zambos Truck">
             <LocalizedImage
               src={logosData.secondary.url}

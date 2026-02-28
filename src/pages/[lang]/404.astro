@@ -2,6 +2,7 @@
 import { routesConfig, getRouteById } from '../../config/routes';
 import { setLocale, t, type Locale } from '../../i18n/i18n';
 import MainLayout from '../../layouts/MainLayout.astro';
+import MainLayoutUS from '../../layouts/MainLayoutUS.astro';
 import ProductsCarousel from '../../components/common/ProductsCarousel/index.astro';
 import Subscription from '../../components/subscription/index.astro';
 import LazyImage from '../../components/common/LazyImage.astro';
@@ -9,7 +10,7 @@ import LazyImage from '../../components/common/LazyImage.astro';
 export async function getStaticPaths() {
   return [
     { params: { lang: 'es' } },
-    { params: { lang: 'en' } }
+    { params: { lang: 'us' } }
   ];
 }
 
@@ -28,9 +29,11 @@ const homeAssets = t('home', { namespace: 'common', locale: lang }) || {};
 const seoKeywords = lang === 'es' 
   ? 'página no encontrada, error 404, snacks centroamérica, taqueritos, zambos, ranchitas, snacks honduras, snacks guatemala'
   : 'page not found, error 404, central america snacks, food, honduras snacks, guatemala snacks, taqueritos, zambos, ranchitas';
+
+const Layout = lang === 'us' ? MainLayoutUS : MainLayout;
 ---
 
-<MainLayout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription}>
   <Fragment slot="head">
     <!-- SEO Meta Tags -->
     <meta name="keywords" content={seoKeywords}>
@@ -175,4 +178,4 @@ const seoKeywords = lang === 'es'
       animation: float 3s ease-in-out infinite;
     }
   </style>
-</MainLayout>
+</Layout>

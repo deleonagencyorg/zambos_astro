@@ -1,11 +1,12 @@
 ---
 import BlogListing from '../../../views/Blog/index.astro';
+import BlogListingUS from '../../../views-us/Blog/index.astro';
 import { type Locale } from '../../../i18n/i18n';
 
 export async function getStaticPaths() {
-  const locales = ['en', 'es'];
+  const locales = ['us', 'es'];
   const blogModules = import.meta.glob('../../../locales/*/blogs/*.json');
-  const postsByLocale: Record<string, any[]> = { en: [], es: [] };
+  const postsByLocale: Record<string, any[]> = { us: [], es: [] };
 
   for (const path in blogModules) {
     const lang = path.split('/')[4];
@@ -24,4 +25,8 @@ export async function getStaticPaths() {
 const { currentLang, blogPosts } = Astro.props;
 ---
 
-<BlogListing blogPosts={blogPosts} currentLang={currentLang} />
+{currentLang === 'us' ? (
+  <BlogListingUS blogPosts={blogPosts} currentLang={currentLang} />
+) : (
+  <BlogListing blogPosts={blogPosts} currentLang={currentLang} />
+)}

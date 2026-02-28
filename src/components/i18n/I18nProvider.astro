@@ -7,45 +7,81 @@ import { getLocale, setLocale } from '../../i18n/i18n';
 <slot />
 
 <script>
-  // Función para verificar si ya se ha establecido un idioma en localStorage
-  function hasStoredLocale() {
-    return localStorage.getItem('locale') !== null;
+  const COOKIE_NAME = 'user_country';
+  const LOCALE_COOKIE = 'user_locale';
+  const COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 días en segundos
+  const VALID_LOCALES = ['us', 'es'];
+
+  const ENGLISH_SPEAKING_COUNTRIES = [
+    'US', 'GB', 'CA', 'AU', 'NZ', 'IE', 'ZA', 'JM', 'BZ', 'BS',
+    'BB', 'AG', 'DM', 'GD', 'KN', 'LC', 'VC', 'TT', 'GY'
+  ];
+
+  function getCookie(name: string): string | null {
+    const match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : null;
   }
 
-  // Función para detectar y establecer el idioma basado en la geolocalización
-  async function detectAndSetLocale() {
-    // Si ya hay un idioma guardado en localStorage, respetarlo
-    if (hasStoredLocale()) return;
-    
+  function setCookie(name: string, value: string, maxAge: number) {
+    document.cookie = `${name}=${encodeURIComponent(value)}; max-age=${maxAge}; path=/; samesite=lax`;
+  }
+
+  function getLocaleFromCountry(countryCode: string | null): 'us' | 'es' {
+    if (!countryCode) return 'es';
+    return ENGLISH_SPEAKING_COUNTRIES.includes(countryCode.toUpperCase()) ? 'us' : 'es';
+  }
+
+  async function detectAndRedirect() {
+    const currentSegment = window.location.pathname.split('/')[1];
+
+    // Ya estamos en una ruta válida con locale — solo actualizar cookie si falta
+    if (VALID_LOCALES.includes(currentSegment)) {
+      if (!getCookie(LOCALE_COOKIE)) {
+        setCookie(LOCALE_COOKIE, currentSegment, COOKIE_MAX_AGE);
+      }
+      return;
+    }
+
+    // Verificar si ya tenemos la cookie de país guardada
+    const savedCountry = getCookie(COOKIE_NAME);
+    if (savedCountry && savedCountry !== 'UNKNOWN') {
+      const locale = getLocaleFromCountry(savedCountry);
+      setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
+      const path = window.location.pathname.split('/').slice(2).join('/');
+      window.location.replace(`/${locale}/${path}`);
+      return;
+    }
+
+    // Verificar cookie de locale directamente
+    const savedLocale = getCookie(LOCALE_COOKIE);
+    if (savedLocale && VALID_LOCALES.includes(savedLocale)) {
+      const path = window.location.pathname.split('/').slice(2).join('/');
+      window.location.replace(`/${savedLocale}/${path}`);
+      return;
+    }
+
+    // Primera visita sin cookie — llamar a la API de detección
     try {
-      // Llamar a nuestro endpoint de API para detectar el país y obtener el idioma recomendado
       const response = await fetch('/api/detect-locale');
       const data = await response.json();
-      
-      if (data.defaultLocale) {
-        // Establecer el idioma detectado
-        localStorage.setItem('locale', data.defaultLocale);
-        
-        // Si el idioma detectado es diferente al actual, redirigir a la versión correcta
-        const currentLocale = window.location.pathname.split('/')[1] || 'es';
-        if (data.defaultLocale !== currentLocale) {
-          // Construir la nueva URL con el idioma detectado
-          const path = window.location.pathname.split('/').slice(2).join('/');
-          const newPath = `/${data.defaultLocale}/${path}`;
-          window.location.href = newPath;
-        }
-      }
+
+      const country: string = data.country || 'UNKNOWN';
+      const locale: string = data.defaultLocale || 'es';
+
+      setCookie(COOKIE_NAME, country, COOKIE_MAX_AGE);
+      setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
+
+      const path = window.location.pathname.split('/').slice(2).join('/');
+      window.location.replace(`/${locale}/${path}`);
     } catch (error) {
-      console.error('Error al detectar el idioma:', error);
+      console.error('Error al detectar idioma:', error);
+      window.location.replace('/es/');
     }
   }
 
-  // Ejecutar la detección de idioma cuando se carga la página
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', detectAndSetLocale);
+    document.addEventListener('DOMContentLoaded', detectAndRedirect);
   } else {
-    detectAndSetLocale();
+    detectAndRedirect();
   }
-
-  document.addEventListener('astro:page-load', detectAndSetLocale);
 </script>

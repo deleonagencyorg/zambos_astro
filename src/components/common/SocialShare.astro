@@ -48,7 +48,7 @@ const defaultLabels = {
     whatsapp: 'WhatsApp',
     telegram: 'Telegram'
   },
-  en: {
+  us: {
     facebook: 'Facebook',
     twitter: 'Twitter',
     whatsapp: 'WhatsApp',
@@ -57,7 +57,7 @@ const defaultLabels = {
 };
 
 // Usar etiquetas proporcionadas o las predeterminadas según el idioma
-const finalLabels = labels || defaultLabels[currentLang as 'es' | 'en'];
+const finalLabels = labels || defaultLabels[currentLang as 'es' | 'us'];
 ---
 
 <SocialShareReact

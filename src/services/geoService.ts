@@ -32,7 +32,7 @@ export function getDefaultLocaleByCountry(countryCode: string | null): Locale {
   if (!countryCode) return 'es';
   
   if (ENGLISH_SPEAKING_COUNTRIES.includes(countryCode)) {
-    return 'en';
+    return 'us';
   }
   
   if (SPANISH_SPEAKING_COUNTRIES.includes(countryCode)) {

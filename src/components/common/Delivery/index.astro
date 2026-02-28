@@ -17,7 +17,7 @@ export interface Props {
 const { deliveryTitle, deliverySubTitle, deliveryApps, amazonBuyUrl } = Astro.props;
 
 const langFromUrl = Astro.url.pathname.split('/')[1];
-const isEn = langFromUrl === 'en';
+const isEn = langFromUrl === 'us';
 ---
 
 <section id="delivery" class="w-full py-12 flex flex-col items-center justify-center relative overflow-hidden" style="background-color: #008ddd;">

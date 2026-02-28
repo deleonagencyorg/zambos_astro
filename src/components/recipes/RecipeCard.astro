@@ -40,11 +40,11 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
       />
     </div>
     
-    <!-- Sección amarilla separada -->
-    <div class="bg-[#FFED7A] p-3 md:p-6 flex flex-col flex-1">
+    <!-- Sección info -->
+    <div class={`p-3 md:p-6 flex flex-col flex-1 ${currentLocale !== 'es' ? 'bg-us-green' : 'bg-[#FFED7A]'}`}>
       <!-- Category Tags -->
       <div class="flex gap-2 mb-2 md:mb-3">
-        <span class="inline-block px-3 py-1 md:px-4 md:py-2 bg-[#0DB04A] text-white font-bold rounded-full text-xs uppercase">
+        <span class={`inline-block px-3 py-1 md:px-4 md:py-2 font-bold rounded-full text-xs uppercase text-white ${currentLocale !== 'es' ? 'bg-us-red' : 'bg-[#0DB04A]'}`}>
           {category}
         </span>
         <!-- Tag NUEVO -->
@@ -56,12 +56,12 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
       </div>
       
       <!-- Title -->
-      <h3 class="text-gray-900 font-bold text-base leading-tight sm:text-lg md:text-xl lg:text-2xl uppercase line-clamp-3 md:line-clamp-2">
+      <h3 class={`font-bold text-base leading-tight sm:text-lg md:text-xl lg:text-2xl uppercase line-clamp-3 md:line-clamp-2 ${currentLocale !== 'es' ? 'text-white' : 'text-gray-900'}`}>
         {title}
       </h3>
       
       <!-- Description - Solo visible en tablet+ -->
-      <p class="hidden md:block text-gray-900 text-sm leading-tight mt-2 line-clamp-2">
+      <p class={`hidden md:block text-sm leading-tight mt-2 line-clamp-2 ${currentLocale !== 'es' ? 'text-white/80' : 'text-gray-900'}`}>
         {description || (currentLocale === 'es' ? 'Deliciosa receta cargada de sabor perfecta para compartir en familia.' : 'Delicious recipe full of flavor perfect for sharing with family.')}
       </p>
     </div>

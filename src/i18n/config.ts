@@ -7,7 +7,7 @@
 
 export const config = {
   defaultLocale: 'es',
-  supportedLocales: ['es', 'en'],
+  supportedLocales: ['es', 'us'],
   localesPath: '/locales'
 };
 

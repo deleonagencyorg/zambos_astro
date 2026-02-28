@@ -4,10 +4,10 @@ import { routesConfig, findRouteBySlug } from './config/routes';
 
 // Mapeo de rutas que necesitan redirección
 const routeMappings = {
-  'products': { es: 'productos', en: 'products' },
-  'news': { es: 'noticias', en: 'news' },
-  'recipes': { es: 'recetas', en: 'recipes' },
-  'yummiesone': { es: 'yummiesone', en: 'yummiesone' }
+  'products': { es: 'productos', us: 'products' },
+  'news': { es: 'noticias', us: 'news' },
+  'recipes': { es: 'recetas', us: 'recipes' },
+  'yummiesone': { es: 'yummiesone', us: 'yummiesone' }
 };
 
 export const onRequest = defineMiddleware(async ({ request, redirect }, next) => {
@@ -23,13 +23,13 @@ export const onRequest = defineMiddleware(async ({ request, redirect }, next) =>
   const section = pathSegments[1];
   
   // Verificar si el idioma es válido
-  if (lang !== 'es' && lang !== 'en') {
+  if (lang !== 'es' && lang !== 'us') {
     return next();
   }
 
   // Caso especial para yummiesone: redirigir a home en inglés
-  if (section === 'yummiesone' && lang === 'en') {
-    return redirect('/en');
+  if (section === 'yummiesone' && lang === 'us') {
+    return redirect('/us');
   }
 
   // Verificar si la ruta existe en la configuración

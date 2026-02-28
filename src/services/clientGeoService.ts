@@ -138,9 +138,9 @@ export function isEnglishSpeakingCountry(countryCode: string | null): boolean {
 /**
  * Obtiene el idioma predeterminado basado en el país detectado
  */
-export function getDefaultLocaleByCountry(countryCode: string | null): 'es' | 'en' {
+export function getDefaultLocaleByCountry(countryCode: string | null): 'es' | 'us' {
   if (isEnglishSpeakingCountry(countryCode)) {
-    return 'en';
+    return 'us';
   }
   return 'es'; // Default a español para Centroamérica
 }
@@ -148,7 +148,7 @@ export function getDefaultLocaleByCountry(countryCode: string | null): 'es' | 'e
 /**
  * Función de conveniencia para detectar país y obtener información completa
  */
-export async function detectCountryWithLocale(): Promise<GeoDetectionResult & { locale: 'es' | 'en' }> {
+export async function detectCountryWithLocale(): Promise<GeoDetectionResult & { locale: 'es' | 'us' }> {
   const result = await detectUserCountry();
   const locale = getDefaultLocaleByCountry(result.countryCode);
   
