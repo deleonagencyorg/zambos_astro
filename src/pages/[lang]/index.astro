@@ -32,6 +32,10 @@ const isUS = lang === 'us';
 const Layout = isUS ? MainLayoutUS : MainLayout;
 const ContentComponent = isUS ? HomePageContentUS : HomePageContent;
 
+// Detectar si el usuario es de Honduras por cookie
+const userCountry = Astro.cookies.get('user_country')?.value || '';
+const isHonduras = userCountry === 'HN';
+
 // SEO Keywords based on language
 const seoKeywords = lang === 'es' 
   ? 'snacks centroamérica, taqueritos, zambos, ranchitas, snacks honduras, snacks guatemala, marca líder snacks, snacks yummies'
@@ -133,6 +137,6 @@ const seoKeywords = lang === 'es'
       ]
     })}></script>
   </Fragment>
-  <ContentComponent />
+  <ContentComponent isHonduras={isHonduras} />
 </Layout>
 

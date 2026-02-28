@@ -1,18 +1,32 @@
 ---
-// Este archivo redirige automáticamente a la versión localizada (/es)
-const defaultLocale = 'es';
+import { detectLocale, getDefaultLocaleByCountry } from '../services/geoService';
 
-// Redirigir a la versión localizada
-Astro.redirect(`/${defaultLocale}/`);
+const COOKIE_NAME = 'user_country';
+const COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 días
+
+// Leer cookie existente de país
+const existingCountry = Astro.cookies.get(COOKIE_NAME)?.value;
+
+let locale: 'us' | 'es';
+let countryCode: string;
+
+if (existingCountry && existingCountry !== 'UNKNOWN') {
+  // Cookie ya existe — derivar locale del país guardado
+  locale = getDefaultLocaleByCountry(existingCountry) as 'us' | 'es';
+  countryCode = existingCountry;
+} else {
+  // Primera visita — detectar por IP del request
+  const detected = detectLocale(Astro.request);
+  locale = detected.locale as 'us' | 'es';
+  countryCode = detected.country || 'UNKNOWN';
+
+  // Guardar cookie con el código de país (30 días)
+  Astro.cookies.set(COOKIE_NAME, countryCode, {
+    maxAge: COOKIE_MAX_AGE,
+    path: '/',
+    sameSite: 'lax',
+  });
+}
+
+return Astro.redirect(`/${locale}/`, 302);
 ---
-
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="refresh" content={`0;url=/${defaultLocale}/`} />
-	</head>
-	<body>
-	</body>
-</html>
