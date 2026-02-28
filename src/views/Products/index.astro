@@ -7,12 +7,13 @@ import './styles.css';
 import Subscription from '../../components/subscription/index.astro';
 
 const currentLang = getLocale();
-const products = t('items', { namespace: 'products', locale: currentLang });
-const categories = t('categories', { namespace: 'products', locale: currentLang });
-const pageAssets = t('page', { namespace: 'products', locale: currentLang });
+const products = t('items', { namespace: 'products', locale: currentLang }) || [];
+const categoriesRaw = t('categories', { namespace: 'products', locale: currentLang });
+const categories: Record<string, string> = categoriesRaw && typeof categoriesRaw === 'object' ? categoriesRaw : {};
+const pageAssets = t('page', { namespace: 'products', locale: currentLang }) || {};
 
 // Obtener categorías únicas de los productos desde los items
-const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.category))).filter(Boolean);
+const uniqueCategories = Array.from(new Set((products as any[]).map((p) => p.category as string))).filter(Boolean);
 ---
 
 <div class="products-page min-h-screen bg-[#00A650] relative overflow-hidden">

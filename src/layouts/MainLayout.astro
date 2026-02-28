@@ -29,7 +29,7 @@ const { title, description, class: className, headerColors } = Astro.props;
 // Determine language for <html lang=...> and for key prop from the URL
 const pathSegments = Astro.url.pathname.split('/');
 const langFromUrl = pathSegments[1] as Locale;
-const validLocales: Locale[] = ['es', 'en'];
+const validLocales: Locale[] = ['es', 'us'];
 const currentLang = validLocales.includes(langFromUrl) ? langFromUrl : 'es'; // Default to 'es'
 // Obtener configuración de colores basada en la ruta actual
 const { pathname } = Astro.url;

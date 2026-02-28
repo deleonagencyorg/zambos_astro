@@ -1,0 +1,255 @@
+---
+// src/views/Blog/index.astro
+import { getLocale, t} from '../../i18n/i18n';
+import { ViewTransitions } from 'astro:transitions';
+import MainLayout from '../../layouts/MainLayoutUS.astro';
+import './styles.css';
+import BlogCard from '../../components/blog/BlogCard.astro';
+import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
+import NewsCarousel from '../../components/blog/NewsCarousel.astro';
+
+interface Recipe {
+  id: string;
+  title: string;
+  image?: string;
+  slug?: string;
+  preparation_time: number;
+  type?: string;
+}
+
+const currentLang = getLocale();
+const recipeModules = import.meta.glob<{default: Recipe}>('../../locales/*/recipes/*.json');
+const allRecipes: Recipe[] = [];
+
+for (const path in recipeModules) {
+  const lang = path.split('/')[3]; // Extract language from path
+  if (lang === currentLang) {
+    const module = await recipeModules[path]();
+    allRecipes.push(module.default);
+  }
+}
+
+function normalizeType(r: Recipe): string {
+  const rawCategory = String((r as any).category || '').toLowerCase().trim();
+  const rawType = String((r as any).type || '').toLowerCase().trim();
+
+  const raw = rawCategory || rawType;
+
+  if (['breakfast', 'desayuno'].includes(raw)) return 'breakfast';
+  if (['brunch'].includes(raw)) return 'brunch';
+  if (['lunch', 'almuerzo'].includes(raw)) return 'lunch';
+  return 'other';
+}
+
+const filterLabels = currentLang === 'es'
+  ? { 
+      oldest: 'MÁS ANTIGUAS',
+      newest: 'MAS RECENTES', 
+      all: 'VER TODOS',
+    }
+  : {
+      oldest: 'OLDEST',
+      newest: 'NEWEST',
+      all: 'ALL'
+    };
+
+const pageTitle = currentLang === 'es' ? 'Noticias' : 'News';
+const pageDescription = currentLang === 'es' 
+  ? 'Mantente al día con nuestras últimas noticias y artículos.' 
+  : 'Stay updated with our latest news and articles.';
+
+// Load markdown posts for the current language
+const mdModules = import.meta.glob('../../locales/*/blog/*.md');
+// Build dynamic categories set
+
+const posts = t('posts', { namespace: 'blog', locale: currentLang });
+
+const noPostsText = currentLang === 'es'
+  ? 'No hay noticias disponibles en este momento.'
+  : 'No blog posts available at this time.';
+
+// Labels and splits for the two-column layout below
+const topNewsLabel = currentLang === 'es' ? 'NOTICIAS MÁS IMPORTANTES' : 'TOP NEWS';
+const featuredLabel = currentLang === 'es' ? 'DESTACADOS' : 'FEATURED';
+const loadMoreText = currentLang === 'es' ? 'VER MÁS' : 'LOAD MORE';
+---
+<MainLayout title={pageTitle} description={pageDescription} class="bg-[#0DB04A]">
+  <ViewTransitions />
+  <div class="-mt-px -mb-px overflow-hidden pb-15" >
+    <div class="container mx-auto px-4  pb-16 mt-12">
+     
+      <!-- News Carousel listing 4 per slide -->
+      <div class=" mx-auto mb-16">
+        <NewsCarousel currentLang={currentLang} items={posts} />
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-4 mb-8">
+
+
+        <!-- Category Filters -->
+        <div id="blogFilters" class="flex flex-wrap gap-3">
+          <button 
+            type="button" 
+            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-red text-white font-bold transition-all whitespace-nowrap" 
+            data-filter="oldest"
+          >
+            {filterLabels.oldest}
+          </button>
+          <button 
+            type="button" 
+            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+            data-filter="newest"
+          >
+            {filterLabels.newest}
+          </button>
+          <button 
+            type="button" 
+            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+            data-filter="all"
+          >
+            {filterLabels.all}
+          </button>
+        </div>
+      </div>
+
+
+      <div id="recipesGrid" class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
+        {posts.map((recipe: any, index: number) => (
+          <div
+            class="recipe-card"
+            data-type={normalizeType(recipe)}
+            data-date={String((recipe as any).published_date || '')}
+            data-order={String(index)}
+            style={index < 4 ? '' : 'display:none'}
+          >
+            <BlogCard
+              image={recipe.image || '/images/recipes/placeholder.jpg'}
+              title={recipe.title}
+              id={recipe.id}
+              slug={recipe.slug}
+              category={normalizeType(recipe).toUpperCase()}
+              isNew={(recipe as any).isNew || false}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div class="flex justify-center mt-8">
+        <button
+          id="loadMoreBtn"
+          type="button"
+          class="bg-red text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition"
+        >
+          {loadMoreText}
+        </button>
+      </div>
+    </div>
+  </div>
+</MainLayout>
+
+<style>
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function initBlogLoadMore() {
+    const grid = document.getElementById('recipesGrid');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const filterButtons = Array.from(document.querySelectorAll('#blogFilters .filter-btn'));
+
+    if (!(grid instanceof HTMLElement) || !(loadMoreBtn instanceof HTMLButtonElement)) return;
+
+    const cards = Array.from(grid.querySelectorAll('.recipe-card'));
+    const pageSize = 4;
+    let revealedCount = 0;
+    let currentMode = 'all';
+
+    function parseDate(v) {
+      const s = String(v || '').trim();
+      const t = Date.parse(s);
+      return Number.isFinite(t) ? t : 0;
+    }
+
+    function hideAll() {
+      cards.forEach((c) => {
+        c.style.display = 'none';
+      });
+    }
+
+    function sortedCards() {
+      const list = cards.slice();
+      if (currentMode === 'newest') {
+        list.sort((a, b) => parseDate(b.dataset.date) - parseDate(a.dataset.date));
+      } else if (currentMode === 'oldest') {
+        list.sort((a, b) => parseDate(a.dataset.date) - parseDate(b.dataset.date));
+      } else {
+        list.sort((a, b) => Number(a.dataset.order || 0) - Number(b.dataset.order || 0));
+      }
+      return list;
+    }
+
+    function reorderDom(list) {
+      list.forEach((el) => grid.appendChild(el));
+    }
+
+    function revealNextPage() {
+      const ordered = sortedCards();
+      reorderDom(ordered);
+
+      const nextBatch = ordered.slice(revealedCount, revealedCount + pageSize);
+      nextBatch.forEach((card) => {
+        card.style.display = '';
+      });
+      revealedCount += nextBatch.length;
+
+      loadMoreBtn.classList.toggle('hidden', revealedCount >= ordered.length);
+    }
+
+    function setActive(btn) {
+      filterButtons.forEach((b) => {
+        b.classList.remove('bg-red', 'text-white');
+        b.classList.add('bg-white', 'text-gray-700');
+      });
+      btn.classList.remove('bg-white', 'text-gray-700');
+      btn.classList.add('bg-red', 'text-white');
+    }
+
+    function applyMode(mode) {
+      currentMode = mode;
+      revealedCount = 0;
+      hideAll();
+      revealNextPage();
+    }
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const mode = btn.getAttribute('data-filter') || 'all';
+        setActive(btn);
+        applyMode(mode);
+      });
+    });
+
+    loadMoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      revealNextPage();
+    });
+
+    const defaultBtn = filterButtons.find((b) => b.getAttribute('data-filter') === 'all');
+    if (defaultBtn) {
+      setActive(defaultBtn);
+      applyMode('all');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBlogLoadMore);
+  } else {
+    initBlogLoadMore();
+  }
+  document.addEventListener('astro:page-load', initBlogLoadMore);
+  document.addEventListener('astro:after-swap', initBlogLoadMore);
+</script>

@@ -1,0 +1,53 @@
+/* fonts-us.css: Fuentes para versión US */
+
+@font-face {
+  font-family: 'Strelka Ultra';
+  src: url('../assets/fonts/StrelkaUltra.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables CSS para la versión US */
+.us-layout {
+  --font-title: 'Strelka Ultra', sans-serif;
+  --font-heading: 'Strelka Ultra', sans-serif;
+  --font-text: 'Strelka Ultra', sans-serif;
+  --font-sans: 'Strelka Ultra', sans-serif;
+}
+
+/* Override de fuentes para .us-layout */
+.us-layout .font-title {
+  font-family: var(--font-title);
+}
+
+.us-layout .font-heading {
+  font-family: var(--font-heading);
+}
+
+.us-layout .font-text,
+.us-layout .font-sans {
+  font-family: var(--font-text);
+}
+
+.us-layout .title,
+.us-layout h1,
+.us-layout h2,
+.us-layout h3,
+.us-layout h4,
+.us-layout h5,
+.us-layout h6,
+.us-layout button,
+.us-layout header,
+.us-layout footer {
+  font-family: var(--font-title);
+}
+
+.us-layout .text,
+.us-layout p,
+.us-layout input,
+.us-layout textarea,
+.us-layout label,
+.us-layout span {
+  font-family: var(--font-text);
+}

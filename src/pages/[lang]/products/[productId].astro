@@ -2,11 +2,13 @@
 // src/pages/[lang]/productos/[productId].astro
 import { t, setLocale, type Locale } from '../../../i18n/i18n';
 import MainLayout from '../../../layouts/MainLayout.astro';
+import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
 import ProductDetail from '../../../views/Products/Detail/index.astro';
+import ProductDetailUS from '../../../views-us/Products/Detail/index.astro';
 
 export function getStaticPaths() {
   // Obtener todos los idiomas y productos disponibles
-  const locales = ['en'];
+  const locales = ['us'];
   const paths = [];
 
   for (const locale of locales) {
@@ -31,6 +33,9 @@ const { lang, productId } = Astro.params;
 
 // Establecer el idioma para las traducciones
 setLocale(lang as Locale);
+const isUS = currentLang === 'us';
+const Layout = isUS ? MainLayoutUS : MainLayout;
+const Detail = isUS ? ProductDetailUS : ProductDetail;
 
 const headerColors = {
   backgroundColor: product.background_color,
@@ -38,6 +43,6 @@ const headerColors = {
 };
 ---
 
-<MainLayout title={product.name} headerColors={headerColors}>
-  <ProductDetail currentLang={currentLang} productId={productId} />
-</MainLayout>
+<Layout title={product.name} headerColors={headerColors}>
+  <Detail currentLang={currentLang} productId={productId} />
+</Layout>

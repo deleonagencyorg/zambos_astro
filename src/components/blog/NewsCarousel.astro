@@ -35,10 +35,18 @@ const content = {
     subtitle: 'Stay informed about our latest news on experiences, flavors and more.',
     placeholder: 'Email address',
     button: 'Subscribe'
+  },
+  us: {
+    bannerTitle: 'Your new favorite flavor: Zambos Garlic Parmesan',
+    bannerSubtitle: 'With the perfect combination of flavors you need. Try it now',
+    title: 'JOIN OUR NEWSLETTER',
+    subtitle: 'Stay informed about our latest news on experiences, flavors and more.',
+    placeholder: 'Email address',
+    button: 'Subscribe'
   }
 };
 
-const t = content[currentLang || 'es'];
+const t = content[currentLang || 'es'] || content.en || content.es;
 ---
 
 <div class="w-full">

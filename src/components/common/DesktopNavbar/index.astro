@@ -83,6 +83,19 @@ const orderedMenuItems = (() => {
         </div>
       ))}
     </div>
+    
+    <!-- WHERE TO BUY Button for US -->
+    {currentLang === 'us' && (
+      <a 
+        href={t('delivery.amazon_buy_url', { namespace: 'common', locale: currentLang })}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ml-4 bg-[#B71C1C] hover:bg-[#9A1616] text-white font-bold uppercase px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap text-sm"
+      >
+        Where to Buy
+      </a>
+    )}
+    
     <!-- Language Switcher -->
     <LanguageSwitcher activeLocale={currentLang} headerColorConfig={headerColorConfig} />
   </div>

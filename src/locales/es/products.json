@@ -8,6 +8,15 @@
     "subtitle": "Productos",
     "textButton": "Conoce más"
 },
+  "categories": {
+    "Plátano": "Plátano",
+    "Yuquita": "Yuquita",
+    "Toston": "Tostón",
+    "Tostón": "Tostón"
+  },
+  "page": {
+    "view_details": "Ver detalles"
+  },
   "stockist":[
     {
       "id": "sompopopoapp",

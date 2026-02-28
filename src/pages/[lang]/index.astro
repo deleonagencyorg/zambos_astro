@@ -2,8 +2,9 @@
 import { routesConfig, getRouteById } from '../../config/routes';
 import { setLocale, t, type Locale } from '../../i18n/i18n';
 import MainLayout from '../../layouts/MainLayout.astro';
-// Importa el componente de contenido directamente
+import MainLayoutUS from '../../layouts/MainLayoutUS.astro';
 import HomePageContent from '../../views/Home/index.astro';
+import HomePageContentUS from '../../views-us/Home/index.astro';
 
 export async function getStaticPaths() {
   const homeRoute = getRouteById('home');
@@ -27,14 +28,16 @@ if (!homeRoute) {
 const pageTitle = homeRoute.metaTitleKey ? t(homeRoute.metaTitleKey) : 'Home';
 const pageDescription = homeRoute.metaDescriptionKey ? t(homeRoute.metaDescriptionKey) : '';
 
-const ContentComponent = HomePageContent; // Asignación directa para la página de inicio
+const isUS = lang === 'us';
+const Layout = isUS ? MainLayoutUS : MainLayout;
+const ContentComponent = isUS ? HomePageContentUS : HomePageContent;
 
 // SEO Keywords based on language
 const seoKeywords = lang === 'es' 
   ? 'snacks centroamérica, taqueritos, zambos, ranchitas, snacks honduras, snacks guatemala, marca líder snacks, snacks yummies'
   : 'central america snacks, food, honduras snacks, guatemala snacks, leading snack brand, snacks yummies, taqueritos, zambos, ranchitas';
 ---
-<MainLayout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription}>
   <Fragment slot="head">
     <!-- SEO Meta Tags -->
     <meta name="keywords" content={seoKeywords}>
@@ -131,5 +134,5 @@ const seoKeywords = lang === 'es'
     })}></script>
   </Fragment>
   <ContentComponent />
-</MainLayout>
+</Layout>
 

@@ -8,6 +8,17 @@
     "subtitle": "Productos",
     "textButton": "Conoce más"
 },
+  "categories": {
+    "Plátano": "Plantain",
+    "Yuquita": "Yuca",
+    "Toston": "Toston",
+    "Tostón": "Toston",
+    "Plantain": "Plantain",
+    "Yuca": "Yuca"
+  },
+  "page": {
+    "view_details": "View details"
+  },
   "stockist":[
     {
       "id": "sompopopoapp",
@@ -49,7 +60,7 @@
         "140g",
         "500g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     },
     {
       "id": "zambos-yuquitas-con-ajo-parmesano",
@@ -77,7 +88,7 @@
         "80g",
         "190g"
       ],
-      "category": "Yuquita",
+      "category": "Cassava",
       "new": true
     },
     {
@@ -104,7 +115,7 @@
         "36g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     },
     {
       "id": "zambos-platano-salsa-verde",
@@ -129,7 +140,7 @@
         "70g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     },
     {
       "id": "zambos-platano-con-chicharron-del-rancho",
@@ -154,7 +165,7 @@
         "21g",
         "138g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     },
     {
       "id": "zambos-platano-maduritos",
@@ -180,7 +191,7 @@
         "36g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     },
     {
       "id": "zambos-platano-originales",
@@ -207,7 +218,7 @@
         "70g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     },
     {
       "id": "zambos-tajin",
@@ -235,7 +246,7 @@
         "70g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     },
     {
       "id": "zambos-yuquitas-chile-toreado",
@@ -260,7 +271,7 @@
         "163g",
         "130g"
       ],
-      "category": "Yuquita"
+      "category": "Cassava"
     },
     {
       "id": "zambos-yuquitas-originales",
@@ -285,7 +296,7 @@
         "16g",
         "130g"
       ],
-      "category": "Yuquita"
+      "category": "Cassava"
     },
        {
       "id": "zambos-tostones-originales",
@@ -309,7 +320,7 @@
       "weight": [
         "100g"
       ],
-      "category": "Plátano"
+      "category": "Plantain"
     }
   ]
 }

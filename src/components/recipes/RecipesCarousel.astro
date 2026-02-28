@@ -133,7 +133,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
               type="button"
               aria-label="Anterior"
               data-recipes-provided-prev
-              class="bg-red text-white p-4 rounded-[10px] shadow-lg"
+              class={`text-white p-4 rounded-[10px] shadow-lg ${currentLang !== 'es' ? 'bg-us-red' : 'bg-red'}`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -144,7 +144,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
               type="button"
               aria-label="Siguiente"
               data-recipes-provided-next
-              class="bg-red text-white p-4 rounded-[10px] shadow-lg"
+              class={`text-white p-4 rounded-[10px] shadow-lg ${currentLang !== 'es' ? 'bg-us-red' : 'bg-red'}`}
             >
               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

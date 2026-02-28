@@ -1,10 +1,12 @@
 ---
 import BlogDetail from '../../../views/Blog/Detail/index.astro';
+import BlogDetailUS from '../../../views-us/Blog/Detail/index.astro';
 import { setLocale, type Locale } from '../../../i18n/i18n';
 import MainLayout from '../../../layouts/MainLayout.astro';
+import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
 
 export async function getStaticPaths() {
-  const locales = ['en', 'es'];
+  const locales = ['us', 'es'];
   const paths: any[] = [];
   
   // Importar archivos blog.json de cada locale
@@ -36,8 +38,11 @@ const { blogPost, currentLang, allBlogPosts } = Astro.props;
 const { lang, blogId } = Astro.params;
 
 setLocale(lang as Locale);
+const isUS = currentLang === 'us';
+const Layout = isUS ? MainLayoutUS : MainLayout;
+const DetailComponent = isUS ? BlogDetailUS : BlogDetail;
 ---
 
-<MainLayout title={blogPost.title}>
-  <BlogDetail blogPost={blogPost} currentLang={currentLang} allBlogPosts={allBlogPosts} />
-</MainLayout>
+<Layout title={blogPost.title}>
+  <DetailComponent blogPost={blogPost} currentLang={currentLang} allBlogPosts={allBlogPosts} />
+</Layout>
