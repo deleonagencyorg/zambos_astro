@@ -96,16 +96,6 @@
         "type": "image",
         "description": "",
         "link": "#"
-      },
-      {
-        "id": "slide4",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_3_Banner_Web_Tostones_Jun.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_115_3_Banner_Web_Tostones_Jun.webp",
-        "alt": "Zambos",
-        "title": "",
-        "type": "image",
-        "description": "",
-        "link": "/es/productos/zambos-tostones-originales"
       }
     ]
   },
