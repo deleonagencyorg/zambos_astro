@@ -83,10 +83,10 @@ const featuredRecipes = allRecipes.slice(0, 3);
      <div class="container mx-auto">
        <!-- Title -->
       <div class="mb-8">
-        <h1 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
+        <h1 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-4 uppercase">
           {currentLang === 'es' 
-            ? 'Descubre nuestra receta destacada' 
-            : 'Discover our featured recipe'}
+            ? 'DESCUBRE NUESTRA RECETA DESTACADA' 
+            : 'DISCOVER OUR FEATURED RECIPE'}
         </h1>
         <p class="text-white text-sm md:text-base">
           {currentLang === 'es'
@@ -266,8 +266,8 @@ const featuredRecipes = allRecipes.slice(0, 3);
     <!-- Recipes Grid Section -->
     <section class="pb-16">
       <div class="container mx-auto">
-        <h2 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-8">
-        {currentLang === 'es' ? 'Explora mas recetas Zambos' : 'Explore more Zambos recipes'}
+        <h2 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-8 uppercase">
+        {currentLang === 'es' ? 'EXPLORA MÁS RECETAS ZAMBOS' : 'EXPLORE MORE ZAMBOS RECIPES'}
       </h2>
       {allRecipes.length === 0 ? (
         <p class="text-center text-white">{noRecipesText}</p>

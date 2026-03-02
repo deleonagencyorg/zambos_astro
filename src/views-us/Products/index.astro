@@ -21,8 +21,15 @@ const sortedProducts = [...((products || []) as any[])].sort((a, b) => {
   return String(a.name || a.title || '').toLowerCase().localeCompare(String(b.name || b.title || '').toLowerCase());
 });
 
-// Obtener categorías únicas de los productos desde los items
-const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.category))).filter(Boolean);
+// Normalizar categorías (unificar variantes del mismo nombre)
+function normalizeCategory(cat: string): string {
+  const c = String(cat || '').trim();
+  if (c === 'Plátano') return 'Plantain';
+  return c;
+}
+
+// Obtener categorías únicas de los productos desde los items (normalizadas)
+const uniqueCategories = Array.from(new Set((products || []).map((p: any) => normalizeCategory(String(p.category || ''))))).filter(Boolean);
 ---
 
 <div class="products-page min-h-screen relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bg-productsus.webp');">
@@ -78,12 +85,12 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
           {sortedProducts.map((product: any) => (
             <div 
               class="product-card bg-us-green rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative" 
-              data-category={product.category} 
+              data-category={normalizeCategory(String(product.category || ''))} 
               transition:animate="fade"
             >
             <!-- Badge de categoría -->
             <div class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 md:top-4 md:right-4 z-10">
-              <span class="bg-[#e16468] text-white text-[12px] sm:text-[14px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase tracking-wide">
+              <span class="bg-[#e16468] text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase tracking-wide">
                 {categories[product.category] || product.category}
               </span>
             </div>

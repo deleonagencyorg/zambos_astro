@@ -161,7 +161,7 @@ if (allProductsArray.length > 1) {
         <div class="w-full lg:w-1/2 order-2 lg:order-1">
           <!-- Título del producto -->
           <h1 
-            class="text-4xl md:text-5xl lg:text-6xl font-bold italic leading-tight mb-8"
+            class="text-5xl sm:text-6xl md:text-6xl lg:text-7xl font-bold italic leading-tight mb-8"
             style={{ color: '#FFF' }}
           >
             {safeProduct.name}
@@ -171,7 +171,9 @@ if (allProductsArray.length > 1) {
 
           <!-- Botones de peso/presentaciones -->
           {safeProduct.weight && safeProduct.weight.length > 0 && (
-            <div class="flex flex-wrap gap-3 mb-10">
+            <div class="mb-10">
+            <p class="text-white text-lg font-semibold mb-3">{currentLang === 'es' ? 'Presentaciones disponibles:' : 'Presentation available in:'}</p>
+            <div class="flex flex-wrap gap-3">
               {safeProduct.weight.map((weight) => (
                 <button 
                   class="px-10 py-4 rounded-md text-us-green  bg-white font-semibold text-sm md:text-base hover:opacity-90 transition-opacity"
@@ -181,6 +183,7 @@ if (allProductsArray.length > 1) {
                 </button>
               ))}
             </div>
+          </div>
           )}
 
           <!-- Sección Descripción (Acordeón) -->
@@ -249,7 +252,7 @@ if (allProductsArray.length > 1) {
 
         <!-- Imagen del producto (lado derecho) -->
         <div class="w-full lg:w-1/2 order-1 lg:order-2 flex flex-col justify-center items-center">
-          <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/vibesus.webp" alt="" class="h-[150px] object-contain mb-4">
+          <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/vibesus.webp" alt="" class="h-[150px] object-contain mb-4 hidden md:block">
           <div class="relative">
             <img 
               id="product-image" 
