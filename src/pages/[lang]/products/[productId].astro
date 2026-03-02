@@ -43,6 +43,6 @@ const headerColors = {
 };
 ---
 
-<Layout title={product.name} headerColors={headerColors}>
+<Layout title={product.name} headerColors={headerColors} preloadImages={isUS ? ['https://snack.yummiespromociones.com/SnacksyummiesAssets/bgproductdetailus.webp'] : []}>
   <Detail currentLang={currentLang} productId={productId} />
 </Layout>

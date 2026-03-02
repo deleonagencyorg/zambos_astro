@@ -1,5 +1,5 @@
 ---
-import { t, getLocale } from '../../i18n/i18n';
+import { t, getLocale, type Locale } from '../../i18n/i18n';
 import LazyImage from '../common/LazyImage.astro';
 
 interface Props {
@@ -26,7 +26,7 @@ const {
   currentLang: propLang
 } = Astro.props;
 
-const currentLang = propLang || getLocale();
+const currentLang = (propLang || getLocale()) as Locale;
 const labels = t('labels', { namespace: 'blog', locale: currentLang });
 const blogLink = `/${currentLang}/blog/${slug || id}`;
 ---
@@ -106,13 +106,22 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
   .blog-card__image-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 4;
+    min-height: 320px;
     overflow: hidden;
   }
 
   @media (min-width: 768px) {
     .blog-card__image-container {
-      aspect-ratio: 3 / 2;
+      aspect-ratio: 4 / 5;
+      min-height: 380px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .blog-card__image-container {
+      aspect-ratio: 3 / 4;
+      min-height: 420px;
     }
   }
 
@@ -134,22 +143,26 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
   .blog-card__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.1) 50%,
-      rgba(0, 0, 0, 0.75) 100%
-    );
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.1) 35%,
+        rgba(0, 0, 0, 0.2) 55%,
+        rgba(0, 0, 0, 0.88) 100%
+      );
     transition: background 0.3s ease;
   }
 
   .blog-card:hover .blog-card__overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.05) 0%,
-      rgba(0, 0, 0, 0.15) 50%,
-      rgba(0, 0, 0, 0.85) 100%
-    );
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.15) 35%,
+        rgba(0, 0, 0, 0.25) 55%,
+        rgba(0, 0, 0, 0.93) 100%
+      );
   }
 
   .blog-card__date {
@@ -176,29 +189,38 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    min-height: 55%;
+    justify-content: flex-end;
   }
 
   @media (min-width: 768px) {
     .blog-card__content {
       padding: 1.25rem;
       gap: 0.6rem;
+      min-height: 50%;
     }
   }
 
   .blog-card__tags {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.4rem;
+    overflow: hidden;
   }
 
   .blog-card__tag {
     display: inline-block;
+    max-width: calc(100% - 0.5rem);
     padding: 0.3rem 0.8rem;
     border-radius: 50px;
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 1;
   }
 
   @media (min-width: 768px) {
@@ -227,17 +249,23 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
     text-transform: uppercase;
     letter-spacing: -0.01em;
     text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   @media (min-width: 768px) {
     .blog-card__title {
       font-size: 1.15rem;
+      -webkit-line-clamp: 3;
     }
   }
 
   @media (min-width: 1024px) {
     .blog-card__title {
       font-size: 1.25rem;
+      -webkit-line-clamp: 4;
     }
   }
 

@@ -30,7 +30,7 @@ const sortedForCarousel = posts
   .slice()
   .sort((a, b) => String(b.published_date || '').localeCompare(String(a.published_date || '')));
 ---
-<MainLayout title={pageTitle} description={pageDescription}>
+<MainLayout title={pageTitle} description={pageDescription} preloadImages={['https://snack.yummiespromociones.com/SnacksyummiesAssets/blogus.webp']}>
   <ViewTransitions />
   <div class="-mt-px -mb-px overflow-hidden pb-15 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/blogus.webp');">
     <div class="container mx-auto px-4 pb-16 mt-12">
