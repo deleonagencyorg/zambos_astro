@@ -36,8 +36,19 @@ const sortedForCarousel = posts
     <div class="container mx-auto px-4 pb-16 mt-12">
 
       <!-- News Carousel: shows the latest post as featured -->
-      <div class="mx-auto mb-16">
+      <div class="mx-auto mb-8">
         <NewsCarousel currentLang={currentLang} items={sortedForCarousel} />
+      </div>
+      <div class="flex justify-start mb-8">
+        <a
+          href={`/${currentLang}`}
+          class="inline-flex items-center gap-2 bg-us-red text-white font-bold px-6 py-3 rounded-full hover:opacity-90 transition uppercase text-sm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+          {currentLang === 'es' ? 'VOLVER AL INICIO' : 'BACK TO HOME'}
+        </a>
       </div>
 
       <div class="flex flex-col md:flex-row gap-4 mb-8">
