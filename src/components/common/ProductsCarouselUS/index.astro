@@ -252,8 +252,14 @@ const productsItems = Array.isArray(products) ? products : [];
 
   /* Pagination */
   :global(.swiper-pagination-us) {
+    position: relative !important;
+    bottom: auto !important;
     text-align: center;
     padding-top: 1rem;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   :global(.swiper-pagination-us .swiper-pagination-bullet) {

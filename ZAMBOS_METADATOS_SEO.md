@@ -225,7 +225,7 @@ Explore the complete range of Zambos products: Chile Lime, Tajín, Plantain with
   "@type": "CollectionPage",
   "name": "Zambos Products",
   "description": "Complete catalog of Zambos products with all varieties of premium plantain chips",
-  "url": "https://www.zambos.com/en/products/",
+  "url": "https://www.zambos.com/us/products/",
   "mainEntity": {
     "@type": "ItemList",
     "itemListElement": [

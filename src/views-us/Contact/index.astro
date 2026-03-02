@@ -42,7 +42,7 @@ const headerColors = {
 };
 ---
 
-<MainLayout title={title}  description={metaDescription} headerColors={headerColors}>
+<MainLayout title={title} description={metaDescription} headerColors={headerColors} preloadImages={['https://snack.yummiespromociones.com/SnacksyummiesAssets/bgcontacto.webp']}>
   <div class=" w-[100%] mx-auto ">
     
 
@@ -81,7 +81,7 @@ const headerColors = {
         <div class="order-2 w-[100%] mx-auto">
           <div id="officeInfo" class="rounded-2xl p-8 ">
             <div class="flex flex-col lg:flex-row justify-between items-center">
-              <div class="w-1/2 space-y-4">
+              <div class=" space-y-4">
                 <h3 id="officeName" class="text-us-green titles">
                   {contact.offices.locations["+504"].name}
                 </h3>
@@ -100,13 +100,7 @@ const headerColors = {
                   </div>
                 </div>
               </div>
-              <div class="w-1/2 mt-6 lg:mt-0">
-                <LazyImage 
-                  src="https://snack.yummiespromociones.com/SnacksyummiesAssets/oficinas.webp"
-                  alt="Yummies Honduras"
-                  class="h-full h-48 object-cover rounded-xl"
-                />
-              </div>
+           
             </div>
           </div>
         </div>

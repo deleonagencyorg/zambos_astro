@@ -11,11 +11,21 @@ const products = t('items', { namespace: 'products', locale: currentLang });
 const categories = t('categories', { namespace: 'products', locale: currentLang });
 const pageAssets = t('page', { namespace: 'products', locale: currentLang });
 
-// Obtener categorías únicas de los productos desde los items
-const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.category))).filter(Boolean);
+// Respetar el orden definido en el JSON
+const sortedProducts = (products || []) as any[];
+
+// Normalizar categorías (unificar variantes del mismo nombre)
+function normalizeCategory(cat: string): string {
+  const c = String(cat || '').trim();
+  if (c === 'Plátano') return 'Plantain';
+  return c;
+}
+
+// Obtener categorías únicas de los productos desde los items (normalizadas)
+const uniqueCategories = Array.from(new Set((products || []).map((p: any) => normalizeCategory(String(p.category || ''))))).filter(Boolean);
 ---
 
-<div class="products-page min-h-screen  relative overflow-hidden min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bg-productsus.webp');">
+<div class="products-page min-h-screen relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bg-productsus.webp');">
   <!-- Decoración superior izquierda (imagen de plátano/chip) -->
   <!-- <div class="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 pointer-events-none z-20">
     <img 
@@ -29,7 +39,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
   <div class="container mx-auto px-4 py-12 relative z-10">
     <!-- Encabezado -->
     <div class="text-center mb-8">
-      <h1 class="text-5xl md:text-7xl font-black italic text-white mb-3 tracking-wide font-title">
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-black italic text-white mb-3 tracking-wide font-title">
         {currentLang === 'es' ? 'PRODUCTOS' : 'PRODUCTS'}
       </h1>
       <p class="text-white text-lg md:text-2xl italic">
@@ -65,10 +75,10 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
     ) : (
       <>
         <div class="grid max-[319px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto" id="products-grid">
-          {products.map((product: any) => (
+          {sortedProducts.map((product: any) => (
             <div 
               class="product-card bg-us-green rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative" 
-              data-category={product.category} 
+              data-category={normalizeCategory(String(product.category || ''))} 
               transition:animate="fade"
             >
             <!-- Badge de categoría -->
@@ -80,12 +90,12 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
 
             {product.new && (
               <div class="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 md:top-4 md:left-4 z-10">
-                <span class="bg-us-secondary text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 tracking-wide">
+                <span class="bg-white text-us-red text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 tracking-wide">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" fill="none" class="w-3 h-3 sm:w-[13px] sm:h-[13px] md:w-[15px] md:h-[15px]">
-<path d="M6.88572 1.75884C6.9125 1.61547 6.98858 1.48598 7.10078 1.39279C7.21298 1.29961 7.35424 1.2486 7.50009 1.2486C7.64595 1.2486 7.7872 1.29961 7.89941 1.39279C8.01161 1.48598 8.08769 1.61547 8.11447 1.75884L8.77134 5.23259C8.818 5.47956 8.93802 5.70673 9.11574 5.88445C9.29346 6.06217 9.52063 6.18219 9.76759 6.22884L13.2413 6.88572C13.3847 6.9125 13.5142 6.98858 13.6074 7.10078C13.7006 7.21298 13.7516 7.35424 13.7516 7.50009C13.7516 7.64595 13.7006 7.7872 13.6074 7.89941C13.5142 8.01161 13.3847 8.08769 13.2413 8.11447L9.76759 8.77134C9.52063 8.818 9.29346 8.93802 9.11574 9.11574C8.93802 9.29346 8.818 9.52063 8.77134 9.76759L8.11447 13.2413C8.08769 13.3847 8.01161 13.5142 7.89941 13.6074C7.7872 13.7006 7.64595 13.7516 7.50009 13.7516C7.35424 13.7516 7.21298 13.7006 7.10078 13.6074C6.98858 13.5142 6.9125 13.3847 6.88572 13.2413L6.22884 9.76759C6.18219 9.52063 6.06217 9.29346 5.88445 9.11574C5.70673 8.93802 5.47956 8.818 5.23259 8.77134L1.75884 8.11447C1.61547 8.08769 1.48598 8.01161 1.39279 7.89941C1.29961 7.7872 1.2486 7.64595 1.2486 7.50009C1.2486 7.35424 1.29961 7.21298 1.39279 7.10078C1.48598 6.98858 1.61547 6.9125 1.75884 6.88572L5.23259 6.22884C5.47956 6.18219 5.70673 6.06217 5.88445 5.88445C6.06217 5.70673 6.18219 5.47956 6.22884 5.23259L6.88572 1.75884Z" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.5001 1.25006V3.75006" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13.75 2.49994H11.25" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M2.50006 13.75C3.19042 13.75 3.75006 13.1904 3.75006 12.5C3.75006 11.8096 3.19042 11.25 2.50006 11.25C1.80971 11.25 1.25006 11.8096 1.25006 12.5C1.25006 13.1904 1.80971 13.75 2.50006 13.75Z" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.88572 1.75884C6.9125 1.61547 6.98858 1.48598 7.10078 1.39279C7.21298 1.29961 7.35424 1.2486 7.50009 1.2486C7.64595 1.2486 7.7872 1.29961 7.89941 1.39279C8.01161 1.48598 8.08769 1.61547 8.11447 1.75884L8.77134 5.23259C8.818 5.47956 8.93802 5.70673 9.11574 5.88445C9.29346 6.06217 9.52063 6.18219 9.76759 6.22884L13.2413 6.88572C13.3847 6.9125 13.5142 6.98858 13.6074 7.10078C13.7006 7.21298 13.7516 7.35424 13.7516 7.50009C13.7516 7.64595 13.7006 7.7872 13.6074 7.89941C13.5142 8.01161 13.3847 8.08769 13.2413 8.11447L9.76759 8.77134C9.52063 8.818 9.29346 8.93802 9.11574 9.11574C8.93802 9.29346 8.818 9.52063 8.77134 9.76759L8.11447 13.2413C8.08769 13.3847 8.01161 13.5142 7.89941 13.6074C7.7872 13.7006 7.64595 13.7516 7.50009 13.7516C7.35424 13.7516 7.21298 13.7006 7.10078 13.6074C6.98858 13.5142 6.9125 13.3847 6.88572 13.2413L6.22884 9.76759C6.18219 9.52063 6.06217 9.29346 5.88445 9.11574C5.70673 8.93802 5.47956 8.818 5.23259 8.77134L1.75884 8.11447C1.61547 8.08769 1.48598 8.01161 1.39279 7.89941C1.29961 7.7872 1.2486 7.64595 1.2486 7.50009C1.2486 7.35424 1.29961 7.21298 1.39279 7.10078C1.48598 6.98858 1.61547 6.9125 1.75884 6.88572L5.23259 6.22884C5.47956 6.18219 5.70673 6.06217 5.88445 5.88445C6.06217 5.70673 6.18219 5.47956 6.22884 5.23259L6.88572 1.75884Z" stroke="red" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12.5001 1.25006V3.75006" stroke="red" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.75 2.49994H11.25" stroke="red" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M2.50006 13.75C3.19042 13.75 3.75006 13.1904 3.75006 12.5C3.75006 11.8096 3.19042 11.25 2.50006 11.25C1.80971 11.25 1.25006 11.8096 1.25006 12.5C1.25006 13.1904 1.80971 13.75 2.50006 13.75Z" stroke="red" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                   {currentLang === 'es' ? 'Nuevo' : 'New'}
                 </span>
@@ -93,21 +103,21 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
             )}
 
             <!-- Imagen del producto -->
-            <div class="relative h-48 sm:h-56 md:h-80 flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-hidden">
+            <div class="relative h-56 sm:h-64 md:h-80 p-3 sm:p-4 md:p-6 overflow-hidden">
               <img 
                 src={product.image} 
                 alt={product.name || product.title} 
-                class="max-h-full max-w-full object-contain drop-shadow-xl transition-transform duration-300 hover:scale-105"
+                class="absolute inset-0 w-full h-full object-contain drop-shadow-xl transition-transform duration-300 hover:scale-105 p-3 sm:p-4 md:p-6"
                 transition:name={`product-image-${product.id}`}
               />
             </div>
 
             <!-- Contenido -->
             <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6">
-              <h3 class="text-lg sm:text-xl md:text-2xl font-black text-white mb-2 md:mb-3 uppercase leading-tight tracking-wide">
+              <h3 class="text-lg sm:text-xl md:text-xl font-black text-white mb-2 md:mb-3 uppercase leading-tight tracking-wide">
                 {product.name || product.title}
               </h3>
-              <p class="text-white text-sm md:text-base mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed">
+              <p class="text-white text-sm md:text-sm mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed">
                 {product.short_description || product.description}
               </p>
               

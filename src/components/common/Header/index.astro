@@ -19,10 +19,6 @@ export interface Props {
 
 const { currentLang, headerColors } = Astro.props;
 
-// Detectar si el usuario es de Honduras por cookie
-const userCountry = Astro.cookies.get('user_country')?.value || '';
-const isHonduras = userCountry === 'HN';
-
 // Configuraciones
 const logosData = logos;
 
@@ -96,8 +92,8 @@ if (headerColors) {
       
       <!-- Acciones derechas: Icono Zambos Truck + Botón menú -->
       <div class="flex items-center gap-3">
-        {(currentLang === 'es' && isHonduras) && (
-          <a href="/zambostruck" class="block" aria-label="Zambos Truck">
+        {currentLang === 'es' && (
+          <a id="zambos-truck-mobile" href="/zambostruck" class="hidden" aria-label="Zambos Truck">
             <LocalizedImage
               src={logosData.secondary.url}
               alt={logosData.secondary.alt || "Zambos Truck"}
@@ -154,4 +150,23 @@ if (typeof window !== 'undefined') {
 // Reinicializar cuando Astro navega a una nueva página
 document.addEventListener('astro:page-load', initHeaderScrollBehavior);
 document.addEventListener('astro:after-swap', initHeaderScrollBehavior);
+
+// Mostrar botón Zambos Truck solo si el usuario es de Honduras
+function initZambosTruck() {
+  function getCookie(name: string): string | null {
+    const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  const country = getCookie('user_country');
+  if (country === 'HN') {
+    const desktop = document.getElementById('zambos-truck-desktop');
+    const mobile = document.getElementById('zambos-truck-mobile');
+    if (desktop) desktop.classList.remove('hidden');
+    if (mobile) mobile.classList.remove('hidden');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initZambosTruck);
+document.addEventListener('astro:page-load', initZambosTruck);
+document.addEventListener('astro:after-swap', initZambosTruck);
 </script>

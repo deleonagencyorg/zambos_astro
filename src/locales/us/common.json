@@ -74,62 +74,6 @@
         "title": "",
         "description": "",
         "link": "#"
-      },
-      {
-        "id": "slide1",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_110_ZAMBOS-TAJIN_BANNER-WEB_INGLES.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_110_ZAMBOS-TAJIN_BANNER-WEB_INGLES.webp",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "/en/productos/zambos-tajin"
-      },
-      {
-        "id": "slide2",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_111_2_Banner_Web_Tostones_Jun.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_111_2_Banner_Web_Tostones_Jun.webp",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "/en/products/zambos-tostones-originales"
-      },
-      {
-        "id": "slide4",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_Banner1_zambos_en.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_114_Banner1_zambos_en.webp",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "#"
-      },
-
-      {
-        "id": "slide6",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_116_Banner3_zambos_en.webp",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "/en/products/"
-      },
-      {
-        "id": "slide7",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_117_Banner4_zambos_en.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/imgi_117_Banner4_zambos_en.webp",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "/en/products/zambos-yuquitas-originales"
-      }
-      ,
-      {
-        "id": "slide8",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_zambos_chile_limon-.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_zambos_chile_limon-.webp",
-        "alt": "Zambos USA",
-        "title": "",
-        "description": "",
-        "link": "/en/products/zambos-chile-limon"
       }
     ]
   },
@@ -145,7 +89,7 @@
     },
     {
       "id": "history",
-      "text": "History",
+      "text": "OUR STORY",
       "href": "/us/about-us"
     },
     {
@@ -175,6 +119,11 @@
       "text": "Home",
       "href": "/us/"
     },
+     {
+      "id": "history",
+      "text": "OUR STORY",
+      "href": "/us/about-us"
+    },
     {
       "id": "contact",
       "text": "Contact",
@@ -184,7 +133,7 @@
   ],
   "about_us": {
     "title": "Discover Our",
-    "subtitle": "History",
+    "subtitle": "OUR STORY",
     "content": [
       "The best potatoes in one place."
     ]

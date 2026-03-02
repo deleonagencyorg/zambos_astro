@@ -20,9 +20,10 @@ export interface Props {
     backgroundColor?: string;
     textColor?: string;
   };
+  preloadImages?: string[];
 }
 
-const { title, description, class: className, headerColors } = Astro.props;
+const { title, description, class: className, headerColors, preloadImages = [] } = Astro.props;
 
 const currentLang: Locale = 'us';
 const { pathname } = Astro.url;
@@ -47,6 +48,9 @@ if (headerColors) {
     {title && <title>Zambos USA - {title}</title>}
     {description && <meta name="description" content={description} />}
     <ViewTransitions />
+    {preloadImages.map((src) => (
+      <link rel="preload" as="image" href={src} />
+    ))}
     <slot name="head" />
   </head>
   <body class={`font-sans min-h-screen flex flex-col us-layout ${className || ''}`}>

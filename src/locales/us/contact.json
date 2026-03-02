@@ -1,11 +1,11 @@
 {
-  "title": "Contact",
+  "title": "Contact Us",
   "subtitle": "Do you have any questions?",
   "description": "Our truck arrives loaded with flavor, good vibes, and experiences that turn any moment into a party. Find us in your city and enjoy flavor on the move.",
   "email": "contacto@yummies.com",
   "phone": "1234-56789",
   "form": {
-    "title": "Do you have questions? We are here for you!",
+    "title": "Send Us a Message",
     "contactReason": {
       "label": "Reason for contact",
       "placeholder": "I want to become a client",
@@ -43,10 +43,10 @@
       "placeholder": "Write your message here...",
       "required": true
     },
-    "submit": "Send message"
+    "submit": "Send"
   },
   "offices": {
-    "title": "Discover Our Offices",
+    "title": "Discover our offices",
     "locations": {
       "+504": {
         "tab": "Honduras",

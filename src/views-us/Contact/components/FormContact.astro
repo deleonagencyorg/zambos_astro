@@ -153,17 +153,34 @@ const contactReasonPlaceholder = locale === 'es' ? 'Selecciona el tipo de consul
       />
     </div>
     
-    <!-- Phone (without country code selector) -->
+    <!-- Phone with prefix selector -->
     <div>
       <label class="block text-gray-700 font-medium mb-2">
         {contact.form.phone.label}
       </label>
-      <input 
-        type="tel" 
-        name="phone" 
-        placeholder={contact.form.phone.placeholder}
-        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-      />
+      <div class="flex gap-2">
+        <select
+          name="phonePrefix"
+          class="w-32 px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all bg-white text-sm"
+        >
+          <option value="+1">+1 (US)</option>
+          <option value="+502">+502 (GT)</option>
+          <option value="+503">+503 (SV)</option>
+          <option value="+504">+504 (HN)</option>
+          <option value="+505">+505 (NI)</option>
+          <option value="+506">+506 (CR)</option>
+          <option value="+1809">+1809 (DO)</option>
+          <option value="+52">+52 (MX)</option>
+          <option value="+34">+34 (ES)</option>
+          <option value="+44">+44 (UK)</option>
+        </select>
+        <input 
+          type="tel" 
+          name="phone" 
+          placeholder={contact.form.phone.placeholder}
+          class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+        />
+      </div>
     </div>
     
     <!-- Message -->
