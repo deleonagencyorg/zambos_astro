@@ -175,6 +175,11 @@
       "text": "Home",
       "href": "/us/"
     },
+     {
+      "id": "history",
+      "text": "History",
+      "href": "/us/about-us"
+    },
     {
       "id": "contact",
       "text": "Contact",

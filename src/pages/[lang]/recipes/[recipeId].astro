@@ -43,6 +43,6 @@ const Layout = isUS ? MainLayoutUS : MainLayout;
 const Detail = isUS ? RecipeDetailUS : RecipeDetail;
 ---
 
-<Layout title={recipe.title}>
+<Layout title={recipe.title} preloadImages={isUS ? ['https://snack.yummiespromociones.com/SnacksyummiesAssets/recetasdetalleus.webp'] : []}>
   <Detail currentLang={currentLang} recipeId={recipeId} />
 </Layout>

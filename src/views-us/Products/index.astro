@@ -11,11 +11,21 @@ const products = t('items', { namespace: 'products', locale: currentLang });
 const categories = t('categories', { namespace: 'products', locale: currentLang });
 const pageAssets = t('page', { namespace: 'products', locale: currentLang });
 
+// Ordenar: nuevos primero, luego por categoría, luego por nombre
+const sortedProducts = [...((products || []) as any[])].sort((a, b) => {
+  if (a.new && !b.new) return -1;
+  if (!a.new && b.new) return 1;
+  const catA = String(a.category || '').toLowerCase();
+  const catB = String(b.category || '').toLowerCase();
+  if (catA !== catB) return catA.localeCompare(catB);
+  return String(a.name || a.title || '').toLowerCase().localeCompare(String(b.name || b.title || '').toLowerCase());
+});
+
 // Obtener categorías únicas de los productos desde los items
 const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.category))).filter(Boolean);
 ---
 
-<div class="products-page min-h-screen  relative overflow-hidden min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bg-productsus.webp');">
+<div class="products-page min-h-screen relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bg-productsus.webp');">
   <!-- Decoración superior izquierda (imagen de plátano/chip) -->
   <!-- <div class="absolute top-0 left-0 w-32 h-32 md:w-48 md:h-48 pointer-events-none z-20">
     <img 
@@ -29,7 +39,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
   <div class="container mx-auto px-4 py-12 relative z-10">
     <!-- Encabezado -->
     <div class="text-center mb-8">
-      <h1 class="text-5xl md:text-7xl font-black italic text-white mb-3 tracking-wide font-title">
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-black italic text-white mb-3 tracking-wide font-title">
         {currentLang === 'es' ? 'PRODUCTOS' : 'PRODUCTS'}
       </h1>
       <p class="text-white text-lg md:text-2xl italic">
@@ -65,7 +75,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
     ) : (
       <>
         <div class="grid max-[319px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto" id="products-grid">
-          {products.map((product: any) => (
+          {sortedProducts.map((product: any) => (
             <div 
               class="product-card bg-us-green rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative" 
               data-category={product.category} 
@@ -73,7 +83,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
             >
             <!-- Badge de categoría -->
             <div class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 md:top-4 md:right-4 z-10">
-              <span class="bg-[#e16468] text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase tracking-wide">
+              <span class="bg-[#e16468] text-white text-[12px] sm:text-[14px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase tracking-wide">
                 {categories[product.category] || product.category}
               </span>
             </div>
@@ -93,11 +103,11 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => p.c
             )}
 
             <!-- Imagen del producto -->
-            <div class="relative h-48 sm:h-56 md:h-80 flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-hidden">
+            <div class="relative h-56 sm:h-64 md:h-80 p-3 sm:p-4 md:p-6 overflow-hidden">
               <img 
                 src={product.image} 
                 alt={product.name || product.title} 
-                class="max-h-full max-w-full object-contain drop-shadow-xl transition-transform duration-300 hover:scale-105"
+                class="absolute inset-0 w-full h-full object-contain drop-shadow-xl transition-transform duration-300 hover:scale-105 p-3 sm:p-4 md:p-6"
                 transition:name={`product-image-${product.id}`}
               />
             </div>
