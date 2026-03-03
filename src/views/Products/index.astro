@@ -120,13 +120,11 @@ const uniqueCategories = Array.from(new Set((products as any[]).map((p) => p.cat
               <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed flex-1">
                 {product.short_description || product.description}
               </p>
-              
-              <!-- Botón Ver detalles - VERDE -->
               <a 
                 href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`} 
                 class="mt-auto block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"
               >
-                {pageAssets?.view_details || (currentLang === 'es' ? 'Ver detalles' : 'View Details')}
+                {pageAssets?.view_details || 'Ver detalles'}
               </a>
             </div>
             </div>

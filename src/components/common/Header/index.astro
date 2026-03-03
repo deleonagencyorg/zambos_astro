@@ -163,62 +163,131 @@ if (typeof window !== 'undefined') {
 document.addEventListener('astro:page-load', initHeaderScrollBehavior);
 document.addEventListener('astro:after-swap', initHeaderScrollBehavior);
 
-// Mostrar botón Zambos Truck solo si HN, mostrar #experiencias-hn si HN o si no se puede validar
+const TAG = '[hn-visibility]';
+
+function getCookieHN(name: string): string | null {
+  const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+  return m ? decodeURIComponent(m[1]) : null;
+}
+
+function setCookieHN(name: string, value: string, maxAge: number) {
+  document.cookie = name + '=' + encodeURIComponent(value) + '; max-age=' + maxAge + '; path=/; samesite=lax';
+}
+
+function isValidCountryHN(code: string | null): boolean {
+  return typeof code === 'string' && code.length === 2 && code !== 'XX' && code !== 'UNKNOWN';
+}
+
 function applyHNVisibility(countryCode: string | null) {
   const isHN = countryCode === 'HN';
-  const unknown = countryCode === null || countryCode === 'UNKNOWN';
+  const unknown = !isValidCountryHN(countryCode);
 
-  // Zambos Truck: solo si HN confirmado
+  console.log(TAG, 'applyHNVisibility called with:', countryCode, '| isHN:', isHN, '| unknown:', unknown);
+
   const desktop = document.getElementById('zambos-truck-desktop');
-  const mobile = document.getElementById('zambos-truck-mobile');
+  const mobile  = document.getElementById('zambos-truck-mobile');
+  const experiencias = document.getElementById('experiencias-hn');
+
   if (isHN) {
-    if (desktop) desktop.classList.remove('hidden');
-    if (mobile) mobile.classList.remove('hidden');
+    // HN confirmado: mostrar truck + experiencias
+    if (desktop) { desktop.classList.remove('hidden'); console.log(TAG, 'zambos-truck-desktop: SHOWN'); }
+    if (mobile)  { mobile.classList.remove('hidden');  console.log(TAG, 'zambos-truck-mobile: SHOWN'); }
+    if (experiencias) {
+      experiencias.classList.remove('hidden');
+      experiencias.classList.add('flex');
+      console.log(TAG, 'experiencias-hn: SHOWN (HN)');
+    }
+  } else if (unknown) {
+    // País desconocido: mostrar experiencias por precaución, ocultar truck
+    if (experiencias) {
+      experiencias.classList.remove('hidden');
+      experiencias.classList.add('flex');
+      console.log(TAG, 'experiencias-hn: SHOWN (unknown fallback)');
+    }
+    console.log(TAG, 'zambos-truck: HIDDEN (country unknown)');
+  } else {
+    // País distinto de HN confirmado: ocultar ambos
+    if (desktop) desktop.classList.add('hidden');
+    if (mobile)  mobile.classList.add('hidden');
+    if (experiencias) {
+      experiencias.classList.add('hidden');
+      experiencias.classList.remove('flex');
+    }
+    console.log(TAG, 'zambos-truck + experiencias-hn: HIDDEN (not HN, country:', countryCode, ')');
+  }
+}
+
+function detectAndApplyHN() {
+  console.log(TAG, 'detecting country for HN features ...');
+
+  // Fuente 2: api.country.is
+  function tryCountryIs(onFail: () => void) {
+    console.log(TAG, 'trying api.country.is ...');
+    fetch('https://api.country.is/')
+      .then(r => r.json())
+      .then(d => {
+        const country = (d.country || '').toUpperCase();
+        console.log(TAG, 'api.country.is responded:', country);
+        if (isValidCountryHN(country)) {
+          setCookieHN('user_country', country, 60 * 60 * 24 * 30);
+          console.log(TAG, 'cookie user_country saved:', country);
+          applyHNVisibility(country);
+        } else {
+          onFail();
+        }
+      })
+      .catch(err => {
+        console.warn(TAG, 'api.country.is failed:', err);
+        onFail();
+      });
   }
 
-  // Experiencias HN: mostrar si HN o si no se pudo validar (fallback)
-  const experiencias = document.getElementById('experiencias-hn');
-  if (experiencias && (isHN || unknown)) {
-    experiencias.classList.remove('hidden');
-    experiencias.classList.add('flex');
+  // Fuente 1: ipapi.co
+  function tryIpApiCo() {
+    console.log(TAG, 'trying ipapi.co ...');
+    fetch('https://ipapi.co/json/')
+      .then(r => r.json())
+      .then(d => {
+        const country = (d.country_code || '').toUpperCase();
+        console.log(TAG, 'ipapi.co responded:', country, '| ip:', d.ip);
+        if (isValidCountryHN(country)) {
+          setCookieHN('user_country', country, 60 * 60 * 24 * 30);
+          console.log(TAG, 'cookie user_country saved:', country);
+          applyHNVisibility(country);
+        } else {
+          console.warn(TAG, 'ipapi.co no valid country, trying api.country.is ...');
+          tryCountryIs(() => {
+            console.warn(TAG, 'all sources failed, applying unknown fallback');
+            applyHNVisibility(null);
+          });
+        }
+      })
+      .catch(err => {
+        console.warn(TAG, 'ipapi.co failed:', err, '| trying api.country.is ...');
+        tryCountryIs(() => {
+          console.warn(TAG, 'all sources failed, applying unknown fallback');
+          applyHNVisibility(null);
+        });
+      });
+  }
+
+  const savedCountry = getCookieHN('user_country');
+  console.log(TAG, 'cookie user_country:', savedCountry);
+
+  if (savedCountry && isValidCountryHN(savedCountry)) {
+    // Cookie válida: usar directamente
+    console.log(TAG, 'using valid cookie:', savedCountry);
+    applyHNVisibility(savedCountry);
+  } else {
+    // Sin cookie válida (null, UNKNOWN, etc): detectar ahora
+    console.log(TAG, 'no valid cookie, fetching country ...');
+    applyHNVisibility(null); // mostrar experiencias como fallback inmediato
+    tryIpApiCo();
   }
 }
 
 function initZambosTruck() {
-  function getCookie(name: string): string | null {
-    const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
-    return m ? decodeURIComponent(m[1]) : null;
-  }
-
-  const country = getCookie('user_country');
-
-  if (country) {
-    // Cookie ya existe, aplicar directamente
-    applyHNVisibility(country);
-  } else {
-    // No hay cookie aún: mostrar experiencias-hn por defecto (fallback)
-    // e intentar detectar el país en background
-    applyHNVisibility(null);
-
-    fetch('/api/detect-locale')
-      .then((r) => r.json())
-      .then((data) => {
-        const detected = (data.country || 'UNKNOWN').toUpperCase();
-        // Si resulta NO ser HN, ocultar experiencias y truck
-        if (detected !== 'HN' && detected !== 'UNKNOWN') {
-          const experiencias = document.getElementById('experiencias-hn');
-          if (experiencias) {
-            experiencias.classList.add('hidden');
-            experiencias.classList.remove('flex');
-          }
-        } else if (detected === 'HN') {
-          applyHNVisibility('HN');
-        }
-      })
-      .catch(() => {
-        // Si falla el fetch, mantener fallback (experiencias visible, truck oculto)
-      });
-  }
+  detectAndApplyHN();
 }
 
 document.addEventListener('DOMContentLoaded', initZambosTruck);

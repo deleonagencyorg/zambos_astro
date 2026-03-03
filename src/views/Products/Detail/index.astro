@@ -125,6 +125,10 @@ const nutritionIsObject =
   !!nutritionData && typeof nutritionData === 'object' && !Array.isArray(nutritionData);
 const nutritionEntries = nutritionIsObject ? Object.entries(nutritionData) : [];
 
+const nutritionObj = nutritionIsObject ? (nutritionData as any) : null;
+const nutritionRows: Array<{ label: string; value: string }> =
+  nutritionObj && Array.isArray(nutritionObj.rows) ? nutritionObj.rows : [];
+
 // Obtener todos los productos como un array
 const productsData = t('items', { locale: currentLang, namespace: 'products' }) || [];
 const allProductsArray = Array.isArray(productsData) ? productsData : [];
@@ -230,7 +234,7 @@ if (allProductsArray.length > 1) {
                 </span>
                 <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-white">+</span>
               </button>
-              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="nutrition">
+              <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="nutrition" style="max-height: 0;">
                 <div 
                   class="pt-4 text-base md:text-lg leading-relaxed text-white"
                 >
@@ -244,15 +248,33 @@ if (allProductsArray.length > 1) {
                     </div>
                   )}
 
-                  {nutritionEntries.length > 0 && (
-                    <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
-                      {nutritionEntries.map(([key, value]) => (
-                        <div>
-                          <dt class="font-semibold">{key}</dt>
-                          <dd class="opacity-90">{String(value)}</dd>
+                  {nutritionObj && (
+                    <div class="space-y-6">
+                      <div class="grid grid-cols-1 sm:grid-cols-1 gap-x-10 gap-y-4">
+               
+                        {nutritionObj.serving && (
+                          <div>
+                            <div class="text-sm uppercase tracking-wider opacity-80">{currentLang === 'es' ? 'Porción' : 'Serving'}</div>
+                            <div class="font-semibold">{String(nutritionObj.serving)}</div>
+                          </div>
+                        )}
+                      </div>
+                      {nutritionRows.length > 0 && (
+                        <div class="rounded-xl bg-black/15 p-4 sm:p-5">
+                          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3">
+                            {nutritionRows.map((r) => (
+                              <div class="flex justify-between gap-6">
+                                <span class="font-semibold">{r.label}</span>
+                                <span class="opacity-90">{r.value}</span>
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      ))}
-                    </dl>
+                      )}
+                      {nutritionObj.disclaimer && (
+                        <p class="text-sm opacity-90">{String(nutritionObj.disclaimer)}</p>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>
@@ -324,14 +346,21 @@ if (allProductsArray.length > 1) {
 
     initProductDetail();
 
+    function openAccordion(content: Element, icon: Element) {
+      (content as HTMLElement).style.maxHeight = (content as HTMLElement).scrollHeight + 'px';
+      icon.textContent = '−';
+    }
+
+    function closeAccordion(content: Element, icon: Element) {
+      (content as HTMLElement).style.maxHeight = '0px';
+      icon.textContent = '+';
+    }
+
     const descriptionTrigger = root.querySelector('[data-accordion="description"]');
     const descriptionContent = root.querySelector('[data-content="description"]');
     const descriptionIcon = descriptionTrigger?.querySelector('.accordion-icon');
     if (descriptionContent && descriptionIcon) {
-      descriptionContent.classList.remove('max-h-0');
-      descriptionContent.classList.add('max-h-96');
-      descriptionIcon.textContent = '−';
-      descriptionIcon.classList.remove('rotate-45');
+      openAccordion(descriptionContent, descriptionIcon);
     }
 
     const accordionTriggers = root.querySelectorAll('.accordion-trigger');
@@ -343,17 +372,11 @@ if (allProductsArray.length > 1) {
         const icon = trigger.querySelector('.accordion-icon');
 
         if (content && icon) {
-          const isOpen = content.classList.contains('max-h-96');
+          const isOpen = (content as HTMLElement).style.maxHeight !== '0px' && (content as HTMLElement).style.maxHeight !== '';
           if (isOpen) {
-            content.classList.remove('max-h-96');
-            content.classList.add('max-h-0');
-            icon.textContent = '+';
-            icon.classList.remove('rotate-45');
+            closeAccordion(content, icon);
           } else {
-            content.classList.remove('max-h-0');
-            content.classList.add('max-h-96');
-            icon.textContent = '−';
-            icon.classList.remove('rotate-45');
+            openAccordion(content, icon);
           }
         }
       });

@@ -77,7 +77,29 @@
       "weight": [
         "4.9oz - 140g"
       ],
-      "category": "Plantain"
+      "category": "Plantain",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 1oz (28g). Servings per container: 0.43",
+        "rows": [
+          { "label": "Energy", "value": "700 kJ (170 kcal)" },
+          { "label": "Energy from fat", "value": "500 kJ (120 kcal)" },
+          { "label": "Total fat", "value": "12 g (15% DV)" },
+          { "label": "Saturated fat", "value": "6 g (30% DV)" },
+          { "label": "Trans fat", "value": "0 g (0% DV)" },
+          { "label": "Cholesterol", "value": "0 mg (0% DV)" },
+          { "label": "Sodium", "value": "370 mg (16% DV)" },
+          { "label": "Total carbohydrates", "value": "13 g (5% DV)" },
+          { "label": "Dietary fiber", "value": "<1 g (2% DV)" },
+          { "label": "Sugars", "value": "0 g" },
+          { "label": "Protein", "value": "2 g" },
+          { "label": "Vitamin D", "value": "0% DV" },
+          { "label": "Calcium", "value": "0% DV" },
+          { "label": "Iron", "value": "0% DV" },
+          { "label": "Potassium", "value": "0% DV" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-chile-limon",
@@ -103,7 +125,22 @@
         "5.3oz - 150g",
         "10oz - 275g"
       ],
-      "category": "Plantain"
+      "category": "Plantain",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 28g. Servings per container: 1.18",
+        "rows": [
+          { "label": "Energy Kcal", "value": "600 KJ (140 Kcal)" },
+          { "label": "Energy Fat", "value": "250 KJ (60 Kcal)" },
+          { "label": "Total Fat - VD", "value": "6g (8%)" },
+          { "label": "Saturated Fat - V.D.", "value": "3g (15%)" },
+          { "label": "Trans Fat - V.D.", "value": "0g" },
+          { "label": "Cholesterol", "value": "0g - 0%" },
+          { "label": "Sodium - V.D.", "value": "310 mg - 13%" },
+          { "label": "Total Carbohydrates", "value": "19g - 7%" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-yuquitas-originales",
@@ -127,7 +164,22 @@
       "weight": [
         "5.3oz - 150g"
       ],
-      "category": "Cassava"
+      "category": "Cassava",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 28g. Servings per container: 1.18",
+        "rows": [
+          { "label": "Energy Kcal", "value": "600 KJ (140 Kcal)" },
+          { "label": "Energy Fat", "value": "250 KJ (60kcal)" },
+          { "label": "Total Fat - VD", "value": "6g (8%)" },
+          { "label": "Saturated Fat - V.D.", "value": "3g - 15%" },
+          { "label": "Trans Fat - V.D.", "value": "0g" },
+          { "label": "Cholesterol", "value": "0g - 0%" },
+          { "label": "Sodium - V.D.", "value": "115 mg - 5%" },
+          { "label": "Total Carbohydrates", "value": "19g - 7%" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-ceviche",
@@ -151,7 +203,29 @@
       "weight": [
         "5.3oz - 150g"
       ],
-      "category": "Plantain"
+      "category": "Plantain",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 1oz (28g). Servings per container: 0.43",
+        "rows": [
+          { "label": "Energy", "value": "700 kJ (170 kcal)" },
+          { "label": "Energy from fat", "value": "500 kJ (120 kcal)" },
+          { "label": "Total fat", "value": "12 g (15% DV)" },
+          { "label": "Saturated fat", "value": "6 g (30% DV)" },
+          { "label": "Trans fat", "value": "0 g (0% DV)" },
+          { "label": "Cholesterol", "value": "0 mg (0% DV)" },
+          { "label": "Sodium", "value": "370 mg (16% DV)" },
+          { "label": "Total carbohydrates", "value": "13 g (5% DV)" },
+          { "label": "Dietary fiber", "value": "<1 g (2% DV)" },
+          { "label": "Sugars", "value": "0 g" },
+          { "label": "Protein", "value": "2 g" },
+          { "label": "Vitamin D", "value": "0% DV" },
+          { "label": "Calcium", "value": "0% DV" },
+          { "label": "Iron", "value": "0% DV" },
+          { "label": "Potassium", "value": "0% DV" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-with-tajin",
@@ -177,7 +251,22 @@
         "4.9oz - 140g",
         "9oz - 255g"
       ],
-      "category": "Plantain"
+      "category": "Plantain",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 1 oz (28g). Servings per container: 1.18",
+        "rows": [
+          { "label": "Energy Kcal", "value": "600 KJ (140 Kcal)" },
+          { "label": "Energy Fat", "value": "250 KJ (60 Kcal)" },
+          { "label": "Total Fat - VD", "value": "7g (9%)" },
+          { "label": "Saturated Fat - V.D.", "value": "3.5 g - (18%)" },
+          { "label": "Trans Fat - V.D.", "value": "0g" },
+          { "label": "Cholesterol", "value": "0g - 0%" },
+          { "label": "Sodium - V.D.", "value": "420 mg - 18%" },
+          { "label": "Total Carbohydrates", "value": "18g - 7%" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-salsa-verde",
@@ -227,7 +316,22 @@
       "weight": [
         "5.3oz - 150g"
       ],
-      "category": "Cassava"
+      "category": "Cassava",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 28 g. Servings per container: 1.18",
+        "rows": [
+          { "label": "Energy Kcal", "value": "600 KJ (140 Kcal)" },
+          { "label": "Energy Fat", "value": "250 KJ (60kcal)" },
+          { "label": "Total Fat - VD", "value": "7g (11%)" },
+          { "label": "Saturated Fat - V.D.", "value": "3g - 15%" },
+          { "label": "Trans Fat - V.D.", "value": "0g" },
+          { "label": "Cholesterol", "value": "0g - 0%" },
+          { "label": "Sodium - V.D.", "value": "250 mg - 10%" },
+          { "label": "Total Carbohydrates", "value": "19g - 6%" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-chile-limon-18-pack",
@@ -252,7 +356,29 @@
         "All bags of chile limón zambos 1 oz per bag of zambos 18 oz total",
         "1 oz = 28.4g"
       ],
-      "category": "Multipack"
+      "category": "Multipack",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 1oz (28g). Servings per container: 18",
+        "rows": [
+          { "label": "Energy", "value": "700 kJ (170 kcal)" },
+          { "label": "Energy from fat", "value": "500 kJ (120 kcal)" },
+          { "label": "Total fat", "value": "12 g (15% DV)" },
+          { "label": "Saturated fat", "value": "6 g (30% DV)" },
+          { "label": "Trans fat", "value": "0 g (0% DV)" },
+          { "label": "Cholesterol", "value": "0 mg (0% DV)" },
+          { "label": "Sodium", "value": "370 mg (16% DV)" },
+          { "label": "Total carbohydrates", "value": "13 g (5% DV)" },
+          { "label": "Dietary fiber", "value": "<1 g (2% DV)" },
+          { "label": "Sugars", "value": "0 g" },
+          { "label": "Protein", "value": "2 g" },
+          { "label": "Vitamin D", "value": "0% DV" },
+          { "label": "Calcium", "value": "0% DV" },
+          { "label": "Iron", "value": "0% DV" },
+          { "label": "Potassium", "value": "0% DV" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-classic-mix-multipack",
@@ -277,7 +403,29 @@
         "Net weight 16.8 oz  Contains 8 bags of 1 oz (zambos chile limon, 10 bags of 0.88 oz (6 zambos salsa verde y 4 zambos originals)",
         "1 oz = 28.4g & 0.88 oz = 25g"
       ],
-      "category": "Multipack"
+      "category": "Multipack",
+      "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 1oz (28g). Servings per container: varies",
+        "rows": [
+          { "label": "Energy", "value": "700 kJ (170 kcal)" },
+          { "label": "Energy from fat", "value": "500 kJ (120 kcal)" },
+          { "label": "Total fat", "value": "12 g (15% DV)" },
+          { "label": "Saturated fat", "value": "6 g (30% DV)" },
+          { "label": "Trans fat", "value": "0 g (0% DV)" },
+          { "label": "Cholesterol", "value": "0 mg (0% DV)" },
+          { "label": "Sodium", "value": "370 mg (16% DV)" },
+          { "label": "Total carbohydrates", "value": "13 g (5% DV)" },
+          { "label": "Dietary fiber", "value": "<1 g (2% DV)" },
+          { "label": "Sugars", "value": "0 g" },
+          { "label": "Protein", "value": "2 g" },
+          { "label": "Vitamin D", "value": "0% DV" },
+          { "label": "Calcium", "value": "0% DV" },
+          { "label": "Iron", "value": "0% DV" },
+          { "label": "Potassium", "value": "0% DV" }
+        ],
+        "disclaimer": ""
+      }
     }
   ]
 }

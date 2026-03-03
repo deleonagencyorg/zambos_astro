@@ -287,23 +287,99 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
 
 <script is:inline>
   (function() {
+    var TAG = '[home-hn]';
+
     function getCookie(name) {
       var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
       return m ? decodeURIComponent(m[1]) : null;
     }
-    function showHnSections() {
-      var country = getCookie('user_country');
+
+    function setCookie(name, value, maxAge) {
+      document.cookie = name + '=' + encodeURIComponent(value) + '; max-age=' + maxAge + '; path=/; samesite=lax';
+    }
+
+    function isValidCountry(code) {
+      return typeof code === 'string' && code.length === 2 && code !== 'XX' && code !== 'UNKNOWN';
+    }
+
+    function showExperiencias() {
+      var el = document.getElementById('experiencias-hn');
+      if (el) { el.classList.remove('hidden'); el.style.display = 'flex'; }
+    }
+
+    function hideExperiencias() {
+      var el = document.getElementById('experiencias-hn');
+      if (el) { el.classList.add('hidden'); el.style.display = ''; }
+    }
+
+    function applyCountry(country) {
+      console.log(TAG, 'applyCountry:', country);
       if (country === 'HN') {
-        var experiencias = document.getElementById('experiencias-hn');
-        if (experiencias) { experiencias.classList.remove('hidden'); experiencias.style.display = 'flex'; }
+        showExperiencias();
+        console.log(TAG, 'experiencias-hn SHOWN (HN)');
+      } else if (!isValidCountry(country)) {
+        showExperiencias();
+        console.log(TAG, 'experiencias-hn SHOWN (unknown fallback)');
+      } else {
+        hideExperiencias();
+        console.log(TAG, 'experiencias-hn HIDDEN (country:', country, ')');
       }
     }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', showHnSections);
-    } else {
-      showHnSections();
+
+    function tryCountryIs(onFail) {
+      fetch('https://api.country.is/')
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          var country = (d.country || '').toUpperCase();
+          console.log(TAG, 'api.country.is:', country);
+          if (isValidCountry(country)) {
+            setCookie('user_country', country, 60 * 60 * 24 * 30);
+            applyCountry(country);
+          } else { onFail(); }
+        })
+        .catch(function() { onFail(); });
     }
-    document.addEventListener('astro:page-load', showHnSections);
-    document.addEventListener('astro:after-swap', showHnSections);
+
+    function detectAndApply() {
+      var savedCountry = getCookie('user_country');
+      console.log(TAG, 'cookie user_country:', savedCountry);
+
+      if (savedCountry && isValidCountry(savedCountry)) {
+        applyCountry(savedCountry);
+        return;
+      }
+
+      // Sin cookie válida: mostrar como fallback e intentar detectar
+      showExperiencias();
+      console.log(TAG, 'no valid cookie, detecting...');
+
+      fetch('https://ipapi.co/json/')
+        .then(function(r) { return r.json(); })
+        .then(function(d) {
+          var country = (d.country_code || '').toUpperCase();
+          console.log(TAG, 'ipapi.co:', country, '| ip:', d.ip);
+          if (isValidCountry(country)) {
+            setCookie('user_country', country, 60 * 60 * 24 * 30);
+            applyCountry(country);
+          } else {
+            tryCountryIs(function() {
+              console.warn(TAG, 'all sources failed, keeping fallback (show)');
+            });
+          }
+        })
+        .catch(function() {
+          tryCountryIs(function() {
+            console.warn(TAG, 'all sources failed, keeping fallback (show)');
+          });
+        });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', detectAndApply);
+    } else {
+      detectAndApply();
+    }
+    document.addEventListener('astro:page-load', detectAndApply);
+    document.addEventListener('astro:after-swap', detectAndApply);
   })();
 </script>
