@@ -260,6 +260,8 @@ const productsItems = Array.isArray(products) ? products : [];
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    left: 0 !important;
+    transform: none !important;
   }
 
   :global(.swiper-pagination-us .swiper-pagination-bullet) {
@@ -413,7 +415,6 @@ const productsItems = Array.isArray(products) ? products : [];
         pagination: {
           el: el.querySelector('.swiper-pagination-us') as HTMLElement,
           clickable: true,
-          dynamicBullets: true,
         },
         speed: 800,
         effect: 'slide',

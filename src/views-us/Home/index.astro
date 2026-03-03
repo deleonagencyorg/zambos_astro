@@ -197,12 +197,12 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
       mobileHeight="300px"
       showOverlay={true}
     />
-    <!-- Amazon Banner Pleca (absoluta sobre el carousel, abajo a la izquierda) -->
+    <!-- Amazon Banner Pleca (absoluta sobre el carousel, abajo a la izquierda) - solo desktop -->
     <a
       href={amazonBuyUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="amazon-pleca"
+      class="amazon-pleca hidden md:flex"
     >
       <div class="amazon-pleca-inner">
         <span class="amazon-pleca-text">Buy it in your favorite store</span>
@@ -214,6 +214,21 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
       </div>
     </a>
   </div>
+
+  <!-- Amazon Banner Pleca - solo mobile, fuera del hero, full width -->
+  <a
+    href={amazonBuyUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="amazon-pleca-mobile md:hidden w-full flex items-center justify-center gap-3 py-4 bg-[#B71C1C] text-white"
+  >
+    <span class="text-white font-bold italic text-base">Buy it in your favorite store</span>
+    <img
+      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/Amazon_logo2.svg"
+      alt="Amazon"
+      class="h-7 w-auto object-contain"
+    />
+  </a>
 
   {
     products.length > 0 && (
