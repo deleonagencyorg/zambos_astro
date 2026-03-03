@@ -41,20 +41,22 @@ const loadMoreText = currentLang === 'es'
   : 'LOAD MORE';
 
 // Filter labels
-const filterLabels = currentLang === 'es'
+const filterLabels: Record<string, string> = currentLang === 'es'
   ? { 
       all: 'TODOS',
       breakfast: 'DESAYUNO', 
       brunch: 'BRUNCH',
       lunch: 'ALMUERZO',
-      snack: 'SNACK'
+      snack: 'SNACK',
+      other: 'OTROS'
     }
   : {
       all: 'ALL',
       breakfast: 'BREAKFAST',
       brunch: 'BRUNCH',
       lunch: 'LUNCH',
-      snack: 'SNACK'
+      snack: 'SNACK',
+      other: 'OTHER'
     };
 
 // Normaliza la categoría de receta.
@@ -70,6 +72,12 @@ function normalizeType(r: Recipe): string {
   if (['snack', 'merienda'].includes(raw)) return 'snack';
   return 'other';
 }
+
+// Categorías únicas presentes en las recetas (ordenadas)
+const ORDER = ['breakfast', 'brunch', 'lunch', 'snack', 'other'];
+const availableCategories = ORDER.filter(cat =>
+  allRecipes.some(r => normalizeType(r) === cat)
+);
 
 // Get featured recipes for carousel (first 3)
 const featuredRecipes = allRecipes.slice(0, 3);
@@ -114,34 +122,15 @@ const featuredRecipes = allRecipes.slice(0, 3);
           >
             {filterLabels.all}
           </button>
-          <button 
-            type="button" 
-            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
-            data-filter="breakfast"
-          >
-            {filterLabels.breakfast}
-          </button>
-          <button 
-            type="button" 
-            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
-            data-filter="brunch"
-          >
-            {filterLabels.brunch}
-          </button>
-          <button 
-            type="button" 
-            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
-            data-filter="lunch"
-          >
-            {filterLabels.lunch}
-          </button>
-          <button 
-            type="button" 
-            class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
-            data-filter="snack"
-          >
-            {filterLabels.snack}
-          </button>
+          {availableCategories.map(cat => (
+            <button 
+              type="button" 
+              class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+              data-filter={cat}
+            >
+              {filterLabels[cat]}
+            </button>
+          ))}
         </div>
       </div>
 

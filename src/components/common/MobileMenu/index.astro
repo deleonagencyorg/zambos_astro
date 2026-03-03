@@ -107,7 +107,15 @@ const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', l
       ))}
     </nav>
 
-    {currentLang === 'en' && (
+    {currentLang === 'es' && (
+      <div class="mt-4 flex justify-center">
+        <a id="zambos-truck-mobile" href="/zambostruck" class="hidden">
+          <img src={logos.secondary.url} alt={logos.secondary.alt} class="h-12 w-auto" />
+        </a>
+      </div>
+    )}
+
+    {currentLang === 'us' && (
       <div class="mt-4 flex justify-center">
         <a
           href="https://www.amazon.com/stores/Zambos/Homepage/page/AB6B3C05-CBE2-49FD-8A2C-E5A7B1F57E2D?utm_source=Publicidad+Movil&utm_medium=Amazon&utm_campaign=Zambos&utm_term=Standard+Botton"
