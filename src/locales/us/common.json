@@ -97,21 +97,13 @@
       "text": "Products",
       "href": "/us/products"
     },
-    {
-      "id": "recipes",
-      "text": "Recipes",
-      "href": "/us/recipes"
-    },
+
     {
       "id": "contact",
       "text": "Contact",
       "href": "/us/contact"
-    },
-    {
-      "id": "blog",
-      "text": "Blog",
-      "href": "/us/blog"
     }
+
   ],
   "menu_items_header": [
     {
