@@ -163,18 +163,61 @@ if (typeof window !== 'undefined') {
 document.addEventListener('astro:page-load', initHeaderScrollBehavior);
 document.addEventListener('astro:after-swap', initHeaderScrollBehavior);
 
-// Mostrar botón Zambos Truck solo si el usuario es de Honduras
+// Mostrar botón Zambos Truck solo si HN, mostrar #experiencias-hn si HN o si no se puede validar
+function applyHNVisibility(countryCode: string | null) {
+  const isHN = countryCode === 'HN';
+  const unknown = countryCode === null || countryCode === 'UNKNOWN';
+
+  // Zambos Truck: solo si HN confirmado
+  const desktop = document.getElementById('zambos-truck-desktop');
+  const mobile = document.getElementById('zambos-truck-mobile');
+  if (isHN) {
+    if (desktop) desktop.classList.remove('hidden');
+    if (mobile) mobile.classList.remove('hidden');
+  }
+
+  // Experiencias HN: mostrar si HN o si no se pudo validar (fallback)
+  const experiencias = document.getElementById('experiencias-hn');
+  if (experiencias && (isHN || unknown)) {
+    experiencias.classList.remove('hidden');
+    experiencias.classList.add('flex');
+  }
+}
+
 function initZambosTruck() {
   function getCookie(name: string): string | null {
     const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
     return m ? decodeURIComponent(m[1]) : null;
   }
+
   const country = getCookie('user_country');
-  if (country === 'HN') {
-    const desktop = document.getElementById('zambos-truck-desktop');
-    const mobile = document.getElementById('zambos-truck-mobile');
-    if (desktop) desktop.classList.remove('hidden');
-    if (mobile) mobile.classList.remove('hidden');
+
+  if (country) {
+    // Cookie ya existe, aplicar directamente
+    applyHNVisibility(country);
+  } else {
+    // No hay cookie aún: mostrar experiencias-hn por defecto (fallback)
+    // e intentar detectar el país en background
+    applyHNVisibility(null);
+
+    fetch('/api/detect-locale')
+      .then((r) => r.json())
+      .then((data) => {
+        const detected = (data.country || 'UNKNOWN').toUpperCase();
+        // Si resulta NO ser HN, ocultar experiencias y truck
+        if (detected !== 'HN' && detected !== 'UNKNOWN') {
+          const experiencias = document.getElementById('experiencias-hn');
+          if (experiencias) {
+            experiencias.classList.add('hidden');
+            experiencias.classList.remove('flex');
+          }
+        } else if (detected === 'HN') {
+          applyHNVisibility('HN');
+        }
+      })
+      .catch(() => {
+        // Si falla el fetch, mantener fallback (experiencias visible, truck oculto)
+      });
   }
 }
 

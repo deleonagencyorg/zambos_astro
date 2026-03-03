@@ -18,6 +18,7 @@ interface Props {
     date?: string;
     published_date?: string;
     quote?: string;
+    video?: string;
   };
   currentLang: Locale;
   allBlogPosts?: Array<{
@@ -63,6 +64,22 @@ const formatDate = (dateStr: string | undefined) => {
 };
 
 const displayDate = formatDate(blogPost.date || blogPost.published_date);
+
+// Convierte cualquier URL de YouTube a URL de embed
+function toYoutubeEmbed(url: string | undefined): string | undefined {
+  if (!url) return undefined;
+  // Ya es embed
+  if (url.includes('youtube.com/embed/')) return url;
+  // youtu.be/VIDEO_ID
+  const shortMatch = url.match(/youtu\.be\/([\w-]+)/);
+  if (shortMatch) return `https://www.youtube.com/embed/${shortMatch[1]}`;
+  // youtube.com/watch?v=VIDEO_ID
+  const watchMatch = url.match(/[?&]v=([\w-]+)/);
+  if (watchMatch) return `https://www.youtube.com/embed/${watchMatch[1]}`;
+  return url;
+}
+
+const videoEmbed = toYoutubeEmbed((blogPost as any).video);
 ---
 
 <div class="blog-detail">
@@ -89,16 +106,29 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
         {blogPost.title}
       </h1>
       
-      <!-- Main Image -->
-      <div class="blog-detail__image-wrapper" transition:animate={slide({ duration: '0.3s' })}>
-        <LazyImage 
-          src={blogPost.image} 
-          alt={blogPost.title}
-          class="blog-detail__image"
-          loading="eager"
-          fallbackSrc={`/images/${currentLang}/slider1.png`}
-        />
-      </div>
+      <!-- Video (si existe) o Imagen principal -->
+      {videoEmbed ? (
+        <div class="blog-detail__video-wrapper" transition:animate={slide({ duration: '0.3s' })}>
+          <iframe
+            src={videoEmbed}
+            title={blogPost.title}
+            class="blog-detail__video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="eager"
+          />
+        </div>
+      ) : (
+        <div class="blog-detail__image-wrapper" transition:animate={slide({ duration: '0.3s' })}>
+          <LazyImage 
+            src={blogPost.image} 
+            alt={blogPost.title}
+            class="blog-detail__image"
+            loading="eager"
+            fallbackSrc={`/images/${currentLang}/slider1.png`}
+          />
+        </div>
+      )}
     </div>
   </section>
 
@@ -149,6 +179,19 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
           </div>
         )}
       </div>
+
+      <!-- Imagen al final si hay video -->
+      {videoEmbed && (
+        <div class="blog-detail__image-wrapper blog-detail__image-wrapper--bottom">
+          <LazyImage 
+            src={blogPost.image} 
+            alt={blogPost.title}
+            class="blog-detail__image"
+            loading="lazy"
+            fallbackSrc={`/images/${currentLang}/slider1.png`}
+          />
+        </div>
+      )}
 
       <!-- Gallery Section -->
       {blogPost.gallery && blogPost.gallery.length > 0 && (
@@ -287,11 +330,33 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
     aspect-ratio: 16 / 9;
   }
 
+  .blog-detail__image-wrapper--bottom {
+    margin-top: 2rem;
+  }
+
   .blog-detail__image {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
+  }
+
+  .blog-detail__video-wrapper {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 16 / 9;
+    position: relative;
+  }
+
+  .blog-detail__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
   }
 
   /* ==================== Content Section (Yellow) ==================== */
