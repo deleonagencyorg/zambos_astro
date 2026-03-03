@@ -274,16 +274,17 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   .blog-detail__image-wrapper {
     width: 100%;
-    max-height: 560px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 16 / 9;
   }
 
   .blog-detail__image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
+    object-fit: cover;
   }
 
   /* ==================== Content Section (Yellow) ==================== */
@@ -346,12 +347,18 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   /* ==================== Story Text ==================== */
   .blog-detail__story-text {
-    font-size: 0.85rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.8;
     color: var(--color-text);
     border-left: 3px solid var(--color-primary);
     padding-left: 1rem;
     margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-detail__story-text {
+      font-size: 1.15rem;
+    }
   }
 
   .blog-detail__story-text--after {
