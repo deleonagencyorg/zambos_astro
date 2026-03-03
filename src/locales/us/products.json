@@ -50,8 +50,8 @@
         }
       ],
       "weight": [
-        "2.47oz",
-        "5.3oz"
+        "2.47oz - 70g",
+        "5.3oz - 150g"
       ],
       "category": "Plantain"
     },
@@ -75,9 +75,7 @@
         }
       ],
       "weight": [
-        "19g",
-        "36g",
-        "140g"
+        "4.9oz - 140g"
       ],
       "category": "Plantain"
     },
@@ -101,9 +99,9 @@
         }
       ],
       "weight": [
-        "2.47oz",
-        "5.3oz",
-        "10oz"
+        "2.47oz - 70g",
+        "5.3oz - 150g",
+        "10oz - 275g"
       ],
       "category": "Plantain"
     },
@@ -127,7 +125,7 @@
         }
       ],
       "weight": [
-        "5.3oz"
+        "5.3oz - 150g"
       ],
       "category": "Cassava"
     },
@@ -151,7 +149,7 @@
         }
       ],
       "weight": [
-        "5.3oz"
+        "5.3oz - 150g"
       ],
       "category": "Plantain"
     },
@@ -175,9 +173,9 @@
         }
       ],
       "weight": [
-        "2.29oz",
-        "4.9oz",
-        "9oz"
+        "2.29oz - 65g",
+        "4.9oz - 140g",
+        "9oz - 255g"
       ],
       "category": "Plantain"
     },
@@ -201,8 +199,8 @@
         }
       ],
       "weight": [
-        "70g",
-        "140g"
+        "2.47oz - 70g",
+        "5.3oz - 150g"
       ],
       "category": "Plantain"
     },
@@ -227,7 +225,7 @@
         }
       ],
       "weight": [
-        "5.3oz"
+        "5.3oz - 150g"
       ],
       "category": "Cassava"
     },
@@ -251,7 +249,8 @@
         }
       ],
       "weight": [
-        "All bags of chile limón zambos 1 oz per bag of zambos 18 oz total"
+        "All bags of chile limón zambos 1 oz per bag of zambos 18 oz total",
+        "1 oz = 28.4g"
       ],
       "category": "Multipack"
     },
@@ -275,7 +274,8 @@
         }
       ],
       "weight": [
-        "Net weight 16.8 oz  Contains 8 bags of 1 oz, 10 bags of 0.88 oz"
+        "Net weight 16.8 oz  Contains 8 bags of 1 oz (zambos chile limon, 10 bags of 0.88 oz (6 zambos salsa verde y 4 zambos originals)",
+        "1 oz = 28.4g & 0.88 oz = 25g"
       ],
       "category": "Multipack"
     }
