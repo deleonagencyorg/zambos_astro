@@ -6,13 +6,13 @@
   <meta charset="UTF-8">
   <script is:inline>
     (function() {
-      const COOKIE_NAME = 'user_country';
-      const LOCALE_COOKIE = 'user_locale';
-      const COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
-      const ENGLISH_COUNTRIES = ['US','GB','CA','AU','NZ','IE','ZA','JM','BZ','BS','BB','AG','DM','GD','KN','LC','VC','TT','GY'];
+      var COOKIE_NAME = 'user_country';
+      var LOCALE_COOKIE = 'user_locale';
+      var COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
+      var ENGLISH_COUNTRIES = ['US','GB','CA','AU','NZ','IE','ZA','JM','BZ','BS','BB','AG','DM','GD','KN','LC','VC','TT','GY'];
 
       function getCookie(name) {
-        const m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+        var m = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
         return m ? decodeURIComponent(m[1]) : null;
       }
 
@@ -21,14 +21,34 @@
       }
 
       function localeFromCountry(code) {
-        return ENGLISH_COUNTRIES.includes((code || '').toUpperCase()) ? 'us' : 'es';
+        return ENGLISH_COUNTRIES.indexOf((code || '').toUpperCase()) !== -1 ? 'us' : 'es';
       }
 
       function redirect(locale) {
         window.location.replace('/' + locale + '/');
       }
 
-      // 1. Cookie de locale ya guardada
+      function finalize(country, locale) {
+        setCookie(COOKIE_NAME, country || 'UNKNOWN', COOKIE_MAX_AGE);
+        setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
+        redirect(locale);
+      }
+
+      // Fallback externo: ipapi.co
+      function tryExternalGeo(fallbackLocale) {
+        fetch('https://ipapi.co/json/')
+          .then(function(r) { return r.json(); })
+          .then(function(d) {
+            var country = (d.country_code || '').toUpperCase();
+            var locale = country ? localeFromCountry(country) : fallbackLocale;
+            finalize(country || 'UNKNOWN', locale);
+          })
+          .catch(function() {
+            finalize('UNKNOWN', fallbackLocale);
+          });
+      }
+
+      // 1. Cookie de locale ya guardada y válida
       var savedLocale = getCookie(LOCALE_COOKIE);
       if (savedLocale === 'us' || savedLocale === 'es') {
         return redirect(savedLocale);
@@ -42,18 +62,22 @@
         return redirect(locale);
       }
 
-      // 3. Primera visita — llamar API de detección
+      // 3. Primera visita — llamar API interna (usa headers CDN en producción)
       fetch('/api/detect-locale')
         .then(function(r) { return r.json(); })
         .then(function(data) {
-          var country = data.country || 'UNKNOWN';
+          var country = (data.country || '').toUpperCase();
           var locale = data.defaultLocale || 'es';
-          setCookie(COOKIE_NAME, country, COOKIE_MAX_AGE);
-          setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
-          redirect(locale);
+          // Si la API interna no pudo detectar el país, intentar con ipapi.co
+          if (!country || country === 'UNKNOWN' || country === 'NULL') {
+            tryExternalGeo(locale);
+          } else {
+            finalize(country, locale);
+          }
         })
         .catch(function() {
-          redirect('es');
+          // API interna falló — intentar directamente con ipapi.co
+          tryExternalGeo('es');
         });
     })();
   </script>
