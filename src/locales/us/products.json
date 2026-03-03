@@ -207,7 +207,7 @@
     {
       "id": "zambos-yuquitas-chile-toreado",
       "name": "Zambos Yuquitas Chile Toreado",
-      "new": true,
+      "new": false,
       "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zamboschiletoreadous3.webp",
       "background_color": "#64A70B",
       "header_color": "#FFFFFF",

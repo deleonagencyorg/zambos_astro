@@ -29,6 +29,10 @@
     width: 80px;
     height: 80px;
   }
+
+  .amazon-pleca {
+    display: none !important;
+  }
 }
 
 /* Amazon Pleca Banner */
