@@ -77,7 +77,7 @@ const uniqueCategories = Array.from(new Set((products as any[]).map((p) => p.cat
         <div class="grid max-[319px]:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto" id="products-grid">
           {sortedProducts.map((product: any) => (
             <div 
-              class="product-card bg-[#FFF176] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative" 
+              class="product-card bg-[#FFF176] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 relative flex flex-col" 
               data-category={product.category} 
               transition:animate="fade"
             >
@@ -113,18 +113,18 @@ const uniqueCategories = Array.from(new Set((products as any[]).map((p) => p.cat
             </div>
 
             <!-- Contenido -->
-            <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6">
+            <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6 flex flex-col flex-1">
               <h3 class="text-lg sm:text-xl md:text-2xl font-black text-black mb-2 md:mb-3 uppercase leading-tight tracking-wide">
                 {product.name || product.title}
               </h3>
-              <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed">
+              <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed flex-1">
                 {product.short_description || product.description}
               </p>
               
               <!-- Botón Ver detalles - VERDE -->
               <a 
                 href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`} 
-                class="block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"
+                class="mt-auto block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"
               >
                 {pageAssets?.view_details || (currentLang === 'es' ? 'Ver detalles' : 'View Details')}
               </a>

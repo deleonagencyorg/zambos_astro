@@ -284,31 +284,14 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
+    aspect-ratio: 16 / 9;
   }
 
   .blog-detail__image {
     width: 100%;
-    height: auto;
-    max-height: 70vh;
+    height: 100%;
     display: block;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 768px) {
-    .blog-detail__image-wrapper {
-
-      width: fit-content;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    .blog-detail__image {
-      width: 100%;
-      max-width: 480px;
-    }
+    object-fit: cover;
   }
 
   /* ==================== Content Section (Yellow) ==================== */
@@ -372,7 +355,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   /* ==================== Story Text ==================== */
   .blog-detail__story-text {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: var(--color-text);
     border-left: 3px solid var(--color-primary);
@@ -382,7 +365,7 @@ const displayDate = formatDate(blogPost.date || blogPost.published_date);
 
   @media (min-width: 768px) {
     .blog-detail__story-text {
-      font-size: 1.1rem;
+      font-size: 1.25rem;
     }
   }
 
