@@ -6,9 +6,10 @@
   <meta charset="UTF-8">
   <script is:inline>
     (function() {
-      var COOKIE_NAME = 'user_country';
-      var LOCALE_COOKIE = 'user_locale';
-      var COOKIE_MAX_AGE = 60 * 60 * 24 * 30;
+      var TAG = '[geo-detect]';
+      var COOKIE_COUNTRY = 'user_country';
+      var COOKIE_LOCALE  = 'user_locale';
+      var COOKIE_MAX_AGE = 60 * 60 * 24 * 30; // 30 días
       var ENGLISH_COUNTRIES = ['US','GB','CA','AU','NZ','IE','ZA','JM','BZ','BS','BB','AG','DM','GD','KN','LC','VC','TT','GY'];
 
       function getCookie(name) {
@@ -21,64 +22,89 @@
       }
 
       function localeFromCountry(code) {
-        return ENGLISH_COUNTRIES.indexOf((code || '').toUpperCase()) !== -1 ? 'us' : 'es';
+        var c = (code || '').toUpperCase();
+        return ENGLISH_COUNTRIES.indexOf(c) !== -1 ? 'us' : 'es';
       }
 
-      function redirect(locale) {
+      function isValidCountry(code) {
+        return typeof code === 'string' && code.length === 2 && code !== 'XX';
+      }
+
+      function finalize(source, country, locale) {
+        console.log(TAG, 'source:', source, '| country detected:', country, '| locale:', locale);
+        setCookie(COOKIE_COUNTRY, country, COOKIE_MAX_AGE);
+        setCookie(COOKIE_LOCALE,  locale,  COOKIE_MAX_AGE);
+        console.log(TAG, 'cookies saved -> user_country=' + country + ', user_locale=' + locale);
         window.location.replace('/' + locale + '/');
       }
 
-      function finalize(country, locale) {
-        setCookie(COOKIE_NAME, country || 'UNKNOWN', COOKIE_MAX_AGE);
-        setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
-        redirect(locale);
+      // --- Fuente 3: api.country.is (fallback final) ---
+      function tryCountryIs() {
+        console.log(TAG, 'trying api.country.is ...');
+        fetch('https://api.country.is/')
+          .then(function(r) { return r.json(); })
+          .then(function(d) {
+            var country = (d.country || '').toUpperCase();
+            console.log(TAG, 'api.country.is responded:', country);
+            if (isValidCountry(country)) {
+              finalize('api.country.is', country, localeFromCountry(country));
+            } else {
+              console.warn(TAG, 'api.country.is gave no valid country, defaulting to es');
+              finalize('fallback', 'UNKNOWN', 'es');
+            }
+          })
+          .catch(function(err) {
+            console.warn(TAG, 'api.country.is failed:', err);
+            finalize('fallback', 'UNKNOWN', 'es');
+          });
       }
 
-      // Fallback externo: ipapi.co
-      function tryExternalGeo(fallbackLocale) {
+      // --- Fuente 2: ipapi.co ---
+      function tryIpApiCo() {
+        console.log(TAG, 'trying ipapi.co ...');
         fetch('https://ipapi.co/json/')
           .then(function(r) { return r.json(); })
           .then(function(d) {
             var country = (d.country_code || '').toUpperCase();
-            var locale = country ? localeFromCountry(country) : fallbackLocale;
-            finalize(country || 'UNKNOWN', locale);
+            console.log(TAG, 'ipapi.co responded:', country, '| ip:', d.ip);
+            if (isValidCountry(country)) {
+              finalize('ipapi.co', country, localeFromCountry(country));
+            } else {
+              console.warn(TAG, 'ipapi.co gave no valid country, trying api.country.is ...');
+              tryCountryIs();
+            }
           })
-          .catch(function() {
-            finalize('UNKNOWN', fallbackLocale);
+          .catch(function(err) {
+            console.warn(TAG, 'ipapi.co failed:', err, '| trying api.country.is ...');
+            tryCountryIs();
           });
       }
 
+      // --- Flujo principal ---
+      console.log(TAG, 'starting geo detection ...');
+
       // 1. Cookie de locale ya guardada y válida
-      var savedLocale = getCookie(LOCALE_COOKIE);
+      var savedLocale = getCookie(COOKIE_LOCALE);
       if (savedLocale === 'us' || savedLocale === 'es') {
-        return redirect(savedLocale);
+        var savedCountry = getCookie(COOKIE_COUNTRY);
+        console.log(TAG, 'cookie hit -> locale:', savedLocale, '| country:', savedCountry);
+        window.location.replace('/' + savedLocale + '/');
+        return;
       }
 
-      // 2. Cookie de país ya guardada
-      var savedCountry = getCookie(COOKIE_NAME);
-      if (savedCountry && savedCountry !== 'UNKNOWN') {
+      // 2. Cookie de país guardada y válida (pero sin cookie de locale)
+      var savedCountry = getCookie(COOKIE_COUNTRY);
+      if (savedCountry && isValidCountry(savedCountry)) {
         var locale = localeFromCountry(savedCountry);
-        setCookie(LOCALE_COOKIE, locale, COOKIE_MAX_AGE);
-        return redirect(locale);
+        console.log(TAG, 'country cookie hit:', savedCountry, '-> locale:', locale);
+        setCookie(COOKIE_LOCALE, locale, COOKIE_MAX_AGE);
+        window.location.replace('/' + locale + '/');
+        return;
       }
 
-      // 3. Primera visita — llamar API interna (usa headers CDN en producción)
-      fetch('/api/detect-locale')
-        .then(function(r) { return r.json(); })
-        .then(function(data) {
-          var country = (data.country || '').toUpperCase();
-          var locale = data.defaultLocale || 'es';
-          // Si la API interna no pudo detectar el país, intentar con ipapi.co
-          if (!country || country === 'UNKNOWN' || country === 'NULL') {
-            tryExternalGeo(locale);
-          } else {
-            finalize(country, locale);
-          }
-        })
-        .catch(function() {
-          // API interna falló — intentar directamente con ipapi.co
-          tryExternalGeo('es');
-        });
+      // 3. Sin cookie válida → detectar con ipapi.co (primero) → api.country.is (fallback)
+      console.log(TAG, 'no valid cookie found, starting fresh detection');
+      tryIpApiCo();
     })();
   </script>
 </head>

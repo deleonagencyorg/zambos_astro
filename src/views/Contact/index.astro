@@ -89,13 +89,13 @@ const headerColors = {
                 </h3>
                 
                 <div class="flex items-start space-x-3">
-                  <p id="officeAddress" class="text-white leading-relaxed font-semibold ">  {`+ ${contact.offices.locations["+504"].address}`}</p>
+                  <p id="officeAddress" class="text-white leading-relaxed font-semibold text-lg md:text-xl lg:text-2xl">  {`+ ${contact.offices.locations["+504"].address}`}</p>
                 </div>
                 
                 <div class="flex items-center space-x-3">
                   <div id="officePhones" class="flex flex-col text-white">
                     {contact.offices.locations["+504"].phones.map((phone: string) => (
-                     <div> <a href={`tel:${phone}`} class="text-white hover:text-primary transition-colors">
+                     <div> <a href={`tel:${phone}`} class="text-white hover:text-primary transition-colors font-semibold text-lg md:text-xl lg:text-2xl">
                         {phone}
                       </a></div>
                     ))}

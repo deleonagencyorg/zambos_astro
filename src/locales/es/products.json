@@ -57,7 +57,29 @@
         "140g",
         "500g"
       ],
-      "category": "Plátano"
+      "category": "Plátano",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño de ración: 28g. Raciones por envase: 1.18",
+        "rows": [
+          { "label": "Kcal de Energía", "value": "600 KJ (140 Kcal)" },
+          { "label": "Energía de Grasa", "value": "250 KJ (60 Kcal)" },
+          { "label": "Grasa Total - VD", "value": "6g (8%)" },
+          { "label": "Grasa Saturada - V.D.", "value": "3g (15%)" },
+          { "label": "Grasa Trans - V.D.", "value": "0g" },
+          { "label": "Colesterol", "value": "0g (0%)" },
+          { "label": "Sodio - V.D.", "value": "310 mg (13%)" },
+          { "label": "Carbohidrato Total", "value": "19g (7%)" },
+          { "label": "Fibra Dietética", "value": "1g (4%)" },
+          { "label": "Contiene menos de g de Azúcar", "value": "1g" },
+          { "label": "Proteínas", "value": "1g" },
+          { "label": "Vitamina D", "value": "0%" },
+          { "label": "Hierro", "value": "2%" },
+          { "label": "Calcio", "value": "0%" },
+          { "label": "Potasio", "value": "6%" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-yuquitas-con-ajo-parmesano",
@@ -84,7 +106,29 @@
         "130g"
       ],
       "category": "Yuquitas",
-      "new": true
+      "new": true,
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-platano-ceviche",
@@ -110,7 +154,29 @@
         "33g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plátano",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-platano-salsa-verde",
@@ -135,7 +201,29 @@
         "70g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plátano",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-platano-con-chicharron-del-rancho",
@@ -160,7 +248,29 @@
         "21g",
         "138g"
       ],
-      "category": "Plátano"
+      "category": "Plátano",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-platano-maduritos",
@@ -187,7 +297,29 @@
         "33g",
         "140g"
       ],
-      "category": "Plátano"
+      "category": "Plátano",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-platano-originales",
@@ -215,35 +347,29 @@
         "70g",
         "140g"
       ],
-      "category": "Plátano"
-    },
-    {
-      "id": "zambos-tajin",
-      "name": "Zambos Tajin",
-      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tajin-2.webp",
-      "background_color": "#64A70B",
-      "header_color": "#FFFFFF",
-      "text_color": "#64A70B",
-      "header_background": "#64A70B",
-      "header_text_color": "#FFFFFF",
-      "color_button": "#64A70B",
-      "description": "Plátano premium sazonado con chile y limón.",
-      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
-      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
-      "sizes": [
-        {
-          "value": "150",
-          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-tajin-2.webp"
-        }
-      ],
-      "weight": [
-        "19g",
-        "21g",
-        "33g",
-        "70g",
-        "140g"
-      ],
-      "category": "Plátano"
+      "category": "Plátano",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-yuquitas-chile-toreado",
@@ -268,7 +394,29 @@
         "16g",
         "130g"
       ],
-      "category": "Yuquitas"
+      "category": "Yuquitas",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-yuquitas-originales",
@@ -293,14 +441,29 @@
         "16g",
         "130g"
       ],
-      "category": "Yuquitas"
+      "category": "Yuquitas",
+      "nutrition": {
+        "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 0.43",
+        "rows": [
+          { "label": "Energía", "value": "700 kJ (170 kcal)" },
+          { "label": "Energía de grasa", "value": "500 kJ (120 kcal)" },
+          { "label": "Grasa total", "value": "12 g (15% VD)" },
+          { "label": "Grasa saturada", "value": "6 g (30% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "370 mg (16% VD)" },
+          { "label": "Carbohidratos totales", "value": "13 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<1 g (2% VD)" },
+          { "label": "Azúcares", "value": "0 g" },
+          { "label": "Proteína", "value": "2 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "0% VD" },
+          { "label": "Hierro", "value": "0% VD" },
+          { "label": "Potasio", "value": "0% VD" }
+        ],
+        "disclaimer": ""
+      }
     }
-
-  
-
-
-  
-   
-    
   ]
 }
