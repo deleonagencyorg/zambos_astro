@@ -39,9 +39,12 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => nor
   <div class="container mx-auto px-4 py-12 relative z-10">
     <!-- Encabezado -->
     <div class="text-center mb-8">
-      <h1 class="text-3xl sm:text-5xl md:text-7xl font-black italic text-white mb-3 tracking-wide font-title">
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-black italic text-white mb-2 tracking-wide font-title">
         {currentLang === 'es' ? 'PRODUCTOS' : 'PRODUCTS'}
       </h1>
+      <p class="text-white text-base sm:text-lg md:text-xl font-bold uppercase tracking-widest mb-3">
+        #1 Plantain Chip in USA
+      </p>
       <p class="text-white text-lg md:text-2xl italic">
         <span>Discover all our </span>
         <span class="text-us-green">variety of flavors</span>
@@ -114,10 +117,10 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => nor
 
             <!-- Contenido -->
             <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6">
-              <h3 class="text-lg sm:text-xl md:text-xl font-black text-white mb-2 md:mb-3 uppercase leading-tight tracking-wide">
+              <h3 class="text-sm sm:text-base md:text-lg font-black text-white mb-2 md:mb-3 uppercase leading-tight tracking-wide">
                 {product.name || product.title}
               </h3>
-              <p class="text-white text-sm md:text-sm mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed">
+              <p class="text-white text-xs sm:text-sm md:text-sm mb-3 md:mb-5 md:line-clamp-2 leading-relaxed">
                 {product.short_description || product.description}
               </p>
               
