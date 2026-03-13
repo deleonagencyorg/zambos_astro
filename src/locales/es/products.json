@@ -81,6 +81,36 @@
         "disclaimer": ""
       }
     },
+        {
+      "id": "zambos-camote-con-sal-marina",
+      "name": "Zambos Camote Con Sal Marina",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos-camote.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Zambos de camote con sal marina.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_yuquita_ajo_parmesano.webp"
+        }
+      ],
+      "weight": [
+        "19g",
+        "100g"
+      ],
+      "category": "Camote",
+      "new": true,
+      "nutrition": {
+        "title": "Información nutricional",
+        "disclaimer": ""
+      }
+    },
     {
       "id": "zambos-yuquitas-con-ajo-parmesano",
       "name": "Zambos Yuquitas Con Ajo Parmesano",
