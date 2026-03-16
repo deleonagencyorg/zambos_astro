@@ -108,6 +108,24 @@
       "new": true,
       "nutrition": {
         "title": "Información nutricional",
+        "serving": "Tamaño porción: 1oz (28g). Porciones por envase: 1.18",
+        "rows": [
+          { "label": "Energía", "value": "650 kJ (160 kcal)" },
+          { "label": "Energía de grasa", "value": "400 kJ (90 kcal)" },
+          { "label": "Grasa total", "value": "10 g (13% VD)" },
+          { "label": "Grasa saturada", "value": "5 g (25% VD)" },
+          { "label": "Grasa trans", "value": "0 g (0% VD)" },
+          { "label": "Colesterol", "value": "0 mg (0% VD)" },
+          { "label": "Sodio", "value": "110 mg (5% VD)" },
+          { "label": "Carbohidratos totales", "value": "15 g (5% VD)" },
+          { "label": "Fibra dietética", "value": "<2 g (7% VD)" },
+          { "label": "Azúcares", "value": "4 g" },
+          { "label": "Proteína", "value": "1 g" },
+          { "label": "Vitamina D", "value": "0% VD" },
+          { "label": "Calcio", "value": "4% VD" },
+          { "label": "Hierro", "value": "4% VD" },
+          { "label": "Potasio", "value": "8% VD" }
+        ],
         "disclaimer": ""
       }
     },
