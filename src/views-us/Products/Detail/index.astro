@@ -200,11 +200,11 @@ if (allProductsArray.length > 1) {
               <span class="text-2xl sm:text-3xl md:text-4xl font-semibold text-us-red">
                 {currentLang === 'es' ? 'Descripción' : 'Description'}
               </span>
-              <span class="accordion-icon text-4xl font-light transition-transform duration-300">−</span>
+              <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-us-red md:text-white">−</span>
             </button>
             <div class="accordion-content overflow-hidden transition-all duration-300 max-h-96" data-content="description">
               <p 
-                class="pt-4 text-base md:text-lg leading-relaxed md:text-white text-us-green"
+                class="pt-4 text-base md:text-lg leading-relaxed text-white"
                 
               >
                 {safeProduct.description}
@@ -219,14 +219,14 @@ if (allProductsArray.length > 1) {
                 class="accordion-trigger w-full flex justify-between items-center text-left"
                 data-accordion="nutrition"
               >
-                <span class="text-2xl sm:text-3xl md:text-3xl font-semibold text-us-green md:text-us-red">
+                <span class="text-2xl sm:text-3xl md:text-3xl font-semibold text-us-red">
                   {currentLang === 'es' ? 'Datos nutricionales' : 'Nutritional information'}
                 </span>
-                <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-us-green md:text-white">+</span>
+                <span class="accordion-icon text-4xl font-light transition-transform duration-300 text-us-red md:text-white">+</span>
               </button>
               <div class="accordion-content overflow-hidden transition-all duration-300 max-h-0" data-content="nutrition">
                 <div 
-                  class="pt-4 text-base md:text-lg leading-relaxed text-us-green md:text-white"
+                  class="pt-4 text-base md:text-lg leading-relaxed text-white"
                 >
                   {nutritionIsString && <p>{nutritionData}</p>}
 
