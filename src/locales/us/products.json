@@ -53,7 +53,29 @@
         "2.47oz - 70g",
         "5.3oz - 150g"
       ],
-      "category": "Plantain"
+      "category": "Plantain",
+        "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 1oz (28g). Servings per container: 1.18",
+        "rows": [
+          { "label": "Energy", "value": "601 kJ (140 kcal)" },
+          { "label": "Energy from fat", "value": "250 kJ (60 kcal)" },
+          { "label": "Total fat", "value": "7 g (9% DV)" },
+          { "label": "Saturated fat", "value": "3 g (15% DV)" },
+          { "label": "Trans fat", "value": "0 g (0% DV)" },
+          { "label": "Cholesterol", "value": "0 mg (0% DV)" },
+          { "label": "Sodium", "value": "105 mg (5% DV)" },
+          { "label": "Total carbohydrates", "value": "19 g (7% DV)" },
+          { "label": "Dietary fiber", "value": "<1 g (4% DV)" },
+          { "label": "Sugars", "value": "1 g" },
+          { "label": "Protein", "value": "1 g" },
+          { "label": "Vitamin D", "value": "0% DV" },
+          { "label": "Calcium", "value": "0% DV" },
+          { "label": "Iron", "value": "0% DV" },
+          { "label": "Potassium", "value": "4% DV" }
+        ],
+        "disclaimer": ""
+      }
     },
     {
       "id": "zambos-maduritos",
@@ -80,7 +102,7 @@
       "category": "Plantain",
       "nutrition": {
         "title": "Nutrition details",
-        "serving": "Serving size: 1oz (28g). Servings per container: 0.43",
+        "serving": "Serving size: 1oz (28g). Servings per container: 1.18",
         "rows": [
           { "label": "Energy", "value": "700 kJ (170 kcal)" },
           { "label": "Energy from fat", "value": "500 kJ (120 kcal)" },
