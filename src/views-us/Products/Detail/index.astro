@@ -239,30 +239,29 @@ if (allProductsArray.length > 1) {
                   )}
 
                   {nutritionObj && (
-                    <div class="space-y-6">
-                      <div class="grid grid-cols-1  gap-x-10 gap-y-4">
-                     
-                        {nutritionObj.serving && (
-                          <div>
-                            <div class="text-sm uppercase tracking-wider opacity-80">{currentLang === 'es' ? 'Porción' : 'Serving'}</div>
-                            <div class="font-semibold">{String(nutritionObj.serving)}</div>
-                          </div>
-                        )}
-                      </div>
+                    <div class="space-y-4">
+                      {/* Serving info */}
+                      {nutritionObj.serving && (
+                        <div class="pb-2">
+                          <span class="text-xs uppercase tracking-widest font-bold opacity-70 block mb-1">
+                            {currentLang === 'es' ? 'Porción' : 'Serving'}
+                          </span>
+                          <span class="font-semibold text-sm">{String(nutritionObj.serving)}</span>
+                        </div>
+                      )}
+                      {/* Nutrition rows table */}
                       {nutritionRows.length > 0 && (
-                        <div class="rounded-xl bg-us-red p-4 sm:p-5">
-                          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-3">
-                            {nutritionRows.map((r) => (
-                              <div class="flex justify-between gap-6">
-                                <span class="font-semibold">{r.label}</span>
-                                <span class="opacity-90">{r.value}</span>
-                              </div>
-                            ))}
-                          </div>
+                        <div class="rounded-xl bg-us-red overflow-hidden border border-white/20">
+                          {nutritionRows.map((r, i) => (
+                            <div class={`flex items-center justify-between px-4 py-3 gap-4 ${i % 2 === 0 ? 'bg-white/10' : ''} ${i < nutritionRows.length - 1 ? 'border-b border-white/15' : ''}`}>
+                              <span class="font-semibold text-sm leading-snug flex-1 min-w-0">{r.label}</span>
+                              <span class="text-sm text-right font-medium whitespace-nowrap flex-shrink-0 opacity-95">{r.value}</span>
+                            </div>
+                          ))}
                         </div>
                       )}
                       {nutritionObj.disclaimer && (
-                        <p class="text-sm opacity-90">{String(nutritionObj.disclaimer)}</p>
+                        <p class="text-xs opacity-70 leading-relaxed pt-1">{String(nutritionObj.disclaimer)}</p>
                       )}
                     </div>
                   )}
