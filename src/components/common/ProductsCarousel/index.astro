@@ -83,12 +83,18 @@ const productsItems = Array.isArray(products) ? products : [];
 
                 <div class="right-content">
                   <div class="product-image-wrapper">
-                    <img 
-                      src={product.image}
-                      alt={product.name}
-                      class="product-image"
-                      loading="lazy"
-                    />
+                    <a
+                      href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`}
+                      class="product-image-link"
+                      data-no-swipe="true"
+                    >
+                      <img 
+                        src={product.image}
+                        alt={product.name}
+                        class="product-image"
+                        loading="lazy"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -353,6 +359,36 @@ const productsItems = Array.isArray(products) ? products : [];
     .product-image-wrapper {
       max-width: 300px;
     }
+
+    /* Ensure no darker panel shows behind the carousel on mobile */
+    .product-slide,
+    .products-carousel,
+    .product-image-wrapper {
+      background: transparent !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+    }
+    /* Extra defensive rules to remove any pseudo-elements, backgrounds or image shadows */
+    .product-slide::before,
+    .product-slide::after,
+    .products-carousel::before,
+    .products-carousel::after {
+      content: none !important;
+      display: none !important;
+      background: transparent !important;
+    }
+
+    .product-image {
+      filter: none !important;
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    /* Force the slide to use the page background color (bg-primary) on mobile so no darker overlay shows */
+    .product-slide {
+      background: inherit !important;
+      background-color: transparent !important;
+    }
   }
 
   /* Flechas de navegación */
@@ -393,10 +429,23 @@ const productsItems = Array.isArray(products) ? products : [];
     display: none;
   }
 
+  /* Force arrow icon color (only the inner chevrons), keep white circle background */
+  .product-arrow svg polyline,
+  .product-arrow svg path {
+    stroke: #0DB14A; /* green */
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
   @media (max-width: 768px) {
     .product-arrow {
-      width: 40px;
-      height: 40px;
+      width: 36px;
+      height: 36px;
+      top: 30%;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
     }
 
     .product-arrow-prev {
@@ -408,8 +457,26 @@ const productsItems = Array.isArray(products) ? products : [];
     }
 
     .product-arrow svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
+    }
+    /* Slightly thinner arrow stroke on tablet/mobile */
+    .product-arrow svg polyline,
+    .product-arrow svg path {
+      stroke-width: 2.2;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .product-arrow {
+      width: 32px;
+      height: 32px;
+      top: 28%;
+    }
+
+    .product-arrow svg {
+      width: 14px;
+      height: 14px;
     }
   }
 
@@ -430,6 +497,11 @@ const productsItems = Array.isArray(products) ? products : [];
 
     .product-image-wrapper {
       max-width: 250px;
+    }
+    /* Small mobile: make arrows a touch smaller and stroke thinner */
+    .product-arrow svg polyline,
+    .product-arrow svg path {
+      stroke-width: 1.8;
     }
   }
 </style>

@@ -39,9 +39,11 @@ const instagramPosts = locale === 'es'
           frameborder="0"
           scrolling="no"
         ></iframe>
-        <a href={post.postUrl} class="bg-red text-white px-4 py-2 rounded-lg block text-center mt-2" target="_blank" rel="noopener noreferrer">
-          {locale === 'es' ? 'Ver post' : 'View post'}
-        </a>
+        {post.embedUrl && !post.embedUrl.includes('/reel/') && locale === 'es' ? (
+          <a href={post.postUrl} class="bg-red text-white px-4 py-2 rounded-lg block text-center mt-2" target="_blank" rel="noopener noreferrer">
+            Ver post
+          </a>
+        ) : null}
       </div>
      
     ))}

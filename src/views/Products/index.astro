@@ -113,11 +113,13 @@ const uniqueCategories = Array.from(new Set((products as any[]).map((p) => p.cat
             </div>
 
             <!-- Contenido -->
-            <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6 flex flex-col flex-1">
-              <h3 class="text-lg sm:text-xl md:text-2xl font-black text-black mb-2 md:mb-3 uppercase leading-tight tracking-wide">
-                {product.name || product.title}
+            <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6 flex flex-col flex-grow">
+              <h3 class="text-lg sm:text-xl md:text-2xl font-black text-black mb-2 md:mb-3 uppercase leading-tight tracking-wide h-[44px] sm:h-[52px] md:h-[64px] flex items-start">
+                <span class={currentLang === 'es' ? 'line-clamp-2 font-title font-black text-black' : 'line-clamp-2 font-black text-black'}>
+                  {product.name || product.title}
+                </span>
               </h3>
-              <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-5 line-clamp-2 min-h-[44px] sm:min-h-[52px] leading-relaxed flex-1">
+              <p class="text-gray-700 text-sm md:text-base mb-3 md:mb-5 line-clamp-2 leading-relaxed h-[40px] sm:h-[44px] md:h-[48px]">
                 {product.short_description || product.description}
               </p>
               <a 
