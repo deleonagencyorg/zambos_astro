@@ -54,12 +54,18 @@ const productsItems = Array.isArray(products) ? products : [];
                   </a>
                 </div>
                 <div class="product-us-right">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    class="product-us-img"
-                    loading="lazy"
-                  />
+                  <a
+                    href={`/${currentLang}/products/${product.id}`}
+                    class="product-us-img-link"
+                    data-no-swipe="true"
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      class="product-us-img"
+                      loading="lazy"
+                    />
+                  </a>
                 </div>
               </div>
             </div>
@@ -191,6 +197,16 @@ const productsItems = Array.isArray(products) ? products : [];
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .product-us-img-link {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .product-us-img-link:hover {
+    transform: scale(1.03);
   }
 
   .product-us-img {
