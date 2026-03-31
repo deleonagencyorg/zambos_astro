@@ -44,6 +44,9 @@ const {
         const isVideo = slide.desktop?.toLowerCase().endsWith('.mp4') || 
                        slide.desktop?.toLowerCase().endsWith('.webm');
         const slideId = `slide-${index}`;
+        const shouldOpenNewTab = !!slide.isLink;
+        const linkTarget = shouldOpenNewTab ? "_blank" : undefined;
+        const relAttr = shouldOpenNewTab ? "noopener noreferrer" : undefined;
         
         return (
           <div class="swiper-slide" id={slideId}>
@@ -64,7 +67,7 @@ const {
                   </video>
                 </div>
               ) : slide.link && slide.link !== '#' ? (
-                <a href={slide.link} class="slide-link-wrapper">
+                <a href={slide.link} class="slide-link-wrapper" target={linkTarget} rel={relAttr}>
                   <!-- Mobile: 0px hasta 768px -->
                   <div 
                     class="image-wrapper mobile-only"
@@ -157,7 +160,7 @@ const {
                     {slide.title && <h1 class={`slide-title ${textColor}`}>{slide.title}</h1>}
                     {slide.subtitle && <p class={`slide-subtitle ${textColor}`}>{slide.subtitle}</p>}
                     {slide.link && (
-                      <a href={slide.link} class="slide-link">
+                      <a href={slide.link} class="slide-link" target={linkTarget} rel={relAttr}>
                         <span>Ver más</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <line x1="5" y1="12" x2="19" y2="12"></line>

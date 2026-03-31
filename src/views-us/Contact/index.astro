@@ -32,6 +32,11 @@ const locale = currentLang || getLocale();
 // Get contact data from locale
 const contact = locale === 'es' ? contactEs : contactEn;
 
+// Get social media URLs
+const instagramUrl = t('social_media.instagram.url', { namespace: 'common', locale: currentLang });
+const facebookUrl = t('social_media.facebook.url', { namespace: 'common', locale: currentLang });
+const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: currentLang });
+
 // Meta information
 const title = contact.title;
 const metaDescription = contact.description;
@@ -67,199 +72,54 @@ const headerColors = {
         <FormContact currentLang={locale} />
       </div>
     </div>
-    
-    <!-- Offices Section -->
-    <div class="container mx-auto  p-8" data-contact-offices data-contact-locations={JSON.stringify(contact.offices.locations)}>
-      <h2 class="text-us-green titles">
-        {contact.offices.title}
-      </h2>
-    
-      
-      <!-- Tabs and Office Info -->
-      <div class="flex flex-col mb-4">
-        <!-- Office Details -->
-        <div class="order-2 w-[100%] mx-auto">
-          <div id="officeInfo" class="rounded-2xl p-8 ">
-            <div class="flex flex-col lg:flex-row justify-between items-center">
-              <div class=" space-y-4">
-                <h3 id="officeName" class="text-us-green titles">
-                  {contact.offices.locations["+504"].name}
-                </h3>
-                
-                <div class="flex items-start space-x-3">
-                  <p id="officeAddress" class="text-us-green leading-relaxed font-semibold ">  {`+ ${contact.offices.locations["+504"].address}`}</p>
-                </div>
-                
-                <div class="flex items-center space-x-3">
-                  <div id="officePhones" class="flex flex-col text-us-green">
-                    {contact.offices.locations["+504"].phones.map((phone: string) => (
-                     <div> <a href={`tel:${phone}`} class="text-us-green hover:text-us-red transition-colors">
-                        {phone}
-                      </a></div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-           
-            </div>
-          </div>
-        </div>
-        
-        <!-- Map and Tabs -->
-        <div class="order-1 mt-4">
-          <!-- Country Tabs -->
-          <div class="mb-6 flex flex-wrap justify-start gap-2" data-country-tabs-container>
-          {Object.entries(contact.offices.locations).map(([countryCode, location]: [string, any], index: number) => (
-            <button 
-              data-country-code={countryCode}
-              class={`country-tab px-5 py-4 text-white uppercase text-xs  transition-all duration-300 flex items-center justify-center gap-1
-                ${index === 0 
-                  ? 'h-[54px] bg-us-red opacity-100 border border-us-red border-[1px] rounded-full ' 
-                  : 'h-[54px] bg-white opacity-75 hover:opacity-100 border-[1px] border-us-red text-us-red rounded-full'
-                }`}
-            >
-              {location.tab}
-            </button>
-          ))}
-        </div>
-          
-          <!-- Map -->
-          <div class="bg-gradient-to-br  mx-auto bg-white rounded-2xl p-6 shadow-lg mb-4">
-            <div class="w-full  overflow-hidden rounded-xl" style="height: 500px;">
-              <!-- Container for all map iframes -->
-              <div id="maps-container" style="width: 100%; height: 100%;">
-                {Object.entries(contact.offices.locations).map(([countryCode, location]: [string, any], index: number) => (
-                  <div 
-                    data-map-country={countryCode}
-                    style={`width: 100%; height: 100%; ${index === 0 ? 'display: block;' : 'display: none;'}`}
-                  >
-                    <iframe
-                      src={location.mapEmbed}
-                      width="100%"
-                      height="100%"
-                      frameborder="0"
-                      allowfullscreen="allowfullscreen"
-                      aria-hidden="false"
-                      style="width: 100%; height: 100%; border: 0;"
-                      title={`${location.name} Map`}
-                    ></iframe>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
+
+  <!-- Visit us at section (copied exactly from Our History, with added top padding) -->
+  <section class="flex flex-col  bg-white pt-12" >
+    <div class="container text-center">
+      <h2 class="text-us-green text-2xl ">Visit us at:</h2>
+      <div class="flex items-center justify-center gap-4 mt-5">
+        <a
+          href={instagramUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          class="text-[#1a3a1a] hover:opacity-70 transition"
+        >
+          <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
+          </svg>
+        </a>
+
+        <a
+          href={facebookUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          class="text-[#1a3a1a] hover:opacity-70 transition"
+        >
+          <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H16l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+
+        <a
+          href={tiktokUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+          class="text-[#1a3a1a] hover:opacity-70 transition"
+        >
+          <svg class="w-9 h-9" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21 8.3a6.7 6.7 0 0 1-4.3-1.5v8.6a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2.1 2.7V2h3.3A6.7 6.7 0 0 0 21 6.3v2z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="flex justify-center items-center mt-12">
+        <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/contactus.webp" alt="Contac Us Zambos" class="mx-2 w-1/3 max-w-[360px]" />
+        <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/nuevologodinant.webp" alt="Dinant" class="mx-2 w-1/5 max-w-[220px]" />
       </div>
     </div>
-
-    <script is:inline data-astro-rerun>
-      (function () {
-        'use strict';
-
-        function initializeCountryTabs() {
-          const root = document.querySelector('[data-contact-offices]');
-          if (!(root instanceof HTMLElement)) return;
-
-          const rawLocations = root.getAttribute('data-contact-locations') || '{}';
-          let contactData = {};
-          try {
-            contactData = JSON.parse(rawLocations);
-          } catch (err) {
-            console.error('Invalid contact locations JSON:', err);
-            contactData = {};
-          }
-
-          const tabs = root.querySelectorAll('.country-tab');
-          const officeName = root.querySelector('#officeName');
-          const officeAddress = root.querySelector('#officeAddress');
-          const officePhones = root.querySelector('#officePhones');
-          const mapContainers = root.querySelectorAll('[data-map-country]');
-
-          function updateOfficeInfo(countryCode) {
-            const office = contactData[countryCode];
-            if (!office) return;
-
-            if (officeName) officeName.textContent = office.name;
-            if (officeAddress) officeAddress.textContent = `+ ${office.address}`;
-
-            if (officePhones) {
-              officePhones.innerHTML = '';
-              office.phones.forEach((phone) => {
-                const phoneContainer = document.createElement('div');
-                const phoneLink = document.createElement('a');
-                phoneLink.href = `tel:${phone}`;
-                phoneLink.textContent = `+${phone}`;
-                phoneLink.className = 'text-white hover:text-primary font-medium font-semibold transition-colors';
-                phoneContainer.appendChild(phoneLink);
-                officePhones.appendChild(phoneContainer);
-              });
-            }
-
-            mapContainers.forEach((container) => {
-              container.style.display = 'none';
-            });
-
-            const selectedMap = root.querySelector(`[data-map-country="${countryCode}"]`);
-            if (selectedMap) selectedMap.style.display = 'block';
-          }
-
-          function handleTabSelection(tab) {
-            tabs.forEach((t) => {
-              if (t === tab) {
-                t.className = `country-tab px-10 py-4 text-white uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-us-red opacity-100 border border-us-red border-[1px] rounded-full`;
-              } else {
-                t.className = `country-tab px-10 py-4 uppercase text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2.5 h-[54px] bg-white opacity-75 hover:opacity-100 border-[1px] border-us-red text-us-red rounded-full`;
-              }
-            });
-
-            const countryCode = tab.getAttribute('data-country-code');
-            if (countryCode) updateOfficeInfo(countryCode);
-          }
-
-          // Re-bind direct handlers every init (overwrites previous)
-          tabs.forEach((tab, index) => {
-            tab.onclick = (e) => {
-              if (e && typeof e.preventDefault === 'function') e.preventDefault();
-              const now = Date.now();
-              const lastTouch = Number(root.dataset.lastTouch || '0');
-              if (now - lastTouch < 500) return;
-              handleTabSelection(tab);
-            };
-
-            tab.ontouchend = (e) => {
-              if (e && typeof e.preventDefault === 'function') e.preventDefault();
-              root.dataset.lastTouch = String(Date.now());
-              handleTabSelection(tab);
-            };
-
-            if (index === 0) {
-              // Ensure first tab initial state
-              handleTabSelection(tab);
-            }
-          });
-        }
-
-        const safeInit = () => {
-          try {
-            initializeCountryTabs();
-          } catch (err) {
-            console.error('Error initializing country tabs:', err);
-          }
-        };
-
-        document.addEventListener('astro:page-load', safeInit);
-        document.addEventListener('astro:after-swap', safeInit);
-        window.addEventListener('load', safeInit);
-
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', safeInit, { once: true });
-        } else {
-          safeInit();
-        }
-
-        setTimeout(safeInit, 0);
-      })();
-    </script>
-  </div>
+  </section>
 
 </MainLayout>
