@@ -44,6 +44,8 @@ const {
         const isVideo = slide.desktop?.toLowerCase().endsWith('.mp4') || 
                        slide.desktop?.toLowerCase().endsWith('.webm');
         const slideId = `slide-${index}`;
+        const linkTarget = index === 0 ? "_blank" : undefined;
+        const relAttr = index === 0 ? "noopener noreferrer" : undefined;
         
         return (
           <div class="swiper-slide" id={slideId}>
@@ -64,7 +66,7 @@ const {
                   </video>
                 </div>
               ) : slide.link && slide.link !== '#' ? (
-                <a href={slide.link} class="slide-link-wrapper">
+                <a href={slide.link} class="slide-link-wrapper" target={linkTarget} rel={relAttr}>
                   <!-- Mobile: 0px hasta 768px -->
                   <div 
                     class="image-wrapper mobile-only"
