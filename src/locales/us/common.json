@@ -66,7 +66,16 @@
     "slidermask": "https://snack.yummiespromociones.com/snacksyummies/BGHeader_1_.webp",
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
-
+      {
+        "id": "slide-soccer",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-soccer-or.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-soccer-mob.webp",
+        "alt": "Zambos Soccer",
+        "title": "",
+        "description": "",
+        "link": "https://zambos-soccer.com",
+        "isLink": true
+      },
        {
         "id": "slide0",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banneruszambos.webp",
