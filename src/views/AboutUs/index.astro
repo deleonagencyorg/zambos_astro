@@ -81,12 +81,34 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
 
                 <div class="w-full md:w-[50%] flex justify-center md:justify-end pt-8 md:pt-24">
                   <!-- Container amarillo -->
-                  <div class="bg-[#FFED7A] rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 flex items-center justify-center w-full max-w-[583px] aspect-[583/400]">
+                  <div class="bg-[#FFED7A] rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 flex items-center justify-center w-full max-w-[583px] aspect-[583/400] relative">
                     <LazyImage 
                       class="rounded-2xl transform hover:scale-105 transition-transform duration-300 object-contain object-center w-full h-full max-w-[450px] max-h-[450px]" 
                       src={item.image} 
                       alt={item.title ?? item.year ?? 'about-us item'}
                     />
+
+                    {currentLang === 'es' && (
+                      <>
+                        <button 
+                          class="mobile-prev-btn nav-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-quinary text-black rounded-full w-10 h-10 md:hidden z-40 flex items-center justify-center shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                          aria-label="Anterior"
+                        >
+                          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                          </svg>
+                        </button>
+
+                        <button 
+                          class="mobile-next-btn nav-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-quinary text-black rounded-full w-10 h-10 md:hidden z-40 flex items-center justify-center shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                          aria-label="Siguiente"
+                        >
+                          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                          </svg>
+                        </button>
+                      </>
+                    )}
                   </div>
                 </div>
 
@@ -154,35 +176,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
               </div>
             </div>
 
-            <div
-            class="relative z-30 left-4 block md:hidden mt-12 mb-8"
-            >
-              <p class="text-white pb-2 text-sm">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
-              <div class="flex flex-row gap-5">
-                {socialMediaArray.map((social: any) => {
-                  const platform = String(social?.name ?? '').toLowerCase();
-                  return (
-                  <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-3 md:p-[15px] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
-                    {(platform.includes('insta')) && (
-                      <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
-                      </svg>
-                    )}
-                    {(platform.includes('face')) && (
-                      <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H16l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
-                      </svg>
-                    )}
-                    {(platform.includes('tiktok')) && (
-                      <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M21 8.3a6.7 6.7 0 0 1-4.3-1.5v8.6a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2.1 2.7V2h3.3A6.7 6.7 0 0 0 21 6.3v2z"/>
-                      </svg>
-                    )}
-                  </a>
-                  );
-                })}
-              </div>
-            </div>
+            <!-- mobile social block moved below pagination dots to preserve visual order on mobile Spanish -->
         </div>
 
           <!-- Timeline Line with Points -->
@@ -207,7 +201,9 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
           </div>
 
         <!-- Navigation Arrows - Ahora son blancos -->
-        <div class="navigation-arrows flex justify-end gap-3 md:gap-4 mt-4 mb-8 md:mb-[40px] pr-4 sm:pr-8 md:pr-12 lg:pr-[60px]">
+        <div class={
+          `navigation-arrows ${currentLang === 'es' ? 'hidden md:flex' : 'flex'} justify-end gap-3 md:gap-4 mt-4 mb-8 md:mb-[40px] pr-4 sm:pr-8 md:pr-12 lg:pr-[60px]`
+        }>
           <button 
             id="prevBtn"
             class="nav-arrow bg-white hover:bg-quinary text-black rounded-2xl w-10 h-10 md:w-12 md:h-12 transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
@@ -239,6 +235,36 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
             ></button>
           ))}
         </div>
+
+        {currentLang === 'es' && (
+          <div class="relative z-30 mt-6 block md:hidden text-center">
+            <p class="text-white pb-2 text-sm text-center">Síguenos en nuestras redes</p>
+            <div class="flex justify-center gap-5">
+              {socialMediaArray.map((social: any) => {
+                const platform = String(social?.name ?? '').toLowerCase();
+                return (
+                <a href={social.url} target="_blank" rel="noopener noreferrer" class="bg-[#FF0001] p-3 md:p-[15px] rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                  {(platform.includes('insta')) && (
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
+                    </svg>
+                  )}
+                  {(platform.includes('face')) && (
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H16l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
+                    </svg>
+                  )}
+                  {(platform.includes('tiktok')) && (
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M21 8.3a6.7 6.7 0 0 1-4.3-1.5v8.6a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2.1 2.7V2h3.3A6.7 6.7 0 0 0 21 6.3v2z"/>
+                    </svg>
+                  )}
+                </a>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
       </div>
       
@@ -364,14 +390,19 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
     const slides = root.querySelectorAll('.timeline-slide');
     const dots = root.querySelectorAll('.pagination-dot');
     const points = root.querySelectorAll('.timeline-point');
-    const prevBtn = root.querySelector('#prevBtn');
-    const nextBtn = root.querySelector('#nextBtn');
+    const prevBtnsMobile = Array.from(root.querySelectorAll('.mobile-prev-btn'));
+    const nextBtnsMobile = Array.from(root.querySelectorAll('.mobile-next-btn'));
+    const prevBtnDesktop = root.querySelector('#prevBtn');
+    const nextBtnDesktop = root.querySelector('#nextBtn');
     const totalSlides = slides.length;
 
     function updateButtons() {
-      if (!prevBtn || !nextBtn) return;
-      prevBtn.disabled = currentIndex === 0;
-      nextBtn.disabled = currentIndex === totalSlides - 1;
+      const disablePrev = currentIndex === 0;
+      const disableNext = currentIndex === totalSlides - 1;
+      if (prevBtnDesktop) prevBtnDesktop.disabled = disablePrev;
+      if (nextBtnDesktop) nextBtnDesktop.disabled = disableNext;
+      prevBtnsMobile.forEach((b) => { try { b.disabled = disablePrev; } catch (e) {} });
+      nextBtnsMobile.forEach((b) => { try { b.disabled = disableNext; } catch (e) {} });
     }
 
     function updateTimeline(newIndex) {
@@ -405,17 +436,29 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
       if (points[0]) points[0].classList.add('active');
     }
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
+    if (prevBtnDesktop) {
+      prevBtnDesktop.addEventListener('click', () => {
         updateTimeline(currentIndex - 1);
       });
     }
 
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
+    if (nextBtnDesktop) {
+      nextBtnDesktop.addEventListener('click', () => {
         updateTimeline(currentIndex + 1);
       });
     }
+
+    prevBtnsMobile.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        updateTimeline(currentIndex - 1);
+      });
+    });
+
+    nextBtnsMobile.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        updateTimeline(currentIndex + 1);
+      });
+    });
 
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => {
