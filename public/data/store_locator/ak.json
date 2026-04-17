@@ -1,0 +1,22 @@
+{
+  "state_code": "AK",
+  "count": 2,
+  "stores": [
+    {
+      "name": "Fred Meyer",
+      "address": "43843 Sterling Hwy, Soldotna, Alaska, 99669-7641, United States",
+      "zip": "43843",
+      "lat": 60.48993729999999,
+      "lng": -151.049924,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7405 Debarr Rd, Anchorage, Alaska, 99504-1980, United States",
+      "zip": "99504",
+      "lat": 61.21191400000001,
+      "lng": -149.7433008,
+      "country": "US"
+    }
+  ]
+}

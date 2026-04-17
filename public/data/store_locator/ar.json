@@ -1,0 +1,206 @@
+{
+  "state_code": "AR",
+  "count": 25,
+  "stores": [
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "585 Jean Mary Ln, Springdale, Arkansas, 72762-9625, United States",
+      "zip": "72762",
+      "lat": 36.1774841,
+      "lng": -94.2255981,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1155 US-65 N, Conway, Arkansas, 72032-2857, United States",
+      "zip": "72032",
+      "lat": 35.10866,
+      "lng": -92.4375494,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1172 N State Highway 7, Dardanelle, Arkansas, 72834-6000, United States",
+      "zip": "72834",
+      "lat": 34.8906326,
+      "lng": -93.1106614,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "133 Arkansas Blvd, Texarkana, Arkansas, 71854-1963, United States",
+      "zip": "71854",
+      "lat": 33.4622067,
+      "lng": -94.0399772,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1601 Albert Pike Rd, Hot Springs, Arkansas, 71913, United States",
+      "zip": "71913",
+      "lat": 34.4909336,
+      "lng": -93.0892442,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "17309 Interstate 30 S, Benton, Arkansas, 72015-2761, United States",
+      "zip": "17309",
+      "lat": 34.577236,
+      "lng": -92.5801778,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1815 E Highland Dr, Jonesboro, Arkansas, 72401-6175, United States",
+      "zip": "72401",
+      "lat": 35.8189878,
+      "lng": -90.6852942,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2100 N 62nd St, Fort Smith, Arkansas, 72904-5163, United States",
+      "zip": "72904",
+      "lat": 35.3988728,
+      "lng": -94.3629415,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2110 W Walnut St, Rogers, Arkansas, 72756-3297, United States",
+      "zip": "72756",
+      "lat": 36.3320494,
+      "lng": -94.1487902,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2400 N Hervey St, Hope, Arkansas, 71801-8418, United States",
+      "zip": "71801",
+      "lat": 33.680764,
+      "lng": -93.61465679999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2409 E Main St, Russellville, Arkansas, 72802-9619, United States",
+      "zip": "72802",
+      "lat": 35.28027180000001,
+      "lng": -93.1051622,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2700 S Shackleford Rd, Little Rock, Arkansas, 72205-6918, United States",
+      "zip": "72205",
+      "lat": 34.7283127,
+      "lng": -92.3975621,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2730 N West Ave, El Dorado, Arkansas, 71730-3124, United States",
+      "zip": "71730",
+      "lat": 33.2420261,
+      "lng": -92.6687008,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2802 W Kings Hwy, Paragould, Arkansas, 72450-2617, United States",
+      "zip": "72450",
+      "lat": 36.0524928,
+      "lng": -90.4490952,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2875 W Martin Luther King Blvd, Fayetteville, Arkansas, 72704, United States",
+      "zip": "72704",
+      "lat": 36.0506219,
+      "lng": -94.2006646,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3150 Harrison St, Batesville, Arkansas, 72501-7521, United States",
+      "zip": "72501",
+      "lat": 35.7628744,
+      "lng": -91.61444310000002,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3553 E Robinson Ave, Springdale, Arkansas, 72764-0218, United States",
+      "zip": "72764",
+      "lat": 36.1641138,
+      "lng": -94.0917185,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "367 W Cherry St, Alma, Arkansas, 72921-3408, United States",
+      "zip": "72921",
+      "lat": 35.4791065,
+      "lng": -94.2286898,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "400 Bryant Ave, Bryant, Arkansas, 72022-3813, United States",
+      "zip": "72022",
+      "lat": 34.6236095,
+      "lng": -92.49442420000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "406 S Walton Blvd, Bentonville, Arkansas, 72712-3819, United States",
+      "zip": "72712",
+      "lat": 36.3682214,
+      "lng": -94.2248455,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4450 E McCain Blvd, North Little Rock, Arkansas, 72117-2519, United States",
+      "zip": "72117",
+      "lat": 34.7888903,
+      "lng": -92.2068231,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "700 S Bowman Rd, Little Rock, Arkansas, 72211, United States",
+      "zip": "72211",
+      "lat": 34.7483743,
+      "lng": -92.4105175,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "808 W Walnut St, Rogers, Arkansas, 72756-3538, United States",
+      "zip": "72756",
+      "lat": 36.3323428,
+      "lng": -94.14897719999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8801 Baseline Rd, Little Rock, Arkansas, 72209-5901, United States",
+      "zip": "72209",
+      "lat": 34.6674111,
+      "lng": -92.3770428,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "926 E Collin Raye Dr, De Queen, Arkansas, 71832, United States",
+      "zip": "71832",
+      "lat": 34.0434599,
+      "lng": -94.3190528,
+      "country": "US"
+    }
+  ]
+}

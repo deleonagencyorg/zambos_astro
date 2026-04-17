@@ -1,0 +1,198 @@
+{
+  "state_code": "KY",
+  "count": 24,
+  "stores": [
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "212 Production Ct, Louisville, Kentucky, 40299-2002, United States",
+      "zip": "40299",
+      "lat": 38.219714,
+      "lng": -85.565893,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Louisville-Lexington",
+      "address": "2951 Heartland Crossing Blvd, Owensboro, Kentucky, 42303-7669, United States",
+      "zip": "42303",
+      "lat": 37.7558615,
+      "lng": -87.075694,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Louisville-Lexington",
+      "address": "9905 Dixie Hwy, Louisville, Kentucky, 40272-3943, United States",
+      "zip": "40272",
+      "lat": 38.1116869,
+      "lng": -85.8610983,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1952 Stockton Way, Lexington, Kentucky, 40511, United States",
+      "zip": "40511",
+      "lat": 38.0943235,
+      "lng": -84.5097657,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2500 Terra Crossing Blvd, Louisville, Kentucky, 40245-5374, United States",
+      "zip": "40245",
+      "lat": 38.2725325,
+      "lng": -85.49824219999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3855 Fountainblue Ln, Lexington, Kentucky, 40513-8310, United States",
+      "zip": "40513",
+      "lat": 38.0031667,
+      "lng": -84.5742183,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "430 Richwood Rd, Walton, Kentucky, 41094-7410, United States",
+      "zip": "41094",
+      "lat": 38.9132378,
+      "lng": -84.638717,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1424 Alexandria Dr, Lexington, Kentucky, 40504-1611, United States",
+      "zip": "40504",
+      "lat": 38.0480896,
+      "lng": -84.5515365,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1024 N Main St, Nicholasville, Kentucky, 40356-2311, United States",
+      "zip": "40356",
+      "lat": 37.899102,
+      "lng": -84.56185479999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10445 Dixie Hwy, Louisville, Kentucky, 40272-3953, United States",
+      "zip": "10445",
+      "lat": 38.1023712,
+      "lng": -85.865978,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "143 Thierman Ln, St Matthews, Kentucky, 40207-5009, United States",
+      "zip": "40207",
+      "lat": 38.2537251,
+      "lng": -85.64420969999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "14800 Fort Campbell Blvd, Oak Grove, Kentucky, 42262-8304, United States",
+      "zip": "14800",
+      "lat": 36.6676657,
+      "lng": -87.4411981,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "150 Walton Ave, Bowling Green, Kentucky, 42104-6361, United States",
+      "zip": "42104",
+      "lat": 36.9488116,
+      "lng": -86.4333987,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1550 Nashville Rd, Franklin, Kentucky, 42134-6962, United States",
+      "zip": "42134",
+      "lat": 36.69492,
+      "lng": -86.57301729999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2020 Bashford Manor Ln, Louisville, Kentucky, 40218-2114, United States",
+      "zip": "40218",
+      "lat": 38.1998257,
+      "lng": -85.66718469999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2350 Grey Lag Way, Lexington, Kentucky, 40509-2477, United States",
+      "zip": "40509",
+      "lat": 38.0377989,
+      "lng": -84.4222385,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "300 Clinic Dr, Hopkinsville, Kentucky, 42240-4989, United States",
+      "zip": "42240",
+      "lat": 36.8300681,
+      "lng": -87.46930239999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "305 Letton Dr, Paris, Kentucky, 40361-2252, United States",
+      "zip": "40361",
+      "lat": 38.1970642,
+      "lng": -84.2780354,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3106 Canton St, Hopkinsville, Kentucky, 42240-1316, United States",
+      "zip": "42240",
+      "lat": 36.8594618,
+      "lng": -87.5154631,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3706 Diann Marie Rd, Louisville, Kentucky, 40241-3818, United States",
+      "zip": "40241",
+      "lat": 38.3007781,
+      "lng": -85.5455152,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4230 Saron Dr, Lexington, Kentucky, 40515-6300, United States",
+      "zip": "40515",
+      "lat": 37.966775,
+      "lng": -84.50075179999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "500 Taylorsville Rd, Shelbyville, Kentucky, 40065-8104, United States",
+      "zip": "40065",
+      "lat": 38.2101203,
+      "lng": -85.2653181,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "500 W New Circle Rd, Lexington, Kentucky, 40511-1833, United States",
+      "zip": "40511",
+      "lat": 38.0705664,
+      "lng": -84.4809164,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5130 Hinkleville Rd, Paducah, Kentucky, 42001-9132, United States",
+      "zip": "42001",
+      "lat": 37.0725526,
+      "lng": -88.68820769999999,
+      "country": "US"
+    }
+  ]
+}

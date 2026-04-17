@@ -1,0 +1,134 @@
+{
+  "state_code": "MO",
+  "count": 16,
+  "stores": [
+    {
+      "name": "Gerbes",
+      "address": "410 E North St, Eldon, Missouri, 65026-1749, United States",
+      "zip": "65026",
+      "lat": 38.3498901,
+      "lng": -92.5770233,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "125 Potomac St, St Louis, Missouri, 63118-4171, United States",
+      "zip": "63118",
+      "lat": 38.588139,
+      "lng": -90.21324129999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "8041 Olive Blvd, St Louis, Missouri, 63130-2022, United States",
+      "zip": "63130",
+      "lat": 38.6738312,
+      "lng": -90.34454199999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1000 Graves St, Chillicothe, Missouri, 64601-3071, United States",
+      "zip": "64601",
+      "lat": 39.77652330000001,
+      "lng": -93.5563614,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11601 E US-40, Independence, Missouri, 64133-1908, United States",
+      "zip": "11601",
+      "lat": 39.0356329,
+      "lng": -94.4145685,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1712 E Ohio St, Clinton, Missouri, 64735-2389, United States",
+      "zip": "64735",
+      "lat": 38.3629312,
+      "lng": -93.7507052,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "201 Highlands Boulevard Dr, Manchester, Missouri, 63011-4383, United States",
+      "zip": "63011",
+      "lat": 38.5960126,
+      "lng": -90.5067586,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "301 E Cooper Blvd, Warrensburg, Missouri, 64093, United States",
+      "zip": "64093",
+      "lat": 38.7795526,
+      "lng": -93.73761379999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3022 S Belt Hwy, St Joseph, Missouri, 64503-1547, United States",
+      "zip": "64503",
+      "lat": 39.7369868,
+      "lng": -94.80418859999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3201 W Broadway Blvd, Sedalia, Missouri, 65301-2118, United States",
+      "zip": "65301",
+      "lat": 38.7067009,
+      "lng": -93.2709433,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3410 SW Market St, Lee's Summit, Missouri, 64082-2309, United States",
+      "zip": "64082",
+      "lat": 38.857021,
+      "lng": -94.3780992,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3411 S Noland Rd, Independence, Missouri, 64055-1319, United States",
+      "zip": "64055",
+      "lat": 39.0581577,
+      "lng": -94.4136274,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "415 Conley Rd, Columbia, Missouri, 65201-6468, United States",
+      "zip": "65201",
+      "lat": 38.9549114,
+      "lng": -92.29673799999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4201 N Belt Hwy, St Joseph, Missouri, 64506, United States",
+      "zip": "64506",
+      "lat": 39.808611,
+      "lng": -94.8117776,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5261 NE Antioch Rd, Kansas City, Missouri, 64119-2646, United States",
+      "zip": "64119",
+      "lat": 39.2097949,
+      "lng": -94.53607559999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "724 W Stadium Blvd, Jefferson City, Missouri, 65109-4765, United States",
+      "zip": "65109",
+      "lat": 38.58005319999999,
+      "lng": -92.2199291,
+      "country": "US"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "state_code": "OH",
+  "count": 18,
+  "stores": [
+    {
+      "name": "Meijer Cincinnati",
+      "address": "3711 Stonecreek Blvd, Cincinnati, Ohio, 45251-1457, United States",
+      "zip": "45251",
+      "lat": 39.25101129999999,
+      "lng": -84.6037867,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Dayton",
+      "address": "4075 Wilmington Pike, Kettering, Ohio, 45440-1600, United States",
+      "zip": "45440",
+      "lat": 39.6854561,
+      "lng": -84.132559,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Cleveland",
+      "address": "247 Tallmadge Rd, Kent, Ohio, 44240-7203, United States",
+      "zip": "44240",
+      "lat": 41.1026675,
+      "lng": -81.3846561,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Cleveland",
+      "address": "4303 Kent Rd, Stow, Ohio, 44224-4330, United States",
+      "zip": "44224",
+      "lat": 41.1569786,
+      "lng": -81.4058553,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Cleveland",
+      "address": "9200 Mentor Ave, Mentor, Ohio, 44060-6479, United States",
+      "zip": "44060",
+      "lat": 41.6749835,
+      "lng": -81.3095597,
+      "country": "US"
+    },
+    {
+      "name": "Meijer West Cleveland",
+      "address": "1810 Nagel Rd, Avon, Ohio, 44011-1442, United States",
+      "zip": "44011",
+      "lat": 41.4613765,
+      "lng": -81.9917389,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1084 Rarig Ave, Columbus, Ohio, 43219, United States",
+      "zip": "43219",
+      "lat": 39.9934837,
+      "lng": -82.92237220000001,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "14 S Myrtle Ave, Willard, Ohio, 44890-1423, United States",
+      "zip": "44890",
+      "lat": 41.0576814,
+      "lng": -82.7262744,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "531 E 2nd St, Defiance, Ohio, 43512-2254, United States",
+      "zip": "43512",
+      "lat": 41.2825821,
+      "lng": -84.3516029,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5722 Mayfield Rd, Lyndhurst, Ohio, 44124-2918, United States",
+      "zip": "44124",
+      "lat": 41.5197298,
+      "lng": -81.47340439999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1221 Georgesville Rd, Columbus, Ohio, 43228, United States",
+      "zip": "43228",
+      "lat": 39.9271383,
+      "lng": -83.1200473,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1693 Stringtown Rd, Grove City, Ohio, 43123-8265, United States",
+      "zip": "43123",
+      "lat": 39.8753144,
+      "lng": -83.0427437,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "23605 Airport Rd, Coshocton, Ohio, 43812-9003, United States",
+      "zip": "23605",
+      "lat": 40.2950655,
+      "lng": -81.8505285,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "340 Westwind Dr, Norwalk, Ohio, 44857-9104, United States",
+      "zip": "44857",
+      "lat": 41.2617678,
+      "lng": -82.6170259,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3520 Hudson Dr, Stow, Ohio, 44224-2907, United States",
+      "zip": "44224",
+      "lat": 41.16589039999999,
+      "lng": -81.480013,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3657 E Main St, Whitehall, Ohio, 43213-2924, United States",
+      "zip": "43213",
+      "lat": 39.9534659,
+      "lng": -82.9002284,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "50 E Schrock Rd, Westerville, Ohio, 43081-2915, United States",
+      "zip": "43081",
+      "lat": 40.1110021,
+      "lng": -82.9241874,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5200 Westpointe Plaza Dr, Columbus, Ohio, 43228, United States",
+      "zip": "43228",
+      "lat": 39.9835007,
+      "lng": -83.1452614,
+      "country": "US"
+    }
+  ]
+}

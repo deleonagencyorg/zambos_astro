@@ -1,0 +1,22 @@
+{
+  "state_code": "RI",
+  "count": 2,
+  "stores": [
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "170 Silver Lake Ave, Providence, Rhode Island, 02909-5459, United States",
+      "zip": "02909",
+      "lat": 41.8058857,
+      "lng": -71.463672,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1776 Plainfield Pike, Cranston, Rhode Island, 02921-2042, United States",
+      "zip": "02921",
+      "lat": 41.7890413,
+      "lng": -71.4989471,
+      "country": "US"
+    }
+  ]
+}

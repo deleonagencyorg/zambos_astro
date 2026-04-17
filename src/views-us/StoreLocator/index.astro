@@ -1,0 +1,648 @@
+---
+import './styles.css';
+import commonUs from '../../locales/us/common.json';
+
+const sl = commonUs.store_locator;
+const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || '';
+---
+
+<div class="sl-page" id="store-locator-page">
+
+  <!-- Title -->
+  <div class="sl-title-bar">
+    <h1 class="sl-title">WHERE TO BUY</h1>
+  </div>
+
+  <!-- Status bar -->
+  <div id="sl-status" class="sl-status" style="display:none;"></div>
+
+  <!-- Main layout: form col + map col -->
+  <div class="sl-main">
+
+    <!-- LEFT: Search form -->
+    <div class="sl-form-col">
+
+      <div class="sl-field">
+        <label class="sl-label" for="sl-city">Search City</label>
+        <input
+          id="sl-city"
+          type="text"
+          class="sl-input"
+          placeholder="type here..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="sl-field">
+        <label class="sl-label" for="sl-state-input">Search State</label>
+        <input
+          id="sl-state-input"
+          type="text"
+          class="sl-input"
+          placeholder="type here..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="sl-field">
+        <label class="sl-label" for="sl-zip">Zip Code</label>
+        <input
+          id="sl-zip"
+          type="text"
+          class="sl-input"
+          placeholder="type here..."
+          autocomplete="off"
+          inputmode="numeric"
+          maxlength="5"
+        />
+      </div>
+
+      <button id="sl-find-btn" class="sl-find-btn">
+        Find Store
+      </button>
+
+      <button id="sl-locate-btn" class="sl-locate-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+          <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/>
+        </svg>
+        Use My Location
+      </button>
+
+      <!-- Store count -->
+      <div id="sl-count" class="sl-count" style="display:none;"></div>
+
+      <!-- Store list (hidden) -->
+      <div class="sl-list-wrap" id="sl-list-wrap" style="display:none;">
+        <div class="sl-sidebar__list" id="sl-list"></div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Map -->
+    <div class="sl-map-col">
+      <div id="sl-map" class="sl-map"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- MarkerClusterer must load BEFORE Maps callback fires -->
+<script is:inline src="https://unpkg.com/@googlemaps/markerclusterer@2.5.3/dist/index.min.js"></script>
+
+<!-- Store Locator Logic -->
+<script is:inline define:vars={{ mapsApiKey }}>
+/* global google, markerClusterer */
+(function () {
+  'use strict';
+
+  // ── State ──────────────────────────────────────────────────────────────────
+  var sl = {
+    map: null,
+    infoWindow: null,
+    markers: [],    // raw google.maps.Marker list
+    clusterer: null,
+    circle: null,
+    currentStateCode: null,
+    loading: false,
+    lastZipFilter: '',
+    userLat: null,
+    userLng: null,
+  };
+
+  // ── Helpers ────────────────────────────────────────────────────────────────
+  function $(id) { return document.getElementById(id); }
+
+  function showStatus(msg, type) {
+    var el = $('sl-status');
+    if (!el) return;
+    el.textContent = msg;
+    el.className = 'sl-status sl-status--' + (type || 'info');
+    el.style.display = 'block';
+  }
+
+  function hideStatus() {
+    var el = $('sl-status');
+    if (el) el.style.display = 'none';
+  }
+
+  function setFindBtnLoading(on) {
+    var btn = $('sl-find-btn');
+    if (!btn) return;
+    btn.disabled = on;
+    btn.textContent = on ? 'Searching…' : 'Find Store';
+  }
+
+  function showCount(count, label) {
+    var el = $('sl-count');
+    if (!el) return;
+    el.textContent = count + ' store' + (count !== 1 ? 's' : '') + ' found' + (label ? ' in ' + label : '');
+    el.style.display = 'block';
+  }
+
+  function hideCount() {
+    var el = $('sl-count');
+    if (el) el.style.display = 'none';
+  }
+
+  // ── State centroids (approximate lat/lng centers) for fallback ─────────────
+  var STATE_CENTROIDS = {
+    AK:{lat:64.20,lng:-153.37}, AL:{lat:32.75,lng:-86.83}, AR:{lat:34.75,lng:-92.30},
+    AZ:{lat:34.30,lng:-111.09}, CA:{lat:36.78,lng:-119.42}, CO:{lat:39.55,lng:-105.78},
+    CT:{lat:41.60,lng:-72.69}, DE:{lat:39.00,lng:-75.50}, FL:{lat:27.99,lng:-81.76},
+    GA:{lat:32.90,lng:-83.44}, IA:{lat:42.01,lng:-93.21}, ID:{lat:44.07,lng:-114.74},
+    IL:{lat:40.63,lng:-89.40}, IN:{lat:40.27,lng:-86.13}, KS:{lat:38.53,lng:-96.73},
+    KY:{lat:37.67,lng:-84.67}, LA:{lat:31.17,lng:-91.87}, MA:{lat:42.23,lng:-71.53},
+    MD:{lat:39.05,lng:-76.64}, ME:{lat:45.25,lng:-69.24}, MI:{lat:44.18,lng:-84.51},
+    MN:{lat:46.39,lng:-94.63}, MO:{lat:38.46,lng:-92.29}, MS:{lat:32.74,lng:-89.67},
+    MT:{lat:46.88,lng:-110.36}, NC:{lat:35.63,lng:-79.81}, ND:{lat:47.45,lng:-100.47},
+    NE:{lat:41.49,lng:-99.90}, NH:{lat:43.19,lng:-71.57}, NJ:{lat:40.06,lng:-74.41},
+    NM:{lat:34.31,lng:-106.02}, NV:{lat:38.50,lng:-117.02}, NY:{lat:42.17,lng:-74.95},
+    OH:{lat:40.38,lng:-82.76}, OK:{lat:35.57,lng:-97.29}, OR:{lat:44.57,lng:-122.07},
+    PA:{lat:40.59,lng:-77.21}, RI:{lat:41.68,lng:-71.51}, SC:{lat:33.84,lng:-80.90},
+    SD:{lat:44.30,lng:-99.44}, TN:{lat:35.86,lng:-86.66}, TX:{lat:31.05,lng:-97.56},
+    UT:{lat:39.32,lng:-111.09}, VA:{lat:37.43,lng:-78.66}, WA:{lat:47.75,lng:-120.74},
+    WI:{lat:44.26,lng:-89.62}, WV:{lat:38.49,lng:-80.95}, WY:{lat:43.00,lng:-107.55},
+  };
+
+  function nearestStateWithStores(userLat, userLng) {
+    var bestCode = null;
+    var bestDist = Infinity;
+    Object.keys(STATE_CENTROIDS).forEach(function (code) {
+      var c = STATE_CENTROIDS[code];
+      var d = Math.pow(c.lat - userLat, 2) + Math.pow(c.lng - userLng, 2);
+      if (d < bestDist) { bestDist = d; bestCode = code; }
+    });
+    return bestCode;
+  }
+
+  // ── Maps API Loader ────────────────────────────────────────────────────────
+  function loadMapsApi(key, callback) {
+    if (window.google && window.google.maps) { callback(); return; }
+    window.__slMapReady = callback;
+    var s = document.createElement('script');
+    s.src = 'https://maps.googleapis.com/maps/api/js' +
+            '?key=' + key +
+            '&libraries=places' +
+            '&callback=__slMapReady' +
+            '&loading=async';
+    s.async = true;
+    s.defer = true;
+    document.head.appendChild(s);
+  }
+
+  // ── Map Init ───────────────────────────────────────────────────────────────
+  function initMap() {
+    var container = $('sl-map');
+    if (!container) return;
+
+    sl.map = new google.maps.Map(container, {
+      center: { lat: 39.5, lng: -98.35 },
+      zoom: 4,
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: true,
+      zoomControl: true,
+      gestureHandling: 'greedy',   // scroll zoom always on; touch uses 1-finger pan
+      clickableIcons: false,
+      styles: [
+        { featureType: 'poi', elementType: 'labels', stylers: [{ visibility: 'off' }] },
+        { featureType: 'transit', elementType: 'labels', stylers: [{ visibility: 'off' }] },
+      ],
+    });
+
+    sl.infoWindow = new google.maps.InfoWindow();
+
+    setupAutocomplete();
+    bindFindButton();
+    bindLocateButton();
+    requestGeolocation();
+  }
+
+  // ── Autocomplete on city input ─────────────────────────────────────────────
+  function setupAutocomplete() {
+    var cityInput = $('sl-city');
+    if (!cityInput) return;
+
+    var ac = new google.maps.places.Autocomplete(cityInput, {
+      componentRestrictions: { country: 'us' },
+      types: ['(cities)'],
+      fields: ['geometry', 'address_components', 'formatted_address'],
+    });
+
+    ac.addListener('place_changed', function () {
+      var place = ac.getPlace();
+      if (!place || !place.geometry) return;
+      var stateComp = (place.address_components || []).find(function (c) {
+        return c.types.indexOf('administrative_area_level_1') !== -1;
+      });
+      if (stateComp) {
+        var stateInput = $('sl-state-input');
+        if (stateInput) stateInput.value = stateComp.short_name;
+      }
+      sl.map.setCenter(place.geometry.location);
+      sl.map.setZoom(11);
+      var code = stateComp ? stateComp.short_name : null;
+      if (code) loadStoresForState(code);
+    });
+
+    cityInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') e.preventDefault();
+    });
+  }
+
+  // ── Find Store button ──────────────────────────────────────────────────────
+  function bindFindButton() {
+    var btn = $('sl-find-btn');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var city  = (($('sl-city') || {}).value || '').trim();
+      var state = (($('sl-state-input') || {}).value || '').trim();
+      var zip   = (($('sl-zip') || {}).value || '').trim();
+
+      if (!city && !state && !zip) {
+        showStatus('Please enter a city, state or zip code.', 'info');
+        setTimeout(hideStatus, 4000);
+        return;
+      }
+
+      // Build geocode query
+      var query = [city, state, zip].filter(Boolean).join(', ') + ', USA';
+
+      setFindBtnLoading(true);
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode(
+        { address: query, componentRestrictions: { country: 'us' } },
+        function (results, status) {
+          setFindBtnLoading(false);
+          if (status !== 'OK' || !results || results.length === 0) {
+            showStatus('Location not found. Please try a different search.', 'error');
+            setTimeout(hideStatus, 5000);
+            return;
+          }
+          var place = results[0];
+          var zoom = zip ? 13 : (city ? 11 : 7);
+          sl.map.setCenter(place.geometry.location);
+          sl.map.setZoom(zoom);
+          hideStatus();
+
+          var stateComp = (place.address_components || []).find(function (c) {
+            return c.types.indexOf('administrative_area_level_1') !== -1;
+          });
+          if (stateComp) {
+            // Force reload if zip filter changed
+            var newZip = zip || '';
+            if (newZip !== sl.lastZipFilter) {
+              sl.currentStateCode = null;
+            }
+            sl.lastZipFilter = newZip;
+            loadStoresForState(stateComp.short_name);
+          }
+        }
+      );
+    });
+  }
+
+  // ── Geolocation ────────────────────────────────────────────────────────────
+  function requestGeolocation() {
+    if (!navigator.geolocation) return;
+    showStatus('Detecting your location…', 'loading');
+    navigator.geolocation.getCurrentPosition(
+      function (pos) {
+        var lat = pos.coords.latitude;
+        var lng = pos.coords.longitude;
+        sl.userLat = lat;
+        sl.userLng = lng;
+        sl.map.setCenter({ lat: lat, lng: lng });
+        sl.map.setZoom(10);
+        hideStatus();
+        reverseGeocodeState(lat, lng, function (code) {
+          if (code) {
+            loadStoresForState(code, lat, lng);
+          } else {
+            var fallback = nearestStateWithStores(lat, lng);
+            if (fallback) loadStoresForState(fallback, lat, lng);
+          }
+        });
+      },
+      function () {
+        hideStatus();
+      },
+      { timeout: 10000, enableHighAccuracy: false }
+    );
+  }
+
+  function reverseGeocodeState(lat, lng, callback) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ location: { lat: lat, lng: lng } }, function (results, status) {
+      if (status !== 'OK' || !results || results.length === 0) { callback(null); return; }
+      for (var i = 0; i < results.length; i++) {
+        var comp = results[i].address_components.find(function (c) {
+          return c.types.indexOf('administrative_area_level_1') !== -1;
+        });
+        if (comp) { callback(comp.short_name); return; }
+      }
+      callback(null);
+    });
+  }
+
+  // ── Locate button ──────────────────────────────────────────────────────────
+  function bindLocateButton() {
+    var btn = $('sl-locate-btn');
+    if (!btn) return;
+    btn.onclick = function () {
+      sl.currentStateCode = null;
+      sl.lastZipFilter = '';
+      requestGeolocation();
+    };
+  }
+
+  // ── Store Data ─────────────────────────────────────────────────────────────
+  function loadStoresForState(stateCode, fromLat, fromLng) {
+    if (sl.loading) return;
+    if (stateCode === sl.currentStateCode) return;
+    sl.loading = true;
+
+    showStatus('Loading stores in ' + stateCode + '…', 'loading');
+    clearMarkers();
+    hideCount();
+
+    fetch('/data/store_locator/' + stateCode.toLowerCase() + '.json')
+      .then(function (res) {
+        if (!res.ok) throw new Error('No data for ' + stateCode);
+        return res.json();
+      })
+      .then(function (data) {
+        sl.currentStateCode = stateCode;
+        var stores = data.stores || [];
+        // Filter by zip if user entered one
+        if (sl.lastZipFilter) {
+          var filtered = stores.filter(function (s) {
+            return (s.zip || '').indexOf(sl.lastZipFilter) === 0;
+          });
+          stores = filtered.length > 0 ? filtered : stores;
+        }
+        renderMarkers(stores);
+        renderList(stores, stateCode);
+        showCount(stores.length, stateCode);
+        hideStatus();
+      })
+      .catch(function () {
+        // No JSON for this state → find nearest state that has one
+        var uLat = fromLat != null ? fromLat : (sl.userLat || 39.5);
+        var uLng = fromLng != null ? fromLng : (sl.userLng || -98.35);
+        var fallback = nearestStateWithStores(uLat, uLng);
+        if (fallback && fallback !== stateCode) {
+          sl.loading = false;
+          var c = STATE_CENTROIDS[fallback];
+          sl.map.setCenter({ lat: c.lat, lng: c.lng });
+          sl.map.setZoom(7);
+          showStatus('No stores near you — showing nearest available area (' + fallback + ')', 'info');
+          loadStoresForState(fallback, c.lat, c.lng);
+        } else {
+          showStatus('No stores found in this area.', 'error');
+          renderList([], stateCode);
+        }
+      })
+      .finally(function () {
+        sl.loading = false;
+      });
+  }
+
+  // ── Markers ────────────────────────────────────────────────────────────────
+  function clearMarkers() {
+    if (sl.clusterer) {
+      sl.clusterer.clearMarkers();
+      sl.clusterer = null;
+    }
+    sl.markers.forEach(function (m) { m.setMap(null); });
+    sl.markers = [];
+    clearCircle();
+    sl.infoWindow.close();
+  }
+
+  function clearCircle() {
+    if (sl.circle) { sl.circle.setMap(null); sl.circle = null; }
+  }
+
+  function openStorePopup(marker, store) {
+    clearCircle();
+
+    // Draw radius circle (≈ 1.5 km) around clicked store
+    sl.circle = new google.maps.Circle({
+      map: sl.map,
+      center: marker.getPosition(),
+      radius: 1500,
+      strokeColor: '#2979FF',
+      strokeOpacity: 0.7,
+      strokeWeight: 2,
+      fillColor: '#2979FF',
+      fillOpacity: 0.12,
+    });
+
+    // Info window content
+    sl.infoWindow.setContent(
+      '<div class="sl-popup">' +
+      '<strong>' + escapeHtml(store.name) + '</strong>' +
+      '<p>' + escapeHtml(store.address) + '</p>' +
+      '<a href="https://www.google.com/maps/dir/?api=1&destination=' +
+      encodeURIComponent(store.address) +
+      '" target="_blank" rel="noopener noreferrer">Get Directions →</a>' +
+      '</div>'
+    );
+    sl.infoWindow.open(sl.map, marker);
+
+    // Close circle when info window closes
+    google.maps.event.addListenerOnce(sl.infoWindow, 'closeclick', clearCircle);
+  }
+
+  function renderMarkers(stores) {
+    var validStores = stores.filter(function (s) { return s.lat && s.lng; });
+    if (validStores.length === 0) return;
+
+    // Classic Google-style location pin — path centered at (0,0), tip points down
+    // Outer teardrop + inner white dot hole
+    var orangePin = {
+      path: 'M 0,-10 C -6,-10 -10,-6 -10,0 C -10,6 0,14 0,14 C 0,14 10,6 10,0 C 10,-6 6,-10 0,-10 Z M 0,3 C -1.7,3 -3,1.7 -3,0 C -3,-1.7 -1.7,-3 0,-3 C 1.7,-3 3,-1.7 3,0 C 3,1.7 1.7,3 0,3 Z',
+      fillColor: '#D32F2F',
+      fillOpacity: 1,
+      strokeColor: '#9B1C1C',
+      strokeWeight: 0.5,
+      scale: 1.8,
+      anchor: new google.maps.Point(0, 14),
+    };
+
+    sl.markers = validStores.map(function (store) {
+      var marker = new google.maps.Marker({
+        position: { lat: parseFloat(store.lat), lng: parseFloat(store.lng) },
+        title: store.name,
+        icon: orangePin,
+        cursor: 'pointer',
+      });
+      marker.addListener('click', function () {
+        sl.map.panTo(marker.getPosition());
+        sl.map.setZoom(Math.max(sl.map.getZoom(), 14));
+        openStorePopup(marker, store);
+      });
+      return marker;
+    });
+
+    // ── Clusterer ──────────────────────────────────────────────────────────
+    var McLib = window.markerClusterer || {};
+    var Clusterer = McLib.MarkerClusterer;
+    var AlgoClass = McLib.SuperClusterAlgorithm || McLib.GridAlgorithm || null;
+
+    if (Clusterer) {
+      sl.clusterer = new Clusterer({
+        map: sl.map,
+        markers: sl.markers,
+        algorithm: AlgoClass ? new AlgoClass({ radius: 80, maxZoom: 14 }) : undefined,
+        renderer: {
+          render: function (cluster) {
+            var count = cluster.count;
+            var pos   = cluster.position;
+            var size  = count > 500 ? 54 : count > 100 ? 46 : count > 20 ? 38 : 30;
+            var color = count > 100 ? '#B71C1C' : '#0E6D20';
+            var clusterMarker = new google.maps.Marker({
+              position: pos,
+              label: {
+                text: count > 999 ? '999+' : String(count),
+                color: '#fff',
+                fontSize: count > 99 ? '11px' : '13px',
+                fontWeight: 'bold',
+              },
+              icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                fillColor: color,
+                fillOpacity: 0.92,
+                strokeColor: '#fff',
+                strokeWeight: 2.5,
+                scale: size / 2,
+              },
+              zIndex: 1000 + count,
+              cursor: 'pointer',
+            });
+            clusterMarker.addListener('click', function () {
+              var bounds = new google.maps.LatLngBounds();
+              cluster.markers.forEach(function (m) { bounds.extend(m.getPosition()); });
+              sl.map.fitBounds(bounds, 60);
+            });
+            return clusterMarker;
+          },
+        },
+      });
+    } else {
+      sl.markers.forEach(function (m) { m.setMap(sl.map); });
+    }
+
+    // Fit map to all markers
+    var bounds = new google.maps.LatLngBounds();
+    sl.markers.forEach(function (m) { bounds.extend(m.getPosition()); });
+    sl.map.fitBounds(bounds, { top: 60, right: 40, bottom: 40, left: 40 });
+    if (sl.markers.length === 1) sl.map.setZoom(15);
+  }
+
+  // ── Store List ─────────────────────────────────────────────────────────────
+  function renderList(stores, stateCode) {
+    var list = $('sl-list');
+    var wrap = $('sl-list-wrap');
+    if (!list || !wrap) return;
+
+    if (stores.length === 0) {
+      list.innerHTML = '';
+      return;
+    }
+
+    list.innerHTML = stores.map(function (store, i) {
+      return (
+        '<div class="sl-store-card" data-index="' + i + '" tabindex="0" role="button">' +
+        '<div class="sl-store-card__name">' + escapeHtml(store.name) + '</div>' +
+        '<div class="sl-store-card__address">' + escapeHtml(store.address) + '</div>' +
+        '<a class="sl-store-card__directions" ' +
+        'href="https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(store.address) + '" ' +
+        'target="_blank" rel="noopener" onclick="event.stopPropagation()">Get Directions →</a>' +
+        '</div>'
+      );
+    }).join('');
+
+    list.querySelectorAll('.sl-store-card').forEach(function (card, i) {
+      function activate() {
+        var marker = sl.markers[i];
+        var storeData = stores[i];
+        if (!marker || !storeData) return;
+        sl.map.panTo(marker.getPosition());
+        sl.map.setZoom(14);
+        openStorePopup(marker, storeData);
+        list.querySelectorAll('.sl-store-card').forEach(function (c) { c.classList.remove('active'); });
+        card.classList.add('active');
+        var mapEl = $('sl-map');
+        if (mapEl && window.innerWidth < 768) mapEl.scrollIntoView({ behavior: 'smooth' });
+      }
+      card.addEventListener('click', activate);
+      card.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') activate(); });
+    });
+  }
+
+  // ── Utils ──────────────────────────────────────────────────────────────────
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // ── Boot ───────────────────────────────────────────────────────────────────
+  function boot() {
+    var page = $('store-locator-page');
+    if (!page) return;
+
+    sl.map = null;
+    sl.markers = [];
+    sl.clusterer = null;
+    sl.circle = null;
+    sl.currentStateCode = null;
+    sl.infoWindow = null;
+    sl.loading = false;
+    sl.lastZipFilter = '';
+    sl.userLat = null;
+    sl.userLng = null;
+
+    if (!mapsApiKey) {
+      showStatus('Google Maps API key missing. Add PUBLIC_GOOGLE_MAPS_API_KEY to .env', 'error');
+      return;
+    }
+
+    loadMapsApi(mapsApiKey, initMap);
+  }
+
+  document.addEventListener('astro:page-load', boot);
+  if (document.readyState !== 'loading') { boot(); }
+  else { document.addEventListener('DOMContentLoaded', boot); }
+})();
+</script>
+
+<style is:inline>
+  .sl-popup {
+    font-family: sans-serif;
+    max-width: 220px;
+    padding: 4px 0;
+  }
+  .sl-popup strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0E6D20;
+    margin-bottom: 4px;
+  }
+  .sl-popup p {
+    font-size: 12px;
+    color: #444;
+    margin: 0 0 8px;
+    line-height: 1.4;
+  }
+  .sl-popup a {
+    font-size: 12px;
+    color: #B71C1C;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .sl-popup a:hover { text-decoration: underline; }
+</style>

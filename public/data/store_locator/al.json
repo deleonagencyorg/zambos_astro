@@ -1,0 +1,886 @@
+{
+  "state_code": "AL",
+  "count": 110,
+  "stores": [
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "103 Buck Creek Plz, Alabaster, Alabama, 35007-7042, United States",
+      "zip": "35007",
+      "lat": 33.2171245,
+      "lng": -86.8264033,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1630 Forestdale Blvd, Birmingham, Alabama, 35214, United States",
+      "zip": "35214",
+      "lat": 33.568167,
+      "lng": -86.89957640000002,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1700 Long 14th St, Bessemer, Alabama, 35020-4529, United States",
+      "zip": "35020",
+      "lat": 33.40746,
+      "lng": -86.9756857,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "216 Green Springs Hwy, Homewood, Alabama, 35209-4906, United States",
+      "zip": "35209",
+      "lat": 33.4665787,
+      "lng": -86.8246228,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2314 Ross Clark Cir, Dothan, Alabama, 36301-4914, United States",
+      "zip": "36301",
+      "lat": 31.1947958,
+      "lng": -85.4087352,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3006 Dolly Ridge Dr, Vestavia Hills, Alabama, 35243-1811, United States",
+      "zip": "35243",
+      "lat": 33.4544632,
+      "lng": -86.74124479999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4325 Bessemer Super Hwy, Bessemer, Alabama, 35020-2414, United States",
+      "zip": "35020",
+      "lat": 33.4336822,
+      "lng": -86.9381934,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4350 Pinson Valley Pkwy, Birmingham, Alabama, 35215-2905, United States",
+      "zip": "35215",
+      "lat": 33.6477581,
+      "lng": -86.72052719999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4460 Troy Hwy, Montgomery, Alabama, 36116-4103, United States",
+      "zip": "36116",
+      "lat": 32.3117617,
+      "lng": -86.2237535,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5214 County Road 31, Lineville, Alabama, 36266-5721, United States",
+      "zip": "36266",
+      "lat": 33.3057711,
+      "lng": -85.8399847,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6501 1st Ave N, Birmingham, Alabama, 35206-5009, United States",
+      "zip": "35206",
+      "lat": 33.5485284,
+      "lng": -86.7407707,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "1401 S Gilmer Ave, Lanett, Alabama, 36863-2942, United States",
+      "zip": "36863",
+      "lat": 32.855515,
+      "lng": -85.19167139999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1104 Cullman Shopping Ctr NW, Cullman, Alabama, 35055-2855, United States",
+      "zip": "35055",
+      "lat": 34.1815484,
+      "lng": -86.84948299999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1147 Highway 231 S, Troy, Alabama, 36081-3026, United States",
+      "zip": "36081",
+      "lat": 31.7803986,
+      "lng": -85.9548038,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1190 University Blvd, Tuscaloosa, Alabama, 35401-1601, United States",
+      "zip": "35401",
+      "lat": 33.2121027,
+      "lng": -87.5535458,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "12290 Highway 231 431 N, Meridianville, Alabama, 35759-1206, United States",
+      "zip": "12290",
+      "lat": 34.8709086,
+      "lng": -86.5692515,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "12796 Bailey Cove Rd SE, Huntsville, Alabama, 35803-2659, United States",
+      "zip": "12796",
+      "lat": 34.6227776,
+      "lng": -86.5384965,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "128 W Grand Ave, Rainbow City, Alabama, 35906-3238, United States",
+      "zip": "35906",
+      "lat": 33.9552104,
+      "lng": -86.0439822,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1288 Grants Mill Rd, Irondale, Alabama, 35210, United States",
+      "zip": "35210",
+      "lat": 33.5353228,
+      "lng": -86.67429480000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "13556 Highway 69 N, Northport, Alabama, 35475-2834, United States",
+      "zip": "13556",
+      "lat": 33.4877178,
+      "lng": -87.4984656,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1400 AL-14, Millbrook, Alabama, 36054, United States",
+      "zip": "36054",
+      "lat": 32.4935531,
+      "lng": -86.4028969,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1605 Beltline Rd SW, Decatur, Alabama, 35601-5591, United States",
+      "zip": "35601",
+      "lat": 34.5659979,
+      "lng": -87.0126779,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "165 MCS Blvd, Sylacauga, Alabama, 35150-1138, United States",
+      "zip": "35150",
+      "lat": 33.1742455,
+      "lng": -86.28342789999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "165 US Highway 31 N, Athens, Alabama, 35611-2142, United States",
+      "zip": "35611",
+      "lat": 34.804377,
+      "lng": -86.9523443,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1944 Montgomery Hwy S, Pelham, Alabama, 35244, United States",
+      "zip": "35244",
+      "lat": 33.3470107,
+      "lng": -86.79731679999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2040 Martin St S, Pell City, Alabama, 35128-2326, United States",
+      "zip": "35128",
+      "lat": 33.5637869,
+      "lng": -86.2677569,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2300 Gunter Ave, Guntersville, Alabama, 35976-2238, United States",
+      "zip": "35976",
+      "lat": 34.333837,
+      "lng": -86.31653,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2300 McFarland Blvd, Northport, Alabama, 35476-2927, United States",
+      "zip": "35476",
+      "lat": 33.24079,
+      "lng": -87.5799007,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2415 Moores Mill Rd, Auburn, Alabama, 36830-8480, United States",
+      "zip": "36830",
+      "lat": 32.585776,
+      "lng": -85.437235,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2451 Cobbs Ford Rd, Prattville, Alabama, 36066, United States",
+      "zip": "36066",
+      "lat": 32.4615013,
+      "lng": -86.39819779999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "24540 John T Reid Pky, Scottsboro, Alabama, 35768-2326, United States",
+      "zip": "24540",
+      "lat": 34.666145,
+      "lng": -86.0154927,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2543 John Hawkins Pkwy, Hoover, Alabama, 35244-3533, United States",
+      "zip": "35244",
+      "lat": 33.355874,
+      "lng": -86.84269139999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2860 Lakeshore Pkwy, Birmingham, Alabama, 35211-5500, United States",
+      "zip": "35211",
+      "lat": 33.423008,
+      "lng": -86.88870940000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3026 Zelda Rd, Montgomery, Alabama, 36106-2700, United States",
+      "zip": "36106",
+      "lat": 32.3554625,
+      "lng": -86.2659323,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3040 Healthy Way, Birmingham, Alabama, 35243-2331, United States",
+      "zip": "35243",
+      "lat": 33.4293743,
+      "lng": -86.73754249999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "310 Pelham Ave SW, Huntsville, Alabama, 35801-5016, United States",
+      "zip": "35801",
+      "lat": 34.7234275,
+      "lng": -86.583939,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3141 Overton Rd, Birmingham, Alabama, 35223-2846, United States",
+      "zip": "35223",
+      "lat": 33.4657731,
+      "lng": -86.7327521,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3200 Woodward Ave, Muscle Shoals, Alabama, 35661, United States",
+      "zip": "35661",
+      "lat": 34.7319891,
+      "lng": -87.66779629999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3201 Endeavor Ln, Vestavia Hills, Alabama, 35242, United States",
+      "zip": "35242",
+      "lat": 33.4726032,
+      "lng": -86.7033376,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "322 Cox Creek Pkwy, Florence, Alabama, 35630-1540, United States",
+      "zip": "35630",
+      "lat": 34.8372395,
+      "lng": -87.6294504,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "350 Hughes Rd, Madison, Alabama, 35758-1102, United States",
+      "zip": "35758",
+      "lat": 34.707933,
+      "lng": -86.7437636,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "365 Huntley Pkwy, Pelham, Alabama, 35124-6164, United States",
+      "zip": "35124",
+      "lat": 33.2747328,
+      "lng": -86.792287,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4045 Atlanta Hwy, Montgomery, Alabama, 36109-2920, United States",
+      "zip": "36109",
+      "lat": 32.3836541,
+      "lng": -86.2417305,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "410 Doug Baker Blvd, Birmingham, Alabama, 35242-2682, United States",
+      "zip": "35242",
+      "lat": 33.4089471,
+      "lng": -86.6685565,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "411 Green Springs Hwy, Homewood, Alabama, 35209-4909, United States",
+      "zip": "35209",
+      "lat": 33.4644741,
+      "lng": -86.8206786,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "417 John Henry Way, Madison, Alabama, 35757, United States",
+      "zip": "35757",
+      "lat": 34.7523035,
+      "lng": -86.7629288,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4293 S Shades Crest Rd, Birmingham, Alabama, 35244-6541, United States",
+      "zip": "35244",
+      "lat": 33.3089402,
+      "lng": -86.90374659999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4730 Highway 17, Helena, Alabama, 35080-3570, United States",
+      "zip": "35080",
+      "lat": 33.2804325,
+      "lng": -86.85411839999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4812 Highway 280, Alexander City, Alabama, 35010-3394, United States",
+      "zip": "35010",
+      "lat": 32.9134192,
+      "lng": -85.95331139999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4851 Rice Mine Rd NE, Tuscaloosa, Alabama, 35406-3571, United States",
+      "zip": "35406",
+      "lat": 33.2628309,
+      "lng": -87.5142352,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4851 Whitesburg Dr SE, Huntsville, Alabama, 35802-1626, United States",
+      "zip": "35802",
+      "lat": 34.6929062,
+      "lng": -86.5660608,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "501 Chelsea Crossroads, Chelsea, Alabama, 35043-3900, United States",
+      "zip": "35043",
+      "lat": 33.3530144,
+      "lng": -86.6087235,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5039 US Highway 231, Wetumpka, Alabama, 36092-3124, United States",
+      "zip": "36092",
+      "lat": 32.5142103,
+      "lng": -86.21295470000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5100 Old Springville Rd, Pinson, Alabama, 35126-3635, United States",
+      "zip": "35126",
+      "lat": 33.6550398,
+      "lng": -86.6475198,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5408 Summerville Rd, Phenix City, Alabama, 36867-7480, United States",
+      "zip": "36867",
+      "lat": 32.5213803,
+      "lng": -85.0284616,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6219 Tattersall Blvd, Hoover, Alabama, 35242, United States",
+      "zip": "35242",
+      "lat": 33.4239519,
+      "lng": -86.6660354,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "655 Fieldstown Rd, Gardendale, Alabama, 35071-2411, United States",
+      "zip": "35071",
+      "lat": 33.6494514,
+      "lng": -86.8231713,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6707 US-431, Owens Cross Roads, Alabama, 35763-9223, United States",
+      "zip": "35763",
+      "lat": 34.6582665,
+      "lng": -86.48197669999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "7129 Wall Triana Hwy, Madison, Alabama, 35757-7421, United States",
+      "zip": "35757",
+      "lat": 34.7931293,
+      "lng": -86.7467248,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "7250 Gadsden Hwy, Trussville, Alabama, 35173-1687, United States",
+      "zip": "35173",
+      "lat": 33.6394296,
+      "lng": -86.58002080000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "7700 Vaughn Rd, Montgomery, Alabama, 36116-1337, United States",
+      "zip": "36116",
+      "lat": 32.3369145,
+      "lng": -86.1827921,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "784 Montgomery Hwy, Vestavia Hills, Alabama, 35216-1800, United States",
+      "zip": "35216",
+      "lat": 33.4447007,
+      "lng": -86.7931796,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "8000 Madison Blvd, Madison, Alabama, 35758-2031, United States",
+      "zip": "35758",
+      "lat": 34.6913782,
+      "lng": -86.7188918,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "9040 Memorial Pkwy SW, Huntsville, Alabama, 35802-3027, United States",
+      "zip": "35802",
+      "lat": 34.6491351,
+      "lng": -86.5681887,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "9200 Highway 119, Alabaster, Alabama, 35007-5337, United States",
+      "zip": "35007",
+      "lat": 33.2126133,
+      "lng": -86.8254259,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "9515 Vaughn Rd, Pike Road, Alabama, 36064-2292, United States",
+      "zip": "36064",
+      "lat": 32.3490628,
+      "lng": -86.0928424,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "Madison, Alabama, 35756-2000, United States",
+      "zip": "35756",
+      "lat": 34.6992579,
+      "lng": -86.74833180000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "Village Dr, Moody, Alabama, 35004, United States",
+      "zip": "35004",
+      "lat": 33.5700136,
+      "lng": -86.519133,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10179 Eastern Shore Dr, Spanish Fort, Alabama, 36527-3302, United States",
+      "zip": "10179",
+      "lat": 30.6739252,
+      "lng": -87.8481733,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "160 Cotton Creek Dr, Gulf Shores, Alabama, 36542-2718, United States",
+      "zip": "36542",
+      "lat": 30.2987805,
+      "lng": -87.6813811,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1620 Ross Clark Cir, Dothan, Alabama, 36301-5439, United States",
+      "zip": "36301",
+      "lat": 31.1972639,
+      "lng": -85.37401109999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "18125 Wright Blvd, Fairhope, Alabama, 36532, United States",
+      "zip": "18125",
+      "lat": 30.4889244,
+      "lng": -87.8886988,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2035 Schillinger Rd N, Semmes, Alabama, 36575-7417, United States",
+      "zip": "36575",
+      "lat": 30.7333146,
+      "lng": -88.2255807,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "21 Shell St, Saraland, Alabama, 36571-2202, United States",
+      "zip": "36571",
+      "lat": 30.8056978,
+      "lng": -88.11055510000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "22353 State Highway 181, Fairhope, Alabama, 36532-4309, United States",
+      "zip": "22353",
+      "lat": 30.548271,
+      "lng": -87.8545182,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "22530 US Highway 98, Fairhope, Alabama, 36532, United States",
+      "zip": "22530",
+      "lat": 30.55570029999999,
+      "lng": -87.891025,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2370 Hillcrest Rd, Mobile, Alabama, 36695-3841, United States",
+      "zip": "36695",
+      "lat": 30.6416252,
+      "lng": -88.19162759999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "25771 Perdido Beach Blvd, Orange Beach, Alabama, 36561-6107, United States",
+      "zip": "25771",
+      "lat": 30.2717643,
+      "lng": -87.5880553,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2614 S McKenzie St, Foley, Alabama, 36535, United States",
+      "zip": "36535",
+      "lat": 30.3769758,
+      "lng": -87.6864306,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "27955 US Highway 98, Daphne, Alabama, 36526-4735, United States",
+      "zip": "27955",
+      "lat": 30.6309544,
+      "lng": -87.91204119999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3525 Ross Clark Cir, Dothan, Alabama, 36303-5933, United States",
+      "zip": "36303",
+      "lat": 31.2494044,
+      "lng": -85.42832849999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4628 Airport Blvd, Mobile, Alabama, 36608-2223, United States",
+      "zip": "36608",
+      "lat": 30.6766746,
+      "lng": -88.1676753,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4650 W Main St, Dothan, Alabama, 36305-9419, United States",
+      "zip": "36305",
+      "lat": 31.2395685,
+      "lng": -85.4631404,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "847 Boll Weevil Cir, Enterprise, Alabama, 36330-2476, United States",
+      "zip": "36330",
+      "lat": 31.326076,
+      "lng": -85.8381663,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9124 Cottage Hill Rd, Mobile, Alabama, 36695, United States",
+      "zip": "36695",
+      "lat": 30.6420138,
+      "lng": -88.2572884,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9913 Foley Beach Exp, Foley, Alabama, 36535, United States",
+      "zip": "36535",
+      "lat": 30.3689863,
+      "lng": -87.6550137,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3309 Lorna Rd, Birmingham, Alabama, 35216-5448, United States",
+      "zip": "35216",
+      "lat": 33.3937045,
+      "lng": -86.7963618,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1011 US Highway 72 E, Athens, Alabama, 35611-4319, United States",
+      "zip": "35611",
+      "lat": 34.7886498,
+      "lng": -86.9588337,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10710 Chantilly Pkwy, Montgomery, Alabama, 36117-7587, United States",
+      "zip": "10710",
+      "lat": 32.3547579,
+      "lng": -86.13498729999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11697 US Highway 431, Guntersville, Alabama, 35976-5740, United States",
+      "zip": "11697",
+      "lat": 34.2993929,
+      "lng": -86.27902979999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1300 N University Blvd, Mobile, Alabama, 36618-2632, United States",
+      "zip": "36618",
+      "lat": 30.7172201,
+      "lng": -88.1637472,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1501 Skyland Blvd E, Tuscaloosa, Alabama, 35405-4231, United States",
+      "zip": "35405",
+      "lat": 33.1651751,
+      "lng": -87.5187189,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1903 Cobbs Ford Rd, Prattville, Alabama, 36066-7230, United States",
+      "zip": "36066",
+      "lat": 32.4631216,
+      "lng": -86.4166901,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1972 US Highway 431, Boaz, Alabama, 35957-5901, United States",
+      "zip": "35957",
+      "lat": 34.2150365,
+      "lng": -86.1532368,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2001 Glenn Blvd SW, Fort Payne, Alabama, 35968-3535, United States",
+      "zip": "35968",
+      "lat": 34.4401559,
+      "lng": -85.7619723,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2181 Pelham Pkwy, Pelham, Alabama, 35124-1119, United States",
+      "zip": "35124",
+      "lat": 33.3408691,
+      "lng": -86.79110299999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2200 S McKenzie St, Foley, Alabama, 36535-1790, United States",
+      "zip": "36535",
+      "lat": 30.3824199,
+      "lng": -87.6863106,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2570 Government Blvd, Mobile, Alabama, 36606-1614, United States",
+      "zip": "36606",
+      "lat": 30.66966699999999,
+      "lng": -88.1039656,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "312 Palisades Blvd, Birmingham, Alabama, 35209-5148, United States",
+      "zip": "35209",
+      "lat": 33.4679023,
+      "lng": -86.82164180000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3186 Highway 171 N, Fayette, Alabama, 35555-6172, United States",
+      "zip": "35555",
+      "lat": 33.7316994,
+      "lng": -87.8086491,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3320 Lorna Rd, Hoover, Alabama, 35216-5406, United States",
+      "zip": "35216",
+      "lat": 33.3929965,
+      "lng": -86.7992623,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "335 Helena Market Pl, Helena, Alabama, 35080-3386, United States",
+      "zip": "35080",
+      "lat": 33.296224,
+      "lng": -86.8436004,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5601 Al Highway 157, Cullman, Alabama, 35058-5913, United States",
+      "zip": "35058",
+      "lat": 34.204356,
+      "lng": -86.8696133,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "630 Colonial Promenade Pkwy, Alabaster, Alabama, 35007-3111, United States",
+      "zip": "35007",
+      "lat": 33.2355389,
+      "lng": -86.8011299,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6350 Cottage Hill Rd, Mobile, Alabama, 36609-3111, United States",
+      "zip": "36609",
+      "lat": 30.6415048,
+      "lng": -88.18941919999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "685 Schillinger Rd S, Mobile, Alabama, 36695-8922, United States",
+      "zip": "36695",
+      "lat": 30.6767446,
+      "lng": -88.2229873,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7140 Wall Triana Hwy, Madison, Alabama, 35757-7420, United States",
+      "zip": "35757",
+      "lat": 34.7935618,
+      "lng": -86.74954559999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7320 Theodore Dawes Rd, Theodore, Alabama, 36582-4074, United States",
+      "zip": "36582",
+      "lat": 30.5641871,
+      "lng": -88.2134777,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9085 Highway 119, Alabaster, Alabama, 35007-5376, United States",
+      "zip": "35007",
+      "lat": 33.2120641,
+      "lng": -86.8294076,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9248 Parkway E, Birmingham, Alabama, 35206-1509, United States",
+      "zip": "35206",
+      "lat": 33.5901883,
+      "lng": -86.7004457,
+      "country": "US"
+    }
+  ]
+}

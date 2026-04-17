@@ -1,0 +1,910 @@
+{
+  "state_code": "IN",
+  "count": 113,
+  "stores": [
+    {
+      "name": "1st Choice",
+      "address": "5600 S Sohl Ave, Hammond, Indiana, 46320, United States",
+      "zip": "46320",
+      "lat": 41.6130173,
+      "lng": -87.51478619999999,
+      "country": "US"
+    },
+    {
+      "name": "2 Amigos",
+      "address": "3150 E Southeastern Ave, Indianapolis, Indiana, 46203, United States",
+      "zip": "46203",
+      "lat": 39.7309191,
+      "lng": -86.1091071,
+      "country": "US"
+    },
+    {
+      "name": "Campos 1",
+      "address": "3933 N High School Rd, Indianapolis, Indiana, 46254-2710, United States",
+      "zip": "46254",
+      "lat": 39.8270252,
+      "lng": -86.2694513,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria El Ranchito 1",
+      "address": "3512 Rockville Rd, Indianapolis, Indiana, 46222-3974, United States",
+      "zip": "46222",
+      "lat": 39.7633541,
+      "lng": -86.220217,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria El Ranchito 2",
+      "address": "601 E Hanna Ave, Indianapolis, Indiana, 46227-1384, United States",
+      "zip": "46227",
+      "lat": 39.7070996,
+      "lng": -86.14585579999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Guanajuato 1",
+      "address": "1269 Oliver Ave, Indianapolis, Indiana, 46221-1264, United States",
+      "zip": "46221",
+      "lat": 39.7583081,
+      "lng": -86.1826061,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Guanajuato 2",
+      "address": "3110 N Shadeland Ave, Indianapolis, Indiana, 46226-6295, United States",
+      "zip": "46226",
+      "lat": 39.81301819999999,
+      "lng": -86.0465074,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Guanajuato 3",
+      "address": "5210 W Pike Plaza Rd, Indianapolis, Indiana, 46254-3005, United States",
+      "zip": "46254",
+      "lat": 39.83322,
+      "lng": -86.24849999999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Mi Mexico",
+      "address": "2915 N German Church Rd, Indianapolis, Indiana, 46229-1678, United States",
+      "zip": "46229",
+      "lat": 39.8107908,
+      "lng": -85.9709547,
+      "country": "US"
+    },
+    {
+      "name": "El Rey Carniceria",
+      "address": "2720 Westlane Rd, Indianapolis, Indiana, 46268-2347, United States",
+      "zip": "46268",
+      "lat": 39.8856394,
+      "lng": -86.20827910000001,
+      "country": "US"
+    },
+    {
+      "name": "Fairplay Cicero",
+      "address": "2940 Georgetown Rd, Indianapolis, Indiana, 46224-3377, United States",
+      "zip": "46224",
+      "lat": 39.8088646,
+      "lng": -86.2406846,
+      "country": "US"
+    },
+    {
+      "name": "Independent",
+      "address": "1042 US Highway 41, Schererville, Indiana, 46375-1304, United States",
+      "zip": "46375",
+      "lat": 41.5025138,
+      "lng": -87.4726562,
+      "country": "US"
+    },
+    {
+      "name": "La Campos Inc",
+      "address": "2845 E Michigan St, Indianapolis, Indiana, 46201-3347, United States",
+      "zip": "46201",
+      "lat": 39.7742322,
+      "lng": -86.1148322,
+      "country": "US"
+    },
+    {
+      "name": "La Canasta",
+      "address": "2132 E 52nd St, Indianapolis, Indiana, 46205-1408, United States",
+      "zip": "46205",
+      "lat": 39.8479187,
+      "lng": -86.1248131,
+      "country": "US"
+    },
+    {
+      "name": "La Canasta",
+      "address": "4711 W 34th St, Indianapolis, Indiana, 46222-1226, United States",
+      "zip": "46222",
+      "lat": 39.8163255,
+      "lng": -86.2389634,
+      "country": "US"
+    },
+    {
+      "name": "La Canasta",
+      "address": "6250 W 38th St, Indianapolis, Indiana, 46254-3914, United States",
+      "zip": "46254",
+      "lat": 39.8255608,
+      "lng": -86.26873259999999,
+      "country": "US"
+    },
+    {
+      "name": "La Canasta Grocery",
+      "address": "4403 N Franklin Rd, Indianapolis, Indiana, 46226-3914, United States",
+      "zip": "46226",
+      "lat": 39.83716889999999,
+      "lng": -86.0267832,
+      "country": "US"
+    },
+    {
+      "name": "La Ceiba Food Market",
+      "address": "502 N Rural St, Indianapolis, Indiana, 46201-2400, United States",
+      "zip": "46201",
+      "lat": 39.7747726,
+      "lng": -86.11707729999999,
+      "country": "US"
+    },
+    {
+      "name": "La Guanajuato Grocery Store 2",
+      "address": "Indianapolis, Indiana, 46229, United States",
+      "zip": "46229",
+      "lat": 39.7972286,
+      "lng": -85.97150730000001,
+      "country": "US"
+    },
+    {
+      "name": "La Morelos Supermarket",
+      "address": "2124 W Washington St, Indianapolis, Indiana, 46222-4253, United States",
+      "zip": "46222",
+      "lat": 39.766444,
+      "lng": -86.197853,
+      "country": "US"
+    },
+    {
+      "name": "La Potosina",
+      "address": "5324 W 38th St, Indianapolis, Indiana, 46254-2916, United States",
+      "zip": "46254",
+      "lat": 39.8250193,
+      "lng": -86.2537895,
+      "country": "US"
+    },
+    {
+      "name": "La Reina Supermercado",
+      "address": "7125 Georgetown Rd, Indianapolis, Indiana, 46268-5120, United States",
+      "zip": "46268",
+      "lat": 39.8829229,
+      "lng": -86.2435883,
+      "country": "US"
+    },
+    {
+      "name": "La Villita Mexican Grocery",
+      "address": "5353 W 10th St, Indianapolis, Indiana, 46224-6817, United States",
+      "zip": "46224",
+      "lat": 39.7793745,
+      "lng": -86.2520871,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3552 S 14th 1/2 St, Terre Haute, Indiana, 47802-4020, United States",
+      "zip": "47802",
+      "lat": 39.42278659999999,
+      "lng": -87.39551039999999,
+      "country": "US"
+    },
+    {
+      "name": "Los Dos Hermanos",
+      "address": "5439 W 34th St, Indianapolis, Indiana, 46224-2224, United States",
+      "zip": "46224",
+      "lat": 39.8164647,
+      "lng": -86.25515070000002,
+      "country": "US"
+    },
+    {
+      "name": "Los Primos Supermercado",
+      "address": "4715 W 30th St, Indianapolis, Indiana, 46222-1556, United States",
+      "zip": "46222",
+      "lat": 39.8082831,
+      "lng": -86.2391888,
+      "country": "US"
+    },
+    {
+      "name": "Luis Fresh Market",
+      "address": "8170 E 21st St, Indianapolis, Indiana, 46219-2514, United States",
+      "zip": "46219",
+      "lat": 39.7975686,
+      "lng": -86.02446839999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer North Indianapolis",
+      "address": "6650 Whitestown Pkwy, Whitestown, Indiana, 46077-7622, United States",
+      "zip": "46077",
+      "lat": 39.9518509,
+      "lng": -86.34247789999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Chicago",
+      "address": "10138 Indianapolis Blvd, Highland, Indiana, 46322-3501, United States",
+      "zip": "10138",
+      "lat": 41.5285526,
+      "lng": -87.47407779999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Chicago",
+      "address": "611 US-30, Merrillville, Indiana, 46410-5331, United States",
+      "zip": "46410",
+      "lat": 41.4679536,
+      "lng": -87.3460155,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Indianapolis",
+      "address": "5325 E Southport Rd, Indianapolis, Indiana, 46237-9336, United States",
+      "zip": "46237",
+      "lat": 39.6635138,
+      "lng": -86.0774295,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Indianapolis",
+      "address": "5349 W Pike Plaza Rd, Indianapolis, Indiana, 46254-3011, United States",
+      "zip": "46254",
+      "lat": 39.8262473,
+      "lng": -86.2518047,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Indianapolis",
+      "address": "5550 N Keystone Ave, Indianapolis, Indiana, 46220-3458, United States",
+      "zip": "46220",
+      "lat": 39.8534386,
+      "lng": -86.12396989999999,
+      "country": "US"
+    },
+    {
+      "name": "Mi Barrio Supermercado",
+      "address": "2802 Lafayette Rd, Indianapolis, Indiana, 46222-2112, United States",
+      "zip": "46222",
+      "lat": 39.8061442,
+      "lng": -86.219026,
+      "country": "US"
+    },
+    {
+      "name": "Mi Carniceria Favorita",
+      "address": "1223 S High School Rd, Indianapolis, Indiana, 46241-3126, United States",
+      "zip": "46241",
+      "lat": 39.749481,
+      "lng": -86.2686295,
+      "country": "US"
+    },
+    {
+      "name": "Mi Gente International Grocery",
+      "address": "3456 N Shadeland Ave, Indianapolis, Indiana, 46226-5707, United States",
+      "zip": "46226",
+      "lat": 39.8198793,
+      "lng": -86.04699839999999,
+      "country": "US"
+    },
+    {
+      "name": "Mi Mexico 2",
+      "address": "4240 N Franklin Rd, Indianapolis, Indiana, 46226-4193, United States",
+      "zip": "46226",
+      "lat": 39.8341194,
+      "lng": -86.027762,
+      "country": "US"
+    },
+    {
+      "name": "Mi Pueblo Supermarket",
+      "address": "4771 N Post Rd, Indianapolis, Indiana, 46226-4133, United States",
+      "zip": "46226",
+      "lat": 39.8435129,
+      "lng": -86.0094383,
+      "country": "US"
+    },
+    {
+      "name": "Mi Tierra",
+      "address": "1461 Central Ave, Indianapolis, Indiana, 46202-2617, United States",
+      "zip": "46202",
+      "lat": 39.7864473,
+      "lng": -86.1490297,
+      "country": "US"
+    },
+    {
+      "name": "Mi Tierra Supermarket",
+      "address": "4224 N Post Rd, Indianapolis, Indiana, 46226-4217, United States",
+      "zip": "46226",
+      "lat": 39.8344281,
+      "lng": -86.0110472,
+      "country": "US"
+    },
+    {
+      "name": "Morelos",
+      "address": "5 Beachway Dr, Indianapolis, Indiana, 46224-8501, United States",
+      "zip": "46224",
+      "lat": 39.7657882,
+      "lng": -86.2613507,
+      "country": "US"
+    },
+    {
+      "name": "Morelos",
+      "address": "7940 Michigan Rd, Indianapolis, Indiana, 46268-2393, United States",
+      "zip": "46268",
+      "lat": 39.8978377,
+      "lng": -86.2172076,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1035 S Keystone Ave, Indianapolis, Indiana, 46203-1454, United States",
+      "zip": "46203",
+      "lat": 39.7530464,
+      "lng": -86.1205337,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1048 N Baldwin Ave, Marion, Indiana, 46952-2556, United States",
+      "zip": "46952",
+      "lat": 40.57037460000001,
+      "lng": -85.6755218,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "112 S Michigan St, Plymouth, Indiana, 46563-2137, United States",
+      "zip": "46563",
+      "lat": 41.3392302,
+      "lng": -86.30909319999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "116 E Garro St, Plymouth, Indiana, 46563-2108, United States",
+      "zip": "46563",
+      "lat": 41.3408097,
+      "lng": -86.3083467,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1202 W Pike St, Goshen, Indiana, 46526-2002, United States",
+      "zip": "46526",
+      "lat": 41.5887975,
+      "lng": -85.8508976,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1223 W Plymouth St, Bremen, Indiana, 46506-1930, United States",
+      "zip": "46506",
+      "lat": 41.4468218,
+      "lng": -86.1617569,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "126 W Main St, Brook, Indiana, 47922-8843, United States",
+      "zip": "47922",
+      "lat": 40.8657758,
+      "lng": -87.364464,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1518 S Michigan St, South Bend, Indiana, 46613-2216, United States",
+      "zip": "46613",
+      "lat": 41.6582057,
+      "lng": -86.24954840000001,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2024 W Western Ave, South Bend, Indiana, 46619-3524, United States",
+      "zip": "46619",
+      "lat": 41.6719243,
+      "lng": -86.27987999999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "210 N Michigan St, Plymouth, Indiana, 46563-2135, United States",
+      "zip": "46563",
+      "lat": 41.3412605,
+      "lng": -86.3088157,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2129 N Mitthoeffer Rd, Indianapolis, Indiana, 46229, United States",
+      "zip": "46229",
+      "lat": 39.7976384,
+      "lng": -85.9901797,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2152 N Mitthoeffer Rd, Indianapolis, Indiana, 46229, United States",
+      "zip": "46229",
+      "lat": 39.7984449,
+      "lng": -85.9922215,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2283 N Detroit St, Warsaw, Indiana, 46580-2213, United States",
+      "zip": "46580",
+      "lat": 41.2620264,
+      "lng": -85.8529772,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2315 E Conner St, Noblesville, Indiana, 46060-3136, United States",
+      "zip": "46060",
+      "lat": 40.043126,
+      "lng": -85.973128,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2710 State St, Columbus, Indiana, 47201-7448, United States",
+      "zip": "47201",
+      "lat": 39.1933944,
+      "lng": -85.89237519999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2812 W Western Ave, South Bend, Indiana, 46619-3130, United States",
+      "zip": "46619",
+      "lat": 41.6716444,
+      "lng": -86.2894511,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3100 Cincinnati St, Lafayette, Indiana, 47904-2711, United States",
+      "zip": "47904",
+      "lat": 40.4232552,
+      "lng": -86.8614613,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3104 State Road 32 E, Westfield, Indiana, 46074-8730, United States",
+      "zip": "46074",
+      "lat": 40.0436791,
+      "lng": -86.1120613,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3315 McCarty Ln, Lafayette, Indiana, 47905-2261, United States",
+      "zip": "47905",
+      "lat": 40.4025575,
+      "lng": -86.85861159999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3605 Commercial Dr, Indianapolis, Indiana, 46222-1681, United States",
+      "zip": "46222",
+      "lat": 39.8183177,
+      "lng": -86.22698319999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3617 E 10th St, Indianapolis, Indiana, 46201-2517, United States",
+      "zip": "46201",
+      "lat": 39.7812177,
+      "lng": -86.10468039999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3724 Columbus Ave, Anderson, Indiana, 46013-5363, United States",
+      "zip": "46013",
+      "lat": 40.07677839999999,
+      "lng": -85.6666182,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3872 Lafayette Rd, Indianapolis, Indiana, 46254-2502, United States",
+      "zip": "46254",
+      "lat": 39.8251848,
+      "lng": -86.2384168,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3940 S Keystone Ave, Indianapolis, Indiana, 46227-3580, United States",
+      "zip": "46227",
+      "lat": 39.709688,
+      "lng": -86.1210271,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4050 N High School Rd, Indianapolis, Indiana, 46254-2754, United States",
+      "zip": "46254",
+      "lat": 39.8279444,
+      "lng": -86.27112819999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "410 N Earl Ave, Lafayette, Indiana, 47904, United States",
+      "zip": "47904",
+      "lat": 40.420966,
+      "lng": -86.86137029999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4112 N High School Rd, Indianapolis, Indiana, 46254-2743, United States",
+      "zip": "46254",
+      "lat": 39.8291304,
+      "lng": -86.2712197,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "421 S 5th St, Logansport, Indiana, 46947-3416, United States",
+      "zip": "46947",
+      "lat": 40.752372,
+      "lng": -86.3640954,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "425 S Main St, South Bend, Indiana, 46601-2207, United States",
+      "zip": "46601",
+      "lat": 41.6714564,
+      "lng": -86.25251089999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5101 N Post Rd, Indianapolis, Indiana, 46226-4169, United States",
+      "zip": "46226",
+      "lat": 39.8467853,
+      "lng": -86.0098593,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5427 W 34th St, Indianapolis, Indiana, 46224-2224, United States",
+      "zip": "46224",
+      "lat": 39.8158783,
+      "lng": -86.25424369999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5430 E Washington St, Indianapolis, Indiana, 46219-6446, United States",
+      "zip": "46219",
+      "lat": 39.7710268,
+      "lng": -86.07479130000002,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5435 E 38th St, Indianapolis, Indiana, 46218-1820, United States",
+      "zip": "46218",
+      "lat": 39.8250633,
+      "lng": -86.07545139999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5624 Georgetown Rd, Indianapolis, Indiana, 46254-1512, United States",
+      "zip": "46254",
+      "lat": 39.85395339999999,
+      "lng": -86.24236549999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "608 Sagamore Pkwy S, Lafayette, Indiana, 47905-4736, United States",
+      "zip": "47905",
+      "lat": 40.4114458,
+      "lng": -86.8583124,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "616 W Chicago Ave, East Chicago, Indiana, 46312-3220, United States",
+      "zip": "46312",
+      "lat": 41.6296286,
+      "lng": -87.47904559999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7419 W 10th St, Indianapolis, Indiana, 46214-2517, United States",
+      "zip": "46214",
+      "lat": 39.777712,
+      "lng": -86.292136,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "8484 Center Run Dr, Indianapolis, Indiana, 46250, United States",
+      "zip": "46250",
+      "lat": 39.9104462,
+      "lng": -86.0590732,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "896 E Winona Ave, Warsaw, Indiana, 46580-4557, United States",
+      "zip": "46580",
+      "lat": 41.235203,
+      "lng": -85.8442647,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "8989 Pendleton Pike, Indianapolis, Indiana, 46226-4113, United States",
+      "zip": "46226",
+      "lat": 39.8437211,
+      "lng": -86.0105949,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Jireh",
+      "address": "8255 Craig St, Indianapolis, Indiana, 46250-4583, United States",
+      "zip": "46250",
+      "lat": 39.9061426,
+      "lng": -86.051782,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado La Guatemalteca",
+      "address": "3709 E Washington St, Indianapolis, Indiana, 46201-4400, United States",
+      "zip": "46201",
+      "lat": 39.7682013,
+      "lng": -86.1039985,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado La Mejor",
+      "address": "2650 N State Highway 7, North Vernon, Indiana, 47265-7186, United States",
+      "zip": "47265",
+      "lat": 39.0188159,
+      "lng": -85.64596569999999,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Morales 2",
+      "address": "2524 Central Ave, Indianapolis, Indiana, 46205, United States",
+      "zip": "46205",
+      "lat": 39.8036629,
+      "lng": -86.1497996,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Morales 3",
+      "address": "2361 Henry Lakes Blvd, Columbus, Indiana, 47201, United States",
+      "zip": "47201",
+      "lat": 39.2902528,
+      "lng": -85.95246809999999,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Rio Grande",
+      "address": "3702 N Mitthoefer Rd, Indianapolis, Indiana, 46235-2375, United States",
+      "zip": "46235",
+      "lat": 39.8246639,
+      "lng": -85.992621,
+      "country": "US"
+    },
+    {
+      "name": "Tienda Guatemalteca & Restaurante Angie",
+      "address": "8939 E 38th St, Indianapolis, Indiana, 46226-6000, United States",
+      "zip": "46226",
+      "lat": 39.823881,
+      "lng": -86.0123471,
+      "country": "US"
+    },
+    {
+      "name": "Tienda La Canasta",
+      "address": "64 S Girls School Rd, Indianapolis, Indiana, 46231-1118, United States",
+      "zip": "46231",
+      "lat": 39.7625828,
+      "lng": -86.29113989999999,
+      "country": "US"
+    },
+    {
+      "name": "Tienda Mexicana Alis",
+      "address": "7387 N Shadeland Ave, Indianapolis, Indiana, 46250-2052, United States",
+      "zip": "46250",
+      "lat": 39.8885788,
+      "lng": -86.0455861,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1100 5th Ave, Hammond, Indiana, 46320-1002, United States",
+      "zip": "46320",
+      "lat": 41.6927489,
+      "lng": -87.5196465,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1133 N Emerson Ave, Greenwood, Indiana, 46143-6275, United States",
+      "zip": "46143",
+      "lat": 39.6342527,
+      "lng": -86.08035679999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1618 W McClain Ave, Scottsburg, Indiana, 47170-1161, United States",
+      "zip": "47170",
+      "lat": 38.6877817,
+      "lng": -85.7955465,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "16865 Clover Rd, Noblesville, Indiana, 46060-3640, United States",
+      "zip": "16865",
+      "lat": 40.033836,
+      "lng": -85.9990808,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2321 Charles St, Anderson, Indiana, 46013, United States",
+      "zip": "46013",
+      "lat": 40.0645426,
+      "lng": -85.64967329999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2373 E Main St, Plainfield, Indiana, 46168, United States",
+      "zip": "46168",
+      "lat": 39.7115296,
+      "lng": -86.3677163,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2460 E Wabash St, Frankfort, Indiana, 46041-9429, United States",
+      "zip": "46041",
+      "lat": 40.2814176,
+      "lng": -86.47844769999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2500 Progress Pkwy, Shelbyville, Indiana, 46176, United States",
+      "zip": "46176",
+      "lat": 39.5268209,
+      "lng": -85.7431098,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2910 Grant Line Rd, New Albany, Indiana, 47150-2456, United States",
+      "zip": "47150",
+      "lat": 38.3196014,
+      "lng": -85.818224,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "30830 Old US-20, Elkhart, Indiana, 46514-9481, United States",
+      "zip": "30830",
+      "lat": 41.6866844,
+      "lng": -86.05846190000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3221 W 86th St, Indianapolis, Indiana, 46268-3606, United States",
+      "zip": "46268",
+      "lat": 39.9093505,
+      "lng": -86.21886719999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "401 N Burkhardt Rd, Evansville, Indiana, 47715-2733, United States",
+      "zip": "47715",
+      "lat": 37.9803969,
+      "lng": -87.4724703,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4024 Elkhart Rd, Goshen, Indiana, 46526-5800, United States",
+      "zip": "46526",
+      "lat": 41.6178931,
+      "lng": -85.900582,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4545 Lafayette Rd, Indianapolis, Indiana, 46254-2033, United States",
+      "zip": "46254",
+      "lat": 39.8385171,
+      "lng": -86.2442408,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4650 S Emerson Ave, Indianapolis, Indiana, 46203-5932, United States",
+      "zip": "46203",
+      "lat": 39.6991463,
+      "lng": -86.0851727,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4801 W Clara Ln, Muncie, Indiana, 47304-5548, United States",
+      "zip": "47304",
+      "lat": 40.2173206,
+      "lng": -85.4419216,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5550 E Fall Creek Parkway North Dr, Indianapolis, Indiana, 46226-1453, United States",
+      "zip": "46226",
+      "lat": 39.8538764,
+      "lng": -86.08433769999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5835 W 10th St, Indianapolis, Indiana, 46224-6112, United States",
+      "zip": "46224",
+      "lat": 39.778311,
+      "lng": -86.26327769999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7245 US 31 S, Indianapolis, Indiana, 46227-8538, United States",
+      "zip": "46227",
+      "lat": 39.5499032,
+      "lng": -86.0870154,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7325 N Keystone Ave, Indianapolis, Indiana, 46240-3245, United States",
+      "zip": "46240",
+      "lat": 39.8874478,
+      "lng": -86.1195486,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7502 Southtown Xing, Fort Wayne, Indiana, 46816-2515, United States",
+      "zip": "46816",
+      "lat": 41.0139534,
+      "lng": -85.12032959999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9500 E US-36, Avon, Indiana, 46123-7366, United States",
+      "zip": "46123",
+      "lat": 39.7629002,
+      "lng": -86.3912538,
+      "country": "US"
+    }
+  ]
+}

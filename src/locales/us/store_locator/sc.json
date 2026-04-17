@@ -1,0 +1,790 @@
+{
+  "state_code": "SC",
+  "count": 112,
+  "stores": [
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "13 S Sumter St, Greenville, South Carolina, 29611-5361, United States",
+      "lat": 34.8321256,
+      "lng": -82.438163,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1406 W Faris Rd, Greenville, South Carolina, 29605, United States",
+      "lat": 34.819244,
+      "lng": -82.42401989999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "327 White Horse Rd, Greenville, South Carolina, 29605-3656, United States",
+      "lat": 34.7728958,
+      "lng": -82.388916,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "Short Leaf Pine Cir, Greenville, South Carolina, 29609, United States",
+      "lat": 34.9044987,
+      "lng": -82.4168786,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "2712 Anderson Rd, Greenville, South Carolina, 29611, United States",
+      "lat": 34.8148598,
+      "lng": -82.44311549999999,
+      "country": "US"
+    },
+    {
+      "name": "El Rey",
+      "address": "3225 W Blue Ridge Dr, Greenville, South Carolina, 29611-3905, United States",
+      "lat": 34.8524125,
+      "lng": -82.4489411,
+      "country": "US"
+    },
+    {
+      "name": "El Rey",
+      "address": "8056 Asheville Hwy, Spartanburg, South Carolina, 29303-1571, United States",
+      "lat": 34.992962,
+      "lng": -81.9939667,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "125 Towne Dr, Bluffton, South Carolina, 29910, United States",
+      "lat": 32.268212,
+      "lng": -80.85827619999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "27 Discovery Dr, Bluffton, South Carolina, 29910, United States",
+      "lat": 32.2741013,
+      "lng": -80.9171982,
+      "country": "US"
+    },
+    {
+      "name": "La Unica Supermarket",
+      "address": "100 N Town Dr, Spartanburg, South Carolina, 29303-1434, United States",
+      "lat": 34.9830256,
+      "lng": -81.9680339,
+      "country": "US"
+    },
+    {
+      "name": "La Unica Supermarket",
+      "address": "5101 Wade Hampton Blvd, Taylors, South Carolina, 29687-5631, United States",
+      "lat": 34.9328925,
+      "lng": -82.2868785,
+      "country": "US"
+    },
+    {
+      "name": "La Unica Supermarket",
+      "address": "6119 White Horse Rd, Greenville, South Carolina, 29611-3838, United States",
+      "lat": 34.8531467,
+      "lng": -82.45479639999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "10 Westedge St, Charleston, South Carolina, 29403-6906, United States",
+      "lat": 32.7867888,
+      "lng": -79.9569765,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "100 Old Cherokee Rd, Lexington, South Carolina, 29072-9316, United States",
+      "lat": 33.9997997,
+      "lng": -81.2197824,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1000 Johnnie Dodds Blvd, Mt Pleasant, South Carolina, 29464-3135, United States",
+      "lat": 32.8128201,
+      "lng": -79.86678359999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "10225 Ocean Hwy, Pawleys Island, South Carolina, 29585-6507, United States",
+      "lat": 33.4374078,
+      "lng": -79.1317451,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "111 W Butler Rd, Mauldin, South Carolina, 29662-2534, United States",
+      "lat": 34.7769287,
+      "lng": -82.3101239,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1125 Park West Blvd, Mt Pleasant, South Carolina, 29466-6974, United States",
+      "lat": 32.8740522,
+      "lng": -79.7793516,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "115 Rochester Hwy, Seneca, South Carolina, 29672-2509, United States",
+      "lat": 34.7026202,
+      "lng": -82.9388022,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "11920 Highway 707, Murrells Inlet, South Carolina, 29576-9609, United States",
+      "lat": 33.5875195,
+      "lng": -79.05445379999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1235 Chapin Rd, Chapin, South Carolina, 29036-9691, United States",
+      "lat": 34.1642207,
+      "lng": -81.351715,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1274 Nexton Pkwy, Summerville, South Carolina, 29486, United States",
+      "lat": 33.0603237,
+      "lng": -80.1538537,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "136 Sapwood Rd, Myrtle Beach, South Carolina, 29579, United States",
+      "lat": 33.753748,
+      "lng": -78.870936,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1390 Tiger Blvd, Clemson, South Carolina, 29631-2617, United States",
+      "lat": 34.6869531,
+      "lng": -82.8177749,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1400 W Georgia Rd, Simpsonville, South Carolina, 29680-6966, United States",
+      "lat": 34.7244123,
+      "lng": -82.2940108,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1401 Sam Rittenberg Blvd, Charleston, South Carolina, 29407-5031, United States",
+      "lat": 32.81438840000001,
+      "lng": -79.995353,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1411 Folly Rd, Charleston, South Carolina, 29412-9695, United States",
+      "lat": 32.7143399,
+      "lng": -79.9667434,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "150 Harbison Blvd, Columbia, South Carolina, 29212-2284, United States",
+      "lat": 34.066212,
+      "lng": -81.16458589999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1575 Old Trolley Rd, Summerville, South Carolina, 29485-8208, United States",
+      "lat": 32.9668374,
+      "lng": -80.1660206,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1576 Highway 17 N, Myrtle Beach, South Carolina, 29575-6013, United States",
+      "lat": 33.624473,
+      "lng": -78.969465,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "158 Highway 274, Clover, South Carolina, 29710-6045, United States",
+      "lat": 35.1201905,
+      "lng": -81.08148059999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1611 E Greenville St, Anderson, South Carolina, 29621-2006, United States",
+      "lat": 34.5310346,
+      "lng": -82.6364317,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1724 State Rd, Summerville, South Carolina, 29486-2842, United States",
+      "lat": 33.1062333,
+      "lng": -80.1252094,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1735 Heckle Blvd, Rock Hill, South Carolina, 29732-4803, United States",
+      "lat": 34.9514612,
+      "lng": -81.06466019999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1750 Woodruff Rd, Greenville, South Carolina, 29607-5933, United States",
+      "lat": 34.8183168,
+      "lng": -82.2717389,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "185 Earth Rd, Columbia, South Carolina, 29045-7155, United States",
+      "lat": 34.1125926,
+      "lng": -80.8448712,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1905 E Main St, Spartanburg, South Carolina, 29307-2308, United States",
+      "lat": 34.9671191,
+      "lng": -81.8916569,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "208 St James Ave, Goose Creek, South Carolina, 29445-2994, United States",
+      "lat": 33.00794,
+      "lng": -80.0432757,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "215 Pelham Rd, Greenville, South Carolina, 29615-2546, United States",
+      "lat": 34.8675553,
+      "lng": -82.348119,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2170 Oakheart Rd, Myrtle Beach, South Carolina, 29579-1253, United States",
+      "lat": 33.7584957,
+      "lng": -78.95873209999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2186 Cherry Rd, Rock Hill, South Carolina, 29732-3281, United States",
+      "lat": 34.9646513,
+      "lng": -80.9967881,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "235 S Pleasantburg Dr, Greenville, South Carolina, 29607-2521, United States",
+      "lat": 34.83622250000001,
+      "lng": -82.3645386,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "250 Eastgate Dr, Aiken, South Carolina, 29803, United States",
+      "lat": 33.5114242,
+      "lng": -81.71630189999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2700 N Main St, Summerville, South Carolina, 29486-8765, United States",
+      "lat": 33.0583473,
+      "lng": -80.0981954,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2700 Woodruff Rd, Simpsonville, South Carolina, 29681-4804, United States",
+      "lat": 34.8046855,
+      "lng": -82.2274281,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2732 N Lake Dr, Columbia, South Carolina, 29212-8733, United States",
+      "lat": 34.0977325,
+      "lng": -81.2212457,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2801 Wade Hampton Blvd, Taylors, South Carolina, 29687-2711, United States",
+      "lat": 34.9015025,
+      "lng": -82.3373897,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2830 Highway 52, Moncks Corner, South Carolina, 29461-5028, United States",
+      "lat": 33.0901113,
+      "lng": -80.03084590000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "334 Martintown Rd E, North Augusta, South Carolina, 29841-4261, United States",
+      "lat": 33.495762,
+      "lng": -81.96243109999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3642 Savannah Hwy, Johns Island, South Carolina, 29455-7948, United States",
+      "lat": 32.8049527,
+      "lng": -80.1110788,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3801 Clemson Blvd, Anderson, South Carolina, 29621, United States",
+      "lat": 34.5531778,
+      "lng": -82.6846796,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "411 The Pkwy, Greer, South Carolina, 29650-4522, United States",
+      "lat": 34.8715,
+      "lng": -82.2560845,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4400 Highway 9, Boiling Springs, South Carolina, 29316-8583, United States",
+      "lat": 35.0614521,
+      "lng": -81.99572409999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4611 Hard Scrabble Rd, Columbia, South Carolina, 29229-8584, United States",
+      "lat": 34.1537952,
+      "lng": -80.91291989999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "479 Bypass 72 NW, Greenwood, South Carolina, 29649-1484, United States",
+      "lat": 34.2060129,
+      "lng": -82.1863106,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4840 Forest Dr, Columbia, South Carolina, 29206-4810, United States",
+      "lat": 34.01818,
+      "lng": -80.9646853,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5000 Old Buncombe Rd, Greenville, South Carolina, 29617-8208, United States",
+      "lat": 34.9112727,
+      "lng": -82.4275378,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "501 Gervais St, Columbia, South Carolina, 29201-3045, United States",
+      "lat": 33.9982024,
+      "lng": -81.0446686,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "520 Folly Rd, Charleston, South Carolina, 29412-3019, United States",
+      "lat": 32.75362,
+      "lng": -79.97093869999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5441 Platt Springs Rd, Lexington, South Carolina, 29073-9260, United States",
+      "lat": 33.9064611,
+      "lng": -81.2208579,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "6525 Calhoun Memorial Hwy, Easley, South Carolina, 29640-3669, United States",
+      "lat": 34.8199767,
+      "lng": -82.58467739999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "704 Fairview Rd, Simpsonville, South Carolina, 29680-7117, United States",
+      "lat": 34.7036201,
+      "lng": -82.25847879999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "730 Hopewell Dr, Charleston, South Carolina, 29492-7103, United States",
+      "lat": 32.9216286,
+      "lng": -79.87132710000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "7320 Broad River Rd, Irmo, South Carolina, 29063-9656, United States",
+      "lat": 34.0968453,
+      "lng": -81.15741799999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8356 Charlotte Hwy, Fort Mill, South Carolina, 29707-6555, United States",
+      "lat": 34.9557143,
+      "lng": -80.84936669999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8409 Dorchester Rd, North Charleston, South Carolina, 29420, United States",
+      "lat": 32.9129473,
+      "lng": -80.109706,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "847 US-378 W, Lexington, South Carolina, 29072, United States",
+      "lat": 33.9911044,
+      "lng": -81.3063296,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "928 Gold Hill Rd, Fort Mill, South Carolina, 29708-7947, United States",
+      "lat": 35.0627318,
+      "lng": -80.9644375,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "955 Wood Duck Dr, Myrtle Beach, South Carolina, 29577-9412, United States",
+      "lat": 33.66372,
+      "lng": -78.96911999999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "Two Notch Rd, Columbia, South Carolina, 29223-4384, United States",
+      "lat": 34.0882132,
+      "lng": -80.9303625,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "101 Buckwalter Place Blvd, Bluffton, South Carolina, 29910, United States",
+      "lat": 32.2703832,
+      "lng": -80.91686519999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11 Palmetto Bay Rd, Hilton Head Island, South Carolina, 29928-3293, United States",
+      "lat": 32.1574586,
+      "lng": -80.7654341,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "112 Nickel Plate Rd, Hardeeville, South Carolina, 29927-4414, United States",
+      "lat": 32.3082039,
+      "lng": -80.973385,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2501 May River Xing, Bluffton, South Carolina, 29910-9719, United States",
+      "lat": 32.2424546,
+      "lng": -80.9781361,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "33 Robert Smalls Pkwy, Beaufort, South Carolina, 29906-4200, United States",
+      "lat": 32.4387718,
+      "lng": -80.7055665,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "45 Pembroke Dr, Hilton Head Island, South Carolina, 29926-2262, United States",
+      "lat": 32.2103351,
+      "lng": -80.7253396,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "61 Ladys Island Dr, Beaufort, South Carolina, 29907-1618, United States",
+      "lat": 32.4121765,
+      "lng": -80.6509703,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "80 Baylor Dr, Bluffton, South Carolina, 29910, United States",
+      "lat": 32.2778384,
+      "lng": -80.8771257,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10060 Two Notch Rd, Columbia, South Carolina, 29223-4396, United States",
+      "lat": 34.1104861,
+      "lng": -80.88585719999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1040 Chesterfield Hwy, Cheraw, South Carolina, 29520-7010, United States",
+      "lat": 34.7011146,
+      "lng": -79.9313377,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1041 Edgefield Rd, North Augusta, South Carolina, 29860, United States",
+      "lat": 33.5725014,
+      "lng": -81.93506529999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10820 Kings Rd, Myrtle Beach, South Carolina, 29572-6070, United States",
+      "lat": 33.7869595,
+      "lng": -78.76922700000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1151 Stonecrest Blvd, Tega Cay, South Carolina, 29708-6555, United States",
+      "lat": 35.0462373,
+      "lng": -80.9938389,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1180 Dutch Fork Rd, Irmo, South Carolina, 29063-8874, United States",
+      "lat": 34.12716899999999,
+      "lng": -81.22375880000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1225 Cherry Rd, Rock Hill, South Carolina, 29732-2507, United States",
+      "lat": 34.9526903,
+      "lng": -81.01731269999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "125 Maryport Dr, Myrtle Beach, South Carolina, 29575-6513, United States",
+      "lat": 33.6326663,
+      "lng": -78.9612327,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1286 Eighteen Mile Rd, Central, South Carolina, 29630-8605, United States",
+      "lat": 34.7056729,
+      "lng": -82.7622784,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1310 N Fraser St, Georgetown, South Carolina, 29440-2800, United States",
+      "lat": 33.3938205,
+      "lng": -79.2862634,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1317 N Main St, Summerville, South Carolina, 29483-7342, United States",
+      "lat": 33.0346494,
+      "lng": -80.1551346,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "14055 E Wade Hampton Blvd, Greer, South Carolina, 29651-1500, United States",
+      "lat": 34.94453379999999,
+      "lng": -82.2065724,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "141 Dorman Centre Dr, Spartanburg, South Carolina, 29301-2625, United States",
+      "lat": 34.9333303,
+      "lng": -81.9846468,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1481 N Highway 17, Mt Pleasant, South Carolina, 29464-3332, United States",
+      "lat": 32.8140331,
+      "lng": -79.8443674,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1635 Red Bank Rd, Goose Creek, South Carolina, 29445-4589, United States",
+      "lat": 32.9693326,
+      "lng": -80.003976,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2014 S Irby St, Florence, South Carolina, 29505-3420, United States",
+      "lat": 34.1551292,
+      "lng": -79.7639884,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2110 Bells Hwy, Walterboro, South Carolina, 29488-6978, United States",
+      "lat": 32.9345044,
+      "lng": -80.6897316,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "215 Saint James Ave, Goose Creek, South Carolina, 29445-2938, United States",
+      "lat": 33.008098,
+      "lng": -80.0463321,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2709 Church St, Conway, South Carolina, 29526-4440, United States",
+      "lat": 33.8579956,
+      "lng": -79.0911545,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2751 Beaver Run Blvd, Myrtle Beach, South Carolina, 29575-5384, United States",
+      "lat": 33.6469987,
+      "lng": -78.98115059999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2812 Main St, Newberry, South Carolina, 29108, United States",
+      "lat": 34.2802211,
+      "lng": -81.59248579999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3000 Proprietors Pl, Mt Pleasant, South Carolina, 29466-8361, United States",
+      "lat": 32.8616994,
+      "lng": -79.7882716,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3027 Wade Hampton Blvd, Taylors, South Carolina, 29687, United States",
+      "lat": 34.9085578,
+      "lng": -82.3324732,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "332 Stonewall Jackson Blvd, Orangeburg, South Carolina, 29115, United States",
+      "lat": 33.4826074,
+      "lng": -80.8706012,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "350 Robert Smalls Pkwy, Beaufort, South Carolina, 29906-4284, United States",
+      "lat": 32.4254648,
+      "lng": -80.7340876,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3581 Richland Ave, Aiken, South Carolina, 29801, United States",
+      "lat": 33.5612445,
+      "lng": -81.7674227,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3950 Grandview Dr, Simpsonville, South Carolina, 29680-3163, United States",
+      "lat": 34.7119363,
+      "lng": -82.25205249999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4875 Old York Rd, Rock Hill, South Carolina, 29732-8127, United States",
+      "lat": 34.9792382,
+      "lng": -81.08977999999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "500 N Dobys Bridge Rd, Fort Mill, South Carolina, 29715-6815, United States",
+      "lat": 35.0059136,
+      "lng": -80.93053720000002,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5420 Forest Dr, Columbia, South Carolina, 29206, United States",
+      "lat": 34.021544,
+      "lng": -80.95222679999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6134 White Horse Rd, Greenville, South Carolina, 29611-3847, United States",
+      "lat": 34.8566723,
+      "lng": -82.4543648,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "651 Highway 28 Byp, Anderson, South Carolina, 29624, United States",
+      "lat": 34.4880774,
+      "lng": -82.6782353,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "680 Old Greenville Hwy, Clemson, South Carolina, 29631-3363, United States",
+      "lat": 34.6971414,
+      "lng": -82.80110359999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7400 Rivers Ave, North Charleston, South Carolina, 29406-4634, United States",
+      "lat": 32.9392973,
+      "lng": -80.0360232,
+      "country": "US"
+    }
+  ]
+}

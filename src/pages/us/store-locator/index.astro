@@ -1,0 +1,15 @@
+---
+import StoreLocatorView from '../../../views-us/StoreLocator/index.astro';
+import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
+import { setLocale } from '../../../i18n/i18n';
+
+setLocale('us');
+---
+
+<MainLayoutUS
+  title="Where to Buy"
+  description="Find Zambos products near you at a store in your city."
+  headerColors={{ backgroundColor: '#0E6D20', textColor: '#FFFFFF' }}
+>
+  <StoreLocatorView />
+</MainLayoutUS>
