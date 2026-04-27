@@ -27,6 +27,24 @@ const { title, description, class: className, headerColors, preloadImages = [] }
 
 const currentLang: Locale = 'us';
 const { pathname } = Astro.url;
+const BASE_URL = 'https://zambos.com';
+const canonicalUrl = `${BASE_URL}${pathname}`;
+
+// Compute ES alternate path via routesConfig slug mapping
+function getEsPath(): string {
+  const segs = pathname.split('/').filter(Boolean);
+  const slug = segs[1] || '';
+  if (!slug) return '/es';
+  const route = routesConfig.find((r) => r.slugs['us'] === slug);
+  if (route?.slugs['es']) {
+    const rest = segs.slice(2).join('/');
+    return rest ? `/es/${route.slugs['es']}/${rest}` : `/es/${route.slugs['es']}`;
+  }
+  return `/es/${slug}`;
+}
+
+const esPath = getEsPath();
+
 const headerColorConfig = getHeaderColors(pathname);
 
 let customHeaderConfig = headerColorConfig;
@@ -51,6 +69,11 @@ if (headerColors) {
     {preloadImages.map((src) => (
       <link rel="preload" as="image" href={src} />
     ))}
+    <!-- Canonical & hreflang for SERPs -->
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="en" href={canonicalUrl} />
+    <link rel="alternate" hreflang="es" href={`${BASE_URL}${esPath}`} />
+    <link rel="alternate" hreflang="x-default" href={`${BASE_URL}/es`} />
     <slot name="head" />
   </head>
   <body class={`font-sans min-h-screen flex flex-col us-layout ${className || ''}`}>

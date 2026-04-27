@@ -1,58 +1,69 @@
 import type { APIRoute } from 'astro';
-import { getCollection } from 'astro:content';
-import config from '../i18n/config';
+import { routesConfig } from '../config/routes';
 
-// Only pages that are in the navigation menu
-const staticPages = [
-  '/',
-  '/recetas',
-  '/recipes',
-  '/blog',
-  '/contacto',
-  '/contact'
-];
+const BASE = 'https://zambos.com';
+const TODAY = new Date().toISOString().split('T')[0];
+
+/**
+ * Build a <url> entry with optional hreflang alternates.
+ * esUrl / enUrl are full absolute URLs.
+ */
+function urlEntry(
+  loc: string,
+  opts: { esUrl?: string; enUrl?: string; priority?: string } = {}
+): string {
+  const { esUrl, enUrl, priority = '0.8' } = opts;
+  const alts: string[] = [];
+  if (esUrl) alts.push(`<xhtml:link rel="alternate" hreflang="es" href="${esUrl}"/>`);
+  if (enUrl) alts.push(`<xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>`);
+  // x-default points to the ES (primary) version when bilingual, otherwise to itself
+  const xDefault = esUrl || loc;
+  if (esUrl && enUrl) alts.push(`<xhtml:link rel="alternate" hreflang="x-default" href="${xDefault}"/>`);
+
+  return `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>${priority}</priority>
+    ${alts.join('\n    ')}
+  </url>`;
+}
 
 export const GET: APIRoute = async () => {
-  const posts = await getCollection('blog');
-  
-  // Generate URLs with proper language prefixes
-  const pageUrls = staticPages.map(page => {
-    // Pages already have language prefix or are root
-    if (page === '/') {
-      return config.supportedLocales.map(lang => `/${lang}`);
-    }
-    // Check if page already has language prefix
-    const hasLangPrefix = config.supportedLocales.some(lang => page.startsWith(`/${lang}`));
-    if (hasLangPrefix) {
-      return [page];
-    }
-    // Add language prefix to pages without it
-    return config.supportedLocales.map(lang => `/${lang}${page}`);
-  }).flat();
+  const entries: string[] = [];
 
-  // Blog posts with language prefixes
-  const blogPosts = posts.map((post: any) => 
-    `/${post.slug.split('/')[0]}/blog/${post.slug.split('/')[1]}`
-  );
+  // ── Home pages ──────────────────────────────────────────────────────────────
+  const esHome = `${BASE}/es`;
+  const usHome = `${BASE}/us`;
+  entries.push(urlEntry(esHome, { esUrl: esHome, enUrl: usHome, priority: '1.0' }));
+  entries.push(urlEntry(usHome, { esUrl: esHome, enUrl: usHome, priority: '1.0' }));
 
-  const allUrls = [...pageUrls, ...blogPosts];
+  // ── All routes from routesConfig ────────────────────────────────────────────
+  for (const route of routesConfig) {
+    if (route.id === 'home') continue;
 
-  return new Response(
-    `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-      ${allUrls.map(url => `
-        <url>
-          <loc>https://zambos.com${url}</loc>
-          <lastmod>${new Date().toISOString()}</lastmod>
-          <changefreq>weekly</changefreq>
-          <priority>0.8</priority>
-        </url>
-      `).join('')}
-    </urlset>`.trim(),
-    {
-      headers: {
-        'Content-Type': 'application/xml',
-      },
+    const esSlug = route.slugs['es'];
+    const usSlug = route.slugs['us'];
+    const esUrl = esSlug ? `${BASE}/es/${esSlug}` : undefined;
+    const usUrl = usSlug ? `${BASE}/us/${usSlug}` : undefined;
+
+    // Emit one entry per language variant that exists
+    if (esUrl) {
+      entries.push(urlEntry(esUrl, { esUrl, enUrl: usUrl }));
     }
-  );
+    if (usUrl) {
+      entries.push(urlEntry(usUrl, { esUrl, enUrl: usUrl }));
+    }
+  }
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${entries.join('\n')}
+</urlset>`;
+
+  return new Response(xml, {
+    headers: { 'Content-Type': 'application/xml; charset=utf-8' },
+  });
 };

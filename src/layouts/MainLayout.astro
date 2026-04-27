@@ -31,8 +31,31 @@ const pathSegments = Astro.url.pathname.split('/');
 const langFromUrl = pathSegments[1] as Locale;
 const validLocales: Locale[] = ['es', 'us'];
 const currentLang = validLocales.includes(langFromUrl) ? langFromUrl : 'es'; // Default to 'es'
-// Obtener configuración de colores basada en la ruta actual
+
+// SEO: ISO lang code ('us' is not valid, must be 'en')
+const htmlLang = currentLang === 'us' ? 'en' : 'es';
+
 const { pathname } = Astro.url;
+const BASE_URL = 'https://zambos.com';
+const canonicalUrl = `${BASE_URL}${pathname}`;
+
+// Compute hreflang alternate paths using routesConfig slug mapping
+function getAlternatePath(toLang: string): string {
+  const segs = pathname.split('/').filter(Boolean);
+  const slug = segs[1] || '';
+  if (!slug) return `/${toLang}`;
+  const route = routesConfig.find((r) => r.slugs[currentLang] === slug);
+  if (route?.slugs[toLang]) {
+    const rest = segs.slice(2).join('/');
+    return rest ? `/${toLang}/${route.slugs[toLang]}/${rest}` : `/${toLang}/${route.slugs[toLang]}`;
+  }
+  return `/${toLang}/${slug}`;
+}
+
+const esPath = currentLang === 'es' ? pathname : getAlternatePath('es');
+const enPath = currentLang === 'us' ? pathname : getAlternatePath('us');
+
+// Obtener configuración de colores basada en la ruta actual
 const headerColorConfig = getHeaderColors(pathname);
 
 // Si se pasan colores de header específicos (por ejemplo, desde un producto), 
@@ -46,7 +69,7 @@ if (headerColors) {
   };
 }
 ---
-<html lang={currentLang}>
+<html lang={htmlLang}>
   <head>
     <GoogleTagManager />
     <Favicon />
@@ -56,6 +79,11 @@ if (headerColors) {
     {title && <title>Zambos - {title}</title>}
     {description && <meta name="description" content={description} />}
     <ViewTransitions />
+    <!-- Canonical & hreflang for SERPs -->
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" hreflang="es" href={`${BASE_URL}${esPath}`} />
+    <link rel="alternate" hreflang="en" href={`${BASE_URL}${enPath}`} />
+    <link rel="alternate" hreflang="x-default" href={`${BASE_URL}/es`} />
     <slot name="head" />
     {/* <GoogleTagManager /> */}
   </head>

@@ -41,10 +41,9 @@ const twitterUrl = socialMedia?.twitter?.url || '';
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={pageDescription} />
 <meta property="og:image" content={pageImage} />
-<meta property="og:locale" content={currentLang} />
-{config.supportedLocales.map(lang => (
-  <meta property="og:locale:alternate" content={lang} />
-))}
+<meta property="og:locale" content={currentLang === 'us' ? 'en_US' : 'es_ES'} />
+{currentLang !== 'us' && <meta property="og:locale:alternate" content="en_US" />}
+{currentLang !== 'es' && <meta property="og:locale:alternate" content="es_ES" />}
 
 <!-- Image Optimization -->
 <meta name="og:image:width" content="1200" />
