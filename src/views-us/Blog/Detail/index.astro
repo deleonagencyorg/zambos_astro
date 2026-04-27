@@ -213,18 +213,15 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
       <div class="blog-detail__related-container">
         <div class="blog-detail__related-header">
           <div class="blog-detail__related-info">
-            <h2 class=" text-us-green text-4xl">{labels.relatedTitle}</h2>
-            <p class=" text-us-green text-xl">{labels.relatedSubtitle}</p>
+            <h2 class="font-bold text-[#0E6D20] text-4xl md:text-5xl" style="font-style: italic;">{labels.relatedTitle}</h2>
+            <p class="font-bold text-[#0E6D20] text-lg md:text-xl mt-1">{labels.relatedSubtitle}</p>
           </div>
-          <a href={`/${currentLang}/blog`} class="blog-detail__view-all text-us-green text-xl">
-            {labels.viewAll}
-          </a>
         </div>
         
         <div class="blog-detail__related-grid">
           {suggestedPosts.map((post) => (
             <a href={`/${currentLang}/blog/${post.slug || post.id}`} class="related-card group">
-              <!-- Image on top -->
+              <!-- Image left -->
               <div class="related-card__image">
                 <LazyImage 
                   src={post.image} 
@@ -234,12 +231,13 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
                   fallbackSrc={`/images/${currentLang}/slider1.png`}
                 />
               </div>
-              <!-- Content - Light green background -->
+              <!-- Content right -->
               <div class="related-card__content">
                 <div class="related-card__meta">
                   {post.category && (
                     <span class="related-card__category">{post.category}</span>
                   )}
+                  {post.category && post.date && <span>|</span>}
                   {post.date && (
                     <span class="related-card__date">{formatDate(post.date)}</span>
                   )}
@@ -607,24 +605,27 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
     }
   }
 
-  /* ==================== Related Card - Green Style (matching blog index) ==================== */
+  /* ==================== Related Card - Horizontal layout ==================== */
   .related-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: var(--radius-lg);
     overflow: hidden;
+    background-color: #A8D648;
     transition: all 0.3s ease;
     text-decoration: none;
+    min-height: 180px;
   }
 
   .related-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   }
 
+  /* Image: fixed width on the left */
   .related-card__image {
-    width: 100%;
-    aspect-ratio: 16 / 10;
+    width: 38%;
+    flex-shrink: 0;
     overflow: hidden;
   }
 
@@ -636,99 +637,90 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
   }
 
   .related-card:hover .related-card__img {
-    transform: scale(1.1);
+    transform: scale(1.08);
   }
 
+  /* Content: fills remaining width */
   .related-card__content {
     display: flex;
     flex-direction: column;
-    background-color: #97E66C;
-    padding: 1.25rem;
+    background-color: #A8D648;
+    padding: 1rem 1.1rem;
     flex: 1;
+    min-width: 0;
   }
 
   .related-card__meta {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
     flex-wrap: wrap;
+    font-size: 0.7rem;
+    color: #0E6D20;
+    font-weight: 600;
   }
 
   .related-card__category {
-    display: inline-block;
-    padding: 0.3rem 0.65rem;
-    background-color: #0E6D20;
-    color: #fff;
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    border-radius: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+    color: #0E6D20;
+    text-transform: capitalize;
   }
 
   .related-card__date {
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     color: #0E6D20;
     font-weight: 600;
-    font-style: italic;
   }
 
   .related-card__title {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 800;
-    color: #fff;
+    color: #0E6D20;
     margin: 0 0 0.4rem 0;
-    line-height: 1.3;
+    line-height: 1.25;
     text-transform: uppercase;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
   @media (min-width: 768px) {
     .related-card__title {
-      font-size: 1rem;
+      font-size: 0.9rem;
     }
   }
 
   .related-card__summary {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: #0E6D20;
-    margin: 0 0 0.75rem 0;
-    line-height: 1.5;
+    margin: 0 0 0.6rem 0;
+    line-height: 1.4;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
-  }
-
-  @media (min-width: 768px) {
-    .related-card__summary {
-      font-size: 0.8rem;
-    }
   }
 
   .related-card__btn {
     display: inline-block;
     width: fit-content;
-    padding: 0.5rem 1.25rem;
-    background-color: #0E6D20;
+    padding: 0.4rem 1rem;
+    background-color: #B71C1C;
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 700;
     border-radius: 50px;
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     margin-top: auto;
   }
 
   .related-card:hover .related-card__btn {
-    background-color: #0a5418;
-    transform: translateY(-1px);
+    background-color: #9A1616;
   }
 </style>
