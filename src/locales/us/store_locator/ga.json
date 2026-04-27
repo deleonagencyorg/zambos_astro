@@ -1,0 +1,4927 @@
+{
+  "state_code": "GA",
+  "count": 703,
+  "stores": [
+    {
+      "name": "Austell International Farmers Market",
+      "address": "3565 Austell Rd SW, Marietta, Georgia, 30008-5708, United States",
+      "lat": 33.8657194,
+      "lng": -84.5920584,
+      "country": "US"
+    },
+    {
+      "name": "Brito Supermarket",
+      "address": "1991 S Cobb Dr SE, Marietta, Georgia, 30060, United States",
+      "lat": 33.9040645,
+      "lng": -84.5406996,
+      "country": "US"
+    },
+    {
+      "name": "Bufors Farmers Market",
+      "address": "5600 Buford Hwy NE, Doraville, Georgia, 30340-1237, United States",
+      "lat": 33.9055396,
+      "lng": -84.2733087,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria 3 Hermanos",
+      "address": "2522 Cruse Rd NW, Lawrenceville, Georgia, 30044-2750, United States",
+      "lat": 33.9415505,
+      "lng": -84.0776448,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria 3 Hermanos",
+      "address": "635 Holcomb Bridge Rd, Roswell, Georgia, 30076-1511, United States",
+      "lat": 34.0337114,
+      "lng": -84.3439197,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria 3 Hermanos",
+      "address": "752 Sandtown Rd SW, Marietta, Georgia, 30008-3046, United States",
+      "lat": 33.9341334,
+      "lng": -84.5565743,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Garcia",
+      "address": "4325 Jonesboro Rd, Forest Park, Georgia, 30297-3521, United States",
+      "lat": 33.63617869999999,
+      "lng": -84.3600613,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Garcia",
+      "address": "5627 N Henry Blvd, Stockbridge, Georgia, 30281-3244, United States",
+      "lat": 33.5546702,
+      "lng": -84.26048039999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Hernandez",
+      "address": "310 Veterans Memorial Blvd, Cumming, Georgia, 30040-2644, United States",
+      "lat": 34.2030629,
+      "lng": -84.13946179999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria La Costa De Canton",
+      "address": "1750 Marietta Hwy, Canton, Georgia, 30114-3994, United States",
+      "lat": 34.2242724,
+      "lng": -84.5034026,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria La Mexicana",
+      "address": "6200 Mableton Pkwy SW, Mableton, Georgia, 30126-3366, United States",
+      "lat": 33.8017402,
+      "lng": -84.5685257,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria La Villa",
+      "address": "2415 Cobb Pkwy SE, Smyrna, Georgia, 30080, United States",
+      "lat": 33.8934911,
+      "lng": -84.4773707,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria La Villa",
+      "address": "737 Roswell St NE, Marietta, Georgia, 30060-3503, United States",
+      "lat": 33.9511469,
+      "lng": -84.53030799999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Mi Pueblo",
+      "address": "1098 Herrington Rd, Lawrenceville, Georgia, 30044-7581, United States",
+      "lat": 33.94638279999999,
+      "lng": -84.081143,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Mi Pueblo",
+      "address": "4005 Buford Hwy NE, Atlanta, Georgia, 30345-1628, United States",
+      "lat": 33.8599698,
+      "lng": -84.3086593,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Ramirez",
+      "address": "551 Marietta Rd, Canton, Georgia, 30114-3728, United States",
+      "lat": 34.2279518,
+      "lng": -84.49335529999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Tapatia",
+      "address": "1500 Browns Bridge Rd, Gainesville, Georgia, 30501-4717, United States",
+      "lat": 34.2870926,
+      "lng": -83.8438216,
+      "country": "US"
+    },
+    {
+      "name": "City Farmer Market",
+      "address": "5000 Buford Hwy, Chamblee, Georgia, 30341-3500, United States",
+      "lat": 33.8881547,
+      "lng": -84.28888169999999,
+      "country": "US"
+    },
+    {
+      "name": "City Farmers Market",
+      "address": "1167 Powder Springs St, Marietta, Georgia, 30064-3958, United States",
+      "lat": 33.9233491,
+      "lng": -84.57306919999999,
+      "country": "US"
+    },
+    {
+      "name": "City Farmers Market",
+      "address": "3317 Buford Hwy NE, Atlanta, Georgia, 30329-3740, United States",
+      "lat": 33.8413126,
+      "lng": -84.32585449999999,
+      "country": "US"
+    },
+    {
+      "name": "City Farmers Market",
+      "address": "4002 Paul Gilleland Hwy, Snellville, Georgia, 30039, United States",
+      "lat": 33.7972391,
+      "lng": -84.0273168,
+      "country": "US"
+    },
+    {
+      "name": "City Farmers Market",
+      "address": "5380 Jonesboro Rd, Lake City, Georgia, 30260-3557, United States",
+      "lat": 33.6092254,
+      "lng": -84.3438217,
+      "country": "US"
+    },
+    {
+      "name": "City Farmers Market",
+      "address": "Pleasant Hill Rd NW, Duluth, Georgia, 30096, United States",
+      "lat": 33.9877841,
+      "lng": -84.1610014,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "10 Andrew Dr, Stockbridge, Georgia, 30281-7251, United States",
+      "lat": 33.4992865,
+      "lng": -84.2427123,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "100 Temple Ave, Newnan, Georgia, 30263-1625, United States",
+      "lat": 33.3803768,
+      "lng": -84.80867959999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1001 E Morris St, Dalton, Georgia, 30721-3687, United States",
+      "lat": 34.7687376,
+      "lng": -84.95338730000002,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1009 S Thornton Ave, Dalton, Georgia, 30720-7872, United States",
+      "lat": 34.7564837,
+      "lng": -84.9690808,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "102 Stanley Ct, Lawrenceville, Georgia, 30046-5202, United States",
+      "lat": 33.9594299,
+      "lng": -83.973062,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1023 Sandy Plains Rd, Marietta, Georgia, 30066-6537, United States",
+      "lat": 33.995315,
+      "lng": -84.523139,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "10231 Tara Blvd, Jonesboro, Georgia, 30236-6555, United States",
+      "lat": 33.4760104,
+      "lng": -84.3383776,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1025 Chastain Rd NW, Kennesaw, Georgia, 30144-5583, United States",
+      "lat": 34.0317747,
+      "lng": -84.5803533,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "10350 Main St, Woodstock, Georgia, 30188-3976, United States",
+      "lat": 34.0755944,
+      "lng": -84.5223468,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "104 Pirkle Ferry Rd, Cumming, Georgia, 30040-2524, United States",
+      "lat": 34.2070121,
+      "lng": -84.1368249,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "10400 Alpharetta Hwy, Roswell, Georgia, 30076, United States",
+      "lat": 34.0364554,
+      "lng": -84.3469004,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "105 Bowling Dr, Warner Robins, Georgia, 31088-3649, United States",
+      "lat": 32.616949,
+      "lng": -83.6657347,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "105 E May St, Winder, Georgia, 30680-1978, United States",
+      "lat": 33.9871984,
+      "lng": -83.7175376,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "106 Arnold Mill Rd, Woodstock, Georgia, 30188-5018, United States",
+      "lat": 34.1009189,
+      "lng": -84.51662189999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1065 Alabama St, Carrollton, Georgia, 30117-2012, United States",
+      "lat": 33.5905895,
+      "lng": -85.0955889,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1066 Alabama St, Carrollton, Georgia, 30117-2057, United States",
+      "lat": 33.5872132,
+      "lng": -85.09810159999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1075 Jesse Jewell Pkwy SW, Gainesville, Georgia, 30501-6103, United States",
+      "lat": 34.2887172,
+      "lng": -83.8336561,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1085 Holcomb Bridge Rd, Roswell, Georgia, 30076-1989, United States",
+      "lat": 34.0229047,
+      "lng": -84.32938879999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "109 Latham Dr, Warner Robins, Georgia, 31088-0700, United States",
+      "lat": 32.5565951,
+      "lng": -83.6710786,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "109 Rowe Rd, Athens, Georgia, 30601-1851, United States",
+      "lat": 33.9735233,
+      "lng": -83.3919489,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1090 Duluth Hwy, Lawrenceville, Georgia, 30043-5208, United States",
+      "lat": 33.9669628,
+      "lng": -84.0371011,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "10932 Veterans Memorial Hwy, Lithia Springs, Georgia, 30122, United States",
+      "lat": 33.7936876,
+      "lng": -84.67721960000002,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1096 Mt Zion Rd, Morrow, Georgia, 30260-2213, United States",
+      "lat": 33.5726164,
+      "lng": -84.3538763,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1100 Holcomb Bridge Rd, Roswell, Georgia, 30076-1902, United States",
+      "lat": 34.0220065,
+      "lng": -84.3268408,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1100 Jonesboro Rd, McDonough, Georgia, 30253-6033, United States",
+      "lat": 33.4599063,
+      "lng": -84.1939481,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1100 S Thornton Ave, Dalton, Georgia, 30720-7873, United States",
+      "lat": 34.75596340000001,
+      "lng": -84.9697029,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "112 Kingston Hwy, Cartersville, Georgia, 30120, United States",
+      "lat": 34.2329636,
+      "lng": -84.8644484,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1121 Grayson Hwy SW, Lawrenceville, Georgia, 30045-6300, United States",
+      "lat": 33.9201562,
+      "lng": -83.973186,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "11235 Alpharetta Hwy, Roswell, Georgia, 30076-1459, United States",
+      "lat": 34.0542852,
+      "lng": -84.32889560000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1125 E Walnut Ave, Dalton, Georgia, 30721-4176, United States",
+      "lat": 34.76150920000001,
+      "lng": -84.9444996,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1135 Herrington Rd, Lawrenceville, Georgia, 30044-7553, United States",
+      "lat": 33.947886,
+      "lng": -84.0832149,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1135 Sigman Rd NE, Conyers, Georgia, 30012-3858, United States",
+      "lat": 33.6739915,
+      "lng": -83.9885759,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "11370 State Bridge Rd, Alpharetta, Georgia, 30022-5639, United States",
+      "lat": 34.0579348,
+      "lng": -84.231996,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1139 N Tennessee St, Cartersville, Georgia, 30120-2324, United States",
+      "lat": 34.1955284,
+      "lng": -84.7976095,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1155 Buford Hwy NE, Sugar Hill, Georgia, 30518-4837, United States",
+      "lat": 34.0865258,
+      "lng": -84.0229892,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "116 Willow Ln, McDonough, Georgia, 30253-8986, United States",
+      "lat": 33.4334769,
+      "lng": -84.1803347,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1166 Concord Rd SE, Smyrna, Georgia, 30080-4262, United States",
+      "lat": 33.87630720000001,
+      "lng": -84.51935160000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1175 Indian Trail Lilburn Rd NW, Norcross, Georgia, 30093-4506, United States",
+      "lat": 33.911867,
+      "lng": -84.1609486,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1184 US-29, Lawrenceville, Georgia, 30046-4793, United States",
+      "lat": 33.9380518,
+      "lng": -84.0184154,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "121 W Midland Ave, Winder, Georgia, 30680-1825, United States",
+      "lat": 33.9991606,
+      "lng": -83.7214022,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1220 Russell Pkwy, Warner Robins, Georgia, 31088-8676, United States",
+      "lat": 32.5945148,
+      "lng": -83.6487356,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1245 Veterans Memorial Hwy SW, Mableton, Georgia, 30126-3115, United States",
+      "lat": 33.8154288,
+      "lng": -84.5900911,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1255 Grimes Bridge Rd, Roswell, Georgia, 30075-3940, United States",
+      "lat": 34.0313066,
+      "lng": -84.34134619999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1275 Level Grove Rd, Cornelia, Georgia, 30531, United States",
+      "lat": 34.5106913,
+      "lng": -83.5469095,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1285 Highway 20 W, McDonough, Georgia, 30253-7302, United States",
+      "lat": 33.4255495,
+      "lng": -84.18266299999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1291 Level Grove Rd, Cornelia, Georgia, 30531-5272, United States",
+      "lat": 34.5123529,
+      "lng": -83.5504522,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "13 Smith St, Fairburn, Georgia, 30213-1321, United States",
+      "lat": 33.5662024,
+      "lng": -84.5825612,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1300 Underwood St, Dalton, Georgia, 30721-3670, United States",
+      "lat": 34.7817074,
+      "lng": -84.94876909999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1305 Industrial Blvd, Gainesville, Georgia, 30501-6571, United States",
+      "lat": 34.2709165,
+      "lng": -83.8386697,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1310 Dawsonville Hwy, Gainesville, Georgia, 30501-2609, United States",
+      "lat": 34.3055352,
+      "lng": -83.86076299999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1325 Buford Hwy, Buford, Georgia, 30518-4897, United States",
+      "lat": 34.0904598,
+      "lng": -84.01766549999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1330 Peachtree Industrial Blvd, Sugar Hill, Georgia, 30518-2897, United States",
+      "lat": 34.1060342,
+      "lng": -84.0296358,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1338 Veterans Memorial Hwy, Mableton, Georgia, 30126, United States",
+      "lat": 33.81665,
+      "lng": -84.5943001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "134 S Clayton St, Lawrenceville, Georgia, 30046-5703, United States",
+      "lat": 33.9491062,
+      "lng": -83.98626809999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1370 Highway 138 NE, Conyers, Georgia, 30013-1238, United States",
+      "lat": 33.6579591,
+      "lng": -84.0019179,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1373 Iris Dr SE, Conyers, Georgia, 30013-1768, United States",
+      "lat": 33.6507744,
+      "lng": -84.00213749999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "138 Tidwell Rd, Alpharetta, Georgia, 30004-8417, United States",
+      "lat": 34.1272587,
+      "lng": -84.2555538,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1380 Prince Ave, Athens, Georgia, 30606-2734, United States",
+      "lat": 33.9640941,
+      "lng": -83.4009634,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "140 Barber St, Athens, Georgia, 30601-2303, United States",
+      "lat": 33.9615277,
+      "lng": -83.38387379999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1406 S Wall St, Calhoun, Georgia, 30701, United States",
+      "lat": 34.4694265,
+      "lng": -84.9340584,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1455 Pleasant Hill Rd, Lawrenceville, Georgia, 30044-3009, United States",
+      "lat": 33.9400968,
+      "lng": -84.12237189999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1460 Boulevard SE, Atlanta, Georgia, 30315-3038, United States",
+      "lat": 33.7143709,
+      "lng": -84.3683241,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1488 GA-120, Lawrenceville, Georgia, 30043, United States",
+      "lat": 33.9725065,
+      "lng": -84.05491959999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "149 Prominence Point Pkwy, Canton, Georgia, 30114-9009, United States",
+      "lat": 34.189607,
+      "lng": -84.509196,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "150 Finis Springs Dr, Cornelia, Georgia, 30531-5660, United States",
+      "lat": 34.509341,
+      "lng": -83.54582719999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1515 Pleasant Hill Rd, Duluth, Georgia, 30096-4617, United States",
+      "lat": 33.9416358,
+      "lng": -84.1231459,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1522 Pine Log Rd NE, Conyers, Georgia, 30012-7107, United States",
+      "lat": 33.66421450000001,
+      "lng": -83.9960425,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1525 E Morris St, Dalton, Georgia, 30721-3697, United States",
+      "lat": 34.7667308,
+      "lng": -84.9433167,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1543 Highway 138 SE, Conyers, Georgia, 30013-1252, United States",
+      "lat": 33.6500642,
+      "lng": -84.01219809999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1555 Oglethorpe Ave, Athens, Georgia, 30606-2137, United States",
+      "lat": 33.9630462,
+      "lng": -83.4272498,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1564 McCurdy Dr, Stone Mountain, Georgia, 30083-1304, United States",
+      "lat": 33.82707389999999,
+      "lng": -84.19767069999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1575 Lawrenceville Hwy, Lawrenceville, Georgia, 30044-2006, United States",
+      "lat": 33.939158,
+      "lng": -84.03543169999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "15840 Birmingham Hwy, Alpharetta, Georgia, 30004, United States",
+      "lat": 34.1672476,
+      "lng": -84.3334933,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "16 Forest Pkwy, Forest Park, Georgia, 30297-2000, United States",
+      "lat": 33.6207348,
+      "lng": -84.39231269999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1600 Shorter Ave NW, Rome, Georgia, 30165-3967, United States",
+      "lat": 34.2691394,
+      "lng": -85.2134459,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1625 Lakes Pkwy, Lawrenceville, Georgia, 30043-5969, United States",
+      "lat": 33.9656492,
+      "lng": -84.0519891,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1630 Old 41 Hwy NW, Kennesaw, Georgia, 30152-4426, United States",
+      "lat": 33.9937479,
+      "lng": -84.5973473,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1630 Pleasant Hill Rd, Duluth, Georgia, 30096-1248, United States",
+      "lat": 33.94806519999999,
+      "lng": -84.12344449999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1685 Old Norcross Rd NW, Lawrenceville, Georgia, 30046-2912, United States",
+      "lat": 33.9560344,
+      "lng": -84.1060928,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1702 E Morris St, Dalton, Georgia, 30721-4348, United States",
+      "lat": 34.7661067,
+      "lng": -84.94011080000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1705 NE Cleveland Hwy, Gainesville, Georgia, 30501-1363, United States",
+      "lat": 34.3282596,
+      "lng": -83.8150646,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1708 Atlanta Hwy, Gainesville, Georgia, 30504-5937, United States",
+      "lat": 34.2665724,
+      "lng": -83.84165399999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1709 Willingham Ave, Cornelia, Georgia, 30531-4210, United States",
+      "lat": 34.4993784,
+      "lng": -83.5311428,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1720 Vesta Ave, College Park, Georgia, 30337-1209, United States",
+      "lat": 33.667184,
+      "lng": -84.44569609999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1741 US-29 N, Danielsville, Georgia, 30633-5820, United States",
+      "lat": 34.1451386,
+      "lng": -83.2059233,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1745 Highway 29 N, Athens, Georgia, 30601-1137, United States",
+      "lat": 34.0204533,
+      "lng": -83.3223381,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1745 Indian Trail Lilburn Rd NW, Norcross, Georgia, 30093-2626, United States",
+      "lat": 33.9260401,
+      "lng": -84.1750824,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1750 Bells Ferry Rd NE, Marietta, Georgia, 30066-6119, United States",
+      "lat": 34.01390500000001,
+      "lng": -84.5484129,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1750 Shorter Ave NW, Rome, Georgia, 30165-3969, United States",
+      "lat": 34.2694388,
+      "lng": -85.21540569999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1795 Beaver Ruin Rd, Norcross, Georgia, 30093-2810, United States",
+      "lat": 33.9351409,
+      "lng": -84.15935789999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "180 Riverstone Pkwy, Canton, Georgia, 30114-6404, United States",
+      "lat": 34.2437827,
+      "lng": -84.489406,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1802 Old Concord Rd SE, Marietta, Georgia, 30060-4252, United States",
+      "lat": 33.9091593,
+      "lng": -84.5401765,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1830 Atlanta Hwy, Gainesville, Georgia, 30504-5941, United States",
+      "lat": 34.2607578,
+      "lng": -83.8454342,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1850 Lawrenceville Hwy NW, Lawrenceville, Georgia, 30044-4615, United States",
+      "lat": 33.9313823,
+      "lng": -84.0412738,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1859 Buford Hwy, Buford, Georgia, 30518-3644, United States",
+      "lat": 34.1038839,
+      "lng": -84.0045547,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "186 W May St, Winder, Georgia, 30680-2099, United States",
+      "lat": 33.9943734,
+      "lng": -83.73628649999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "187 Scenic Hwy, Lawrenceville, Georgia, 30046-5730, United States",
+      "lat": 33.95206030000001,
+      "lng": -83.9813607,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1870 Atlanta Rd, Gainesville, Georgia, 30504-5948, United States",
+      "lat": 34.259576,
+      "lng": -83.84606959999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1870 Lee Rd, Lithia Springs, Georgia, 30122-3059, United States",
+      "lat": 33.7545088,
+      "lng": -84.6535816,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1878 Thompson Bridge Rd, Gainesville, Georgia, 30501-1119, United States",
+      "lat": 34.3317837,
+      "lng": -83.84042459999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1880 Highway 29 N, Athens, Georgia, 30601-6332, United States",
+      "lat": 34.0211598,
+      "lng": -83.3200616,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1885 Clairmont Rd, Decatur, Georgia, 30033-3417, United States",
+      "lat": 33.8093956,
+      "lng": -84.3090362,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1885 Hickory Flat Hwy, Canton, Georgia, 30115-1322, United States",
+      "lat": 34.2211875,
+      "lng": -84.4639883,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1889 Cobb Pkwy S, Marietta, Georgia, 30060-9287, United States",
+      "lat": 33.9057855,
+      "lng": -84.48946699999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1931 Shorter Ave SW, Rome, Georgia, 30165-2106, United States",
+      "lat": 34.2697701,
+      "lng": -85.2192889,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1940 Mount Zion Rd, Morrow, Georgia, 30260-3316, United States",
+      "lat": 33.5673224,
+      "lng": -84.3257723,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1960 Lexington Rd, Athens, Georgia, 30605-2334, United States",
+      "lat": 33.94452150000001,
+      "lng": -83.3439554,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1988 Highway 54 W, Peachtree City, Georgia, 30269, United States",
+      "lat": 33.4266358,
+      "lng": -84.5562228,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "199 Cleveland Ave SW, Atlanta, Georgia, 30315-8258, United States",
+      "lat": 33.6814375,
+      "lng": -84.395561,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "20 Valley Forest Ln SE, Smyrna, Georgia, 30082-2415, United States",
+      "lat": 33.8749595,
+      "lng": -84.5520696,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2001 Windy Hill Rd SE, Smyrna, Georgia, 30080-2264, United States",
+      "lat": 33.8988744,
+      "lng": -84.49526089999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2020 Lower Roswell Rd SE, Marietta, Georgia, 30068-3351, United States",
+      "lat": 33.949751,
+      "lng": -84.4938305,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "203 Burnett Ferry Rd SW, Rome, Georgia, 30165-3705, United States",
+      "lat": 34.2645455,
+      "lng": -85.22178910000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "203 Richardson Rd, Calhoun, Georgia, 30701-3174, United States",
+      "lat": 34.4756454,
+      "lng": -84.92597889999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2033 Spring Rd, Gainesville, Georgia, 30504-4039, United States",
+      "lat": 34.2827496,
+      "lng": -83.8531153,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "204 N Elm St NW, Rome, Georgia, 30165-2232, United States",
+      "lat": 34.271041,
+      "lng": -85.2072045,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2050 Highway 81, Loganville, Georgia, 30052-4538, United States",
+      "lat": 33.7844048,
+      "lng": -83.8569526,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2059 Atlanta Hwy SE, Statham, Georgia, 30666-1861, United States",
+      "lat": 33.9587852,
+      "lng": -83.58792,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2090 Lawrenceville Suwanee Rd, Suwanee, Georgia, 30024-2600, United States",
+      "lat": 34.0015883,
+      "lng": -84.0405735,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2091 Baker Ct, Kennesaw, Georgia, 30144-6423, United States",
+      "lat": 34.0490187,
+      "lng": -84.6083654,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2100 Killian Hill Rd SW, Snellville, Georgia, 30039, United States",
+      "lat": 33.8401412,
+      "lng": -84.0697611,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "211 Bullsboro Dr, Newnan, Georgia, 30263-5839, United States",
+      "lat": 33.3887743,
+      "lng": -84.7733732,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2113 S Cobb Dr SE, Smyrna, Georgia, 30080, United States",
+      "lat": 33.9016206,
+      "lng": -84.54044329999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2120 Highway 76, Chatsworth, Georgia, 30705-7302, United States",
+      "lat": 34.7824517,
+      "lng": -84.8108429,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2148 S Cobb Dr SE, Smyrna, Georgia, 30080-1348, United States",
+      "lat": 33.8987945,
+      "lng": -84.5423678,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2155 Buford Dam Rd NE, Buford, Georgia, 30518, United States",
+      "lat": 34.1410884,
+      "lng": -84.01876329999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2177 W Broad St, Athens, Georgia, 30606, United States",
+      "lat": 33.9495261,
+      "lng": -83.4087725,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2190 Plaster Rd NE, Atlanta, Georgia, 30345-1651, United States",
+      "lat": 33.8651869,
+      "lng": -84.29937869999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2250 Lake Harbin Rd, Morrow, Georgia, 30260-1926, United States",
+      "lat": 33.583802,
+      "lng": -84.315387,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2255 Duluth Hwy, Duluth, Georgia, 30096, United States",
+      "lat": 33.9785978,
+      "lng": -84.100505,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "227 Brand Rd SE, Loganville, Georgia, 30052-2224, United States",
+      "lat": 33.8554301,
+      "lng": -83.90582119999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2277 Browns Bridge Rd, Gainesville, Georgia, 30501-4733, United States",
+      "lat": 34.2786774,
+      "lng": -83.8514952,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2297 GA-20, McDonough, Georgia, 30252-2669, United States",
+      "lat": 33.4898245,
+      "lng": -84.08776019999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2311 Highway 411 NE, Cartersville, Georgia, 30121-5196, United States",
+      "lat": 34.241696,
+      "lng": -84.7757793,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2331 Lakeshore Dr NE, Conyers, Georgia, 30012-2431, United States",
+      "lat": 33.7052901,
+      "lng": -83.98058650000002,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "235 W Line St, Calhoun, Georgia, 30701-1842, United States",
+      "lat": 34.5063502,
+      "lng": -84.9542587,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2350 Spring Rd SE, Smyrna, Georgia, 30080-2605, United States",
+      "lat": 33.8821091,
+      "lng": -84.48763819999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2366 Highway 113, Taylorsville, Georgia, 30178-1873, United States",
+      "lat": 34.1021921,
+      "lng": -84.92725999999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2370 Delk Rd SE, Marietta, Georgia, 30067-6310, United States",
+      "lat": 33.9222184,
+      "lng": -84.48290469999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "238 Springdale Rd, Dalton, Georgia, 30721-2609, United States",
+      "lat": 34.790141,
+      "lng": -84.9635332,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2383 Canton Hwy, Cumming, Georgia, 30040-4322, United States",
+      "lat": 34.2386576,
+      "lng": -84.1971624,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2387 S Cobb Dr SE, Smyrna, Georgia, 30080-1336, United States",
+      "lat": 33.8949838,
+      "lng": -84.53818369999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2390 Lake Harbin Rd, Morrow, Georgia, 30260-1906, United States",
+      "lat": 33.5833467,
+      "lng": -84.3124709,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2440 Pleasantdale Rd, Atlanta, Georgia, 30340-1562, United States",
+      "lat": 33.9174163,
+      "lng": -84.2455853,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2440 Pleasantdale Rd, Atlanta, Georgia, 30340-1582, United States",
+      "lat": 33.9174163,
+      "lng": -84.2455853,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2442 Lake Rockaway Rd NW, Conyers, Georgia, 30012-3443, United States",
+      "lat": 33.7091706,
+      "lng": -84.04400059999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2476 Buford Hwy, Duluth, Georgia, 30097-2828, United States",
+      "lat": 34.0133391,
+      "lng": -84.1268599,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2476 Cruse Rd NW, Lawrenceville, Georgia, 30044-3607, United States",
+      "lat": 33.9423712,
+      "lng": -84.0759221,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2515 Chamblee Tucker Rd, Atlanta, Georgia, 30341-3515, United States",
+      "lat": 33.8852694,
+      "lng": -84.2844148,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2518 E Walnut Ave, Dalton, Georgia, 30721-2104, United States",
+      "lat": 34.7637874,
+      "lng": -84.9283426,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2525 Powder Springs Rd SW, Marietta, Georgia, 30064-4522, United States",
+      "lat": 33.8703187,
+      "lng": -84.6268316,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2527 Redmond Cir NW, Rome, Georgia, 30165-1912, United States",
+      "lat": 34.2721221,
+      "lng": -85.2276862,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2539 Old Concord Rd SE, Smyrna, Georgia, 30082-1708, United States",
+      "lat": 33.8902384,
+      "lng": -84.53996959999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2545 Atlanta Hwy, Athens, Georgia, 30606, United States",
+      "lat": 33.946269,
+      "lng": -83.42491439999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "255 Williams Dr, Marietta, Georgia, 30066-6153, United States",
+      "lat": 33.9939577,
+      "lng": -84.5482227,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2556 Jeremiah Industrial Way SW, Conyers, Georgia, 30012-4970, United States",
+      "lat": 33.6954972,
+      "lng": -84.07273359999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "264 Powers Ferry Rd SE, Marietta, Georgia, 30067-7560, United States",
+      "lat": 33.9460485,
+      "lng": -84.4997607,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2675 Stilesboro Rd NW, Kennesaw, Georgia, 30152-4201, United States",
+      "lat": 33.9918978,
+      "lng": -84.6291085,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2691 S Cobb Dr SE, Smyrna, Georgia, 30080-1845, United States",
+      "lat": 33.8877135,
+      "lng": -84.5354885,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2700 Buford Hwy, Duluth, Georgia, 30096-2834, United States",
+      "lat": 34.0084108,
+      "lng": -84.1311454,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2714 Shallowford Rd NE, Atlanta, Georgia, 30341, United States",
+      "lat": 33.8665021,
+      "lng": -84.29018429999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "272 Greenville St, Newnan, Georgia, 30263-2652, United States",
+      "lat": 33.3565533,
+      "lng": -84.7903793,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2755 Clairmont Rd NE, Atlanta, Georgia, 30329-2712, United States",
+      "lat": 33.837177,
+      "lng": -84.3115509,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2772 Northeast Expy NE, Atlanta, Georgia, 30345-1807, United States",
+      "lat": 33.8389316,
+      "lng": -84.3209385,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2815 Club Dr, Lawrenceville, Georgia, 30044-3224, United States",
+      "lat": 33.93696,
+      "lng": -84.08890919999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2830 Club Dr, Lawrenceville, Georgia, 30044-3215, United States",
+      "lat": 33.9367924,
+      "lng": -84.0899407,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2851 Cobb Pkwy NW, Kennesaw, Georgia, 30152-2716, United States",
+      "lat": 34.0220073,
+      "lng": -84.6268189,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2856 Buford Hwy, Duluth, Georgia, 30096-3450, United States",
+      "lat": 34.0068465,
+      "lng": -84.1337674,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2877 Johnson Ferry Rd, Marietta, Georgia, 30062-8366, United States",
+      "lat": 34.0200532,
+      "lng": -84.4285087,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2880 Simpson Cir, Norcross, Georgia, 30071-2820, United States",
+      "lat": 33.9655609,
+      "lng": -84.1763596,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2898 Johnson Ferry Rd, Marietta, Georgia, 30062-5627, United States",
+      "lat": 34.0197027,
+      "lng": -84.4275238,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2900 S Cobb Dr SE, Smyrna, Georgia, 30080-7859, United States",
+      "lat": 33.88345839999999,
+      "lng": -84.5355704,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2944 Rosebud Rd SW, Loganville, Georgia, 30052-3089, United States",
+      "lat": 33.8632545,
+      "lng": -83.9560992,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2975 Gillsville Hwy, Gainesville, Georgia, 30507-7946, United States",
+      "lat": 34.2665561,
+      "lng": -83.7437449,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "298 Racetrack Rd, McDonough, Georgia, 30252-1047, United States",
+      "lat": 33.4302955,
+      "lng": -84.1341552,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "300 Brogdon Rd, Suwanee, Georgia, 30024-2696, United States",
+      "lat": 34.0646487,
+      "lng": -84.064325,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3000 Shawnee Industrial Way, Suwanee, Georgia, 30024-3604, United States",
+      "lat": 34.0240081,
+      "lng": -84.0607842,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "302 N Park St, Carrollton, Georgia, 30117-3056, United States",
+      "lat": 33.58305,
+      "lng": -85.0786593,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3041 Oakcliff Rd, Atlanta, Georgia, 30340-2620, United States",
+      "lat": 33.9108458,
+      "lng": -84.26323099999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3053 N Cobb Pkwy NW, Kennesaw, Georgia, 30152, United States",
+      "lat": 34.0289273,
+      "lng": -84.65050819999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3061 Buford Hwy NE, Atlanta, Georgia, 30329-1841, United States",
+      "lat": 33.8370785,
+      "lng": -84.3349363,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3077 Danielsville Rd, Athens, Georgia, 30601, United States",
+      "lat": 34.0258648,
+      "lng": -83.329455,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "31 Paper Mill Rd, Lawrenceville, Georgia, 30046, United States",
+      "lat": 33.95655989999999,
+      "lng": -83.9765996,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3100 Highlands Pkwy SE, Smyrna, Georgia, 30082-5241, United States",
+      "lat": 33.8274855,
+      "lng": -84.49485109999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3130 Sugarloaf Pkwy, Lawrenceville, Georgia, 30045-9400, United States",
+      "lat": 33.91979329999999,
+      "lng": -84.0072403,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "314 Fernwood Ave, Dalton, Georgia, 30721-3951, United States",
+      "lat": 34.7678518,
+      "lng": -84.9504165,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3140 Cobb Pkwy NW, Kennesaw, Georgia, 30152-1003, United States",
+      "lat": 34.0313148,
+      "lng": -84.6572303,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "315 N Central Ave, Atlanta, Georgia, 30354-1601, United States",
+      "lat": 33.6539753,
+      "lng": -84.3990448,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3174 Chamblee Dunwoody Rd, Chamblee, Georgia, 30341-2905, United States",
+      "lat": 33.890211,
+      "lng": -84.28926299999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3200 Buford Hwy, Duluth, Georgia, 30096-3547, United States",
+      "lat": 33.9986781,
+      "lng": -84.14585939999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3245 Chamblee Dunwoody Rd, Chamblee, Georgia, 30341-2980, United States",
+      "lat": 33.8919491,
+      "lng": -84.29124039999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3245 Pearl Ln, Atlanta, Georgia, 30341, United States",
+      "lat": 33.8920881,
+      "lng": -84.2913179,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3254 Chamblee Dunwoody Rd, Chamblee, Georgia, 30341-2828, United States",
+      "lat": 33.8913252,
+      "lng": -84.292116,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3255 Pleasant Hill Rd, Duluth, Georgia, 30096-3185, United States",
+      "lat": 33.9849298,
+      "lng": -84.15979589999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3262 Cleveland Hwy, Gainesville, Georgia, 30506-1946, United States",
+      "lat": 34.3661706,
+      "lng": -83.810124,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3277 Chamblee Dunwoody Rd, Chamblee, Georgia, 30341, United States",
+      "lat": 33.8925015,
+      "lng": -84.2937898,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3281 Buckeye Rd, Atlanta, Georgia, 30341-4216, United States",
+      "lat": 33.8850273,
+      "lng": -84.2573596,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3301 Chamblee Dunwoody Rd, Chamblee, Georgia, 30341-2817, United States",
+      "lat": 33.892174,
+      "lng": -84.2944801,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3307 Buford Hwy NE, Atlanta, Georgia, 30329-1709, United States",
+      "lat": 33.8426204,
+      "lng": -84.3259367,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3310 Buford Hwy NE, Atlanta, Georgia, 30329-1710, United States",
+      "lat": 33.8433543,
+      "lng": -84.3289403,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "332 Willow Bend Rd, Peachtree City, Georgia, 30269-1600, United States",
+      "lat": 33.39896220000001,
+      "lng": -84.5868119,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3326 Cherokee St NW, Kennesaw, Georgia, 30144-1906, United States",
+      "lat": 34.0341162,
+      "lng": -84.6055708,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3330 Peachtree Corners Cir NW, Peachtree Corners, Georgia, 30092-3657, United States",
+      "lat": 33.9446835,
+      "lng": -84.25129799999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3335 Steve Reynolds Blvd, Duluth, Georgia, 30096-4511, United States",
+      "lat": 33.9536166,
+      "lng": -84.14145219999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3338 Cherokee St NW, Kennesaw, Georgia, 30144-1921, United States",
+      "lat": 34.0346023,
+      "lng": -84.6052268,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3352 Buford Hwy NE, Atlanta, Georgia, 30329-1710, United States",
+      "lat": 33.8439016,
+      "lng": -84.3282792,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "337 Dahlonega St, Cumming, Georgia, 30040-2409, United States",
+      "lat": 34.2116846,
+      "lng": -84.13571519999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3375 Holcomb Bridge Rd, Peachtree Corners, Georgia, 30092-3220, United States",
+      "lat": 33.9507906,
+      "lng": -84.2407629,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3450 Highway 34 E, Sharpsburg, Georgia, 30277-3676, United States",
+      "lat": 33.4080914,
+      "lng": -84.6709542,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3462 Club Dr NW, Lawrenceville, Georgia, 30044-3021, United States",
+      "lat": 33.9414706,
+      "lng": -84.11705429999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3495 Atlanta Hwy, Athens, Georgia, 30606-3327, United States",
+      "lat": 33.9388489,
+      "lng": -83.4538465,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3505 Highway 138 NE, Conyers, Georgia, 30013-1058, United States",
+      "lat": 33.7139307,
+      "lng": -83.92951579999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "355 Lester Rd NW, Lilburn, Georgia, 30044-4019, United States",
+      "lat": 33.9062267,
+      "lng": -84.11072659999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3585 Lee Rd SW, Snellville, Georgia, 30039-5623, United States",
+      "lat": 33.7831714,
+      "lng": -84.0115371,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3585 Peachtree Industrial Blvd, Duluth, Georgia, 30096-4820, United States",
+      "lat": 34.0009394,
+      "lng": -84.169243,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3601 Atlanta Rd SE, Smyrna, Georgia, 30080, United States",
+      "lat": 33.8649297,
+      "lng": -84.4922283,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3620 Amber Pointe, Gainesville, Georgia, 30507-8097, United States",
+      "lat": 34.2691668,
+      "lng": -83.72560340000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3649 Mt Vernon Rd, Gainesville, Georgia, 30506, United States",
+      "lat": 34.3738284,
+      "lng": -83.86842349999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3658 Shallowford Rd NE, Doraville, Georgia, 30340-1075, United States",
+      "lat": 33.8972163,
+      "lng": -84.28492399999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "366 Riverside Pkwy, Austell, Georgia, 30168-7303, United States",
+      "lat": 33.7783225,
+      "lng": -84.56678699999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3671 Lawrenceville Hwy, Tucker, Georgia, 30084-5800, United States",
+      "lat": 33.8455443,
+      "lng": -84.2296085,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "369 Pat Mell Rd SE, Marietta, Georgia, 30060-5002, United States",
+      "lat": 33.902058,
+      "lng": -84.5441467,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "371 Pat Mell Rd SE, Marietta, Georgia, 30060-4973, United States",
+      "lat": 33.9026344,
+      "lng": -84.5421598,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3710 Highway 81 E, McDonough, Georgia, 30252-6110, United States",
+      "lat": 33.4369813,
+      "lng": -84.0312201,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3715 Northcrest Rd, Atlanta, Georgia, 30340-3411, United States",
+      "lat": 33.8993614,
+      "lng": -84.2524096,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3731 Northcrest Rd, Atlanta, Georgia, 30340-3415, United States",
+      "lat": 33.8998013,
+      "lng": -84.252149,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3750 Old Jefferson Rd, Athens, Georgia, 30607, United States",
+      "lat": 33.9888857,
+      "lng": -83.4228419,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3750 Venture Dr, Duluth, Georgia, 30096, United States",
+      "lat": 33.9517871,
+      "lng": -84.1339928,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3825 Shackleford Rd, Duluth, Georgia, 30096-8269, United States",
+      "lat": 33.9483582,
+      "lng": -84.1355098,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3870 Moon Station Rd NW, Kennesaw, Georgia, 30144-1801, United States",
+      "lat": 34.0482501,
+      "lng": -84.6156967,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "389 Farmer Ct, Lawrenceville, Georgia, 30046-6154, United States",
+      "lat": 33.9321933,
+      "lng": -83.9787408,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "39 E May St, Winder, Georgia, 30680-1921, United States",
+      "lat": 33.9885266,
+      "lng": -83.7220553,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3907 Burns Rd NW, Lilburn, Georgia, 30047-2887, United States",
+      "lat": 33.9116931,
+      "lng": -84.115269,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3930 George Busbee Pkwy NW, Kennesaw, Georgia, 30144, United States",
+      "lat": 34.0467855,
+      "lng": -84.5815246,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3936 Highway 106 S, Hull, Georgia, 30646-1807, United States",
+      "lat": 34.1175077,
+      "lng": -83.3077596,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "395 Old Commerce Rd, Athens, Georgia, 30607-7000, United States",
+      "lat": 33.9944345,
+      "lng": -83.3811509,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4000 Lexington Rd, Athens, Georgia, 30605-2528, United States",
+      "lat": 33.9383881,
+      "lng": -83.32238389999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4009 Pio Nono Ave, Macon, Georgia, 31206, United States",
+      "lat": 32.7924964,
+      "lng": -83.6691464,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "401 North Ave, Athens, Georgia, 30601-2235, United States",
+      "lat": 33.9769069,
+      "lng": -83.3648321,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4095 Pleasantdale Rd, Atlanta, Georgia, 30340-3545, United States",
+      "lat": 33.90223750000001,
+      "lng": -84.2444907,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4100 Five Forks Trickum Rd SW, Lilburn, Georgia, 30047, United States",
+      "lat": 33.8673349,
+      "lng": -84.09320009999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4113 Pea Ridge Rd, Cornelia, Georgia, 30531-4653, United States",
+      "lat": 34.5292296,
+      "lng": -83.6080891,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4116 Lenora Church Rd SW, Snellville, Georgia, 30039-5305, United States",
+      "lat": 33.801661,
+      "lng": -84.0019516,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4124 Jimmy Carter Blvd, Norcross, Georgia, 30093-5211, United States",
+      "lat": 33.8678557,
+      "lng": -84.18882980000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4166 Buford Hwy NE, Atlanta, Georgia, 30345-1004, United States",
+      "lat": 33.8637438,
+      "lng": -84.3080909,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4169 Jimmy Carter Blvd NW, Norcross, Georgia, 30093-5212, United States",
+      "lat": 33.8703984,
+      "lng": -84.18746229999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "417 N Central Ave, Hapeville, Georgia, 30354-1602, United States",
+      "lat": 33.655938,
+      "lng": -84.402472,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4220 Steve Reynolds Blvd, Norcross, Georgia, 30093-3325, United States",
+      "lat": 33.9291481,
+      "lng": -84.1456414,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4221 Level Grove Rd SW, Cornelia, Georgia, 30531-7121, United States",
+      "lat": 34.5097616,
+      "lng": -83.5918815,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4225 Wade Green Rd NW, Kennesaw, Georgia, 30144-1244, United States",
+      "lat": 34.0566505,
+      "lng": -84.59359169999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "423 N Tennessee St, Cartersville, Georgia, 30120-2816, United States",
+      "lat": 34.175778,
+      "lng": -84.7932355,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4234 Jonesboro Rd, Forest Park, Georgia, 30297-3537, United States",
+      "lat": 33.6389734,
+      "lng": -84.3602841,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4249 Ridgeside Ter SW, Snellville, Georgia, 30039-6831, United States",
+      "lat": 33.7850277,
+      "lng": -84.03935469999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "425 Atlanta Hwy, Gainesville, Georgia, 30501-6350, United States",
+      "lat": 34.2812103,
+      "lng": -83.8386017,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4261 S Lee St, Buford, Georgia, 30518-8021, United States",
+      "lat": 34.09726300000001,
+      "lng": -84.0004029,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4272 Old Danielsville Rd, Athens, Georgia, 30601, United States",
+      "lat": 34.0281095,
+      "lng": -83.3184038,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "428 Canton Hwy, Cumming, Georgia, 30040, United States",
+      "lat": 34.215591,
+      "lng": -84.149738,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4317 Buford Hwy, Atlanta, Georgia, 30341-5027, United States",
+      "lat": 33.8675871,
+      "lng": -84.3005147,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4360 Roswell Rd, Marietta, Georgia, 30062, United States",
+      "lat": 33.9848179,
+      "lng": -84.4247342,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4383 Chamblee Tucker Rd, Tucker, Georgia, 30084-2106, United States",
+      "lat": 33.879547,
+      "lng": -84.2193164,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4428 Martha Berry Hwy NE, Rome, Georgia, 30165-9706, United States",
+      "lat": 34.3475156,
+      "lng": -85.17202809999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4430 Nelson Brogdon Blvd NE, Buford, Georgia, 30518-3477, United States",
+      "lat": 34.0967078,
+      "lng": -84.01467679999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "445 Pat Mell Rd SE, Smyrna, Georgia, 30080-1219, United States",
+      "lat": 33.902313,
+      "lng": -84.54042799999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "445 S Erwin St, Cartersville, Georgia, 30120-3951, United States",
+      "lat": 34.1545277,
+      "lng": -84.7939645,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4460 Jonesboro Rd, Forest Park, Georgia, 30297-4314, United States",
+      "lat": 33.6332688,
+      "lng": -84.3568413,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4480 Winters Chapel Rd, Atlanta, Georgia, 30360-2718, United States",
+      "lat": 33.9264145,
+      "lng": -84.269843,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4500 Anderson Livsey Ln, Snellville, Georgia, 30039-8792, United States",
+      "lat": 33.773287,
+      "lng": -84.04587950000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4551 Brownsville Rd, Powder Springs, Georgia, 30127-3004, United States",
+      "lat": 33.8431255,
+      "lng": -84.6993057,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4601 Satellite Blvd NW, Duluth, Georgia, 30096-6201, United States",
+      "lat": 33.9589758,
+      "lng": -84.1345183,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4605 Price Rd, Gainesville, Georgia, 30506-2507, United States",
+      "lat": 34.3869063,
+      "lng": -83.9213448,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "461 Windy Hill Rd SE, Marietta, Georgia, 30060-7308, United States",
+      "lat": 33.8950175,
+      "lng": -84.54420979999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4664 Jimmy Carter Blvd, Norcross, Georgia, 30093-3715, United States",
+      "lat": 33.8860127,
+      "lng": -84.19344579999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "470 North Ave, Athens, Georgia, 30601-2255, United States",
+      "lat": 33.9751669,
+      "lng": -83.3642529,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4747 Granite Dr, Tucker, Georgia, 30084-6306, United States",
+      "lat": 33.8448073,
+      "lng": -84.1953502,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4760 Lawrenceville Hwy NW, Lilburn, Georgia, 30047-3819, United States",
+      "lat": 33.8961807,
+      "lng": -84.138688,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4769 Jonesboro Rd, Forest Park, Georgia, 30297, United States",
+      "lat": 33.6240345,
+      "lng": -84.3556016,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4775 Buford Hwy NE, Chamblee, Georgia, 30341-3722, United States",
+      "lat": 33.8807331,
+      "lng": -84.2905162,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4782 Jimmy Carter Blvd, Norcross, Georgia, 30093-3714, United States",
+      "lat": 33.8897109,
+      "lng": -84.1953868,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4795 Buford Hwy, Chamblee, Georgia, 30341-3716, United States",
+      "lat": 33.8813331,
+      "lng": -84.2901511,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "48 Greenville St, Newnan, Georgia, 30263-2629, United States",
+      "lat": 33.3714048,
+      "lng": -84.79926789999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4805 Lawrenceville Hwy NW, Lilburn, Georgia, 30047-3800, United States",
+      "lat": 33.8955584,
+      "lng": -84.1411644,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4836 Steve Reynolds Blvd NW, Norcross, Georgia, 30093-4608, United States",
+      "lat": 33.9139894,
+      "lng": -84.1553866,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4840 Newton Ter NE, Buford, Georgia, 30518-35ND, United States",
+      "lat": 34.1325379,
+      "lng": -83.96986500000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4845 Alabama Rd NE, Roswell, Georgia, 30075-1664, United States",
+      "lat": 34.0664986,
+      "lng": -84.42578379999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4864 Jimmy Carter Blvd, Norcross, Georgia, 30093-3701, United States",
+      "lat": 33.8919778,
+      "lng": -84.1965043,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4939 Winters Chapel Rd, Atlanta, Georgia, 30360-1761, United States",
+      "lat": 33.9405769,
+      "lng": -84.2694009,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4968 Austell Rd, Austell, Georgia, 30106-2070, United States",
+      "lat": 33.8323536,
+      "lng": -84.6128569,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4982 Bill Gardner Pkwy, Locust Grove, Georgia, 30248-3647, United States",
+      "lat": 33.3531051,
+      "lng": -84.1165578,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "50 Gaines School Rd, Athens, Georgia, 30605-3143, United States",
+      "lat": 33.9384651,
+      "lng": -83.3242878,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "500 Jonesboro Rd, McDonough, Georgia, 30253-3717, United States",
+      "lat": 33.4582738,
+      "lng": -84.1741227,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5000 Old Dixie Hwy, Forest Park, Georgia, 30297-2148, United States",
+      "lat": 33.6181662,
+      "lng": -84.38274700000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5003 Central Dr, Stone Mountain, Georgia, 30083-2815, United States",
+      "lat": 33.8112081,
+      "lng": -84.1840395,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5020 Winters Chapel Rd, Atlanta, Georgia, 30360, United States",
+      "lat": 33.9427112,
+      "lng": -84.2714165,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5048 Buford Hwy NE, Atlanta, Georgia, 30341-2997, United States",
+      "lat": 33.8900661,
+      "lng": -84.2862233,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5050 Jimmy Carter Blvd, Norcross, Georgia, 30093-2008, United States",
+      "lat": 33.8968964,
+      "lng": -84.1998806,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5067 Ash St, Forest Park, Georgia, 30297-2320, United States",
+      "lat": 33.6162789,
+      "lng": -84.3636992,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "507 Chickamauga Ave, Rossville, Georgia, 30741-1309, United States",
+      "lat": 34.9830523,
+      "lng": -85.28285079999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "507 Highway 441 Byp, Baldwin, Georgia, 30511-1820, United States",
+      "lat": 34.4978891,
+      "lng": -83.5395831,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5110 Old National Hwy, College Park, Georgia, 30349-3340, United States",
+      "lat": 33.6161341,
+      "lng": -84.47222599999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5119 Jimmy Carter Blvd, Norcross, Georgia, 30093-1636, United States",
+      "lat": 33.8989749,
+      "lng": -84.2006499,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5158 Memorial Dr, Stone Mountain, Georgia, 30083-3111, United States",
+      "lat": 33.7983793,
+      "lng": -84.22499789999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5160 Cowan Rd, Acworth, Georgia, 30101-5197, United States",
+      "lat": 34.0776226,
+      "lng": -84.6526533,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5182 Brook Hollow Pkwy, Norcross, Georgia, 30071-3638, United States",
+      "lat": 33.9282018,
+      "lng": -84.17857939999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "520 Cobb Pkwy N, Marietta, Georgia, 30062-3319, United States",
+      "lat": 33.9640881,
+      "lng": -84.5318028,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5226 Jonesboro Rd, Lake City, Georgia, 30260-3403, United States",
+      "lat": 33.6126721,
+      "lng": -84.3472213,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5263 Buford Hwy NE, Doraville, Georgia, 30340, United States",
+      "lat": 33.89523940000001,
+      "lng": -84.2816172,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "532 Underwood St, Dalton, Georgia, 30721-0408, United States",
+      "lat": 34.7768377,
+      "lng": -84.95948399999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "533 N Main St, Cornelia, Georgia, 30531-2328, United States",
+      "lat": 34.5170858,
+      "lng": -83.52999559999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5342 Lawrenceville Hwy NW, Lilburn, Georgia, 30047, United States",
+      "lat": 33.8870133,
+      "lng": -84.15888799999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5355 Lawrenceville Hwy NW, Lilburn, Georgia, 30047-5940, United States",
+      "lat": 33.8870274,
+      "lng": -84.1582698,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5374 Five Forks Trickum Rd SW, Lilburn, Georgia, 30047-6734, United States",
+      "lat": 33.8418786,
+      "lng": -84.12974349999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5382 Peachtree Rd, Chamblee, Georgia, 30341-2449, United States",
+      "lat": 33.8919515,
+      "lng": -84.3012085,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5395 Buford Hwy, Norcross, Georgia, 30071-2657, United States",
+      "lat": 33.9493121,
+      "lng": -84.19913939999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5407 Houston Rd, Macon, Georgia, 31216, United States",
+      "lat": 32.7528342,
+      "lng": -83.66820109999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5473 N Main St, Acworth, Georgia, 30101-4846, United States",
+      "lat": 34.077308,
+      "lng": -84.6924859,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5474 Lawrenceville Hwy NW, Lilburn, Georgia, 30047, United States",
+      "lat": 33.8829978,
+      "lng": -84.161237,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5495 Jimmy Carter Blvd, Norcross, Georgia, 30093-1514, United States",
+      "lat": 33.9093926,
+      "lng": -84.2043897,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "550 Northdale Rd NW, Lawrenceville, Georgia, 30046-4532, United States",
+      "lat": 33.9700239,
+      "lng": -83.99273649999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5505 Buford Hwy, Norcross, Georgia, 30071-3901, United States",
+      "lat": 33.944925,
+      "lng": -84.2045343,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5615 Singleton Rd, Norcross, Georgia, 30093-2484, United States",
+      "lat": 33.9088415,
+      "lng": -84.1842285,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "562 Wylie Rd SE, Marietta, Georgia, 30067-7880, United States",
+      "lat": 33.9380131,
+      "lng": -84.5118141,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5626 Highway 20 SE, Cartersville, Georgia, 30121-5211, United States",
+      "lat": 34.20977,
+      "lng": -84.7585811,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5661 Highway 20 NE, Cartersville, Georgia, 30121, United States",
+      "lat": 34.2120381,
+      "lng": -84.75738679999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5668 Old Dixie Rd, Forest Park, Georgia, 30297-2620, United States",
+      "lat": 33.6004849,
+      "lng": -84.3783685,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5698 Highway 20 NE, Cartersville, Georgia, 30121-5213, United States",
+      "lat": 34.2144072,
+      "lng": -84.7532641,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5700 Brook Hollow Pkwy, Norcross, Georgia, 30071-3527, United States",
+      "lat": 33.9192147,
+      "lng": -84.1974209,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5730 Buford Hwy, Norcross, Georgia, 30071-2537, United States",
+      "lat": 33.9396429,
+      "lng": -84.2098915,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "574 Roswell St SE, Marietta, Georgia, 30060-2150, United States",
+      "lat": 33.9499606,
+      "lng": -84.53567149999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5805 Buford Hwy NE, Atlanta, Georgia, 30340-2432, United States",
+      "lat": 33.90869130000001,
+      "lng": -84.26564049999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5808 Singleton Rd NW, Norcross, Georgia, 30093-1901, United States",
+      "lat": 33.9077307,
+      "lng": -84.1917078,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5824 Singleton Rd, Norcross, Georgia, 30093-2007, United States",
+      "lat": 33.9075528,
+      "lng": -84.1925649,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "585 Franklin Gtwy SE, Marietta, Georgia, 30067-7700, United States",
+      "lat": 33.9386199,
+      "lng": -84.506204,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5863 Old Dixie Hwy, Forest Park, Georgia, 30297-3271, United States",
+      "lat": 33.5945878,
+      "lng": -84.37790199999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5904 Bells Ferry Rd, Acworth, Georgia, 30102-1411, United States",
+      "lat": 34.096867,
+      "lng": -84.5821376,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "599 Mount Zion Rd, Atlanta, Georgia, 30354-1135, United States",
+      "lat": 33.6730517,
+      "lng": -84.4078068,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "603 Willow Ln, McDonough, Georgia, 30253, United States",
+      "lat": 33.4445608,
+      "lng": -84.18826299999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "606 Atlanta Hwy, Gainesville, Georgia, 30501-6319, United States",
+      "lat": 34.2797917,
+      "lng": -83.8402107,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6060 Singleton Rd, Norcross, Georgia, 30093-8600, United States",
+      "lat": 33.904733,
+      "lng": -84.20013259999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6065 S Norcross Tucker Rd, Norcross, Georgia, 30093-5508, United States",
+      "lat": 33.89855310000001,
+      "lng": -84.2084856,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6101 S Norcross Tucker Rd, Norcross, Georgia, 30093-5516, United States",
+      "lat": 33.8967738,
+      "lng": -84.2100294,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6131 S Norcross Tucker Rd, Norcross, Georgia, 30093-5522, United States",
+      "lat": 33.8965771,
+      "lng": -84.2115759,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6158 Highway 92, Acworth, Georgia, 30102-2328, United States",
+      "lat": 34.0878763,
+      "lng": -84.58661359999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6185 Windward Pkwy, Alpharetta, Georgia, 30005, United States",
+      "lat": 34.0939655,
+      "lng": -84.23858159999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "620 N Glenwood Ave, Dalton, Georgia, 30721-2859, United States",
+      "lat": 34.7810443,
+      "lng": -84.9635613,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6200 Buford Hwy NW, Norcross, Georgia, 30071, United States",
+      "lat": 33.9313437,
+      "lng": -84.2241334,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6200 S Norcross Tucker Rd, Tucker, Georgia, 30084-1256, United States",
+      "lat": 33.8917676,
+      "lng": -84.2097825,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "623 N Main St, Cornelia, Georgia, 30531-2329, United States",
+      "lat": 34.5186562,
+      "lng": -83.5297077,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "624 5th Ave, Dalton, Georgia, 30721-3518, United States",
+      "lat": 34.7640342,
+      "lng": -84.95399530000002,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6317 Old Highway 5, Woodstock, Georgia, 30188, United States",
+      "lat": 34.1283961,
+      "lng": -84.4977246,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6342 Roswell Rd, Atlanta, Georgia, 30328, United States",
+      "lat": 33.9284469,
+      "lng": -84.3804067,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6410 Bells Ferry Rd, Woodstock, Georgia, 30189-8175, United States",
+      "lat": 34.1116209,
+      "lng": -84.58133529999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6425 Bells Ferry Rd, Woodstock, Georgia, 30189-2317, United States",
+      "lat": 34.1120254,
+      "lng": -84.5826447,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "645 Danielsville Rd, Athens, Georgia, 30601-1441, United States",
+      "lat": 33.9813109,
+      "lng": -83.36274759999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6467 Warren Dr NW, Norcross, Georgia, 30093-1114, United States",
+      "lat": 33.9087172,
+      "lng": -84.21828889999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6501 Highway 92, Acworth, Georgia, 30102-2999, United States",
+      "lat": 34.0891366,
+      "lng": -84.5803858,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6555 Peachtree Industrial Blvd, Doraville, Georgia, 30360-2129, United States",
+      "lat": 33.9254217,
+      "lng": -84.2760512,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "656 Indian Trail Lilburn Rd NW, Lilburn, Georgia, 30047-6872, United States",
+      "lat": 33.9010053,
+      "lng": -84.1481562,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6561 Highway 42, Rex, Georgia, 30273-1724, United States",
+      "lat": 33.5777569,
+      "lng": -84.2729453,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6628 Tara Blvd, Jonesboro, Georgia, 30236-1230, United States",
+      "lat": 33.573768,
+      "lng": -84.370328,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "677 Concord Rd SE, Smyrna, Georgia, 30082-2618, United States",
+      "lat": 33.8724023,
+      "lng": -84.5338688,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "680 Powder Springs St, Marietta, Georgia, 30064-3683, United States",
+      "lat": 33.93741079999999,
+      "lng": -84.55702459999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6976 Commercial Dr, Morrow, Georgia, 30260-4112, United States",
+      "lat": 33.5647913,
+      "lng": -84.3409764,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7017 Mableton Pkwy SE, Mableton, Georgia, 30126-4558, United States",
+      "lat": 33.7826746,
+      "lng": -84.5376998,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "702 Shorter Ave NW, Rome, Georgia, 30165-4130, United States",
+      "lat": 34.2665651,
+      "lng": -85.202168,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7050 Jimmy Carter Blvd, Peachtree Corners, Georgia, 30092-3200, United States",
+      "lat": 33.9467821,
+      "lng": -84.2413803,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7055 Amwiler Industrial Dr NW, Atlanta, Georgia, 30360-2833, United States",
+      "lat": 33.9294279,
+      "lng": -84.2585941,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "71 Old Grassdale Rd NW, Cartersville, Georgia, 30121-5098, United States",
+      "lat": 34.2272571,
+      "lng": -84.8178075,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7110 McGinnis Ferry Rd, Suwanee, Georgia, 30024-1440, United States",
+      "lat": 34.0680401,
+      "lng": -84.16675910000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "712 Winer Industrial Way NW, Lawrenceville, Georgia, 30046-4347, United States",
+      "lat": 33.9575655,
+      "lng": -84.0118541,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "730 Pearl Nix Pkwy, Gainesville, Georgia, 30501-8528, United States",
+      "lat": 34.2845903,
+      "lng": -83.8310194,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "733 Pleasant Hill Rd, Lilburn, Georgia, 30047-2988, United States",
+      "lat": 33.9175839,
+      "lng": -84.11587039999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "737 Riverbend Rd, Dalton, Georgia, 30721-4789, United States",
+      "lat": 34.7619094,
+      "lng": -84.9526085,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7434 Tara Blvd, Jonesboro, Georgia, 30236-1800, United States",
+      "lat": 33.5514358,
+      "lng": -84.3694017,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "745 Beaver Ruin Rd, Norcross, Georgia, 30047-3443, United States",
+      "lat": 33.9109369,
+      "lng": -84.1321416,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "751 N Central Ave, Hapeville, Georgia, 30354-1934, United States",
+      "lat": 33.6619465,
+      "lng": -84.41363419999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7826 Village Entrance Rd, Douglasville, Georgia, 30134-3303, United States",
+      "lat": 33.7481498,
+      "lng": -84.83103059999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "789 S Main St, Cornelia, Georgia, 30531-3976, United States",
+      "lat": 34.5074743,
+      "lng": -83.5241832,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "790 Hawthorne Ave, Athens, Georgia, 30606-2510, United States",
+      "lat": 33.9618819,
+      "lng": -83.41317339999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7995 Midway Rd, Alpharetta, Georgia, 30004-2568, United States",
+      "lat": 34.2032192,
+      "lng": -84.2667606,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "800 W Spring St, Monroe, Georgia, 30655, United States",
+      "lat": 33.794184,
+      "lng": -83.7274345,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "801 E Walnut Ave, Dalton, Georgia, 30721-9501, United States",
+      "lat": 34.7615117,
+      "lng": -84.9446317,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "809 Roswell St NE, Marietta, Georgia, 30060-2136, United States",
+      "lat": 33.9511494,
+      "lng": -84.52855679999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "8126 Highway 85, Riverdale, Georgia, 30274-4104, United States",
+      "lat": 33.5327347,
+      "lng": -84.4178,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "830 Loganville Hwy, Bethlehem, Georgia, 30620-1708, United States",
+      "lat": 33.9485153,
+      "lng": -83.7513702,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "838 Chestnut St SE, Gainesville, Georgia, 30501-4802, United States",
+      "lat": 34.2915815,
+      "lng": -83.81976279999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "84 Patterson Rd, Lawrenceville, Georgia, 30044-4656, United States",
+      "lat": 33.9273335,
+      "lng": -84.0375968,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "8430 Browns Bridge Rd, Gainesville, Georgia, 30506-4035, United States",
+      "lat": 34.2500364,
+      "lng": -83.9771545,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "845 Beaver Ruin Rd NW, Lilburn, Georgia, 30047, United States",
+      "lat": 33.9127824,
+      "lng": -84.1343163,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "850 Dogwood Rd, Lawrenceville, Georgia, 30044-5799, United States",
+      "lat": 33.8907633,
+      "lng": -84.0609937,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "855 S Cobb Dr SE, Marietta, Georgia, 30060-3106, United States",
+      "lat": 33.9320524,
+      "lng": -84.5486068,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "870 Dallas Hwy, Douglasville, Georgia, 30134-3771, United States",
+      "lat": 33.7822626,
+      "lng": -84.7476815,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "873 Cassville White Rd NW, Cartersville, Georgia, 30121-4723, United States",
+      "lat": 34.2734952,
+      "lng": -84.8147159,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "874 Cassville White Rd NW, Cartersville, Georgia, 30121, United States",
+      "lat": 34.2725127,
+      "lng": -84.8148916,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "895 Indian Trail-Lilburn Rd NW, Lilburn, Georgia, 30047-1723, United States",
+      "lat": 33.9049153,
+      "lng": -84.1554689,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "900 Indian Way NW, Lilburn, Georgia, 30047-4826, United States",
+      "lat": 33.9045327,
+      "lng": -84.15895390000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "900 Underwood St, Dalton, Georgia, 30721-2911, United States",
+      "lat": 34.7782158,
+      "lng": -84.9533536,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "901 Milford Church Rd SW, Marietta, Georgia, 30060-4523, United States",
+      "lat": 33.8806036,
+      "lng": -84.5801224,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "91 Hickory Flat Hwy, Canton, Georgia, 30114-3710, United States",
+      "lat": 34.2287071,
+      "lng": -84.4906412,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "925 Loganville Hwy, Bethlehem, Georgia, 30620-2148, United States",
+      "lat": 33.9442317,
+      "lng": -83.7575933,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "930 Indian Trail Lilburn Rd NW, Lilburn, Georgia, 30047-6867, United States",
+      "lat": 33.9066234,
+      "lng": -84.1559001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "941 S Marietta Pkwy SE, Marietta, Georgia, 30060, United States",
+      "lat": 33.9414279,
+      "lng": -84.525127,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "952 N Tennessee St, Cartersville, Georgia, 30120-2478, United States",
+      "lat": 34.1874323,
+      "lng": -84.79609459999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "9740 Main St, Woodstock, Georgia, 30188-3900, United States",
+      "lat": 34.0832556,
+      "lng": -84.52041659999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "998 Cassville White Rd NE, Cartersville, Georgia, 30121-7203, United States",
+      "lat": 34.2730412,
+      "lng": -84.8055384,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "Buford Hwy NE, Chamblee, Georgia, 30341, United States",
+      "lat": 33.8766284,
+      "lng": -84.293268,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "Flowery Branch, Georgia, 30542, United States",
+      "lat": 34.1851017,
+      "lng": -83.9251809,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "Parkway Dr SE, Smyrna, Georgia, 30080, United States",
+      "lat": 33.8975739,
+      "lng": -84.5296127,
+      "country": "US"
+    },
+    {
+      "name": "El Granero Supermarket",
+      "address": "5680 Old Dixie Hwy, Forest Park, Georgia, 30297-6624, United States",
+      "lat": 33.5997552,
+      "lng": -84.3782305,
+      "country": "US"
+    },
+    {
+      "name": "El Tio Market",
+      "address": "1388 Bankhead Hwy SE, Mableton, Georgia, 30126, United States",
+      "lat": 33.730016,
+      "lng": -84.9071531,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "5150 Sugarloaf Pkwy, Lawrenceville, Georgia, 30043-5702, United States",
+      "lat": 33.96388870000001,
+      "lng": -84.0676149,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "10155 Veterans Memorial Hwy, Austell, Georgia, 30168, United States",
+      "lat": 33.7977963,
+      "lng": -84.6406368,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "11155 Tara Blvd, Hampton, Georgia, 30228-1672, United States",
+      "lat": 33.4497934,
+      "lng": -84.3274162,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "124 Bullsboro Dr, Newnan, Georgia, 30263-1018, United States",
+      "lat": 33.3900362,
+      "lng": -84.77834969999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "1250 Tech Dr, Norcross, Georgia, 30093-2504, United States",
+      "lat": 33.9139749,
+      "lng": -84.1656383,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "1355 E West Connector, Austell, Georgia, 30106-0001, United States",
+      "lat": 33.8573652,
+      "lng": -84.59678819999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "250 Windy Hill Rd SE, Marietta, Georgia, 30060-5556, United States",
+      "lat": 33.8945921,
+      "lng": -84.5446908,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "3530 GA-20 SE, Conyers, Georgia, 30013-2877, United States",
+      "lat": 33.5954025,
+      "lng": -84.01298489999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "3696 GA-5, Douglasville, Georgia, 30135-2302, United States",
+      "lat": 33.7064765,
+      "lng": -84.77831259999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "5345 Floyd Rd SW, Mableton, Georgia, 30126-2220, United States",
+      "lat": 33.8244959,
+      "lng": -84.5747062,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "5530 Bells Ferry Rd, Acworth, Georgia, 30102-2526, United States",
+      "lat": 34.0860655,
+      "lng": -84.5740514,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "6169 Highway 278 NW, Covington, Georgia, 30014-2127, United States",
+      "lat": 33.6054172,
+      "lng": -83.8731066,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "6459 Macon Hwy, Rex, Georgia, 30273-1765, United States",
+      "lat": 33.5766434,
+      "lng": -84.28180060000001,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "6525 Hiram Douglasville Hwy, Douglasville, Georgia, 30134-5519, United States",
+      "lat": 33.7992569,
+      "lng": -84.7555998,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "681 S Marietta Pkwy SE, Marietta, Georgia, 30060-2748, United States",
+      "lat": 33.9444747,
+      "lng": -84.5321304,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "792 Morrow Rd, Forest Park, Georgia, 30297-3229, United States",
+      "lat": 33.5912924,
+      "lng": -84.3648431,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "Salem Rd, Covington, Georgia, 30016, United States",
+      "lat": 33.5684097,
+      "lng": -83.9482551,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "1205 N Glenwood Ave, Dalton, Georgia, 30721-2603, United States",
+      "lat": 34.7921623,
+      "lng": -84.9625451,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "2100 Riverside Pkwy, Lawrenceville, Georgia, 30043-5914, United States",
+      "lat": 33.9650712,
+      "lng": -84.0345856,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "3050 Five Forks Trickum Rd SW, Lilburn, Georgia, 30047-1810, United States",
+      "lat": 33.8844243,
+      "lng": -84.0601023,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "3093 Steve Reynolds Blvd NW, Duluth, Georgia, 30096-4501, United States",
+      "lat": 33.9609948,
+      "lng": -84.14182939999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "3855 Buford Hwy NE, Brookhaven, Georgia, 30329-1003, United States",
+      "lat": 33.8554152,
+      "lng": -84.31459989999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "4155 Lawrenceville Hwy NW, Lilburn, Georgia, 30047-1500, United States",
+      "lat": 33.9047713,
+      "lng": -84.12121410000002,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "4498 Chamblee Dunwoody Rd, Dunwoody, Georgia, 30338-6223, United States",
+      "lat": 33.9226245,
+      "lng": -84.3159081,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "455 Grayson Hwy, Lawrenceville, Georgia, 30046-6329, United States",
+      "lat": 33.9386684,
+      "lng": -83.9825887,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "505 Dacula Rd, Dacula, Georgia, 30019-2125, United States",
+      "lat": 33.9999653,
+      "lng": -83.9066129,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "5664 Jonesboro Rd, Lake City, Georgia, 30260, United States",
+      "lat": 33.6002627,
+      "lng": -84.3369498,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "6050 Singleton Rd, Norcross, Georgia, 30093-1921, United States",
+      "lat": 33.9038458,
+      "lng": -84.1998806,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "800 Glenwood Ave SE, Atlanta, Georgia, 30316-1814, United States",
+      "lat": 33.7424339,
+      "lng": -84.36014689999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "950 Herrington Rd, Lawrenceville, Georgia, 30044-7212, United States",
+      "lat": 33.9406448,
+      "lng": -84.08247209999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "1931 SE Jesse Jewell Pkwy, Gainesville, Georgia, 30501, United States",
+      "lat": 34.3141885,
+      "lng": -83.7969001,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "2100 Riverside Pkwy, Lawrenceville, Georgia, 30043-5927, United States",
+      "lat": 33.9650712,
+      "lng": -84.0345856,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "3855 Buford Hwy NE, Atlanta, Georgia, 30329-1003, United States",
+      "lat": 33.8554152,
+      "lng": -84.31459989999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "4155 Lawrenceville Hwy NW, Lilburn, Georgia, 30047-2878, United States",
+      "lat": 33.9047713,
+      "lng": -84.12121410000002,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "455 Grayson Hwy SW, Lawrenceville, Georgia, 30046-7171, United States",
+      "lat": 33.9386684,
+      "lng": -83.9825887,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "5550 Bethelview Rd, Cumming, Georgia, 30040-6859, United States",
+      "lat": 34.1702797,
+      "lng": -84.1847228,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "6050 Singleton Rd, Norcross, Georgia, 30093-1923, United States",
+      "lat": 33.9038458,
+      "lng": -84.1998806,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Atlanta",
+      "address": "950 Herrington Rd NW, Lawrenceville, Georgia, 30044-7217, United States",
+      "lat": 33.9406448,
+      "lng": -84.08247209999999,
+      "country": "US"
+    },
+    {
+      "name": "La Placita Mexico",
+      "address": "8420 Senoia Rd, Fairburn, Georgia, 30213-3559, United States",
+      "lat": 33.5272576,
+      "lng": -84.575119,
+      "country": "US"
+    },
+    {
+      "name": "Mi Jalisco Supermarket",
+      "address": "3355 Steve Reynolds Blvd, Duluth, Georgia, 30096-4511, United States",
+      "lat": 33.9531697,
+      "lng": -84.14156469999999,
+      "country": "US"
+    },
+    {
+      "name": "Nam Dae Mun",
+      "address": "Lawrenceville, Georgia, 30043, United States",
+      "lat": 33.9963181,
+      "lng": -84.0061661,
+      "country": "US"
+    },
+    {
+      "name": "Nam Dae Mun",
+      "address": "Stone Mountain Pkwy, Stone Mountain, Georgia, 30083, United States",
+      "lat": 33.8056478,
+      "lng": -84.1701239,
+      "country": "US"
+    },
+    {
+      "name": "Panificadora La Esperanza",
+      "address": "407 N Central Ave, Hapeville, Georgia, 30354, United States",
+      "lat": 33.6557691,
+      "lng": -84.4020086,
+      "country": "US"
+    },
+    {
+      "name": "Publix",
+      "address": "5805 State Bridge Rd, Duluth, Georgia, 30097-2404, United States",
+      "lat": 34.0167563,
+      "lng": -84.18637059999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "100 Glenda Trce, Newnan, Georgia, 30265-3863, United States",
+      "lat": 33.4105243,
+      "lng": -84.6876257,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1000 Peachtree Industrial Blvd, Suwanee, Georgia, 30024-6737, United States",
+      "lat": 34.049758,
+      "lng": -84.08890919999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1001 Ponce de Leon Ave NE, Atlanta, Georgia, 30306, United States",
+      "lat": 33.772874,
+      "lng": -84.3544514,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1025 Veterans Memorial Hwy, Mableton, Georgia, 30126, United States",
+      "lat": 33.8052887,
+      "lng": -84.526956,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "103 Mirror Lake Blvd, Villa Rica, Georgia, 30180-32ND, United States",
+      "lat": 33.7344753,
+      "lng": -84.902397,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1030 Old Peachtree Rd NW, Lawrenceville, Georgia, 30043-3308, United States",
+      "lat": 33.9985616,
+      "lng": -84.0690801,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "104 Town Blvd NE, Atlanta, Georgia, 30319, United States",
+      "lat": 33.8702988,
+      "lng": -84.33431999999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1050 E Piedmont Rd, Marietta, Georgia, 30062-4758, United States",
+      "lat": 33.9762109,
+      "lng": -84.47845699999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "108 Pavilion Pkwy, Fayetteville, Georgia, 30214-4056, United States",
+      "lat": 33.4784754,
+      "lng": -84.43851819999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1100 Hammond Dr, Atlanta, Georgia, 30328-8153, United States",
+      "lat": 33.9194273,
+      "lng": -84.3519062,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1100 Johnson Ferry Rd, Marietta, Georgia, 30068-2794, United States",
+      "lat": 33.9769966,
+      "lng": -84.4149686,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1109 S Park St, Carrollton, Georgia, 30117-4462, United States",
+      "lat": 33.5597755,
+      "lng": -85.0759416,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1110 Lower Fayetteville Rd, Newnan, Georgia, 30265-1131, United States",
+      "lat": 33.3745496,
+      "lng": -84.7524686,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "11800 Haynes Bridge Rd, Alpharetta, Georgia, 30009-1898, United States",
+      "lat": 34.0732161,
+      "lng": -84.2937898,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "120 Prominence Point Pkwy, Canton, Georgia, 30114-9008, United States",
+      "lat": 34.19222269999999,
+      "lng": -84.5113846,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1200 Highway 74 S, Peachtree City, Georgia, 30269-3071, United States",
+      "lat": 33.342724,
+      "lng": -84.5369812,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "12165 GA-92, Woodstock, Georgia, 30188-4298, United States",
+      "lat": 34.0887192,
+      "lng": -84.4835396,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1236 Thompson Bridge Rd, Gainesville, Georgia, 30501-1708, United States",
+      "lat": 34.3189793,
+      "lng": -83.8303337,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "12701 Town Center Dr, Covington, Georgia, 30014, United States",
+      "lat": 33.6218897,
+      "lng": -83.8393574,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "130 N Peachtree Pkwy, Peachtree City, Georgia, 30269-1729, United States",
+      "lat": 33.409391,
+      "lng": -84.56942680000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "13015 Brown Bridge Rd, Covington, Georgia, 30016-9111, United States",
+      "lat": 33.576511,
+      "lng": -83.9649175,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1380 Atlantic Dr NW, Atlanta, Georgia, 30363-1108, United States",
+      "lat": 33.7926941,
+      "lng": -84.3981306,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "13800 GA-9 N, Alpharetta, Georgia, 30004-4589, United States",
+      "lat": 34.1187553,
+      "lng": -84.2718416,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "139 Commerce Ave, Lagrange, Georgia, 30241-2337, United States",
+      "lat": 33.0507684,
+      "lng": -85.0241581,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1425 Market Blvd, Roswell, Georgia, 30076-6708, United States",
+      "lat": 34.018859,
+      "lng": -84.32067599999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1451 Riverstone Pkwy, Canton, Georgia, 30114-5624, United States",
+      "lat": 34.2506127,
+      "lng": -84.47698129999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "15 Laurel Canyon Village Cir, Canton, Georgia, 30114-4680, United States",
+      "lat": 34.27119649999999,
+      "lng": -84.50320959999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1512 Highway 74 N, Tyrone, Georgia, 30290-1663, United States",
+      "lat": 33.4880822,
+      "lng": -84.58673630000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1544 Piedmont Ave NE, Atlanta, Georgia, 30324-5018, United States",
+      "lat": 33.7979412,
+      "lng": -84.37107089999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1591 Highway 20 NE, Conyers, Georgia, 30012, United States",
+      "lat": 33.6841549,
+      "lng": -83.9979482,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1625 Pleasant Hill Rd, Duluth, Georgia, 30096-2326, United States",
+      "lat": 33.9446934,
+      "lng": -84.12718699999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1639 Bradley Park Dr, Columbus, Georgia, 31904-3620, United States",
+      "lat": 32.5336581,
+      "lng": -84.96679929999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1735 Buford Hwy, Cumming, Georgia, 30041-1266, United States",
+      "lat": 34.1634869,
+      "lng": -84.1148153,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1750 Powder Springs Rd SW, Marietta, Georgia, 30064-4850, United States",
+      "lat": 33.9033683,
+      "lng": -84.6068629,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "178 Virginia Way, Jasper, Georgia, 30143-1544, United States",
+      "lat": 34.4594898,
+      "lng": -84.4527638,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "1905 Scenic Hwy SW, Snellville, Georgia, 30078, United States",
+      "lat": 33.8790727,
+      "lng": -84.015293,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2010 Johnson Ferry Rd NE, Brookhaven, Georgia, 30319-2506, United States",
+      "lat": 33.8946394,
+      "lng": -84.3300775,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2035 Mt Zion Rd, Morrow, Georgia, 30260-3313, United States",
+      "lat": 33.561712,
+      "lng": -84.3251147,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2061 Experiment Station Rd, Watkinsville, Georgia, 30677-5328, United States",
+      "lat": 33.8712074,
+      "lng": -83.44117729999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2090 Baker Rd NW, Kennesaw, Georgia, 30144-4600, United States",
+      "lat": 34.0750805,
+      "lng": -84.64963639999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "215 Rucker Rd, Alpharetta, Georgia, 30004-6612, United States",
+      "lat": 34.0777269,
+      "lng": -84.3541346,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2155 Limestone Pkwy, Gainesville, Georgia, 30501-2667, United States",
+      "lat": 34.3143115,
+      "lng": -83.7993334,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2155 N Decatur Rd, Decatur, Georgia, 30033-5307, United States",
+      "lat": 33.7896848,
+      "lng": -84.304358,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2159 Highway 20 SE, Conyers, Georgia, 30013-2028, United States",
+      "lat": 33.7000565,
+      "lng": -84.0021202,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2162 Henderson Mill Rd NE, Atlanta, Georgia, 30345, United States",
+      "lat": 33.8475294,
+      "lng": -84.2572643,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2200 Vernon Ferry Rd, Lagrange, Georgia, 30240, United States",
+      "lat": 33.0362269,
+      "lng": -85.1133641,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "23 Maxwell Ln, Dahlonega, Georgia, 30533, United States",
+      "lat": 34.4717932,
+      "lng": -83.9656339,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2325 Cheshire Bridge Rd NE, Atlanta, Georgia, 30324-3733, United States",
+      "lat": 33.8185617,
+      "lng": -84.34903829999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "234 Gateway Crossing Pkwy, Hoschton, Georgia, 30548-1180, United States",
+      "lat": 34.087182,
+      "lng": -83.7559,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2365 Peachtree Rd NE, Atlanta, Georgia, 30305, United States",
+      "lat": 33.8195092,
+      "lng": -84.3885351,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2380 Buford Dr, Lawrenceville, Georgia, 30043-7638, United States",
+      "lat": 34.0358727,
+      "lng": -83.9895432,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2400 Jonesboro Rd, Hampton, Georgia, 30228, United States",
+      "lat": 33.4647427,
+      "lng": -84.2351911,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2451 Cumberland Pkwy SE, Atlanta, Georgia, 30339-6136, United States",
+      "lat": 33.8626738,
+      "lng": -84.4787029,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2463 Hamilton Mill Pkwy, Dacula, Georgia, 30019-4648, United States",
+      "lat": 34.0739124,
+      "lng": -83.9153675,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "250 East Atlanta Rd, Stockbridge, Georgia, 30281-3414, United States",
+      "lat": 33.5549206,
+      "lng": -84.23368359999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2500 Dallas Hwy SW, Marietta, Georgia, 30064-2567, United States",
+      "lat": 33.9481468,
+      "lng": -84.62534699999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2652 Shallowford Rd NE, Atlanta, Georgia, 30341-5213, United States",
+      "lat": 33.8645551,
+      "lng": -84.2888954,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2715 Loganville Hwy SW, Loganville, Georgia, 30052-6660, United States",
+      "lat": 33.8794575,
+      "lng": -83.93836809999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2720 E Ponce de Leon Ave, Decatur, Georgia, 30030-2715, United States",
+      "lat": 33.7775188,
+      "lng": -84.2787537,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "275 Perry Pkwy, Perry, Georgia, 31069-9275, United States",
+      "lat": 32.4729452,
+      "lng": -83.7061307,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2774 Cobb Pkwy NW, Kennesaw, Georgia, 30152, United States",
+      "lat": 34.0233857,
+      "lng": -84.62450849999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2775 N Columbia St, Milledgeville, Georgia, 31061-8463, United States",
+      "lat": 33.1482296,
+      "lng": -83.2714125,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2900 Delk Rd SE, Marietta, Georgia, 30067-5320, United States",
+      "lat": 33.9228928,
+      "lng": -84.4669784,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2900 Peachtree Rd NE, Atlanta, Georgia, 30305, United States",
+      "lat": 33.8341429,
+      "lng": -84.3828308,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2955 Atlanta Rd SE, Smyrna, Georgia, 30080-3651, United States",
+      "lat": 33.8815497,
+      "lng": -84.5121418,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "2969 N Druid Hills Rd NE, Atlanta, Georgia, 30329-3909, United States",
+      "lat": 33.8132358,
+      "lng": -84.3118386,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "300 Cherokee Pl, Cartersville, Georgia, 30121-2964, United States",
+      "lat": 34.1733546,
+      "lng": -84.7841795,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3045 Panola Rd, Lithonia, Georgia, 30038, United States",
+      "lat": 33.6985637,
+      "lng": -84.174588,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3200 Holcomb Bridge Rd, Peachtree Corners, Georgia, 30092-3361, United States",
+      "lat": 33.9512132,
+      "lng": -84.2321606,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3201 Macon Rd, Columbus, Georgia, 31906-1717, United States",
+      "lat": 32.4819792,
+      "lng": -84.9446852,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3245 Peachtree Pkwy, Suwanee, Georgia, 30024-6054, United States",
+      "lat": 34.0843721,
+      "lng": -84.15924299999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3316 Highway 5, Douglasville, Georgia, 30135-2308, United States",
+      "lat": 33.7148012,
+      "lng": -84.765828,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3330 Piedmont Rd NE, Atlanta, Georgia, 30305-1726, United States",
+      "lat": 33.8458896,
+      "lng": -84.3734254,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3370 Sugarloaf Pkwy, Lawrenceville, Georgia, 30044-5478, United States",
+      "lat": 33.9214497,
+      "lng": -84.01840109999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3446 Winder Hwy, Oakwood, Georgia, 30542-3007, United States",
+      "lat": 34.2182666,
+      "lng": -83.86328929999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3479 Highway 81 E, McDonough, Georgia, 30252-7119, United States",
+      "lat": 33.4375818,
+      "lng": -84.0400848,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3480 Keith Bridge Rd, Cumming, Georgia, 30041-5568, United States",
+      "lat": 34.2581577,
+      "lng": -84.0710819,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3500 Highway 155 N, McDonough, Georgia, 30252-5506, United States",
+      "lat": 33.5478329,
+      "lng": -84.1357218,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3507 Baker Rd NW, Acworth, Georgia, 30101-3706, United States",
+      "lat": 34.0748184,
+      "lng": -84.6519994,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3535 Peachtree Rd NE, Atlanta, Georgia, 30326-3287, United States",
+      "lat": 33.8516403,
+      "lng": -84.3596269,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3620 Atlanta Hwy, Athens, Georgia, 30606-7219, United States",
+      "lat": 33.9406663,
+      "lng": -83.4555793,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3620 Era Dr, Cumming, Georgia, 30028-4355, United States",
+      "lat": 34.24081,
+      "lng": -84.225911,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3649 Flakes Mill Rd, Decatur, Georgia, 30034-5218, United States",
+      "lat": 33.6805963,
+      "lng": -84.23150199999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3655 Cascade Rd SW, Atlanta, Georgia, 30331-2105, United States",
+      "lat": 33.7234027,
+      "lng": -84.5077273,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "370 Bullsboro Dr, Newnan, Georgia, 30263-1069, United States",
+      "lat": 33.3957591,
+      "lng": -84.7638702,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3715 Wahoo Falls Trce, Gainesville, Georgia, 30506, United States",
+      "lat": 34.37878,
+      "lng": -83.87772,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3721 New Macland Rd SW, Powder Springs, Georgia, 30127, United States",
+      "lat": 33.8643045,
+      "lng": -84.6741459,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3730 Carmia Dr SW, Atlanta, Georgia, 30331-6251, United States",
+      "lat": 33.6564551,
+      "lng": -84.5108308,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "375 Rockbridge Rd, Lilburn, Georgia, 30047, United States",
+      "lat": 33.8644179,
+      "lng": -84.1458993,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "380 N Deshon Rd, Stone Mountain, Georgia, 30087, United States",
+      "lat": 33.785651,
+      "lng": -84.100175,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "3870 N Druid Hills Rd, Decatur, Georgia, 30033-3002, United States",
+      "lat": 33.8113728,
+      "lng": -84.27472089999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4000 Highway 29 N, Newnan, Georgia, 30265, United States",
+      "lat": 33.4504921,
+      "lng": -84.7046945,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "401 Gainesville Hwy, Winder, Georgia, 30680-1661, United States",
+      "lat": 34.0096553,
+      "lng": -83.7064967,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4045 Five Forks Trickum Rd SW, Lilburn, Georgia, 30047-2538, United States",
+      "lat": 33.8704838,
+      "lng": -84.091276,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4108 Hamilton Mill Rd NE, Buford, Georgia, 30519-3910, United States",
+      "lat": 34.0939528,
+      "lng": -83.9343433,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4269 Roswell Rd NE, Marietta, Georgia, 30062-6488, United States",
+      "lat": 33.8709444,
+      "lng": -84.3810682,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4300 Chapel Hill Rd, Douglasville, Georgia, 30135-4200, United States",
+      "lat": 33.6893566,
+      "lng": -84.714804,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4305 State Bridge Rd, Alpharetta, Georgia, 30022-4471, United States",
+      "lat": 34.0573012,
+      "lng": -84.23505039999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4325 Atlanta Hwy, Loganville, Georgia, 30052-2341, United States",
+      "lat": 33.8393681,
+      "lng": -83.9075862,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "435 Turner McCall Blvd SW, Rome, Georgia, 30165, United States",
+      "lat": 34.2564232,
+      "lng": -85.1645158,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4401 Shallowford Rd, Roswell, Georgia, 30075-3193, United States",
+      "lat": 34.0276891,
+      "lng": -84.4203105,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4403 Towne Lake Pkwy, Woodstock, Georgia, 30189-8132, United States",
+      "lat": 34.1267789,
+      "lng": -84.5711867,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4480 S Cobb Dr SE, Smyrna, Georgia, 30080-6990, United States",
+      "lat": 33.843602,
+      "lng": -84.5042935,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4580 Sugarloaf Pkwy, Lawrenceville, Georgia, 30044-6986, United States",
+      "lat": 33.9479749,
+      "lng": -84.04657639999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4650 Hugh Howell Rd, Tucker, Georgia, 30084-5003, United States",
+      "lat": 33.8506334,
+      "lng": -84.19920479999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4750 Alabama Rd NE, Roswell, Georgia, 30075-1695, United States",
+      "lat": 34.0649285,
+      "lng": -84.4231133,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4840 Golden Pkwy, Buford, Georgia, 30518-5843, United States",
+      "lat": 34.1423644,
+      "lng": -83.9509413,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4900 Atlanta Hwy, Alpharetta, Georgia, 30004-2921, United States",
+      "lat": 34.1595239,
+      "lng": -84.2395694,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "4957 Highway 34 E, Sharpsburg, Georgia, 30277-3505, United States",
+      "lat": 33.3990208,
+      "lng": -84.6287497,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "50 Ernest Barrett Pkwy, Marietta, Georgia, 30066-3300, United States",
+      "lat": 34.0146885,
+      "lng": -84.5520712,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "51 E Paulding Dr, Dallas, Georgia, 30157-7190, United States",
+      "lat": 33.9587809,
+      "lng": -84.7876162,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "51 Old Farm Rd, Jefferson, Georgia, 30549-2958, United States",
+      "lat": 34.125554,
+      "lng": -83.604587,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5100 Dallas Hwy, Powder Springs, Georgia, 30127-4491, United States",
+      "lat": 33.9409923,
+      "lng": -84.7031075,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5180 McGinnis Ferry Rd, Alpharetta, Georgia, 30005-1792, United States",
+      "lat": 34.0932336,
+      "lng": -84.2063874,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5310 Matt Hwy, Cumming, Georgia, 30028-8610, United States",
+      "lat": 34.3006046,
+      "lng": -84.15142279999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5345 Jefferson Rd, Athens, Georgia, 30607-1755, United States",
+      "lat": 33.9922743,
+      "lng": -83.4382207,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5370 Highway 92, Fairburn, Georgia, 30213, United States",
+      "lat": 33.6123309,
+      "lng": -84.6100209,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5435 Woodruff Farm Rd, Columbus, Georgia, 31907-1395, United States",
+      "lat": 32.519627,
+      "lng": -84.893749,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5475 Bethelview Rd, Cumming, Georgia, 30040-9731, United States",
+      "lat": 34.17429,
+      "lng": -84.1871121,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5534 Peachtree Blvd, Chamblee, Georgia, 30341-2218, United States",
+      "lat": 33.9004335,
+      "lng": -84.3022299,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5581 Thomaston Rd, Macon, Georgia, 31220-8119, United States",
+      "lat": 32.834478,
+      "lng": -83.7439903,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "572 Hank Aaron Dr SE, Atlanta, Georgia, 30312-2896, United States",
+      "lat": 33.7390668,
+      "lng": -84.38720560000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "580 Atlanta Rd, Cumming, Georgia, 30040-2744, United States",
+      "lat": 34.1883591,
+      "lng": -84.1373327,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5805 State Bridge Rd, Duluth, Georgia, 30097-8220, United States",
+      "lat": 34.0167563,
+      "lng": -84.18637059999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5829 Campbellton Rd SW, Atlanta, Georgia, 30331-8037, United States",
+      "lat": 33.7015683,
+      "lng": -84.5785209,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5885 Cumming Hwy, Buford, Georgia, 30518-5765, United States",
+      "lat": 34.1192187,
+      "lng": -84.07555479999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "5900 Spout Springs Rd, Flowery Branch, Georgia, 30542-6448, United States",
+      "lat": 34.1764286,
+      "lng": -83.91123329999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "595 Piedmont Ave NE, Atlanta, Georgia, 30308-2478, United States",
+      "lat": 33.7708702,
+      "lng": -84.3811193,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6015 Watson Blvd, Byron, Georgia, 31008-6650, United States",
+      "lat": 32.6124123,
+      "lng": -83.7145056,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6110 Cedarcrest Rd NW, Acworth, Georgia, 30101-9539, United States",
+      "lat": 34.0641511,
+      "lng": -84.7264953,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6175 Hickory Flat Hwy, Canton, Georgia, 30115-7207, United States",
+      "lat": 34.1780789,
+      "lng": -84.41818660000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6236 Old Highway 5, Woodstock, Georgia, 30188, United States",
+      "lat": 34.130167,
+      "lng": -84.4995909,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6350 Lake Oconee Pkwy, Greensboro, Georgia, 30642-6434, United States",
+      "lat": 33.4556746,
+      "lng": -83.2446623,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "6901 Ray Wright Way, Columbus, Georgia, 31820, United States",
+      "lat": 32.5465488,
+      "lng": -84.8745532,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "710 Dacula Rd, Dacula, Georgia, 30019-7061, United States",
+      "lat": 34.0021633,
+      "lng": -83.9120239,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "7736 Spalding Dr NW, Peachtree Corners, Georgia, 30092-4207, United States",
+      "lat": 33.968615,
+      "lng": -84.260885,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "7953 Villa Rica Hwy, Dallas, Georgia, 30157-8619, United States",
+      "lat": 33.8090451,
+      "lng": -84.88610910000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "8080 Wells St, Senoia, Georgia, 30276-1905, United States",
+      "lat": 33.29524200000001,
+      "lng": -84.5439336,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "8132 Veterans Pkwy, Columbus, Georgia, 31909-1802, United States",
+      "lat": 32.5660725,
+      "lng": -84.9329578,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "831 Auburn Rd, Dacula, Georgia, 30019-5434, United States",
+      "lat": 34.0310375,
+      "lng": -83.8870525,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "840 Glynn St S, Fayetteville, Georgia, 30214-2031, United States",
+      "lat": 33.4309007,
+      "lng": -84.45429639999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "8725 Roswell Rd, Atlanta, Georgia, 30350-7533, United States",
+      "lat": 33.9946518,
+      "lng": -84.3501648,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "879 Dawsonville Hwy, Gainesville, Georgia, 30501-2616, United States",
+      "lat": 34.2965358,
+      "lng": -83.8597276,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "885 Woodstock Rd, Roswell, Georgia, 30075-2277, United States",
+      "lat": 34.0610096,
+      "lng": -84.3847588,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "900 Pavillion Pkwy, Monroe, Georgia, 30656-5011, United States",
+      "lat": 33.805647,
+      "lng": -83.73186670000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "905 Memorial Dr SE, Atlanta, Georgia, 30316-1434, United States",
+      "lat": 33.7451036,
+      "lng": -84.3569844,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "909 Eagles Landing Pkwy, Stockbridge, Georgia, 30281, United States",
+      "lat": 33.5103677,
+      "lng": -84.219893,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "911 Duluth Hwy, Lawrenceville, Georgia, 30043-5398, United States",
+      "lat": 33.9690572,
+      "lng": -84.02367799999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "916 Loganville Hwy, Bethlehem, Georgia, 30620-2144, United States",
+      "lat": 33.942756,
+      "lng": -83.7524489,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "920 Highway 81 E, McDonough, Georgia, 30252, United States",
+      "lat": 33.4371524,
+      "lng": -84.1213314,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "930 New Hope Rd, Lawrenceville, Georgia, 30045-6407, United States",
+      "lat": 33.9347009,
+      "lng": -83.9563998,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "950 W Peachtree St NW, Atlanta, Georgia, 30309-3846, United States",
+      "lat": 33.7802404,
+      "lng": -84.3882075,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "952 Harbins Rd SE, Dacula, Georgia, 30019-2408, United States",
+      "lat": 33.9688648,
+      "lng": -83.88621,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "980 Birmingham Rd, Alpharetta, Georgia, 30004-4417, United States",
+      "lat": 34.1667448,
+      "lng": -84.3315257,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "9925 Haynes Bridge Rd, Alpharetta, Georgia, 30022-8532, United States",
+      "lat": 34.0231649,
+      "lng": -84.26754969999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "Bass Rd, Macon, Georgia, 31210, United States",
+      "lat": 32.908273,
+      "lng": -83.7454852,
+      "country": "US"
+    },
+    {
+      "name": "Publix Atlanta",
+      "address": "Kennesaw, Georgia, 30152, United States",
+      "lat": 34.0234337,
+      "lng": -84.6154897,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2816 Washington Rd, Augusta, Georgia, 30909-2199, United States",
+      "lat": 33.5079384,
+      "lng": -82.0311535,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3775 Battlefield Pkwy, Ringgold, Georgia, 30736-8339, United States",
+      "lat": 34.9381274,
+      "lng": -85.2038948,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4274 Washington Rd, Evans, Georgia, 30809-3348, United States",
+      "lat": 33.5334367,
+      "lng": -82.1276699,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5119 Washington Rd, Evans, Georgia, 30809-6445, United States",
+      "lat": 33.5735106,
+      "lng": -82.19336969999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "101 Blue Moon Xing, Pooler, Georgia, 31322-9797, United States",
+      "lat": 32.0792195,
+      "lng": -81.28468409999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "101 Tormenta Way, Statesboro, Georgia, 30458-5697, United States",
+      "lat": 32.4117628,
+      "lng": -81.7944675,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11701 Abercorn St, Savannah, Georgia, 31419-1905, United States",
+      "lat": 31.9813335,
+      "lng": -81.15210259999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1212 US Highway 19 S, Leesburg, Georgia, 31763, United States",
+      "lat": 31.6556438,
+      "lng": -84.17549439999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1329 Peterson Ave S, Douglas, Georgia, 31533, United States",
+      "lat": 31.4897487,
+      "lng": -82.8526983,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "13775 US-19 S, Thomasville, Georgia, 31792-5398, United States",
+      "lat": 30.8376485,
+      "lng": -83.94647479999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1435 E Oglethorpe Hwy, Hinesville, Georgia, 31313, United States",
+      "lat": 31.8563221,
+      "lng": -81.57125839999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "155 Johnny Mercer Blvd, Savannah, Georgia, 31410-2118, United States",
+      "lat": 32.0138329,
+      "lng": -80.9873099,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1601 E King Ave, Kingsland, Georgia, 31548-6500, United States",
+      "lat": 30.7848951,
+      "lng": -81.6359204,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "171 Village at Glynn Pl, Brunswick, Georgia, 31525-1988, United States",
+      "lat": 31.2132791,
+      "lng": -81.4822349,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1741 Gornto Rd, Valdosta, Georgia, 31601-8408, United States",
+      "lat": 30.8456653,
+      "lng": -83.3228381,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2715 Dawson Rd, Albany, Georgia, 31707-1673, United States",
+      "lat": 31.6213111,
+      "lng": -84.2233512,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3330 Inner Perimeter Rd, Valdosta, Georgia, 31602, United States",
+      "lat": 30.8809053,
+      "lng": -83.2849663,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "378 Veterans Pkwy N, Moultrie, Georgia, 31788-4171, United States",
+      "lat": 31.1866818,
+      "lng": -83.76004189999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "458 Virginia Ave N, Tifton, Georgia, 31794-4200, United States",
+      "lat": 31.460564,
+      "lng": -83.5285086,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "467 Pooler Pkwy, Pooler, Georgia, 31322-5102, United States",
+      "lat": 32.1351571,
+      "lng": -81.25110889999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5500 Abercorn St, Savannah, Georgia, 31405-6913, United States",
+      "lat": 32.023691,
+      "lng": -81.1089192,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7936 GA Highway 21, Port Wentworth, Georgia, 31407-9720, United States",
+      "lat": 32.2259946,
+      "lng": -81.1945835,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "GA-144, Richmond Hill, Georgia, 31324-7343, United States",
+      "lat": 31.9329884,
+      "lng": -81.2990046,
+      "country": "US"
+    },
+    {
+      "name": "Super Carniceria Jalisco",
+      "address": "7131 Peachtree Industrial Blvd, Peachtree Corners, Georgia, 30092-5748, United States",
+      "lat": 33.9319692,
+      "lng": -84.26450539999999,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Jalisco",
+      "address": "10390 Alpharetta St, Roswell, Georgia, 30075-3745, United States",
+      "lat": 34.0355201,
+      "lng": -84.34713909999999,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Jalisco",
+      "address": "2175 Beaver Ruin Rd NW, Norcross, Georgia, 30071-3339, United States",
+      "lat": 33.9350158,
+      "lng": -84.1837887,
+      "country": "US"
+    },
+    {
+      "name": "Tienda Y Carniceria Santa Cruz",
+      "address": "421 N Central Ave, Hapeville, Georgia, 30354-1602, United States",
+      "lat": 33.6559852,
+      "lng": -84.4025541,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "101 Market Place Blvd, Cartersville, Georgia, 30121-2236, United States",
+      "lat": 34.20292269999999,
+      "lng": -84.78750430000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1025 Bullsboro Dr, Newnan, Georgia, 30265-6800, United States",
+      "lat": 33.3938388,
+      "lng": -84.7437032,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1100 Old Philadelphia Rd, Jasper, Georgia, 30143-4045, United States",
+      "lat": 34.4762095,
+      "lng": -84.4601285,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "125 Pavilion Pkwy, Fayetteville, Georgia, 30214-4098, United States",
+      "lat": 33.4811325,
+      "lng": -84.44319109999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1400 Hudson Bridge Rd, Stockbridge, Georgia, 30281, United States",
+      "lat": 33.5071874,
+      "lng": -84.23491899999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1400 Lawrenceville Hwy, Lawrenceville, Georgia, 30044-2035, United States",
+      "lat": 33.9367545,
+      "lng": -84.025249,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "147 Northside Dr E, Statesboro, Georgia, 30458-4760, United States",
+      "lat": 32.4340919,
+      "lng": -81.75973119999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "150 Altama Connector, Brunswick, Georgia, 31525-2203, United States",
+      "lat": 31.2127903,
+      "lng": -81.48548439999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1500 Market Place Blvd, Cumming, Georgia, 30041-6060, United States",
+      "lat": 34.183745,
+      "lng": -84.1291662,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1550 Riverstone Pkwy, Canton, Georgia, 30114-2918, United States",
+      "lat": 34.2554412,
+      "lng": -84.4612303,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "160 Pooler Pkwy, Pooler, Georgia, 31322, United States",
+      "lat": 32.1435035,
+      "lng": -81.24377109999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1735 S Highway 27, Carrollton, Georgia, 30117-8941, United States",
+      "lat": 33.54325130000001,
+      "lng": -85.0774019,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1785 Cobb Pkwy S, Marietta, Georgia, 30060-9288, United States",
+      "lat": 33.909961,
+      "lng": -84.4886219,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1871 Chamblee Tucker Rd, Chamblee, Georgia, 30341-2751, United States",
+      "lat": 33.8885441,
+      "lng": -84.31146269999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "250 Furniture Dr, Cornelia, Georgia, 30531-54ND, United States",
+      "lat": 34.5365291,
+      "lng": -83.53183949999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2510 Redmond Cir NW, Rome, Georgia, 30165-1913, United States",
+      "lat": 34.275477,
+      "lng": -85.2300289,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2545 E Walnut Ave, Dalton, Georgia, 30721-8792, United States",
+      "lat": 34.7677977,
+      "lng": -84.9300324,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2592 N Columbia St, Milledgeville, Georgia, 31061-8709, United States",
+      "lat": 33.1159792,
+      "lng": -83.2656536,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "260 Bobby Jones Expy, Augusta, Georgia, 30907, United States",
+      "lat": 33.5048605,
+      "lng": -82.0859917,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2909 Austell Rd SW, Marietta, Georgia, 30008-6845, United States",
+      "lat": 33.8821598,
+      "lng": -84.58672609999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3009 Russell Pkwy, Warner Robins, Georgia, 31088-8657, United States",
+      "lat": 32.5803918,
+      "lng": -83.69633139999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3059 Lawrenceville Hwy, Lawrenceville, Georgia, 30044-6426, United States",
+      "lat": 33.9222974,
+      "lng": -84.0855257,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3201 Tucker Norcross Rd, Tucker, Georgia, 30084-2150, United States",
+      "lat": 33.8831978,
+      "lng": -84.2189872,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3338 Wrightsboro Rd, Augusta, Georgia, 30909, United States",
+      "lat": 33.4667506,
+      "lng": -82.0702776,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "340 Norman Dr, Valdosta, Georgia, 31601-7713, United States",
+      "lat": 30.8259504,
+      "lng": -83.3195459,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3435 Centerville Hwy, Snellville, Georgia, 30039-6117, United States",
+      "lat": 33.8080837,
+      "lng": -84.0466434,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "349 Brampton Ave, Statesboro, Georgia, 30458-0832, United States",
+      "lat": 32.4121337,
+      "lng": -81.76801739999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3795 Buford Dr, Buford, Georgia, 30519-4906, United States",
+      "lat": 34.0888296,
+      "lng": -83.9899676,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3875 Mundy Mill Rd, Oakwood, Georgia, 30566-3404, United States",
+      "lat": 34.2313788,
+      "lng": -83.87481460000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4004 Lawrenceville Hwy NW, Lilburn, Georgia, 30047, United States",
+      "lat": 33.9030698,
+      "lng": -84.1101959,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4166 Jimmy Lee Smith Pkwy, Hiram, Georgia, 30141-2645, United States",
+      "lat": 33.8907929,
+      "lng": -84.7588122,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4375 Lawrenceville Hwy, Tucker, Georgia, 30084-3702, United States",
+      "lat": 33.8556184,
+      "lng": -84.2053167,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4975 Jimmy Carter Blvd, Norcross, Georgia, 30093-3520, United States",
+      "lat": 33.8948772,
+      "lng": -84.1941591,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5025 Winters Chapel Rd, Atlanta, Georgia, 30360-1700, United States",
+      "lat": 33.9423627,
+      "lng": -84.2695243,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5455 Atlanta Hwy, Alpharetta, Georgia, 30004-2928, United States",
+      "lat": 34.1503425,
+      "lng": -84.2493746,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6065 Jonesboro Rd, Morrow, Georgia, 30260-1168, United States",
+      "lat": 33.5896044,
+      "lng": -84.3402369,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "641 Veterans Pkwy S, Moultrie, Georgia, 31788-8842, United States",
+      "lat": 31.170245,
+      "lng": -83.75841299999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6520 Ernest W Barrett Pkwy SW, Marietta, Georgia, 30064, United States",
+      "lat": 33.867374,
+      "lng": -84.6362702,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7050 Highway 85, Riverdale, Georgia, 30274-2981, United States",
+      "lat": 33.5626206,
+      "lng": -84.4103725,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "835 Martin Luther King Jr Dr NW, Atlanta, Georgia, 30314, United States",
+      "lat": 33.7558951,
+      "lng": -84.41357339999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "970 Mansell Rd, Roswell, Georgia, 30076-1506, United States",
+      "lat": 34.0452521,
+      "lng": -84.3334824,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "98 Power Center Dr, Dawsonville, Georgia, 30534-9431, United States",
+      "lat": 34.3551212,
+      "lng": -84.0415233,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "98 W Walnut Ave, Dalton, Georgia, 30720-8477, United States",
+      "lat": 34.7626169,
+      "lng": -84.9686689,
+      "country": "US"
+    }
+  ]
+}

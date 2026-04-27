@@ -1,0 +1,419 @@
+{
+  "state_code": "WA",
+  "count": 59,
+  "stores": [
+    {
+      "name": "Greenbank Pantry Greenbank",
+      "address": "25175 State Route 525, Greenbank, Washington, 98253-6253, United States",
+      "lat": 48.0991253,
+      "lng": -122.5739627,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "10006 S Tacoma Way, Lakewood, Washington, 98499-4613, United States",
+      "lat": 47.16626489999999,
+      "lng": -122.4841238,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "10008 Aurora Ave N, Seattle, Washington, 98133, United States",
+      "lat": 47.702627,
+      "lng": -122.3425392,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "10426 16th Ave SW, Seattle, Washington, 98146-1475, United States",
+      "lat": 47.5091876,
+      "lng": -122.354722,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "10616 16th Ave SW, Seattle, Washington, 98146-2076, United States",
+      "lat": 47.5080015,
+      "lng": -122.3542423,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "110 Summit Ave E, Seattle, Washington, 98102-5676, United States",
+      "lat": 47.6188374,
+      "lng": -122.3249764,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "118 W Main St, Monroe, Washington, 98272-1810, United States",
+      "lat": 47.8552066,
+      "lng": -121.9715516,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1301 E Sunset Dr, Bellingham, Washington, 98226-5638, United States",
+      "lat": 48.77379450000001,
+      "lng": -122.456991,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "13322 Pacific Ave S, Tacoma, Washington, 98444-4864, United States",
+      "lat": 47.13579559999999,
+      "lng": -122.4361383,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "13515 Ambaum Blvd SW, Seattle, Washington, 98146-3169, United States",
+      "lat": 47.4816361,
+      "lng": -122.348783,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "13739 Roosevelt Rd SE, Monroe, Washington, 98272-2811, United States",
+      "lat": 47.8727094,
+      "lng": -122.0067941,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1420 Bickford Ave, Snohomish, Washington, 98290-1722, United States",
+      "lat": 47.92979649999999,
+      "lng": -122.1007917,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1513 W Meeker St, Kent, Washington, 98032-4395, United States",
+      "lat": 47.38152059999999,
+      "lng": -122.2541015,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1537 Duvall Ave NE, Renton, Washington, 98059-3921, United States",
+      "lat": 47.5059567,
+      "lng": -122.156985,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "15423 SE 17th St, Bellevue, Washington, 98007-6114, United States",
+      "lat": 47.5952129,
+      "lng": -122.1337887,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1600 SW 312th St, Federal Way, Washington, 98023-4407, United States",
+      "lat": 47.3228825,
+      "lng": -122.3553411,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "16260 Redmond Way, Redmond, Washington, 98052-1504, United States",
+      "lat": 47.6746108,
+      "lng": -122.1233066,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1627 Freeway Dr, Mt Vernon, Washington, 98273-2431, United States",
+      "lat": 48.4355353,
+      "lng": -122.3438581,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "16410 84th St NE, Lake Stevens, Washington, 98258-9060, United States",
+      "lat": 48.016652,
+      "lng": -122.036616,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1650 SW Dash Point Rd, Federal Way, Washington, 98023, United States",
+      "lat": 47.3225395,
+      "lng": -122.3564237,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1702 Auburn Way N, Auburn, Washington, 98002-3372, United States",
+      "lat": 47.3237548,
+      "lng": -122.2204029,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "17917 Bothell Everett Hwy, Bothell, Washington, 98012-6379, United States",
+      "lat": 47.8353152,
+      "lng": -122.2099334,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "1807 Howard Rd, Auburn, Washington, 98002, United States",
+      "lat": 47.29278,
+      "lng": -122.2127942,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "2101 6th St, Bremerton, Washington, 98312-3945, United States",
+      "lat": 47.5670172,
+      "lng": -122.6468528,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "2323 E Section St, Mt Vernon, Washington, 98274-6040, United States",
+      "lat": 48.4141874,
+      "lng": -122.3125214,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "24823 Pacific Hwy S, Kent, Washington, 98032-5478, United States",
+      "lat": 47.3778073,
+      "lng": -122.2997456,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "25928 104th Ave SE, Kent, Washington, 98030-7606, United States",
+      "lat": 47.3693606,
+      "lng": -122.2006045,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "2615 W Casino Rd, Everett, Washington, 98204-1490, United States",
+      "lat": 47.9205206,
+      "lng": -122.2700999,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "27202 Pacific Hwy S, Federal Way, Washington, 98003-6998, United States",
+      "lat": 47.35765670000001,
+      "lng": -122.3088118,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "28855 Military Rd S, Federal Way, Washington, 98003-7912, United States",
+      "lat": 47.3419106,
+      "lng": -122.3021597,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "2900 Wheaton Way, Bremerton, Washington, 98310-3452, United States",
+      "lat": 47.5896037,
+      "lng": -122.6276992,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "3002 NE Sunset Blvd, Renton, Washington, 98056-3102, United States",
+      "lat": 47.5028333,
+      "lng": -122.1781661,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "31009 Pacific Hwy S, Federal Way, Washington, 98003-4903, United States",
+      "lat": 47.32340840000001,
+      "lng": -122.3153754,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "31855 Pacific Hwy S, Federal Way, Washington, 98003-5409, United States",
+      "lat": 47.3155143,
+      "lng": -122.3139288,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "32199 State Route 20, Oak Harbor, Washington, 98277-3774, United States",
+      "lat": 48.2979619,
+      "lng": -122.6569512,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "3700 NE 4th St, Renton, Washington, 98056-4132, United States",
+      "lat": 47.4887785,
+      "lng": -122.1691386,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "6966 Coal Creek Pkwy SE, Newcastle, Washington, 98059-3137, United States",
+      "lat": 47.5380678,
+      "lng": -122.1656674,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "720 Lind Ave SW, Renton, Washington, 98057-2305, United States",
+      "lat": 47.473211,
+      "lng": -122.222503,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "8247 Guide Meridian Rd, Lynden, Washington, 98264-9739, United States",
+      "lat": 48.9406733,
+      "lng": -122.4858713,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "North Creek Trl, Bothell, Washington, 98012, United States",
+      "lat": 47.8190637,
+      "lng": -122.2254878,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "Renton, Washington, 98057, United States",
+      "lat": 47.49427379999999,
+      "lng": -122.2081419,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1005 N Stratford Rd, Moses Lake, Washington, 98837-3512, United States",
+      "lat": 47.1409963,
+      "lng": -119.2747604,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "108 Apple Blossom Dr, Chelan, Washington, 98816-8810, United States",
+      "lat": 47.8425563,
+      "lng": -119.9875855,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1399 Nat Washington Way, Ephrata, Washington, 98823-2629, United States",
+      "lat": 47.30370079999999,
+      "lng": -119.5407543,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "15063 Main St, Bellevue, Washington, 98007-5225, United States",
+      "lat": 47.6089024,
+      "lng": -122.1394698,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1600 E Chestnut Ave, Yakima, Washington, 98901-2174, United States",
+      "lat": 46.6014789,
+      "lng": -120.4803139,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "16502 Meridian E, Puyallup, Washington, 98375-2515, United States",
+      "lat": 47.1058077,
+      "lng": -122.2972914,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1700 SE Meadowbrook Blvd, College Place, Washington, 99324-1798, United States",
+      "lat": 46.03286620000001,
+      "lng": -118.3834634,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "17100 State Route 507 SE, Yelm, Washington, 98597-7605, United States",
+      "lat": 46.9346115,
+      "lng": -122.577686,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1860 E Main St, Othello, Washington, 99344-1578, United States",
+      "lat": 46.8241656,
+      "lng": -119.1479428,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1900 S 314th St, Federal Way, Washington, 98003-5622, United States",
+      "lat": 47.321731,
+      "lng": -122.3097863,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2301 Freeway Dr, Mt Vernon, Washington, 98273-5445, United States",
+      "lat": 48.44164900000001,
+      "lng": -122.3462924,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2675 E Lincoln Ave, Sunnyside, Washington, 98944-2485, United States",
+      "lat": 46.3149964,
+      "lng": -119.986053,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2801 Duportail St, Richland, Washington, 99352-9107, United States",
+      "lat": 46.255982,
+      "lng": -119.3078909,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "306 5th St, Clarkston, Washington, 99403-1860, United States",
+      "lat": 46.4228537,
+      "lng": -117.04943,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4820 N Road 68, Pasco, Washington, 99301, United States",
+      "lat": 46.271985,
+      "lng": -119.1881967,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7001 Bridgeport Way W, Lakewood, Washington, 98499-8099, United States",
+      "lat": 47.1938848,
+      "lng": -122.5183888,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "902 Engh Rd, Omak, Washington, 98841, United States",
+      "lat": 48.4145581,
+      "lng": -119.5094954,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9212 N Colton St, Spokane, Washington, 99218, United States",
+      "lat": 47.7419117,
+      "lng": -117.4019992,
+      "country": "US"
+    }
+  ]
+}

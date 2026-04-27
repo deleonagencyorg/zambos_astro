@@ -1,0 +1,406 @@
+{
+  "state_code": "MI",
+  "count": 50,
+  "stores": [
+    {
+      "name": "Carnival",
+      "address": "1101 E Walton Blvd, Pontiac, Michigan, 48340-1590, United States",
+      "zip": "48340",
+      "lat": 42.6786318,
+      "lng": -83.2596603,
+      "country": "US"
+    },
+    {
+      "name": "E & L",
+      "address": "6000 W Vernor Hwy, Detroit, Michigan, 48209-2060, United States",
+      "zip": "48209",
+      "lat": 42.3162551,
+      "lng": -83.1056524,
+      "country": "US"
+    },
+    {
+      "name": "Garden Fresh",
+      "address": "6680 Michigan Ave, Detroit, Michigan, 48210-2826, United States",
+      "zip": "48210",
+      "lat": 42.3314622,
+      "lng": -83.12616779999999,
+      "country": "US"
+    },
+    {
+      "name": "Horrocks",
+      "address": "4455 Breton Rd SE, Kentwood, Michigan, 49508, United States",
+      "zip": "49508",
+      "lat": 42.8810407,
+      "lng": -85.607686,
+      "country": "US"
+    },
+    {
+      "name": "Horrocks",
+      "address": "7420 W Saginaw Hwy, Lansing, Michigan, 48917-1104, United States",
+      "zip": "48917",
+      "lat": 42.74190429999999,
+      "lng": -84.6610298,
+      "country": "US"
+    },
+    {
+      "name": "La Azteca",
+      "address": "2411 Central St, Detroit, Michigan, 48209-1111, United States",
+      "zip": "48209",
+      "lat": 42.3136043,
+      "lng": -83.1254635,
+      "country": "US"
+    },
+    {
+      "name": "La Fiesta",
+      "address": "7403 W Vernor Hwy, Detroit, Michigan, 48209-1511, United States",
+      "zip": "48209",
+      "lat": 42.3134682,
+      "lng": -83.1216701,
+      "country": "US"
+    },
+    {
+      "name": "La Jalisciense",
+      "address": "3923 W Vernor Hwy, Detroit, Michigan, 48216, United States",
+      "zip": "48216",
+      "lat": 42.3218472,
+      "lng": -83.0910531,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Detroit",
+      "address": "15055 Hall Rd, Utica, Michigan, 48315-6206, United States",
+      "zip": "15055",
+      "lat": 42.6300019,
+      "lng": -82.97656429999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Detroit",
+      "address": "30800 Little Mack Ave, Roseville, Michigan, 48066-1700, United States",
+      "zip": "30800",
+      "lat": 42.5245458,
+      "lng": -82.9083,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Detroit",
+      "address": "40445 S Groesbeck Hwy, Clinton Twp, Michigan, 48036-5005, United States",
+      "zip": "40445",
+      "lat": 42.5975129,
+      "lng": -82.90363529999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Grand Rapids",
+      "address": "1997 E Beltline Ave NE, Grand Rapids, Michigan, 49525-4545, United States",
+      "zip": "49525",
+      "lat": 42.9968284,
+      "lng": -85.5941207,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Grand Rapids",
+      "address": "2799 10 Mile Rd NE, Rockford, Michigan, 49341-9100, United States",
+      "zip": "49341",
+      "lat": 43.1200305,
+      "lng": -85.6013193,
+      "country": "US"
+    },
+    {
+      "name": "Meijer East Grand Rapids",
+      "address": "5531 28th St SE, Grand Rapids, Michigan, 49512-2053, United States",
+      "zip": "49512",
+      "lat": 42.9135862,
+      "lng": -85.53197689999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Fint",
+      "address": "2333 S Center Rd, Burton, Michigan, 48519-1147, United States",
+      "zip": "48519",
+      "lat": 42.9937913,
+      "lng": -83.63050989999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Fint",
+      "address": "2980 Wilder Rd, Bay City, Michigan, 48706-9213, United States",
+      "zip": "48706",
+      "lat": 43.6212692,
+      "lng": -83.93407549999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Fint",
+      "address": "8400 Gratiot Rd, Saginaw, Michigan, 48609-4804, United States",
+      "zip": "48609",
+      "lat": 43.4182491,
+      "lng": -84.0795905,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Grand Traverse",
+      "address": "Traverse City, Michigan, 49684, United States",
+      "zip": "49684",
+      "lat": 44.7628849,
+      "lng": -85.6210036,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Kalamazoo",
+      "address": "5121 S Westnedge Ave, Portage, Michigan, 49002-0404, United States",
+      "zip": "49002",
+      "lat": 42.2421406,
+      "lng": -85.5875781,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Kalamazoo",
+      "address": "6405 B Dr N, Battle Creek, Michigan, 49014-7573, United States",
+      "zip": "49014",
+      "lat": 42.2634634,
+      "lng": -85.1729441,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Kalamazoo",
+      "address": "8850 Shaver Rd, Portage, Michigan, 49024-6155, United States",
+      "zip": "49024",
+      "lat": 42.1887509,
+      "lng": -85.603923,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Lakeshore",
+      "address": "5326 Harvey St, Muskegon, Michigan, 49444-6716, United States",
+      "zip": "49444",
+      "lat": 43.1555876,
+      "lng": -86.2051015,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Lansing",
+      "address": "12821 Crossover Dr, Dewitt, Michigan, 48820-7993, United States",
+      "zip": "12821",
+      "lat": 42.8290916,
+      "lng": -84.5370904,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Lansing",
+      "address": "2055 W Grand River Ave, Okemos, Michigan, 48864-1706, United States",
+      "zip": "48864",
+      "lat": 42.7190952,
+      "lng": -84.4247377,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Lansing",
+      "address": "E Saginaw Hwy, Grand Ledge, Michigan, 48837, United States",
+      "zip": "48837",
+      "lat": 42.7408238,
+      "lng": -84.7427813,
+      "country": "US"
+    },
+    {
+      "name": "Meijer North Detroit",
+      "address": "800 Brown Rd, Auburn Hills, Michigan, 48326-1309, United States",
+      "zip": "48326",
+      "lat": 42.7056827,
+      "lng": -83.28715249999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Detroit",
+      "address": "14640 Pardee Rd, Taylor, Michigan, 48180-4739, United States",
+      "zip": "14640",
+      "lat": 42.20038599999999,
+      "lng": -83.2606364,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Detroit",
+      "address": "3710 Dix Hwy, Lincoln Park, Michigan, 48146-3807, United States",
+      "zip": "48146",
+      "lat": 42.2318756,
+      "lng": -83.1960466,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Detroit",
+      "address": "37201 Warren Rd, Westland, Michigan, 48185-2025, United States",
+      "zip": "37201",
+      "lat": 42.332792,
+      "lng": -83.4063113,
+      "country": "US"
+    },
+    {
+      "name": "Meijer West Detroit",
+      "address": "4200 Highland Rd, Waterford, Michigan, 48328-2137, United States",
+      "zip": "48328",
+      "lat": 42.6532039,
+      "lng": -83.3689217,
+      "country": "US"
+    },
+    {
+      "name": "Meijer West Detroit",
+      "address": "45001 Ford Rd, Canton, Michigan, 48187-2907, United States",
+      "zip": "45001",
+      "lat": 42.3201326,
+      "lng": -83.4850246,
+      "country": "US"
+    },
+    {
+      "name": "Meijer West Detroit",
+      "address": "8650 W Grand River Ave, Brighton, Michigan, 48116-2399, United States",
+      "zip": "48116",
+      "lat": 42.5388888,
+      "lng": -83.7882845,
+      "country": "US"
+    },
+    {
+      "name": "Meijer West Grand Rapids",
+      "address": "405 Seward Ave NW, Grand Rapids, Michigan, 49504-5556, United States",
+      "zip": "49504",
+      "lat": 42.9716133,
+      "lng": -85.6832142,
+      "country": "US"
+    },
+    {
+      "name": "Meijer West Grand Rapids",
+      "address": "550 Baldwin St, Jenison, Michigan, 49428-9753, United States",
+      "zip": "49428",
+      "lat": 42.904749,
+      "lng": -85.79357139999999,
+      "country": "US"
+    },
+    {
+      "name": "Princey Valley",
+      "address": "5931 Michigan Ave, Detroit, Michigan, 48210-3044, United States",
+      "zip": "48210",
+      "lat": 42.3303466,
+      "lng": -83.1160572,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "19 S State St, Hart, Michigan, 49420-1122, United States",
+      "zip": "49420",
+      "lat": 43.7026619,
+      "lng": -86.36373329999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5597 Linsdale St, Detroit, Michigan, 48204-3603, United States",
+      "zip": "48204",
+      "lat": 42.3580822,
+      "lng": -83.1322405,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "1249 Baldwin Ave, Pontiac, Michigan, 48340-1909, United States",
+      "zip": "48340",
+      "lat": 42.6712855,
+      "lng": -83.30168259999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1400 Mall Dr, Benton Harbor, Michigan, 49022-2325, United States",
+      "zip": "49022",
+      "lat": 42.0773699,
+      "lng": -86.42537399999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "14900 Dix Toledo Rd, Southgate, Michigan, 48195-2580, United States",
+      "zip": "14900",
+      "lat": 42.2016353,
+      "lng": -83.2107626,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1500 S Centerville Rd, Sturgis, Michigan, 49091-8245, United States",
+      "zip": "49091",
+      "lat": 41.7829766,
+      "lng": -85.424723,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "201 73rd St, South Haven, Michigan, 49090-7907, United States",
+      "zip": "49090",
+      "lat": 42.40660829999999,
+      "lng": -86.2472861,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2150 N Telegraph Rd, Monroe, Michigan, 48162-8901, United States",
+      "zip": "48162",
+      "lat": 41.9516162,
+      "lng": -83.395784,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3285 Henry St, Muskegon, Michigan, 49441-4019, United States",
+      "zip": "49441",
+      "lat": 43.1929305,
+      "lng": -86.2669636,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3999 Alpine Ave NW, Comstock Park, Michigan, 49321-8350, United States",
+      "zip": "49321",
+      "lat": 43.0364294,
+      "lng": -85.6942734,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "412 Oaks Xing, Plainwell, Michigan, 49080-1900, United States",
+      "zip": "49080",
+      "lat": 42.4478885,
+      "lng": -85.6726334,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "501 N 9th St, Kalamazoo, Michigan, 49009-6594, United States",
+      "zip": "49009",
+      "lat": 42.2930894,
+      "lng": -85.68583319999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5825 Brockway Rd, Saginaw, Michigan, 48638-4474, United States",
+      "zip": "48638",
+      "lat": 43.4336874,
+      "lng": -84.0309513,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "621 E Lake St, Tawas City, Michigan, 48763-9213, United States",
+      "zip": "48763",
+      "lat": 44.2777563,
+      "lng": -83.5043307,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7555 Telegraph Rd, Taylor, Michigan, 48180-2239, United States",
+      "zip": "48180",
+      "lat": 42.2536373,
+      "lng": -83.2658271,
+      "country": "US"
+    }
+  ]
+}

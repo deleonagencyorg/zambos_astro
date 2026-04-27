@@ -25,7 +25,6 @@
     "Step 3: Add the ingredients inside the Zambos package, add the cabbage, the meat, and the pickled onion.",
     "Step 4: Pour in pink dressing to taste."
   ],
-  "brand": [
-    "zambos"
-  ]
+  "brand": ["zambos"],
+  "products": ["zambos-chile-limon"]
 }

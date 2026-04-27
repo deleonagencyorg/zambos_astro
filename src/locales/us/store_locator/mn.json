@@ -1,0 +1,342 @@
+{
+  "state_code": "MN",
+  "count": 48,
+  "stores": [
+    {
+      "name": "Abarrotes La Doña",
+      "address": "1200 Robert St S, St Paul, Minnesota, 55118-2308, United States",
+      "lat": 44.9096779,
+      "lng": -93.07992709999999,
+      "country": "US"
+    },
+    {
+      "name": "Alborada Market",
+      "address": "1855 E Lake St, Minneapolis, Minnesota, 55407-1859, United States",
+      "lat": 44.9480995,
+      "lng": -93.2453737,
+      "country": "US"
+    },
+    {
+      "name": "Bodega",
+      "address": "6999 152nd St W, Apple Valley, Minnesota, 55124, United States",
+      "lat": 44.7293495,
+      "lng": -93.207045,
+      "country": "US"
+    },
+    {
+      "name": "By More Supermercado",
+      "address": "857 Payne Ave, St Paul, Minnesota, 55130-4154, United States",
+      "lat": 44.9671906,
+      "lng": -93.0739139,
+      "country": "US"
+    },
+    {
+      "name": "Centromex Supermercado",
+      "address": "816 7th St E, St Paul, Minnesota, 55106-5017, United States",
+      "lat": 44.96154600000001,
+      "lng": -93.0661526,
+      "country": "US"
+    },
+    {
+      "name": "Colonial Market",
+      "address": "2750 Nicollet Ave S, Minneapolis, Minnesota, 55408-1630, United States",
+      "lat": 44.9521681,
+      "lng": -93.27836459999999,
+      "country": "US"
+    },
+    {
+      "name": "El Burrito Mercado",
+      "address": "175 Cesar Chavez St, St Paul, Minnesota, 55107-3395, United States",
+      "lat": 44.9299469,
+      "lng": -93.0775094,
+      "country": "US"
+    },
+    {
+      "name": "El Destino Market",
+      "address": "1834 Oakdale Ave, St Paul, Minnesota, 55118-4601, United States",
+      "lat": 44.891162,
+      "lng": -93.0699463,
+      "country": "US"
+    },
+    {
+      "name": "El Hornito Super Mercado",
+      "address": "7982 Brooklyn Blvd, Minneapolis, Minnesota, 55445-2722, United States",
+      "lat": 45.0955741,
+      "lng": -93.3756531,
+      "country": "US"
+    },
+    {
+      "name": "Estrella Supermarket",
+      "address": "9070 Lyndale Ave S, Bloomington, Minnesota, 55420-3521, United States",
+      "lat": 44.83905559999999,
+      "lng": -93.2891758,
+      "country": "US"
+    },
+    {
+      "name": "Hidalgo",
+      "address": "12641 Nicollet Ave, Burnsville, Minnesota, 55337-2862, United States",
+      "lat": 44.7734566,
+      "lng": -93.2762422,
+      "country": "US"
+    },
+    {
+      "name": "Hidalgo",
+      "address": "14851 Granada Ave, Apple Valley, Minnesota, 55124-7424, United States",
+      "lat": 44.7342905,
+      "lng": -93.2218315,
+      "country": "US"
+    },
+    {
+      "name": "La Casa Market",
+      "address": "3733 Nicollet Ave, Minneapolis, Minnesota, 55409-1236, United States",
+      "lat": 44.93477120000001,
+      "lng": -93.2775623,
+      "country": "US"
+    },
+    {
+      "name": "La Merced Super Mercado",
+      "address": "1533 5th Ave S, South St Paul, Minnesota, 55075-3453, United States",
+      "lat": 44.8643888,
+      "lng": -93.0394424,
+      "country": "US"
+    },
+    {
+      "name": "La Vaquita",
+      "address": "607 E 77th St, Minneapolis, Minnesota, 55423-4403, United States",
+      "lat": 44.8635108,
+      "lng": -93.2673935,
+      "country": "US"
+    },
+    {
+      "name": "Mexatlan Supermercado",
+      "address": "111 Concord Exchange S, South St Paul, Minnesota, 55075-2402, United States",
+      "lat": 44.89040380000001,
+      "lng": -93.03385720000001,
+      "country": "US"
+    },
+    {
+      "name": "Mini Super La Chiquis",
+      "address": "1328 Rice St, St Paul, Minnesota, 55117-4543, United States",
+      "lat": 44.9812428,
+      "lng": -93.10564099999999,
+      "country": "US"
+    },
+    {
+      "name": "Monarca St Paul",
+      "address": "178 Cesar Chavez St, St Paul, Minnesota, 55107-2310, United States",
+      "lat": 44.9294108,
+      "lng": -93.07783649999999,
+      "country": "US"
+    },
+    {
+      "name": "Reyes Market",
+      "address": "1385 Maryland Ave E, St Paul, Minnesota, 55106-2862, United States",
+      "lat": 44.9776149,
+      "lng": -93.04208539999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "17 W Main St, Madelia, Minnesota, 56062-1437, United States",
+      "lat": 44.0509371,
+      "lng": -94.417678,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1959 Suburban Ave, St Paul, Minnesota, 55119-7004, United States",
+      "lat": 44.9504719,
+      "lng": -93.01795469999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2245 Park Ln SE, Rochester, Minnesota, 55904-5739, United States",
+      "lat": 43.9981567,
+      "lng": -92.4293368,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "276 Chester St, St Paul, Minnesota, 55107-1207, United States",
+      "lat": 44.9377653,
+      "lng": -93.0711595,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2932 Clinton Ave S, Minneapolis, Minnesota, 55408-2447, United States",
+      "lat": 44.9489282,
+      "lng": -93.271919,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "307 3rd St SW, Willmar, Minnesota, 56201-3322, United States",
+      "lat": 45.1213961,
+      "lng": -95.0462775,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "310 10th St, Worthington, Minnesota, 56187-2316, United States",
+      "lat": 43.6199683,
+      "lng": -95.59647609999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4129 Highway 13 W, Savage, Minnesota, 55378, United States",
+      "lat": 44.7785398,
+      "lng": -93.3319565,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "512 Pine St, Monticello, Minnesota, 55362-8570, United States",
+      "lat": 45.302293,
+      "lng": -93.79595619999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7700 Nicollet Ave S, Minneapolis, Minnesota, 55423-4234, United States",
+      "lat": 44.863395,
+      "lng": -93.27874279999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7982 Brooklyn Blvd, Brooklyn Park, Minnesota, 55445-2722, United States",
+      "lat": 45.0955741,
+      "lng": -93.3756531,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "800 White Bear Ave N, St Paul, Minnesota, 55106-4319, United States",
+      "lat": 44.9628975,
+      "lng": -93.0255664,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "923 45th Ave NE, Minneapolis, Minnesota, 55421-2306, United States",
+      "lat": 45.0508173,
+      "lng": -93.2478041,
+      "country": "US"
+    },
+    {
+      "name": "Short Stop La Vaquita",
+      "address": "7034 Cedar Ave S, Richfield, Minnesota, 55423-3410, United States",
+      "lat": 44.8750693,
+      "lng": -93.2483745,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado La Mexicana",
+      "address": "1522 Lake St E, Minneapolis, Minnesota, 55407-1720, United States",
+      "lat": 44.9484967,
+      "lng": -93.2526568,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado La Palma",
+      "address": "655 Payne Ave, St Paul, Minnesota, 55130-4541, United States",
+      "lat": 44.9613486,
+      "lng": -93.0768597,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Loma Bonita",
+      "address": "120 Willow Bnd, Crystal, Minnesota, 55428-3964, United States",
+      "lat": 45.0535446,
+      "lng": -93.3664958,
+      "country": "US"
+    },
+    {
+      "name": "Supermercado Loma Bonita",
+      "address": "855 45th Ave NE, Minneapolis, Minnesota, 55421-2304, United States",
+      "lat": 45.0506185,
+      "lng": -93.24915639999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1000 18th Ave NW, Austin, Minnesota, 55912-1853, United States",
+      "lat": 43.6877438,
+      "lng": -92.98727780000002,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10240 Hudson Rd, Woodbury, Minnesota, 55129-9111, United States",
+      "lat": 44.9463446,
+      "lng": -92.89689039999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1055 Ryans Rd, Worthington, Minnesota, 56187-1721, United States",
+      "lat": 43.6366373,
+      "lng": -95.6018611,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1221 E Main St, Marshall, Minnesota, 56258-2582, United States",
+      "lat": 44.4324046,
+      "lng": -95.7668308,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "15091 18th St NE, Little Falls, Minnesota, 56345, United States",
+      "lat": 45.980058,
+      "lng": -94.33757879999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1930 Sahlstrom Dr, Crookston, Minnesota, 56716-2819, United States",
+      "lat": 47.791595,
+      "lng": -96.6073468,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "25 25th St SE, Rochester, Minnesota, 55904-5542, United States",
+      "lat": 43.9875894,
+      "lng": -92.4604696,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3001 E Highway 7, Montevideo, Minnesota, 56265-4556, United States",
+      "lat": 44.9497268,
+      "lng": -95.6920286,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "700 American Blvd E, Bloomington, Minnesota, 55420-1336, United States",
+      "lat": 44.860868,
+      "lng": -93.2656789,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7835 150th St W, Apple Valley, Minnesota, 55124-7181, United States",
+      "lat": 44.7343272,
+      "lng": -93.2247166,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8101 Old Carriage Ct, Shakopee, Minnesota, 55379, United States",
+      "lat": 44.7793688,
+      "lng": -93.4179776,
+      "country": "US"
+    }
+  ]
+}

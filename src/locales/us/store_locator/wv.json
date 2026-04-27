@@ -1,0 +1,27 @@
+{
+  "state_code": "WV",
+  "count": 3,
+  "stores": [
+    {
+      "name": "Walmart",
+      "address": "1330 N Eisenhower Dr, Beckley, West Virginia, 25801-3156, United States",
+      "lat": 37.8053823,
+      "lng": -81.1771614,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "167 Progress Way, Hurricane, West Virginia, 25526, United States",
+      "lat": 38.4409725,
+      "lng": -82.0223219,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "800 Foxcroft Ave, Martinsburg, West Virginia, 25401, United States",
+      "lat": 39.45061640000001,
+      "lng": -77.98564209999999,
+      "country": "US"
+    }
+  ]
+}

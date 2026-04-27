@@ -1,0 +1,279 @@
+{
+  "state_code": "CT",
+  "count": 39,
+  "stores": [
+    {
+      "name": "Azteca Grocery",
+      "address": "522 Pequonnock St, Bridgeport, Connecticut, 06604-2687, United States",
+      "lat": 41.1825931,
+      "lng": -73.2040543,
+      "country": "US"
+    },
+    {
+      "name": "Ctown",
+      "address": "57 Washington St, Norwalk, Connecticut, 06854-2704, United States",
+      "lat": 41.099324,
+      "lng": -73.421111,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "500 Sylvan Ave, Bridgeport, Connecticut, 06606-3017, United States",
+      "lat": 41.207681,
+      "lng": -73.1916512,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "717 West Ave, Norwalk, Connecticut, 06850-3301, United States",
+      "lat": 41.1158721,
+      "lng": -73.41430749999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "111 Stillwater Ave, Stamford, Connecticut, 06902-4820, United States",
+      "lat": 41.0520294,
+      "lng": -73.5505326,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1471 Fairfield Ave, Bridgeport, Connecticut, 06605-1932, United States",
+      "lat": 41.1720305,
+      "lng": -73.210973,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "155 Thomaston Ave, Waterbury, Connecticut, 06702-1020, United States",
+      "lat": 41.5604951,
+      "lng": -73.0536412,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "160 Colony St, Meriden, Connecticut, 06451-3225, United States",
+      "lat": 41.5423825,
+      "lng": -72.8004661,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "165 Wethersfield Ave, Hartford, Connecticut, 06114-1114, United States",
+      "lat": 41.7511946,
+      "lng": -72.67461089999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1744 Park St, Hartford, Connecticut, 06106-2134, United States",
+      "lat": 41.7573483,
+      "lng": -72.7076221,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "181 Stillwater Ave, Stamford, Connecticut, 06902-4822, United States",
+      "lat": 41.0525344,
+      "lng": -73.5537217,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1954 Baldwin St, Waterbury, Connecticut, 06706-2044, United States",
+      "lat": 41.5275517,
+      "lng": -73.0385526,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "200 Shippan Ave, Stamford, Connecticut, 06902-6013, United States",
+      "lat": 41.048027,
+      "lng": -73.524193,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2251 Main St, Bridgeport, Connecticut, 06606-5314, United States",
+      "lat": 41.19354999999999,
+      "lng": -73.198629,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2298 Main St, Bridgeport, Connecticut, 06606-5321, United States",
+      "lat": 41.1944085,
+      "lng": -73.1982474,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "23 West Ave, Milford, Connecticut, 06461-2950, United States",
+      "lat": 41.2094949,
+      "lng": -73.10353769999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "232 Stillwater Ave, Stamford, Connecticut, 06902-4824, United States",
+      "lat": 41.0525391,
+      "lng": -73.5555742,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "250 Allen St, New Britain, Connecticut, 06053-3021, United States",
+      "lat": 41.6835179,
+      "lng": -72.77862929999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "270 Grand Ave, New Haven, Connecticut, 06513-3742, United States",
+      "lat": 41.3086267,
+      "lng": -72.897954,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "286 Fairfield Ave, Waterbury, Connecticut, 06708-4040, United States",
+      "lat": 41.5358551,
+      "lng": -73.0597784,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "325 Ferry St, New Haven, Connecticut, 06513-3764, United States",
+      "lat": 41.30846349999999,
+      "lng": -72.89465369999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "360 Boston Ave, Stratford, Connecticut, 06610-1605, United States",
+      "lat": 41.1946158,
+      "lng": -73.1536701,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "394 New Britain Ave, Hartford, Connecticut, 06106-3832, United States",
+      "lat": 41.7404494,
+      "lng": -72.6960594,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "432 W Main St, Stamford, Connecticut, 06902-4714, United States",
+      "lat": 41.0479946,
+      "lng": -73.5559244,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "442 E Main St, Bridgeport, Connecticut, 06608-2301, United States",
+      "lat": 41.1805573,
+      "lng": -73.1809024,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "45 North St, Danbury, Connecticut, 06810-5617, United States",
+      "lat": 41.4050903,
+      "lng": -73.45770499999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "47 Main St, Farmington, Connecticut, 06032-2229, United States",
+      "lat": 41.7227176,
+      "lng": -72.82700969999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "482 Greenwich Ave, New Haven, Connecticut, 06519-2617, United States",
+      "lat": 41.2908726,
+      "lng": -72.934034,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "54 Myrtle Ave, Stamford, Connecticut, 06902-3900, United States",
+      "lat": 41.0540861,
+      "lng": -73.5239817,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "540 Pequonnock St, Bridgeport, Connecticut, 06604-2614, United States",
+      "lat": 41.1831873,
+      "lng": -73.2043679,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "57 Smith St, Bridgeport, Connecticut, 06607-1621, United States",
+      "lat": 41.1752109,
+      "lng": -73.16938859999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "685 Maple Ave, Hartford, Connecticut, 06114-1856, United States",
+      "lat": 41.7416363,
+      "lng": -72.68388589999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7 Washington St, Norwalk, Connecticut, 06854-2704, United States",
+      "lat": 41.0993526,
+      "lng": -73.4212162,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "704 Park St, Hartford, Connecticut, 06106-4625, United States",
+      "lat": 41.7583596,
+      "lng": -72.688887,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "72 Broad St, Guilford, Connecticut, 06437-2635, United States",
+      "lat": 41.2843059,
+      "lng": -72.6839498,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Blanks Blvd, Guilford, Connecticut, 06437, United States",
+      "lat": 41.3986228,
+      "lng": -72.6958585,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Fairfield Ave, Bridgeport, Connecticut, 06605, United States",
+      "lat": 41.1645899,
+      "lng": -73.2195507,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "155 Waterford Pkwy N, Waterford, Connecticut, 06385-1208, United States",
+      "lat": 41.3705957,
+      "lng": -72.15497069999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "495 Flatbush Ave, Hartford, Connecticut, 06106-3604, United States",
+      "lat": 41.7413469,
+      "lng": -72.7119329,
+      "country": "US"
+    }
+  ]
+}

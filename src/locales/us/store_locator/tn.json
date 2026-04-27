@@ -1,0 +1,944 @@
+{
+  "state_code": "TN",
+  "count": 134,
+  "stores": [
+    {
+      "name": "Antioche Market",
+      "address": "929 Richards Rd, Antioch, Tennessee, 37013-3204, United States",
+      "lat": 36.0694084,
+      "lng": -86.68148400000001,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Dominguez",
+      "address": "2569 Murfreesboro Pike, Nashville, Tennessee, 37217-3547, United States",
+      "lat": 36.0759401,
+      "lng": -86.64107349999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Mari",
+      "address": "4000 Lebanon Pike, Hermitage, Tennessee, 37076-2014, United States",
+      "lat": 36.1960753,
+      "lng": -86.62190299999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "10249 Cogdill Rd, Knoxville, Tennessee, 37932-3560, United States",
+      "lat": 35.9120957,
+      "lng": -84.12884450000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1416 Antioch Pike, Nashville, Tennessee, 37013-2766, United States",
+      "lat": 36.0829824,
+      "lng": -86.68702569999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1500 Broad St, Chattanooga, Tennessee, 37408-1109, United States",
+      "lat": 35.0372484,
+      "lng": -85.3110847,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "210 Keith St NW, Cleveland, Tennessee, 37311, United States",
+      "lat": 35.1645961,
+      "lng": -84.88228749999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2374 Georgetown Rd NW, Cleveland, Tennessee, 37311-1255, United States",
+      "lat": 35.1845882,
+      "lng": -84.88593039999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "304 Sand Hill Rd, La Vergne, Tennessee, 37086-2233, United States",
+      "lat": 36.0246752,
+      "lng": -86.5607388,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3511 Clio Ave, Chattanooga, Tennessee, 37407, United States",
+      "lat": 35.0038874,
+      "lng": -85.2916858,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3906 Dodds Ave, Chattanooga, Tennessee, 37407-2732, United States",
+      "lat": 34.9968146,
+      "lng": -85.2830797,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "400 Chickamauga Rd, Chattanooga, Tennessee, 37421-5166, United States",
+      "lat": 35.0217329,
+      "lng": -85.198154,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4308 Dodds Ave, Chattanooga, Tennessee, 37407-3031, United States",
+      "lat": 34.9921423,
+      "lng": -85.28588099999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4816 Hixson Pike, Hixson, Tennessee, 37343-4480, United States",
+      "lat": 35.1264614,
+      "lng": -85.2466111,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5035 Ooltewah Ringgold Rd, Collegedale, Tennessee, 37363-7289, United States",
+      "lat": 35.0609076,
+      "lng": -85.0668951,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5304 Ringgold Rd, East Ridge, Tennessee, 37412-3126, United States",
+      "lat": 34.9950625,
+      "lng": -85.2352059,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5716 Ringgold Rd, East Ridge, Tennessee, 37412-3597, United States",
+      "lat": 34.9904052,
+      "lng": -85.2228923,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "699 17th St NW, Cleveland, Tennessee, 37311-4340, United States",
+      "lat": 35.1712148,
+      "lng": -84.8783042,
+      "country": "US"
+    },
+    {
+      "name": "El Gallito Supermercado",
+      "address": "239 S Lowry St, Smyrna, Tennessee, 37167-3041, United States",
+      "lat": 35.9759812,
+      "lng": -86.5116951,
+      "country": "US"
+    },
+    {
+      "name": "El Gallito Supermercado",
+      "address": "2801 Foster Ave, Nashville, Tennessee, 37210-5309, United States",
+      "lat": 36.1135735,
+      "lng": -86.7436675,
+      "country": "US"
+    },
+    {
+      "name": "El Paraiso Supermercado",
+      "address": "301 Gallatin Pike S, Madison, Tennessee, 37115-4006, United States",
+      "lat": 36.25996020000001,
+      "lng": -86.71243729999999,
+      "country": "US"
+    },
+    {
+      "name": "El Pueblito",
+      "address": "948 Richards Rd, Antioch, Tennessee, 37013-3200, United States",
+      "lat": 36.0688474,
+      "lng": -86.68325589999999,
+      "country": "US"
+    },
+    {
+      "name": "El Rodeo Mercado",
+      "address": "1408 Gallatin Pike N, Madison, Tennessee, 37115-2159, United States",
+      "lat": 36.2818037,
+      "lng": -86.7072675,
+      "country": "US"
+    },
+    {
+      "name": "El Rodeo Mercado",
+      "address": "3709 Nolensville Pike, Nashville, Tennessee, 37211-0003, United States",
+      "lat": 36.0952307,
+      "lng": -86.7376713,
+      "country": "US"
+    },
+    {
+      "name": "Fresh And Fresh",
+      "address": "3905 Nolensville Pike, Nashville, Tennessee, 37211-4224, United States",
+      "lat": 36.0859504,
+      "lng": -86.73028169999999,
+      "country": "US"
+    },
+    {
+      "name": "Garden Fresh Food",
+      "address": "800 Madison Sq, Madison, Tennessee, 37115-4622, United States",
+      "lat": 36.2556156,
+      "lng": -86.71648840000002,
+      "country": "US"
+    },
+    {
+      "name": "Garibaldi Market",
+      "address": "2402 Dickerson Pike, Nashville, Tennessee, 37207, United States",
+      "lat": 36.2086573,
+      "lng": -86.7678032,
+      "country": "US"
+    },
+    {
+      "name": "K&S World Market",
+      "address": "4225 Nolensville Pike, Nashville, Tennessee, 37211-4716, United States",
+      "lat": 36.0751615,
+      "lng": -86.7258939,
+      "country": "US"
+    },
+    {
+      "name": "K&S World Market",
+      "address": "5861 Charlotte Pike, Nashville, Tennessee, 37209-3101, United States",
+      "lat": 36.1469665,
+      "lng": -86.8636719,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "1203 Murfreesboro Rd, Franklin, Tennessee, 37064-3013, United States",
+      "lat": 35.9174255,
+      "lng": -86.8313865,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "5145 Murfreesboro Rd, La Vergne, Tennessee, 37086-1009, United States",
+      "lat": 36.021958,
+      "lng": -86.5763477,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "5771 Nolensville Pike, Nashville, Tennessee, 37211-6423, United States",
+      "lat": 36.0463941,
+      "lng": -86.7151147,
+      "country": "US"
+    },
+    {
+      "name": "Kwik Stop",
+      "address": "3906 Apache Trl, Antioch, Tennessee, 37013-3404, United States",
+      "lat": 36.0686417,
+      "lng": -86.693092,
+      "country": "US"
+    },
+    {
+      "name": "La Fiesta",
+      "address": "566 Nissan Dr, Smyrna, Tennessee, 37167-4301, United States",
+      "lat": 35.98481200000001,
+      "lng": -86.49555939999999,
+      "country": "US"
+    },
+    {
+      "name": "La Vergne Supermercado",
+      "address": "410 Dick Buchanan St, La Vergne, Tennessee, 37086-2407, United States",
+      "lat": 36.0197619,
+      "lng": -86.5559236,
+      "country": "US"
+    },
+    {
+      "name": "Los Paisanos",
+      "address": "3435 Lebanon Pike, Hermitage, Tennessee, 37076-2083, United States",
+      "lat": 36.1897318,
+      "lng": -86.62618979999999,
+      "country": "US"
+    },
+    {
+      "name": "Marias Market",
+      "address": "5265 Murfreesboro Rd, La Vergne, Tennessee, 37086-1018, United States",
+      "lat": 36.0185671,
+      "lng": -86.5675955,
+      "country": "US"
+    },
+    {
+      "name": "Mercado Marias",
+      "address": "264 Heritage Park Dr, Murfreesboro, Tennessee, 37129-1556, United States",
+      "lat": 35.8731368,
+      "lng": -86.3908434,
+      "country": "US"
+    },
+    {
+      "name": "Mi Favorita Supermarket",
+      "address": "6317 Charlotte Pike, Nashville, Tennessee, 37209-2926, United States",
+      "lat": 36.1448091,
+      "lng": -86.8715779,
+      "country": "US"
+    },
+    {
+      "name": "Mi Ranchito",
+      "address": "1003 Thompson Pl, Nashville, Tennessee, 37217, United States",
+      "lat": 36.1272159,
+      "lng": -86.7100785,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "101 Creekside Xing, Brentwood, Tennessee, 37027-1062, United States",
+      "lat": 36.0369114,
+      "lng": -86.7988293,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1021 Riverside Dr, Franklin, Tennessee, 37064-6500, United States",
+      "lat": 35.9124524,
+      "lng": -86.8284664,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "10638 Concord Rd, Nashville, Tennessee, 37027-8875, United States",
+      "lat": 35.997163,
+      "lng": -86.69179419999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1111 Gallatin Ave, Nashville, Tennessee, 37206-3201, United States",
+      "lat": 36.1897366,
+      "lng": -86.7447435,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "11207 Lebanon Rd, Mt Juliet, Tennessee, 37122-5545, United States",
+      "lat": 36.2329933,
+      "lng": -86.51433960000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "11656 Parkside Dr, Farragut, Tennessee, 37934-2659, United States",
+      "lat": 35.8935301,
+      "lng": -84.1700082,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1265 Interstate Dr, Cookeville, Tennessee, 38501-5195, United States",
+      "lat": 36.1408063,
+      "lng": -85.5115172,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1400 Liberty Pike, Franklin, Tennessee, 37067-8622, United States",
+      "lat": 35.9247172,
+      "lng": -86.7959121,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1483 Nashville Pike, Gallatin, Tennessee, 37066-7144, United States",
+      "lat": 36.360838,
+      "lng": -86.496307,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1490 Tiny Town Rd, Clarksville, Tennessee, 37042-7201, United States",
+      "lat": 36.6252282,
+      "lng": -87.37254349999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "15544 Old Hickory Blvd, Nashville, Tennessee, 37211-7329, United States",
+      "lat": 36.0410081,
+      "lng": -86.741481,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1600 N Jackson St, Tullahoma, Tennessee, 37388-2364, United States",
+      "lat": 35.37885139999999,
+      "lng": -86.22521909999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1640 Lee Victory Pkwy, Smyrna, Tennessee, 37167-6529, United States",
+      "lat": 35.9416268,
+      "lng": -86.5282058,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1688 Ooltewah-Ringgold Rd, Ooltewah, Tennessee, 37363-3026, United States",
+      "lat": 34.9983732,
+      "lng": -85.09304,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1703 W Main St, Lebanon, Tennessee, 37087-3186, United States",
+      "lat": 36.2234698,
+      "lng": -86.3450429,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1731 S Rutherford Blvd, Murfreesboro, Tennessee, 37130-5957, United States",
+      "lat": 35.8132634,
+      "lng": -86.3684202,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1771 Madison St, Clarksville, Tennessee, 37043-4990, United States",
+      "lat": 36.51568330000001,
+      "lng": -87.31320269999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1931 Long Hollow Pike, Gallatin, Tennessee, 37066-8591, United States",
+      "lat": 36.3817681,
+      "lng": -86.55107029999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "198 Foothills Mall, Maryville, Tennessee, 37801-2310, United States",
+      "lat": 35.7446973,
+      "lng": -83.9957532,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2010 Town Center Blvd, Knoxville, Tennessee, 37922-6677, United States",
+      "lat": 35.8605933,
+      "lng": -84.07647949999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2020 Fieldstone Pkwy, Franklin, Tennessee, 37069-4337, United States",
+      "lat": 35.96463019999999,
+      "lng": -86.8831063,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2223 8th Ave S, Nashville, Tennessee, 37204-2205, United States",
+      "lat": 36.1289763,
+      "lng": -86.7782797,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2300 Trenton Rd, Clarksville, Tennessee, 37040-7369, United States",
+      "lat": 36.5758834,
+      "lng": -87.3174688,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2315 E Andrew Johnson Hwy, Greeneville, Tennessee, 37745-0996, United States",
+      "lat": 36.1800231,
+      "lng": -82.7826506,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2324 Lebanon Pike, Nashville, Tennessee, 37214-2411, United States",
+      "lat": 36.1707976,
+      "lng": -86.6841638,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2650 New Salem Hwy, Murfreesboro, Tennessee, 37128-5265, United States",
+      "lat": 35.8126151,
+      "lng": -86.45777749999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2656 Parkway, Pigeon Forge, Tennessee, 37863-3246, United States",
+      "lat": 35.8025271,
+      "lng": -83.57643209999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3415 Memorial Blvd, Murfreesboro, Tennessee, 37129-3640, United States",
+      "lat": 35.9121468,
+      "lng": -86.3861161,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3532 Murfreesboro Pike, Antioch, Tennessee, 37013-2210, United States",
+      "lat": 36.0534411,
+      "lng": -86.6149649,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3535 Broad St, Chattanooga, Tennessee, 37409-1028, United States",
+      "lat": 35.0148529,
+      "lng": -85.32549499999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4175 Franklin Rd, Murfreesboro, Tennessee, 37128-4119, United States",
+      "lat": 35.841905,
+      "lng": -86.47190610000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4324 Harding Pike, Nashville, Tennessee, 37205, United States",
+      "lat": 36.1268898,
+      "lng": -86.84733240000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "445 TN-109, Lebanon, Tennessee, 37090-8039, United States",
+      "lat": 36.1903775,
+      "lng": -86.4099073,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "453 Highway 76, White House, Tennessee, 37188-2014, United States",
+      "lat": 36.4656554,
+      "lng": -86.6626252,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "460 Long Hollow Pike, Goodlettsville, Tennessee, 37072-3496, United States",
+      "lat": 36.331375,
+      "lng": -86.6989091,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4670 Lebanon Pike, Hermitage, Tennessee, 37076-1314, United States",
+      "lat": 36.2162959,
+      "lng": -86.5964482,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4935 Main St, Spring Hill, Tennessee, 37174-9242, United States",
+      "lat": 35.7750798,
+      "lng": -86.9182699,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5021 Hughes Xing, Franklin, Tennessee, 37064-1735, United States",
+      "lat": 35.8637405,
+      "lng": -86.84315430000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "509 N State of Franklin Rd, Johnson City, Tennessee, 37604-8215, United States",
+      "lat": 36.3130447,
+      "lng": -82.3890855,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5229 Veterans Pkwy, Murfreesboro, Tennessee, 37128, United States",
+      "lat": 35.8597975,
+      "lng": -86.50935369999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5858 Snow Hill Rd, Ooltewah, Tennessee, 37363-9137, United States",
+      "lat": 35.0883285,
+      "lng": -85.0651757,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5928 Hixson Pike, Hixson, Tennessee, 37343-4839, United States",
+      "lat": 35.1472841,
+      "lng": -85.2073751,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "635 Paul Huff Pkwy NW, Cleveland, Tennessee, 37312-2970, United States",
+      "lat": 35.20952440000001,
+      "lng": -84.8605395,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "661 President Pl, Smyrna, Tennessee, 37167-5671, United States",
+      "lat": 35.9798187,
+      "lng": -86.5549771,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "6614 Charlotte Pike, Nashville, Tennessee, 37209-4202, United States",
+      "lat": 36.1402012,
+      "lng": -86.8829351,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "7014 City Center Way, Fairview, Tennessee, 37062-6004, United States",
+      "lat": 35.9735015,
+      "lng": -87.13117150000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "717 S Mount Juliet Rd, Mt Juliet, Tennessee, 37122, United States",
+      "lat": 36.161325,
+      "lng": -86.5134209,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "7326 McCutcheon Rd, Chattanooga, Tennessee, 37421-1816, United States",
+      "lat": 35.0437303,
+      "lng": -85.1496556,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "750 Winfield Dunn Pkwy, Sevierville, Tennessee, 37876, United States",
+      "lat": 35.88266309999999,
+      "lng": -83.5758231,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "7604 Highway 70 S, Nashville, Tennessee, 37221-1852, United States",
+      "lat": 36.07843380000001,
+      "lng": -86.9454918,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8028 Highway 100, Nashville, Tennessee, 37221-4212, United States",
+      "lat": 36.0471797,
+      "lng": -86.9522389,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8105 Moores Ln, Brentwood, Tennessee, 37027-8020, United States",
+      "lat": 35.9637907,
+      "lng": -86.80215439999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8644 E Brainerd Rd, Chattanooga, Tennessee, 37421-8325, United States",
+      "lat": 34.9991598,
+      "lng": -85.1339845,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "920 Martin Luther King Pkwy, Clarksville, Tennessee, 37043-8456, United States",
+      "lat": 36.523092,
+      "lng": -87.234336,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "5154 Murfreesboro Rd, La Vergne, Tennessee, 37086-1009, United States",
+      "lat": 36.0194191,
+      "lng": -86.5767176,
+      "country": "US"
+    },
+    {
+      "name": "Smyrna Super",
+      "address": "75 N Lowry St, Smyrna, Tennessee, 37167-2528, United States",
+      "lat": 35.9854278,
+      "lng": -86.52101379999999,
+      "country": "US"
+    },
+    {
+      "name": "Super Latina Market",
+      "address": "14911 Old Hickory Blvd, Nashville, Tennessee, 37211-6410, United States",
+      "lat": 36.0447975,
+      "lng": -86.7033357,
+      "country": "US"
+    },
+    {
+      "name": "Talpa",
+      "address": "5127 Nolensville Pike, Nashville, Tennessee, 37211-6485, United States",
+      "lat": 36.0577176,
+      "lng": -86.71719379999999,
+      "country": "US"
+    },
+    {
+      "name": "Uptown Fresh Market",
+      "address": "3901 Apache Trl, Antioch, Tennessee, 37013-3403, United States",
+      "lat": 36.0693596,
+      "lng": -86.6945078,
+      "country": "US"
+    },
+    {
+      "name": "Vera Paz Express",
+      "address": "1202 Gallatin Pike S, Madison, Tennessee, 37115-4613, United States",
+      "lat": 36.2475799,
+      "lng": -86.7225394,
+      "country": "US"
+    },
+    {
+      "name": "Viva Market",
+      "address": "818 Murfreesboro Pike, Nashville, Tennessee, 37217-1175, United States",
+      "lat": 36.13531940000001,
+      "lng": -86.7236164,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1030 Hunters Xing, Alcoa, Tennessee, 37701-1849, United States",
+      "lat": 35.7713747,
+      "lng": -83.9920874,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "109 Gallatin Pike N, Madison, Tennessee, 37115-3701, United States",
+      "lat": 36.2634027,
+      "lng": -86.7122839,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10900 Parkside Dr, Knoxville, Tennessee, 37934-1958, United States",
+      "lat": 35.9000568,
+      "lng": -84.14759529999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1100 S Dupree Ave, Brownsville, Tennessee, 38012-3234, United States",
+      "lat": 35.5873292,
+      "lng": -89.23899469999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1680 Fort Campbell Blvd, Clarksville, Tennessee, 37042-3502, United States",
+      "lat": 36.579499,
+      "lng": -87.41290719999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1815 Decatur Pike, Athens, Tennessee, 37303-4932, United States",
+      "lat": 35.4527391,
+      "lng": -84.63150519999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1880 N Main St, Shelbyville, Tennessee, 37160-2018, United States",
+      "lat": 35.513458,
+      "lng": -86.45196849999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "19740 Alberta St, Oneida, Tennessee, 37841-3305, United States",
+      "lat": 36.5132679,
+      "lng": -84.50623139999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2000 Old Fort Pkwy, Murfreesboro, Tennessee, 37129-6907, United States",
+      "lat": 35.85037459999999,
+      "lng": -86.42781509999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "216 Dover Rd, Clarksville, Tennessee, 37042-4156, United States",
+      "lat": 36.549689,
+      "lng": -87.3962664,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2171 S Highland Ave, Jackson, Tennessee, 38301, United States",
+      "lat": 35.5511121,
+      "lng": -88.8109436,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2196 Emporium Dr, Jackson, Tennessee, 38305-6004, United States",
+      "lat": 35.6679912,
+      "lng": -88.85121319999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2200 Brookmeade Dr, Columbia, Tennessee, 38401-4357, United States",
+      "lat": 35.5990704,
+      "lng": -87.0513407,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2551 Whitfield Rd, Clarksville, Tennessee, 37040-7500, United States",
+      "lat": 36.5820884,
+      "lng": -87.3354621,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2650 Lake Rd, Dyersburg, Tennessee, 38024-1656, United States",
+      "lat": 36.0633381,
+      "lng": -89.3919232,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2856 Hickory Hill Rd, Memphis, Tennessee, 38115-2173, United States",
+      "lat": 35.0699243,
+      "lng": -89.86278159999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3035 Hamilton Church Rd, Antioch, Tennessee, 37013-1429, United States",
+      "lat": 36.0609775,
+      "lng": -86.6292414,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3051 Kinzel Way, Knoxville, Tennessee, 37924, United States",
+      "lat": 36.0310161,
+      "lng": -83.8663539,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3120 McKamey Rd, Knoxville, Tennessee, 37921-4982, United States",
+      "lat": 35.97622399999999,
+      "lng": -84.0110376,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4040 Nolensville Pike, Nashville, Tennessee, 37211-4516, United States",
+      "lat": 36.0824717,
+      "lng": -86.725605,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "408 Tiny Town Rd, Clarksville, Tennessee, 37042-5642, United States",
+      "lat": 36.6345834,
+      "lng": -87.4229208,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4331 Highway 66 S, Rogersville, Tennessee, 37857-3145, United States",
+      "lat": 36.3964752,
+      "lng": -83.0196905,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4331 W Andrew Johnson Hwy, Morristown, Tennessee, 37814-1036, United States",
+      "lat": 36.19059980000001,
+      "lng": -83.3571482,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4424 Lebanon Pike, Hermitage, Tennessee, 37076-1312, United States",
+      "lat": 36.2166772,
+      "lng": -86.6009401,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "475 Crockett Trace Dr, Morristown, Tennessee, 37813-2164, United States",
+      "lat": 36.2138171,
+      "lng": -83.25494839999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "490 Greenway View Dr, Chattanooga, Tennessee, 37411-5689, United States",
+      "lat": 35.0083884,
+      "lng": -85.20516099999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5255 S Highway 51, Memphis, Tennessee, 38116-8233, United States",
+      "lat": 35.2703768,
+      "lng": -89.9861418,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5511 Murfreesboro Rd, La Vergne, Tennessee, 37086-2736, United States",
+      "lat": 36.0132718,
+      "lng": -86.54574780000002,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "570 Enon Springs Rd E, Smyrna, Tennessee, 37167-4409, United States",
+      "lat": 35.9706512,
+      "lng": -86.49497,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6777 Clinton Hwy, Knoxville, Tennessee, 37912, United States",
+      "lat": 36.0055702,
+      "lng": -84.02636609999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7525 Winchester Rd, Memphis, Tennessee, 38125, United States",
+      "lat": 35.047802,
+      "lng": -89.811162,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8400 US Highway 64, Bartlett, Tennessee, 38133-4187, United States",
+      "lat": 35.2072754,
+      "lng": -89.7827332,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8445 Walbrook Dr, Knoxville, Tennessee, 37923-3115, United States",
+      "lat": 35.9263669,
+      "lng": -84.0628485,
+      "country": "US"
+    }
+  ]
+}

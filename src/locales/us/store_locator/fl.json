@@ -1,0 +1,5914 @@
+{
+  "state_code": "FL",
+  "count": 844,
+  "stores": [
+    {
+      "name": "Azteca Supermarket",
+      "address": "212 W Mowry Dr, Homestead, Florida, 33030, United States",
+      "lat": 25.4695567,
+      "lng": -80.4820992,
+      "country": "US"
+    },
+    {
+      "name": "Bodegon",
+      "address": "10201 Southern Blvd, Royal Palm Beach, Florida, 33411-4307, United States",
+      "lat": 26.683408,
+      "lng": -80.2046794,
+      "country": "US"
+    },
+    {
+      "name": "Bodegon",
+      "address": "1910 Lake Worth Rd, Lake Worth Beach, Florida, 33461-4228, United States",
+      "lat": 26.6183572,
+      "lng": -80.07159659999999,
+      "country": "US"
+    },
+    {
+      "name": "Bodegon",
+      "address": "4481 Lake Worth Rd, Lake Worth Beach, Florida, 33461-3929, United States",
+      "lat": 26.6198103,
+      "lng": -80.11251299999999,
+      "country": "US"
+    },
+    {
+      "name": "Bodegon",
+      "address": "4704 Forest Hill Blvd, West Palm Beach, Florida, 33415-5620, United States",
+      "lat": 26.650598,
+      "lng": -80.116068,
+      "country": "US"
+    },
+    {
+      "name": "Bodegon",
+      "address": "6128 S Congress Ave, Lake Worth Beach, Florida, 33462-2320, United States",
+      "lat": 26.5867855,
+      "lng": -80.0921559,
+      "country": "US"
+    },
+    {
+      "name": "Bodegon",
+      "address": "6356 Forest Hill Blvd, Greenacres, Florida, 33415-6104, United States",
+      "lat": 26.6493137,
+      "lng": -80.1443412,
+      "country": "US"
+    },
+    {
+      "name": "Bowling",
+      "address": "1425 S Main St, Belle Glade, Florida, 33430-4915, United States",
+      "lat": 26.6653057,
+      "lng": -80.67109830000001,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "10400 NW 7th Ave, Miami, Florida, 33150, United States",
+      "lat": 25.8699639,
+      "lng": -80.21078059999999,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "1337 N Dixie Hwy, Lake Worth Beach, Florida, 33460-1826, United States",
+      "lat": 26.6325259,
+      "lng": -80.05812,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "3400 N Andrews Ave, Oakland Park, Florida, 33309, United States",
+      "lat": 26.1697427,
+      "lng": -80.1450952,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "4801 N Dixie Hwy, Pompano Beach, Florida, 33064-4861, United States",
+      "lat": 26.2905295,
+      "lng": -80.1109662,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "524 Dr Martin Luther King Jr Blvd E, Belle Glade, Florida, 33430-3534, United States",
+      "lat": 26.6816739,
+      "lng": -80.6619101,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "6039 Kimberly Blvd, North Lauderdale, Florida, 33068-2811, United States",
+      "lat": 26.2163611,
+      "lng": -80.20579230000001,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "11042 S US Highway 41, Gibsonton, Florida, 33534-4713, United States",
+      "lat": 27.8265489,
+      "lng": -82.3817356,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "17121 Cam Ct, Fort Myers, Florida, 33967-6004, United States",
+      "lat": 26.4896495,
+      "lng": -81.82431249999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5330 Bay Side Dr, Orlando, Florida, 32819-4070, United States",
+      "lat": 28.4807036,
+      "lng": -81.51053499999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7831 NW 104th Ave, Doral, Florida, 33178-4460, United States",
+      "lat": 25.8452278,
+      "lng": -80.36422019999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "US-17-92, Lake Alfred, Florida, 33850, United States",
+      "lat": 28.0984476,
+      "lng": -81.7133585,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "11011 SW 104th St, Miami, Florida, 33176-3330, United States",
+      "lat": 25.6754083,
+      "lng": -80.3743101,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "4200 S Congress Ave, Lake Worth Beach, Florida, 33461-4705, United States",
+      "lat": 26.6133948,
+      "lng": -80.0856189,
+      "country": "US"
+    },
+    {
+      "name": "Food Start",
+      "address": "10751 W Flagler St, Miami, Florida, 33174-1421, United States",
+      "lat": 25.7687402,
+      "lng": -80.37069319999999,
+      "country": "US"
+    },
+    {
+      "name": "Foodtown",
+      "address": "5335 N Military Trl, West Palm Beach, Florida, 33407-3033, United States",
+      "lat": 26.7586154,
+      "lng": -80.1105386,
+      "country": "US"
+    },
+    {
+      "name": "Ideal Food Basket",
+      "address": "1040 E Sample Rd, Pompano Beach, Florida, 33064-5120, United States",
+      "lat": 26.2739338,
+      "lng": -80.10977559999999,
+      "country": "US"
+    },
+    {
+      "name": "Ideal Food Basket",
+      "address": "202 W Hillsboro Blvd, Deerfield Beach, Florida, 33441-3312, United States",
+      "lat": 26.3181648,
+      "lng": -80.1048419,
+      "country": "US"
+    },
+    {
+      "name": "Ideal Food Basket",
+      "address": "2750 Davie Blvd, Fort Lauderdale, Florida, 33312-2927, United States",
+      "lat": 26.1053662,
+      "lng": -80.1789349,
+      "country": "US"
+    },
+    {
+      "name": "La Frontera",
+      "address": "1600 W Canal St S, Belle Glade, Florida, 33430-1654, United States",
+      "lat": 26.693753,
+      "lng": -80.68445899999999,
+      "country": "US"
+    },
+    {
+      "name": "La Tapatia Spmkt",
+      "address": "3819 Westgate Ave, West Palm Beach, Florida, 33409-4894, United States",
+      "lat": 26.7036603,
+      "lng": -80.09953709999999,
+      "country": "US"
+    },
+    {
+      "name": "La Tapatia Spmkt",
+      "address": "4927 Southern Blvd, West Palm Beach, Florida, 33415-2007, United States",
+      "lat": 26.679133,
+      "lng": -80.11899869999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "32 Wheeler Rd, Florida, New York, 10921-1410, United States",
+      "lat": 41.3277989,
+      "lng": -74.3645239,
+      "country": "US"
+    },
+    {
+      "name": "Mexican Supermarket",
+      "address": "5611 N State Road 7, North Lauderdale, Florida, 33319-2924, United States",
+      "lat": 26.1957602,
+      "lng": -80.2041942,
+      "country": "US"
+    },
+    {
+      "name": "Olguins Meat Market",
+      "address": "202 W Ventura Ave, Clewiston, Florida, 33440-3722, United States",
+      "lat": 26.75208,
+      "lng": -80.93541850000001,
+      "country": "US"
+    },
+    {
+      "name": "Pompano Supermarket",
+      "address": "11 NE 3rd St, Pompano Beach, Florida, 33060-6644, United States",
+      "lat": 26.2344363,
+      "lng": -80.1244143,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "1225 45th St, West Palm Beach, Florida, 33407-2100, United States",
+      "lat": 26.7542104,
+      "lng": -80.073922,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "1675 W 49th St, Hialeah, Florida, 33012, United States",
+      "lat": 25.8684958,
+      "lng": -80.3180029,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "2485 10th Ave N, Lake Worth Beach, Florida, 33461-3128, United States",
+      "lat": 26.6296568,
+      "lng": -80.0795961,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "2675 S Military Trl, West Palm Beach, Florida, 33415-7549, United States",
+      "lat": 26.6378415,
+      "lng": -80.1132591,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "3131 Forest Hill Blvd, West Palm Beach, Florida, 33406-5808, United States",
+      "lat": 26.652002,
+      "lng": -80.0901576,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "3322 NE 7th St, Homestead, Florida, 33033-6066, United States",
+      "lat": 25.4759025,
+      "lng": -80.42694089999999,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "4368 Okeechobee Blvd, West Palm Beach, Florida, 33409-3106, United States",
+      "lat": 26.7041289,
+      "lng": -80.11018589999999,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "4645 Gun Club Rd, West Palm Beach, Florida, 33415-2833, United States",
+      "lat": 26.6752971,
+      "lng": -80.11369959999999,
+      "country": "US"
+    },
+    {
+      "name": "Presidente",
+      "address": "6406 Lake Worth Rd, Lake Worth Beach, Florida, 33463-3008, United States",
+      "lat": 26.6191415,
+      "lng": -80.1444473,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Overtown",
+      "address": "621 NW 62nd St, Miami, Florida, 33150-4329, United States",
+      "lat": 25.8337107,
+      "lng": -80.2076429,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "1600 79th St Cswy, North Bay Village, Florida, 33141-4132, United States",
+      "lat": 25.8480693,
+      "lng": -80.15214859999999,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "1895 SW 8th St, Miami, Florida, 33135-3417, United States",
+      "lat": 25.7658424,
+      "lng": -80.2262523,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "2199 NW 36th St, Miami, Florida, 33142-5454, United States",
+      "lat": 25.8096774,
+      "lng": -80.23173919999999,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "240 NE 8th St, Homestead, Florida, 33030-4710, United States",
+      "lat": 25.4755837,
+      "lng": -80.4722573,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "3001 NW 17th Ave, Miami, Florida, 33142-6158, United States",
+      "lat": 25.8049587,
+      "lng": -80.22350449999999,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "4275 W Flagler St, Miami, Florida, 33134, United States",
+      "lat": 25.7721386,
+      "lng": -80.265343,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "8100 N Miami Ave, Miami, Florida, 33150-3040, United States",
+      "lat": 25.8493474,
+      "lng": -80.1976133,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "826 SW 5th Ave, Miami, Florida, 33130, United States",
+      "lat": 25.7658806,
+      "lng": -80.20256220000002,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "8370 NW 27th Ave, Miami, Florida, 33147-4157, United States",
+      "lat": 25.8498356,
+      "lng": -80.24319679999999,
+      "country": "US"
+    },
+    {
+      "name": "Presidente Supermarket",
+      "address": "9875 SW 40th St, Miami, Florida, 33165-3977, United States",
+      "lat": 25.7332447,
+      "lng": -80.3551636,
+      "country": "US"
+    },
+    {
+      "name": "Price Choice",
+      "address": "1490 NW 3rd Ave, Miami, Florida, 33136-1838, United States",
+      "lat": 25.7896417,
+      "lng": -80.2003301,
+      "country": "US"
+    },
+    {
+      "name": "Price Choice",
+      "address": "2712 NW 95th St, Miami, Florida, 33147-2320, United States",
+      "lat": 25.8596621,
+      "lng": -80.24293159999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix",
+      "address": "4849 S Military Trl, Lake Worth Beach, Florida, 33463-5310, United States",
+      "lat": 26.605816,
+      "lng": -80.115465,
+      "country": "US"
+    },
+    {
+      "name": "Publix",
+      "address": "828 Southern Blvd, West Palm Beach, Florida, 33405-2530, United States",
+      "lat": 26.6744884,
+      "lng": -80.0618307,
+      "country": "US"
+    },
+    {
+      "name": "Publix",
+      "address": "891 N Homestead Blvd, Homestead, Florida, 33030-5024, United States",
+      "lat": 25.4792631,
+      "lng": -80.46228909999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10040 Navarre Pkwy, Navarre, Florida, 32566-3013, United States",
+      "lat": 30.4109578,
+      "lng": -86.8017009,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1005 N State Road 434, Altamonte Springs, Florida, 32714, United States",
+      "lat": 28.68552099999999,
+      "lng": -81.4173082,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "101 N Blairstone Rd, Tallahassee, Florida, 32301-2877, United States",
+      "lat": 30.4423947,
+      "lng": -84.24774860000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1012 W Main St, Inverness, Florida, 34450-4636, United States",
+      "lat": 28.8373141,
+      "lng": -82.34340879999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10301 US-441, Belleview, Florida, 34420-2807, United States",
+      "lat": 29.0727998,
+      "lng": -82.0707604,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10500 San Jose Blvd, Jacksonville, Florida, 32257-6209, United States",
+      "lat": 30.1873036,
+      "lng": -81.62942790000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10601 US-441, Leesburg, Florida, 34788-7206, United States",
+      "lat": 28.8227327,
+      "lng": -81.7810945,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10615 Narcoossee Rd, Orlando, Florida, 32832-6904, United States",
+      "lat": 28.4129138,
+      "lng": -81.240955,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10620 Baymeadows Rd, Jacksonville, Florida, 32256-4573, United States",
+      "lat": 30.2152911,
+      "lng": -81.53788490000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "10650 Avalon Rd, Winter Garden, Florida, 34787-6952, United States",
+      "lat": 28.4098435,
+      "lng": -81.6360141,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1075 Oakleaf Plantation Pkwy, Orange Park, Florida, 32065-3624, United States",
+      "lat": 30.160675,
+      "lng": -81.8354147,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "110 Watercolor Way, Santa Rosa Beach, Florida, 32459-7354, United States",
+      "lat": 30.3282734,
+      "lng": -86.12595870000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11055 Daryl Carter Pkwy, Orlando, Florida, 32836, United States",
+      "lat": 28.4050771,
+      "lng": -81.5019655,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1120 Bichara Blvd, Lady Lake, Florida, 32159-7716, United States",
+      "lat": 28.9395631,
+      "lng": -81.9479408,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11240 Panama City Beach Pkwy, Panama City Beach, Florida, 32407-2449, United States",
+      "lat": 30.1970914,
+      "lng": -85.809821,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11250 Old St Augustine Rd, Jacksonville, Florida, 32257-1088, United States",
+      "lat": 30.1705905,
+      "lng": -81.60504279999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11286 Dowden Rd, Orlando, Florida, 32832, United States",
+      "lat": 28.426841,
+      "lng": -81.22425899999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11291 US Highway 98 E, Inlet Beach, Florida, 32461, United States",
+      "lat": 30.2981834,
+      "lng": -86.0232491,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11341 Normandy Blvd, Jacksonville, Florida, 32221-1806, United States",
+      "lat": 30.2679504,
+      "lng": -81.8496878,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11352 N Williams St, Dunnellon, Florida, 34432-8311, United States",
+      "lat": 29.0602534,
+      "lng": -82.4561506,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "11406 San Jose Blvd, Jacksonville, Florida, 32223-7963, United States",
+      "lat": 30.1660617,
+      "lng": -81.63351589999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1160 E Sr-434, Winter Springs, Florida, 32708-2715, United States",
+      "lat": 28.6993751,
+      "lng": -81.2640145,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "120 Marketside Ave, Ponte Vedra, Florida, 32081-0574, United States",
+      "lat": 30.1107516,
+      "lng": -81.4186264,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "12195 Orange Blossom Trl S, Orlando, Florida, 32837-6502, United States",
+      "lat": 28.3885325,
+      "lng": -81.402312,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "12231 E Colonial Dr, Orlando, Florida, 32826-4759, United States",
+      "lat": 28.5674758,
+      "lng": -81.1953894,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "12541 Yellow Bluff Rd, Jacksonville, Florida, 32226-3809, United States",
+      "lat": 30.4629015,
+      "lng": -81.5770955,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1258 Ocean Shore Blvd, Ormond Beach, Florida, 32176-3620, United States",
+      "lat": 29.3235874,
+      "lng": -81.05726709999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "12620 Beach Blvd, Jacksonville, Florida, 32246-7131, United States",
+      "lat": 30.2861018,
+      "lng": -81.486622,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "13170 Atlantic Blvd, Jacksonville, Florida, 32225-3292, United States",
+      "lat": 30.3187524,
+      "lng": -81.4629154,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "13390 Perdido Key Dr, Pensacola, Florida, 32507-4631, United States",
+      "lat": 30.3181652,
+      "lng": -87.42643,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "13450 Summerport Village Pkwy, Windermere, Florida, 34786-7366, United States",
+      "lat": 28.4764392,
+      "lng": -81.5838907,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1355 N Ferdon Blvd, Crestview, Florida, 32536-1713, United States",
+      "lat": 30.7944593,
+      "lng": -86.5565019,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "13750 W Colonial Dr, Winter Garden, Florida, 34787-4204, United States",
+      "lat": 28.549243,
+      "lng": -81.58936849999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "13820 Old Saint Augustine Rd, Jacksonville, Florida, 32258-2448, United States",
+      "lat": 30.1446646,
+      "lng": -81.55394369999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "13900 Narcoossee Rd, Orlando, Florida, 32832, United States",
+      "lat": 28.3652044,
+      "lng": -81.2464408,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "14130 W Newberry Rd, Newberry, Florida, 32669-2759, United States",
+      "lat": 29.6555288,
+      "lng": -82.49473379999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "14185 Lake Nona Blvd, Orlando, Florida, 32824-7421, United States",
+      "lat": 28.3649589,
+      "lng": -81.3121762,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1430 Tiger Park Ln, Gulf Breeze, Florida, 32563-5718, United States",
+      "lat": 30.3882764,
+      "lng": -87.0616455,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "14444 Beach Blvd, Jacksonville, Florida, 32250-2010, United States",
+      "lat": 30.2854455,
+      "lng": -81.436667,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1455 State Road 436, Casselberry, Florida, 32707-6522, United States",
+      "lat": 28.6285295,
+      "lng": -81.3184414,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1478 W Granada Blvd, Ormond Beach, Florida, 32174-9165, United States",
+      "lat": 29.2555779,
+      "lng": -81.1115844,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1500 Beville Rd, Daytona Beach, Florida, 32114-5647, United States",
+      "lat": 29.1712004,
+      "lng": -81.0418212,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1501 Meeting Pl, Orlando, Florida, 32814-6602, United States",
+      "lat": 28.5665772,
+      "lng": -81.3272574,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1520 John Sims Pkwy E, Niceville, Florida, 32578-2138, United States",
+      "lat": 30.5146331,
+      "lng": -86.4494215,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1545 Rock Springs Rd, Apopka, Florida, 32712-2231, United States",
+      "lat": 28.7072409,
+      "lng": -81.5076929,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "155 Bartram Market Dr, St Johns, Florida, 32259, United States",
+      "lat": 30.101031,
+      "lng": -81.52300389999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "15508 Stoneybrook West Pkwy, Winter Garden, Florida, 34787-4733, United States",
+      "lat": 28.517543,
+      "lng": -81.61960309999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1566 Bella Cruz Dr, Lady Lake, Florida, 32159-8969, United States",
+      "lat": 28.9526926,
+      "lng": -81.9604708,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "16400 US Highway 331 S, Freeport, Florida, 32439-4190, United States",
+      "lat": 30.4868864,
+      "lng": -86.12421429999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1660 Taylor Rd, Port Orange, Florida, 32128, United States",
+      "lat": 29.1061549,
+      "lng": -81.03388749999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "16825 E Colonial Dr, Orlando, Florida, 32820-1910, United States",
+      "lat": 28.5625791,
+      "lng": -81.1308115,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1700 N Monroe St, Tallahassee, Florida, 32303-5535, United States",
+      "lat": 30.4634256,
+      "lng": -84.2840298,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "171 Town and Country Dr, Palatka, Florida, 32177-3962, United States",
+      "lat": 29.6455269,
+      "lng": -81.67147800000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1720 E Silver Star Rd, Ocoee, Florida, 34761-7014, United States",
+      "lat": 28.5747873,
+      "lng": -81.5160964,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1725 Future Way, Kissimmee, Florida, 34747-4491, United States",
+      "lat": 28.3034563,
+      "lng": -81.5709633,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1801 E Broadway St, Oviedo, Florida, 32765-8597, United States",
+      "lat": 28.6610046,
+      "lng": -81.17853939999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1850 Ridgewood Ave, Daytona Beach, Florida, 32117-1738, United States",
+      "lat": 29.261841,
+      "lng": -81.05191889999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "18995 US Highway 441, Mt Dora, Florida, 32757-6735, United States",
+      "lat": 28.8246635,
+      "lng": -81.6410463,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1910 N John Young Pkwy, Kissimmee, Florida, 34741-3221, United States",
+      "lat": 28.3087097,
+      "lng": -81.41811129999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1921 N Belcher Rd, Clearwater, Florida, 33763-4548, United States",
+      "lat": 27.9906385,
+      "lng": -82.7432291,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1921 S Alafaya Trl, Orlando, Florida, 32828-8732, United States",
+      "lat": 28.5259768,
+      "lng": -81.193696,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1930 State Road 44, New Smyrna Beach, Florida, 32168-8345, United States",
+      "lat": 29.0119638,
+      "lng": -80.94556899999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1951 S Narcoossee Rd, St Cloud, Florida, 34771-7211, United States",
+      "lat": 28.2475901,
+      "lng": -81.2423319,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "1971 E State Road 60, Valrico, Florida, 33594-3603, United States",
+      "lat": 27.9364674,
+      "lng": -82.2538204,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2039 Hendricks Ave, Jacksonville, Florida, 32207-3307, United States",
+      "lat": 30.3046212,
+      "lng": -81.6523939,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "205 Rivertown Shops Dr, St Johns, Florida, 32259-7476, United States",
+      "lat": 30.0537759,
+      "lng": -81.6134661,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2100 Saxon Blvd, Deltona, Florida, 32725-3251, United States",
+      "lat": 28.9094498,
+      "lng": -81.2662512,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2100 Winter Springs Blvd, Oviedo, Florida, 32765-9342, United States",
+      "lat": 28.6693324,
+      "lng": -81.2258938,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2111 Capital Cir NE, Tallahassee, Florida, 32308-4303, United States",
+      "lat": 30.4798132,
+      "lng": -84.2366152,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2135 Everglades Ln, The Villages, Florida, 32163-1037, United States",
+      "lat": 28.8018563,
+      "lng": -82.007305,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2180 W Nine Mile Rd, Pensacola, Florida, 32534-9472, United States",
+      "lat": 30.5361028,
+      "lng": -87.31232949999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "220 N Nova Rd, Ormond Beach, Florida, 32174, United States",
+      "lat": 29.2826957,
+      "lng": -81.083788,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2215 Ohio Ave N, Live Oak, Florida, 32064-4857, United States",
+      "lat": 30.320316,
+      "lng": -82.97073,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2250 S Ferdon Blvd, Crestview, Florida, 32536-8457, United States",
+      "lat": 30.7380661,
+      "lng": -86.56672809999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2295 Aloma Ave, Winter Park, Florida, 32792-3303, United States",
+      "lat": 28.6025609,
+      "lng": -81.3219768,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2310 S Highway 77, Lynn Haven, Florida, 32444-4616, United States",
+      "lat": 30.2230528,
+      "lng": -85.6514981,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2335 N Orange Blossom Trl, Orlando, Florida, 32804-4804, United States",
+      "lat": 28.5729679,
+      "lng": -81.40463799999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2343 Crawfordville Hwy, Crawfordville, Florida, 32327-1171, United States",
+      "lat": 30.2056508,
+      "lng": -84.3662125,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2381 W State Road 434, Longwood, Florida, 32779-4984, United States",
+      "lat": 28.6883461,
+      "lng": -81.404073,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "24100 W Newberry Rd, Newberry, Florida, 32669-3782, United States",
+      "lat": 29.6528456,
+      "lng": -82.597098,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2419 Navy Blvd, Panama City, Florida, 32408-5808, United States",
+      "lat": 30.160352,
+      "lng": -85.7522783,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2431 S Woodland Blvd, DeLand, Florida, 32720-8637, United States",
+      "lat": 28.9864547,
+      "lng": -81.29712889999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2435 S Hiawassee Rd, Orlando, Florida, 32835-6346, United States",
+      "lat": 28.5149202,
+      "lng": -81.4837634,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "24420 State Road 44, Eustis, Florida, 32736-9349, United States",
+      "lat": 28.8514028,
+      "lng": -81.5546166,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "250 Palm Coast Pkwy NE, Palm Coast, Florida, 32137, United States",
+      "lat": 29.5579739,
+      "lng": -81.21246529999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "250 Plaza Blvd, St Augustine, Florida, 32086-9304, United States",
+      "lat": 29.8409387,
+      "lng": -81.36492799999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "251 Miracle Strip Pkwy SE, Fort Walton Beach, Florida, 32548-5853, United States",
+      "lat": 30.404745,
+      "lng": -86.603166,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "255 E Van Fleet Dr, Bartow, Florida, 33830-3831, United States",
+      "lat": 27.9025573,
+      "lng": -81.8417324,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "255 NW Commons Loop, Lake City, Florida, 32055-7700, United States",
+      "lat": 30.18064279999999,
+      "lng": -82.66420939999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2566 Enterprise Rd, Orange City, Florida, 32763-7904, United States",
+      "lat": 28.9144823,
+      "lng": -81.29597869999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2575 SW 42nd St, Ocala, Florida, 34471-1356, United States",
+      "lat": 29.14742619999999,
+      "lng": -82.16644889999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2595 N Atlantic Ave, Daytona Beach, Florida, 32118-3203, United States",
+      "lat": 29.2654309,
+      "lng": -81.0283152,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2600 Maguire Rd, Ocoee, Florida, 34761-4752, United States",
+      "lat": 28.5328418,
+      "lng": -81.5401014,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2630 LPGA Blvd, Daytona Beach, Florida, 32124-1008, United States",
+      "lat": 29.2157032,
+      "lng": -81.1185625,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2640 Blanding Blvd, Middleburg, Florida, 32068-9107, United States",
+      "lat": 30.0650808,
+      "lng": -81.8719472,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2655 NE 35th St, Ocala, Florida, 34479-3005, United States",
+      "lat": 29.2242309,
+      "lng": -82.1009317,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2685 N Forest Ridge Blvd, Hernando, Florida, 34442-5123, United States",
+      "lat": 28.9019158,
+      "lng": -82.4460782,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2750 Race Track Rd, St Johns, Florida, 32259-3227, United States",
+      "lat": 30.11322819999999,
+      "lng": -81.5894589,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2755 SW 91st St, Gainesville, Florida, 32608-2749, United States",
+      "lat": 29.6292942,
+      "lng": -82.43628849999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "27615 US Highway 27, Leesburg, Florida, 34748-9396, United States",
+      "lat": 28.7491689,
+      "lng": -81.8790439,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2765 NW 49th Ave, Ocala, Florida, 34482-6214, United States",
+      "lat": 29.2153092,
+      "lng": -82.19910019999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2771 Monument Rd, Jacksonville, Florida, 32225-5549, United States",
+      "lat": 30.3619366,
+      "lng": -81.501261,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2783 Elkcam Blvd, Deltona, Florida, 32738-3427, United States",
+      "lat": 28.9268586,
+      "lng": -81.1878163,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2840 David Walker Dr, Eustis, Florida, 32726-6172, United States",
+      "lat": 28.8240693,
+      "lng": -81.7043064,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2873 S Orange Ave, Orlando, Florida, 32806-5403, United States",
+      "lat": 28.5101915,
+      "lng": -81.3731152,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2875 University Blvd W, Jacksonville, Florida, 32217-2116, United States",
+      "lat": 30.2617113,
+      "lng": -81.6290161,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2895 N Narcoossee Rd, St Cloud, Florida, 34771-8781, United States",
+      "lat": 28.3340883,
+      "lng": -81.2269705,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "29 Blake Blvd, Kissimmee, Florida, 34747-5414, United States",
+      "lat": 28.3311849,
+      "lng": -81.5266424,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2925 Traverse Trl, The Villages, Florida, 32163-2017, United States",
+      "lat": 28.8447046,
+      "lng": -82.027857,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2945 County Road 210 W, St Johns, Florida, 32259-2016, United States",
+      "lat": 30.0868444,
+      "lng": -81.4687674,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "2970 S Ridgewood Ave, Edgewater, Florida, 32141-7527, United States",
+      "lat": 28.9486629,
+      "lng": -80.8856843,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "299 E International Speedway Blvd, DeLand, Florida, 32724-2339, United States",
+      "lat": 29.0564387,
+      "lng": -81.300997,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "301 West Rd, Ocoee, Florida, 34761-5300, United States",
+      "lat": 28.6044743,
+      "lng": -81.5494441,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "303 SE 17th St, Ocala, Florida, 34471-4470, United States",
+      "lat": 29.1729739,
+      "lng": -82.1317509,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3035 SE Maricamp Rd, Ocala, Florida, 34471-6201, United States",
+      "lat": 29.1654815,
+      "lng": -82.0942365,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3044 S Atlantic Ave, Daytona Beach, Florida, 32118-6102, United States",
+      "lat": 29.1669683,
+      "lng": -80.9789914,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "305 State Road 312 W, St Augustine, Florida, 32086, United States",
+      "lat": 29.8658763,
+      "lng": -81.33100259999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3080 W Kelly Park Rd, Apopka, Florida, 32712-5193, United States",
+      "lat": 28.75548999999999,
+      "lng": -81.5615657,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3122 Mahan Dr, Tallahassee, Florida, 32308-2500, United States",
+      "lat": 30.4618664,
+      "lng": -84.2249156,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3171 Orange Ave S, Orlando, Florida, 32806-6193, United States",
+      "lat": 28.5080937,
+      "lng": -81.3745613,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3213 W Highway 390, Panama City, Florida, 32405-2734, United States",
+      "lat": 30.2035516,
+      "lng": -85.6749115,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3221 Vineland Rd, Kissimmee, Florida, 34746-4907, United States",
+      "lat": 28.3462398,
+      "lng": -81.48324869999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "327 Colony Blvd, The Villages, Florida, 32162-6084, United States",
+      "lat": 28.8670665,
+      "lng": -81.95535679999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3315 W University Ave, Gainesville, Florida, 32607-2539, United States",
+      "lat": 29.65122209999999,
+      "lng": -82.3711439,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3385 S US Highway 17/92, Casselberry, Florida, 32707-2915, United States",
+      "lat": 28.6785413,
+      "lng": -81.3342996,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3400 Avalon Park East Blvd, Orlando, Florida, 32828-7362, United States",
+      "lat": 28.5142749,
+      "lng": -81.15433449999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3450 E Silver Springs Blvd, Ocala, Florida, 34470-6406, United States",
+      "lat": 29.1943416,
+      "lng": -82.08820380000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3475 Wedgewood Ln, The Villages, Florida, 32162-7183, United States",
+      "lat": 28.9295149,
+      "lng": -82.0143166,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3521 Thomasville Rd, Tallahassee, Florida, 32309-7134, United States",
+      "lat": 30.5088104,
+      "lng": -84.2462365,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3551 Blair Stone Rd, Tallahassee, Florida, 32301, United States",
+      "lat": 30.4035683,
+      "lng": -84.2374292,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3720 NW 13th St, Gainesville, Florida, 32609-5910, United States",
+      "lat": 29.6873099,
+      "lng": -82.3407069,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3821 S Nova Rd, Port Orange, Florida, 32127-4950, United States",
+      "lat": 29.1268705,
+      "lng": -81.0023585,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3839 Pleasant Hill Rd, Kissimmee, Florida, 34746-2952, United States",
+      "lat": 28.1814331,
+      "lng": -81.4385425,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3863 US Highway 301 S, Riverview, Florida, 33578-3572, United States",
+      "lat": 27.9131985,
+      "lng": -82.35010559999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3930 SW Archer Rd, Gainesville, Florida, 32608-2342, United States",
+      "lat": 29.6218355,
+      "lng": -82.3822241,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3942 S Suncoast Blvd, Homosassa, Florida, 34448-2601, United States",
+      "lat": 28.8047728,
+      "lng": -82.5789326,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "3972 Town Center Blvd, Orlando, Florida, 32837-6103, United States",
+      "lat": 28.3616557,
+      "lng": -81.4242927,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4000 N Goldenrod Rd, Winter Park, Florida, 32792-8999, United States",
+      "lat": 28.5986593,
+      "lng": -81.2880131,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "409 Chickasaw Trl S, Orlando, Florida, 32825-7803, United States",
+      "lat": 28.5369799,
+      "lng": -81.2742514,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "410 Blanding Blvd, Orange Park, Florida, 32073-5051, United States",
+      "lat": 30.1632247,
+      "lng": -81.74887629999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4115 NW 16th Blvd, Gainesville, Florida, 32605-3505, United States",
+      "lat": 29.6719438,
+      "lng": -82.3872901,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4181 E SR-46, Sanford, Florida, 32771-8431, United States",
+      "lat": 28.7855512,
+      "lng": -81.2104526,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4195 W Lake Mary Blvd, Lake Mary, Florida, 32746-2410, United States",
+      "lat": 28.7542425,
+      "lng": -81.3496526,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "421 Mary Esther Cut-Off NW, Fort Walton Beach, Florida, 32548-4084, United States",
+      "lat": 30.4263322,
+      "lng": -86.64502999999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4250 Alafaya Trl, Oviedo, Florida, 32765-9430, United States",
+      "lat": 28.6128926,
+      "lng": -81.2060946,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4255 US-1 S, St Augustine, Florida, 32086-7046, United States",
+      "lat": 29.8140091,
+      "lng": -81.32489819999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4320 Deerwood Lake Pkwy, Jacksonville, Florida, 32216-1180, United States",
+      "lat": 30.2683373,
+      "lng": -81.5610995,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "440 N Orlando Ave, Winter Park, Florida, 32789-2914, United States",
+      "lat": 28.6008345,
+      "lng": -81.36319379999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4401 13th St, St Cloud, Florida, 34769-6724, United States",
+      "lat": 28.2525689,
+      "lng": -81.3162814,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4402 Curry Ford Rd, Orlando, Florida, 32812-2709, United States",
+      "lat": 28.5214908,
+      "lng": -81.330401,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4425 Commons Dr E, Destin, Florida, 32541-3414, United States",
+      "lat": 30.3906025,
+      "lng": -86.4302767,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "443 W County Road 419, Oviedo, Florida, 32766-9520, United States",
+      "lat": 28.6462075,
+      "lng": -81.1389847,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4495 Roosevelt Blvd, Jacksonville, Florida, 32210-3375, United States",
+      "lat": 30.2791701,
+      "lng": -81.71952019999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "450 SR-13 N, St Johns, Florida, 32259-3860, United States",
+      "lat": 30.1193922,
+      "lng": -81.6269694,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4501 Hoffner Ave, Orlando, Florida, 32812, United States",
+      "lat": 28.4819625,
+      "lng": -81.3293695,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4601 Highway 231, Panama City, Florida, 32404, United States",
+      "lat": 30.229183,
+      "lng": -85.5850193,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "463855 State Road 200, Yulee, Florida, 32097-3639, United States",
+      "lat": 30.6270112,
+      "lng": -81.5438729,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4739 Highway 90, Milton, Florida, 32571-1403, United States",
+      "lat": 30.6008467,
+      "lng": -87.124597,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "482 E Altamonte Dr, Altamonte Springs, Florida, 32701-4604, United States",
+      "lat": 28.662012,
+      "lng": -81.3736889,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "4950 Belle Terre Pkwy, Palm Coast, Florida, 32137-8692, United States",
+      "lat": 29.5514303,
+      "lng": -81.235621,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5000 US Highway 17, Fleming Island, Florida, 32003-8223, United States",
+      "lat": 30.1039534,
+      "lng": -81.7082629,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "503 E Altamonte Dr, Altamonte Springs, Florida, 32701-4702, United States",
+      "lat": 28.6655201,
+      "lng": -81.3731182,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5055 N 9th Ave, Pensacola, Florida, 32504-8719, United States",
+      "lat": 30.4727251,
+      "lng": -87.2147261,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5200 NW 43rd St, Gainesville, Florida, 32606-4484, United States",
+      "lat": 29.7021295,
+      "lng": -82.39080229999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5265 S John Young Pkwy, Orlando, Florida, 32839-5025, United States",
+      "lat": 28.4844128,
+      "lng": -81.4169696,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5350 Central Florida Pkwy, Orlando, Florida, 32821-8772, United States",
+      "lat": 28.4070153,
+      "lng": -81.4483269,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "540 S Hunt Club Blvd, Apopka, Florida, 32703-4960, United States",
+      "lat": 28.6714968,
+      "lng": -81.4514165,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5400 Hamlin Groves Trl, Winter Garden, Florida, 34787-4934, United States",
+      "lat": 28.4725528,
+      "lng": -81.62984,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5400 SW College Rd, Ocala, Florida, 34474-5756, United States",
+      "lat": 29.1257534,
+      "lng": -82.208405,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5580 Woodbine Rd, Milton, Florida, 32571-8766, United States",
+      "lat": 30.6398859,
+      "lng": -87.18173259999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5655 Red Bug Lake Rd, Winter Springs, Florida, 32708-5013, United States",
+      "lat": 28.6464253,
+      "lng": -81.2700363,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5678 Capital Cir NW, Tallahassee, Florida, 32303, United States",
+      "lat": 30.5320376,
+      "lng": -84.3636583,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5801 SW 75th St, Gainesville, Florida, 32608-8513, United States",
+      "lat": 29.6018836,
+      "lng": -82.4205098,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5810 Seven Mile Dr, Wildwood, Florida, 34785-8854, United States",
+      "lat": 28.8681442,
+      "lng": -82.0069106,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5854 Dogwood Dr, Milton, Florida, 32570-3576, United States",
+      "lat": 30.6475353,
+      "lng": -87.05393869999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "5858 Atlantic Blvd, Jacksonville, Florida, 32207-2223, United States",
+      "lat": 30.3123791,
+      "lng": -81.6017932,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "600 Sawgrass Village Dr, Ponte Vedra Beach, Florida, 32082, United States",
+      "lat": 30.2057351,
+      "lng": -81.3803514,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "6001 Argyle Forest Blvd, Jacksonville, Florida, 32244-6127, United States",
+      "lat": 30.194398,
+      "lng": -81.74372129999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "605 Courtland Blvd, Deltona, Florida, 32738-8913, United States",
+      "lat": 28.8792111,
+      "lng": -81.1778504,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "610 Eglin Pkwy, Fort Walton Beach, Florida, 32547-2832, United States",
+      "lat": 30.4416553,
+      "lng": -86.60039359999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "630 Atlantic Blvd, Neptune Beach, Florida, 32266-4000, United States",
+      "lat": 30.32268269999999,
+      "lng": -81.40428709999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "6485 Chickasaw Trl S, Orlando, Florida, 32829-8366, United States",
+      "lat": 28.470395,
+      "lng": -81.2661652,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "650 W 23rd St, Panama City, Florida, 32405-3921, United States",
+      "lat": 30.1917318,
+      "lng": -85.6693331,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "6551 N Orange Blossom Trl, Mt Dora, Florida, 32757-7013, United States",
+      "lat": 28.7798557,
+      "lng": -81.6226523,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "6615 Mahan Dr, Tallahassee, Florida, 32308-1400, United States",
+      "lat": 30.4798378,
+      "lng": -84.1671712,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "670 Marsh Landing Pkwy, Jacksonville Beach, Florida, 32250-5850, United States",
+      "lat": 30.2534825,
+      "lng": -81.3923499,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "675 Longwood Hills Rd, Longwood, Florida, 32750-3335, United States",
+      "lat": 28.7137652,
+      "lng": -81.3575101,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "6753 Thomasville Rd, Tallahassee, Florida, 32312-3966, United States",
+      "lat": 30.562392,
+      "lng": -84.2139974,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "6760 W Gulf To Lake Hwy, Crystal River, Florida, 34429, United States",
+      "lat": 28.88977239999999,
+      "lng": -82.5480041,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "6767 US Highway 98 N, Lakeland, Florida, 33809, United States",
+      "lat": 28.1293915,
+      "lng": -81.9720613,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "695 Kristine Way, The Villages, Florida, 32163-0099, United States",
+      "lat": 28.8254017,
+      "lng": -81.9662663,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "709 E 3rd Ave, New Smyrna Beach, Florida, 32169-3101, United States",
+      "lat": 29.0267816,
+      "lng": -80.89470969999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7117 Merrill Rd, Jacksonville, Florida, 32277-2620, United States",
+      "lat": 30.35365819999999,
+      "lng": -81.5790075,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "717 N 14th St, Leesburg, Florida, 34748-4205, United States",
+      "lat": 28.8192328,
+      "lng": -81.88914749999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "725 Grand Blvd, Miramar Beach, Florida, 32550-7873, United States",
+      "lat": 30.3793416,
+      "lng": -86.3113547,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "731 Duval Station Rd, Jacksonville, Florida, 32218-0804, United States",
+      "lat": 30.485086,
+      "lng": -81.6041888,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "741 Orlando Ave S, Winter Park, Florida, 32789-4844, United States",
+      "lat": 28.5915022,
+      "lng": -81.3663671,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7462 US-1 N, St Augustine, Florida, 32095-8468, United States",
+      "lat": 30.0118314,
+      "lng": -81.3895313,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7524 Dr Phillips Blvd, Orlando, Florida, 32819-5148, United States",
+      "lat": 28.4536441,
+      "lng": -81.4900827,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7578 SE Maricamp Rd, Ocala, Florida, 34472-4273, United States",
+      "lat": 29.1163008,
+      "lng": -82.027857,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "76010 William Burgess Blvd, Yulee, Florida, 32097, United States",
+      "lat": 30.6202702,
+      "lng": -81.63913430000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7640 W Sand Lake Rd, Orlando, Florida, 32819-5112, United States",
+      "lat": 28.4488554,
+      "lng": -81.4863002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "771 Harbor Blvd, Destin, Florida, 32541-2620, United States",
+      "lat": 30.3919952,
+      "lng": -86.4847467,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7749 Normandy Blvd, Jacksonville, Florida, 32221-7657, United States",
+      "lat": 30.296367,
+      "lng": -81.7765019,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "7880 Winter Garden Vineland Rd, Windermere, Florida, 34786-5689, United States",
+      "lat": 28.4464145,
+      "lng": -81.5612709,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "800 Ocala Rd, Tallahassee, Florida, 32304-1669, United States",
+      "lat": 30.4454966,
+      "lng": -84.3180455,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "8075 SW Highway 200, Ocala, Florida, 34481-7823, United States",
+      "lat": 29.0843821,
+      "lng": -82.2544996,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "81 Alafaya Woods Blvd, Oviedo, Florida, 32765-6235, United States",
+      "lat": 28.6494458,
+      "lng": -81.2047415,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "8145 Vineland Ave, Orlando, Florida, 32821-6847, United States",
+      "lat": 28.3869719,
+      "lng": -81.485479,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "8244 Navarre Pkwy, Navarre, Florida, 32566-6943, United States",
+      "lat": 30.404024,
+      "lng": -86.87879699999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "825 Rinehart Rd, Lake Mary, Florida, 32746, United States",
+      "lat": 28.7809062,
+      "lng": -81.34547309999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "84 Tuscan Way, St Augustine, Florida, 32092-1831, United States",
+      "lat": 29.9610793,
+      "lng": -81.4911403,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "841 Cypress Pkwy, Kissimmee, Florida, 34759-3408, United States",
+      "lat": 28.1426789,
+      "lng": -81.47883879999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "8462 Bannerman Blvd, Tallahassee, Florida, 32312-9118, United States",
+      "lat": 30.585135,
+      "lng": -84.251531,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "851 S State Road 434, Altamonte Springs, Florida, 32714-4811, United States",
+      "lat": 28.6448731,
+      "lng": -81.4118328,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "852 Gulf Breeze Pkwy, Gulf Breeze, Florida, 32561-4723, United States",
+      "lat": 30.3599326,
+      "lng": -87.163948,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "855 County Road 210 W, St Johns, Florida, 32259-1300, United States",
+      "lat": 30.0818874,
+      "lng": -81.47568660000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "8684 Beulah Rd, Pensacola, Florida, 32526-5201, United States",
+      "lat": 30.5336964,
+      "lng": -87.37920050000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "870 Village Oak Ln, Lake Mary, Florida, 32746-4766, United States",
+      "lat": 28.7875105,
+      "lng": -81.3570422,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "8780 SE 165th Mulberry Ln, The Villages, Florida, 32162-5861, United States",
+      "lat": 28.9799594,
+      "lng": -82.00707709999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "8863 W Colonial Dr, Ocoee, Florida, 34761-6951, United States",
+      "lat": 28.5533368,
+      "lng": -81.5059778,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9100 Merrill Rd, Jacksonville, Florida, 32225-4349, United States",
+      "lat": 30.3509882,
+      "lng": -81.54886189999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "915 Doyle Rd, Deltona, Florida, 32725-8254, United States",
+      "lat": 28.8681816,
+      "lng": -81.25222749999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9200 NW 39th Ave, Gainesville, Florida, 32606-7331, United States",
+      "lat": 29.6895751,
+      "lng": -82.44092069999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9251 University Pkwy, Pensacola, Florida, 32514-5531, United States",
+      "lat": 30.5295881,
+      "lng": -87.22259,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "950 Blanding Blvd, Orange Park, Florida, 32065-5910, United States",
+      "lat": 30.1391583,
+      "lng": -81.77474079999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9500 W Highway 98, Pensacola, Florida, 32506-6099, United States",
+      "lat": 30.4020827,
+      "lng": -87.34031619999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9515 Argyle Forest Blvd, Jacksonville, Florida, 32222-2801, United States",
+      "lat": 30.1956433,
+      "lng": -81.82548039999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "955 State Road 16, St Augustine, Florida, 32084-1857, United States",
+      "lat": 29.91473749999999,
+      "lng": -81.362112,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9570 SW 62nd Avenue Rd, Ocala, Florida, 34476-9671, United States",
+      "lat": 29.0773017,
+      "lng": -82.21756479999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "9930 Universal Blvd, Orlando, Florida, 32819-8702, United States",
+      "lat": 28.4268528,
+      "lng": -81.4440357,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "Etown Pkwy, Jacksonville, Florida, 32256-5892, United States",
+      "lat": 30.1940608,
+      "lng": -81.5063786,
+      "country": "US"
+    },
+    {
+      "name": "Publix Jax",
+      "address": "NW US Highway 441, Alachua, Florida, 32615-6393, United States",
+      "lat": 29.7895493,
+      "lng": -82.4797081,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "100 Hancock Bridge Pkwy W, Cape Coral, Florida, 33991-2088, United States",
+      "lat": 26.6482074,
+      "lng": -81.9764792,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1044 N Tamiami Trl, Sarasota, Florida, 34236-2428, United States",
+      "lat": 27.3456211,
+      "lng": -82.5453838,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "10500 Ulmerton Rd, Largo, Florida, 33771-3544, United States",
+      "lat": 27.8927722,
+      "lng": -82.7845966,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1059 N Collier Blvd, Marco Island, Florida, 34145-2539, United States",
+      "lat": 25.9551025,
+      "lng": -81.72257379999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "10801 Starkey Rd, Seminole, Florida, 33777-1159, United States",
+      "lat": 27.8697438,
+      "lng": -82.7605045,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1091 Tamiami Trl N, Nokomis, Florida, 34275-2163, United States",
+      "lat": 27.1143934,
+      "lng": -82.4480851,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "10928 Cross Creek Blvd, Tampa, Florida, 33647-4034, United States",
+      "lat": 28.1455751,
+      "lng": -82.2835334,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1101 8th Ave W, Palmetto, Florida, 34221-3809, United States",
+      "lat": 27.5228656,
+      "lng": -82.5735874,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11109 Winthrop Market St, Riverview, Florida, 33578-4252, United States",
+      "lat": 27.8913894,
+      "lng": -82.31788739999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11200 Tamiami Trl N, Naples, Florida, 34110-1640, United States",
+      "lat": 26.2738401,
+      "lng": -81.8002307,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11205 SR-70 E, Bradenton, Florida, 34202-9404, United States",
+      "lat": 27.4345049,
+      "lng": -82.4303319,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11255 Causeway Blvd, Brandon, Florida, 33511-2903, United States",
+      "lat": 27.9212137,
+      "lng": -82.3234906,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11460 US Highway 301 S, Riverview, Florida, 33578-6170, United States",
+      "lat": 27.8336417,
+      "lng": -82.3267065,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11502 N 53rd St, Temple Terrace, Florida, 33617-2245, United States",
+      "lat": 28.0533503,
+      "lng": -82.39703349999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11600 Gladiolus Dr, Fort Myers, Florida, 33908-4567, United States",
+      "lat": 26.5173644,
+      "lng": -81.9418663,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11635 Moccasin Wallow Rd, Parrish, Florida, 34219-8758, United States",
+      "lat": 27.5925962,
+      "lng": -82.43814619999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11667 Boyette Rd, Riverview, Florida, 33569-5531, United States",
+      "lat": 27.8521284,
+      "lng": -82.304063,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11782 E Dr Martin Luther King Jr Blvd, Seffner, Florida, 33584-4923, United States",
+      "lat": 27.9827417,
+      "lng": -82.2988888,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11830 US Highway 301, Dade City, Florida, 33525-6037, United States",
+      "lat": 28.3300844,
+      "lng": -82.1855772,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "11851 Palm Beach Blvd, Fort Myers, Florida, 33905-5912, United States",
+      "lat": 26.6989178,
+      "lng": -81.761355,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1200 Champions Dr, Davenport, Florida, 33897-7423, United States",
+      "lat": 28.272869,
+      "lng": -81.65942,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "12022 Indian Rocks Rd, Largo, Florida, 33774-3215, United States",
+      "lat": 27.8818433,
+      "lng": -82.833432,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "12024 Anderson Rd, Tampa, Florida, 33625-5682, United States",
+      "lat": 28.0599534,
+      "lng": -82.5439634,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "12101 Little Rd, Hudson, Florida, 34667-2924, United States",
+      "lat": 28.3326901,
+      "lng": -82.6680908,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "12139 W Linebaugh Ave, Tampa, Florida, 33626-1732, United States",
+      "lat": 28.0571056,
+      "lng": -82.62383229999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1248 Kingsway Rd, Brandon, Florida, 33510-2514, United States",
+      "lat": 27.9593289,
+      "lng": -82.27807229999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "12500 SR-54, Odessa, Florida, 33556-3480, United States",
+      "lat": 28.1892103,
+      "lng": -82.60841549999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1251 S Toledo Blade Blvd, North Port, Florida, 34288-2410, United States",
+      "lat": 27.0668375,
+      "lng": -82.15887,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "127 Cape Coral Pkwy W, Cape Coral, Florida, 33914-8353, United States",
+      "lat": 26.563436,
+      "lng": -81.9754699,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "12900 Trade Way Four, Bonita Springs, Florida, 34135-6983, United States",
+      "lat": 26.3294359,
+      "lng": -81.739644,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "12975 Collier Blvd, Naples, Florida, 34116-4004, United States",
+      "lat": 26.2105312,
+      "lng": -81.6888927,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13031 Walsingham Rd, Largo, Florida, 33774-3514, United States",
+      "lat": 27.8816451,
+      "lng": -82.8191219,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13121 Paul J Doherty Pkwy, Fort Myers, Florida, 33913-8893, United States",
+      "lat": 26.5556625,
+      "lng": -81.7479391,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1313 S Dale Mabry Hwy, Tampa, Florida, 33629-5010, United States",
+      "lat": 27.9307749,
+      "lng": -82.5070513,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13150 E SR-64, Bradenton, Florida, 34212-9402, United States",
+      "lat": 27.4827861,
+      "lng": -82.4099866,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13154 US Highway 301 S, Riverview, Florida, 33578-7410, United States",
+      "lat": 27.7936717,
+      "lng": -82.33306569999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13178 Dale Mabry Hwy, Tampa, Florida, 33618-2406, United States",
+      "lat": 28.0669472,
+      "lng": -82.5064548,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1328 Homestead Rd N, Lehigh Acres, Florida, 33936-6024, United States",
+      "lat": 26.6092457,
+      "lng": -81.6513987,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13401 Summerlin Rd, Fort Myers, Florida, 33919-6592, United States",
+      "lat": 26.5476562,
+      "lng": -81.884405,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13455 County Line Rd, Spring Hill, Florida, 34609-6600, United States",
+      "lat": 28.4356504,
+      "lng": -82.4920269,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13550 Immokalee Rd, Naples, Florida, 34120-7482, United States",
+      "lat": 26.2779955,
+      "lng": -81.5968255,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13589 State Road 54, Odessa, Florida, 33556-3527, United States",
+      "lat": 28.196275,
+      "lng": -82.590722,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13650 Fiddlesticks Blvd, Fort Myers, Florida, 33912-0312, United States",
+      "lat": 26.5455064,
+      "lng": -81.80535569999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "13900 County Road 455, Clermont, Florida, 34711-9052, United States",
+      "lat": 28.5485436,
+      "lng": -81.6811465,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1400 Pinehurst Dr, Spring Hill, Florida, 34606-4553, United States",
+      "lat": 28.4553852,
+      "lng": -82.62724109999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "14323 US Highway 301 S, Wimauma, Florida, 33598-2039, United States",
+      "lat": 27.7689852,
+      "lng": -82.33698009999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1445 E Venice Ave, Venice, Florida, 34292-3064, United States",
+      "lat": 27.0984512,
+      "lng": -82.4143702,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "14561 Palm Beach Blvd, Fort Myers, Florida, 33905-2327, United States",
+      "lat": 26.708082,
+      "lng": -81.7200878,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "14605 SR-70 E, Bradenton, Florida, 34202, United States",
+      "lat": 27.4336158,
+      "lng": -82.3939153,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1491 Main St, Dunedin, Florida, 34698-4612, United States",
+      "lat": 28.0181864,
+      "lng": -82.761935,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "15050 Sandpiper Dr, Naples, Florida, 34114, United States",
+      "lat": 26.0317693,
+      "lng": -81.6540824,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "15151 N Dale Mabry Hwy, Tampa, Florida, 33618-1818, United States",
+      "lat": 28.0873671,
+      "lng": -82.5028514,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1520 N McMullen Booth Rd, Clearwater, Florida, 33759-2594, United States",
+      "lat": 27.9800108,
+      "lng": -82.711024,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "15265 Collier Blvd, Naples, Florida, 34119-7715, United States",
+      "lat": 26.2713966,
+      "lng": -81.6909848,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "15880 Summerlin Rd, Fort Myers, Florida, 33908-9612, United States",
+      "lat": 26.5142162,
+      "lng": -81.9012331,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1600 66th St N, St Petersburg, Florida, 33710-5535, United States",
+      "lat": 27.7863404,
+      "lng": -82.7297839,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1617 Bartow Rd, Lakeland, Florida, 33801-6585, United States",
+      "lat": 28.0231571,
+      "lng": -81.9263704,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1631 Del Prado Blvd S, Cape Coral, Florida, 33990, United States",
+      "lat": 26.6193228,
+      "lng": -81.9394157,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "16560 N Nebraska Ave, Lutz, Florida, 33549-6172, United States",
+      "lat": 28.1062329,
+      "lng": -82.45956439999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1685 N Hancock Rd, Minneola, Florida, 34715-8199, United States",
+      "lat": 28.5916687,
+      "lng": -81.7205752,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "16950 San Carlos Blvd, Fort Myers, Florida, 33908-1224, United States",
+      "lat": 26.495449,
+      "lng": -81.94461,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "16980 Alico Mission Way, Fort Myers, Florida, 33908-4851, United States",
+      "lat": 26.4924388,
+      "lng": -81.8492096,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1700 34th St N, St Petersburg, Florida, 33713, United States",
+      "lat": 27.788648,
+      "lng": -82.6806421,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1735 NE Pine Island Rd, Cape Coral, Florida, 33909-1731, United States",
+      "lat": 26.6711996,
+      "lng": -81.9378811,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "175 S Barfield Dr, Marco Island, Florida, 34145-5143, United States",
+      "lat": 25.9317531,
+      "lng": -81.6992822,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1755 Lakewood Ranch Blvd, Bradenton, Florida, 34211-4906, United States",
+      "lat": 27.4839728,
+      "lng": -82.4326179,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "18901 State Road 54, Lutz, Florida, 33558-5268, United States",
+      "lat": 28.1951051,
+      "lng": -82.50285389999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "19034 Bruce B Downs Blvd, Tampa, Florida, 33647-2434, United States",
+      "lat": 28.1452305,
+      "lng": -82.35515,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "19050 Corkscrew Rd, Estero, Florida, 33928-9821, United States",
+      "lat": 26.4503979,
+      "lng": -81.6413847,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "19100 S Tamiami Trl, Fort Myers, Florida, 33908-1011, United States",
+      "lat": 26.4627209,
+      "lng": -81.8331949,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1920 Bruce B Downs Blvd, Wesley Chapel, Florida, 33544-9262, United States",
+      "lat": 28.1843535,
+      "lng": -82.3512923,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "19221 Dale Mabry Hwy N, Lutz, Florida, 33548-5067, United States",
+      "lat": 28.1591532,
+      "lng": -82.4815358,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "19390 Cortez Blvd, Brooksville, Florida, 34601-3041, United States",
+      "lat": 28.5406639,
+      "lng": -82.4086536,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1940 Lakewood Ranch Blvd, Sarasota, Florida, 34240-8855, United States",
+      "lat": 27.3362567,
+      "lng": -82.4359583,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "1981 Tamiami Trl N, Naples, Florida, 34102-4804, United States",
+      "lat": 26.1706213,
+      "lng": -81.8009995,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "200 37th Ave N, St Petersburg, Florida, 33704-1416, United States",
+      "lat": 27.8063736,
+      "lng": -82.6350078,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2031 Bay St, Sarasota, Florida, 34237-7914, United States",
+      "lat": 27.3280828,
+      "lng": -82.52961630000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "20311 Grande Oak Shoppes Blvd, Estero, Florida, 33928-7662, United States",
+      "lat": 26.4390112,
+      "lng": -81.7692295,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2040 Shepherd Rd, Mulberry, Florida, 33860-8699, United States",
+      "lat": 27.9369765,
+      "lng": -81.9881743,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2121 Collier Pkwy, Land O Lakes, Florida, 34639-5286, United States",
+      "lat": 28.1883327,
+      "lng": -82.4392214,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "21301 S Tamiami Trl, Estero, Florida, 33928-2943, United States",
+      "lat": 26.4298896,
+      "lng": -81.80772460000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2160 McGregor Blvd, Fort Myers, Florida, 33901-3417, United States",
+      "lat": 26.6376927,
+      "lng": -81.8768534,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2202 James L Redman Pkwy, Plant City, Florida, 33563-7107, United States",
+      "lat": 27.9917535,
+      "lng": -82.119929,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2300 Griffin Rd, Lakeland, Florida, 33810-6760, United States",
+      "lat": 28.0799183,
+      "lng": -81.9926809,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2310 Pine Ridge Rd, Naples, Florida, 34109-2006, United States",
+      "lat": 26.2104569,
+      "lng": -81.7716954,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2310 Tamiami Trl, Punta Gorda, Florida, 33950-5933, United States",
+      "lat": 26.9188232,
+      "lng": -82.04650269999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "23965 Hwy 27, Lake Wales, Florida, 33859-7812, United States",
+      "lat": 27.95849,
+      "lng": -81.6208515,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "24051 Peachland Blvd, Port Charlotte, Florida, 33954-3714, United States",
+      "lat": 27.0160774,
+      "lng": -82.0568054,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2420 Santa Barbara Blvd, Cape Coral, Florida, 33914-4485, United States",
+      "lat": 26.6069299,
+      "lng": -81.9758727,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2424 Sand Mine Rd, Davenport, Florida, 33897-3400, United States",
+      "lat": 28.3110852,
+      "lng": -81.66959539999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2430 US Highway 27, Clermont, Florida, 34714-9117, United States",
+      "lat": 28.3822839,
+      "lng": -81.6865363,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2438 Laurel Rd E, Nokomis, Florida, 34275-3204, United States",
+      "lat": 27.1359015,
+      "lng": -82.419736,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "24600 S Tamiami Trl, Bonita Springs, Florida, 34134-7022, United States",
+      "lat": 26.3818616,
+      "lng": -81.8098392,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2481 Del Prado Blvd N, Cape Coral, Florida, 33909-4002, United States",
+      "lat": 26.6977611,
+      "lng": -81.9400059,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "250 Citrus Tower Blvd, Clermont, Florida, 34711-2790, United States",
+      "lat": 28.5659887,
+      "lng": -81.74135380000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2514 N McMullen Booth Rd, Clearwater, Florida, 33761-4150, United States",
+      "lat": 28.0131569,
+      "lng": -82.7115299,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2515 S Florida Ave, Lakeland, Florida, 33803-3858, United States",
+      "lat": 28.0149968,
+      "lng": -81.9584252,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2515 Thonotosassa Rd, Plant City, Florida, 33563-1464, United States",
+      "lat": 28.0238824,
+      "lng": -82.15037,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2551 NE Highway 70, Arcadia, Florida, 34266-8590, United States",
+      "lat": 27.2084788,
+      "lng": -81.8360004,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "26841 S Tamiami Trl, Bonita Springs, Florida, 34134-7817, United States",
+      "lat": 26.34924,
+      "lng": -81.80535569999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2724 W Hillsborough Ave, Tampa, Florida, 33614-6053, United States",
+      "lat": 27.9946238,
+      "lng": -82.4872896,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2770 W Bay Dr, Belleair Bluffs, Florida, 33770-2618, United States",
+      "lat": 27.9157193,
+      "lng": -82.81611889999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2801 E County Line Rd, Lutz, Florida, 33559, United States",
+      "lat": 28.1702732,
+      "lng": -82.42704499999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2824 US Highway 27 N, Sebring, Florida, 33870-1625, United States",
+      "lat": 27.5162393,
+      "lng": -81.4935769,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "2875 University Pkwy, Sarasota, Florida, 34243-4201, United States",
+      "lat": 27.3908938,
+      "lng": -82.51139580000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3015 SW Pine Island Rd, Cape Coral, Florida, 33991-1703, United States",
+      "lat": 26.6393178,
+      "lng": -82.0375657,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "30841 Mirada Blvd, San Antonio, Florida, 33576, United States",
+      "lat": 28.326903,
+      "lng": -82.2959,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "32265 Overpass Rd, Wesley Chapel, Florida, 33545-4987, United States",
+      "lat": 28.2702167,
+      "lng": -82.2857234,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "32765 Eiland Blvd, Wesley Chapel, Florida, 33545-5268, United States",
+      "lat": 28.2218883,
+      "lng": -82.24851369999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3306 Bonita Beach Rd, Bonita Springs, Florida, 34134-4189, United States",
+      "lat": 26.3317522,
+      "lng": -81.8102153,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "33343 US-19 N, Palm Harbor, Florida, 34684-3128, United States",
+      "lat": 28.0750107,
+      "lng": -82.7372429,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3428 Clark Rd, Sarasota, Florida, 34231-8406, United States",
+      "lat": 27.2679539,
+      "lng": -82.49972439999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3461 Lithia Pinecrest Rd, Valrico, Florida, 33596-6302, United States",
+      "lat": 27.8928358,
+      "lng": -82.2414374,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "350 US 27 N, Lake Placid, Florida, 33852, United States",
+      "lat": 27.3017329,
+      "lng": -81.36030769999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "35439 US Highway 19 N, Palm Harbor, Florida, 34684-1737, United States",
+      "lat": 28.0943482,
+      "lng": -82.7382007,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3610 US Highway 27 N, Sebring, Florida, 33870-1691, United States",
+      "lat": 27.5160785,
+      "lng": -81.4941423,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3617 W Gandy Blvd, Tampa, Florida, 33611-2607, United States",
+      "lat": 27.8950208,
+      "lng": -82.5031836,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "36301 East Lake Rd, Palm Harbor, Florida, 34685-3200, United States",
+      "lat": 28.1023797,
+      "lng": -82.69263939999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3636 Harden Blvd, Lakeland, Florida, 33803-5938, United States",
+      "lat": 27.998213,
+      "lng": -81.9720613,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3690 Bee Ridge Rd, Sarasota, Florida, 34233-1001, United States",
+      "lat": 27.297431,
+      "lng": -82.49608719999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3700 4th St N, St Petersburg, Florida, 33704-1314, United States",
+      "lat": 27.8059151,
+      "lng": -82.64007260000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3815 Tamiami Trl E, Naples, Florida, 34112, United States",
+      "lat": 26.1195365,
+      "lng": -81.7570817,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3825 E Bay Dr, Largo, Florida, 33771-1936, United States",
+      "lat": 27.9150343,
+      "lng": -82.74735679999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3825 S Osprey Ave, Sarasota, Florida, 34239, United States",
+      "lat": 27.2998471,
+      "lng": -82.5325797,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3838 Britton Plz, Tampa, Florida, 33611, United States",
+      "lat": 27.9070224,
+      "lng": -82.5025156,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3913 Manatee Ave W, Bradenton, Florida, 34205-1715, United States",
+      "lat": 27.4943874,
+      "lng": -82.60081079999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3939 Van Dyke Rd, Lutz, Florida, 33558-8001, United States",
+      "lat": 28.1293506,
+      "lng": -82.504778,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "3941 Tamiami Trl, Punta Gorda, Florida, 33950-7970, United States",
+      "lat": 26.8884381,
+      "lng": -82.0254901,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "39883 Hwy 27, Davenport, Florida, 33837-7802, United States",
+      "lat": 28.178626,
+      "lng": -81.6378423,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4065 Hancock Bridge Pkwy, North Fort Myers, Florida, 33903-4294, United States",
+      "lat": 26.6533269,
+      "lng": -81.9131522,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "40865 US Highway 19 N, Tarpon Springs, Florida, 34689-4737, United States",
+      "lat": 28.1434673,
+      "lng": -82.7394793,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4112 E Johnson Ave, Haines City, Florida, 33844-9233, United States",
+      "lat": 28.1149488,
+      "lng": -81.5883161,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4173 Tamiami Trl S, Venice, Florida, 34293, United States",
+      "lat": 27.0511577,
+      "lng": -82.3951431,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "42051 Cypress Pkwy, Punta Gorda, Florida, 33982-5136, United States",
+      "lat": 26.7736373,
+      "lng": -81.75801589999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4240 53rd Ave E, Bradenton, Florida, 34203-8097, United States",
+      "lat": 27.4440641,
+      "lng": -82.5075901,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4317 W Gandy Blvd, Tampa, Florida, 33611-3405, United States",
+      "lat": 27.8948716,
+      "lng": -82.516669,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4370 Thomasson Dr, Naples, Florida, 34112-6725, United States",
+      "lat": 26.1061097,
+      "lng": -81.74990199999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4600 Summerlin Rd, Fort Myers, Florida, 33919, United States",
+      "lat": 26.5952788,
+      "lng": -81.8851128,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4651 Cortez Rd W, Bradenton, Florida, 34210-3146, United States",
+      "lat": 27.4611901,
+      "lng": -82.6070483,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4840 S Tamiami Trl, Sarasota, Florida, 34231-4352, United States",
+      "lat": 27.2840814,
+      "lng": -82.53260970000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4860 Davis Blvd, Naples, Florida, 34104-5337, United States",
+      "lat": 26.1371939,
+      "lng": -81.7485343,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "4975 Avila Ave, Immokalee, Florida, 34142-9562, United States",
+      "lat": 26.3363962,
+      "lng": -81.4345082,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5001 E SR-64, Bradenton, Florida, 34208-5531, United States",
+      "lat": 27.4976069,
+      "lng": -82.4991323,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "501 N Beneva Rd, Sarasota, Florida, 34232-1308, United States",
+      "lat": 27.3385142,
+      "lng": -82.4979068,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5052 N US-41, Apollo Beach, Florida, 33572-3504, United States",
+      "lat": 27.7373316,
+      "lng": -82.43012159999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5100 E Bay Dr, Clearwater, Florida, 33764, United States",
+      "lat": 27.9175378,
+      "lng": -82.7305205,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5140 S County Line Rd, Lakeland, Florida, 33811, United States",
+      "lat": 27.9717078,
+      "lng": -82.05557089999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5225 US Highway 98 S, Lakeland, Florida, 33812-4495, United States",
+      "lat": 27.9703052,
+      "lng": -81.8819987,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "525 Bay Isles Pkwy, Longboat Key, Florida, 34228-3133, United States",
+      "lat": 27.37989,
+      "lng": -82.630146,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "525 S Belcher Rd, Clearwater, Florida, 33764-6321, United States",
+      "lat": 27.9590335,
+      "lng": -82.74457559999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5295 34th St S, St Petersburg, Florida, 33711-4517, United States",
+      "lat": 27.7205954,
+      "lng": -82.6802397,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5375 N Socrum Loop Rd, Lakeland, Florida, 33809-4272, United States",
+      "lat": 28.1119125,
+      "lng": -81.94504239999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5400 Bruce B Downs Blvd, Wesley Chapel, Florida, 33544-8616, United States",
+      "lat": 28.2356374,
+      "lng": -82.3470551,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5450 E Busch Blvd, Temple Terrace, Florida, 33617-5418, United States",
+      "lat": 28.0339156,
+      "lng": -82.3948472,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5642 Fishhawk Crossing Blvd, Lithia, Florida, 33547-5900, United States",
+      "lat": 27.853361,
+      "lng": -82.205092,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5781 Lee Blvd, Lehigh Acres, Florida, 33971-6337, United States",
+      "lat": 26.6183885,
+      "lng": -81.7652008,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5804 Bee Ridge Rd, Sarasota, Florida, 34233, United States",
+      "lat": 27.2973626,
+      "lng": -82.4541193,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5991 Pine Ridge Rd, Naples, Florida, 34119-3956, United States",
+      "lat": 26.2132148,
+      "lng": -81.72857429999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "5997 S Pointe Blvd, Fort Myers, Florida, 33919, United States",
+      "lat": 26.5587058,
+      "lng": -81.904879,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "6030 14th St W, Bradenton, Florida, 34207, United States",
+      "lat": 27.4341987,
+      "lng": -82.5773395,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "6031 Cypress Gardens Blvd, Winter Haven, Florida, 33884-4115, United States",
+      "lat": 27.9872736,
+      "lng": -81.6859375,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "606 Havendale Blvd, Auburndale, Florida, 33823-4687, United States",
+      "lat": 28.0519569,
+      "lng": -81.77499929999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "6075 US-17-92 N, Davenport, Florida, 33896-9704, United States",
+      "lat": 28.2395226,
+      "lng": -81.55925959999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "617 US-17-92, Haines City, Florida, 33844-5047, United States",
+      "lat": 28.1053156,
+      "lng": -81.638547,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "6434 N US Highway 41, Apollo Beach, Florida, 33572-1804, United States",
+      "lat": 27.7714506,
+      "lng": -82.3922211,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "6700 Bayshore Rd, North Fort Myers, Florida, 33917, United States",
+      "lat": 26.6999681,
+      "lng": -81.8475373,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "674 Tom Stuart Cswy, Madeira Beach, Florida, 33708-2976, United States",
+      "lat": 27.8098654,
+      "lng": -82.7922971,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "6900 Daniels Pkwy, Fort Myers, Florida, 33912-1584, United States",
+      "lat": 26.5453908,
+      "lng": -81.8423727,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7018 W Waters Ave, Tampa, Florida, 33634-2292, United States",
+      "lat": 28.0244112,
+      "lng": -82.5600054,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7037 Ridge Rd, Port Richey, Florida, 34668-6849, United States",
+      "lat": 28.282627,
+      "lng": -82.69820589999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7064 Waterset Blvd, Apollo Beach, Florida, 33572-1791, United States",
+      "lat": 27.7907958,
+      "lng": -82.373224,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7101 Radio Rd, Naples, Florida, 34104-6706, United States",
+      "lat": 26.1555625,
+      "lng": -81.7221167,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7325 University Pkwy, Bradenton, Florida, 34202-2300, United States",
+      "lat": 27.3882391,
+      "lng": -82.3961557,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7333 Park Blvd N, Pinellas Park, Florida, 33781-2922, United States",
+      "lat": 27.8413432,
+      "lng": -82.7401088,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7340 Kathleen Rd, Lakeland, Florida, 33810-4495, United States",
+      "lat": 28.1359351,
+      "lng": -82.0240596,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "775 Hwy 559, Auburndale, Florida, 33823-9324, United States",
+      "lat": 28.1527025,
+      "lng": -81.8016885,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7800 Lake Wilson Rd, Davenport, Florida, 33896-9605, United States",
+      "lat": 28.2577963,
+      "lng": -81.59177179999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7830 Land O Lakes Blvd, Land O Lakes, Florida, 34638-5701, United States",
+      "lat": 28.2718252,
+      "lng": -82.47908319999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7835 Gunn Hwy, Tampa, Florida, 33626-1611, United States",
+      "lat": 28.0805983,
+      "lng": -82.576567,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7838 Gall Blvd, Zephyrhills, Florida, 33541-4302, United States",
+      "lat": 28.2696,
+      "lng": -82.1865049,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7950 Dani Dr, Fort Myers, Florida, 33966-8012, United States",
+      "lat": 26.6036942,
+      "lng": -81.80871069999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "7975 State Road 50, Groveland, Florida, 34736-9381, United States",
+      "lat": 28.5595257,
+      "lng": -81.8214115,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "8301 Champions Gate Blvd, Davenport, Florida, 33896-8389, United States",
+      "lat": 28.2617354,
+      "lng": -81.619113,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "8405 Honore Ave, Sarasota, Florida, 34238-5756, United States",
+      "lat": 27.2229577,
+      "lng": -82.4593393,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "857 W Bay Dr, Largo, Florida, 33770-3221, United States",
+      "lat": 27.915137,
+      "lng": -82.79790360000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "8585 Collier Blvd, Naples, Florida, 34114-3548, United States",
+      "lat": 26.1104707,
+      "lng": -81.6886751,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "8701 Hillsborough Ave, Tampa, Florida, 33615, United States",
+      "lat": 27.9979948,
+      "lng": -82.58388649999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "8833 Tamiami Trl N, Naples, Florida, 34108-2565, United States",
+      "lat": 26.2489044,
+      "lng": -81.80313489999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "8975 Race Track Rd, Tampa, Florida, 33635-9724, United States",
+      "lat": 28.0357125,
+      "lng": -82.64657179999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "9005 US Highway 301 N, Parrish, Florida, 34219-8673, United States",
+      "lat": 27.5435295,
+      "lng": -82.4731604,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "902 Curlew Rd, Dunedin, Florida, 34698-1901, United States",
+      "lat": 28.0500939,
+      "lng": -82.77860749999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "949 E Bloomingdale Ave, Brandon, Florida, 33511-8118, United States",
+      "lat": 27.8909682,
+      "lng": -82.2703329,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "9520 Buffalo Rd, Palmetto, Florida, 34221-8685, United States",
+      "lat": 27.5993054,
+      "lng": -82.5000251,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "9595 Commercial Way, Brooksville, Florida, 34613-3930, United States",
+      "lat": 28.5703526,
+      "lng": -82.5600054,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "9850 Little Rd, New Port Richey, Florida, 34654-3470, United States",
+      "lat": 28.2983753,
+      "lng": -82.6700314,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "E Orange Lake Blvd, Kissimmee, Florida, 34747-8210, United States",
+      "lat": 28.3608259,
+      "lng": -81.6092582,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "N Tamiami Trl, North Fort Myers, Florida, 33903-1412, United States",
+      "lat": 26.7102776,
+      "lng": -81.9002986,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "S West Villages Pkwy, Venice, Florida, 34293, United States",
+      "lat": 27.04942,
+      "lng": -82.32269,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "Summerlin Rd, Fort Myers, Florida, 33908-3706, United States",
+      "lat": 26.5859107,
+      "lng": -81.8835404,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "Tamiami Trl E, Naples, Florida, 34113-8423, United States",
+      "lat": 26.1381043,
+      "lng": -81.7829314,
+      "country": "US"
+    },
+    {
+      "name": "Publix Lakeland",
+      "address": "Tamiami Trl, North Port, Florida, 34287-7291, United States",
+      "lat": 27.0466993,
+      "lng": -82.253067,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10018 Griffin Rd, Cooper City, Florida, 33328-3301, United States",
+      "lat": 26.0628413,
+      "lng": -80.28143539999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1003 E Commercial Blvd, Oakland Park, Florida, 33334-3957, United States",
+      "lat": 26.1897477,
+      "lng": -80.1351821,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1005 Gateway Blvd, Boynton Beach, Florida, 33426-8312, United States",
+      "lat": 26.5515302,
+      "lng": -80.0742343,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10065 Cleary Blvd, Plantation, Florida, 33324-1063, United States",
+      "lat": 26.1345423,
+      "lng": -80.2847446,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10130 Northlake Blvd, West Palm Beach, Florida, 33412-1101, United States",
+      "lat": 26.8088121,
+      "lng": -80.22951719999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10142 Indiantown Rd, Jupiter, Florida, 33478-4707, United States",
+      "lat": 26.9391368,
+      "lng": -80.1924757,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "101499 Overseas Hwy, Key Largo, Florida, 33037-4553, United States",
+      "lat": 25.1135045,
+      "lng": -80.4195232,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10155 W Oakland Park Blvd, Sunrise, Florida, 33351-6918, United States",
+      "lat": 26.1711432,
+      "lng": -80.2854412,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1024 Highway A1a, Satellite Beach, Florida, 32937-2342, United States",
+      "lat": 28.1852385,
+      "lng": -80.5944403,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10400 SW Village Center Dr, Port St Lucie, Florida, 34987-2186, United States",
+      "lat": 27.2683814,
+      "lng": -80.4311743,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10450 Pines Blvd, Pembroke Pines, Florida, 33026-6044, United States",
+      "lat": 26.0065604,
+      "lng": -80.28605080000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "106 Ponce de Leon Blvd, Miami, Florida, 33135-1034, United States",
+      "lat": 25.7712156,
+      "lng": -80.2550448,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10640 Forest Hill Blvd, Wellington, Florida, 33414-3165, United States",
+      "lat": 26.649837,
+      "lng": -80.215599,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10701 Wiles Rd, Coral Springs, Florida, 33076-2014, United States",
+      "lat": 26.2883034,
+      "lng": -80.26993949999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10755 NW 58th St, Miami, Florida, 33178-2801, United States",
+      "lat": 25.8263633,
+      "lng": -80.3674893,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "10935 S Jog Rd, Boynton Beach, Florida, 33437-3921, United States",
+      "lat": 26.5142372,
+      "lng": -80.1476639,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1100 6th St, Miami Beach, Florida, 33139-6312, United States",
+      "lat": 25.7754543,
+      "lng": -80.14007769999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1112 Key Plz, Key West, Florida, 33040, United States",
+      "lat": 24.5659441,
+      "lng": -81.77049459999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "11200 S Military Trl, Golf, Florida, 33436-7205, United States",
+      "lat": 26.5101105,
+      "lng": -80.12161429999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1125 SE Port St Lucie Blvd, Port St Lucie, Florida, 34952-5332, United States",
+      "lat": 27.2729889,
+      "lng": -80.3161749,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1140 SW 36th Ave, Pompano Beach, Florida, 33069-4835, United States",
+      "lat": 26.2152927,
+      "lng": -80.1715126,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "11495 SW 40th St, Miami, Florida, 33165-3311, United States",
+      "lat": 25.733392,
+      "lng": -80.3808271,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1150 Malabar Rd SE, Palm Bay, Florida, 32907-3239, United States",
+      "lat": 27.9968933,
+      "lng": -80.6359595,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "11650 W Palmetto Park Rd, Boca Raton, Florida, 33428-2501, United States",
+      "lat": 26.3471468,
+      "lng": -80.23224309999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "11750 SE Federal Hwy, Hobe Sound, Florida, 33455-5303, United States",
+      "lat": 27.0609424,
+      "lng": -80.13936919999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "11750 SW 104th St, Miami, Florida, 33186-3601, United States",
+      "lat": 25.6704316,
+      "lng": -80.385437,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1180 Royal Palm Beach Blvd, Royal Palm Beach, Florida, 33411-1671, United States",
+      "lat": 26.70779,
+      "lng": -80.2268709,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1181 S University Dr, Plantation, Florida, 33324-3322, United States",
+      "lat": 26.1065481,
+      "lng": -80.2514915,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "11950 Forest Hill Blvd, Wellington, Florida, 33414-6248, United States",
+      "lat": 26.6525647,
+      "lng": -80.2361286,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "11977 Southern Blvd, Royal Palm Beach, Florida, 33411-7619, United States",
+      "lat": 26.6835192,
+      "lng": -80.24526039999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "121 SW 22nd Ave, Miami, Florida, 33135-1504, United States",
+      "lat": 25.7703909,
+      "lng": -80.2305629,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "12100 SW 127th Ave, Miami, Florida, 33186-4663, United States",
+      "lat": 25.6555724,
+      "lng": -80.4003087,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1220 Palm Dr, Homestead, Florida, 33035, United States",
+      "lat": 25.4464014,
+      "lng": -80.4598654,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "123 Honeybell Way, Jupiter, Florida, 33458-7837, United States",
+      "lat": 26.9118678,
+      "lng": -80.1018541,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "125 E Merritt Island Cswy, Merritt Island, Florida, 32952-3699, United States",
+      "lat": 28.3549297,
+      "lng": -80.6988685,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1255 US Highway 1, Vero Beach, Florida, 32960-5729, United States",
+      "lat": 27.6244873,
+      "lng": -80.3910903,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "12681 Miramar Pkwy, Miramar, Florida, 33027-2910, United States",
+      "lat": 25.9806508,
+      "lng": -80.3157165,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "127 S State Road 7, Wellington, Florida, 33414, United States",
+      "lat": 26.6722483,
+      "lng": -80.20297219999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1285 N University Dr, Coral Springs, Florida, 33071-8314, United States",
+      "lat": 26.2459296,
+      "lng": -80.2516414,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "12855 NE 6th Ave, North Miami, Florida, 33161-4714, United States",
+      "lat": 25.8935658,
+      "lng": -80.1852398,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1290 W 68th St, Hialeah, Florida, 33014-4524, United States",
+      "lat": 25.8837452,
+      "lng": -80.3093849,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13001 SW 112th St, Miami, Florida, 33186-4601, United States",
+      "lat": 25.6648946,
+      "lng": -80.4066747,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13005 SW 89th Pl, Miami, Florida, 33176-5812, United States",
+      "lat": 25.6485654,
+      "lng": -80.3394716,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1333 St Lucie West Blvd, Port St Lucie, Florida, 34986-2140, United States",
+      "lat": 27.3181854,
+      "lng": -80.3883942,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "134 SW 13th St, Miami, Florida, 33130-4211, United States",
+      "lat": 25.7612389,
+      "lng": -80.19666,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13401 S Dixie Hwy, Pinecrest, Florida, 33156-6512, United States",
+      "lat": 25.6461431,
+      "lng": -80.3312258,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13435 US-1, Sebastian, Florida, 32958-3757, United States",
+      "lat": 27.8385114,
+      "lng": -80.4871379,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "135 Bradley Pl, Palm Beach, Florida, 33480-3819, United States",
+      "lat": 26.7198012,
+      "lng": -80.0396142,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13700 W SR-84, Davie, Florida, 33325-5302, United States",
+      "lat": 26.1169714,
+      "lng": -80.3331477,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13735 SW 152nd St, Miami, Florida, 33177-1106, United States",
+      "lat": 25.627556,
+      "lng": -80.4156995,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13820 SW 88th St, Miami, Florida, 33186-1304, United States",
+      "lat": 25.6840141,
+      "lng": -80.4191772,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13880 Wellington Trce, Wellington, Florida, 33414-8553, United States",
+      "lat": 26.6606044,
+      "lng": -80.26662979999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "13890 SW 56th St, Miami, Florida, 33175-6021, United States",
+      "lat": 25.7132728,
+      "lng": -80.41853379999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1395 SW Martin Hwy, Palm City, Florida, 34990-3373, United States",
+      "lat": 27.1625313,
+      "lng": -80.2712459,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1405 S Federal Hwy, Pompano Beach, Florida, 33062-7233, United States",
+      "lat": 26.2128091,
+      "lng": -80.1078491,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1420 NW North River Dr, Miami, Florida, 33125-2888, United States",
+      "lat": 25.785263,
+      "lng": -80.21940889999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "14375 Miramar Pkwy, Miramar, Florida, 33027-4134, United States",
+      "lat": 25.9805692,
+      "lng": -80.3374121,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "145 Palm Bay Rd NE, West Melbourne, Florida, 32904-8601, United States",
+      "lat": 28.037717,
+      "lng": -80.6692781,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1451 Sebastian Blvd, Sebastian, Florida, 32958-5166, United States",
+      "lat": 27.7657062,
+      "lng": -80.51006459999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "14601 S Dixie Hwy, Miami, Florida, 33176-7926, United States",
+      "lat": 25.6344627,
+      "lng": -80.3378972,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "14630 SW 26th St, Miami, Florida, 33175-8065, United States",
+      "lat": 25.741671,
+      "lng": -80.4310426,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "14641 Biscayne Blvd, North Miami Beach, Florida, 33181-1211, United States",
+      "lat": 25.9113004,
+      "lng": -80.1555924,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "150 S Federal Hwy, Deerfield Beach, Florida, 33441-4128, United States",
+      "lat": 26.3155222,
+      "lng": -80.0894593,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1500 S Douglas Rd, Coral Gables, Florida, 33134-4108, United States",
+      "lat": 25.757808,
+      "lng": -80.255702,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1500 SW 57th Ave, Miami, Florida, 33144-5722, United States",
+      "lat": 25.7566837,
+      "lng": -80.2880536,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "15000 Miami Lakes Dr E, Miami Lakes, Florida, 33014-2700, United States",
+      "lat": 25.9105394,
+      "lng": -80.3065362,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1501 NW Federal Hwy, Stuart, Florida, 34994-1039, United States",
+      "lat": 27.2235338,
+      "lng": -80.2623869,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "15625 Southern Blvd, Loxahatchee, Florida, 33470-9214, United States",
+      "lat": 26.6847103,
+      "lng": -80.2923203,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "15729 Pines Blvd, Pembroke Pines, Florida, 33027-1206, United States",
+      "lat": 26.0081061,
+      "lng": -80.35618269999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "15750 SW 72nd St, Miami, Florida, 33193-5060, United States",
+      "lat": 25.6980987,
+      "lng": -80.44812379999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "15755 SW 56th St, Miami, Florida, 33185-3879, United States",
+      "lat": 25.7146037,
+      "lng": -80.44847140000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "15771 SW 152nd St, Miami, Florida, 33187-5417, United States",
+      "lat": 25.6266083,
+      "lng": -80.4485382,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "15801 Sheridan St, Fort Lauderdale, Florida, 33331-3487, United States",
+      "lat": 26.0310356,
+      "lng": -80.3576868,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1585 W 49th St, Hialeah, Florida, 33012-2924, United States",
+      "lat": 25.8689711,
+      "lng": -80.3141728,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1589 W Lantana Rd, Lantana, Florida, 33462-1537, United States",
+      "lat": 26.588855,
+      "lng": -80.0672,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1657 Hiatus Rd, Pembroke Pines, Florida, 33026-2129, United States",
+      "lat": 26.0214012,
+      "lng": -80.29867639999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "16800 SW 88th St, Miami, Florida, 33196-5935, United States",
+      "lat": 25.682797,
+      "lng": -80.4647222,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "16841 Persimmon Blvd W, Westlake, Florida, 33470-7076, United States",
+      "lat": 26.753133,
+      "lng": -80.30859850000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "170 S Flamingo Rd, Pembroke Pines, Florida, 33027-1720, United States",
+      "lat": 26.0058029,
+      "lng": -80.3141728,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1700 NE Miami Gardens Dr, Miami, Florida, 33179-5301, United States",
+      "lat": 25.9446518,
+      "lng": -80.16597039999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1700 S Congress Ave, Palm Springs, Florida, 33461-2140, United States",
+      "lat": 26.6384603,
+      "lng": -80.0868409,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "17400 Highway A1a Alt, Jupiter, Florida, 33477-5896, United States",
+      "lat": 26.9328135,
+      "lng": -80.0919904,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1750 N Federal Hwy, Fort Lauderdale, Florida, 33305-2543, United States",
+      "lat": 26.1513853,
+      "lng": -80.11799529999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1776 Biscayne Blvd, Miami, Florida, 33132-1129, United States",
+      "lat": 25.792692,
+      "lng": -80.1892585,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1776 Polk St, Hollywood, Florida, 33020-4642, United States",
+      "lat": 26.0131853,
+      "lng": -80.14240869999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1780 NE Jensen Beach Blvd, Jensen Beach, Florida, 34957-7292, United States",
+      "lat": 27.2413379,
+      "lng": -80.2275131,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "18280 SW 147th Ave, Miami, Florida, 33187-1813, United States",
+      "lat": 25.5970049,
+      "lng": -80.4314175,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "18330 Collins Ave, Sunny Isles Beach, Florida, 33160-2429, United States",
+      "lat": 25.9462143,
+      "lng": -80.1220882,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "18341 Pines Blvd, Pembroke Pines, Florida, 33029-1413, United States",
+      "lat": 26.0094184,
+      "lng": -80.3913795,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "18409 Miramar Pkwy, Miramar, Florida, 33029-5802, United States",
+      "lat": 25.980061,
+      "lng": -80.3927428,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1850 N Courtenay Pkwy, Merritt Island, Florida, 32953-2629, United States",
+      "lat": 28.3892208,
+      "lng": -80.7015835,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1851 N US Highway 1, Fort Pierce, Florida, 34946-1406, United States",
+      "lat": 27.4689062,
+      "lng": -80.3350336,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1880 Rockledge Blvd, Rockledge, Florida, 32955-2822, United States",
+      "lat": 28.3282203,
+      "lng": -80.7183771,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1920 West Ave, Miami Beach, Florida, 33139-1434, United States",
+      "lat": 25.795129,
+      "lng": -80.1432945,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "1940 Cordova Rd, Fort Lauderdale, Florida, 33316-2156, United States",
+      "lat": 26.0971278,
+      "lng": -80.13012239999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "19441 Sheridan St, Fort Lauderdale, Florida, 33332-1653, United States",
+      "lat": 26.030674,
+      "lng": -80.4075993,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "19595 State Road 7, Boca Raton, Florida, 33498-4701, United States",
+      "lat": 26.3858414,
+      "lng": -80.2048537,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "19955 NW 2nd Ave, Miami Gardens, Florida, 33169-2909, United States",
+      "lat": 25.9583471,
+      "lng": -80.20328479999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2000 Cheney Hwy, Titusville, Florida, 32780-6028, United States",
+      "lat": 28.5592403,
+      "lng": -80.82579799999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "20201 SW 127th Ave, Miami, Florida, 33177-5119, United States",
+      "lat": 25.5796123,
+      "lng": -80.3956127,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "20425 Old Cutler Rd, Miami, Florida, 33189-1833, United States",
+      "lat": 25.5761356,
+      "lng": -80.33954419999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2067 N Atlantic Ave, Cocoa Beach, Florida, 32931-3312, United States",
+      "lat": 28.3448178,
+      "lng": -80.6103155,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "20951 Old Cutler Rd, Cutler Bay, Florida, 33189-2469, United States",
+      "lat": 25.5723649,
+      "lng": -80.342573,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "214 N Dixie Hwy, Lake Worth Beach, Florida, 33460-3362, United States",
+      "lat": 26.6185835,
+      "lng": -80.0568976,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2201 N University Dr, Coral Springs, Florida, 33071-6185, United States",
+      "lat": 26.258311,
+      "lng": -80.2479884,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "225 S Flamingo Rd, Plantation, Florida, 33325-2817, United States",
+      "lat": 26.1167804,
+      "lng": -80.31589579999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2261 W New Haven Ave, West Melbourne, Florida, 32904-3805, United States",
+      "lat": 28.0775832,
+      "lng": -80.6598296,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2270 SW 27th Ave, Miami, Florida, 33145-3434, United States",
+      "lat": 25.7489147,
+      "lng": -80.2390167,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "22973 State Road 7, Boca Raton, Florida, 33428-5400, United States",
+      "lat": 26.3348683,
+      "lng": -80.2043283,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2301 State Road 524, Cocoa, Florida, 32926-5822, United States",
+      "lat": 28.3952002,
+      "lng": -80.7645684,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "23300 SW 112th Ave, Homestead, Florida, 33032-7173, United States",
+      "lat": 25.5504401,
+      "lng": -80.373578,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2414 W 60th St, Hialeah, Florida, 33016-4418, United States",
+      "lat": 25.8757634,
+      "lng": -80.3321425,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2465 Glades Cir, Weston, Florida, 33327, United States",
+      "lat": 26.139132,
+      "lng": -80.4206414,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2511 E Atlantic Blvd, Pompano Beach, Florida, 33062-5217, United States",
+      "lat": 26.2323763,
+      "lng": -80.0984708,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2517 S US Highway 1, Fort Pierce, Florida, 34982-5922, United States",
+      "lat": 27.422915,
+      "lng": -80.3282741,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2551 S Le Jeune Rd, Coral Gables, Florida, 33134-5805, United States",
+      "lat": 25.7481563,
+      "lng": -80.261183,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "270 E Eau Gallie Blvd, Satellite Beach, Florida, 32937-4874, United States",
+      "lat": 28.1407387,
+      "lng": -80.5973624,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2750 SW Martin Downs Blvd, Palm City, Florida, 34990, United States",
+      "lat": 27.1709849,
+      "lng": -80.2907529,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2895 Military Trl, West Palm Beach, Florida, 33409-2900, United States",
+      "lat": 26.72065,
+      "lng": -80.1124983,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2950 NE 8th St, Homestead, Florida, 33033-5694, United States",
+      "lat": 25.4752192,
+      "lng": -80.43414659999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "2952 NE 199th St, Aventura, Florida, 33180-3103, United States",
+      "lat": 25.9604162,
+      "lng": -80.141768,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3060 NE 41st Ter, Homestead, Florida, 33033-6619, United States",
+      "lat": 25.4981385,
+      "lng": -80.41465610000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3100 S Ocean Dr, Hollywood, Florida, 33019-2846, United States",
+      "lat": 25.994049,
+      "lng": -80.119083,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3102 Griffin Rd, Fort Lauderdale, Florida, 33312-6286, United States",
+      "lat": 26.0614952,
+      "lng": -80.1849476,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "311 SW 7th St, Miami, Florida, 33130-2917, United States",
+      "lat": 25.7676496,
+      "lng": -80.1994494,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3200 Lake Washington Rd, Melbourne, Florida, 32934-7620, United States",
+      "lat": 28.1475311,
+      "lng": -80.6744786,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3250 E 2nd Ave, Hialeah, Florida, 33013, United States",
+      "lat": 25.8519991,
+      "lng": -80.2785845,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3253 SW Port St Lucie Blvd, Port St Lucie, Florida, 34953-3489, United States",
+      "lat": 27.24757,
+      "lng": -80.375841,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3275 Garden St, Titusville, Florida, 32796-3004, United States",
+      "lat": 28.6172717,
+      "lng": -80.84326279999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3316 N Roosevelt Blvd, Key West, Florida, 33040, United States",
+      "lat": 24.5695104,
+      "lng": -81.7639189,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3339 W 80th St, Hialeah, Florida, 33018-5065, United States",
+      "lat": 25.8962314,
+      "lng": -80.349682,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3450 Bayside Lakes Blvd SE, Palm Bay, Florida, 32909-6815, United States",
+      "lat": 27.9514325,
+      "lng": -80.6581054,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3540 SE Federal Hwy, Stuart, Florida, 34997-4918, United States",
+      "lat": 27.1623093,
+      "lng": -80.227752,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3551 US-441 S, Okeechobee, Florida, 34974-6247, United States",
+      "lat": 27.2105428,
+      "lng": -80.8317238,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3685 W 85th Path, Hialeah, Florida, 33018, United States",
+      "lat": 25.9008513,
+      "lng": -80.3582797,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "374 Northlake Blvd, Lake Park, Florida, 33408-5421, United States",
+      "lat": 26.8045944,
+      "lng": -80.05846919999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3820 Murrell Rd, Rockledge, Florida, 32955, United States",
+      "lat": 28.2948574,
+      "lng": -80.7225895,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "3830 S Highway A1a, Melbourne Beach, Florida, 32951-3111, United States",
+      "lat": 28.015447,
+      "lng": -80.53498979999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "402 E Dania Beach Blvd, Dania Beach, Florida, 33004-3040, United States",
+      "lat": 26.0511366,
+      "lng": -80.13640339999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4100 N Wickham Rd, Melbourne, Florida, 32935-2485, United States",
+      "lat": 28.1726447,
+      "lng": -80.67373049999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4101 Hood Rd, Palm Beach Gardens, Florida, 33410-2171, United States",
+      "lat": 26.8654212,
+      "lng": -80.09726069999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "411 S Cypress Rd, Pompano Beach, Florida, 33060-7135, United States",
+      "lat": 26.2251512,
+      "lng": -80.1245215,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4121 W Commercial Blvd, Tamarac, Florida, 33319-3303, United States",
+      "lat": 26.1882513,
+      "lng": -80.2057305,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4145 Oslo Rd, Vero Beach, Florida, 32968-4804, United States",
+      "lat": 27.5867486,
+      "lng": -80.4280067,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "415 21st St, Vero Beach, Florida, 32960, United States",
+      "lat": 27.6384337,
+      "lng": -80.38274249999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4200 Northlake Blvd, Palm Beach Gardens, Florida, 33410, United States",
+      "lat": 26.8073382,
+      "lng": -80.1013287,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4231 NW Federal Hwy, Jensen Beach, Florida, 34957-3600, United States",
+      "lat": 27.2579537,
+      "lng": -80.2778649,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4260 SW 152nd Ave, Miami, Florida, 33185, United States",
+      "lat": 25.7268525,
+      "lng": -80.44109739999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4567 Weston Rd, Weston, Florida, 33331-3141, United States",
+      "lat": 26.0650104,
+      "lng": -80.36460100000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4701 S University Dr, Davie, Florida, 33328-3819, United States",
+      "lat": 26.0624931,
+      "lng": -80.25331229999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4703 N Ocean Dr, Sea Ranch Lakes, Florida, 33308-2914, United States",
+      "lat": 26.1974494,
+      "lng": -80.0972269,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4711 Babcock St NE, Palm Bay, Florida, 32905-2805, United States",
+      "lat": 28.0317033,
+      "lng": -80.6209635,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4760 W Hillsboro Blvd, Coconut Creek, Florida, 33073-4339, United States",
+      "lat": 26.3162083,
+      "lng": -80.1879424,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4770 N Congress Ave, Boynton Beach, Florida, 33426-7952, United States",
+      "lat": 26.5711192,
+      "lng": -80.0874613,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4771 W Atlantic Ave, Delray Beach, Florida, 33445-3838, United States",
+      "lat": 26.4590528,
+      "lng": -80.1193041,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4849 Coconut Creek Pkwy, Coconut Creek, Florida, 33063, United States",
+      "lat": 26.2462939,
+      "lng": -80.18846549999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4849 S Military Trl, Greenacres, Florida, 33463-5310, United States",
+      "lat": 26.605816,
+      "lng": -80.115465,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4901 SW 148th Ave, Davie, Florida, 33330-2400, United States",
+      "lat": 26.060863,
+      "lng": -80.3470715,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "4966 Le Chalet Blvd, Boynton Beach, Florida, 33436-1406, United States",
+      "lat": 26.5540314,
+      "lng": -80.1221833,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "500 N US Highway 1, Tequesta, Florida, 33469-2372, United States",
+      "lat": 26.9672579,
+      "lng": -80.08858649999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "501 SE 18th Ave, Boynton Beach, Florida, 33435-6949, United States",
+      "lat": 26.5135396,
+      "lng": -80.0608266,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5050 Champion Blvd, Boca Raton, Florida, 33496-4438, United States",
+      "lat": 26.4102029,
+      "lng": -80.1241027,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5211 Sheridan St, Hollywood, Florida, 33021-3344, United States",
+      "lat": 26.0346701,
+      "lng": -80.19500370000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5230 US Highway 1, Vero Beach, Florida, 32967-7608, United States",
+      "lat": 27.6880791,
+      "lng": -80.4100478,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5380 Stadium Pkwy, Rockledge, Florida, 32955-6423, United States",
+      "lat": 28.2679746,
+      "lng": -80.7366262,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5407 Overseas Hwy, Marathon, Florida, 33050-2710, United States",
+      "lat": 24.7144577,
+      "lng": -81.07624179999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5410 Donald Ross Rd, Palm Beach Gardens, Florida, 33418-7257, United States",
+      "lat": 26.8807879,
+      "lng": -80.1179181,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5473 St James Dr, Port St Lucie, Florida, 34983-3444, United States",
+      "lat": 27.355005,
+      "lng": -80.35812190000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5500 Military Trl, Jupiter, Florida, 33458-2865, United States",
+      "lat": 26.8835091,
+      "lng": -80.1042957,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "555 NE 5th Ave, Delray Beach, Florida, 33483-5634, United States",
+      "lat": 26.4710921,
+      "lng": -80.06755849999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5655 N Atlantic Ave, Cocoa Beach, Florida, 32931-3919, United States",
+      "lat": 28.369158,
+      "lng": -80.6055955,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5656 S Flamingo Rd, Cooper City, Florida, 33330-3236, United States",
+      "lat": 26.0477161,
+      "lng": -80.310947,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5715 NW 7th St, Miami, Florida, 33126, United States",
+      "lat": 25.7789592,
+      "lng": -80.2899693,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5855 W Oakland Park Blvd, Lauderhill, Florida, 33313-1321, United States",
+      "lat": 26.1661144,
+      "lng": -80.2301893,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5881 N University Dr, Tamarac, Florida, 33321-4618, United States",
+      "lat": 26.1968928,
+      "lng": -80.25545679999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5943 SE Federal Hwy, Stuart, Florida, 34997-7871, United States",
+      "lat": 27.1319729,
+      "lng": -80.203679,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5950 Coral Ridge Dr, Coral Springs, Florida, 33076-3300, United States",
+      "lat": 26.3051125,
+      "lng": -80.2807387,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5970 S Jog Rd, Lake Worth Beach, Florida, 33467-6590, United States",
+      "lat": 26.5903382,
+      "lng": -80.1469868,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "5997 Stirling Rd, Davie, Florida, 33314-7225, United States",
+      "lat": 26.0473616,
+      "lng": -80.2256831,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "600 N University Dr, Pembroke Pines, Florida, 33024-6731, United States",
+      "lat": 26.0134225,
+      "lng": -80.2509504,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6251 PGA Blvd, Palm Beach Gardens, Florida, 33418-4000, United States",
+      "lat": 26.8417895,
+      "lng": -80.1334251,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6270 W Sample Rd, Coral Springs, Florida, 33067-3176, United States",
+      "lat": 26.2724106,
+      "lng": -80.2097347,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6330 W Indiantown Rd, Jupiter, Florida, 33458-7981, United States",
+      "lat": 26.9338122,
+      "lng": -80.1326959,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6525 Nova Dr, Davie, Florida, 33317-7401, United States",
+      "lat": 26.086985,
+      "lng": -80.2303886,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6550 S Kanner Hwy, Stuart, Florida, 34997-6396, United States",
+      "lat": 27.1255661,
+      "lng": -80.2538881,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6570 N State Road 7, Coconut Creek, Florida, 33073-3625, United States",
+      "lat": 26.3110291,
+      "lng": -80.2002397,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6627 Boynton Beach Blvd, Boynton Beach, Florida, 33437-3526, United States",
+      "lat": 26.5293993,
+      "lng": -80.1496617,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6790 Forest Hill Blvd, Greenacres, Florida, 33413-3351, United States",
+      "lat": 26.6490096,
+      "lng": -80.1478301,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6820 Okeechobee Blvd, West Palm Beach, Florida, 33411-2593, United States",
+      "lat": 26.7058385,
+      "lng": -80.15074299999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6876 Collins Ave, Miami Beach, Florida, 33141-3244, United States",
+      "lat": 25.8530482,
+      "lng": -80.12078729999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6901 Taft St, Hollywood, Florida, 33024-3801, United States",
+      "lat": 26.0258352,
+      "lng": -80.2263802,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "6921 W Broward Blvd, Plantation, Florida, 33317-2902, United States",
+      "lat": 26.1222501,
+      "lng": -80.2393242,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7050 Seminole Pratt Whitney Rd, Loxahatchee, Florida, 33470-3474, United States",
+      "lat": 26.7810073,
+      "lng": -80.2923429,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7060 W Palmetto Park Rd, Boca Raton, Florida, 33433-3411, United States",
+      "lat": 26.3483511,
+      "lng": -80.157583,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7230 W Atlantic Blvd, Margate, Florida, 33063-4236, United States",
+      "lat": 26.2340488,
+      "lng": -80.2226273,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7325 N Highway 1, Cocoa, Florida, 32927-5006, United States",
+      "lat": 28.486187,
+      "lng": -80.77384239999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7375 W Atlantic Ave, Delray Beach, Florida, 33446, United States",
+      "lat": 26.4555262,
+      "lng": -80.1614271,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "746 SW Federal Hwy, Stuart, Florida, 34994-2937, United States",
+      "lat": 27.1911558,
+      "lng": -80.25643850000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7550 NW 104th Ave, Doral, Florida, 33178-3333, United States",
+      "lat": 25.8421503,
+      "lng": -80.3681704,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7576 S US Highway 1, Port St Lucie, Florida, 34952-1450, United States",
+      "lat": 27.329055,
+      "lng": -80.3196842,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7655 Stadium Pkwy, Melbourne, Florida, 32940-8777, United States",
+      "lat": 28.2220382,
+      "lng": -80.73064579999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7745 Lake Worth Rd, Lake Worth Beach, Florida, 33467-2536, United States",
+      "lat": 26.6183582,
+      "lng": -80.1672782,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "7805 Bird Rd, Miami, Florida, 33155, United States",
+      "lat": 25.733302,
+      "lng": -80.3195765,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "788 SE Becker Rd, Port St Lucie, Florida, 34984-6621, United States",
+      "lat": 27.2095732,
+      "lng": -80.326359,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8140 W McNab Rd, North Lauderdale, Florida, 33068-4138, United States",
+      "lat": 26.2071508,
+      "lng": -80.237185,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8160 Wiles Rd, Coral Springs, Florida, 33067-2041, United States",
+      "lat": 26.285317,
+      "lng": -80.2355295,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8245 NW 88th Ave, Tamarac, Florida, 33321-1541, United States",
+      "lat": 26.227227,
+      "lng": -80.2712518,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8250 Mills Dr, Miami, Florida, 33183, United States",
+      "lat": 25.6911031,
+      "lng": -80.38787239999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "831 Village Blvd, West Palm Beach, Florida, 33409, United States",
+      "lat": 26.7139634,
+      "lng": -80.1019697,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8341 W Flagler St, Miami, Florida, 33144-2029, United States",
+      "lat": 25.7702008,
+      "lng": -80.33183199999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8455 NW 53rd Ter, Doral, Florida, 33166-4517, United States",
+      "lat": 25.8220618,
+      "lng": -80.3350579,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8680 Coral Way, Miami, Florida, 33155-2338, United States",
+      "lat": 25.7459977,
+      "lng": -80.3348963,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8780 Boynton Beach Blvd, Boynton Beach, Florida, 33472-4423, United States",
+      "lat": 26.5255751,
+      "lng": -80.185327,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8842 W State Road 84, Davie, Florida, 33324-4415, United States",
+      "lat": 26.1006932,
+      "lng": -80.26671689999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "8989 Okeechobee Blvd, West Palm Beach, Florida, 33411-1826, United States",
+      "lat": 26.7104918,
+      "lng": -80.1843157,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9041 SW 107th Ave, Miami, Florida, 33176-1414, United States",
+      "lat": 25.6843408,
+      "lng": -80.365952,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9050 Biscayne Blvd, Miami Shores, Florida, 33138-3222, United States",
+      "lat": 25.8587633,
+      "lng": -80.18454229999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9105 S Dadeland Blvd, Miami, Florida, 33156-7813, United States",
+      "lat": 25.6862917,
+      "lng": -80.3156573,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9179 Babcock St SE, Palm Bay, Florida, 32909, United States",
+      "lat": 27.8981614,
+      "lng": -80.6205831,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9239 W Atlantic Ave, Delray Beach, Florida, 33446, United States",
+      "lat": 26.4552099,
+      "lng": -80.1914334,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "926 S Military Trl, West Palm Beach, Florida, 33415-3910, United States",
+      "lat": 26.6645522,
+      "lng": -80.1105786,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "930 N Miami Beach Blvd, Miami, Florida, 33162-3716, United States",
+      "lat": 25.9233204,
+      "lng": -80.17570599999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9300 W Commercial Blvd, Sunrise, Florida, 33351-4302, United States",
+      "lat": 26.1927833,
+      "lng": -80.27474620000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9335 SW Commerce Centre Dr, Port St Lucie, Florida, 34986, United States",
+      "lat": 27.2952846,
+      "lng": -80.42406249999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9359 Sheridan St, Hollywood, Florida, 33024-8560, United States",
+      "lat": 26.0331879,
+      "lng": -80.26607729999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "95 S US-1, Jupiter, Florida, 33477-5117, United States",
+      "lat": 26.9332103,
+      "lng": -80.0803768,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "950 E Commercial Blvd, Oakland Park, Florida, 33334-3210, United States",
+      "lat": 26.1879339,
+      "lng": -80.1348907,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9510 SW 160th St, Miami, Florida, 33157-3300, United States",
+      "lat": 25.6188371,
+      "lng": -80.3475066,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9621 US Highway 1, Sebastian, Florida, 32958, United States",
+      "lat": 27.769351,
+      "lng": -80.4473417,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9720 Clint Moore Rd, Boca Raton, Florida, 33496-1011, United States",
+      "lat": 26.4076748,
+      "lng": -80.200161,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9846 Glades Rd, Boca Raton, Florida, 33434-3917, United States",
+      "lat": 26.3646912,
+      "lng": -80.20128,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9900 Alternate A1a S, Palm Beach Gardens, Florida, 33410, United States",
+      "lat": 26.8225309,
+      "lng": -80.0829131,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "9951 W Flagler St, Miami, Florida, 33174-1805, United States",
+      "lat": 25.7702269,
+      "lng": -80.3577237,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "S Dixie Hwy, Cutler Bay, Florida, 33157-6817, United States",
+      "lat": 25.607764,
+      "lng": -80.3500251,
+      "country": "US"
+    },
+    {
+      "name": "Publix Miami",
+      "address": "SW Village Center Dr, Port St Lucie, Florida, 34987-2186, United States",
+      "lat": 27.267974,
+      "lng": -80.4302406,
+      "country": "US"
+    },
+    {
+      "name": "Sabor Tropical",
+      "address": "1410 N Krome Ave, Homestead, Florida, 33030-4209, United States",
+      "lat": 25.4838855,
+      "lng": -80.4778321,
+      "country": "US"
+    },
+    {
+      "name": "Sabor Tropical",
+      "address": "28945 S Dixie Hwy, Homestead, Florida, 33033-2407, United States",
+      "lat": 25.4979667,
+      "lng": -80.4456033,
+      "country": "US"
+    },
+    {
+      "name": "Sabor Tropical",
+      "address": "8000 NE 5th Ave, Miami, Florida, 33138-4510, United States",
+      "lat": 25.8482021,
+      "lng": -80.1872886,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "600 E Main St, Pahokee, Florida, 33476-1404, United States",
+      "lat": 26.8264544,
+      "lng": -80.6600157,
+      "country": "US"
+    },
+    {
+      "name": "Sedanos",
+      "address": "831 NE 8th St, Homestead, Florida, 33030, United States",
+      "lat": 25.4783495,
+      "lng": -80.46654699999999,
+      "country": "US"
+    },
+    {
+      "name": "Sedanos",
+      "address": "8601 Bird Rd, Miami, Florida, 33155-3215, United States",
+      "lat": 25.7344114,
+      "lng": -80.33393819999999,
+      "country": "US"
+    },
+    {
+      "name": "Tapatia Supermarket",
+      "address": "5311 N State Road 7, Tamarac, Florida, 33319-2919, United States",
+      "lat": 26.1907922,
+      "lng": -80.2039624,
+      "country": "US"
+    },
+    {
+      "name": "Tropical Farmers Market",
+      "address": "8195 N Military Trl, Palm Beach Gardens, Florida, 33410-6307, United States",
+      "lat": 26.7967074,
+      "lng": -80.1072409,
+      "country": "US"
+    },
+    {
+      "name": "V.T.LLC Dba Universo Brands",
+      "address": "9401 SR-A1A, Surfside, Florida, 33154-2616, United States",
+      "lat": 25.8721483,
+      "lng": -80.12120949999999,
+      "country": "US"
+    },
+    {
+      "name": "Victoria Green Market",
+      "address": "3133 Lake Worth Rd, Palm Springs, Florida, 33461-3611, United States",
+      "lat": 26.6182525,
+      "lng": -80.0911254,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10237 Bay Pines Blvd, St Petersburg, Florida, 33708-3131, United States",
+      "lat": 27.8158203,
+      "lng": -82.7813638,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1041 US Highway 27 N, Avon Park, Florida, 33825-2504, United States",
+      "lat": 27.6098067,
+      "lng": -81.5177818,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1050 E Van Fleet Dr, Bartow, Florida, 33830-7603, United States",
+      "lat": 27.9067936,
+      "lng": -81.8340916,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10500 W Colonial Dr, Ocoee, Florida, 34761-2946, United States",
+      "lat": 28.5497509,
+      "lng": -81.53255779999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10635 W Atlantic Blvd, Coral Springs, Florida, 33071-5669, United States",
+      "lat": 26.242102,
+      "lng": -80.2675008,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1101 Beville Rd, Daytona Beach, Florida, 32119-1604, United States",
+      "lat": 29.1725971,
+      "lng": -81.03039799999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11110 Causeway Blvd, Brandon, Florida, 33511-2900, United States",
+      "lat": 27.9243653,
+      "lng": -82.32518019999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11250 E Colonial Dr, Orlando, Florida, 32817-4537, United States",
+      "lat": 28.5662579,
+      "lng": -81.2181604,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11800 Hialeah Gardens Blvd, Hialeah Gardens, Florida, 33018-4235, United States",
+      "lat": 25.881133,
+      "lng": -80.3523793,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11930 Narcoossee Rd, Orlando, Florida, 32832-6900, United States",
+      "lat": 28.3901088,
+      "lng": -81.247726,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1226 Freeport Rd, Defuniak Springs, Florida, 32435-3396, United States",
+      "lat": 30.7045235,
+      "lng": -86.12484049999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1239 State Road 436, Casselberry, Florida, 32707-6447, United States",
+      "lat": 28.6348561,
+      "lng": -81.32310140000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "12800 Pines Blvd, Pembroke Pines, Florida, 33027-1708, United States",
+      "lat": 26.0056023,
+      "lng": -80.3180254,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "13490 Beach Blvd, Jacksonville, Florida, 32224-0290, United States",
+      "lat": 30.256855,
+      "lng": -81.46593089999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "13801 Landstar Blvd, Orlando, Florida, 32824-5525, United States",
+      "lat": 28.3660851,
+      "lng": -81.3647444,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1425 NE 163rd St, Miami, Florida, 33162-4624, United States",
+      "lat": 25.9262774,
+      "lng": -80.1717925,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "14325 SW 268th St, Homestead, Florida, 33032-8298, United States",
+      "lat": 25.5206988,
+      "lng": -80.4233503,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1450 Johns Lake Rd, Clermont, Florida, 34711-6798, United States",
+      "lat": 28.5299796,
+      "lng": -81.7313561,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1471 E Osceola Pkwy, Kissimmee, Florida, 34744-1604, United States",
+      "lat": 28.3425737,
+      "lng": -81.4204877,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1485 Commercial Way, Spring Hill, Florida, 34606-4525, United States",
+      "lat": 28.4586441,
+      "lng": -82.6304492,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1499 S Dixie Hwy, Homestead, Florida, 33030-5040, United States",
+      "lat": 25.4840302,
+      "lng": -80.45950839999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1500 E Merritt Island Cswy, Merritt Island, Florida, 32952-2612, United States",
+      "lat": 28.3596466,
+      "lng": -80.6685054,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1505 N Dale Mabry Hwy, Tampa, Florida, 33607-2552, United States",
+      "lat": 27.9581846,
+      "lng": -82.50323949999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "151 SW 184th Ave, Pembroke Pines, Florida, 33029-5465, United States",
+      "lat": 26.0057244,
+      "lng": -80.38959129999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1525 E Nine Mile Rd, Pensacola, Florida, 32514-5725, United States",
+      "lat": 30.531378,
+      "lng": -87.2322865,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "15601 SW 127th Ave, Miami, Florida, 33177, United States",
+      "lat": 25.623339,
+      "lng": -80.39651549999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1580 Branan Field Rd, Middleburg, Florida, 32068-8427, United States",
+      "lat": 30.1057319,
+      "lng": -81.83370719999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "15885 SW 88th St, Miami, Florida, 33196-1003, United States",
+      "lat": 25.683486,
+      "lng": -80.4475379,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1601 W Kennedy Blvd, Tampa, Florida, 33606-1844, United States",
+      "lat": 27.9456146,
+      "lng": -82.47614279999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1650 San Pablo Rd S, Jacksonville, Florida, 32224-2083, United States",
+      "lat": 30.3184313,
+      "lng": -81.4504946,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1675 St Lucie West Blvd, Port St Lucie, Florida, 34986-2106, United States",
+      "lat": 27.314961,
+      "lng": -80.4021892,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1699 N Woodland Blvd, DeLand, Florida, 32720-1803, United States",
+      "lat": 29.0619918,
+      "lng": -81.30177239999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1700 S Orange Blossom Trl, Apopka, Florida, 32703-7745, United States",
+      "lat": 28.649471,
+      "lng": -81.46926479999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "17030 US Highway 441, Mt Dora, Florida, 32757-6733, United States",
+      "lat": 28.8186055,
+      "lng": -81.6726759,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1720 E Hillsborough Ave, Tampa, Florida, 33610-8234, United States",
+      "lat": 27.9970637,
+      "lng": -82.4399052,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "17650 NW 2nd Ave, Miami Gardens, Florida, 33169, United States",
+      "lat": 25.9358803,
+      "lng": -80.20773,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1800 S University Dr, Miramar, Florida, 33025-2231, United States",
+      "lat": 25.9935666,
+      "lng": -80.25045349999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1905 N Nova Rd, Holly Hill, Florida, 32117, United States",
+      "lat": 29.2488822,
+      "lng": -81.06722099999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "19100 Murdock Cir, Port Charlotte, Florida, 33948-1022, United States",
+      "lat": 27.0137459,
+      "lng": -82.1405321,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1940 Pat Thomas Pkwy, Quincy, Florida, 32351-8785, United States",
+      "lat": 30.5570928,
+      "lng": -84.59555519999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "19501 NW 27th Ave, Miami Gardens, Florida, 33056-2521, United States",
+      "lat": 25.9528578,
+      "lng": -80.2437193,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2000 State Road 60 E, Lake Wales, Florida, 33898-5182, United States",
+      "lat": 27.8921494,
+      "lng": -81.5532149,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2101 S Highway 77, Lynn Haven, Florida, 32444-4646, United States",
+      "lat": 30.2262778,
+      "lng": -85.6462762,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "21151 S Dixie Hwy, Miami, Florida, 33189-2724, United States",
+      "lat": 25.5709258,
+      "lng": -80.3760729,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2144 W Indiantown Rd, Jupiter, Florida, 33458-5810, United States",
+      "lat": 26.9326553,
+      "lng": -80.12824839999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2163 W C 48, Bushnell, Florida, 33513-8999, United States",
+      "lat": 28.6658075,
+      "lng": -82.1392209,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2300 W Atlantic Blvd, Pompano Beach, Florida, 33069-2655, United States",
+      "lat": 26.2278912,
+      "lng": -80.15491659999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "23106 US-19 S, Clearwater, Florida, 33765, United States",
+      "lat": 27.9752,
+      "lng": -82.7298815,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2499 N 14th St, Leesburg, Florida, 34748, United States",
+      "lat": 28.8322429,
+      "lng": -81.8880653,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2500 W Broward Blvd, Fort Lauderdale, Florida, 33312-1300, United States",
+      "lat": 26.1190752,
+      "lng": -80.17512579999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2551 E Hallandale Beach Blvd, Hallandale Beach, Florida, 33009-4818, United States",
+      "lat": 25.9877565,
+      "lng": -80.12384089999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2602 James L Redman Pkwy, Plant City, Florida, 33566-9460, United States",
+      "lat": 27.9858988,
+      "lng": -82.1188919,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2675 10th Ave N, Lake Worth Beach, Florida, 33461-3146, United States",
+      "lat": 26.6283256,
+      "lng": -80.08229209999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2700 Clearlake Rd, Cocoa, Florida, 32922-5716, United States",
+      "lat": 28.394494,
+      "lng": -80.75365409999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2701 E Fletcher Ave, Tampa, Florida, 33612-9414, United States",
+      "lat": 28.0683013,
+      "lng": -82.4281958,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2725 SE Highway 70, Arcadia, Florida, 34266-5665, United States",
+      "lat": 27.2088574,
+      "lng": -81.8295017,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2765 10th Ave N, Palm Springs, Florida, 33461-3185, United States",
+      "lat": 26.6309184,
+      "lng": -80.0838643,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2911 53rd Ave E, Bradenton, Florida, 34203-4312, United States",
+      "lat": 27.4494849,
+      "lng": -82.5271937,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3001 N State Road 7, Lauderdale Lakes, Florida, 33313-1913, United States",
+      "lat": 26.1627655,
+      "lng": -80.20528949999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3101 Princeton St, Orlando, Florida, 32808-5600, United States",
+      "lat": 28.5697966,
+      "lng": -81.4173744,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3155 S Federal Hwy, Delray Beach, Florida, 33483-3221, United States",
+      "lat": 26.4258866,
+      "lng": -80.07175649999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3200 NW 79th St, Miami, Florida, 33147-4600, United States",
+      "lat": 25.8438248,
+      "lng": -80.2509987,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "33501 S Dixie Hwy, Florida City, Florida, 33034-5628, United States",
+      "lat": 25.4576646,
+      "lng": -80.4731317,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "34 Bahia Ave, Ocala, Florida, 34472, United States",
+      "lat": 29.1185855,
+      "lng": -82.0235604,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3501 S Florida Ave, Lakeland, Florida, 33803-4860, United States",
+      "lat": 28.0007713,
+      "lng": -81.9595144,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3525 US Highway 27 N, Sebring, Florida, 33870-1640, United States",
+      "lat": 27.5131019,
+      "lng": -81.4971197,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "36205 Hwy 27, Haines City, Florida, 33844, United States",
+      "lat": 28.1262396,
+      "lng": -81.6374142,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3791 NW 167th St, Miami Gardens, Florida, 33055, United States",
+      "lat": 25.9267433,
+      "lng": -80.2622433,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3801 Turtle Creek Dr, Coral Springs, Florida, 33067-4200, United States",
+      "lat": 26.2783552,
+      "lng": -80.2031478,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3838 S Semoran Blvd, Orlando, Florida, 32822-4006, United States",
+      "lat": 28.5048756,
+      "lng": -81.3126061,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3911 S Jog Rd, Lake Worth Beach, Florida, 33467-1590, United States",
+      "lat": 26.6199147,
+      "lng": -80.1467748,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4150 Tamiami Trl S, Venice, Florida, 34293-5130, United States",
+      "lat": 27.0476018,
+      "lng": -82.39588239999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4225 45th St, West Palm Beach, Florida, 33407-1919, United States",
+      "lat": 26.7622295,
+      "lng": -80.10314249999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4375 Belvedere Rd, West Palm Beach, Florida, 33406-1545, United States",
+      "lat": 26.6936453,
+      "lng": -80.1091866,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4400 W Tennessee St, Tallahassee, Florida, 32304-1029, United States",
+      "lat": 30.4619538,
+      "lng": -84.35931389999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "445 State Road 13, St Johns, Florida, 32259-2821, United States",
+      "lat": 30.1198277,
+      "lng": -81.6239727,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4525 Gunn Hwy, Tampa, Florida, 33624-6311, United States",
+      "lat": 28.0497409,
+      "lng": -82.5182032,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4700 S Flamingo Rd, Cooper City, Florida, 33330-2300, United States",
+      "lat": 26.0621343,
+      "lng": -80.3105451,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4770 Colonial Blvd, Fort Myers, Florida, 33966-1034, United States",
+      "lat": 26.610776,
+      "lng": -81.81387029999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4980 E Silver Springs Blvd, Ocala, Florida, 34470-3268, United States",
+      "lat": 29.2097017,
+      "lng": -82.06420740000002,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5100 Okeechobee Rd, Fort Pierce, Florida, 34947-5428, United States",
+      "lat": 27.4214094,
+      "lng": -80.3779258,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5315 Cortez Rd W, Bradenton, Florida, 34210, United States",
+      "lat": 27.4605011,
+      "lng": -82.61632709999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "545 Pine Island Rd, North Fort Myers, Florida, 33903-3764, United States",
+      "lat": 26.6797975,
+      "lng": -81.8993345,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5555 20th St, Vero Beach, Florida, 32966-4632, United States",
+      "lat": 27.637718,
+      "lng": -80.4430828,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5571 W Hillsboro Blvd, Coconut Creek, Florida, 33073-4376, United States",
+      "lat": 26.318458,
+      "lng": -80.200757,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5851 NW 177th St, Hialeah, Florida, 33015, United States",
+      "lat": 25.9349336,
+      "lng": -80.29658669999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6001 Coral Ridge Dr, Coral Springs, Florida, 33076-3306, United States",
+      "lat": 26.3046098,
+      "lng": -80.27603599999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6177 S Jog Rd, Lake Worth Beach, Florida, 33467-6524, United States",
+      "lat": 26.587604,
+      "lng": -80.14658179999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6225 E SR-64, Bradenton, Florida, 34208, United States",
+      "lat": 27.4957907,
+      "lng": -82.4823828,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6275 Highway 90, Milton, Florida, 32570-1708, United States",
+      "lat": 30.6054782,
+      "lng": -87.06227,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6294 Forest Hill Blvd, Greenacres, Florida, 33415-6109, United States",
+      "lat": 26.6498243,
+      "lng": -80.1425095,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6670 Mobile Hwy, Pensacola, Florida, 32526-1265, United States",
+      "lat": 30.477855,
+      "lng": -87.30836939999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6991 SW 8th St, Miami, Florida, 33144-4743, United States",
+      "lat": 25.7642822,
+      "lng": -80.3086014,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7360 Navarre Pkwy, Navarre, Florida, 32566-7752, United States",
+      "lat": 30.4027412,
+      "lng": -86.915246,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "748 N Beal Pkwy, Fort Walton Beach, Florida, 32547-3002, United States",
+      "lat": 30.441035,
+      "lng": -86.6415698,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7818 W Colonial Dr, Orlando, Florida, 32818-6674, United States",
+      "lat": 28.5499404,
+      "lng": -81.4907972,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "845 Durbin Pavilion Dr, St Johns, Florida, 32259, United States",
+      "lat": 30.0937956,
+      "lng": -81.52065209999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8651 NW 13th Ter, Doral, Florida, 33126-1512, United States",
+      "lat": 25.7869392,
+      "lng": -80.3354105,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8808 Beach Blvd, Jacksonville, Florida, 32216-4621, United States",
+      "lat": 30.2851314,
+      "lng": -81.5631792,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "901 Lithia Pinecrest Rd, Brandon, Florida, 33511-6120, United States",
+      "lat": 27.9254962,
+      "lng": -82.2702109,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9131 College Pkwy, Fort Myers, Florida, 33919-4827, United States",
+      "lat": 26.5561127,
+      "lng": -81.9065878,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9191 W Flagler St, Miami, Florida, 33174-2405, United States",
+      "lat": 25.770269,
+      "lng": -80.34353109999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9205 Gibsonton Dr, Gibsonton, Florida, 33534-4608, United States",
+      "lat": 27.8481003,
+      "lng": -82.3543437,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9301 Pine Forest Rd, Pensacola, Florida, 32534-9349, United States",
+      "lat": 30.5329818,
+      "lng": -87.31463869999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9885 Collier Blvd, Naples, Florida, 34114-2638, United States",
+      "lat": 26.1490765,
+      "lng": -81.6891028,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9890 Hutchinson Park Dr, Jacksonville, Florida, 32225-7205, United States",
+      "lat": 30.341578,
+      "lng": -81.545581,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9990 Belvedere Rd, West Palm Beach, Florida, 33411-3518, United States",
+      "lat": 26.6892098,
+      "lng": -80.1995157,
+      "country": "US"
+    }
+  ]
+}

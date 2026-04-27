@@ -1,0 +1,1497 @@
+{
+  "state_code": "AZ",
+  "count": 213,
+  "stores": [
+    {
+      "name": "Affiliated Amarillo Warehouse",
+      "address": "631 W Mesa Verde Dr, Nogales, Arizona, 85621-3727, United States",
+      "lat": 31.3828999,
+      "lng": -110.9477902,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "1118 E Southern Ave, Mesa, Arizona, 85204-5012, United States",
+      "lat": 33.3947746,
+      "lng": -111.8086036,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "1602 E Roosevelt St, Phoenix, Arizona, 85006, United States",
+      "lat": 33.4600252,
+      "lng": -112.0454611,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "3223 W Indian School Rd, Phoenix, Arizona, 85017-4070, United States",
+      "lat": 33.4935576,
+      "lng": -112.129422,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "3415 W Glendale Ave, Phoenix, Arizona, 85051-8357, United States",
+      "lat": 33.5380456,
+      "lng": -112.1327254,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "5802 W Thomas Rd, Phoenix, Arizona, 85031-3229, United States",
+      "lat": 33.4817859,
+      "lng": -112.1849845,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "6730 W Camelback Rd, Glendale, Arizona, 85303-6307, United States",
+      "lat": 33.5102595,
+      "lng": -112.2044975,
+      "country": "US"
+    },
+    {
+      "name": "El Rancho Mkt",
+      "address": "1076 N Arizona Ave, Chandler, Arizona, 85225-6600, United States",
+      "lat": 33.3220692,
+      "lng": -111.8426138,
+      "country": "US"
+    },
+    {
+      "name": "El Rancho Mkt",
+      "address": "8901 N 19th Ave, Phoenix, Arizona, 85021-4206, United States",
+      "lat": 33.5662313,
+      "lng": -112.0983394,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "2211 W Camelback Rd, Phoenix, Arizona, 85015-0004, United States",
+      "lat": 33.5084842,
+      "lng": -112.1074848,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "3130 E Thomas Rd, Phoenix, Arizona, 85016-8016, United States",
+      "lat": 33.4817383,
+      "lng": -112.0152204,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "5127 W Indian School Rd, Phoenix, Arizona, 85031-2600, United States",
+      "lat": 33.4935344,
+      "lng": -112.1704065,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "7502 W Thomas Rd, Phoenix, Arizona, 85033-5447, United States",
+      "lat": 33.4816215,
+      "lng": -112.2214497,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "10675 W Indian School Rd, Avondale, Arizona, 85392-5645, United States",
+      "lat": 33.4924116,
+      "lng": -112.2886979,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "11425 W Buckeye Rd, Avondale, Arizona, 85323-6810, United States",
+      "lat": 33.433967,
+      "lng": -112.3044385,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "13982 W Waddell Rd, Surprise, Arizona, 85379-8738, United States",
+      "lat": 33.6094496,
+      "lng": -112.3613124,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "16380 W Yuma Rd, Goodyear, Arizona, 85338-3100, United States",
+      "lat": 33.4377009,
+      "lng": -112.4112048,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "1815 W Glendale Ave, Phoenix, Arizona, 85021-8582, United States",
+      "lat": 33.537189,
+      "lng": -112.0980965,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "1845 E Baseline Rd, Gilbert, Arizona, 85233-1545, United States",
+      "lat": 33.3770574,
+      "lng": -111.7912722,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "1915 S Power Rd, Mesa, Arizona, 85206-4301, United States",
+      "lat": 33.3803301,
+      "lng": -111.6852631,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "2010 S Alma School Rd, Chandler, Arizona, 85286-7072, United States",
+      "lat": 33.2755663,
+      "lng": -111.8609223,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "2250 E Baseline Rd, Phoenix, Arizona, 85042-6947, United States",
+      "lat": 33.379523,
+      "lng": -112.0318193,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "2727 E Broadway Rd, Mesa, Arizona, 85204-1592, United States",
+      "lat": 33.4071522,
+      "lng": -111.7730176,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "2727 W Bell Rd, Phoenix, Arizona, 85053-3059, United States",
+      "lat": 33.6382203,
+      "lng": -112.1199412,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "3421 W Thunderbird Rd, Phoenix, Arizona, 85053-5602, United States",
+      "lat": 33.6092285,
+      "lng": -112.1321233,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "3616 E Ray Rd, Phoenix, Arizona, 85044-7114, United States",
+      "lat": 33.3167931,
+      "lng": -112.0054548,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "3949 E Chandler Blvd, Phoenix, Arizona, 85048-7335, United States",
+      "lat": 33.3036792,
+      "lng": -111.998902,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "4025 E Thunderbird Rd, Phoenix, Arizona, 85032-5836, United States",
+      "lat": 33.6110512,
+      "lng": -111.9946165,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "4315 W Bell Rd, Glendale, Arizona, 85308-3530, United States",
+      "lat": 33.638285,
+      "lng": -112.1530813,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "4353 W Bethany Home Rd, Glendale, Arizona, 85301-5401, United States",
+      "lat": 33.5226428,
+      "lng": -112.1531555,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "4505 E Thomas Rd, Phoenix, Arizona, 85018-7614, United States",
+      "lat": 33.4792616,
+      "lng": -111.9840842,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "4707 E Shea Blvd, Phoenix, Arizona, 85028-4215, United States",
+      "lat": 33.5810348,
+      "lng": -111.978999,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "5100 S McClintock Dr, Tempe, Arizona, 85282-1095, United States",
+      "lat": 33.3793918,
+      "lng": -111.9108712,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "5116 W Olive Ave, Glendale, Arizona, 85302-4209, United States",
+      "lat": 33.5677121,
+      "lng": -112.1700045,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "5140 W Baseline Rd, Laveen, Arizona, 85339-2971, United States",
+      "lat": 33.379552,
+      "lng": -112.1703002,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "554 W Baseline Rd, Mesa, Arizona, 85210-6019, United States",
+      "lat": 33.3805881,
+      "lng": -111.8435372,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "5771 W Thunderbird Rd, Glendale, Arizona, 85306-4635, United States",
+      "lat": 33.6093424,
+      "lng": -112.184192,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "714 S Val Vista Dr, Gilbert, Arizona, 85296-3140, United States",
+      "lat": 33.3367192,
+      "lng": -111.7566219,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "7455 W Cactus Rd, Peoria, Arizona, 85381-5399, United States",
+      "lat": 33.5945149,
+      "lng": -112.2188417,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "7770 E McDowell Rd, Scottsdale, Arizona, 85257-3744, United States",
+      "lat": 33.4672995,
+      "lng": -111.9130312,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "850 E Hatcher Rd, Phoenix, Arizona, 85020-2693, United States",
+      "lat": 33.5726794,
+      "lng": -112.0610362,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "855 W Warner Rd, Gilbert, Arizona, 85233-7267, United States",
+      "lat": 33.3340271,
+      "lng": -111.8086036,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "87 E Williams Field Rd, Gilbert, Arizona, 85295-5202, United States",
+      "lat": 33.3051781,
+      "lng": -111.7407503,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "9043 W Olive Ave, Peoria, Arizona, 85345-7049, United States",
+      "lat": 33.5646351,
+      "lng": -112.2537236,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "981 W Elliot Rd, Chandler, Arizona, 85225-1881, United States",
+      "lat": 33.3480785,
+      "lng": -111.8578833,
+      "country": "US"
+    },
+    {
+      "name": "Fry'S",
+      "address": "9900 S Rural Rd, Tempe, Arizona, 85284-4116, United States",
+      "lat": 33.3219007,
+      "lng": -111.9302009,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "10450 N La Canada Dr, Oro Valley, Arizona, 85737-7027, United States",
+      "lat": 32.3962516,
+      "lng": -110.9936944,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "10660 Grand Ave, Sun City, Arizona, 85351, United States",
+      "lat": 33.60150120000001,
+      "lng": -112.2893865,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "10661 N Oracle Rd, Oro Valley, Arizona, 85737-9322, United States",
+      "lat": 32.400764,
+      "lng": -110.9579284,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "1100 S Highway 260, Cottonwood, Arizona, 86326, United States",
+      "lat": 34.7183851,
+      "lng": -112.0034832,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "11203 S Frontage Rd, Yuma, Arizona, 85367-7875, United States",
+      "lat": 32.6688606,
+      "lng": -114.4418973,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "1245 W Main St, Mesa, Arizona, 85201-7018, United States",
+      "lat": 33.4130734,
+      "lng": -111.8577901,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "1385 E Florence Blvd, Casa Grande, Arizona, 85122, United States",
+      "lat": 32.8785549,
+      "lng": -111.7277431,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "15510 W Bell Rd, Surprise, Arizona, 85374-3436, United States",
+      "lat": 33.6396999,
+      "lng": -112.3952462,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "1575 N Dysart Rd, Avondale, Arizona, 85392-1204, United States",
+      "lat": 33.463185,
+      "lng": -112.3408771,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "1795 W Valencia Rd, Tucson, Arizona, 85746-6533, United States",
+      "lat": 32.1319999,
+      "lng": -111.0046714,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "1835 E Guadalupe Rd, Tempe, Arizona, 85283-3270, United States",
+      "lat": 33.3621121,
+      "lng": -111.9092218,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "18420 N 19th Ave, Phoenix, Arizona, 85023-1361, United States",
+      "lat": 33.6537789,
+      "lng": -112.1014775,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "1950 W Ray Rd, Chandler, Arizona, 85224-9008, United States",
+      "lat": 33.3218626,
+      "lng": -111.8749199,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "2001 E Irvington Rd, Tucson, Arizona, 85714-1847, United States",
+      "lat": 32.1640928,
+      "lng": -110.9413497,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "201 N Switzer Canyon Dr, Flagstaff, Arizona, 86001-4836, United States",
+      "lat": 35.1951691,
+      "lng": -111.6351911,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "20220 N 59th Ave, Glendale, Arizona, 85308-6844, United States",
+      "lat": 33.6695764,
+      "lng": -112.1881041,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "2115 E Highway 60, Miami, Arizona, 85539-8732, United States",
+      "lat": 33.419222,
+      "lng": -110.8165955,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "2480 N Swan Rd, Tucson, Arizona, 85712-5701, United States",
+      "lat": 32.2524186,
+      "lng": -110.8909499,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "2626 S 83rd Ave, Phoenix, Arizona, 85043-7207, United States",
+      "lat": 33.4240651,
+      "lng": -112.2402591,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "2700 W Baseline Rd, Tempe, Arizona, 85283, United States",
+      "lat": 33.3797537,
+      "lng": -111.9771211,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3036 E Thomas Rd, Phoenix, Arizona, 85016, United States",
+      "lat": 33.4817932,
+      "lng": -112.016555,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3100 N Glassford Hill Rd, Prescott Valley, Arizona, 86314, United States",
+      "lat": 34.5879362,
+      "lng": -112.3419092,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3232 S Mill Ave, Tempe, Arizona, 85282-3560, United States",
+      "lat": 33.3938824,
+      "lng": -111.941371,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3255 S Rural Rd, Tempe, Arizona, 85282-3853, United States",
+      "lat": 33.3940147,
+      "lng": -111.924451,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3261 E Pecos Rd, Gilbert, Arizona, 85295-1200, United States",
+      "lat": 33.2905417,
+      "lng": -111.719966,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3511 W Peoria Ave, Phoenix, Arizona, 85029-4037, United States",
+      "lat": 33.5808267,
+      "lng": -112.135551,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3640 S 16th Ave, Tucson, Arizona, 85713-6001, United States",
+      "lat": 32.1794003,
+      "lng": -110.984194,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "3770 W Ina Rd, Tucson, Arizona, 85741-2093, United States",
+      "lat": 32.3389103,
+      "lng": -111.0457916,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "4036 N 1st Ave, Tucson, Arizona, 85719-1005, United States",
+      "lat": 32.2806204,
+      "lng": -110.9595118,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "4150 E 22nd St, Tucson, Arizona, 85711-5335, United States",
+      "lat": 32.2052198,
+      "lng": -110.9042809,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "4204 W Cactus Rd, Phoenix, Arizona, 85029-2924, United States",
+      "lat": 33.5978296,
+      "lng": -112.1499143,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "4329 W Northern Ave, Glendale, Arizona, 85301-1647, United States",
+      "lat": 33.5524507,
+      "lng": -112.1532057,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "435 S Ellsworth Rd, Mesa, Arizona, 85208-2305, United States",
+      "lat": 33.3962286,
+      "lng": -111.6254906,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "4351 E Highway 90, Sierra Vista, Arizona, 85635-2431, United States",
+      "lat": 31.5565236,
+      "lng": -110.2536219,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "4724 N 20th St, Phoenix, Arizona, 85016-4704, United States",
+      "lat": 33.5069176,
+      "lng": -112.0413959,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "4842 E Bell Rd, Scottsdale, Arizona, 85254-6005, United States",
+      "lat": 33.6424878,
+      "lng": -111.9763446,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "500 W 24th St, Yuma, Arizona, 85364-6430, United States",
+      "lat": 32.685637,
+      "lng": -114.6261561,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "520 E Baseline Rd, Phoenix, Arizona, 85042-6554, United States",
+      "lat": 33.3790108,
+      "lng": -112.0658945,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "542 E Hunt Hwy, San Tan Valley, Arizona, 85143-5212, United States",
+      "lat": 33.1606416,
+      "lng": -111.5602719,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "555 E Grant Rd, Tucson, Arizona, 85705-5770, United States",
+      "lat": 32.2516624,
+      "lng": -110.9624923,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "5941 E McKellips Rd, Mesa, Arizona, 85215-2754, United States",
+      "lat": 33.4502255,
+      "lng": -111.7027768,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "6601 W Indian School Rd, Phoenix, Arizona, 85033-3339, United States",
+      "lat": 33.49306079999999,
+      "lng": -112.2017287,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "6710 W Bethany Home Rd, Glendale, Arizona, 85303-4402, United States",
+      "lat": 33.5251629,
+      "lng": -112.2044044,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "7050 E 22nd St, Tucson, Arizona, 85710-5113, United States",
+      "lat": 32.2045336,
+      "lng": -110.8424556,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "7050 E Golf links Rd, Tucson, Arizona, 85730-1000, United States",
+      "lat": 32.1911877,
+      "lng": -110.8417411,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "744 W Camelback Rd, Phoenix, Arizona, 85013-2207, United States",
+      "lat": 33.510509,
+      "lng": -112.0841518,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "7628 E Indian School Rd, Scottsdale, Arizona, 85251-3608, United States",
+      "lat": 33.4956717,
+      "lng": -111.915919,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "7812 E Speedway Blvd, Tucson, Arizona, 85710-1649, United States",
+      "lat": 32.2341397,
+      "lng": -110.8252451,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "7870 N Silverbell Rd, Tucson, Arizona, 85743-8230, United States",
+      "lat": 32.3503846,
+      "lng": -111.0998788,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "8080 S Houghton Rd, Tucson, Arizona, 85747-9308, United States",
+      "lat": 32.1053957,
+      "lng": -110.7740065,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "8325 W Indian School Rd, Phoenix, Arizona, 85037-2125, United States",
+      "lat": 33.4926347,
+      "lng": -112.2390044,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Food And Drug",
+      "address": "9401 E 22nd St, Tucson, Arizona, 85710-6586, United States",
+      "lat": 32.2077765,
+      "lng": -110.7918385,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "10660 Grand Ave, Sun City, Arizona, 85351-3433, United States",
+      "lat": 33.60150120000001,
+      "lng": -112.2893865,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "1098 S Main St, Cottonwood, Arizona, 86326-4606, United States",
+      "lat": 34.7207319,
+      "lng": -112.0026667,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "12100 N Thornydale Rd, Marana, Arizona, 85658-4755, United States",
+      "lat": 32.4261894,
+      "lng": -111.0451093,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "1300 S Watson Rd, Buckeye, Arizona, 85326-6303, United States",
+      "lat": 33.4343044,
+      "lng": -112.5580337,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "1311 E Bell Rd, Phoenix, Arizona, 85022-2724, United States",
+      "lat": 33.63852190000001,
+      "lng": -112.0536113,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "13730 W Camelback Rd, Litchfield Park, Arizona, 85340-3075, United States",
+      "lat": 33.5099315,
+      "lng": -112.3557436,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "13982 W Waddell Rd, Surprise, Arizona, 85379-8718, United States",
+      "lat": 33.6094496,
+      "lng": -112.3613124,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "150 E Old West Hwy, Apache Junction, Arizona, 85119-0002, United States",
+      "lat": 33.4125387,
+      "lng": -111.5452897,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "15215 N Cotton Ln, Surprise, Arizona, 85388-9607, United States",
+      "lat": 33.6225082,
+      "lng": -112.4246159,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "155 W Combs Rd, San Tan Valley, Arizona, 85140-9108, United States",
+      "lat": 33.2194663,
+      "lng": -111.5663155,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "15950 S Rancho Sahuarita Blvd, Sahuarita, Arizona, 85629-8010, United States",
+      "lat": 31.95962029999999,
+      "lng": -110.984194,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "1835 E Guadalupe Rd, Tempe, Arizona, 85283-3277, United States",
+      "lat": 33.3621121,
+      "lng": -111.9092218,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "1935 N Stapley Dr, Mesa, Arizona, 85203-2749, United States",
+      "lat": 33.450506,
+      "lng": -111.8039457,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "20797 N John Wayne Pkwy, Maricopa, Arizona, 85139-5575, United States",
+      "lat": 33.0698622,
+      "lng": -112.0442836,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "2115 E Highway 60, Globe, Arizona, 85539-8744, United States",
+      "lat": 33.419222,
+      "lng": -110.8165955,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "2724 S Signal Butte Rd, Mesa, Arizona, 85209-2104, United States",
+      "lat": 33.3657468,
+      "lng": -111.6040292,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "2727 E Broadway Rd, Mesa, Arizona, 85204-1530, United States",
+      "lat": 33.4071522,
+      "lng": -111.7730176,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "2858 N Pinal Ave, Casa Grande, Arizona, 85122-7917, United States",
+      "lat": 32.9404469,
+      "lng": -111.7545069,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "3232 S Mill Ave, Tempe, Arizona, 85282-3656, United States",
+      "lat": 33.3938824,
+      "lng": -111.941371,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "3246 E Bell Rd, Phoenix, Arizona, 85032-2727, United States",
+      "lat": 33.6419718,
+      "lng": -112.0116806,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "4230 W McDowell Rd, Phoenix, Arizona, 85009-2096, United States",
+      "lat": 33.4681191,
+      "lng": -112.1502426,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "4440 E Main St, Mesa, Arizona, 85205-7902, United States",
+      "lat": 33.417328,
+      "lng": -111.7348231,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "4707 E Shea Blvd, Phoenix, Arizona, 85028-3099, United States",
+      "lat": 33.5810348,
+      "lng": -111.978999,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "4842 E Bell Rd, Scottsdale, Arizona, 85254-6000, United States",
+      "lat": 33.6424878,
+      "lng": -111.9763446,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "5100 S McClintock Dr, Tempe, Arizona, 85282-7374, United States",
+      "lat": 33.3793918,
+      "lng": -111.9108712,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "542 E Hunt Hwy, San Tan Valley, Arizona, 85143-5238, United States",
+      "lat": 33.1606416,
+      "lng": -111.5602719,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "6470 S Higley Rd, Gilbert, Arizona, 85298-4333, United States",
+      "lat": 33.2325413,
+      "lng": -111.7232075,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "6611 W Bell Rd, Glendale, Arizona, 85308-3607, United States",
+      "lat": 33.6374163,
+      "lng": -112.2018895,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "7870 N Silverbell Rd, Marana, Arizona, 85743-8230, United States",
+      "lat": 32.3503846,
+      "lng": -111.0998788,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "E Florence Blvd, Casa Grande, Arizona, 85122-5318, United States",
+      "lat": 32.8795789,
+      "lng": -111.7194746,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "E Ocotillo Rd, Chandler, Arizona, 85249-5595, United States",
+      "lat": 33.2481221,
+      "lng": -111.7999787,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "E Thomas Rd, Phoenix, Arizona, 85016-8014, United States",
+      "lat": 33.4803031,
+      "lng": -112.030577,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "N Glassford Hill Rd, Prescott Valley, Arizona, 86314-2285, United States",
+      "lat": 34.5973679,
+      "lng": -112.3415194,
+      "country": "US"
+    },
+    {
+      "name": "Frys Food Stores",
+      "address": "W Baseline Rd, Tempe, Arizona, 85283-1072, United States",
+      "lat": 33.3782402,
+      "lng": -111.9589802,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "1300 S Watson Rd, Buckeye, Arizona, 85326-6264, United States",
+      "lat": 33.4343044,
+      "lng": -112.5580337,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "1455 N Higley Rd, Gilbert, Arizona, 85234-1631, United States",
+      "lat": 33.3767927,
+      "lng": -111.7203405,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "16400 W Pat Tillman Blvd, Surprise, Arizona, 85387-1705, United States",
+      "lat": 33.698389,
+      "lng": -112.411486,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "19600 W Indian School Rd, Buckeye, Arizona, 85396-2027, United States",
+      "lat": 33.4956364,
+      "lng": -112.482007,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "25105 S Ellsworth Rd, Queen Creek, Arizona, 85142-1563, United States",
+      "lat": 33.2207745,
+      "lng": -111.632241,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "2929 E Ocotillo Rd, Chandler, Arizona, 85249, United States",
+      "lat": 33.2459799,
+      "lng": -111.7914627,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "4075 E Williams Field Rd, Gilbert, Arizona, 85295-1141, United States",
+      "lat": 33.3049451,
+      "lng": -111.7028169,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "6470 S Higley Rd, Gilbert, Arizona, 85298-4341, United States",
+      "lat": 33.2325413,
+      "lng": -111.7232075,
+      "country": "US"
+    },
+    {
+      "name": "Fry's Marketplace",
+      "address": "8900 E Via Linda, Scottsdale, Arizona, 85258-5404, United States",
+      "lat": 33.5705495,
+      "lng": -111.8889224,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "1616 E Main St, Mesa, Arizona, 85203-9001, United States",
+      "lat": 33.4156545,
+      "lng": -111.7959808,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "2332 N 32nd St, Phoenix, Arizona, 85008-2149, United States",
+      "lat": 33.4742694,
+      "lng": -112.0131317,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "3638 W McDowell Rd, Phoenix, Arizona, 85009-2370, United States",
+      "lat": 33.4662634,
+      "lng": -112.1381819,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "45 E Inglewood St, Mesa, Arizona, 85201-2313, United States",
+      "lat": 33.447131,
+      "lng": -111.8296955,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "5825 W Indian School Rd, Phoenix, Arizona, 85031, United States",
+      "lat": 33.4945836,
+      "lng": -112.1851828,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1775 E Lakeside Dr, Bullhead City, Arizona, 86442-5732, United States",
+      "lat": 35.1075396,
+      "lng": -114.6139464,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1775 Lakeside Dr, Bullhead City, Arizona, 86442, United States",
+      "lat": 35.1075396,
+      "lng": -114.6139464,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "3490 Stockton Hill Rd, Kingman, Arizona, 86409, United States",
+      "lat": 35.2241381,
+      "lng": -114.0343058,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4747 S Highway 95, Fort Mohave, Arizona, 86426-9377, United States",
+      "lat": 35.0191078,
+      "lng": -114.5984309,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "80 Acoma Blvd N, Lake Havasu City, Arizona, 86403-5898, United States",
+      "lat": 34.4773272,
+      "lng": -114.3219658,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "80 Acoma Blvd S, Lake Havasu City, Arizona, 86403-5954, United States",
+      "lat": 34.4744714,
+      "lng": -114.3190846,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "Stockton Hill Rd, Kingman, Arizona, 86409-3680, United States",
+      "lat": 35.2402832,
+      "lng": -114.0378797,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "100 Riverside Dr, Parker, Arizona, 85344-5205, United States",
+      "lat": 34.1574083,
+      "lng": -114.2770283,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1060 S Watson Rd, Buckeye, Arizona, 85326, United States",
+      "lat": 33.4369449,
+      "lng": -112.5603007,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1100 N Estrella Pkwy, Goodyear, Arizona, 85338-2808, United States",
+      "lat": 33.4595118,
+      "lng": -112.3953132,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "115 E Dunlap Ave, Phoenix, Arizona, 85020-2841, United States",
+      "lat": 33.566763,
+      "lng": -112.0721239,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1175 S Arizona Ave, Chandler, Arizona, 85286-6504, United States",
+      "lat": 33.28924,
+      "lng": -111.8380607,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1260 E Tucson Marketplace Blvd, Tucson, Arizona, 85713-6508, United States",
+      "lat": 32.1856722,
+      "lng": -110.9534427,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1280 Gail Gardner Way, Prescott, Arizona, 86305-1641, United States",
+      "lat": 34.5655978,
+      "lng": -112.4860508,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "12900 W Thunderbird Rd, El Mirage, Arizona, 85335, United States",
+      "lat": 33.6104937,
+      "lng": -112.3366183,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "13055 W Rancho Santa Fe Blvd, Avondale, Arizona, 85392-1700, United States",
+      "lat": 33.4590699,
+      "lng": -112.3380632,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "13770 W Bell Rd, Surprise, Arizona, 85374-3865, United States",
+      "lat": 33.6433462,
+      "lng": -112.3577889,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "14111 N Prasada Gateway Ave, Surprise, Arizona, 85388-2201, United States",
+      "lat": 33.61241529999999,
+      "lng": -112.4208,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "15431 W Greenway Rd, Surprise, Arizona, 85374-4364, United States",
+      "lat": 33.6227374,
+      "lng": -112.3923591,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1607 W Bethany Home Rd, Phoenix, Arizona, 85015-2589, United States",
+      "lat": 33.5220077,
+      "lng": -112.0929255,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1725 W Hunt Hwy, San Tan Valley, Arizona, 85143-5203, United States",
+      "lat": 33.1763536,
+      "lng": -111.584449,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1741 E Florence Blvd, Casa Grande, Arizona, 85122-4845, United States",
+      "lat": 32.8773047,
+      "lng": -111.7115336,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1825 W Bell Rd, Phoenix, Arizona, 85023-3415, United States",
+      "lat": 33.6372084,
+      "lng": -112.0980464,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "18551 N 83rd Ave, Glendale, Arizona, 85308-0501, United States",
+      "lat": 33.6507782,
+      "lng": -112.2341171,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "18680 S Nogales Hwy, Green Valley, Arizona, 85614-5284, United States",
+      "lat": 31.911235,
+      "lng": -110.9812135,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1900 E Chandler Blvd, Chandler, Arizona, 85225-5113, United States",
+      "lat": 33.3078455,
+      "lng": -111.8084841,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1916 S Lindsay Rd, Mesa, Arizona, 85204-7108, United States",
+      "lat": 33.38035530000001,
+      "lng": -111.7729091,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "199 W 5th St, Douglas, Arizona, 85607-2853, United States",
+      "lat": 31.3385365,
+      "lng": -109.5646192,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2003 E Rodeo Dr, Cottonwood, Arizona, 86326, United States",
+      "lat": 34.7129851,
+      "lng": -112.001355,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2020 N 75th Ave, Phoenix, Arizona, 85035-3200, United States",
+      "lat": 33.4700255,
+      "lng": -112.2233553,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "21055 E Rittenhouse Rd, Queen Creek, Arizona, 85142-4477, United States",
+      "lat": 33.2516097,
+      "lng": -111.6293662,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2175 W Ruthrauff Rd, Tucson, Arizona, 85705-1241, United States",
+      "lat": 32.2932938,
+      "lng": -111.0128817,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "240 W Baseline Rd, Mesa, Arizona, 85210-6107, United States",
+      "lat": 33.3806963,
+      "lng": -111.8367641,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2435 E Baseline Rd, Phoenix, Arizona, 85042-7004, United States",
+      "lat": 33.3760021,
+      "lng": -112.0293222,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2555 W Apache Trl, Apache Junction, Arizona, 85120-5204, United States",
+      "lat": 33.4138487,
+      "lng": -111.5753179,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2601 E Huntington Dr, Flagstaff, Arizona, 86004-8927, United States",
+      "lat": 35.1995996,
+      "lng": -111.6142773,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2840 Highway 95, Bullhead City, Arizona, 86442-3720, United States",
+      "lat": 35.0822472,
+      "lng": -114.5957212,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2900 S Pacific Ave, Yuma, Arizona, 85365-3500, United States",
+      "lat": 32.6748587,
+      "lng": -114.600732,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3396 Stockton Hill Rd, Kingman, Arizona, 86409, United States",
+      "lat": 35.2225634,
+      "lng": -114.0327424,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3721 E Thomas Rd, Phoenix, Arizona, 85018-7507, United States",
+      "lat": 33.4789848,
+      "lng": -112.0009274,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3925 E Grant Rd, Tucson, Arizona, 85712, United States",
+      "lat": 32.25195,
+      "lng": -110.9088446,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4230 W Union Hills Dr, Glendale, Arizona, 85308-1704, United States",
+      "lat": 33.6559385,
+      "lng": -112.1504351,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4505 E McKellips Rd, Mesa, Arizona, 85215-2523, United States",
+      "lat": 33.4496562,
+      "lng": -111.7338233,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4747 E Cactus Rd, Phoenix, Arizona, 85032-7725, United States",
+      "lat": 33.5962796,
+      "lng": -111.9785504,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4915 N Pima Rd, Scottsdale, Arizona, 85251-1872, United States",
+      "lat": 33.5078284,
+      "lng": -111.8893111,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "500 N Highway 90 Byp, Sierra Vista, Arizona, 85635-2204, United States",
+      "lat": 31.5601263,
+      "lng": -110.2597652,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5010 N 95th Ave, Glendale, Arizona, 85305-3042, United States",
+      "lat": 33.51013200000001,
+      "lng": -112.2672745,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5250 W Indian School Rd, Phoenix, Arizona, 85031-2605, United States",
+      "lat": 33.4968087,
+      "lng": -112.1726387,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5290 S Power Rd, Gilbert, Arizona, 85295-8478, United States",
+      "lat": 33.3198549,
+      "lng": -111.6896475,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5500 E 22nd St, Tucson, Arizona, 85711, United States",
+      "lat": 32.2057695,
+      "lng": -110.8740119,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5605 W Northern Ave, Glendale, Arizona, 85301-1332, United States",
+      "lat": 33.5511597,
+      "lng": -112.1799247,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5695 Highway 95 N, Lake Havasu City, Arizona, 86404-9646, United States",
+      "lat": 34.3748567,
+      "lng": -114.6546597,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6131 E Southern Ave, Mesa, Arizona, 85206-3732, United States",
+      "lat": 33.3914993,
+      "lng": -111.6990678,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6145 N 35th Ave, Phoenix, Arizona, 85017-1940, United States",
+      "lat": 33.5263473,
+      "lng": -112.1336927,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6150 S 35th Ave, Phoenix, Arizona, 85041-5004, United States",
+      "lat": 33.3904631,
+      "lng": -112.1366875,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6645 W Peoria Ave, Glendale, Arizona, 85302-1011, United States",
+      "lat": 33.5801881,
+      "lng": -112.2017964,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "700 Mikes Pike St, Winslow, Arizona, 86047-2400, United States",
+      "lat": 35.0432152,
+      "lng": -110.7015638,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "715 N Main St, Taylor, Arizona, 85939-5005, United States",
+      "lat": 34.4744261,
+      "lng": -110.0857869,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7421 W Thunderbird Rd, Peoria, Arizona, 85381-5036, United States",
+      "lat": 33.6092834,
+      "lng": -112.2186466,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7450 W Glendale Ave, Glendale, Arizona, 85303-3000, United States",
+      "lat": 33.5392793,
+      "lng": -112.2188563,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "755 S 20th Ave, Safford, Arizona, 85546-3322, United States",
+      "lat": 32.8325734,
+      "lng": -109.7302705,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7575 W Lower Buckeye Rd, Phoenix, Arizona, 85043-3450, United States",
+      "lat": 33.4208454,
+      "lng": -112.2222252,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7975 W Peoria Ave, Peoria, Arizona, 85345-5941, United States",
+      "lat": 33.5785113,
+      "lng": -112.2305777,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "800 W Warner Rd, Chandler, Arizona, 85225-2939, United States",
+      "lat": 33.338112,
+      "lng": -111.8543922,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8151 E 32nd St, Yuma, Arizona, 85365-8401, United States",
+      "lat": 32.6681252,
+      "lng": -114.4931211,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8280 N Cortaro Rd, Tucson, Arizona, 85743-9393, United States",
+      "lat": 32.356299,
+      "lng": -111.0893397,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "857 N Dobson Rd, Mesa, Arizona, 85201-7663, United States",
+      "lat": 33.4328312,
+      "lng": -111.867292,
+      "country": "US"
+    }
+  ]
+}

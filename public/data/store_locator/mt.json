@@ -1,0 +1,62 @@
+{
+  "state_code": "MT",
+  "count": 7,
+  "stores": [
+    {
+      "name": "AFS Independent, All Other",
+      "address": "West Yellowstone, Montana, 59758, United States",
+      "zip": "59758",
+      "lat": 44.6621493,
+      "lng": -111.1041092,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "1115 N Roberts St, Helena, Montana, 59601-3054, United States",
+      "zip": "59601",
+      "lat": 46.5955311,
+      "lng": -112.0158667,
+      "country": "US"
+    },
+    {
+      "name": "Orange Street Food Farm 13409",
+      "address": "701 S Orange St, Missoula, Montana, 59801-2609, United States",
+      "zip": "59801",
+      "lat": 46.8643053,
+      "lng": -114.0040402,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1400 N 19th Ave, Bozeman, Montana, 59718-3758, United States",
+      "zip": "59718",
+      "lat": 45.6945828,
+      "lng": -111.0599106,
+      "country": "US"
+    },
+    {
+      "name": "The Market",
+      "address": "2nd Ave NW, Sidney, Montana, 59270, United States",
+      "zip": "59270",
+      "lat": 47.7168349,
+      "lng": -104.1579024,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3901 Harrison Ave, Butte, Montana, 59701-6802, United States",
+      "zip": "59701",
+      "lat": 45.963712,
+      "lng": -112.5105272,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5320 10th Ave S, Great Falls, Montana, 59405, United States",
+      "zip": "59405",
+      "lat": 47.4921053,
+      "lng": -111.218729,
+      "country": "US"
+    }
+  ]
+}

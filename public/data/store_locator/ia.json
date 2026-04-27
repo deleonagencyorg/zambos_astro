@@ -1,0 +1,398 @@
+{
+  "state_code": "IA",
+  "count": 49,
+  "stores": [
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "101 Army Post Rd, Des Moines, Iowa, 50315-6242, United States",
+      "zip": "50315",
+      "lat": 41.526837,
+      "lng": -93.6164933,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "101 W Broadway St, Eagle Grove, Iowa, 50533-1701, United States",
+      "zip": "50533",
+      "lat": 42.6645873,
+      "lng": -93.90156929999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "107 N Center St, Marshalltown, Iowa, 50158-4952, United States",
+      "zip": "50158",
+      "lat": 42.05115259999999,
+      "lng": -92.91246480000001,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1108 1st Ave E, Newton, Iowa, 50208, United States",
+      "zip": "50208",
+      "lat": 41.6997376,
+      "lng": -93.0394109,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "112 N Main St, Osceola, Iowa, 50213-1234, United States",
+      "zip": "50213",
+      "lat": 41.0354373,
+      "lng": -93.7659098,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1130 E 9th St, Des Moines, Iowa, 50316-2963, United States",
+      "zip": "50316",
+      "lat": 41.5996095,
+      "lng": -93.60711429999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1209 Lucinda St, Perry, Iowa, 50220-1522, United States",
+      "zip": "50220",
+      "lat": 41.8404331,
+      "lng": -94.104856,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1300 W 4th St, Sioux City, Iowa, 51103-3579, United States",
+      "zip": "51103",
+      "lat": 42.5001562,
+      "lng": -96.4241655,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "140 W Greene St, Postville, Iowa, 52162-7810, United States",
+      "zip": "52162",
+      "lat": 43.0863965,
+      "lng": -91.5692747,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1440 Des Moines St, Des Moines, Iowa, 50316-3531, United States",
+      "zip": "50316",
+      "lat": 41.5956902,
+      "lng": -93.59639,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1509 Lake Ave, Storm Lake, Iowa, 50588, United States",
+      "zip": "50588",
+      "lat": 42.658223,
+      "lng": -95.2002377,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1524 E Grand Ave, Des Moines, Iowa, 50316-3503, United States",
+      "zip": "50316",
+      "lat": 41.5943953,
+      "lng": -93.5941206,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1535 Avenue G, Council Bluffs, Iowa, 51501-2516, United States",
+      "zip": "51501",
+      "lat": 41.2676504,
+      "lng": -95.867108,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1608 Grandview Ave, Muscatine, Iowa, 52761-1535, United States",
+      "zip": "52761",
+      "lat": 41.4013043,
+      "lng": -91.0722352,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1638 E University Ave, Des Moines, Iowa, 50316-4051, United States",
+      "zip": "50316",
+      "lat": 41.6011503,
+      "lng": -93.5931829,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "17 S 1st St, Marshalltown, Iowa, 50158-2847, United States",
+      "zip": "50158",
+      "lat": 42.0485075,
+      "lng": -92.914622,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1700 E Grand Ave, Des Moines, Iowa, 50316-3612, United States",
+      "zip": "50316",
+      "lat": 41.595307,
+      "lng": -93.5897723,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1701 2nd St, Coralville, Iowa, 52241-1956, United States",
+      "zip": "52241",
+      "lat": 41.6775403,
+      "lng": -91.5861499,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1800 NW 86th St, Clive, Iowa, 50325-7146, United States",
+      "zip": "50325",
+      "lat": 41.6082724,
+      "lng": -93.7373278,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1937 Keokuk St, Iowa City, Iowa, 52240-4550, United States",
+      "zip": "52240",
+      "lat": 41.6410031,
+      "lng": -91.5254753,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "200 1st St NW, Hampton, Iowa, 50441-1649, United States",
+      "zip": "50441",
+      "lat": 42.7437607,
+      "lng": -93.209006,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "200 W 3rd St, Tama, Iowa, 52339-2308, United States",
+      "zip": "52339",
+      "lat": 41.9617668,
+      "lng": -92.5784982,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "212 1st Ave NW, Hampton, Iowa, 50441-1707, United States",
+      "zip": "50441",
+      "lat": 42.7426571,
+      "lng": -93.2100761,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "228 E Army Post Rd, Des Moines, Iowa, 50315-5823, United States",
+      "zip": "50315",
+      "lat": 41.5268518,
+      "lng": -93.61235699999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2743 86th St, Urbandale, Iowa, 50322-4336, United States",
+      "zip": "50322",
+      "lat": 41.6189489,
+      "lng": -93.7342005,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2920 E University Ave, Des Moines, Iowa, 50317-8236, United States",
+      "zip": "50317",
+      "lat": 41.6009895,
+      "lng": -93.56005230000001,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "303 College Dr, Decorah, Iowa, 52101-1306, United States",
+      "zip": "52101",
+      "lat": 43.3074728,
+      "lng": -91.7971795,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "311 E Main St, Ottumwa, Iowa, 52501-3076, United States",
+      "zip": "52501",
+      "lat": 41.0161296,
+      "lng": -92.40975159999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3116 E 14th St, Des Moines, Iowa, 50316-1422, United States",
+      "zip": "50316",
+      "lat": 41.6238568,
+      "lng": -93.6008547,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3124 Gordon Dr, Sioux City, Iowa, 51105-3729, United States",
+      "zip": "51105",
+      "lat": 42.4889279,
+      "lng": -96.36773269999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "321 W 4th St, Waterloo, Iowa, 50701-5503, United States",
+      "zip": "50701",
+      "lat": 42.4934801,
+      "lng": -92.34072139999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3504 Merle Hay Rd, Des Moines, Iowa, 50310-1243, United States",
+      "zip": "50310",
+      "lat": 41.6260625,
+      "lng": -93.6982682,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3520 Beaver Ave, Des Moines, Iowa, 50310-3255, United States",
+      "zip": "50310",
+      "lat": 41.62712,
+      "lng": -93.67734019999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4 E Main St, Marshalltown, Iowa, 50158-4903, United States",
+      "zip": "50158",
+      "lat": 42.04945559999999,
+      "lng": -92.91268020000001,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "415 Community Dr, North Liberty, Iowa, 52317-6703, United States",
+      "zip": "52317",
+      "lat": 41.7512053,
+      "lng": -91.606723,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "427 Sumner Ave, Humboldt, Iowa, 50548-1756, United States",
+      "zip": "50548",
+      "lat": 42.7214251,
+      "lng": -94.2141838,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "505 N 3rd Ave, Marshalltown, Iowa, 50158-1825, United States",
+      "zip": "50158",
+      "lat": 42.05570669999999,
+      "lng": -92.9077133,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "529 Highway 39, Denison, Iowa, 51442-2727, United States",
+      "zip": "51442",
+      "lat": 42.0235081,
+      "lng": -95.3688068,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5600 S Riverside Dr, Ames, Iowa, 50010-8642, United States",
+      "zip": "50010",
+      "lat": 41.957093,
+      "lng": -93.628152,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "630 Michigan St, Storm Lake, Iowa, 50588-1857, United States",
+      "zip": "50588",
+      "lat": 42.6453304,
+      "lng": -95.2023712,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "641 2nd St, Webster City, Iowa, 50595-1438, United States",
+      "zip": "50595",
+      "lat": 42.4696963,
+      "lng": -93.8210984,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "700 1st Ave NW, Cedar Rapids, Iowa, 52405-3934, United States",
+      "zip": "52405",
+      "lat": 41.974214,
+      "lng": -91.6811314,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "903 W 3rd St, Davenport, Iowa, 52802-3522, United States",
+      "zip": "52802",
+      "lat": 41.52216749999999,
+      "lng": -90.5861966,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "907 Central Ave, Hawarden, Iowa, 51023-2276, United States",
+      "zip": "51023",
+      "lat": 42.9959356,
+      "lng": -96.4855673,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1831 Lake Ave, Storm Lake, Iowa, 50588-7606, United States",
+      "zip": "50588",
+      "lat": 42.6641559,
+      "lng": -95.1969858,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1940 Venture Dr, Ottumwa, Iowa, 52501-3766, United States",
+      "zip": "52501",
+      "lat": 41.0125032,
+      "lng": -92.4555106,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3003 N Highway 61, Muscatine, Iowa, 52761-5811, United States",
+      "zip": "52761",
+      "lat": 41.4570379,
+      "lng": -91.0242097,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3101 Floyd Blvd, Sioux City, Iowa, 51108-1467, United States",
+      "zip": "51108",
+      "lat": 42.5318116,
+      "lng": -96.374684,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3201 Manawa Centre Dr, Council Bluffs, Iowa, 51501-7672, United States",
+      "zip": "51501",
+      "lat": 41.2273404,
+      "lng": -95.8437909,
+      "country": "US"
+    }
+  ]
+}

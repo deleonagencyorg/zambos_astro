@@ -1,0 +1,20 @@
+{
+  "state_code": "NH",
+  "count": 2,
+  "stores": [
+    {
+      "name": "Walmart",
+      "address": "1458 Lake Shore Rd, Gilford, New Hampshire, 03249-2221, United States",
+      "lat": 43.5667163,
+      "lng": -71.4387957,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2460 Lafayette Rd, Portsmouth, New Hampshire, 03801, United States",
+      "lat": 43.0333451,
+      "lng": -70.7885817,
+      "country": "US"
+    }
+  ]
+}

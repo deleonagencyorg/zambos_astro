@@ -1,0 +1,142 @@
+{
+  "state_code": "MS",
+  "count": 17,
+  "stores": [
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "513 E Waldron St, Corinth, Mississippi, 38834-4862, United States",
+      "zip": "38834",
+      "lat": 34.9350917,
+      "lng": -88.51970299999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10290 D'Iberville Blvd, D'Iberville, Mississippi, 39540-2536, United States",
+      "zip": "10290",
+      "lat": 30.4368931,
+      "lng": -88.8916464,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11333 Highway 49, Gulfport, Mississippi, 39503-3130, United States",
+      "zip": "11333",
+      "lat": 30.4515844,
+      "lng": -89.10104609999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1617 E Beach Blvd, Pass Christian, Mississippi, 39571-4914, United States",
+      "zip": "39571",
+      "lat": 30.33567699999999,
+      "lng": -89.18877499999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1621 Highway 15 N, Laurel, Mississippi, 39440-2123, United States",
+      "zip": "39440",
+      "lat": 31.7089359,
+      "lng": -89.1472769,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1655 Sunset Dr, Grenada, Mississippi, 38901-4061, United States",
+      "zip": "38901",
+      "lat": 33.7815906,
+      "lng": -89.8374415,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1733 E Pass Rd, Gulfport, Mississippi, 39507-3529, United States",
+      "zip": "39507",
+      "lat": 30.3993545,
+      "lng": -89.019469,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1831 Highway 1 S, Greenville, Mississippi, 38701-7355, United States",
+      "zip": "38701",
+      "lat": 33.4489755,
+      "lng": -91.04163240000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1913 Highway 45 N, Columbus, Mississippi, 39705-1950, United States",
+      "zip": "39705",
+      "lat": 33.5187265,
+      "lng": -88.4377167,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2050 Pass Rd, Biloxi, Mississippi, 39531-3128, United States",
+      "zip": "39531",
+      "lat": 30.4038057,
+      "lng": -88.9585168,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2401 Goodman Rd W, Horn Lake, Mississippi, 38637-1308, United States",
+      "zip": "38637",
+      "lat": 34.9610855,
+      "lng": -90.032607,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "314 Sgt Prentiss Dr, Natchez, Mississippi, 39120-4224, United States",
+      "zip": "39120",
+      "lat": 31.5534023,
+      "lng": -91.371794,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4150 Goodman Rd W, Horn Lake, Mississippi, 38637-0300, United States",
+      "zip": "38637",
+      "lat": 34.9627471,
+      "lng": -90.06069719999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4253 Denny Ave, Pascagoula, Mississippi, 39581-5502, United States",
+      "zip": "39581",
+      "lat": 30.3867621,
+      "lng": -88.5189657,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5901 Service Dr, Hattiesburg, Mississippi, 39402-2858, United States",
+      "zip": "39402",
+      "lat": 31.3108155,
+      "lng": -89.3208122,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6072 U S Highway 98, Hattiesburg, Mississippi, 39402-8854, United States",
+      "zip": "39402",
+      "lat": 31.3185042,
+      "lng": -89.3794661,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6811 Southcrest Pkwy, Southaven, Mississippi, 38671-9538, United States",
+      "zip": "38671",
+      "lat": 34.9595766,
+      "lng": -89.9952277,
+      "country": "US"
+    }
+  ]
+}

@@ -1,0 +1,1504 @@
+{
+  "state_code": "NJ",
+  "count": 214,
+  "stores": [
+    {
+      "name": "Bandera Supermarket",
+      "address": "518 32nd St, Union City, New Jersey, 07087-3911, United States",
+      "lat": 40.7730211,
+      "lng": -74.0293753,
+      "country": "US"
+    },
+    {
+      "name": "Bergenline Supermarket",
+      "address": "8107 Bergenline Ave, North Bergen, New Jersey, 07047-5048, United States",
+      "lat": 40.8033692,
+      "lng": -74.0059122,
+      "country": "US"
+    },
+    {
+      "name": "Bravo",
+      "address": "321 Scotland Rd, Orange, New Jersey, 07050-2303, United States",
+      "lat": 40.7675983,
+      "lng": -74.2425604,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "1567 E State St, Trenton, New Jersey, 08609-1851, United States",
+      "lat": 40.2316133,
+      "lng": -74.7319923,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "260 Roseville Ave, Newark, New Jersey, 07107-1621, United States",
+      "lat": 40.7597186,
+      "lng": -74.1896373,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "275 George St, New Brunswick, New Jersey, 08901, United States",
+      "lat": 40.4912931,
+      "lng": -74.4423562,
+      "country": "US"
+    },
+    {
+      "name": "Brothers Grocery",
+      "address": "203 Clifton Ave, Lakewood, New Jersey, 08701-3336, United States",
+      "lat": 40.092418,
+      "lng": -74.2145109,
+      "country": "US"
+    },
+    {
+      "name": "Casablanca Supermarket",
+      "address": "701 Marshall St, Elizabeth, New Jersey, 07201-2893, United States",
+      "lat": 40.6586352,
+      "lng": -74.2008219,
+      "country": "US"
+    },
+    {
+      "name": "City Grocery",
+      "address": "117 Spring St, Elizabeth, New Jersey, 07201-2505, United States",
+      "lat": 40.66299,
+      "lng": -74.205648,
+      "country": "US"
+    },
+    {
+      "name": "City Supermarket",
+      "address": "289 Bergen Blvd, Fairview, New Jersey, 07022-2389, United States",
+      "lat": 40.8186424,
+      "lng": -74.0015897,
+      "country": "US"
+    },
+    {
+      "name": "City Supermarket",
+      "address": "525 Irvington Ave, Newark, New Jersey, 07106-3150, United States",
+      "lat": 40.735995,
+      "lng": -74.2495704,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "847 Roebling Ave, Trenton, New Jersey, 08611-1023, United States",
+      "lat": 40.2115523,
+      "lng": -74.7417705,
+      "country": "US"
+    },
+    {
+      "name": "Compare Fresh Market",
+      "address": "1242 Hamilton Ave, Trenton, New Jersey, 08629-1401, United States",
+      "lat": 40.2203482,
+      "lng": -74.73137539999999,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "16 N Day St, Orange, New Jersey, 07050-3609, United States",
+      "lat": 40.7727561,
+      "lng": -74.2289788,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "272 Maple St, Perth Amboy, New Jersey, 08861-4304, United States",
+      "lat": 40.508813,
+      "lng": -74.2720803,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "444 20th Ave, Paterson, New Jersey, 07513-1541, United States",
+      "lat": 40.9074452,
+      "lng": -74.1505122,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "602 Main Ave, Passaic, New Jersey, 07055-4907, United States",
+      "lat": 40.8596199,
+      "lng": -74.12424829999999,
+      "country": "US"
+    },
+    {
+      "name": "Eagle Supermarket",
+      "address": "1102 Elizabeth Ave, Elizabeth, New Jersey, 07201-2413, United States",
+      "lat": 40.6616265,
+      "lng": -74.21174189999999,
+      "country": "US"
+    },
+    {
+      "name": "El Jalapeño Supermarket",
+      "address": "806 1st Ave, Asbury Park, New Jersey, 07712-5943, United States",
+      "lat": 40.2212659,
+      "lng": -74.0120936,
+      "country": "US"
+    },
+    {
+      "name": "El Oaxaqueno",
+      "address": "118 Clifton Ave, Lakewood, New Jersey, 08701-3333, United States",
+      "lat": 40.091785,
+      "lng": -74.2149124,
+      "country": "US"
+    },
+    {
+      "name": "El Rey Smkt",
+      "address": "6124 Palisade Ave, West New York, New Jersey, 07093-6459, United States",
+      "lat": 40.7898493,
+      "lng": -74.0122906,
+      "country": "US"
+    },
+    {
+      "name": "El Rey Supermarket",
+      "address": "80 3rd St, Elizabeth, New Jersey, 07206-1752, United States",
+      "lat": 40.6517097,
+      "lng": -74.19213839999999,
+      "country": "US"
+    },
+    {
+      "name": "El Toro Supermarket",
+      "address": "1079 S Broad St, Trenton, New Jersey, 08611-1461, United States",
+      "lat": 40.2042041,
+      "lng": -74.7439371,
+      "country": "US"
+    },
+    {
+      "name": "Exito Fresh Market",
+      "address": "128 Clifton Ave, Lakewood, New Jersey, 08701-3333, United States",
+      "lat": 40.0919698,
+      "lng": -74.2148831,
+      "country": "US"
+    },
+    {
+      "name": "Exito Fresh Market",
+      "address": "176 Broadway, Long Branch, New Jersey, 07740-7006, United States",
+      "lat": 40.3044575,
+      "lng": -73.9860791,
+      "country": "US"
+    },
+    {
+      "name": "Exito Fresh Market",
+      "address": "25 Broad St, Freehold, New Jersey, 07728-1962, United States",
+      "lat": 40.2602742,
+      "lng": -74.2791009,
+      "country": "US"
+    },
+    {
+      "name": "Extra Supermarket",
+      "address": "360 Martin Luther King Jr Dr, Jersey City, New Jersey, 07305-3739, United States",
+      "lat": 40.7108615,
+      "lng": -74.0784102,
+      "country": "US"
+    },
+    {
+      "name": "Extra Supermarket",
+      "address": "5505 Palisade Ave, West New York, New Jersey, 07093-2123, United States",
+      "lat": 40.7850442,
+      "lng": -74.0166544,
+      "country": "US"
+    },
+    {
+      "name": "Extra Supermarket",
+      "address": "563 Central Ave, East Orange, New Jersey, 07018-1934, United States",
+      "lat": 40.7603848,
+      "lng": -74.2236645,
+      "country": "US"
+    },
+    {
+      "name": "Extra Supermarket",
+      "address": "719 Irvington Ave, Maplewood, New Jersey, 07040-1607, United States",
+      "lat": 40.7319818,
+      "lng": -74.2440685,
+      "country": "US"
+    },
+    {
+      "name": "Extra Supermarket",
+      "address": "838 E Grand St, Elizabeth, New Jersey, 07201-2722, United States",
+      "lat": 40.6635699,
+      "lng": -74.1996352,
+      "country": "US"
+    },
+    {
+      "name": "Family Supermarket",
+      "address": "959 Liberty St, Trenton, New Jersey, 08611-1151, United States",
+      "lat": 40.20880409999999,
+      "lng": -74.7381556,
+      "country": "US"
+    },
+    {
+      "name": "Fernandez Supermarket",
+      "address": "634 Whittaker Ave, Trenton, New Jersey, 08611-1351, United States",
+      "lat": 40.2090342,
+      "lng": -74.7471405,
+      "country": "US"
+    },
+    {
+      "name": "Fiesta Supermarket",
+      "address": "5500 Bergenline Ave, West New York, New Jersey, 07093-4623, United States",
+      "lat": 40.7855395,
+      "lng": -74.0185194,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "100 Somerset St, Plainfield, New Jersey, 07060-4830, United States",
+      "lat": 40.6197753,
+      "lng": -74.42589439999999,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "621 Hamilton St, Somerset, New Jersey, 08873-2638, United States",
+      "lat": 40.4931318,
+      "lng": -74.46976579999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "1425 Kennedy Blvd, North Bergen, New Jersey, 07047-6307, United States",
+      "lat": 40.7645299,
+      "lng": -74.0441726,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "211 Elmora Ave, Elizabeth, New Jersey, 07202-1105, United States",
+      "lat": 40.6645934,
+      "lng": -74.23191609999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "425 Anderson Ave, Fairview, New Jersey, 07022-1103, United States",
+      "lat": 40.8209576,
+      "lng": -73.9920935,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "5701 Broadway, West New York, New Jersey, 07093-2717, United States",
+      "lat": 40.7852422,
+      "lng": -74.013049,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "635 S Clinton Ave, Trenton, New Jersey, 08611-1831, United States",
+      "lat": 40.2103326,
+      "lng": -74.7547374,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "675 Paterson Ave, Carlstadt, New Jersey, 07072-1601, United States",
+      "lat": 40.841613,
+      "lng": -74.10205619999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Depot",
+      "address": "75 1st St, Newark, New Jersey, 07107, United States",
+      "lat": 40.7483459,
+      "lng": -74.1875735,
+      "country": "US"
+    },
+    {
+      "name": "Food Fair Fresh Market",
+      "address": "323 Mt Prospect Ave, Newark, New Jersey, 07104-2101, United States",
+      "lat": 40.7626809,
+      "lng": -74.1716533,
+      "country": "US"
+    },
+    {
+      "name": "Food Universe Marketplace",
+      "address": "435 Lexington Ave, Clifton, New Jersey, 07011-2356, United States",
+      "lat": 40.8757496,
+      "lng": -74.13435419999999,
+      "country": "US"
+    },
+    {
+      "name": "Foodtown",
+      "address": "20 Elizabeth St, New Brunswick, New Jersey, 08901-3320, United States",
+      "lat": 40.4783457,
+      "lng": -74.4612024,
+      "country": "US"
+    },
+    {
+      "name": "Golden Mango Supermkt",
+      "address": "200 Broadway, Paterson, New Jersey, 07505-1115, United States",
+      "lat": 40.918623,
+      "lng": -74.1667066,
+      "country": "US"
+    },
+    {
+      "name": "International Supermarket",
+      "address": "128 Ocean Ave, Lakewood, New Jersey, 08701-3993, United States",
+      "lat": 40.0900672,
+      "lng": -74.2093988,
+      "country": "US"
+    },
+    {
+      "name": "Jk Los Poblanos",
+      "address": "106 Market St, Passaic, New Jersey, 07055-7625, United States",
+      "lat": 40.865096,
+      "lng": -74.116416,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "471 Lyons Ave, Newark, New Jersey, 07111-4717, United States",
+      "lat": 40.715371,
+      "lng": -74.223854,
+      "country": "US"
+    },
+    {
+      "name": "Kikos Supermarket",
+      "address": "321 Anderson Ave, Fairview, New Jersey, 07022-1403, United States",
+      "lat": 40.8174158,
+      "lng": -73.99440070000001,
+      "country": "US"
+    },
+    {
+      "name": "La Despensa Del Ahorro",
+      "address": "1081 Elizabeth Ave, Elizabeth, New Jersey, 07201-2543, United States",
+      "lat": 40.661905,
+      "lng": -74.21038899999999,
+      "country": "US"
+    },
+    {
+      "name": "La Despenza",
+      "address": "3209 Bergenline Ave, Union City, New Jersey, 07087, United States",
+      "lat": 40.7725993,
+      "lng": -74.02905,
+      "country": "US"
+    },
+    {
+      "name": "La Palma Bakery",
+      "address": "910 Hooper Ave, Toms River, New Jersey, 08753-8365, United States",
+      "lat": 39.96394189999999,
+      "lng": -74.1876194,
+      "country": "US"
+    },
+    {
+      "name": "La Placita Super Market",
+      "address": "152 48th St, Union City, New Jersey, 07087-6455, United States",
+      "lat": 40.7800656,
+      "lng": -74.01784789999999,
+      "country": "US"
+    },
+    {
+      "name": "La Roca",
+      "address": "4424 Bergenline Ave, Union City, New Jersey, 07087, United States",
+      "lat": 40.77913969999999,
+      "lng": -74.0235715,
+      "country": "US"
+    },
+    {
+      "name": "Latino Mini Market",
+      "address": "207 E Main St, Bound Brook, New Jersey, 08805-2029, United States",
+      "lat": 40.5618322,
+      "lng": -74.53184259999999,
+      "country": "US"
+    },
+    {
+      "name": "Latino Supeermarket",
+      "address": "6418 Hudson Ave, West New York, New Jersey, 07093-3116, United States",
+      "lat": 40.791017,
+      "lng": -74.00924049999999,
+      "country": "US"
+    },
+    {
+      "name": "Latino Supermkt",
+      "address": "140 French St, New Brunswick, New Jersey, 08901-1930, United States",
+      "lat": 40.4924665,
+      "lng": -74.4526772,
+      "country": "US"
+    },
+    {
+      "name": "Lissette Grocery",
+      "address": "428 Main St, Paterson, New Jersey, 07501-2818, United States",
+      "lat": 40.9107436,
+      "lng": -74.1721104,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "10 Mill Rd, Irvington, New Jersey, 07111-1089, United States",
+      "lat": 40.7144312,
+      "lng": -74.24902019999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "100 8th St, Passaic, New Jersey, 07055-7925, United States",
+      "lat": 40.8574265,
+      "lng": -74.1090442,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "100 Somerset Ave, Bridgewater, New Jersey, 08807, United States",
+      "lat": 40.6000913,
+      "lng": -74.6175683,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1000 S Elmora Ave, Elizabeth, New Jersey, 07202-3100, United States",
+      "lat": 40.6523361,
+      "lng": -74.2247191,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1007 Memorial Dr, Asbury Park, New Jersey, 07712-5801, United States",
+      "lat": 40.2237269,
+      "lng": -74.01330039999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "101 New Brunswick Ave, Perth Amboy, New Jersey, 08861-2361, United States",
+      "lat": 40.5229085,
+      "lng": -74.2966059,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1016 Sherman Ave, Plainfield, New Jersey, 07063-1535, United States",
+      "lat": 40.5986148,
+      "lng": -74.4301851,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "106 Market St, Newark, New Jersey, 07102-2815, United States",
+      "lat": 40.7360184,
+      "lng": -74.1746952,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1079 Broad St, Bloomfield, New Jersey, 07003-2918, United States",
+      "lat": 40.8289203,
+      "lng": -74.18605869999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "108 Remsen Ave, New Brunswick, New Jersey, 08901-2606, United States",
+      "lat": 40.48632509999999,
+      "lng": -74.4457792,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "11 S Essex St, Dover, New Jersey, 07801-4604, United States",
+      "lat": 40.8781605,
+      "lng": -74.5617425,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "115 Belmont Ave, Belleville, New Jersey, 07109-1993, United States",
+      "lat": 40.7788332,
+      "lng": -74.18414849999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "115 Monticello Ave, Jersey City, New Jersey, 07304-2513, United States",
+      "lat": 40.7186735,
+      "lng": -74.07198199999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1208 New York Ave, Union City, New Jersey, 07087-4226, United States",
+      "lat": 40.7596008,
+      "lng": -74.0357499,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "122 Quentin Ave, New Brunswick, New Jersey, 08901-3263, United States",
+      "lat": 40.4844457,
+      "lng": -74.4670498,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "125 Avon Ave, South Plainfield, New Jersey, 07080-5003, United States",
+      "lat": 40.5891421,
+      "lng": -74.398574,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "128 Clifton Ave, Newark, New Jersey, 07104, United States",
+      "lat": 40.7541106,
+      "lng": -74.1788186,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "132 E 4th St, Clifton, New Jersey, 07011-1049, United States",
+      "lat": 40.8901409,
+      "lng": -74.1371937,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "132 French St, New Brunswick, New Jersey, 08901-2071, United States",
+      "lat": 40.4926195,
+      "lng": -74.452354,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1334 W 7th St, Piscataway, New Jersey, 08854-1801, United States",
+      "lat": 40.5962947,
+      "lng": -74.4388031,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "139 French St, New Brunswick, New Jersey, 08901-1931, United States",
+      "lat": 40.4926815,
+      "lng": -74.4531962,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1405 South Ave, Plainfield, New Jersey, 07062-1972, United States",
+      "lat": 40.6345007,
+      "lng": -74.39457519999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "149 E Front St, Plainfield, New Jersey, 07060-1201, United States",
+      "lat": 40.6195445,
+      "lng": -74.4234235,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "15 W Main St, Somerville, New Jersey, 08876-2240, United States",
+      "lat": 40.5681556,
+      "lng": -74.61227509999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "151 Elmora Ave, Elizabeth, New Jersey, 07202-1149, United States",
+      "lat": 40.6622265,
+      "lng": -74.2333062,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "154 State St, Hackensack, New Jersey, 07601-5420, United States",
+      "lat": 40.88338,
+      "lng": -74.044578,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "161 Jefferson St, Passaic, New Jersey, 07055-5132, United States",
+      "lat": 40.8622355,
+      "lng": -74.1245077,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "176 Broadway, Bayonne, New Jersey, 07002-2421, United States",
+      "lat": 40.6521673,
+      "lng": -74.1278727,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "177 Smith St, Keasbey, New Jersey, 08832-1158, United States",
+      "lat": 40.5154289,
+      "lng": -74.2990336,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "186 Speedwell Ave, Morristown, New Jersey, 07950-2317, United States",
+      "lat": 40.8054769,
+      "lng": -74.4829113,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "188 Remsen Ave, New Brunswick, New Jersey, 08901-2622, United States",
+      "lat": 40.4835773,
+      "lng": -74.4486295,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "19 Belleville Ave, Bloomfield, New Jersey, 07003-5220, United States",
+      "lat": 40.7976087,
+      "lng": -74.1798683,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1915 Bergenline Ave, Union City, New Jersey, 07087-3341, United States",
+      "lat": 40.7646775,
+      "lng": -74.0345961,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1930 W Main St, Millville, New Jersey, 08332-4640, United States",
+      "lat": 39.4037336,
+      "lng": -75.0872954,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "197 Shrewsbury Ave, Red Bank, New Jersey, 07701, United States",
+      "lat": 40.3442233,
+      "lng": -74.0756203,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2 Orchard St, Garfield, New Jersey, 07026-3214, United States",
+      "lat": 40.8726282,
+      "lng": -74.11146269999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "20 Elizabeth St, Paterson, New Jersey, 07503-2605, United States",
+      "lat": 40.8994703,
+      "lng": -74.16263090000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "200 Broadway, Bayonne, New Jersey, 07002-2442, United States",
+      "lat": 40.6529221,
+      "lng": -74.127248,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "200 Central Ave, Jersey City, New Jersey, 07307-3057, United States",
+      "lat": 40.7412377,
+      "lng": -74.0522725,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "203 Clifton Ave, Newark, New Jersey, 07104-1908, United States",
+      "lat": 40.7567498,
+      "lng": -74.1766103,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "210 Anderson Ave, Fairview, New Jersey, 07022-1402, United States",
+      "lat": 40.81544,
+      "lng": -73.995272,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "218 Dayton Ave, Clifton, New Jersey, 07011-1506, United States",
+      "lat": 40.8752735,
+      "lng": -74.1222526,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "219 Chestnut St, Kearny, New Jersey, 07032-2501, United States",
+      "lat": 40.7596314,
+      "lng": -74.15079109999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "223 E Main St, Maple Shade, New Jersey, 08052-2623, United States",
+      "lat": 39.9559043,
+      "lng": -74.9987853,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "228 Anderson Ave, Fairview, New Jersey, 07022-1402, United States",
+      "lat": 40.8160379,
+      "lng": -73.9949148,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "23 Kearny Ave, Kearny, New Jersey, 07032-2332, United States",
+      "lat": 40.7535112,
+      "lng": -74.1571752,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2325 Elizabeth Ave, Rahway, New Jersey, 07065-4603, United States",
+      "lat": 40.6166194,
+      "lng": -74.2664331,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2400 Central Ave, Union City, New Jersey, 07087-3627, United States",
+      "lat": 40.768532,
+      "lng": -74.03432029999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "242 Lincoln Blvd, Middlesex, New Jersey, 08846-2361, United States",
+      "lat": 40.56275189999999,
+      "lng": -74.5108974,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "249 E Front St, Plainfield, New Jersey, 07060-1316, United States",
+      "lat": 40.6216675,
+      "lng": -74.4210983,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "25 Broad St, Elizabeth, New Jersey, 07201-2201, United States",
+      "lat": 40.6628962,
+      "lng": -74.2147024,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "25 S Broad St, Penns Grove, New Jersey, 08069-1656, United States",
+      "lat": 39.7286948,
+      "lng": -75.4682529,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "25 S Main St, Manville, New Jersey, 08835-1868, United States",
+      "lat": 40.5442787,
+      "lng": -74.5868536,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "256 Ocean Ave, Lakewood, New Jersey, 08701-3887, United States",
+      "lat": 40.090182,
+      "lng": -74.20532560000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "260 Lafayette St, Newark, New Jersey, 07105-2124, United States",
+      "lat": 40.7283249,
+      "lng": -74.1611795,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "261 Boulevard, Hasbrouck Heights, New Jersey, 07604-1908, United States",
+      "lat": 40.8637044,
+      "lng": -74.0769368,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "269 Monroe St, Passaic, New Jersey, 07055-5209, United States",
+      "lat": 40.8651318,
+      "lng": -74.12534939999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "270 King St, Perth Amboy, New Jersey, 08861-4475, United States",
+      "lat": 40.5072829,
+      "lng": -74.2668949,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "278 Monroe St, Passaic, New Jersey, 07055, United States",
+      "lat": 40.8653409,
+      "lng": -74.125877,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "297 Monroe St, Passaic, New Jersey, 07055-5207, United States",
+      "lat": 40.8644551,
+      "lng": -74.12670279999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "30 Lafayette Ave, Voorhees, New Jersey, 08043-9535, United States",
+      "lat": 39.8186251,
+      "lng": -74.9385568,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3005 Atlantic Ave, Atlantic City, New Jersey, 08401-6343, United States",
+      "lat": 39.3541862,
+      "lng": -74.4484978,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "306 S Main St, Pleasantville, New Jersey, 08232-3030, United States",
+      "lat": 39.388648,
+      "lng": -74.5249163,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "307 Smith St, Perth Amboy, New Jersey, 08832-1015, United States",
+      "lat": 40.5106767,
+      "lng": -74.27613730000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "31 Memorial Dr, Paterson, New Jersey, 07505, United States",
+      "lat": 40.92089170000001,
+      "lng": -74.1731641,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "314 Somerset St, North Plainfield, New Jersey, 07060-4905, United States",
+      "lat": 40.62193140000001,
+      "lng": -74.4289761,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "320 3rd Ave, Long Branch, New Jersey, 07740-6329, United States",
+      "lat": 40.2942746,
+      "lng": -73.98795969999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "322 W Front St, Plainfield, New Jersey, 07060-1134, United States",
+      "lat": 40.61706,
+      "lng": -74.42628959999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "323 Palisade Ave, Jersey City, New Jersey, 07087-5208, United States",
+      "lat": 40.7398017,
+      "lng": -74.04758799999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "327 Lyons Ave, Newark, New Jersey, 07112-1477, United States",
+      "lat": 40.7126293,
+      "lng": -74.2183911,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "359 Pennington Ave, Passaic, New Jersey, 07055-3405, United States",
+      "lat": 40.8468035,
+      "lng": -74.1325305,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "359 Somerset St, North Plainfield, New Jersey, 07060-4731, United States",
+      "lat": 40.6223929,
+      "lng": -74.4307695,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3601 Ventnor Ave, Atlantic City, New Jersey, 08401-3527, United States",
+      "lat": 39.3521218,
+      "lng": -74.45416329999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "408 Haledon Ave, Haledon, New Jersey, 07508-1554, United States",
+      "lat": 40.9384167,
+      "lng": -74.181336,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "410 Lalor St, Trenton, New Jersey, 08611-3545, United States",
+      "lat": 40.1991571,
+      "lng": -74.75163119999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "425 Anderson Ave, Fairview, New Jersey, 07010-1621, United States",
+      "lat": 40.8209576,
+      "lng": -73.9920935,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "426 33rd St, Union City, New Jersey, 07087-3913, United States",
+      "lat": 40.7726993,
+      "lng": -74.0283916,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "428 Main St, Asbury, New Jersey, 08802-1075, United States",
+      "lat": 40.6955265,
+      "lng": -75.0102871,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "440 20th Ave, Brick, New Jersey, 08724-2168, United States",
+      "lat": 40.0886995,
+      "lng": -74.1078723,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "442 Smith St, Perth Amboy, New Jersey, 08832-1020, United States",
+      "lat": 40.5127376,
+      "lng": -74.2822719,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "444 Madison Ave, Paterson, New Jersey, 07524-2728, United States",
+      "lat": 40.9256811,
+      "lng": -74.1522182,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "446 North Ave, Dunellen, New Jersey, 08812-1223, United States",
+      "lat": 40.5896593,
+      "lng": -74.4670508,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "465 Getty Ave, Paterson, New Jersey, 07011-2148, United States",
+      "lat": 40.8927486,
+      "lng": -74.1525589,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "494 Ellison St, Paterson, New Jersey, 07501-2122, United States",
+      "lat": 40.9166976,
+      "lng": -74.15581759999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "498 E 30th St, Paterson, New Jersey, 07504-2130, United States",
+      "lat": 40.9095683,
+      "lng": -74.1472945,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "53 S Jefferson St, Orange, New Jersey, 07050-1524, United States",
+      "lat": 40.7749586,
+      "lng": -74.2384062,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "531 S Broad St, Trenton, New Jersey, 08611-1819, United States",
+      "lat": 40.2110259,
+      "lng": -74.75734729999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "543 Shaler Blvd, Ridgefield, New Jersey, 07657-2440, United States",
+      "lat": 40.8329751,
+      "lng": -74.00249850000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "547 Elizabeth Ave, Elizabethport, New Jersey, 07206-1130, United States",
+      "lat": 40.65565890000001,
+      "lng": -74.1992746,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5528 Bergenline Ave, West New York, New Jersey, 07093-4645, United States",
+      "lat": 40.7861527,
+      "lng": -74.0180532,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "565 Central Ave, Jersey City, New Jersey, 07307-2505, United States",
+      "lat": 40.7539085,
+      "lng": -74.04421839999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6 Garfield Ave, East Brunswick, New Jersey, 08816-4752, United States",
+      "lat": 40.409375,
+      "lng": -74.37336859999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "600 Park Ave, Hoboken, New Jersey, 07030-6944, United States",
+      "lat": 40.7440888,
+      "lng": -74.03185320000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "601 4th St, Union City, New Jersey, 07087-2818, United States",
+      "lat": 40.7551067,
+      "lng": -74.0424081,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "611 Broadway, Bayonne, New Jersey, 07002-3818, United States",
+      "lat": 40.6679684,
+      "lng": -74.1151229,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6155 Bergenline Ave, West New York, New Jersey, 07093-1520, United States",
+      "lat": 40.7910653,
+      "lng": -74.01502470000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "617 E Main St, Bridgewater, New Jersey, 08807-3356, United States",
+      "lat": 40.5638922,
+      "lng": -74.57717559999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "62 Main St, Madison, New Jersey, 07928-2416, United States",
+      "lat": 40.7589157,
+      "lng": -74.41505049999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "621 Hamilton Ave, Woodbine, New Jersey, 08270-2708, United States",
+      "lat": 39.222448,
+      "lng": -74.8336234,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6210 Bergenline Ave, West New York, New Jersey, 07093-1619, United States",
+      "lat": 40.791388,
+      "lng": -74.0140838,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "64 Pacific St, Newark, New Jersey, 07105-1619, United States",
+      "lat": 40.725969,
+      "lng": -74.166288,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "651 N Stiles St, Linden, New Jersey, 07036, United States",
+      "lat": 40.625902,
+      "lng": -74.2688448,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "680 Main St, Little Falls, New Jersey, 07424-1060, United States",
+      "lat": 40.8821238,
+      "lng": -74.25134589999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "703 Main St, Little Falls, New Jersey, 07424-1054, United States",
+      "lat": 40.8816808,
+      "lng": -74.251605,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "712 1st Ave, Elizabeth, New Jersey, 07201-2801, United States",
+      "lat": 40.658234,
+      "lng": -74.2029601,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "720 Hamilton St, Somerset, New Jersey, 08873, United States",
+      "lat": 40.4902886,
+      "lng": -74.4737193,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "738 Union Ave, Middlesex, New Jersey, 08846, United States",
+      "lat": 40.5781067,
+      "lng": -74.5052204,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "74 E 15th St, Paterson, New Jersey, 07524-1820, United States",
+      "lat": 40.9339666,
+      "lng": -74.1543946,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7425 Bergenline Ave, North Bergen, New Jersey, 07047-5438, United States",
+      "lat": 40.79916619999999,
+      "lng": -74.00897239999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "75 1st St, Hackensack, New Jersey, 07601-2031, United States",
+      "lat": 40.8835603,
+      "lng": -74.0534667,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "76 Remsen St, South Bound Brook, New Jersey, 08880-1318, United States",
+      "lat": 40.55015789999999,
+      "lng": -74.5283829,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "806 1st Ave, Asbury Park, New Jersey, 07712-8802, United States",
+      "lat": 40.2212659,
+      "lng": -74.0120936,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "810 N 6th St, Newark, New Jersey, 07107-2702, United States",
+      "lat": 40.7772334,
+      "lng": -74.1776653,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "815 W Front St, Plainfield, New Jersey, 07063-1182, United States",
+      "lat": 40.6086155,
+      "lng": -74.4364226,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "82 3rd St, North Arlington, New Jersey, 07031-4838, United States",
+      "lat": 40.7956033,
+      "lng": -74.1242924,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "85 Ackerman Ave, Clifton, New Jersey, 07011, United States",
+      "lat": 40.8775135,
+      "lng": -74.1219741,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "880 Mt Prospect Ave, Newark, New Jersey, 07104-3694, United States",
+      "lat": 40.7833937,
+      "lng": -74.1627139,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "946 Market St, Paterson, New Jersey, 07513, United States",
+      "lat": 40.90208519999999,
+      "lng": -74.1421352,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "950 Main St, Paterson, New Jersey, 07503-2271, United States",
+      "lat": 40.8950672,
+      "lng": -74.16029259999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "959 Livingston Ave, North Brunswick, New Jersey, 08901-3343, United States",
+      "lat": 40.4701967,
+      "lng": -74.4706355,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "961 Livingston Ave, North Brunswick, New Jersey, 08901-3343, United States",
+      "lat": 40.4697532,
+      "lng": -74.4695734,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Bank St, Bridgeton, New Jersey, 08302, United States",
+      "lat": 39.4361453,
+      "lng": -75.2272238,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Bergen Ave, Camden, New Jersey, 08105, United States",
+      "lat": 39.9613425,
+      "lng": -75.0864788,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Springfield, New Jersey, 07081, United States",
+      "lat": 40.699863,
+      "lng": -74.32941989999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "W Blackwell St, Dover, New Jersey, 07801, United States",
+      "lat": 40.8852795,
+      "lng": -74.5684192,
+      "country": "US"
+    },
+    {
+      "name": "Meat City Supermarket",
+      "address": "1335 W 7th St, South Plainfield, New Jersey, 07080-1701, United States",
+      "lat": 40.5961594,
+      "lng": -74.4381932,
+      "country": "US"
+    },
+    {
+      "name": "Mi Tierra Supermarket",
+      "address": "320 Hudson St, Trenton, New Jersey, 08611-1519, United States",
+      "lat": 40.2126765,
+      "lng": -74.7505183,
+      "country": "US"
+    },
+    {
+      "name": "New City Supermarket",
+      "address": "15 W Main St, Freehold, New Jersey, 07728-2209, United States",
+      "lat": 40.2598825,
+      "lng": -74.27512879999999,
+      "country": "US"
+    },
+    {
+      "name": "Selecto Supermarket",
+      "address": "533 S Broad St, Trenton, New Jersey, 08611-1819, United States",
+      "lat": 40.2109458,
+      "lng": -74.7574118,
+      "country": "US"
+    },
+    {
+      "name": "Supremo Food Market",
+      "address": "25 S Broad St, Elizabeth, New Jersey, 07202-3401, United States",
+      "lat": 40.6602277,
+      "lng": -74.2163881,
+      "country": "US"
+    },
+    {
+      "name": "Supremos Supermarket",
+      "address": "323 Palisade Ave, Jersey City, New Jersey, 07307-1714, United States",
+      "lat": 40.7398017,
+      "lng": -74.04758799999999,
+      "country": "US"
+    },
+    {
+      "name": "Tropical Supermarket",
+      "address": "442 Smith St, Perth Amboy, New Jersey, 08861-3831, United States",
+      "lat": 40.5127376,
+      "lng": -74.2822719,
+      "country": "US"
+    },
+    {
+      "name": "Tropical Supermarket",
+      "address": "959 Livingston Ave, North Brunswick, New Jersey, 08902-1843, United States",
+      "lat": 40.4701967,
+      "lng": -74.4706355,
+      "country": "US"
+    },
+    {
+      "name": "Tu Pais Supermarket",
+      "address": "101 Anderson St, Trenton, New Jersey, 08611-1003, United States",
+      "lat": 40.2141196,
+      "lng": -74.7441355,
+      "country": "US"
+    },
+    {
+      "name": "Twin City Supermarket",
+      "address": "1016 Sherman Ave, Elizabeth, New Jersey, 07208-3002, United States",
+      "lat": 40.6869691,
+      "lng": -74.20628479999999,
+      "country": "US"
+    },
+    {
+      "name": "Twin City Supermarket",
+      "address": "216 Garfield Ave, Jersey City, New Jersey, 07305-3910, United States",
+      "lat": 40.6915223,
+      "lng": -74.0920782,
+      "country": "US"
+    },
+    {
+      "name": "Twin City Supermarket",
+      "address": "600 Park Ave, Plainfield, New Jersey, 07060-1646, United States",
+      "lat": 40.615067,
+      "lng": -74.4187583,
+      "country": "US"
+    },
+    {
+      "name": "Twin City Supermarket",
+      "address": "611 Broadway, Newark, New Jersey, 07104-4119, United States",
+      "lat": 40.7713086,
+      "lng": -74.16188029999999,
+      "country": "US"
+    },
+    {
+      "name": "Universal Supermarket",
+      "address": "201 Federal St, Camden, New Jersey, 08103, United States",
+      "lat": 39.9443788,
+      "lng": -75.1257473,
+      "country": "US"
+    },
+    {
+      "name": "Vela - Ber Market",
+      "address": "315 Monroe St, Passaic, New Jersey, 07055-8420, United States",
+      "lat": 40.8640994,
+      "lng": -74.1278727,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1 Teterboro Landing Dr, Teterboro, New Jersey, 07608, United States",
+      "lat": 40.8625662,
+      "lng": -74.0626018,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1050 W Edgar Rd, Linden, New Jersey, 07036-6522, United States",
+      "lat": 40.6178028,
+      "lng": -74.2535132,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1070 W Landis Ave, Vineland, New Jersey, 08360-3422, United States",
+      "lat": 39.4894305,
+      "lng": -75.0474009,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "150 Harrison Ave, Kearny, New Jersey, 07032-5950, United States",
+      "lat": 40.7477051,
+      "lng": -74.1374936,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1501 US Highway 22, Watchung, New Jersey, 07069-6507, United States",
+      "lat": 40.6379336,
+      "lng": -74.4247769,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1885 State Route 57, Hackettstown, New Jersey, 07840-3477, United States",
+      "lat": 40.820757,
+      "lng": -74.8374377,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2106 Mount Holly Rd, Burlington, New Jersey, 08016-4158, United States",
+      "lat": 40.0475258,
+      "lng": -74.8427213,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "290 State Route 18, East Brunswick, New Jersey, 08816-1995, United States",
+      "lat": 40.4588714,
+      "lng": -74.3988588,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3501 Route 42, Blackwood, New Jersey, 08012-1739, United States",
+      "lat": 39.7279378,
+      "lng": -75.0355596,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "400 Park Plaza Dr, Secaucus, New Jersey, 07094, United States",
+      "lat": 40.7912332,
+      "lng": -74.0403996,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "500 Bayonne Crossing Way, Bayonne, New Jersey, 07002-5305, United States",
+      "lat": 40.6599096,
+      "lng": -74.1065611,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6801 Black Horse Pike, Egg Harbor Twp, New Jersey, 08234, United States",
+      "lat": 39.3959372,
+      "lng": -74.553118,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "839 US Highway 130, East Windsor Twp, New Jersey, 08520-2907, United States",
+      "lat": 40.2539733,
+      "lng": -74.5533038,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "979 US Highway 1, North Brunswick Twp, New Jersey, 08902-2712, United States",
+      "lat": 40.4621212,
+      "lng": -74.46373659999999,
+      "country": "US"
+    }
+  ]
+}
