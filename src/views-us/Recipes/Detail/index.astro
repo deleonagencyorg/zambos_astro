@@ -98,14 +98,10 @@ const servings = recipe.servings || 4;
   
   <!-- ===== HERO SECTION ===== -->
   <!-- Mobile: Stack vertical | Desktop: Side by side with equal heights -->
-  <section class="relative w-full flex flex-col md:flex-row md:min-h-[600px] lg:min-h-[650px] py-20 md:py-0">
-      <img 
-      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
-      alt="" 
-      class="hidden md:block absolute -bottom-10 left-0 w-screen z-20 pointer-events-none"
-    /> 
+  <section class="relative w-full flex flex-col md:flex-row md:min-h-[600px] -mt-[80px] md:-mt-0 -lg:min-h-[650px] py-20 md:py-0">
+    
     <!-- Recipe Image - Full width on mobile, narrower on desktop -->
-    <div class="w-full md:w-[42%] lg:w-[100%] relative md:h-[600px] lg:h-[650px] overflow-hidden">
+    <div class="w-full md:w-[42%] lg:w-[60%] relative md:h-[600px] lg:h-[650px] overflow-hidden">
       {recipe.image && (
         <img 
           src={recipe.image} 
@@ -214,11 +210,15 @@ const servings = recipe.servings || 4;
   </section>
 
   <section class="relative w-full pb-[8%] md:pb-[5%] pt-[10%] md:pt-[0]">
-
+  <img 
+      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
+      alt="" 
+      class="hidden md:block absolute top-0  lg:-mt-[120px] left-0 w-screen z-20 pointer-events-none"
+    /> 
     
     <div class="relative flex flex-col items-center text-center px-[5%]">
       <!-- Product Package Image - More spacing from top section -->
-      <div class="relative w-[50%] md:w-[30%] lg:w-[25%] max-w-[400px] mb-[3%] z-10 drop-shadow-2xl mt-[5%] md:mt-[3%]">
+      <div class="relative w-[50%] md:w-[30%] lg:w-[25%] max-w-[400px] mb-[3%] z-30 drop-shadow-2xl mt-[5%] md:mt-[3%]">
         <img 
           src={productImage} 
           alt={productName}
@@ -276,7 +276,7 @@ const servings = recipe.servings || 4;
            <!-- Ingredients List with Checkbox Style -->
           <ul class="space-y-[3%]">
             {recipe.ingredients.map((ingredient: string) => (
-              <li class="flex items-start gap-[3%] text-[#0E6D20]">
+              <li class="flex items-start gap-[3%] text-white md:text-[#0E6D20]">
                 <!-- Checkbox square with red border matching design -->
                 <span class="w-[4vw] h-[4vw] md:w-[1.2vw] md:h-[1.2vw] max-w-[16px] max-h-[16px] border-2 border-[#B71C1C] rounded-sm mt-[0.5%] flex-shrink-0 flex items-center justify-center">
                   <span class="w-[60%] h-[60%] bg-[#B71C1C] rounded-[1px]"></span>
@@ -308,10 +308,10 @@ const servings = recipe.servings || 4;
             {recipe.instructions.map((instruction: string, index: number) => (
               <li class="flex items-start gap-[4%]">
                 <!-- Number in green with underline decoration matching design -->
-                <span class="flex-shrink-0 text-[#B71C1C] font-bold text-[4vw] md:text-[1.4vw] lg:text-[1.2vw] leading-none pt-[0.5%]">
+                <span class="flex-shrink-0 text-white md:text-[#B71C1C] font-bold text-[4vw] md:text-[1.4vw] lg:text-[1.2vw] leading-none pt-[0.5%]">
                   {index + 1}.
                 </span>
-                <p class="text-[#0E6D20] text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] leading-relaxed font-medium">{instruction}</p>
+                <p class="text-white md:text-[#0E6D20] text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] leading-relaxed font-medium">{instruction}</p>
               </li>
             ))}
           </ol>
@@ -361,11 +361,11 @@ const servings = recipe.servings || 4;
       <!-- Carousel Container -->
       <div class="relative">
         <!-- Recipe Cards Carousel -->
-        <div class="flex overflow-x-auto snap-x snap-mandatory gap-[4%] pb-[3%] md:pb-0 md:gap-[2%] scrollbar-hide" id="recipeCarousel">
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-0 md:gap-[4%] pb-[3%] md:pb-0 scrollbar-hide" id="recipeCarousel">
           {relatedRecipes.slice(0, 6).map((relatedRecipe, index) => (
             <a 
               href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${relatedRecipe.id}`}
-              class="group block bg-white rounded-[3vw] md:rounded-[1.5vw] lg:rounded-[1vw] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-[92%] md:w-[48%] snap-start"
+              class="group block bg-white rounded-[3vw] md:rounded-[1.5vw] lg:rounded-[1vw] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-full md:w-[48%] snap-start"
             >
               <!-- Image -->
               <div class="relative aspect-[16/10] overflow-hidden">
