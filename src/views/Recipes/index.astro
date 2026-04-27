@@ -65,13 +65,9 @@ const availableCategories = ORDER.filter(cat =>
   allRecipes.some(r => normalizeType(r) === cat)
 );
 
-// Normaliza la categoría de receta.
+// Normaliza la categoría de receta (solo usa 'category', no 'type' que es image/video).
 function normalizeType(r: Recipe): string {
-  const rawCategory = String((r as any).category || '').toLowerCase().trim();
-  const rawType = String((r as any).type || '').toLowerCase().trim();
-
-  const raw = rawCategory || rawType;
-
+  const raw = String((r as any).category || '').toLowerCase().trim();
   if (['breakfast', 'desayuno'].includes(raw)) return 'breakfast';
   if (['brunch'].includes(raw)) return 'brunch';
   if (['lunch', 'almuerzo'].includes(raw)) return 'lunch';
@@ -509,7 +505,6 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
   }
 
   document.addEventListener('astro:page-load', initializeRecipes);
-  document.addEventListener('astro:after-swap', initializeRecipes);
   document.addEventListener('astro:before-swap', () => {
     if (carouselInterval) clearInterval(carouselInterval);
   });
