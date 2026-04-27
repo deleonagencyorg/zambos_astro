@@ -285,6 +285,12 @@
   background: #e8eef0;
   position: relative;
   transition: opacity 0.3s ease-in-out;
+  /* iOS Safari/Chrome: force GPU compositing to prevent blank tiles */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .sl-map.loading {

@@ -271,7 +271,7 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
         streetViewControl: false,
         fullscreenControl: true,
         zoomControl: true,
-        gestureHandling: "greedy", // scroll zoom always on; touch uses 1-finger pan
+        gestureHandling: "greedy",
         clickableIcons: false,
         styles: [
           {
@@ -293,6 +293,18 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
       // Hide loading status after map is initialized
       hideStatus();
+
+      // iOS Safari/Chrome fix: force tile rendering with resize triggers
+      google.maps.event.addListenerOnce(sl.map, 'idle', function() {
+        google.maps.event.trigger(sl.map, 'resize');
+      });
+      // Delayed resize for iOS compositing
+      setTimeout(function() {
+        if (sl.map) google.maps.event.trigger(sl.map, 'resize');
+      }, 300);
+      setTimeout(function() {
+        if (sl.map) google.maps.event.trigger(sl.map, 'resize');
+      }, 1000);
 
       sl.infoWindow = new google.maps.InfoWindow();
 
@@ -682,6 +694,11 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
       });
       sl.map.fitBounds(bounds, { top: 60, right: 40, bottom: 40, left: 40 });
       if (sl.markers.length === 1) sl.map.setZoom(15);
+
+      // iOS: force repaint after markers load
+      setTimeout(function() {
+        if (sl.map) google.maps.event.trigger(sl.map, 'resize');
+      }, 200);
     }
 
     // ── Store List ─────────────────────────────────────────────────────────────
