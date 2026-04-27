@@ -101,18 +101,18 @@ const servings = recipe.servings || 4;
   <section class="relative w-full flex flex-col lg:flex-row lg:min-h-[800px] -mt-[80px] lg:-mt-0 xl:min-h-[920px] lg:py-0">
     
     <!-- Recipe Image - Full width on mobile/tablet, narrower on desktop -->
-    <div class="w-full lg:w-[42%] xl:w-[60%] relative lg:h-[800px] xl:h-[920px] overflow-hidden">
+    <div class="w-full lg:w-[42%] xl:w-[60%] relative min-h-[65vh] lg:min-h-0 lg:h-[800px] xl:h-[920px] overflow-hidden">
       <!-- Mobile/tablet: title overlaid at top of image, centered -->
-      <div class="absolute top-0 left-0 right-0 z-10 lg:hidden px-[8%] pt-[22%] pb-[20%] bg-gradient-to-b from-transparent via-black/60 to-transparent text-center">
+      <div class="absolute top-0 left-0 right-0 z-10 lg:hidden px-[8%] pt-[38%] md:pt-[30%] pb-[20%] bg-gradient-to-b from-transparent via-black/60 to-transparent text-center">
         <h1 class="font-bold text-white text-[5.5vw] uppercase leading-tight drop-shadow-lg">
           {recipe.title}
         </h1>
       </div>
       {recipe.image && (
-        <img 
-          src={recipe.image} 
+        <img
+          src={recipe.image}
           alt={recipe.title}
-          class="w-full h-full object-cover lg:absolute lg:inset-0"
+          class="w-full h-full object-cover absolute inset-0"
         />
       )}
     </div>
@@ -210,11 +210,11 @@ const servings = recipe.servings || 4;
     </div>
     </div>
 
-    <!-- White decorative line - full viewport width at bottom of hero, desktop only -->
-    <img 
-      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
-      alt="" 
-      class="hidden lg:block absolute bottom-0 left-0 w-full z-20 pointer-events-none"
+    <!-- White decorative line - full viewport width at bottom of hero, mobile and tablet -->
+    <img
+      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/lineblueus.webp"
+      alt=""
+      class="block lg:hidden w-full pointer-events-none absolute -bottom-[16%] md:-bottom-[20%] left-0 z-20"
     />
 
   </section>
@@ -497,11 +497,11 @@ const servings = recipe.servings || 4;
     </div>
  
 
-  <!-- White decorative line - tablet only -->
-  <img 
-    src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
-    alt="" 
-    class="hidden md:block lg:hidden w-full pointer-events-none"
+  <!-- White decorative line - mobile and tablet (after related recipes) -->
+  <img
+    src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp"
+    alt=""
+    class="block lg:hidden w-full pointer-events-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"
   />
 
   <!-- ===== ALL NATURAL / IT'S THAT VIBE SECTION ===== -->
