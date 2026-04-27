@@ -98,10 +98,10 @@ const servings = recipe.servings || 4;
   
   <!-- ===== HERO SECTION ===== -->
   <!-- Mobile: Stack vertical | Desktop: Side by side with equal heights -->
-  <section class="relative w-full flex flex-col md:flex-row md:min-h-[600px] -mt-[80px] md:-mt-0 -lg:min-h-[650px] py-20 md:py-0">
+  <section class="relative w-full flex flex-col md:flex-row md:min-h-[800px] -mt-[80px] md:-mt-0 lg:min-h-[920px] py-20 md:py-0">
     
     <!-- Recipe Image - Full width on mobile, narrower on desktop -->
-    <div class="w-full md:w-[42%] lg:w-[60%] relative md:h-[600px] lg:h-[650px] overflow-hidden">
+    <div class="w-full md:w-[42%] lg:w-[60%] relative md:h-[800px] lg:h-[920px] overflow-hidden">
       {recipe.image && (
         <img 
           src={recipe.image} 
@@ -112,7 +112,7 @@ const servings = recipe.servings || 4;
     </div>
     
     <!-- Recipe Info - Wider on desktop -->
-    <div class="w-full md:w-[70%] lg:w-[90%] relative flex flex-col justify-center md:h-[600px] lg:h-[650px] md:ml-[-15%] md:px-4 md:px-0 lg:px-20">
+    <div class="w-full md:w-[70%] lg:w-[90%] relative flex flex-col justify-center md:h-[800px] lg:h-[920px] md:ml-[-15%] md:px-0 lg:px-20">
       <!-- Mobile background layer -->
       <div class="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style=""></div>
       <!-- Desktop background layer -->
@@ -122,7 +122,7 @@ const servings = recipe.servings || 4;
       <div class="relative z-10">
 
       
-      <div class="p-[6%] md:p-[8%] lg:p-[10%] w-full">
+      <div class="p-[6%] md:p-[8%] lg:p-[10%] lg:pt-[12%] lg:pb-[16%] w-full">
         <!-- Title - Centered on mobile, left on desktop -->
         <h1 class="font-bold text-[7vw] md:text-[3.5vw] lg:text-[2.8vw] text-white uppercase mb-[4%] leading-[1.1] text-center md:text-left">
           {recipe.title}
@@ -204,25 +204,26 @@ const servings = recipe.servings || 4;
         </div>
       </div>
     </div>
+    </div>
 
     <!-- White decorative line - full viewport width at bottom of hero, desktop only -->
+    <img 
+      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
+      alt="" 
+      class="hidden md:block absolute bottom-0 left-0 w-full z-20 pointer-events-none"
+    />
 
   </section>
 
   <section class="relative w-full pb-[8%] md:pb-[5%] pt-[2%] md:pt-[0]">
-  <img 
-      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
-      alt="" 
-      class="hidden md:block absolute top-0  lg:-mt-[120px] left-0 w-screen z-20 pointer-events-none"
-    /> 
     
     <div class="relative flex flex-col items-center text-center px-[5%]">
       <!-- Product Package Image - More spacing from top section -->
-      <div class="relative w-[80%] md:w-[30%] lg:w-[25%] max-w-[400px] mb-[3%] z-30 drop-shadow-2xl mt-[0] md:mt-[3%] mx-auto">
+      <div class="relative w-[80%] md:w-[30%] lg:w-[25%] max-w-[400px] mb-[3%] z-30 drop-shadow-2xl mt-[0] md:-mt-[30%] lg:-mt-[16%] mx-auto">
         <img 
           src={productImage} 
           alt={productName}
-          class="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300"
+          class="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300 "
         />
       </div>
       
