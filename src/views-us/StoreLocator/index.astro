@@ -93,6 +93,13 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
       <!-- RIGHT: Map -->
       <div class="sl-map-col">
+        <div id="sl-skeleton" class="sl-skeleton-overlay">
+          <div class="sl-skeleton-shimmer"></div>
+          <div class="sl-skeleton-content">
+            <div class="sl-skeleton-pin">📍</div>
+            <p class="sl-skeleton-msg" id="sl-skeleton-msg">Detecting your location…</p>
+          </div>
+        </div>
         <div id="sl-map" class="sl-map loading"></div>
       </div>
     </div>
@@ -129,6 +136,7 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
       lastZipFilter: "",
       userLat: null,
       userLng: null,
+      skeletonHidden: false,
     };
 
     // ── Helpers ────────────────────────────────────────────────────────────────
@@ -171,6 +179,64 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
     function hideCount() {
       var el = $("sl-count");
       if (el) el.style.display = "none";
+    }
+
+    // ── Skeleton overlay ─────────────────────────────────────────────────────────────
+    function hideSkeleton() {
+      if (sl.skeletonHidden) return;
+      sl.skeletonHidden = true;
+      var sk = $("sl-skeleton");
+      if (sk) {
+        sk.style.opacity = "0";
+        sk.style.pointerEvents = "none";
+        setTimeout(function () {
+          sk.style.display = "none";
+          // Resize después de quitar el overlay para que el mapa llene el espacio
+          if (sl.map) google.maps.event.trigger(sl.map, "resize");
+        }, 500);
+      }
+      // Resize inmediato también
+      if (sl.map) google.maps.event.trigger(sl.map, "resize");
+    }
+
+    function updateSkeletonMsg(msg) {
+      var el = $("sl-skeleton-msg");
+      if (el) el.textContent = msg;
+    }
+
+    // ── USA bounds check ───────────────────────────────────────────────────────────
+    function isInUSA(lat, lng) {
+      var inContiguous = lat >= 24.0 && lat <= 50.0 && lng >= -125.0 && lng <= -65.0;
+      var inHawaii     = lat >= 18.0 && lat <= 23.5 && lng >= -161.0 && lng <= -154.0;
+      var inAlaska     = lat >= 51.0 && lat <= 72.0 && lng >= -172.0 && lng <= -130.0;
+      return inContiguous || inHawaii || inAlaska;
+    }
+
+    // ── Global event handlers (added only once) ─────────────────────────────────
+    var _globalHandlersAdded = false;
+    function addGlobalHandlers() {
+      if (_globalHandlersAdded) return;
+      _globalHandlersAdded = true;
+      // iOS: back-forward cache
+      window.addEventListener("pageshow", function (e) {
+        if (e.persisted && sl.map) {
+          setTimeout(function () { google.maps.event.trigger(sl.map, "resize"); }, 150);
+        }
+      });
+      // Android/iOS: app vuelve al frente
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden && sl.map) {
+          setTimeout(function () { google.maps.event.trigger(sl.map, "resize"); }, 150);
+        }
+      });
+      // Astro ViewTransitions: re-render después del swap de página
+      document.addEventListener("astro:after-swap", function () {
+        [200, 450, 800].forEach(function (d) {
+          setTimeout(function () {
+            if (sl.map) google.maps.event.trigger(sl.map, "resize");
+          }, d);
+        });
+      });
     }
 
     // ── State centroids (approximate lat/lng centers) for fallback ─────────────
@@ -242,7 +308,9 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
     // ── Maps API Loader ────────────────────────────────────────────────────────
     function loadMapsApi(key, callback) {
       if (window.google && window.google.maps) {
-        callback();
+        // Maps ya cargado: defer para que la animación slide de Astro termine
+        // y el contenedor tenga dimensiones reales antes de crear el mapa
+        setTimeout(callback, 400);
         return;
       }
       window.__slMapReady = callback;
@@ -264,9 +332,16 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
       var container = $("sl-map");
       if (!container) return;
 
+      // Siempre forzar altura explícita para evitar race conditions con CSS/transitions
+      var isMobile = window.innerWidth < 768;
+      var mapH = isMobile
+        ? Math.max(Math.round(window.innerWidth * 0.72), 320)
+        : Math.max(Math.round(window.innerHeight * 0.58), 480);
+      container.style.height = mapH + "px";
+
       sl.map = new google.maps.Map(container, {
-        center: { lat: 39.5, lng: -98.35 },
-        zoom: 4,
+        center: { lat: 27.99, lng: -81.76 },
+        zoom: 6,
         mapTypeControl: false,
         streetViewControl: false,
         fullscreenControl: true,
@@ -294,17 +369,15 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
       // Hide loading status after map is initialized
       hideStatus();
 
-      // iOS Safari/Chrome fix: force tile rendering with resize triggers
-      google.maps.event.addListenerOnce(sl.map, 'idle', function() {
-        google.maps.event.trigger(sl.map, 'resize');
+      // Progressive resize triggers for iOS/Android/Safari rendering
+      google.maps.event.addListenerOnce(sl.map, "idle", function () {
+        google.maps.event.trigger(sl.map, "resize");
       });
-      // Delayed resize for iOS compositing
-      setTimeout(function() {
-        if (sl.map) google.maps.event.trigger(sl.map, 'resize');
-      }, 300);
-      setTimeout(function() {
-        if (sl.map) google.maps.event.trigger(sl.map, 'resize');
-      }, 1000);
+      [100, 300, 600, 1500].forEach(function (d) {
+        setTimeout(function () {
+          if (sl.map) google.maps.event.trigger(sl.map, "resize");
+        }, d);
+      });
 
       sl.infoWindow = new google.maps.InfoWindow();
 
@@ -403,8 +476,9 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
 
     // ── Geolocation ────────────────────────────────────────────────────────────
     function requestGeolocation() {
+      updateSkeletonMsg("Detecting your location…");
       if (!navigator.geolocation) {
-        // Si no hay geolocalización disponible, cargar California por defecto
+        hideSkeleton();
         loadDefaultState();
         return;
       }
@@ -413,11 +487,21 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
         function (pos) {
           var lat = pos.coords.latitude;
           var lng = pos.coords.longitude;
+
+          // If user is outside the USA, show Florida by default
+          if (!isInUSA(lat, lng)) {
+            hideStatus();
+            hideSkeleton();
+            loadDefaultState();
+            return;
+          }
+
           sl.userLat = lat;
           sl.userLng = lng;
           sl.map.setCenter({ lat: lat, lng: lng });
           sl.map.setZoom(10);
           hideStatus();
+          hideSkeleton();
           reverseGeocodeState(lat, lng, function (code) {
             if (code) {
               loadStoresForState(code, lat, lng);
@@ -429,7 +513,7 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
         },
         function () {
           hideStatus();
-          // Si el usuario rechaza o hay error, cargar California por defecto
+          hideSkeleton();
           loadDefaultState();
         },
         { timeout: 10000, enableHighAccuracy: false },
@@ -437,8 +521,8 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
     }
 
     function loadDefaultState() {
-      // Cargar California (CA) por defecto - estado con más tiendas
-      var defaultState = "CA";
+      // Florida as default for non-US visitors or denied geolocation
+      var defaultState = "FL";
       var c = STATE_CENTROIDS[defaultState];
       if (c) {
         sl.map.setCenter({ lat: c.lat, lng: c.lng });
@@ -781,8 +865,20 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
       sl.lastZipFilter = "";
       sl.userLat = null;
       sl.userLng = null;
+      sl.skeletonHidden = false;
+
+      // Restore skeleton visibility on Astro re-navigation
+      var sk = $("sl-skeleton");
+      if (sk) {
+        sk.style.display = "";
+        sk.style.opacity = "1";
+        sk.style.pointerEvents = "auto";
+      }
+
+      addGlobalHandlers();
 
       if (!mapsApiKey) {
+        hideSkeleton();
         showStatus(
           "Google Maps API key missing. Add PUBLIC_GOOGLE_MAPS_API_KEY to .env",
           "error",
