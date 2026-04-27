@@ -55,13 +55,9 @@ const filterLabels: Record<string, string> = currentLang === 'es'
       other: 'OTHER'
     };
 
-// Normaliza la categoría de receta.
+// Normaliza la categoría de receta (solo usa 'category', no 'type' que es image/video).
 function normalizeType(r: Recipe): string {
-  const rawCategory = String((r as any).category || '').toLowerCase().trim();
-  const rawType = String((r as any).type || '').toLowerCase().trim();
-
-  const raw = rawCategory || rawType;
-
+  const raw = String((r as any).category || '').toLowerCase().trim();
   if (['breakfast', 'desayuno'].includes(raw)) return 'breakfast';
   if (['brunch'].includes(raw)) return 'brunch';
   if (['lunch', 'almuerzo'].includes(raw)) return 'lunch';
@@ -75,8 +71,10 @@ const availableCategories = ORDER.filter(cat =>
   allRecipes.some(r => normalizeType(r) === cat)
 );
 
-// Get featured recipes for carousel (first 3)
-const featuredRecipes = allRecipes.slice(0, 3);
+// 1 representative per available category so every filter has a slide in the hero carousel
+const featuredRecipes = availableCategories
+  .map(cat => allRecipes.find(r => normalizeType(r) === cat))
+  .filter((r): r is Recipe => !!r);
 ---
 
 <div class="min-h-screen relative">
@@ -140,6 +138,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
               <div 
                 class={`carousel-slide ${index === 0 ? '' : 'hidden'}`}
                 data-slide={index}
+                data-type={normalizeType(recipe)}
               >
                 <div class="relative h-[400px] md:h-[500px] lg:h-[600px]">
                   <img 
@@ -350,6 +349,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
 <script>
   let recipesIO: IntersectionObserver | null = null;
   let carouselInterval: number | null = null;
+  let resizeTimeout: number | null = null;
 
   function initializeRecipes() {
     // Carousel functionality
@@ -359,6 +359,8 @@ const featuredRecipes = allRecipes.slice(0, 3);
     const prevBtns = document.querySelectorAll('.carousel-prev-btn');
     const nextBtns = document.querySelectorAll('.carousel-next-btn');
     let currentSlide = 0;
+    let currentFilter = 'all';
+    let currentQuery = '';
 
     function showSlide(index: number) {
       carouselSlides.forEach((slide, i) => {
@@ -382,14 +384,29 @@ const featuredRecipes = allRecipes.slice(0, 3);
       currentSlide = index;
     }
 
+    function getEligibleSlides(): HTMLElement[] {
+      return Array.from(carouselSlides).filter((s) => {
+        const type = (s as HTMLElement).dataset.type || '';
+        return currentFilter === 'all' || type === currentFilter;
+      }) as HTMLElement[];
+    }
+
     function nextSlide() {
-      const next = (currentSlide + 1) % carouselSlides.length;
-      showSlide(next);
+      const eligible = getEligibleSlides();
+      if (eligible.length === 0) return;
+      const allSlides = Array.from(carouselSlides);
+      const curEligIdx = eligible.findIndex((s) => allSlides.indexOf(s) === currentSlide);
+      const nextEligIdx = (curEligIdx + 1) % eligible.length;
+      showSlide(allSlides.indexOf(eligible[nextEligIdx]));
     }
 
     function prevSlide() {
-      const prev = (currentSlide - 1 + carouselSlides.length) % carouselSlides.length;
-      showSlide(prev);
+      const eligible = getEligibleSlides();
+      if (eligible.length === 0) return;
+      const allSlides = Array.from(carouselSlides);
+      const curEligIdx = eligible.findIndex((s) => allSlides.indexOf(s) === currentSlide);
+      const prevEligIdx = (curEligIdx - 1 + eligible.length) % eligible.length;
+      showSlide(allSlides.indexOf(eligible[prevEligIdx]));
     }
 
     // Carousel controls - attach to all prev/next buttons (mobile and desktop)
@@ -403,7 +420,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
     // Auto-advance carousel
     function startCarouselAutoplay() {
       if (carouselInterval) clearInterval(carouselInterval);
-      if (carouselSlides.length > 1) {
+      if (getEligibleSlides().length > 1) {
         carouselInterval = window.setInterval(nextSlide, 5000);
       }
     }
@@ -421,8 +438,6 @@ const featuredRecipes = allRecipes.slice(0, 3);
     }
     
     let currentCarouselPage = 0;
-    let currentFilter = 'all';
-    let currentQuery = '';
 
     const filterButtons = Array.from(document.querySelectorAll('#recipeFilters .filter-btn')) as HTMLButtonElement[];
     const noResultsEl = document.getElementById('noResults') as HTMLElement | null;
@@ -433,13 +448,20 @@ const featuredRecipes = allRecipes.slice(0, 3);
 
     function setFeaturedCarouselVisibility() {
       if (!featuredCarousel) return;
-      const shouldHide = !!currentQuery || currentFilter !== 'all';
-      featuredCarousel.classList.toggle('hidden', shouldHide);
-      if (shouldHide) {
+      const eligible = getEligibleSlides();
+      if (eligible.length === 0) {
+        featuredCarousel.classList.add('hidden');
         stopCarouselAutoplay();
-      } else {
-        startCarouselAutoplay();
+        return;
       }
+      featuredCarousel.classList.remove('hidden');
+      // If current slide is not in the eligible set, jump to first eligible
+      const allSlides = Array.from(carouselSlides);
+      const currentIsEligible = eligible.some((s) => allSlides.indexOf(s) === currentSlide);
+      if (!currentIsEligible) {
+        showSlide(allSlides.indexOf(eligible[0]));
+      }
+      startCarouselAutoplay();
     }
 
     function getMatchingCards() {
@@ -476,7 +498,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
       
       // Animacion para las cards del carousel de recipes
       visibleCards.forEach((c, index) => {
-        c.style.display = 'block';
+        c.style.display = '';
         c.style.opacity = '0';
         c.style.transform = 'translateY(30px)';
         
@@ -569,7 +591,6 @@ const featuredRecipes = allRecipes.slice(0, 3);
 
     setFeaturedCarouselVisibility();
 
-    let resizeTimeout: number | null = null;
     window.addEventListener('resize', () => {
       if (resizeTimeout) clearTimeout(resizeTimeout);
       resizeTimeout = window.setTimeout(() => {
@@ -600,9 +621,9 @@ const featuredRecipes = allRecipes.slice(0, 3);
   }
 
   document.addEventListener('astro:page-load', initializeRecipes);
-  document.addEventListener('astro:after-swap', initializeRecipes);
   document.addEventListener('astro:before-swap', () => {
     if (carouselInterval) clearInterval(carouselInterval);
+    if (resizeTimeout) clearTimeout(resizeTimeout);
   });
 </script>
 
