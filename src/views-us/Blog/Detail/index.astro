@@ -223,7 +223,8 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
         
         <div class="blog-detail__related-grid">
           {suggestedPosts.map((post) => (
-            <article class="related-card">
+            <a href={`/${currentLang}/blog/${post.slug || post.id}`} class="related-card group">
+              <!-- Image on top -->
               <div class="related-card__image">
                 <LazyImage 
                   src={post.image} 
@@ -233,6 +234,7 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
                   fallbackSrc={`/images/${currentLang}/slider1.png`}
                 />
               </div>
+              <!-- Content - Light green background -->
               <div class="related-card__content">
                 <div class="related-card__meta">
                   {post.category && (
@@ -246,11 +248,11 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
                 {post.summary && (
                   <p class="related-card__summary">{post.summary}</p>
                 )}
-                <a href={`/${currentLang}/blog/${post.slug || post.id}`} class="related-card__btn">
+                <span class="related-card__btn">
                   {labels.readMore}
-                </a>
+                </span>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
@@ -605,57 +607,44 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
     }
   }
 
-  /* ==================== Related Card (Yellow) ==================== */
+  /* ==================== Related Card - Green Style (matching blog index) ==================== */
   .related-card {
     display: flex;
-    flex-direction: row;
-    background-color: var(--color-primary);
+    flex-direction: column;
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all 0.3s ease;
-    padding: 1rem;
-    gap: 1rem;
+    text-decoration: none;
   }
 
   .related-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.02);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   }
 
   .related-card__image {
-    width: 100px;
-    min-width: 100px;
-    height: 100px;
-    border-radius: var(--radius-md);
+    width: 100%;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
-    flex-shrink: 0;
-  }
-
-  @media (min-width: 768px) {
-    .related-card__image {
-      width: 130px;
-      min-width: 130px;
-      height: 130px;
-    }
   }
 
   .related-card__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
 
   .related-card:hover .related-card__img {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   .related-card__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: #97E66C;
+    padding: 1.25rem;
     flex: 1;
-    min-width: 0;
   }
 
   .related-card__meta {
@@ -669,8 +658,8 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
   .related-card__category {
     display: inline-block;
     padding: 0.3rem 0.65rem;
-    background-color: var(--color-accent);
-    color: var(--color-white);
+    background-color: #0E6D20;
+    color: #fff;
     font-size: 0.65rem;
     font-weight: 700;
     border-radius: 4px;
@@ -680,16 +669,23 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
 
   .related-card__date {
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.7);
+    color: #0E6D20;
+    font-weight: 600;
+    font-style: italic;
   }
 
   .related-card__title {
     font-size: 0.9rem;
     font-weight: 800;
-    color: var(--color-white);
+    color: #fff;
     margin: 0 0 0.4rem 0;
     line-height: 1.3;
     text-transform: uppercase;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   @media (min-width: 768px) {
@@ -700,7 +696,7 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
 
   .related-card__summary {
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.85);
+    color: #0E6D20;
     margin: 0 0 0.75rem 0;
     line-height: 1.5;
     display: -webkit-box;
@@ -718,20 +714,21 @@ const videoEmbed = toYoutubeEmbed((blogPost as any).video);
   .related-card__btn {
     display: inline-block;
     width: fit-content;
-    padding: 0.5rem 1rem;
-    background-color: var(--color-accent);
-    color: var(--color-white);
+    padding: 0.5rem 1.25rem;
+    background-color: #0E6D20;
+    color: #fff;
     font-size: 0.7rem;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 50px;
     text-transform: uppercase;
     text-decoration: none;
     transition: all 0.3s ease;
     letter-spacing: 0.02em;
+    margin-top: auto;
   }
 
-  .related-card__btn:hover {
-    opacity: 0.85;
+  .related-card:hover .related-card__btn {
+    background-color: #0a5418;
     transform: translateY(-1px);
   }
 </style>

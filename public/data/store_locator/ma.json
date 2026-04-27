@@ -1,0 +1,534 @@
+{
+  "state_code": "MA",
+  "count": 66,
+  "stores": [
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "100 Hawthorne St, Chelsea, Massachusetts, 02150-3434, United States",
+      "zip": "02150",
+      "lat": 42.3901462,
+      "lng": -71.0357985,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1000 Main St, Malden, Massachusetts, 02148, United States",
+      "zip": "02148",
+      "lat": 42.4378057,
+      "lng": -71.06749289999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1188 Dorchester Ave, Dorchester, Massachusetts, 02125-1503, United States",
+      "zip": "02125",
+      "lat": 42.3100501,
+      "lng": -71.05729819999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "12 Essex St, Salem, Massachusetts, 01970-5209, United States",
+      "zip": "01970",
+      "lat": 42.5250535,
+      "lng": -70.8848059,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "121 Bennington St, East Boston, Massachusetts, 02128-1709, United States",
+      "zip": "02128",
+      "lat": 42.37646489999999,
+      "lng": -71.0343786,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13 Cabot St, Holyoke, Massachusetts, 01040-6055, United States",
+      "zip": "01040",
+      "lat": 42.1981297,
+      "lng": -72.6041049,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "150 Bennington St, East Boston, Massachusetts, 02128-1750, United States",
+      "zip": "02128",
+      "lat": 42.3770499,
+      "lng": -71.0336617,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "153 Hawthorne St, Chelsea, Massachusetts, 02150-3242, United States",
+      "zip": "02150",
+      "lat": 42.3920117,
+      "lng": -71.0342021,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "160 Pleasant St, Cambridge, Massachusetts, 02139-4606, United States",
+      "zip": "02139",
+      "lat": 42.3596474,
+      "lng": -71.1130846,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "164 Park St, Chelsea, Massachusetts, 02150-2824, United States",
+      "zip": "02150",
+      "lat": 42.3904943,
+      "lng": -71.0355,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1650 Main St, South Weymouth, Massachusetts, 02190-1310, United States",
+      "zip": "02190",
+      "lat": 42.1477778,
+      "lng": -70.95461569999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "187 Lawrence St, Lawrence, Massachusetts, 01841-2522, United States",
+      "zip": "01841",
+      "lat": 42.7163539,
+      "lng": -71.1652466,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "195 Hollis St, Framingham, Massachusetts, 01702-8607, United States",
+      "zip": "01702",
+      "lat": 42.2736391,
+      "lng": -71.4184945,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2 Adams St, Charlestown, Massachusetts, 02129-3483, United States",
+      "zip": "02129",
+      "lat": 42.37482920000001,
+      "lng": -71.0599664,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2 Central Ave, Chelsea, Massachusetts, 02150-3202, United States",
+      "zip": "02150",
+      "lat": 42.3894739,
+      "lng": -71.03262490000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "201 N Common St, Lynn, Massachusetts, 01905-2516, United States",
+      "zip": "01905",
+      "lat": 42.4631918,
+      "lng": -70.9631362,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "208 Waverly St, Framingham, Massachusetts, 01702, United States",
+      "zip": "01702",
+      "lat": 42.2776297,
+      "lng": -71.407957,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2101 Washington St, Roxbury, Massachusetts, 02119-2021, United States",
+      "zip": "02119",
+      "lat": 42.3323251,
+      "lng": -71.0815626,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "217 Bowdoin St, Dorchester, Massachusetts, 02122-1809, United States",
+      "zip": "02122",
+      "lat": 42.3055081,
+      "lng": -71.0674657,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "217 S Main St, Sharon, Massachusetts, 02067-2528, United States",
+      "zip": "02067",
+      "lat": 42.1138203,
+      "lng": -71.1871599,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "220 River St, Waltham, Massachusetts, 02453-6565, United States",
+      "zip": "02453",
+      "lat": 42.3712788,
+      "lng": -71.22450750000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "226 Hollis St, Framingham, Massachusetts, 01702-8606, United States",
+      "zip": "01702",
+      "lat": 42.2731679,
+      "lng": -71.4182527,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "24 Irving St, Cambridge, Massachusetts, 02138-3007, United States",
+      "zip": "02138",
+      "lat": 42.375568,
+      "lng": -71.11073309999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "293 Crescent St, Waltham, Massachusetts, 02453-3816, United States",
+      "zip": "02453",
+      "lat": 42.3641138,
+      "lng": -71.2439164,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3 Union St, Natick, Massachusetts, 01760-4709, United States",
+      "zip": "01760",
+      "lat": 42.2847531,
+      "lng": -71.3404044,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "300 N Main St, Randolph, Massachusetts, 02368-4102, United States",
+      "zip": "02368",
+      "lat": 42.1678388,
+      "lng": -71.0466196,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "300 Pleasant St, Malden, Massachusetts, 02148, United States",
+      "zip": "02148",
+      "lat": 42.4267365,
+      "lng": -71.0743243,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "315 Moody St, Waltham, Massachusetts, 02453-5206, United States",
+      "zip": "02453",
+      "lat": 42.37077910000001,
+      "lng": -71.2373513,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "35 Lexington St, Burlington, Massachusetts, 01803-3714, United States",
+      "zip": "01803",
+      "lat": 42.5007969,
+      "lng": -71.20185130000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "35 Washington St, Dorchester, Massachusetts, 02121-3167, United States",
+      "zip": "02121",
+      "lat": 42.3069886,
+      "lng": -71.0824305,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "355 Belmont Ave, Springfield, Massachusetts, 01108-2000, United States",
+      "zip": "01108",
+      "lat": 42.0884425,
+      "lng": -72.5644603,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4 Broadway St, Westford, Massachusetts, 01886-2128, United States",
+      "zip": "01886",
+      "lat": 42.59233589999999,
+      "lng": -71.4602622,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4 May St, Worcester, Massachusetts, 01610-1423, United States",
+      "zip": "01610",
+      "lat": 42.2552135,
+      "lng": -71.8146074,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "43 State St, Boston, Massachusetts, 02109-2804, United States",
+      "zip": "02109",
+      "lat": 42.3586386,
+      "lng": -71.0563205,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "430 Geneva Ave, Dorchester, Massachusetts, 02122-1407, United States",
+      "zip": "02122",
+      "lat": 42.3005844,
+      "lng": -71.0663747,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "458 Broadway St, Chicopee, Massachusetts, 01020-2403, United States",
+      "zip": "01020",
+      "lat": 42.1457111,
+      "lng": -72.5802957,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "46 Washington St, Dorchester, Massachusetts, 02121-3105, United States",
+      "zip": "02121",
+      "lat": 42.3070301,
+      "lng": -71.0820434,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "49 Pond St, Franklin, Massachusetts, 02038-3809, United States",
+      "zip": "02038",
+      "lat": 42.0927718,
+      "lng": -71.42571889999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "51 Center St, Middleboro, Massachusetts, 02346-2253, United States",
+      "zip": "02346",
+      "lat": 41.8929317,
+      "lng": -70.90991989999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "530 Waverly St, Framingham, Massachusetts, 01702, United States",
+      "zip": "01702",
+      "lat": 42.2753906,
+      "lng": -71.4209607,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "542 Southbridge St, Worcester, Massachusetts, 01501-2251, United States",
+      "zip": "01501",
+      "lat": 42.1912314,
+      "lng": -71.8454575,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "576 Washington St, Canton, Massachusetts, 02021-3000, United States",
+      "zip": "02021",
+      "lat": 42.1533859,
+      "lng": -71.14685220000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "597 Essex St, Lynn, Massachusetts, 01901-1041, United States",
+      "zip": "01901",
+      "lat": 42.4653476,
+      "lng": -70.9506808,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "664 Main St, Worcester, Massachusetts, 01610-3124, United States",
+      "zip": "01610",
+      "lat": 42.2593049,
+      "lng": -71.80628779999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "665 Liberty St, Springfield, Massachusetts, 01104-2461, United States",
+      "zip": "01104",
+      "lat": 42.121053,
+      "lng": -72.582938,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "689 Main St, Worcester, Massachusetts, 01610-3165, United States",
+      "zip": "01610",
+      "lat": 42.2583786,
+      "lng": -71.80667079999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "721 Main St, Worcester, Massachusetts, 01610-3162, United States",
+      "zip": "01610",
+      "lat": 42.2575817,
+      "lng": -71.80799139999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "73 Maverick Sq, East Boston, Massachusetts, 02128-2312, United States",
+      "zip": "02128",
+      "lat": 42.3698186,
+      "lng": -71.0385905,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "73 Winthrop Ave, Lawrence, Massachusetts, 01843-2836, United States",
+      "zip": "01843",
+      "lat": 42.6898019,
+      "lng": -71.15170549999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "769 Main St, Worcester, Massachusetts, 01610-3129, United States",
+      "zip": "01610",
+      "lat": 42.2567259,
+      "lng": -71.8098772,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "776 Dudley St, Dorchester, Massachusetts, 02125-2276, United States",
+      "zip": "02125",
+      "lat": 42.3174943,
+      "lng": -71.06571029999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "790 State St, Springfield, Massachusetts, 01109, United States",
+      "zip": "01109",
+      "lat": 42.1120166,
+      "lng": -72.56563229999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "80 Hollis St, Framingham, Massachusetts, 01702-8616, United States",
+      "zip": "01702",
+      "lat": 42.2751326,
+      "lng": -71.4170881,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "82 East St Ext, Milford, Massachusetts, 01757-3684, United States",
+      "zip": "01757",
+      "lat": 42.1360141,
+      "lng": -71.5088495,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "86 Broadway, West Yarmouth, Massachusetts, 02673-5810, United States",
+      "zip": "02673",
+      "lat": 41.6424459,
+      "lng": -70.24754829999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "868 Blue Hill Ave, Dorchester Center, Massachusetts, 02124-1607, United States",
+      "zip": "02124",
+      "lat": 42.2950768,
+      "lng": -71.0875938,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "926 Cummins Hwy, Mattapan, Massachusetts, 02126-2041, United States",
+      "zip": "02126",
+      "lat": 42.2682618,
+      "lng": -71.0945294,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "942 Hyde Park Ave, Hyde Park, Massachusetts, 02136-3269, United States",
+      "zip": "02136",
+      "lat": 42.2675548,
+      "lng": -71.1197852,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "95 Park St, Melrose, Massachusetts, 02176-4853, United States",
+      "zip": "02176",
+      "lat": 42.4494243,
+      "lng": -71.0546331,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "979 Main St, Malden, Massachusetts, 01880-3978, United States",
+      "zip": "01880",
+      "lat": 42.438919,
+      "lng": -71.0670744,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Bank St, Williamstown, Massachusetts, 01267, United States",
+      "zip": "01267",
+      "lat": 42.7106725,
+      "lng": -73.2045131,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11 Jungle Rd, Leominster, Massachusetts, 01453-5207, United States",
+      "zip": "01453",
+      "lat": 42.4925091,
+      "lng": -71.7296017,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1105 Boston Rd, Springfield, Massachusetts, 01119-1333, United States",
+      "zip": "01119",
+      "lat": 42.1360727,
+      "lng": -72.50690999999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1470 S Washington St, North Attleboro, Massachusetts, 02760-6745, United States",
+      "zip": "02760",
+      "lat": 41.933125,
+      "lng": -71.350376,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "555 E Main St, Orange, Massachusetts, 01364-9515, United States",
+      "zip": "01364",
+      "lat": 42.5886487,
+      "lng": -72.2842989,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "780 Lynnway, Lynn, Massachusetts, 01905-3061, United States",
+      "zip": "01905",
+      "lat": 42.44874100000001,
+      "lng": -70.9609254,
+      "country": "US"
+    }
+  ]
+}

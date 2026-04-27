@@ -1,0 +1,318 @@
+{
+  "state_code": "LA",
+  "count": 39,
+  "stores": [
+    {
+      "name": "AG Baton Rouge, All Other",
+      "address": "909 Westbank Expy, Westwego, Louisiana, 70094-4652, United States",
+      "zip": "70094",
+      "lat": 29.8989788,
+      "lng": -90.1429169,
+      "country": "US"
+    },
+    {
+      "name": "AG Baton Rouge, All Other",
+      "address": "931 S Burnside Ave, Gonzales, Louisiana, 70737-4258, United States",
+      "zip": "70737",
+      "lat": 30.2260415,
+      "lng": -90.9212394,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4070 Highway 90, Des Allemands, Louisiana, 70030, United States",
+      "zip": "70030",
+      "lat": 29.8131597,
+      "lng": -90.4900818,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "1421 Beglis Pkwy, Sulphur, Louisiana, 70663-5603, United States",
+      "zip": "70663",
+      "lat": 30.2270556,
+      "lng": -93.35972819999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "1422 MacArthur Dr, Alexandria, Louisiana, 71301-4022, United States",
+      "zip": "71301",
+      "lat": 31.28285189999999,
+      "lng": -92.4767979,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "4100 Barksdale Blvd, Bossier City, Louisiana, 71112-3900, United States",
+      "zip": "71112",
+      "lat": 32.47652250000001,
+      "lng": -93.67706919999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "6652 Youree Dr, Shreveport, Louisiana, 71105-4630, United States",
+      "zip": "71105",
+      "lat": 32.4448139,
+      "lng": -93.7220901,
+      "country": "US"
+    },
+    {
+      "name": "Kroger",
+      "address": "9155 Mansfield Rd, Shreveport, Louisiana, 71118-3122, United States",
+      "zip": "71118",
+      "lat": 32.4038495,
+      "lng": -93.80078999999999,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Dallas",
+      "address": "1050 George Dement Blvd, Bossier City, Louisiana, 71111-5880, United States",
+      "zip": "71111",
+      "lat": 32.550447,
+      "lng": -93.7066497,
+      "country": "US"
+    },
+    {
+      "name": "Kroger Dallas",
+      "address": "9484 Ellerbe Rd, Shreveport, Louisiana, 71106-7465, United States",
+      "zip": "71106",
+      "lat": 32.3942737,
+      "lng": -93.72795959999999,
+      "country": "US"
+    },
+    {
+      "name": "LA UNION MARKETING",
+      "address": "1410 Gum Cove Rd, Vinton, Louisiana, 70668-4702, United States",
+      "zip": "70668",
+      "lat": 30.1875249,
+      "lng": -93.57098839999999,
+      "country": "US"
+    },
+    {
+      "name": "Oak Point",
+      "address": "12732 Perkins Rd, Baton Rouge, Louisiana, 70810-1910, United States",
+      "zip": "12732",
+      "lat": 30.3669743,
+      "lng": -91.07620039999999,
+      "country": "US"
+    },
+    {
+      "name": "Ralph's Pelican Point",
+      "address": "6431 Highway 44, Gonzales, Louisiana, 70737-8158, United States",
+      "zip": "70737",
+      "lat": 30.164107,
+      "lng": -90.92049929999999,
+      "country": "US"
+    },
+    {
+      "name": "Rouses",
+      "address": "2233 Martin Luther King Blvd, Houma, Louisiana, 70360, United States",
+      "zip": "70360",
+      "lat": 29.6363067,
+      "lng": -90.76152719999999,
+      "country": "US"
+    },
+    {
+      "name": "Rouses",
+      "address": "9465 E Park Ave, Houma, Louisiana, 70363-3945, United States",
+      "zip": "70363",
+      "lat": 29.5927861,
+      "lng": -90.67463620000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1125 Shreveport Barksdale Hwy, Shreveport, Louisiana, 71105-2404, United States",
+      "zip": "71105",
+      "lat": 32.4836355,
+      "lng": -93.70540629999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11550 Coursey Blvd, Baton Rouge, Louisiana, 70816-4034, United States",
+      "zip": "11550",
+      "lat": 30.4098204,
+      "lng": -91.0543253,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1201 N Service Rd E, Ruston, Louisiana, 71270-2917, United States",
+      "zip": "71270",
+      "lat": 32.5385968,
+      "lng": -92.6532438,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1205 E Admiral Doyle Dr, New Iberia, Louisiana, 70560-6308, United States",
+      "zip": "70560",
+      "lat": 29.9861441,
+      "lng": -91.81523089999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1501 Manhattan Blvd, Harvey, Louisiana, 70058-3405, United States",
+      "zip": "70058",
+      "lat": 29.8953871,
+      "lng": -90.05731259999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1901 Tchoupitoulas St, New Orleans, Louisiana, 70130-1915, United States",
+      "zip": "70130",
+      "lat": 29.9256981,
+      "lng": -90.06829590000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2011 Ryan St, Lake Charles, Louisiana, 70601-7313, United States",
+      "zip": "70601",
+      "lat": 30.2125831,
+      "lng": -93.2184029,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2171 O'Neal Ln, Baton Rouge, Louisiana, 70816-3206, United States",
+      "zip": "70816",
+      "lat": 30.438045,
+      "lng": -91.004502,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2701 Louisville Ave, Monroe, Louisiana, 71201-6128, United States",
+      "zip": "71201",
+      "lat": 32.5257919,
+      "lng": -92.098491,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2750 Highway 28 E, Pineville, Louisiana, 71360-5713, United States",
+      "zip": "71360",
+      "lat": 31.3324023,
+      "lng": -92.4054596,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2799 W Thomas St, Hammond, Louisiana, 70401-2838, United States",
+      "zip": "70401",
+      "lat": 30.5016123,
+      "lng": -90.4943132,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "303 E Interstate Dr, Jennings, Louisiana, 70546-3021, United States",
+      "zip": "70546",
+      "lat": 30.2451971,
+      "lng": -92.6596016,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3142 Ambassador Caffery Pkwy, Lafayette, Louisiana, 70506-7210, United States",
+      "zip": "70506",
+      "lat": 30.18705169999999,
+      "lng": -92.0785145,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3415 LA-14, Lake Charles, Louisiana, 70607-2147, United States",
+      "zip": "70607",
+      "lat": 30.1578462,
+      "lng": -93.15554949999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4001 Behrman Pl, New Orleans, Louisiana, 70114-0932, United States",
+      "zip": "70114",
+      "lat": 29.9111652,
+      "lng": -90.0192387,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "410 N Canal Blvd, Thibodaux, Louisiana, 70301, United States",
+      "zip": "70301",
+      "lat": 29.8094718,
+      "lng": -90.8183646,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "460 Hospital Rd, New Roads, Louisiana, 70760-2623, United States",
+      "zip": "70760",
+      "lat": 30.6885733,
+      "lng": -91.46419689999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4810 Lapalco Blvd, Marrero, Louisiana, 70072-4382, United States",
+      "zip": "70072",
+      "lat": 29.8854843,
+      "lng": -90.0919466,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5110 Jefferson Hwy, New Orleans, Louisiana, 70123, United States",
+      "zip": "70123",
+      "lat": 29.9536493,
+      "lng": -90.17875529999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5700 Shed Rd, Bossier City, Louisiana, 71111-5661, United States",
+      "zip": "71111",
+      "lat": 32.5596791,
+      "lng": -93.6482467,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8912 Veterans Memorial Blvd, Metairie, Louisiana, 70003-5200, United States",
+      "zip": "70003",
+      "lat": 30.0054943,
+      "lng": -90.2282471,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "904 S Range Ave, Denham Springs, Louisiana, 70726-4802, United States",
+      "zip": "70726",
+      "lat": 30.4722543,
+      "lng": -90.95428319999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9350 Cortana Pl, Baton Rouge, Louisiana, 70815-8603, United States",
+      "zip": "70815",
+      "lat": 30.4625302,
+      "lng": -91.0909257,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9550 Mansfield Rd, Shreveport, Louisiana, 71118-4402, United States",
+      "zip": "71118",
+      "lat": 32.3883726,
+      "lng": -93.81910239999999,
+      "country": "US"
+    }
+  ]
+}

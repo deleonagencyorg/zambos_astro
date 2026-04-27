@@ -1,0 +1,246 @@
+{
+  "state_code": "PA",
+  "count": 30,
+  "stores": [
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "210 Carter Dr, West Chester, Pennsylvania, 19382-4984, United States",
+      "zip": "19382",
+      "lat": 39.9491747,
+      "lng": -75.5867131,
+      "country": "US"
+    },
+    {
+      "name": "Compare Supermarket",
+      "address": "3528 I St, Philadelphia, Pennsylvania, 19134-1449, United States",
+      "zip": "19134",
+      "lat": 40.002798,
+      "lng": -75.1116728,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "264 S 9th St, Reading, Pennsylvania, 19602, United States",
+      "zip": "19602",
+      "lat": 40.3301793,
+      "lng": -75.9205116,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "401 W Tilghman St, Allentown, Pennsylvania, 18102, United States",
+      "zip": "18102",
+      "lat": 40.61377179999999,
+      "lng": -75.47033569999999,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "600 Greenwich St, Reading, Pennsylvania, 19601-2208, United States",
+      "zip": "19601",
+      "lat": 40.3443342,
+      "lng": -75.92464009999999,
+      "country": "US"
+    },
+    {
+      "name": "El Paisano Supermarket",
+      "address": "1356 E Passyunk Ave, Philadelphia, Pennsylvania, 19147-5625, United States",
+      "zip": "19147",
+      "lat": 39.9321473,
+      "lng": -75.1608494,
+      "country": "US"
+    },
+    {
+      "name": "Famers Market Super Gigante",
+      "address": "1930 W Main St, Norristown, Pennsylvania, 19403-3175, United States",
+      "zip": "19403",
+      "lat": 40.1308444,
+      "lng": -75.3766596,
+      "country": "US"
+    },
+    {
+      "name": "Juanita Supermarket",
+      "address": "901 E Luzerne St, Philadelphia, Pennsylvania, 19124-5110, United States",
+      "zip": "19124",
+      "lat": 40.0091337,
+      "lng": -75.11012490000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "135 E New St, Lititz, Pennsylvania, 17543-1113, United States",
+      "zip": "17543",
+      "lat": 40.1598891,
+      "lng": -76.30099419999999,
+      "country": "US"
+    },
+    {
+      "name": "Little Apple Market",
+      "address": "630 N 7th St, Allentown, Pennsylvania, 18102-1670, United States",
+      "zip": "18102",
+      "lat": 40.6110139,
+      "lng": -75.4764824,
+      "country": "US"
+    },
+    {
+      "name": "Super Food Supermarket",
+      "address": "704 W Emaus Ave, Allentown, Pennsylvania, 18103-6773, United States",
+      "zip": "18103",
+      "lat": 40.5738437,
+      "lng": -75.4609634,
+      "country": "US"
+    },
+    {
+      "name": "Supremo Food Market",
+      "address": "602 N 7th St, Allentown, Pennsylvania, 18102-1648, United States",
+      "zip": "18102",
+      "lat": 40.6105765,
+      "lng": -75.4761398,
+      "country": "US"
+    },
+    {
+      "name": "Supremo Food Market",
+      "address": "900 Orthodox St, Philadelphia, Pennsylvania, 19124-3128, United States",
+      "zip": "19124",
+      "lat": 40.0183666,
+      "lng": -75.0950016,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "100 Commons Dr, Parkesburg, Pennsylvania, 19365, United States",
+      "zip": "19365",
+      "lat": 39.9798739,
+      "lng": -75.93364629999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1675 S Christopher Columbus Blvd, Philadelphia, Pennsylvania, 19148-1402, United States",
+      "zip": "19148",
+      "lat": 39.9266663,
+      "lng": -75.14160439999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "180 Levittown Ctr, Levittown, Pennsylvania, 19055-2601, United States",
+      "zip": "19055",
+      "lat": 40.1421159,
+      "lng": -74.8222478,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1887 Elmira St, Sayre, Pennsylvania, 18840-9249, United States",
+      "zip": "18840",
+      "lat": 41.9771839,
+      "lng": -76.54317999999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2028 N Center Ave, Somerset, Pennsylvania, 15501-7436, United States",
+      "zip": "15501",
+      "lat": 40.0522112,
+      "lng": -79.0705079,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2034 Lincoln Hwy E, Lancaster, Pennsylvania, 17602, United States",
+      "zip": "17602",
+      "lat": 40.0295823,
+      "lng": -76.2410906,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2600 Plank Rd, Altoona, Pennsylvania, 16601-9310, United States",
+      "zip": "16601",
+      "lat": 40.4553196,
+      "lng": -78.4056176,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2601 MacArthur Rd, Whitehall, Pennsylvania, 18052-3818, United States",
+      "zip": "18052",
+      "lat": 40.64509959999999,
+      "lng": -75.4872918,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "299 Valley Gate Dr, Warrington, Pennsylvania, 18976, United States",
+      "zip": "18976",
+      "lat": 40.22020790000001,
+      "lng": -75.1379376,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "355 Lincoln Ave, East Stroudsburg, Pennsylvania, 18301, United States",
+      "zip": "18301",
+      "lat": 40.9901057,
+      "lng": -75.1826273,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "400 Butler Commons, Butler, Pennsylvania, 16001, United States",
+      "zip": "16001",
+      "lat": 40.8781057,
+      "lng": -79.9434035,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "400 S State Rd, Springfield, Pennsylvania, 19064-1243, United States",
+      "zip": "19064",
+      "lat": 39.9383293,
+      "lng": -75.3582946,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "516 School House Rd, Kennett Square, Pennsylvania, 19348, United States",
+      "zip": "19348",
+      "lat": 39.8609973,
+      "lng": -75.6900788,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5900 Perkiomen Ave, Reading, Pennsylvania, 19606-3635, United States",
+      "zip": "19606",
+      "lat": 40.2941868,
+      "lng": -75.8393099,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "63 Perkins Rd, Clarion, Pennsylvania, 16214-8527, United States",
+      "zip": "16214",
+      "lat": 41.1887225,
+      "lng": -79.3961429,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7500 University Blvd, Moon Twp, Pennsylvania, 15108-2532, United States",
+      "zip": "15108",
+      "lat": 40.5155477,
+      "lng": -80.224147,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "800 Commons Dr, Oxford, Pennsylvania, 19363-1247, United States",
+      "zip": "19363",
+      "lat": 39.7969276,
+      "lng": -75.97916099999999,
+      "country": "US"
+    }
+  ]
+}

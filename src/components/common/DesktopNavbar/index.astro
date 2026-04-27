@@ -18,41 +18,28 @@ const currentPath = pathname;
 // Obtener los datos de social media y menú desde las traducciones
 const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) as any[];
 
-// Reordenar: asegurar que "Blog" esté antes de "Contacto/Contact"
-const orderedMenuItems = (() => {
-  const arr = Array.isArray(menuItems) ? [...menuItems] : [];
-  const isEs = currentLang === 'es';
-  const blogIdx = arr.findIndex(i => (i.text || '').toLowerCase() === 'blog');
-  const contactIdx = arr.findIndex(i => {
-    const txt = (i.text || '').toLowerCase();
-    return txt === (isEs ? 'contacto' : 'contact');
-  });
-  if (blogIdx >= 0 && contactIdx >= 0 && blogIdx > contactIdx) {
-    const [blogItem] = arr.splice(blogIdx, 1);
-    arr.splice(contactIdx, 0, blogItem);
-  }
-  return arr;
-})();
+// Use menu items directly (Blog already removed from JSON)
+const orderedMenuItems = Array.isArray(menuItems) ? [...menuItems] : [];
 ---
 
 <!-- Desktop Navigation -->
-<nav class={`hidden md:flex items-center justify-between w-full py-3 px-6 bg-greenDark`} data-current-lang={currentLang}>
+<nav class={`hidden md:flex items-center justify-between w-full py-3 px-4 lg:px-6 bg-greenDark`} data-current-lang={currentLang}>
   <!-- Logo -->
-  <div class="flex-shrink-0 pl-4">
+  <div class="flex-shrink-0 pl-2 lg:pl-4">
     <a href={`/${currentLang}/`} class="block">
-      <img src={logos.principal.url} alt={logos.principal.alt} class="h-19 w-auto" />
+      <img src={logos.principal.url} alt={logos.principal.alt} class="h-14 lg:h-19 w-auto" />
     </a>
   </div>
 
-  <!-- Right Side - Language Switcher and Yummies One -->
-  <div class="flex items-center ">
-    <div class="flex space-x-3" id="desktop-menu-items">
+  <!-- Right Side - Menu Items and Actions -->
+  <div class="flex items-center">
+    <div class="flex items-center space-x-1 lg:space-x-2 xl:space-x-3" id="desktop-menu-items">
       {orderedMenuItems && orderedMenuItems.map((item: any) => (
         <div class="relative group">
           <a 
             href={item.href} 
-            class={`${headerColorConfig.textColor} font-title text-xl uppercase font-medium transition-colors py-2 px-3 rounded-md flex items-center ${!item.href.startsWith('#') && currentPath === item.href ? 'bg-green' : ''}`}
-            style={`color: ${headerColorConfig.textColor};`}
+            class={`${headerColorConfig.textColor} font-title uppercase font-medium transition-colors py-2 px-1 lg:px-2 xl:px-3 rounded-md flex items-center whitespace-nowrap`}
+            style={`color: ${headerColorConfig.textColor}; font-size: clamp(0.6rem, 0.9vw, 1rem);`}
           >
             {item.text}
             {item.submenu && (
@@ -84,15 +71,30 @@ const orderedMenuItems = (() => {
       ))}
     </div>
     
-    <!-- WHERE TO BUY Button for US -->
+    <!-- BUY Button for US -->
     {currentLang === 'us' && (
       <a 
         href={t('delivery.amazon_buy_url', { namespace: 'common', locale: currentLang })}
         target="_blank"
         rel="noopener noreferrer"
-        class="ml-4 bg-[#B71C1C] hover:bg-[#9A1616] text-white font-bold uppercase px-6 py-2.5 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap text-sm"
+        class="ml-2 lg:ml-3 bg-[#B71C1C] hover:bg-[#9A1616] text-white font-bold uppercase px-3 lg:px-5 py-1.5 lg:py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap flex items-center"
+        style="font-size: clamp(0.6rem, 0.85vw, 0.875rem);"
       >
-        Where to Buy
+        BUY
+      </a>
+    )}
+
+    <!-- Phone Number for US -->
+    {currentLang === 'us' && (
+      <a 
+        href="tel:+18773064453"
+        class="ml-2 lg:ml-3 bg-white hover:bg-gray-100 text-[#0E6D20] font-bold px-3 lg:px-4 py-1.5 lg:py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap flex items-center gap-1.5"
+        style="font-size: clamp(0.55rem, 0.8vw, 0.875rem);"
+      >
+        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        1-877-306-4453
       </a>
     )}
     

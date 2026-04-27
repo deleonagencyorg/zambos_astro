@@ -1,0 +1,1486 @@
+{
+  "state_code": "VA",
+  "count": 185,
+  "stores": [
+    {
+      "name": "Americana Grocery",
+      "address": "10897 Main St, Fairfax, Virginia, 22030-4714, United States",
+      "zip": "10897",
+      "lat": 38.8512438,
+      "lng": -77.3215389,
+      "country": "US"
+    },
+    {
+      "name": "Americana Grocery",
+      "address": "14428 Jefferson Davis Hwy, Woodbridge, Virginia, 22191-2806, United States",
+      "zip": "14428",
+      "lat": 38.6397847,
+      "lng": -77.2686034,
+      "country": "US"
+    },
+    {
+      "name": "Amigos Deli Supermarket",
+      "address": "8723 Cooper Rd, Alexandria, Virginia, 22309-3906, United States",
+      "zip": "22309",
+      "lat": 38.7203117,
+      "lng": -77.124202,
+      "country": "US"
+    },
+    {
+      "name": "Bestway",
+      "address": "3109 Graham Rd, Falls Church, Virginia, 22042-2505, United States",
+      "zip": "22042",
+      "lat": 38.8655154,
+      "lng": -77.19384970000002,
+      "country": "US"
+    },
+    {
+      "name": "Bestway",
+      "address": "5695 Telegraph Rd, Alexandria, Virginia, 22303-1233, United States",
+      "zip": "22303",
+      "lat": 38.7969397,
+      "lng": -77.0802798,
+      "country": "US"
+    },
+    {
+      "name": "Bestway",
+      "address": "690 Elden St, Herndon, Virginia, 20170-4723, United States",
+      "zip": "20170",
+      "lat": 38.97007079999999,
+      "lng": -77.38232579999999,
+      "country": "US"
+    },
+    {
+      "name": "Central Supermercado",
+      "address": "6222 Richmond Hwy, Alexandria, Virginia, 22303-2438, United States",
+      "zip": "22303",
+      "lat": 38.783595,
+      "lng": -77.07755639999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "16049 Continental Blvd, Colonial Heights, Virginia, 23834-5900, United States",
+      "zip": "16049",
+      "lat": 37.3043174,
+      "lng": -77.382431,
+      "country": "US"
+    },
+    {
+      "name": "Cocos Food",
+      "address": "46900 Cedar Lake Plz, Sterling, Virginia, 20164-8659, United States",
+      "zip": "46900",
+      "lat": 39.0184199,
+      "lng": -77.37654950000001,
+      "country": "US"
+    },
+    {
+      "name": "El Compadre Grocery",
+      "address": "7866 Richmond Hwy, Alexandria, Virginia, 22306-7824, United States",
+      "zip": "22306",
+      "lat": 38.7441219,
+      "lng": -77.084774,
+      "country": "US"
+    },
+    {
+      "name": "El Grande Springfield",
+      "address": "6901 Hechinger Dr, Springfield, Virginia, 22151-4105, United States",
+      "zip": "22151",
+      "lat": 38.7949023,
+      "lng": -77.18311419999999,
+      "country": "US"
+    },
+    {
+      "name": "El Mercadito Hispano Dely",
+      "address": "495 Elden St, Herndon, Virginia, 20170-4539, United States",
+      "zip": "20170",
+      "lat": 38.9679887,
+      "lng": -77.3783341,
+      "country": "US"
+    },
+    {
+      "name": "Fiesta Supermarket",
+      "address": "9100 Mathis Ave, Manassas, Virginia, 20110-5291, United States",
+      "zip": "20110",
+      "lat": 38.7584435,
+      "lng": -77.4667015,
+      "country": "US"
+    },
+    {
+      "name": "Food Start",
+      "address": "206 W Glebe Rd, Alexandria, Virginia, 22305, United States",
+      "zip": "22305",
+      "lat": 38.8365843,
+      "lng": -77.0624136,
+      "country": "US"
+    },
+    {
+      "name": "Food Start",
+      "address": "5521 Leesburg Pike, Falls Church, Virginia, 22041-3100, United States",
+      "zip": "22041",
+      "lat": 38.8472233,
+      "lng": -77.1243846,
+      "country": "US"
+    },
+    {
+      "name": "Fresh World",
+      "address": "1070 Elden St, Herndon, Virginia, 20170-3803, United States",
+      "zip": "20170",
+      "lat": 38.9665714,
+      "lng": -77.398022,
+      "country": "US"
+    },
+    {
+      "name": "Fresh World",
+      "address": "9540 Liberia Ave, Manassas, Virginia, 20110-1719, United States",
+      "zip": "20110",
+      "lat": 38.7511251,
+      "lng": -77.45047679999999,
+      "country": "US"
+    },
+    {
+      "name": "Global Food",
+      "address": "13813 Foulger Sq, Woodbridge, Virginia, 22192-4253, United States",
+      "zip": "13813",
+      "lat": 38.656286,
+      "lng": -77.3022908,
+      "country": "US"
+    },
+    {
+      "name": "Global Food Manassas",
+      "address": "10320 Festival Ln, Manassas, Virginia, 20109-3548, United States",
+      "zip": "10320",
+      "lat": 38.77882049999999,
+      "lng": -77.5042515,
+      "country": "US"
+    },
+    {
+      "name": "Grandmart",
+      "address": "6255 Little River Tpke, Alexandria, Virginia, 22312-1716, United States",
+      "zip": "22312",
+      "lat": 38.817015,
+      "lng": -77.143272,
+      "country": "US"
+    },
+    {
+      "name": "Grandmart",
+      "address": "6326 Arlington Blvd, Falls Church, Virginia, 22044-2013, United States",
+      "zip": "22044",
+      "lat": 38.8729765,
+      "lng": -77.1585424,
+      "country": "US"
+    },
+    {
+      "name": "H Mart",
+      "address": "1228 Elden St, Herndon, Virginia, 20170-5504, United States",
+      "zip": "20170",
+      "lat": 38.9624022,
+      "lng": -77.4002641,
+      "country": "US"
+    },
+    {
+      "name": "H Mart",
+      "address": "8819 Centreville Rd, Manassas, Virginia, 20110-5203, United States",
+      "zip": "20110",
+      "lat": 38.7629972,
+      "lng": -77.4574689,
+      "country": "US"
+    },
+    {
+      "name": "Hmart",
+      "address": "10780 Fairfax Blvd, Fairfax, Virginia, 22030-4323, United States",
+      "zip": "10780",
+      "lat": 38.85636050000001,
+      "lng": -77.3164962,
+      "country": "US"
+    },
+    {
+      "name": "Hmart",
+      "address": "7601 Heritage Dr, Annandale, Virginia, 22003-5304, United States",
+      "zip": "22003",
+      "lat": 38.8154365,
+      "lng": -77.2079378,
+      "country": "US"
+    },
+    {
+      "name": "Hmart",
+      "address": "8103 Route 29, Falls Church, Virginia, 22042-1111, United States",
+      "zip": "22042",
+      "lat": 38.8744774,
+      "lng": -77.2249851,
+      "country": "US"
+    },
+    {
+      "name": "La Despensa Grocery And Deli",
+      "address": "13271 Occoquan Rd, Woodbridge, Virginia, 22191-1041, United States",
+      "zip": "13271",
+      "lat": 38.6644299,
+      "lng": -77.2532449,
+      "country": "US"
+    },
+    {
+      "name": "La Mart International Food",
+      "address": "5730 Edsall Rd, Alexandria, Virginia, 22304-4712, United States",
+      "zip": "22304",
+      "lat": 38.8069873,
+      "lng": -77.1317243,
+      "country": "US"
+    },
+    {
+      "name": "La Migueleña",
+      "address": "46950 Community Plz, Sterling, Virginia, 20164-1802, United States",
+      "zip": "46950",
+      "lat": 39.0161177,
+      "lng": -77.3772128,
+      "country": "US"
+    },
+    {
+      "name": "Lamart",
+      "address": "6711 Bland St, Springfield, Virginia, 22150-2508, United States",
+      "zip": "22150",
+      "lat": 38.7812312,
+      "lng": -77.18217700000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "10012 Robious Rd, Richmond, Virginia, 23235-4818, United States",
+      "zip": "10012",
+      "lat": 37.507365,
+      "lng": -77.57911340000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1015 Thomas Ln, Fredericksburg, Virginia, 22405-1203, United States",
+      "zip": "22405",
+      "lat": 38.3369843,
+      "lng": -77.48919,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "104 Olde Greenwich Dr, Fredericksburg, Virginia, 22408-4023, United States",
+      "zip": "22408",
+      "lat": 38.2714702,
+      "lng": -77.4829464,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "10700 Wakeman Dr, Fredericksburg, Virginia, 22407-7757, United States",
+      "zip": "10700",
+      "lat": 38.2453103,
+      "lng": -77.5098041,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1107 Berryville Ave, Winchester, Virginia, 22601-5919, United States",
+      "zip": "22601",
+      "lat": 39.1839612,
+      "lng": -78.1426359,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "11101 Leavells Rd, Fredericksburg, Virginia, 22407-5015, United States",
+      "zip": "11101",
+      "lat": 38.2618764,
+      "lng": -77.5394468,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "116 Featherbed Ln, Winchester, Virginia, 22601, United States",
+      "zip": "22601",
+      "lat": 39.165278,
+      "lng": -78.16828919999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13279 Occoquan Rd, Woodbridge, Virginia, 22191-1041, United States",
+      "zip": "13279",
+      "lat": 38.6643863,
+      "lng": -77.25327659999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13905 Richmond Hwy, Woodbridge, Virginia, 22191-2010, United States",
+      "zip": "13905",
+      "lat": 38.6508069,
+      "lng": -77.2557001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1476 N Beauregard St, Alexandria, Virginia, 22311-5800, United States",
+      "zip": "22311",
+      "lat": 38.8313887,
+      "lng": -77.12517009999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "15 Weems Ln, Winchester, Virginia, 22601-3601, United States",
+      "zip": "22601",
+      "lat": 39.1609961,
+      "lng": -78.176171,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1505 Stafford Market Pl, Stafford, Virginia, 22556-4528, United States",
+      "zip": "22556",
+      "lat": 38.4709325,
+      "lng": -77.4111155,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "16593 River Ridge Blvd, Woodbridge, Virginia, 22191, United States",
+      "zip": "16593",
+      "lat": 38.5871801,
+      "lng": -77.3032569,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "17987 Dumfries Shopping Plz, Dumfries, Virginia, 22026-2327, United States",
+      "zip": "17987",
+      "lat": 38.5620545,
+      "lng": -77.32764139999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1903 S Main St, Harrisonburg, Virginia, 22801-5726, United States",
+      "zip": "22801",
+      "lat": 38.42402810000001,
+      "lng": -78.89086379999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2042 Daniel Stuart Sq, Woodbridge, Virginia, 22191-3315, United States",
+      "zip": "22191",
+      "lat": 38.6328711,
+      "lng": -77.2740634,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "206 Charles St, Fredericksburg, Virginia, 22401-6081, United States",
+      "zip": "22401",
+      "lat": 38.2949454,
+      "lng": -77.4568621,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "215 E Culpeper St, Culpeper, Virginia, 22701-3037, United States",
+      "zip": "22701",
+      "lat": 38.4721421,
+      "lng": -77.994553,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2160 S Loudoun St, Winchester, Virginia, 22601-3615, United States",
+      "zip": "22601",
+      "lat": 39.1612508,
+      "lng": -78.1747461,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "250 S Sterling Blvd, Sterling, Virginia, 20164-3274, United States",
+      "zip": "20164",
+      "lat": 38.9991403,
+      "lng": -77.4063759,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2601 Salem Church Rd, Fredericksburg, Virginia, 22407-6759, United States",
+      "zip": "22407",
+      "lat": 38.277879,
+      "lng": -77.5328317,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2800 Graham Rd, Falls Church, Virginia, 22042, United States",
+      "zip": "22042",
+      "lat": 38.876591,
+      "lng": -77.19241339999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2828 Valley Ave, Winchester, Virginia, 22601-2630, United States",
+      "zip": "22601",
+      "lat": 39.1499514,
+      "lng": -78.1877032,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2916 Richmond Hwy, Richmond, Virginia, 23234-1742, United States",
+      "zip": "23234",
+      "lat": 37.4834681,
+      "lng": -77.4459804,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2928 Dale Blvd, Woodbridge, Virginia, 22193-1120, United States",
+      "zip": "22193",
+      "lat": 38.6284439,
+      "lng": -77.3011424,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2930 Patrick Henry Dr, Falls Church, Virginia, 22044-2904, United States",
+      "zip": "22044",
+      "lat": 38.8703601,
+      "lng": -77.1467974,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "30 Pidgeon Hill Dr, Sterling, Virginia, 20165-6130, United States",
+      "zip": "20165",
+      "lat": 39.0389286,
+      "lng": -77.4112949,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "300 N Glebe Rd, Arlington, Virginia, 22203-3308, United States",
+      "zip": "22203",
+      "lat": 38.8737929,
+      "lng": -77.1058843,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3024 Broad Rock Blvd, Richmond, Virginia, 23224-6012, United States",
+      "zip": "23224",
+      "lat": 37.4744563,
+      "lng": -77.482142,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3103 Graham Rd, Falls Church, Virginia, 22042-2505, United States",
+      "zip": "22042",
+      "lat": 38.8656709,
+      "lng": -77.1936911,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3336 Broad Rock Blvd, Richmond, Virginia, 23224-6018, United States",
+      "zip": "23224",
+      "lat": 37.4708034,
+      "lng": -77.48329369999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3414 Mt Vernon Ave, Alexandria, Virginia, 22305-2604, United States",
+      "zip": "22305",
+      "lat": 38.8362189,
+      "lng": -77.0615716,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3810 Jefferson Davis Hwy, Fredericksburg, Virginia, 22408, United States",
+      "zip": "22408",
+      "lat": 38.2653974,
+      "lng": -77.495119,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4034 Crockett St, Henrico, Virginia, 23228-4114, United States",
+      "zip": "23228",
+      "lat": 37.6153389,
+      "lng": -77.4990321,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4112 Dale Blvd, Woodbridge, Virginia, 22193-2225, United States",
+      "zip": "22193",
+      "lat": 38.64271919999999,
+      "lng": -77.3342148,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4174 Fortuna Center Plz, Dumfries, Virginia, 22025, United States",
+      "zip": "22025",
+      "lat": 38.5965673,
+      "lng": -77.3322111,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4239 John Marr Dr, Annandale, Virginia, 22003, United States",
+      "zip": "22003",
+      "lat": 38.8315663,
+      "lng": -77.18855,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "435 Garrisonville Rd, Stafford, Virginia, 22554-1533, United States",
+      "zip": "22554",
+      "lat": 38.4754703,
+      "lng": -77.4294225,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "451 Emancipation Hwy, Fredericksburg, Virginia, 22401-3142, United States",
+      "zip": "22401",
+      "lat": 38.3148856,
+      "lng": -77.47508669999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4609 Patriot Hwy, Fredericksburg, Virginia, 22408, United States",
+      "zip": "22408",
+      "lat": 38.2630604,
+      "lng": -77.496574,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4802 Dale Blvd, Woodbridge, Virginia, 22193-4731, United States",
+      "zip": "22193",
+      "lat": 38.6607326,
+      "lng": -77.35328210000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "50 Dunn Dr, Stafford, Virginia, 22556-1500, United States",
+      "zip": "22556",
+      "lat": 38.4762981,
+      "lng": -77.4207483,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5001 Columbia Pike, Arlington, Virginia, 22204-2906, United States",
+      "zip": "22204",
+      "lat": 38.8562511,
+      "lng": -77.11296449999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5524 Leesburg Pike, Falls Church, Virginia, 22041-3110, United States",
+      "zip": "22041",
+      "lat": 38.8481652,
+      "lng": -77.1238152,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5838 N Kings Hwy, Alexandria, Virginia, 22303-2000, United States",
+      "zip": "22303",
+      "lat": 38.79032309999999,
+      "lng": -77.0770199,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6019 Leesburg Pike, Falls Church, Virginia, 22041-2237, United States",
+      "zip": "22041",
+      "lat": 38.8552404,
+      "lng": -77.1395283,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6031 Leesburg Pike, Falls Church, Virginia, 22041-2224, United States",
+      "zip": "22041",
+      "lat": 38.855398,
+      "lng": -77.139589,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6111 Staples Mill Rd, Henrico, Virginia, 23228-4925, United States",
+      "zip": "23228",
+      "lat": 37.6094967,
+      "lng": -77.4954142,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6128 Columbia Pike, Falls Church, Virginia, 22041-3608, United States",
+      "zip": "22041",
+      "lat": 38.8441467,
+      "lng": -77.1427191,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6304 Jefferson Davis Hwy, Richmond, Virginia, 23234-5160, United States",
+      "zip": "23234",
+      "lat": 38.188003,
+      "lng": -77.5116098,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6445 Midlothian Tpke, Richmond, Virginia, 23225-5607, United States",
+      "zip": "23225",
+      "lat": 37.5027416,
+      "lng": -77.51507980000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6515 Route 1, Richmond, Virginia, 23237-1222, United States",
+      "zip": "23237",
+      "lat": 37.4355112,
+      "lng": -77.4386815,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6517 Iron Bridge Pl, Richmond, Virginia, 23234-5300, United States",
+      "zip": "23234",
+      "lat": 37.4267042,
+      "lng": -77.4924458,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6535 Little River Tpke, Alexandria, Virginia, 22312-1418, United States",
+      "zip": "22312",
+      "lat": 38.8214934,
+      "lng": -77.15995269999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7010 Commerce St, Springfield, Virginia, 22150-3433, United States",
+      "zip": "22150",
+      "lat": 38.78300249999999,
+      "lng": -77.1874507,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7217 W Broad St, Henrico, Virginia, 23294-3635, United States",
+      "zip": "23294",
+      "lat": 37.6132166,
+      "lng": -77.52261899999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7225 Hull St Rd, Richmond, Virginia, 23235-5815, United States",
+      "zip": "23235",
+      "lat": 37.4710075,
+      "lng": -77.526944,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7377 Miramar Dr, Manassas, Virginia, 20109-2492, United States",
+      "zip": "20109",
+      "lat": 38.7958162,
+      "lng": -77.51942950000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7415 Midlothian Tpke, Richmond, Virginia, 23225-6411, United States",
+      "zip": "23225",
+      "lat": 37.4988456,
+      "lng": -77.5324734,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "742 Baker Ln, Winchester, Virginia, 22603-5757, United States",
+      "zip": "22603",
+      "lat": 39.1905729,
+      "lng": -78.1444917,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7611 Midlothian Tpke, Richmond, Virginia, 23235-5223, United States",
+      "zip": "23235",
+      "lat": 37.498631,
+      "lng": -77.5378681,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7849 Richmond Hwy, Alexandria, Virginia, 22306-7825, United States",
+      "zip": "22306",
+      "lat": 38.7431001,
+      "lng": -77.0843266,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8088 Sudley Rd, Manassas, Virginia, 20109-3473, United States",
+      "zip": "20109",
+      "lat": 38.7806242,
+      "lng": -77.511839,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8200 Roxbury Dr, Alexandria, Virginia, 22309-3700, United States",
+      "zip": "22309",
+      "lat": 38.7357749,
+      "lng": -77.0984163,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8207 Sudley Rd, Manassas, Virginia, 20109-3507, United States",
+      "zip": "20109",
+      "lat": 38.7787371,
+      "lng": -77.5045655,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8328 Shoppers Sq, Manassas, Virginia, 20111-2174, United States",
+      "zip": "20111",
+      "lat": 38.7753602,
+      "lng": -77.4534351,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8402 Sudley Rd, Manassas, Virginia, 20109-3705, United States",
+      "zip": "20109",
+      "lat": 38.7731953,
+      "lng": -77.5007808,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8410 Staples Mill Rd, Henrico, Virginia, 23228-2715, United States",
+      "zip": "23228",
+      "lat": 37.6269458,
+      "lng": -77.5057025,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8457 Richmond Hwy, Alexandria, Virginia, 22309-2408, United States",
+      "zip": "22309",
+      "lat": 38.72634430000001,
+      "lng": -77.1105828,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8512 Richmond Hwy, Alexandria, Virginia, 22309-8514, United States",
+      "zip": "22309",
+      "lat": 38.7269198,
+      "lng": -77.1130609,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8630 Mathis Ave, Manassas, Virginia, 20110-5269, United States",
+      "zip": "20110",
+      "lat": 38.7681928,
+      "lng": -77.4568821,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8710 Richmond Hwy, Alexandria, Virginia, 22309-4204, United States",
+      "zip": "22309",
+      "lat": 38.7214938,
+      "lng": -77.12454149999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "9035 W Broad St, Henrico, Virginia, 23294-5810, United States",
+      "zip": "23294",
+      "lat": 37.6344031,
+      "lng": -77.5491203,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "907 Garden Blvd, Charlottesville, Virginia, 22901-1472, United States",
+      "zip": "22901",
+      "lat": 38.0851049,
+      "lng": -78.47049919999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "911 E Belt Blvd, Richmond, Virginia, 23224-3305, United States",
+      "zip": "23224",
+      "lat": 37.50007360000001,
+      "lng": -77.47116869999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "921 S High St, Harrisonburg, Virginia, 22801-1601, United States",
+      "zip": "22801",
+      "lat": 38.4411107,
+      "lng": -78.8860212,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "924 W Market St, Harrisonburg, Virginia, 22801-2136, United States",
+      "zip": "22801",
+      "lat": 38.452742,
+      "lng": -78.8836346,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "9645 Jefferson Davis Hwy, Richmond, Virginia, 23237-4621, United States",
+      "zip": "23237",
+      "lat": 38.188003,
+      "lng": -77.5116098,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "9917 Wellington Rd, Manassas, Virginia, 20110, United States",
+      "zip": "20110",
+      "lat": 38.7419718,
+      "lng": -77.47113829999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "9928 Cockrell Rd, Manassas, Virginia, 20110-4113, United States",
+      "zip": "20110",
+      "lat": 38.7555283,
+      "lng": -77.4951565,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Cockrell Rd, Manassas, Virginia, 20110, United States",
+      "zip": "20110",
+      "lat": 38.7545157,
+      "lng": -77.4927731,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Patriot Hwy, Fredericksburg, Virginia, 22407, United States",
+      "zip": "22407",
+      "lat": 38.2744099,
+      "lng": -77.4916036,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Patriot Hwy, Fredericksburg, Virginia, 22408, United States",
+      "zip": "22408",
+      "lat": 38.2744099,
+      "lng": -77.4916036,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Stream Walk Ln, Manassas, Virginia, 20109, United States",
+      "zip": "20109",
+      "lat": 38.7963214,
+      "lng": -77.5201895,
+      "country": "US"
+    },
+    {
+      "name": "Lotte Plaza Market",
+      "address": "5900 Centreville Crest Ln, Centreville, Virginia, 20121-2341, United States",
+      "zip": "20121",
+      "lat": 38.8380043,
+      "lng": -77.4359353,
+      "country": "US"
+    },
+    {
+      "name": "Mega Supermarket",
+      "address": "8228 Richmond Hwy, Alexandria, Virginia, 22309-8216, United States",
+      "zip": "22309",
+      "lat": 38.7345955,
+      "lng": -77.0982691,
+      "country": "US"
+    },
+    {
+      "name": "Megamart",
+      "address": "515 Emancipation Hwy, Fredericksburg, Virginia, 22401-4420, United States",
+      "zip": "22401",
+      "lat": 38.3136926,
+      "lng": -77.4772251,
+      "country": "US"
+    },
+    {
+      "name": "Megamart",
+      "address": "8321 Shoppers Sq, Manassas, Virginia, 20111-2175, United States",
+      "zip": "20111",
+      "lat": 38.77539030000001,
+      "lng": -77.4528145,
+      "country": "US"
+    },
+    {
+      "name": "Oh Market International",
+      "address": "7412 Stream Walk Ln, Manassas, Virginia, 20109-2464, United States",
+      "zip": "20109",
+      "lat": 38.7963355,
+      "lng": -77.5236941,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "10150 Brook Rd, Glen Allen, Virginia, 23059-6514, United States",
+      "zip": "10150",
+      "lat": 37.6751256,
+      "lng": -77.4632132,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "10250 Staples Mill Rd, Glen Allen, Virginia, 23060-3064, United States",
+      "zip": "10250",
+      "lat": 37.6567247,
+      "lng": -77.5259337,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "13700 Hull Street Rd, Midlothian, Virginia, 23112-2000, United States",
+      "zip": "13700",
+      "lat": 37.4103538,
+      "lng": -77.65625779999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1620 Cedar Rd, Chesapeake, Virginia, 23322-7197, United States",
+      "zip": "23322",
+      "lat": 36.7272663,
+      "lng": -76.3001705,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1640 Publix Way, Stafford, Virginia, 22554-7782, United States",
+      "zip": "22554",
+      "lat": 38.4258456,
+      "lng": -77.43372049999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "200 Charter Colony Pkwy, Midlothian, Virginia, 23114-4584, United States",
+      "zip": "23114",
+      "lat": 37.5039836,
+      "lng": -77.6604131,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2015 Huguenot Rd, Richmond, Virginia, 23235-4305, United States",
+      "zip": "23235",
+      "lat": 37.5199525,
+      "lng": -77.61285199999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2200 General Booth Blvd, Virginia Beach, Virginia, 23454, United States",
+      "zip": "23454",
+      "lat": 36.7645863,
+      "lng": -76.0128398,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "22449 Spadea Way, Carrollton, Virginia, 23314-3598, United States",
+      "zip": "22449",
+      "lat": 36.942396,
+      "lng": -76.534553,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2250 John Rolfe Pkwy, Henrico, Virginia, 23233-6913, United States",
+      "zip": "23233",
+      "lat": 37.6226558,
+      "lng": -77.62367859999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3007 Boulevard, Colonial Heights, Virginia, 23834, United States",
+      "zip": "23834",
+      "lat": 37.2687716,
+      "lng": -77.4104878,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3189 Godwin Blvd, Suffolk, Virginia, 23434-8694, United States",
+      "zip": "23434",
+      "lat": 36.7859083,
+      "lng": -76.5895146,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3460 Pump Rd, Henrico, Virginia, 23233, United States",
+      "zip": "23233",
+      "lat": 37.65047490000001,
+      "lng": -77.614769,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3535 Ellwood Ave, Richmond, Virginia, 23221-2722, United States",
+      "zip": "23221",
+      "lat": 37.5568276,
+      "lng": -77.4880105,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4591 S Laburnum Ave, Henrico, Virginia, 23231-2421, United States",
+      "zip": "23231",
+      "lat": 37.5255133,
+      "lng": -77.3518263,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4660 Monticello Ave, Williamsburg, Virginia, 23188-8200, United States",
+      "zip": "23188",
+      "lat": 37.27261,
+      "lng": -76.7584226,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5940 Plank Rd, Fredericksburg, Virginia, 22407-6232, United States",
+      "zip": "22407",
+      "lat": 38.29124669999999,
+      "lng": -77.57958479999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "6603 Mechanicsville Tpke, Mechanicsville, Virginia, 23111, United States",
+      "zip": "23111",
+      "lat": 37.6108699,
+      "lng": -77.3355746,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "7035 Three Chopt Rd, Richmond, Virginia, 23226-3606, United States",
+      "zip": "23226",
+      "lat": 37.5908639,
+      "lng": -77.5327022,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "9601 Patriot Hwy, Fredericksburg, Virginia, 22407-9407, United States",
+      "zip": "22407",
+      "lat": 38.2191364,
+      "lng": -77.5065814,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "9645 W Broad St, Henrico, Virginia, 23060-4116, United States",
+      "zip": "23060",
+      "lat": 37.6417952,
+      "lng": -77.5655242,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "Crosby Village Rd, Chesterfield, Virginia, 23832, United States",
+      "zip": "23832",
+      "lat": 37.3770935,
+      "lng": -77.5049863,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "Wyndham Forest Dr, Glen Allen, Virginia, 23059, United States",
+      "zip": "23059",
+      "lat": 37.6846954,
+      "lng": -77.5871583,
+      "country": "US"
+    },
+    {
+      "name": "Super Market",
+      "address": "8680 Liberia Ave, Manassas, Virginia, 20110-4853, United States",
+      "zip": "20110",
+      "lat": 38.7638081,
+      "lng": -77.4622541,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10001 Southpoint Pkwy, Fredericksburg, Virginia, 22407-2700, United States",
+      "zip": "10001",
+      "lat": 38.2370168,
+      "lng": -77.5092147,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1028 Richmond Ave, Staunton, Virginia, 24401-4901, United States",
+      "zip": "24401",
+      "lat": 38.13472,
+      "lng": -79.04816269999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1098 Frederick Blvd, Portsmouth, Virginia, 23707, United States",
+      "zip": "23707",
+      "lat": 36.8294151,
+      "lng": -76.34238239999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11181 Lee Hwy, Fairfax, Virginia, 22030, United States",
+      "zip": "11181",
+      "lat": 38.849849,
+      "lng": -77.3322125,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11400 W Broad St, Glen Allen, Virginia, 23060, United States",
+      "zip": "11400",
+      "lat": 37.6522859,
+      "lng": -77.6084923,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1149 Nimmo Pkwy, Virginia Beach, Virginia, 23456-7730, United States",
+      "zip": "23456",
+      "lat": 36.7583233,
+      "lng": -76.0084009,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1170 N Military Hwy, Norfolk, Virginia, 23502-2425, United States",
+      "zip": "23502",
+      "lat": 36.863261,
+      "lng": -76.20755179999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "12000 Iron Bridge Rd, Chester, Virginia, 23831-1459, United States",
+      "zip": "12000",
+      "lat": 37.3502388,
+      "lng": -77.482924,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "12401 Jefferson Ave, Newport News, Virginia, 23602-4311, United States",
+      "zip": "12401",
+      "lat": 37.1186211,
+      "lng": -76.5062195,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "13059 Fair Lakes Pkwy, Fairfax, Virginia, 22033, United States",
+      "zip": "13059",
+      "lat": 38.8542649,
+      "lng": -77.39658109999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "13320 Governor G C Peery Hwy, Pounding Mill, Virginia, 24637-4207, United States",
+      "zip": "13320",
+      "lat": 37.0645823,
+      "lng": -81.7327025,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "145 S Hill Carter Pkwy, Ashland, Virginia, 23005, United States",
+      "zip": "23005",
+      "lat": 37.7551473,
+      "lng": -77.4597818,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1500 Cornerside Blvd, Vienna, Virginia, 22182-2433, United States",
+      "zip": "22182",
+      "lat": 38.9297015,
+      "lng": -77.24530759999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "16375 Merchants Ln, King George, Virginia, 22485-5655, United States",
+      "zip": "16375",
+      "lat": 38.3519188,
+      "lng": -77.0575257,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "17041 Richmond Hwy, Dumfries, Virginia, 22026-2129, United States",
+      "zip": "17041",
+      "lat": 38.5807683,
+      "lng": -77.3089107,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "171 Burgess Rd, Harrisonburg, Virginia, 22801, United States",
+      "zip": "22801",
+      "lat": 38.4335576,
+      "lng": -78.8517121,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1851 W Main St, Salem, Virginia, 24153-3111, United States",
+      "zip": "24153",
+      "lat": 37.2902476,
+      "lng": -80.0889606,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2021 Lynnhaven Pkwy, Virginia Beach, Virginia, 23456-1410, United States",
+      "zip": "23456",
+      "lat": 36.7940299,
+      "lng": -76.1227289,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2141 Dale Ave SE, Roanoke, Virginia, 24013-2135, United States",
+      "zip": "24013",
+      "lat": 37.274004,
+      "lng": -79.9099768,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2350 S Pleasant Valley Rd, Winchester, Virginia, 22601-7006, United States",
+      "zip": "22601",
+      "lat": 39.1558473,
+      "lng": -78.1724751,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "26036 Lankford Hwy, Onley, Virginia, 23418-3005, United States",
+      "zip": "26036",
+      "lat": 37.6855075,
+      "lng": -75.72394229999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3900 Wards Rd, Lynchburg, Virginia, 24502-2942, United States",
+      "zip": "24502",
+      "lat": 37.3531789,
+      "lng": -79.1848325,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4807 Valley View Blvd NW, Roanoke, Virginia, 24012, United States",
+      "zip": "24012",
+      "lat": 37.3007511,
+      "lng": -79.9607492,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4821 Virginia Beach Blvd, Virginia Beach, Virginia, 23462, United States",
+      "zip": "23462",
+      "lat": 36.8424881,
+      "lng": -76.1433797,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "515 Mt Cross Rd, Danville, Virginia, 24540-4065, United States",
+      "zip": "24540",
+      "lat": 36.5967338,
+      "lng": -79.4306718,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5700 Hopkins Rd, Richmond, Virginia, 23234, United States",
+      "zip": "23234",
+      "lat": 37.4427043,
+      "lng": -77.4735847,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5885 Kingstowne Blvd, Alexandria, Virginia, 22315-5702, United States",
+      "zip": "22315",
+      "lat": 38.7691604,
+      "lng": -77.13611259999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6000 Burke Commons Rd, Burke, Virginia, 22015-2805, United States",
+      "zip": "22015",
+      "lat": 38.7891881,
+      "lng": -77.2998035,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6303 Richmond Hwy, Alexandria, Virginia, 22306-6410, United States",
+      "zip": "22306",
+      "lat": 38.7799194,
+      "lng": -77.0767501,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6530 Trading Sq, Haymarket, Virginia, 20169-2278, United States",
+      "zip": "20169",
+      "lat": 38.818617,
+      "lng": -77.6448425,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "657 Phoenix Dr, Virginia Beach, Virginia, 23452-7318, United States",
+      "zip": "23452",
+      "lat": 36.8234945,
+      "lng": -76.0717004,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "671 Southpark Blvd, Colonial Heights, Virginia, 23834-3617, United States",
+      "zip": "23834",
+      "lat": 37.2460347,
+      "lng": -77.3873488,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "731 E Rochambeau Dr, Williamsburg, Virginia, 23188-2187, United States",
+      "zip": "23188",
+      "lat": 37.34563869999999,
+      "lng": -76.7372219,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7430 Bell Creek Rd, Mechanicsville, Virginia, 23111-3550, United States",
+      "zip": "23111",
+      "lat": 37.6138801,
+      "lng": -77.3546952,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7530 Tidewater Dr, Norfolk, Virginia, 23505-3717, United States",
+      "zip": "23505",
+      "lat": 36.9126749,
+      "lng": -76.25200389999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7901 Brook Rd, Richmond, Virginia, 23227-1336, United States",
+      "zip": "23227",
+      "lat": 37.6310696,
+      "lng": -77.456214,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7910 Richmond Hwy, Alexandria, Virginia, 22306-7826, United States",
+      "zip": "22306",
+      "lat": 38.7437843,
+      "lng": -77.08756389999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "801 James Madison Hwy, Culpeper, Virginia, 22701-2405, United States",
+      "zip": "22701",
+      "lat": 38.48049779999999,
+      "lng": -77.9733328,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8386 Sudley Rd, Manassas, Virginia, 20109-3428, United States",
+      "zip": "20109",
+      "lat": 38.7718047,
+      "lng": -77.5077721,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "900 Walmart Way, Midlothian, Virginia, 23113-2600, United States",
+      "zip": "23113",
+      "lat": 37.5039973,
+      "lng": -77.62954859999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9401 Liberia Ave, Manassas, Virginia, 20110, United States",
+      "zip": "20110",
+      "lat": 38.7530045,
+      "lng": -77.44850459999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "976 Commonwealth Blvd, Martinsville, Virginia, 24112, United States",
+      "zip": "24112",
+      "lat": 36.6941023,
+      "lng": -79.90227209999999,
+      "country": "US"
+    }
+  ]
+}

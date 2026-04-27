@@ -1,0 +1,398 @@
+{
+  "state_code": "WI",
+  "count": 56,
+  "stores": [
+    {
+      "name": "Cermak Produce",
+      "address": "1541 Miller Park Way, Milwaukee, Wisconsin, 53214-3654, United States",
+      "lat": 43.0144524,
+      "lng": -87.97007889999999,
+      "country": "US"
+    },
+    {
+      "name": "El Rey",
+      "address": "1023 S Cesar E Chavez Dr, Milwaukee, Wisconsin, 53204-2204, United States",
+      "lat": 43.0205518,
+      "lng": -87.93340370000001,
+      "country": "US"
+    },
+    {
+      "name": "El Rey",
+      "address": "3524 W Burnham St, Milwaukee, Wisconsin, 53215-2022, United States",
+      "lat": 43.0107525,
+      "lng": -87.95829100000002,
+      "country": "US"
+    },
+    {
+      "name": "El Rey Family",
+      "address": "5200 W Oklahoma Ave, Milwaukee, Wisconsin, 53219-4501, United States",
+      "lat": 42.9888982,
+      "lng": -87.97935079999999,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita",
+      "address": "309 S 3rd St, Watertown, Wisconsin, 53094-4505, United States",
+      "lat": 43.1920888,
+      "lng": -88.7222225,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita",
+      "address": "6005 Monona Dr, Monona, Wisconsin, 53716-3930, United States",
+      "lat": 43.0544202,
+      "lng": -89.32605029999999,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita",
+      "address": "802 Windsor St, Sun Prairie, Wisconsin, 53590-2021, United States",
+      "lat": 43.1881845,
+      "lng": -89.2266348,
+      "country": "US"
+    },
+    {
+      "name": "Meijers",
+      "address": "1320 W Burnham St, Milwaukee, Wisconsin, 53204-3248, United States",
+      "lat": 43.010965,
+      "lng": -87.92869999999999,
+      "country": "US"
+    },
+    {
+      "name": "Mercadito",
+      "address": "809 S Main St, Fort Atkinson, Wisconsin, 53538-2560, United States",
+      "lat": 42.917057,
+      "lng": -88.83558149999999,
+      "country": "US"
+    },
+    {
+      "name": "Monterrey",
+      "address": "3014 S 13th St, Milwaukee, Wisconsin, 53215-3873, United States",
+      "lat": 42.9896559,
+      "lng": -87.9285074,
+      "country": "US"
+    },
+    {
+      "name": "Monterrey",
+      "address": "3920 S 27th St, Milwaukee, Wisconsin, 53221-1826, United States",
+      "lat": 42.9725457,
+      "lng": -87.94769769999999,
+      "country": "US"
+    },
+    {
+      "name": "Petes Fresh Market",
+      "address": "1400 S Union St, Milwaukee, Wisconsin, 53204-2641, United States",
+      "lat": 43.0168714,
+      "lng": -87.9342965,
+      "country": "US"
+    },
+    {
+      "name": "Riveras Fresh Market 2",
+      "address": "103 Park St, Walworth, Wisconsin, 53184-7902, United States",
+      "lat": 42.5313822,
+      "lng": -88.5978543,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "100 Avon Rd, Sparta, Wisconsin, 54656-9529, United States",
+      "lat": 43.927066,
+      "lng": -90.81571199999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1004 Superior Ave, Tomah, Wisconsin, 54660-2002, United States",
+      "lat": 43.9775348,
+      "lng": -90.5043065,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "112 N 1st St, Abbotsford, Wisconsin, 54405-9103, United States",
+      "lat": 44.9466784,
+      "lng": -90.3188177,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1218 Indiana Ave, Sheboygan, Wisconsin, 53081-4917, United States",
+      "lat": 43.74343,
+      "lng": -87.72026749999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "123 W Sunset Dr, Waukesha, Wisconsin, 53189-7604, United States",
+      "lat": 42.9878935,
+      "lng": -88.2280416,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "132 W Main St, Waunakee, Wisconsin, 53597-1128, United States",
+      "lat": 43.191782,
+      "lng": -89.456561,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1326 S Midvale Blvd, Madison, Wisconsin, 53711, United States",
+      "lat": 43.0379632,
+      "lng": -89.452344,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1333 Cedar St, Green Bay, Wisconsin, 54302-1326, United States",
+      "lat": 44.5115499,
+      "lng": -87.9937604,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1417 Northport Dr, Madison, Wisconsin, 53704-2023, United States",
+      "lat": 43.1339815,
+      "lng": -89.3720728,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1501 6th St, Beloit, Wisconsin, 53511-4258, United States",
+      "lat": 42.5183662,
+      "lng": -89.04129929999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1501 King Dr M L Jr Dr, Racine, Wisconsin, 53404-2749, United States",
+      "lat": 42.7393993,
+      "lng": -87.79536739999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1616 N 6th St, Wausau, Wisconsin, 54403-3429, United States",
+      "lat": 44.970037,
+      "lng": -89.6235979,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1705 S Central Ave, Marshfield, Wisconsin, 54449-4966, United States",
+      "lat": 44.6517899,
+      "lng": -90.182023,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1820 Center Ave, Janesville, Wisconsin, 53546-2800, United States",
+      "lat": 42.6518234,
+      "lng": -89.0332249,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1908 E Mason St, Green Bay, Wisconsin, 54302-3923, United States",
+      "lat": 44.491282,
+      "lng": -87.97834619999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2102 S Park St, Madison, Wisconsin, 53713-1220, United States",
+      "lat": 43.0431272,
+      "lng": -89.3944219,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "227121 Rib Mountain Dr, Wausau, Wisconsin, 54401-5045, United States",
+      "lat": 44.9291376,
+      "lng": -89.65398549999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3060 S Fish Hatchery Rd, Fitchburg, Wisconsin, 53711, United States",
+      "lat": 43.0096904,
+      "lng": -89.4287255,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "355 S Central Ave, Marshfield, Wisconsin, 54449-2820, United States",
+      "lat": 44.6640574,
+      "lng": -90.1750702,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3559 E Washington Ave, Madison, Wisconsin, 53704-4154, United States",
+      "lat": 43.1147885,
+      "lng": -89.3253082,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "425 S Main St, Janesville, Wisconsin, 53545-4803, United States",
+      "lat": 42.6777539,
+      "lng": -89.016373,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "426 W Sunset Dr, Waukesha, Wisconsin, 53189-7407, United States",
+      "lat": 42.9886965,
+      "lng": -88.2354295,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4512 E Washington Ave, Madison, Wisconsin, 53704-3234, United States",
+      "lat": 43.1295597,
+      "lng": -89.3092764,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4915 Commercial Ave, Madison, Wisconsin, 53704-8923, United States",
+      "lat": 43.1060152,
+      "lng": -89.2966771,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "509 W Milwaukee St, Janesville, Wisconsin, 53548-3646, United States",
+      "lat": 42.6800817,
+      "lng": -89.0293914,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5525 19th Ave, Kenosha, Wisconsin, 53140-3552, United States",
+      "lat": 42.58426619999999,
+      "lng": -87.8316804,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5917 39th Ave, Kenosha, Wisconsin, 53144-2737, United States",
+      "lat": 42.5814889,
+      "lng": -87.8551016,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7025 W Main St, Milwaukee, Wisconsin, 53214-1664, United States",
+      "lat": 43.02527850000001,
+      "lng": -88.0015464,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "820 S Cesar E Chavez Dr, Milwaukee, Wisconsin, 53204-2127, United States",
+      "lat": 43.0224576,
+      "lng": -87.9328483,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "854 Henry Ave, Beloit, Wisconsin, 53511-3562, United States",
+      "lat": 42.5223146,
+      "lng": -89.02717229999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "916 S Cesar E Chavez Dr, Milwaukee, Wisconsin, 53204-2129, United States",
+      "lat": 43.0219037,
+      "lng": -87.9326377,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1155 W Winneconne Ave, Neenah, Wisconsin, 54956-3693, United States",
+      "lat": 44.1773766,
+      "lng": -88.4916933,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "130 Commerce St, Wisconsin Dells, Wisconsin, 53965-8263, United States",
+      "lat": 43.5849888,
+      "lng": -89.8128338,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1415 Lawrence Dr, De Pere, Wisconsin, 54115-3927, United States",
+      "lat": 44.4328477,
+      "lng": -88.10262279999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1515 W Paradise Dr, West Bend, Wisconsin, 53095-9794, United States",
+      "lat": 43.3955642,
+      "lng": -88.1971339,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1800 Progressive Pkwy, Platteville, Wisconsin, 53818-3813, United States",
+      "lat": 42.7362481,
+      "lng": -90.4380037,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1901 Market Way, Watertown, Wisconsin, 53094-7427, United States",
+      "lat": 43.1620459,
+      "lng": -88.7302137,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2151 Royal Ave, Monona, Wisconsin, 53713, United States",
+      "lat": 43.04223760000001,
+      "lng": -89.349668,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2401 US Hwy 14 E, Richland Center, Wisconsin, 53581, United States",
+      "lat": 43.3125438,
+      "lng": -90.34877759999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2900 Roosevelt Rd, Marinette, Wisconsin, 54143-4299, United States",
+      "lat": 45.0738978,
+      "lng": -87.656094,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "377 N Rolling Meadows Dr, Fond du Lac, Wisconsin, 54937-9726, United States",
+      "lat": 43.7878087,
+      "lng": -88.4839671,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4140 W Greenfield Ave, West Milwaukee, Wisconsin, 53215-1334, United States",
+      "lat": 43.01877959999999,
+      "lng": -87.9656503,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4198 Nakoosa Trl, Madison, Wisconsin, 53714-1362, United States",
+      "lat": 43.11031639999999,
+      "lng": -89.3116096,
+      "country": "US"
+    }
+  ]
+}

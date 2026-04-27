@@ -91,7 +91,7 @@
     },
     {
       "id": "history",
-      "text": "OUR STORY",
+      "text": "Our Story",
       "href": "/us/about-us"
     },
     {
@@ -99,13 +99,16 @@
       "text": "Products",
       "href": "/us/products"
     },
-
     {
-      "id": "contact",
-      "text": "Contact",
-      "href": "/us/contact"
+      "id": "recipes",
+      "text": "Recipes",
+      "href": "/us/recipes"
+    },
+    {
+      "id": "store-locator",
+      "text": "Store Locator",
+      "href": "/us/store-locator"
     }
-
   ],
   "menu_items_header": [
     {
@@ -115,7 +118,7 @@
     },
      {
       "id": "history",
-      "text": "OUR STORY",
+      "text": "Our Story",
       "href": "/us/about-us"
     },
     {
@@ -127,7 +130,7 @@
   ],
   "about_us": {
     "title": "Discover Our",
-    "subtitle": "OUR STORY",
+    "subtitle": "Our Story",
     "content": [
       "The best potatoes in one place."
     ]

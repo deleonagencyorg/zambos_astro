@@ -1,0 +1,118 @@
+{
+  "state_code": "KS",
+  "count": 16,
+  "stores": [
+    {
+      "name": "Walmart",
+      "address": "11010 W 74th Ter, Shawnee, Kansas, 66203-4422, United States",
+      "lat": 38.9945146,
+      "lng": -94.71336509999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11411 E Kellogg Dr, Wichita, Kansas, 67207-1928, United States",
+      "lat": 37.6769088,
+      "lng": -97.2044308,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "121 Peter Pan Rd, Independence, Kansas, 67301-7307, United States",
+      "lat": 37.2226885,
+      "lng": -95.7435533,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1301 SW 37th St, Topeka, Kansas, 66611-2399, United States",
+      "lat": 38.9994451,
+      "lng": -95.6937933,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1701 S Kansas Rd, Newton, Kansas, 67114-8755, United States",
+      "lat": 38.0237269,
+      "lng": -97.33882829999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1905 N 14th Ave, Dodge City, Kansas, 67801-2314, United States",
+      "lat": 37.7685755,
+      "lng": -100.0357706,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2020 N Nelson Dr, Derby, Kansas, 67037-2505, United States",
+      "lat": 37.5690861,
+      "lng": -97.27559889999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2111 N Amidon Ave, Wichita, Kansas, 67203-2116, United States",
+      "lat": 37.7216128,
+      "lng": -97.3647878,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2200 N State St, Iola, Kansas, 66749-1636, United States",
+      "lat": 37.9428234,
+      "lng": -95.4117153,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2300 Metropolitan Ave, Kansas City, Kansas, 66106-2900, United States",
+      "lat": 39.0746951,
+      "lng": -94.6559421,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2301 Industrial Rd, Emporia, Kansas, 66801-6618, United States",
+      "lat": 38.4249493,
+      "lng": -96.21965569999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "250 E Tucker Rd, Liberal, Kansas, 67901-2188, United States",
+      "lat": 37.0672845,
+      "lng": -100.9167826,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2630 SE California Ave, Topeka, Kansas, 66605-1709, United States",
+      "lat": 39.0203215,
+      "lng": -95.6485407,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3030 N Rock Rd, Wichita, Kansas, 67226-1410, United States",
+      "lat": 37.7387296,
+      "lng": -97.2424783,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3101 Kansas Ave, Garden City, Kansas, 67846-6815, United States",
+      "lat": 37.9863007,
+      "lng": -100.8365914,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "501 E Pawnee St, Wichita, Kansas, 67211-4901, United States",
+      "lat": 37.6478721,
+      "lng": -97.33282369999999,
+      "country": "US"
+    }
+  ]
+}

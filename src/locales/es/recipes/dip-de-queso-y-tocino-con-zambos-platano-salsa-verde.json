@@ -26,7 +26,6 @@
     "Paso 2. Colocar la mezcla de queso en un tazón previamente cubierto con papel film, y refrigere por una hora.",
     "Paso 3. Retire de refrigeradora y extraiga la mezcla de queso del tazón y retire el papel film. Decore con Zambos Plátano Salsa Verde a su gusto alrededor."
   ],
-  "brand": [
-    "zambos"
-  ]
+  "brand": ["zambos"],
+  "products": ["zambos-platano-salsa-verde"]
 }

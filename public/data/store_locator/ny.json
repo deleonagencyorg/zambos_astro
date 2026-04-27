@@ -1,0 +1,1934 @@
+{
+  "state_code": "NY",
+  "count": 241,
+  "stores": [
+    {
+      "name": "5 De Mayo Food Market",
+      "address": "81-06 Roosevelt Ave, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.7473653,
+      "lng": -73.8845358,
+      "country": "US"
+    },
+    {
+      "name": "Antillana Super Food",
+      "address": "1339 Jerome Ave, New York, New York, 10452-3320, United States",
+      "zip": "10452",
+      "lat": 40.8390734,
+      "lng": -73.9189866,
+      "country": "US"
+    },
+    {
+      "name": "Associated",
+      "address": "44-07 Greenpoint Ave, New York, New York, 11104, United States",
+      "zip": "11104",
+      "lat": 40.7417899,
+      "lng": -73.92060120000001,
+      "country": "US"
+    },
+    {
+      "name": "Associated",
+      "address": "45-02 Junction Blvd, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7445207,
+      "lng": -73.86793709999999,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "171 Wheeler Rd, Central Islip, New York, 11722, United States",
+      "zip": "11722",
+      "lat": 40.8025791,
+      "lng": -73.2123723,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "306 Post Ave, Westbury, New York, 11590-2231, United States",
+      "zip": "11590",
+      "lat": 40.7599758,
+      "lng": -73.5876131,
+      "country": "US"
+    },
+    {
+      "name": "Bravo Supermarket",
+      "address": "90-30 Roosevelt Ave, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.7483173,
+      "lng": -73.875551,
+      "country": "US"
+    },
+    {
+      "name": "Brentwood Market",
+      "address": "1626 Brentwood Rd, Brentwood, New York, 11717-5515, United States",
+      "zip": "11717",
+      "lat": 40.7639916,
+      "lng": -73.2471468,
+      "country": "US"
+    },
+    {
+      "name": "Casa Latina",
+      "address": "651 Main St, Poughkeepsie, New York, 12601-3705, United States",
+      "zip": "12601",
+      "lat": 41.6982537,
+      "lng": -73.9106386,
+      "country": "US"
+    },
+    {
+      "name": "Cherry Valley Market Place",
+      "address": "2870 Webster Ave, New York, New York, 10458-3013, United States",
+      "zip": "10458",
+      "lat": 40.8666472,
+      "lng": -73.8838827,
+      "country": "US"
+    },
+    {
+      "name": "Cherry Valley Market Place",
+      "address": "529 S Broadway, Yonkers, New York, 10705-3256, United States",
+      "zip": "10705",
+      "lat": 40.9147143,
+      "lng": -73.89726399999999,
+      "country": "US"
+    },
+    {
+      "name": "City Fresh Market",
+      "address": "39-07 103rd St, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.750482,
+      "lng": -73.86272799999999,
+      "country": "US"
+    },
+    {
+      "name": "Ctown",
+      "address": "538 Main St, New Rochelle, New York, 10801-7215, United States",
+      "zip": "10801",
+      "lat": 40.9078852,
+      "lng": -73.7825806,
+      "country": "US"
+    },
+    {
+      "name": "Ctown",
+      "address": "564 Southern Blvd, New York, New York, 10455-3715, United States",
+      "zip": "10455",
+      "lat": 40.8122788,
+      "lng": -73.9026841,
+      "country": "US"
+    },
+    {
+      "name": "Ctown",
+      "address": "721 Broadway, Amityville, New York, 11701-2241, United States",
+      "zip": "11701",
+      "lat": 40.6997921,
+      "lng": -73.4256016,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "108-79 Roosevelt Ave, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7516678,
+      "lng": -73.8562553,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "1105 Horseblock Rd, Farmingville, New York, 11738-3051, United States",
+      "zip": "11738",
+      "lat": 40.8296831,
+      "lng": -73.0130391,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "89-45 163rd St, New York, New York, 11432, United States",
+      "zip": "11432",
+      "lat": 40.7058354,
+      "lng": -73.7974102,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "94-53 Corona Ave, New York, New York, 11373, United States",
+      "zip": "11373",
+      "lat": 40.742673,
+      "lng": -73.8681324,
+      "country": "US"
+    },
+    {
+      "name": "F&J Market",
+      "address": "940 E 149th St, New York, New York, 10455-5020, United States",
+      "zip": "10455",
+      "lat": 40.8073227,
+      "lng": -73.90307229999999,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "1088 Old Country Rd, Riverhead, New York, 11901-2020, United States",
+      "zip": "11901",
+      "lat": 40.9340278,
+      "lng": -72.6768639,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "126 Clarke St, Brentwood, New York, 11717-2042, United States",
+      "zip": "11717",
+      "lat": 40.79872659999999,
+      "lng": -73.2500897,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "41-25 102nd St, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7478982,
+      "lng": -73.8629028,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "595 Old Country Rd, Plainview, New York, 11590-4511, United States",
+      "zip": "11590",
+      "lat": 40.7706147,
+      "lng": -73.4935845,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "700 Suffolk Ave, Brentwood, New York, 11717-4402, United States",
+      "zip": "11717",
+      "lat": 40.7799363,
+      "lng": -73.24940889999999,
+      "country": "US"
+    },
+    {
+      "name": "Fine Fare",
+      "address": "708 E Tremont Ave, New York, New York, 10457-5029, United States",
+      "zip": "10457",
+      "lat": 40.8450442,
+      "lng": -73.8907668,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "1 Bogopa Plz, Mt Vernon, New York, 10550, United States",
+      "zip": "10550",
+      "lat": 40.9086472,
+      "lng": -73.8348899,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "101 Wicks Rd, Brentwood, New York, 11717-3528, United States",
+      "zip": "11717",
+      "lat": 40.7809049,
+      "lng": -73.2601342,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "1258 Corporate Dr, Westbury, New York, 11590-6625, United States",
+      "zip": "11590",
+      "lat": 40.739944,
+      "lng": -73.5895049,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "1580 Gates Ave, New York, New York, 11385-2728, United States",
+      "zip": "11385",
+      "lat": 40.7006486,
+      "lng": -73.91063299999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "1630 Bruckner Blvd, New York, New York, 10473-4553, United States",
+      "zip": "10473",
+      "lat": 40.8226027,
+      "lng": -73.87379059999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "21 Manhattan Ave, New York, New York, 11206-3956, United States",
+      "zip": "11206",
+      "lat": 40.7031456,
+      "lng": -73.9450749,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "34-20 Junction Blvd, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.7541877,
+      "lng": -73.87259329999999,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "35-60 Junction Blvd, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7516218,
+      "lng": -73.8714018,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "42-02 Northern Blvd, Long Island City, New York, 11101, United States",
+      "zip": "11101",
+      "lat": 40.7521194,
+      "lng": -73.9215158,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "445 E 163rd St, New York, New York, 10451-4155, United States",
+      "zip": "10451",
+      "lat": 40.8259059,
+      "lng": -73.9109138,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "454 Wyckoff Ave, New York, New York, 11237-5920, United States",
+      "zip": "11237",
+      "lat": 40.6982548,
+      "lng": -73.9094349,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "535 E 170th St, New York, New York, 10456, United States",
+      "zip": "10456",
+      "lat": 40.835182,
+      "lng": -73.9024601,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "97-27 57th Ave, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7378358,
+      "lng": -73.8630785,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "Bronx, New York, 10451, United States",
+      "zip": "10451",
+      "lat": 40.8187386,
+      "lng": -73.9271644,
+      "country": "US"
+    },
+    {
+      "name": "Food Bazaar",
+      "address": "Fulton Ave, Oceanside, New York, 11572, United States",
+      "zip": "11572",
+      "lat": 40.6302207,
+      "lng": -73.6454183,
+      "country": "US"
+    },
+    {
+      "name": "Food Fair",
+      "address": "1065 E 163rd St, New York, New York, 10459-4510, United States",
+      "zip": "10459",
+      "lat": 40.821245,
+      "lng": -73.8907357,
+      "country": "US"
+    },
+    {
+      "name": "Food Fair",
+      "address": "2467 Jerome Ave, New York, New York, 10468-4304, United States",
+      "zip": "10468",
+      "lat": 40.8633278,
+      "lng": -73.9010558,
+      "country": "US"
+    },
+    {
+      "name": "Food Fair",
+      "address": "289 N Main St, Spring Valley, New York, 10977-2914, United States",
+      "zip": "10977",
+      "lat": 41.1289111,
+      "lng": -74.0425431,
+      "country": "US"
+    },
+    {
+      "name": "Food Fest Depot",
+      "address": "500 E 132nd St, New York, New York, 10454-4619, United States",
+      "zip": "10454",
+      "lat": 40.8029174,
+      "lng": -73.9211021,
+      "country": "US"
+    },
+    {
+      "name": "Gala Foods",
+      "address": "725 Commack Rd, Brentwood, New York, 11717-7407, United States",
+      "zip": "11717",
+      "lat": 40.7589815,
+      "lng": -73.2312896,
+      "country": "US"
+    },
+    {
+      "name": "Gala Foods",
+      "address": "803 Montauk Hwy, Shirley, New York, 11967-2124, United States",
+      "zip": "11967",
+      "lat": 40.8021109,
+      "lng": -72.8693634,
+      "country": "US"
+    },
+    {
+      "name": "Gala Fresh",
+      "address": "795 Old Country Rd, Riverhead, New York, 11901-2111, United States",
+      "zip": "11901",
+      "lat": 40.933582,
+      "lng": -72.6668883,
+      "country": "US"
+    },
+    {
+      "name": "Ideal",
+      "address": "175-35 Hillside Ave, Jamaica, New York, 11432, United States",
+      "zip": "11432",
+      "lat": 40.7122591,
+      "lng": -73.7866939,
+      "country": "US"
+    },
+    {
+      "name": "Ideal Food Basket",
+      "address": "108-02 Otis Ave, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7411081,
+      "lng": -73.8535412,
+      "country": "US"
+    },
+    {
+      "name": "Ideal Food Basket",
+      "address": "918 Main St, Farmingdale, New York, 11735-5426, United States",
+      "zip": "11735",
+      "lat": 40.7128205,
+      "lng": -73.43296,
+      "country": "US"
+    },
+    {
+      "name": "Ideal Food Basket",
+      "address": "99-30 Corona Ave, Corona, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7438182,
+      "lng": -73.8622245,
+      "country": "US"
+    },
+    {
+      "name": "Islip Supermarket",
+      "address": "32 Wheeler Rd, Central Islip, New York, 11722-2158, United States",
+      "zip": "11722",
+      "lat": 40.7914226,
+      "lng": -73.2041926,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "102-14 37th Ave, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7529931,
+      "lng": -73.86467549999999,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "175 E Central Ave, Spring Valley, New York, 10977-5201, United States",
+      "zip": "10977",
+      "lat": 41.107791,
+      "lng": -74.042261,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "37-54 90th St, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.74889230000001,
+      "lng": -73.8768685,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "379 Horseblock Rd, Farmingville, New York, 11738, United States",
+      "zip": "11738",
+      "lat": 40.8373163,
+      "lng": -73.0474677,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "46-20 108th St, Corona, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7467001,
+      "lng": -73.85702090000001,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "86-02 Northern Blvd, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.7557045,
+      "lng": -73.8812773,
+      "country": "US"
+    },
+    {
+      "name": "Key Food",
+      "address": "885 Gerard Ave, New York, New York, 10452-9403, United States",
+      "zip": "10452",
+      "lat": 40.8281474,
+      "lng": -73.9248373,
+      "country": "US"
+    },
+    {
+      "name": "La Placita Food Market",
+      "address": "1 Park Ave, Mt Vernon, New York, 10550-2200, United States",
+      "zip": "10550",
+      "lat": 40.9127709,
+      "lng": -73.833828,
+      "country": "US"
+    },
+    {
+      "name": "La Placita Super",
+      "address": "768 Main St, New Rochelle, New York, 10805-1515, United States",
+      "zip": "10805",
+      "lat": 40.9024417,
+      "lng": -73.7902679,
+      "country": "US"
+    },
+    {
+      "name": "Li Chin",
+      "address": "268 Knickerbocker Ave, Brooklyn, New York, 11237-2726, United States",
+      "zip": "11237",
+      "lat": 40.70215109999999,
+      "lng": -73.92466139999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1 Park Ave, New York, New York, 10016-5800, United States",
+      "zip": "10016",
+      "lat": 40.7457717,
+      "lng": -73.9815758,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "100 Hugh J Grant Cir, New York, New York, 10472-5065, United States",
+      "zip": "10472",
+      "lat": 40.8324304,
+      "lng": -73.8608813,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "10095 Main Rd, Mattituck, New York, 11952-1658, United States",
+      "zip": "10095",
+      "lat": 40.9862753,
+      "lng": -72.5384141,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "101 Wicks Rd, Apalachin, New York, 13732-1456, United States",
+      "zip": "13732",
+      "lat": 42.0888297,
+      "lng": -76.187697,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1050 Westchester Ave, New York, New York, 10459-2410, United States",
+      "zip": "10459",
+      "lat": 40.8247402,
+      "lng": -73.8912041,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "107 Featherbed Ln, New York, New York, 10452-1615, United States",
+      "zip": "10452",
+      "lat": 40.846431,
+      "lng": -73.918553,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "108 Depot Rd, Wurtsboro, New York, 12790, United States",
+      "zip": "12790",
+      "lat": 41.6368373,
+      "lng": -74.4364293,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "111 W Merrick Rd, Freeport, New York, 11520-3701, United States",
+      "zip": "11520",
+      "lat": 40.6531356,
+      "lng": -73.5846667,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "116 Maple Ave, Dunkirk, New York, 14048-2740, United States",
+      "zip": "14048",
+      "lat": 42.4800852,
+      "lng": -79.3253418,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1188 Webster Ave, New York, New York, 10456-4204, United States",
+      "zip": "10456",
+      "lat": 40.8312929,
+      "lng": -73.9098035,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "119 Einstein Loop E, New York, New York, 10475-4902, United States",
+      "zip": "10475",
+      "lat": 40.8648001,
+      "lng": -73.8219925,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1199 E 233rd St, New York, New York, 10466-3311, United States",
+      "zip": "10466",
+      "lat": 40.8894632,
+      "lng": -73.8436203,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "12 N Franklin St, Hempstead, New York, 11550-3828, United States",
+      "zip": "11550",
+      "lat": 40.7063648,
+      "lng": -73.6259334,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "120 N Main St, Spencer, New York, 14883-9396, United States",
+      "zip": "14883",
+      "lat": 42.2168501,
+      "lng": -76.49319849999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1221 Fteley Ave, New York, New York, 10472-4403, United States",
+      "zip": "10472",
+      "lat": 40.8294562,
+      "lng": -73.87213679999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "126 Featherbed Ln, New York, New York, 10452-1656, United States",
+      "zip": "10452",
+      "lat": 40.8460061,
+      "lng": -73.9204361,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "130-10 Metropolitan Ave, New York, New York, 11418, United States",
+      "zip": "11418",
+      "lat": 40.7032394,
+      "lng": -73.82219429999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13-29 Beach Channel Dr, New York, New York, 11691, United States",
+      "zip": "11691",
+      "lat": 40.6062346,
+      "lng": -73.7550485,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1345 Castle Hill Ave, New York, New York, 10462-4806, United States",
+      "zip": "10462",
+      "lat": 40.8352453,
+      "lng": -73.85229,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1470 Westchester Ave, New York, New York, 10472-2902, United States",
+      "zip": "10472",
+      "lat": 40.8281305,
+      "lng": -73.88132879999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1500 Sunrise Hwy, Copiague, New York, 11726-1541, United States",
+      "zip": "11726",
+      "lat": 40.6929697,
+      "lng": -73.39863679999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1550 Great Neck Rd, Copiague, New York, 11726-3310, United States",
+      "zip": "11726",
+      "lat": 40.6789091,
+      "lng": -73.3985843,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1551 Straight Path, Wyandanch, New York, 11798-3432, United States",
+      "zip": "11798",
+      "lat": 40.7522512,
+      "lng": -73.3602791,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1585 Montauk Hwy, Mastic, New York, 11950-2910, United States",
+      "zip": "11950",
+      "lat": 40.806675,
+      "lng": -72.8414576,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1585 Westchester Ave, New York, New York, 10472-2918, United States",
+      "zip": "10472",
+      "lat": 40.829305,
+      "lng": -73.8761406,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1590 Gates Ave, New York, New York, 11385-2728, United States",
+      "zip": "11385",
+      "lat": 40.7002941,
+      "lng": -73.9099552,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1626 Brentwood Rd, Brentwood, New York, 11706-3231, United States",
+      "zip": "11706",
+      "lat": 40.7639916,
+      "lng": -73.2471468,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1662 E New York Ave, New York, New York, 11212-8016, United States",
+      "zip": "11212",
+      "lat": 40.6738644,
+      "lng": -73.9066587,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "170 Port Richmond Ave, New York, New York, 10302-1335, United States",
+      "zip": "10302",
+      "lat": 40.637065,
+      "lng": -74.13438719999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "174 Wheeler Rd, North Bangor, New York, 12966-2927, United States",
+      "zip": "12966",
+      "lat": 44.8578463,
+      "lng": -74.3584115,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "175 E Central Ave, Pearl River, New York, 10965-2543, United States",
+      "zip": "10965",
+      "lat": 41.060052,
+      "lng": -74.0141409,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1757 Randall Ave, New York, New York, 10473-4251, United States",
+      "zip": "10473",
+      "lat": 40.8168513,
+      "lng": -73.8653339,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1761 Southern Blvd, New York, New York, 10460-4801, United States",
+      "zip": "10460",
+      "lat": 40.8375665,
+      "lng": -73.8880423,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1764 Grand Ave, New York, New York, 10453-5552, United States",
+      "zip": "10453",
+      "lat": 40.8500236,
+      "lng": -73.91297349999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "18-01 Cornaga Ave, New York, New York, 11691, United States",
+      "zip": "11691",
+      "lat": 40.6024604,
+      "lng": -73.7498308,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1819 5th Ave, New York, New York, 11232, United States",
+      "zip": "11232",
+      "lat": 40.6529572,
+      "lng": -74.0021642,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "189 Port Richmond Ave, New York, New York, 10302-1311, United States",
+      "zip": "10302",
+      "lat": 40.63660489999999,
+      "lng": -74.13408270000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1925 Brentwood Rd, Brentwood, New York, 11717-4624, United States",
+      "zip": "11717",
+      "lat": 40.7801485,
+      "lng": -73.2441918,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "193 Port Richmond Ave, New York, New York, 10302-1311, United States",
+      "zip": "10302",
+      "lat": 40.6364875,
+      "lng": -74.13423809999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1989 Boston Rd, New York, New York, 10460-4421, United States",
+      "zip": "10460",
+      "lat": 40.8401612,
+      "lng": -73.88086729999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "20-20 New Haven Ave, New York, New York, 11691, United States",
+      "zip": "11691",
+      "lat": 40.6010218,
+      "lng": -73.7543072,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2035 New York Ave, New York, New York, 11210-4823, United States",
+      "zip": "11210",
+      "lat": 40.6229119,
+      "lng": -73.9430059,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2061 Bartow Ave, New York, New York, 10475-4613, United States",
+      "zip": "10475",
+      "lat": 40.8701597,
+      "lng": -73.8283399,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2080 White Plains Rd, New York, New York, 10462-1412, United States",
+      "zip": "10462",
+      "lat": 40.8528555,
+      "lng": -73.86740499999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "210 Montauk Hwy, Sayville, New York, 11782-2510, United States",
+      "zip": "11782",
+      "lat": 40.7386679,
+      "lng": -73.07944090000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2262 Jerome Ave, New York, New York, 10453-1804, United States",
+      "zip": "10453",
+      "lat": 40.8582262,
+      "lng": -73.90362619999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2276 Creston Ave, New York, New York, 10453-2102, United States",
+      "zip": "10453",
+      "lat": 40.8575462,
+      "lng": -73.9007549,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "228 Port Richmond Ave, New York, New York, 10302-1702, United States",
+      "zip": "10302",
+      "lat": 40.6357412,
+      "lng": -74.1352891,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2285 Grand Concourse, New York, New York, 10453-2202, United States",
+      "zip": "10453",
+      "lat": 40.8572113,
+      "lng": -73.9005706,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2300 Randall Ave, New York, New York, 10473-1242, United States",
+      "zip": "10473",
+      "lat": 40.8190097,
+      "lng": -73.84438740000002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "238 E 161st St, New York, New York, 10451-3534, United States",
+      "zip": "10451",
+      "lat": 40.8251288,
+      "lng": -73.9195405,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2-45 Beach 20th St, New York, New York, 11691, United States",
+      "zip": "11691",
+      "lat": 40.5965906,
+      "lng": -73.7547984,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2477 Valentine Ave, New York, New York, 10458-5305, United States",
+      "zip": "10458",
+      "lat": 40.8616567,
+      "lng": -73.8964857,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "248 E 174th St, New York, New York, 10457-7002, United States",
+      "zip": "10457",
+      "lat": 40.8445265,
+      "lng": -73.9069828,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "250 Willis Rd, Burke, New York, 12917-2349, United States",
+      "zip": "12917",
+      "lat": 44.8589005,
+      "lng": -74.1340135,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "256 E 167th St, New York, New York, 10456-4017, United States",
+      "zip": "10456",
+      "lat": 40.8332788,
+      "lng": -73.9148098,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "256 St Anns Ave, New York, New York, 10454-2608, United States",
+      "zip": "10454",
+      "lat": 40.8071992,
+      "lng": -73.9169713,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "257 Medford Ave, Patchogue, New York, 11772, United States",
+      "zip": "11772",
+      "lat": 40.7759864,
+      "lng": -73.00745789999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2711 White Plains Rd, New York, New York, 10467-8112, United States",
+      "zip": "10467",
+      "lat": 40.8658221,
+      "lng": -73.867421,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "273 E 169th St, New York, New York, 10456-1714, United States",
+      "zip": "10456",
+      "lat": 40.835408,
+      "lng": -73.912502,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2733 3rd Ave, New York, New York, 10451-5801, United States",
+      "zip": "10451",
+      "lat": 40.8144635,
+      "lng": -73.9212398,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "289 N Main St, Newark, New York, 14513-1242, United States",
+      "zip": "14513",
+      "lat": 43.0497228,
+      "lng": -77.09512629999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2891 Sedgwick Ave, New York, New York, 10468-2081, United States",
+      "zip": "10468",
+      "lat": 40.8749773,
+      "lng": -73.9016336,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "29 Village Ave, Elmont, New York, 11003-4241, United States",
+      "zip": "11003",
+      "lat": 40.6955604,
+      "lng": -73.7151207,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "30 E 198th St, New York, New York, 10468-1803, United States",
+      "zip": "10468",
+      "lat": 40.8706761,
+      "lng": -73.89238569999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "301 Jerusalem Ave, Hempstead, New York, 11550-6437, United States",
+      "zip": "11550",
+      "lat": 40.7028016,
+      "lng": -73.60660039999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "306 Post Ave, New York, New York, 10310, United States",
+      "zip": "10310",
+      "lat": 40.631729,
+      "lng": -74.1248859,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3100 3rd Ave, New York, New York, 10451-4606, United States",
+      "zip": "10451",
+      "lat": 40.8214903,
+      "lng": -73.9115947,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "32-11 Beach Channel Dr, New York, New York, 11691, United States",
+      "zip": "11691",
+      "lat": 40.5982065,
+      "lng": -73.7658963,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "322 Nassau Rd, Roosevelt, New York, 11575-1342, United States",
+      "zip": "11575",
+      "lat": 40.6805381,
+      "lng": -73.5895015,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "331 Port Richmond Ave, New York, New York, 10302-1708, United States",
+      "zip": "10302",
+      "lat": 40.6334851,
+      "lng": -74.1362453,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3315 White Plains Rd, New York, New York, 10467-5702, United States",
+      "zip": "10467",
+      "lat": 40.87362290000001,
+      "lng": -73.8673019,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3470 3rd Ave, New York, New York, 10456-4304, United States",
+      "zip": "10456",
+      "lat": 40.8298446,
+      "lng": -73.9060775,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3471 Boston Rd, New York, New York, 10469-2509, United States",
+      "zip": "10469",
+      "lat": 40.8768506,
+      "lng": -73.84787990000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3680 E Tremont Ave, New York, New York, 10465-2006, United States",
+      "zip": "10465",
+      "lat": 40.82709150000001,
+      "lng": -73.8231192,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "38 Centre Ave, New Rochelle, New York, 10801-7207, United States",
+      "zip": "10801",
+      "lat": 40.9088993,
+      "lng": -73.7853756,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "386 Fulton Ave, Fulton, New York, 13069-1113, United States",
+      "zip": "13069",
+      "lat": 43.3294086,
+      "lng": -76.427049,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3942 White Plains Rd, New York, New York, 10466-3024, United States",
+      "zip": "10466",
+      "lat": 40.8868259,
+      "lng": -73.8607971,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4008 Boston Rd, New York, New York, 10475-1118, United States",
+      "zip": "10475",
+      "lat": 40.8837127,
+      "lng": -73.8326562,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "401 Fulton Ave, Fulton, New York, 13069-1007, United States",
+      "zip": "13069",
+      "lat": 43.32904320000001,
+      "lng": -76.4273717,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "42-02 Northern Blvd, New York, New York, 11101, United States",
+      "zip": "11101",
+      "lat": 40.7521194,
+      "lng": -73.9215158,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "421 E 189th St, New York, New York, 10458-5506, United States",
+      "zip": "10458",
+      "lat": 40.8604501,
+      "lng": -73.8918013,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "425 Bay St, New York, New York, 10304-3815, United States",
+      "zip": "10304",
+      "lat": 40.6319971,
+      "lng": -74.0753579,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "430 Pelham Rd, Rochester, New York, 14610-3356, United States",
+      "zip": "14610",
+      "lat": 43.1321905,
+      "lng": -77.54946509999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "445 S Franklin St, Watkins Glen, New York, 14891-1528, United States",
+      "zip": "14891",
+      "lat": 42.3694413,
+      "lng": -76.8676914,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "459 E 149th St, New York, New York, 10455-1698, United States",
+      "zip": "10455",
+      "lat": 40.815471,
+      "lng": -73.91531200000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "461 Morris Park Ave, New York, New York, 10460-2528, United States",
+      "zip": "10460",
+      "lat": 40.8407471,
+      "lng": -73.87315149999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4705 5th Ave, New York, New York, 11220-1209, United States",
+      "zip": "11220",
+      "lat": 40.6464723,
+      "lng": -74.00849869999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "477 Main St, New York, New York, 10044-0079, United States",
+      "zip": "10044",
+      "lat": 40.7599766,
+      "lng": -73.9517565,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4808 4th Ave, New York, New York, 11220-6705, United States",
+      "zip": "11220",
+      "lat": 40.6475776,
+      "lng": -74.0118078,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4921 5th Ave, New York, New York, 11220-1906, United States",
+      "zip": "11220",
+      "lat": 40.6450907,
+      "lng": -74.0099127,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "496 Hempstead Tpke, West Hempstead, New York, 11003-1708, United States",
+      "zip": "11003",
+      "lat": 40.70842409999999,
+      "lng": -73.7092103,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5009 6th Ave, New York, New York, 11220-2007, United States",
+      "zip": "11220",
+      "lat": 40.6433569,
+      "lng": -74.0080925,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5013 5th Ave, New York, New York, 11220-1908, United States",
+      "zip": "11220",
+      "lat": 40.6446777,
+      "lng": -74.0104145,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "520 S Broadway, Hicksville, New York, 11801-5013, United States",
+      "zip": "11801",
+      "lat": 40.7553729,
+      "lng": -73.5101298,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "538 Main St, New York, New York, 10044-0054, United States",
+      "zip": "10044",
+      "lat": 40.7613272,
+      "lng": -73.9497166,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "54 E Suffolk Ave, Central Islip, New York, 11722-2341, United States",
+      "zip": "11722",
+      "lat": 40.7921887,
+      "lng": -73.19926389999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "540 W 235th St, New York, New York, 10463-1709, United States",
+      "zip": "10463",
+      "lat": 40.8848169,
+      "lng": -73.9097116,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5555 Broadway, New York, New York, 10463-5230, United States",
+      "zip": "10463",
+      "lat": 40.87862459999999,
+      "lng": -73.90544,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "565 Avenue A, Uniondale, New York, 11553-3200, United States",
+      "zip": "11553",
+      "lat": 40.69186879999999,
+      "lng": -73.59877399999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5661 Riverdale Ave, New York, New York, 10471-2105, United States",
+      "zip": "10471",
+      "lat": 40.9061007,
+      "lng": -73.9050998,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5724 5th Ave, New York, New York, 11220-3816, United States",
+      "zip": "11220",
+      "lat": 40.6408435,
+      "lng": -74.01508860000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "58 Surrey Cir, Tonawanda, New York, 14150-92ND, United States",
+      "zip": "14150",
+      "lat": 42.983388,
+      "lng": -78.8311662,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "58-17 Junction Blvd, New York, New York, 11373, United States",
+      "zip": "11373",
+      "lat": 40.7354518,
+      "lng": -73.8645105,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "61 2nd St, New York, New York, 11231-4803, United States",
+      "zip": "11231",
+      "lat": 40.6783963,
+      "lng": -73.992766,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "616 Melrose Ave, New York, New York, 10455-2627, United States",
+      "zip": "10455",
+      "lat": 40.8176762,
+      "lng": -73.9167389,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "640 Pelham Pkwy S, New York, New York, 10462-1001, United States",
+      "zip": "10462",
+      "lat": 40.85627909999999,
+      "lng": -73.8681008,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "65 Bruckner Blvd, New York, New York, 10454-4436, United States",
+      "zip": "10454",
+      "lat": 40.80660210000001,
+      "lng": -73.9263112,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "656 Castle Hill Ave, New York, New York, 10473-1402, United States",
+      "zip": "10473",
+      "lat": 40.82020929999999,
+      "lng": -73.8476496,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "70 Linden St, New York, New York, 11221-4642, United States",
+      "zip": "11221",
+      "lat": 40.6919001,
+      "lng": -73.9206167,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "712 Old White Plains Rd, Mamaroneck, New York, 10543-1821, United States",
+      "zip": "10543",
+      "lat": 40.9547684,
+      "lng": -73.74040769999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "721 N Broadway, Saratoga Springs, New York, 12866-1623, United States",
+      "zip": "12866",
+      "lat": 43.0919144,
+      "lng": -73.78121999999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "724 E 161st St, New York, New York, 10456-7507, United States",
+      "zip": "10456",
+      "lat": 40.8212267,
+      "lng": -73.90530260000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "724 Hunts Point Ave, New York, New York, 10474-5921, United States",
+      "zip": "10474",
+      "lat": 40.8155092,
+      "lng": -73.8865781,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "735 Prospect Ave, New York, New York, 10455-2422, United States",
+      "zip": "10455",
+      "lat": 40.81726,
+      "lng": -73.9029632,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "751 Avenue X, New York, New York, 11235-6119, United States",
+      "zip": "11235",
+      "lat": 40.5917708,
+      "lng": -73.9612855,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "760 Melrose Ave, New York, New York, 10451-4457, United States",
+      "zip": "10451",
+      "lat": 40.8212303,
+      "lng": -73.9152344,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "768 Main St, New York, New York, 10044, United States",
+      "zip": "10044",
+      "lat": 40.767853,
+      "lng": -73.9434046,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "775 Morris Park Ave, New York, New York, 10462-3604, United States",
+      "zip": "10462",
+      "lat": 40.8460692,
+      "lng": -73.8633162,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "795 Old Country Rd, Westbury, New York, 11590-5441, United States",
+      "zip": "11590",
+      "lat": 40.7521073,
+      "lng": -73.5682427,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "795 Prospect Ave, New York, New York, 10455-1816, United States",
+      "zip": "10455",
+      "lat": 40.8187739,
+      "lng": -73.90221679999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "809 Southern Blvd, New York, New York, 10459-5202, United States",
+      "zip": "10459",
+      "lat": 40.8170216,
+      "lng": -73.8959098,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "856 Merrick Rd, Baldwin, New York, 11510-3332, United States",
+      "zip": "11510",
+      "lat": 40.6503357,
+      "lng": -73.6101102,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "86 E 231st St, New York, New York, 10466, United States",
+      "zip": "10466",
+      "lat": 40.890547,
+      "lng": -73.8534228,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "870 Merrick Rd, Baldwin, New York, 11510-3332, United States",
+      "zip": "11510",
+      "lat": 40.6504367,
+      "lng": -73.60995799999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "87-15 Rockaway Beach Blvd, New York, New York, 11693, United States",
+      "zip": "11693",
+      "lat": 40.58696459999999,
+      "lng": -73.8125896,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "918 S Main St, Horseheads, New York, 14845-2653, United States",
+      "zip": "14845",
+      "lat": 42.1585628,
+      "lng": -76.8154911,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "945 W Main St, Riverhead, New York, 11901, United States",
+      "zip": "11901",
+      "lat": 40.9171547,
+      "lng": -72.680026,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "950 Westchester Ave, New York, New York, 10459-3219, United States",
+      "zip": "10459",
+      "lat": 40.8222162,
+      "lng": -73.89616160000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Blank Ln, Water Mill, New York, 11976, United States",
+      "zip": "11976",
+      "lat": 40.9348013,
+      "lng": -72.3557745,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Castleton Ave, New York, New York, 10310, United States",
+      "zip": "10310",
+      "lat": 40.6347569,
+      "lng": -74.115511,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Cook St, New York, New York, 11206, United States",
+      "zip": "11206",
+      "lat": 40.7027128,
+      "lng": -73.9373719,
+      "country": "US"
+    },
+    {
+      "name": "Market Fresh",
+      "address": "17 Crossroads Ct, Newburgh, New York, 12550-5064, United States",
+      "zip": "12550",
+      "lat": 41.5051046,
+      "lng": -74.0783343,
+      "country": "US"
+    },
+    {
+      "name": "Market Fresh",
+      "address": "50 Fulton St, Middletown, New York, 10940-6339, United States",
+      "zip": "10940",
+      "lat": 41.4417761,
+      "lng": -74.42155249999999,
+      "country": "US"
+    },
+    {
+      "name": "Market Fresh",
+      "address": "690 Main St, Poughkeepsie, New York, 12601-3704, United States",
+      "zip": "12601",
+      "lat": 41.6975074,
+      "lng": -73.9107221,
+      "country": "US"
+    },
+    {
+      "name": "Mercado Deli",
+      "address": "423 S Broadway, Yonkers, New York, 10705-2302, United States",
+      "zip": "10705",
+      "lat": 40.9189052,
+      "lng": -73.896577,
+      "country": "US"
+    },
+    {
+      "name": "Mexico Azteca",
+      "address": "33 Broad St, New York, New York, 10304-2608, United States",
+      "zip": "10304",
+      "lat": 40.6257024,
+      "lng": -74.0764501,
+      "country": "US"
+    },
+    {
+      "name": "Mexico Supermarket",
+      "address": "170 Port Richmond Ave, Staten Island, New York, 10302-1335, United States",
+      "zip": "10302",
+      "lat": 40.637065,
+      "lng": -74.13438719999999,
+      "country": "US"
+    },
+    {
+      "name": "Mi Tierra Supermarket",
+      "address": "109-01 37th Ave, New York, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.7541707,
+      "lng": -73.8583499,
+      "country": "US"
+    },
+    {
+      "name": "Mi Tierra Supermarket",
+      "address": "32-66 97th St, New York, New York, 11369, United States",
+      "zip": "11369",
+      "lat": 40.7573128,
+      "lng": -73.87153959999999,
+      "country": "US"
+    },
+    {
+      "name": "Mi Tierra Supermarket",
+      "address": "81-02 Northern Blvd, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.755211,
+      "lng": -73.88594499999999,
+      "country": "US"
+    },
+    {
+      "name": "Mi Tierra Supermarket",
+      "address": "85-15 Roosevelt Ave, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.7482601,
+      "lng": -73.88054350000002,
+      "country": "US"
+    },
+    {
+      "name": "New Rochelle Farm",
+      "address": "465 North Ave, New Rochelle, New York, 10801-3426, United States",
+      "zip": "10801",
+      "lat": 40.9180062,
+      "lng": -73.7858894,
+      "country": "US"
+    },
+    {
+      "name": "Nsa",
+      "address": "114-32 Sutphin Blvd, New York, New York, 11434, United States",
+      "zip": "11434",
+      "lat": 40.6853965,
+      "lng": -73.79353619999999,
+      "country": "US"
+    },
+    {
+      "name": "Nsa",
+      "address": "148-40 Hillside Ave, New York, New York, 11435, United States",
+      "zip": "11435",
+      "lat": 40.7060577,
+      "lng": -73.8073975,
+      "country": "US"
+    },
+    {
+      "name": "Peach Market",
+      "address": "45-17 104th St, Corona, New York, 11368, United States",
+      "zip": "11368",
+      "lat": 40.74657500000001,
+      "lng": -73.859873,
+      "country": "US"
+    },
+    {
+      "name": "Pioneer Supermarket",
+      "address": "250 Willis Ave, New York, New York, 10454-2612, United States",
+      "zip": "10454",
+      "lat": 40.8092114,
+      "lng": -73.9224917,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "408 Exchange St, Geneva, New York, 14456-2426, United States",
+      "zip": "14456",
+      "lat": 42.8688128,
+      "lng": -76.9814213,
+      "country": "US"
+    },
+    {
+      "name": "Shop Fair Supermarkets",
+      "address": "Yonkers, New York, 10701, United States",
+      "zip": "10701",
+      "lat": 40.9413523,
+      "lng": -73.8713099,
+      "country": "US"
+    },
+    {
+      "name": "Spring Valley",
+      "address": "210 N Main St, Spring Valley, New York, 10977-4020, United States",
+      "zip": "10977",
+      "lat": 41.1216623,
+      "lng": -74.039835,
+      "country": "US"
+    },
+    {
+      "name": "Trade Fair",
+      "address": "89-02 37th Ave, New York, New York, 11372, United States",
+      "zip": "11372",
+      "lat": 40.75023710000001,
+      "lng": -73.8774878,
+      "country": "US"
+    },
+    {
+      "name": "Trade Fair",
+      "address": "99-10 Astoria Blvd, New York, New York, 11369, United States",
+      "zip": "11369",
+      "lat": 40.7617506,
+      "lng": -73.86993170000001,
+      "country": "US"
+    },
+    {
+      "name": "Viva Ranch",
+      "address": "477 Main St, New Rochelle, New York, 10801-6303, United States",
+      "zip": "10801",
+      "lat": 40.9096066,
+      "lng": -73.7809784,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1201 Route 300, Newburgh, New York, 12550-1633, United States",
+      "zip": "12550",
+      "lat": 41.4974079,
+      "lng": -74.0738667,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "141 Washington Ave Ext, Albany, New York, 12205-5605, United States",
+      "zip": "12205",
+      "lat": 42.6951504,
+      "lng": -73.8470881,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "161 Centereach Mall, Centereach, New York, 11720, United States",
+      "zip": "11720",
+      "lat": 40.8630257,
+      "lng": -73.0812935,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2150 Chili Ave, Rochester, New York, 14624-3443, United States",
+      "zip": "14624",
+      "lat": 43.1337859,
+      "lng": -77.6890179,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "250 Route 59, Suffern, New York, 10901-5304, United States",
+      "zip": "10901",
+      "lat": 41.1133225,
+      "lng": -74.10729529999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "26 W Merritt Blvd, Fishkill, New York, 12524-2243, United States",
+      "zip": "12524",
+      "lat": 41.53072179999999,
+      "lng": -73.89721449999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "279 Troy Rd, East Greenbush, New York, 12144-9499, United States",
+      "zip": "12144",
+      "lat": 42.6414678,
+      "lng": -73.70152639999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "288 Larkin Dr, Monroe, New York, 10950-4911, United States",
+      "zip": "10950",
+      "lat": 41.3171372,
+      "lng": -74.1478516,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "297 Grant Ave, Auburn, New York, 13021-1407, United States",
+      "zip": "13021",
+      "lat": 42.95528179999999,
+      "lng": -76.5444842,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "30 Catskill Commons, Catskill, New York, 12414-1755, United States",
+      "zip": "12414",
+      "lat": 42.2129142,
+      "lng": -73.8827026,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3000 Ford St, Ogdensburg, New York, 13669-4480, United States",
+      "zip": "13669",
+      "lat": 44.70755339999999,
+      "lng": -75.4673198,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "311 Route 9W, Glenmont, New York, 12077-2909, United States",
+      "zip": "12077",
+      "lat": 42.60815330000001,
+      "lng": -73.7926456,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3290 Sheridan Dr, Amherst, New York, 14226, United States",
+      "zip": "14226",
+      "lat": 42.981879,
+      "lng": -78.8115527,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "470 Route 211 E, Middletown, New York, 10940-2246, United States",
+      "zip": "10940",
+      "lat": 41.45465979999999,
+      "lng": -74.37811769999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5735 S Transit Rd, Lockport, New York, 14094-5864, United States",
+      "zip": "14094",
+      "lat": 43.1471501,
+      "lng": -78.6928757,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6438 Basile Rowe, East Syracuse, New York, 13057-3900, United States",
+      "zip": "13057",
+      "lat": 43.0611603,
+      "lng": -76.06086979999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "77 Green Acres Rd, Valley Stream, New York, 11581, United States",
+      "zip": "11581",
+      "lat": 40.6609422,
+      "lng": -73.72671249999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "965 Broadhollow Rd, Farmingdale, New York, 11735-3906, United States",
+      "zip": "11735",
+      "lat": 40.7265457,
+      "lng": -73.4206004,
+      "country": "US"
+    },
+    {
+      "name": "Webster Beef",
+      "address": "1041 Prospect Ave, New York, New York, 10459-2831, United States",
+      "zip": "10459",
+      "lat": 40.8249589,
+      "lng": -73.9005253,
+      "country": "US"
+    },
+    {
+      "name": "Webster Beef",
+      "address": "1851 Bruckner Blvd, New York, New York, 10472-6502, United States",
+      "zip": "10472",
+      "lat": 40.826946,
+      "lng": -73.86267300000002,
+      "country": "US"
+    },
+    {
+      "name": "Webster Beef",
+      "address": "2050 Webster Ave, New York, New York, 10457-2445, United States",
+      "zip": "10457",
+      "lat": 40.8516327,
+      "lng": -73.8982036,
+      "country": "US"
+    },
+    {
+      "name": "Webster Beef",
+      "address": "301 Morris Ave, New York, New York, 10451-6113, United States",
+      "zip": "10451",
+      "lat": 40.8126472,
+      "lng": -73.9264185,
+      "country": "US"
+    },
+    {
+      "name": "Webster Beef",
+      "address": "425 Bay St, Staten Island, New York, 10304-3815, United States",
+      "zip": "10304",
+      "lat": 40.6319971,
+      "lng": -74.0753579,
+      "country": "US"
+    },
+    {
+      "name": "Webster Beef",
+      "address": "831 Rosedale Ave, New York, New York, 10473, United States",
+      "zip": "10473",
+      "lat": 40.8220278,
+      "lng": -73.8676492,
+      "country": "US"
+    },
+    {
+      "name": "Western Beef",
+      "address": "46-25 Metropolitan Ave, Ridgewood, New York, 11385, United States",
+      "zip": "11385",
+      "lat": 40.7142184,
+      "lng": -73.923031,
+      "country": "US"
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "total_states": 48,
+  "total_stores": 7766,
+  "states": {
+    "AK": {
+      "file": "ak.json",
+      "count": 2
+    },
+    "AL": {
+      "file": "al.json",
+      "count": 110
+    },
+    "AR": {
+      "file": "ar.json",
+      "count": 25
+    },
+    "AZ": {
+      "file": "az.json",
+      "count": 213
+    },
+    "CA": {
+      "file": "ca.json",
+      "count": 894
+    },
+    "CO": {
+      "file": "co.json",
+      "count": 226
+    },
+    "CT": {
+      "file": "ct.json",
+      "count": 39
+    },
+    "DE": {
+      "file": "de.json",
+      "count": 8
+    },
+    "FL": {
+      "file": "fl.json",
+      "count": 844
+    },
+    "GA": {
+      "file": "ga.json",
+      "count": 703
+    },
+    "IA": {
+      "file": "ia.json",
+      "count": 49
+    },
+    "ID": {
+      "file": "id.json",
+      "count": 9
+    },
+    "IL": {
+      "file": "il.json",
+      "count": 170
+    },
+    "IN": {
+      "file": "in.json",
+      "count": 113
+    },
+    "KS": {
+      "file": "ks.json",
+      "count": 16
+    },
+    "KY": {
+      "file": "ky.json",
+      "count": 24
+    },
+    "LA": {
+      "file": "la.json",
+      "count": 39
+    },
+    "MA": {
+      "file": "ma.json",
+      "count": 66
+    },
+    "MD": {
+      "file": "md.json",
+      "count": 167
+    },
+    "ME": {
+      "file": "me.json",
+      "count": 1
+    },
+    "MI": {
+      "file": "mi.json",
+      "count": 50
+    },
+    "MN": {
+      "file": "mn.json",
+      "count": 48
+    },
+    "MO": {
+      "file": "mo.json",
+      "count": 16
+    },
+    "MS": {
+      "file": "ms.json",
+      "count": 17
+    },
+    "MT": {
+      "file": "mt.json",
+      "count": 7
+    },
+    "NC": {
+      "file": "nc.json",
+      "count": 195
+    },
+    "ND": {
+      "file": "nd.json",
+      "count": 2
+    },
+    "NE": {
+      "file": "ne.json",
+      "count": 23
+    },
+    "NH": {
+      "file": "nh.json",
+      "count": 2
+    },
+    "NJ": {
+      "file": "nj.json",
+      "count": 214
+    },
+    "NM": {
+      "file": "nm.json",
+      "count": 53
+    },
+    "NV": {
+      "file": "nv.json",
+      "count": 87
+    },
+    "NY": {
+      "file": "ny.json",
+      "count": 241
+    },
+    "OH": {
+      "file": "oh.json",
+      "count": 18
+    },
+    "OK": {
+      "file": "ok.json",
+      "count": 29
+    },
+    "OR": {
+      "file": "or.json",
+      "count": 9
+    },
+    "PA": {
+      "file": "pa.json",
+      "count": 30
+    },
+    "RI": {
+      "file": "ri.json",
+      "count": 2
+    },
+    "SC": {
+      "file": "sc.json",
+      "count": 112
+    },
+    "SD": {
+      "file": "sd.json",
+      "count": 5
+    },
+    "TN": {
+      "file": "tn.json",
+      "count": 134
+    },
+    "TX": {
+      "file": "tx.json",
+      "count": 2370
+    },
+    "UT": {
+      "file": "ut.json",
+      "count": 72
+    },
+    "VA": {
+      "file": "va.json",
+      "count": 185
+    },
+    "WA": {
+      "file": "wa.json",
+      "count": 59
+    },
+    "WI": {
+      "file": "wi.json",
+      "count": 56
+    },
+    "WV": {
+      "file": "wv.json",
+      "count": 3
+    },
+    "WY": {
+      "file": "wy.json",
+      "count": 9
+    }
+  }
+}
