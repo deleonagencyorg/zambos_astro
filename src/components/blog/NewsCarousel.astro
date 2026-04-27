@@ -52,21 +52,21 @@ const nl = newsletter[currentLang || 'es'] || newsletter.en || newsletter.es;
 <div class="w-full">
   <!-- Hero: latest post -->
   {latestPost && (
-    <div class="hero-banner relative w-full rounded-2xl overflow-hidden" style="height: 460px;">
-      <!-- Background image -->
+    <a href={latestHref} class="hero-banner relative block w-full rounded-2xl overflow-hidden group">
+      <!-- Image - full visible, drives container height -->
       {latestImage ? (
         <img
           src={latestImage}
           alt={latestTitle}
-          class="absolute inset-0 w-full h-full object-cover object-center" style="filter: blur(2px); transform: scale(1.04);"
+          class="w-full h-auto object-contain"
           loading="eager"
         />
       ) : (
-        <div class="absolute inset-0 bg-gray-800"></div>
+        <div class="w-full aspect-[16/9] bg-gray-800"></div>
       )}
 
       <!-- Dark gradient overlay -->
-      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.10) 100%);"></div>
+      <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.05) 100%);"></div>
 
       <!-- Content overlay -->
       <div class="absolute bottom-0 left-0 right-0 px-6 md:px-10 pb-8 pt-16">
@@ -81,16 +81,11 @@ const nl = newsletter[currentLang || 'es'] || newsletter.en || newsletter.es;
             {latestExcerpt}
           </p>
         )}
-        {latestHref && (
-          <a
-            href={latestHref}
-            class="inline-block bg-red text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition text-sm uppercase tracking-wide"
-          >
-            {readMoreLabel}
-          </a>
-        )}
+        <span class="inline-block bg-red text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition text-sm uppercase tracking-wide">
+          {readMoreLabel}
+        </span>
       </div>
-    </div>
+    </a>
   )}
 
   <!-- Green Newsletter Section -->

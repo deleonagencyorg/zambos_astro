@@ -1,0 +1,69 @@
+{
+  "state_code": "ID",
+  "count": 9,
+  "stores": [
+    {
+      "name": "Smith's",
+      "address": "1913 Addison Ave E, Twin Falls, Idaho, 83301-5304, United States",
+      "lat": 42.563749,
+      "lng": -114.4462829,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4845 Yellowstone Ave, Chubbuck, Idaho, 83202-2333, United States",
+      "lat": 42.92196089999999,
+      "lng": -112.4667946,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "937 E Main St, Burley, Idaho, 83318-2035, United States",
+      "lat": 42.5370742,
+      "lng": -113.7818537,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1450 N 2nd St E, Rexburg, Idaho, 83440-5131, United States",
+      "lat": 43.8560667,
+      "lng": -111.7738697,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "385 N Overland Ave, Burley, Idaho, 83318, United States",
+      "lat": 42.5637105,
+      "lng": -113.7914384,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5001 N Ten Mile Rd, Meridian, Idaho, 83646-6515, United States",
+      "lat": 43.6505036,
+      "lng": -116.4360656,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5875 E Franklin Rd, Nampa, Idaho, 83687, United States",
+      "lat": 43.6029525,
+      "lng": -116.5108682,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "622 E Ustick Rd, Caldwell, Idaho, 83605-6311, United States",
+      "lat": 43.6321366,
+      "lng": -116.6909089,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8300 W Overland Rd, Boise, Idaho, 83709-1639, United States",
+      "lat": 43.5915986,
+      "lng": -116.2844477,
+      "country": "US"
+    }
+  ]
+}

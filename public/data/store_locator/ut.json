@@ -1,0 +1,582 @@
+{
+  "state_code": "UT",
+  "count": 72,
+  "stores": [
+    {
+      "name": "AFS Independent, All Other",
+      "address": "35 Lion Blvd, Springdale, Utah, 84767-7787, United States",
+      "zip": "84767",
+      "lat": 37.19351109999999,
+      "lng": -112.993741,
+      "country": "US"
+    },
+    {
+      "name": "AFS Independent, All Other",
+      "address": "995 Zion Ldg, Springdale, Utah, 84767-7799, United States",
+      "zip": "84767",
+      "lat": 37.1880372,
+      "lng": -113.0006169,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "425 S Main St, Moab, Utah, 84532-2921, United States",
+      "zip": "84532",
+      "lat": 38.5667222,
+      "lng": -109.5497426,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "4600 S Redwood Rd, Salt Lake City, Utah, 84123-3145, United States",
+      "zip": "84123",
+      "lat": 40.6729399,
+      "lng": -111.943303,
+      "country": "US"
+    },
+    {
+      "name": "Maceys",
+      "address": "3151 Kilby Rd, Park City, Utah, 84098-8309, United States",
+      "zip": "84098",
+      "lat": 40.7503835,
+      "lng": -111.5706005,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1075 E Main St, Price, Utah, 84501-2712, United States",
+      "zip": "84501",
+      "lat": 39.599347,
+      "lng": -110.7942911,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1174 W 600 N, Salt Lake City, Utah, 84116-2676, United States",
+      "zip": "84116",
+      "lat": 40.7829696,
+      "lng": -111.9243029,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "13889 S Redwood Rd, Bluffdale, Utah, 84065-5209, United States",
+      "zip": "13889",
+      "lat": 40.49874579999999,
+      "lng": -111.9385616,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "13893 S Redwood Rd, Bluffdale, Utah, 84065-5209, United States",
+      "zip": "13893",
+      "lat": 40.4992134,
+      "lng": -111.9364301,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1485 Harrison Blvd, Ogden, Utah, 84404-6093, United States",
+      "zip": "84404",
+      "lat": 41.2413294,
+      "lng": -111.9466599,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "156 S Main St, Brigham City, Utah, 84302-2529, United States",
+      "zip": "84302",
+      "lat": 41.5065801,
+      "lng": -112.0168971,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "175 E 442 N, Logan, Utah, 84321, United States",
+      "zip": "84321",
+      "lat": 41.7397768,
+      "lng": -111.8303342,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1750 W 400 S, Springville, Utah, 84663-3072, United States",
+      "zip": "84663",
+      "lat": 40.1619448,
+      "lng": -111.6418276,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "20 N Bluff St, St George, Utah, 84770-3334, United States",
+      "zip": "84770",
+      "lat": 37.1088165,
+      "lng": -113.5914697,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "210 E 700 S, Pleasant Grove, Utah, 84062-3510, United States",
+      "zip": "84062",
+      "lat": 40.353691,
+      "lng": -111.737118,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "212 E 12300 S, Draper, Utah, 84020-8184, United States",
+      "zip": "12300",
+      "lat": 40.5257452,
+      "lng": -111.8855505,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "217 N 2000 W, West Point, Utah, 84015-8026, United States",
+      "zip": "84015",
+      "lat": 41.1167992,
+      "lng": -112.0674245,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2353 N Main St, Sunset, Utah, 84015-2454, United States",
+      "zip": "84015",
+      "lat": 41.1478012,
+      "lng": -112.027889,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2434 N 400 E, Ogden, Utah, 84414-7233, United States",
+      "zip": "84414",
+      "lat": 41.3027824,
+      "lng": -111.9662221,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "3470 E Bengal Blvd, Salt Lake City, Utah, 84121-5803, United States",
+      "zip": "84121",
+      "lat": 40.6080452,
+      "lng": -111.796959,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "350 N Freedom Blvd, Provo, Utah, 84601-2810, United States",
+      "zip": "84601",
+      "lat": 40.2386714,
+      "lng": -111.6613249,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "402 E 6th Ave, Salt Lake City, Utah, 84103-3377, United States",
+      "zip": "84103",
+      "lat": 40.7754807,
+      "lng": -111.8768897,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4065 S Redwood Rd, Salt Lake City, Utah, 84123-1131, United States",
+      "zip": "84123",
+      "lat": 40.6840929,
+      "lng": -111.9384878,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4080 W 9000 S, West Jordan, Utah, 84088-8928, United States",
+      "zip": "84088",
+      "lat": 40.5892564,
+      "lng": -111.9868203,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4275 Harrison Blvd, Ogden, Utah, 84403-3101, United States",
+      "zip": "84403",
+      "lat": 41.1860271,
+      "lng": -111.9500257,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "442 N 175 E, Logan, Utah, 84321-5570, United States",
+      "zip": "84321",
+      "lat": 41.7395982,
+      "lng": -111.8303529,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "45 S State St, Orem, Utah, 84058-5417, United States",
+      "zip": "84058",
+      "lat": 40.2967854,
+      "lng": -111.6926643,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "455 S 500 E, Salt Lake City, Utah, 84102-2753, United States",
+      "zip": "84102",
+      "lat": 40.7590263,
+      "lng": -111.8777108,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4582 S Pioneer Rd, St George, Utah, 84790-5163, United States",
+      "zip": "84790",
+      "lat": 37.0324427,
+      "lng": -113.6085354,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4643 S 4000 W, West Valley City, Utah, 84120-6233, United States",
+      "zip": "84120",
+      "lat": 40.6682603,
+      "lng": -111.9846664,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "5448 W Daybreak Pkwy, South Jordan, Utah, 84009-5901, United States",
+      "zip": "84009",
+      "lat": 40.5389647,
+      "lng": -112.0215547,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "550 N Main St, Heber City, Utah, 84032-1215, United States",
+      "zip": "84032",
+      "lat": 40.5150249,
+      "lng": -111.4111804,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "5560 W 13400 S, Herriman, Utah, 84096-6919, United States",
+      "zip": "13400",
+      "lat": 40.508198,
+      "lng": -112.0233884,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "5620 W 4100 S, West Valley City, Utah, 84128-4327, United States",
+      "zip": "84128",
+      "lat": 40.6840576,
+      "lng": -112.0258546,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "5620 W 4100 S, West Valley City, Utah, 84128-4338, United States",
+      "zip": "84128",
+      "lat": 40.6840576,
+      "lng": -112.0258546,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "5710 W 7800 S, West Jordan, Utah, 84081-5400, United States",
+      "zip": "84081",
+      "lat": 40.6113973,
+      "lng": -112.0271438,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "614 W 2600 S, Woods Cross, Utah, 84010-8190, United States",
+      "zip": "84010",
+      "lat": 40.8634663,
+      "lng": -111.8979697,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "632 S 100 W, Payson, Utah, 84651-2864, United States",
+      "zip": "84651",
+      "lat": 40.0342221,
+      "lng": -111.7350094,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "665 W 5300 S, Murray, Utah, 84123-5671, United States",
+      "zip": "84123",
+      "lat": 40.65260079999999,
+      "lng": -111.9092119,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "680 W 2600 S, Woods Cross, Utah, 84010-8190, United States",
+      "zip": "84010",
+      "lat": 40.8630576,
+      "lng": -111.8984059,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "7 W 5300 S, Salt Lake City, Utah, 84107-5845, United States",
+      "zip": "84107",
+      "lat": 40.6559633,
+      "lng": -111.8914477,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "7061 S Redwood Rd, West Jordan, Utah, 84084-3420, United States",
+      "zip": "84084",
+      "lat": 40.622693,
+      "lng": -111.9382991,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "744 N Main St, Heber City, Utah, 84032-5515, United States",
+      "zip": "84032",
+      "lat": 40.517598,
+      "lng": -111.4114292,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "750 N Main St, Logan, Utah, 84321-3227, United States",
+      "zip": "84321",
+      "lat": 41.745573,
+      "lng": -111.8333832,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "8055 W 3500 S, Magna, Utah, 84044-2218, United States",
+      "zip": "84044",
+      "lat": 40.6961613,
+      "lng": -112.0832819,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "828 S 900 W, Salt Lake City, Utah, 84104-1455, United States",
+      "zip": "84104",
+      "lat": 40.7513599,
+      "lng": -111.9182807,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "845 E 4500 S, Salt Lake City, Utah, 84107-3049, United States",
+      "zip": "84107",
+      "lat": 40.6755322,
+      "lng": -111.8671481,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "876 E 800 S, Salt Lake City, Utah, 84102-3634, United States",
+      "zip": "84102",
+      "lat": 40.7515457,
+      "lng": -111.8658749,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "9000 Redwood Rd, West Jordan, Utah, 84088-6505, United States",
+      "zip": "84088",
+      "lat": 40.58732699999999,
+      "lng": -111.9390789,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "922 E 2100 S, Salt Lake City, Utah, 84106-2364, United States",
+      "zip": "84106",
+      "lat": 40.7242898,
+      "lng": -111.8648919,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "951 W 1700 S, Syracuse, Utah, 84075-9127, United States",
+      "zip": "84075",
+      "lat": 41.0881424,
+      "lng": -112.0442836,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "980 E Fort Union Blvd, Midvale, Utah, 84047-1714, United States",
+      "zip": "84047",
+      "lat": 40.6224009,
+      "lng": -111.864124,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "S Mall Dr, St George, Utah, 84790-1258, United States",
+      "zip": "84790",
+      "lat": 37.1026892,
+      "lng": -113.5399607,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "St George, Utah, 84790, United States",
+      "zip": "84790",
+      "lat": 37.0441957,
+      "lng": -113.5490415,
+      "country": "US"
+    },
+    {
+      "name": "Smith's Marketplace",
+      "address": "1117 W 400 S, Springville, Utah, 84663-3061, United States",
+      "zip": "84663",
+      "lat": 40.1597736,
+      "lng": -111.6306724,
+      "country": "US"
+    },
+    {
+      "name": "Smith's Marketplace",
+      "address": "1820 W 9000 S, West Jordan, Utah, 84088-6728, United States",
+      "zip": "84088",
+      "lat": 40.5880792,
+      "lng": -111.9398131,
+      "country": "US"
+    },
+    {
+      "name": "Smith's Marketplace",
+      "address": "2434 N 400 E, North Ogden, Utah, 84414-7233, United States",
+      "zip": "84414",
+      "lat": 41.3027824,
+      "lng": -111.9662221,
+      "country": "US"
+    },
+    {
+      "name": "Smith's Marketplace",
+      "address": "565 S Mall Dr, St George, Utah, 84790, United States",
+      "zip": "84790",
+      "lat": 37.1001222,
+      "lng": -113.5339746,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1355 Sandhill Rd, Orem, Utah, 84058-7307, United States",
+      "zip": "84058",
+      "lat": 40.2730106,
+      "lng": -111.7109458,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1356 E Highway 193, Layton, Utah, 84040-6631, United States",
+      "zip": "84040",
+      "lat": 41.0998791,
+      "lng": -111.9404853,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "136 W State Road 73, Saratoga Springs, Utah, 84045, United States",
+      "zip": "84045",
+      "lat": 40.389436,
+      "lng": -111.9199577,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1851 W Highway 40, Vernal, Utah, 84078-4125, United States",
+      "zip": "84078",
+      "lat": 40.4494873,
+      "lng": -109.5515199,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2610 Pioneer Rd, St George, Utah, 84790-7442, United States",
+      "zip": "84790",
+      "lat": 37.0631325,
+      "lng": -113.58494,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "350 W Hope Ave, Salt Lake City, Utah, 84115-5116, United States",
+      "zip": "84115",
+      "lat": 40.73973609999999,
+      "lng": -111.9015508,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3555 S 8400 W, Magna, Utah, 84044-3458, United States",
+      "zip": "84044",
+      "lat": 40.6949114,
+      "lng": -112.0900084,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4570 S 4000 W, West Valley City, Utah, 84120-6232, United States",
+      "zip": "84120",
+      "lat": 40.6706087,
+      "lng": -111.9890251,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5469 S Redwood Rd, Taylorsville, Utah, 84123, United States",
+      "zip": "84123",
+      "lat": 40.6509784,
+      "lng": -111.9369039,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6545 N Landmark Dr, Park City, Utah, 84098-5990, United States",
+      "zip": "84098",
+      "lat": 40.7260104,
+      "lng": -111.5493147,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "660 S 1750 W, Springville, Utah, 84663-3071, United States",
+      "zip": "84663",
+      "lat": 40.1582262,
+      "lng": -111.6448325,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "745 W Hill Field Rd, Layton, Utah, 84041, United States",
+      "zip": "84041",
+      "lat": 41.06834509999999,
+      "lng": -111.9798567,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "949 W Grassland Dr, American Fork, Utah, 84003-2753, United States",
+      "zip": "84003",
+      "lat": 40.387576,
+      "lng": -111.8236796,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "99 W 1280 N, Tooele, Utah, 84074-9068, United States",
+      "zip": "84074",
+      "lat": 40.5566208,
+      "lng": -112.3008037,
+      "country": "US"
+    }
+  ]
+}

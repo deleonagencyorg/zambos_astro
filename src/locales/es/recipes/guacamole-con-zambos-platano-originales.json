@@ -27,5 +27,6 @@
     "Paso 2: Sazonar con sal y pimienta al gusto.",
     "Paso 3: Refrigerar y servir colocando una porción en las canastitas. Acompañar con los Zambos Plátano Originales."
   ],
-  "brand": ["zambos"]
+  "brand": ["zambos"],
+  "products": ["zambos-platano-originales"]
 }

@@ -1,0 +1,1196 @@
+{
+  "state_code": "IL",
+  "count": 170,
+  "stores": [
+    {
+      "name": "Armando'S Supermarket",
+      "address": "925 N Liberty St, Elgin, Illinois, 60120-3020, United States",
+      "lat": 42.0535046,
+      "lng": -88.26676289999999,
+      "country": "US"
+    },
+    {
+      "name": "Berwyn Fruit Market",
+      "address": "3811 Harlem Ave, Berwyn, Illinois, 60402, United States",
+      "lat": 41.822281,
+      "lng": -87.8022297,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Guanajuato",
+      "address": "519 Marchesano Dr, Rockford, Illinois, 61102-3518, United States",
+      "lat": 42.2519569,
+      "lng": -89.10589039999999,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Jimenez",
+      "address": "621 Dundee Rd, Wheeling, Illinois, 60090, United States",
+      "lat": 42.1388802,
+      "lng": -87.9298167,
+      "country": "US"
+    },
+    {
+      "name": "Carniceria Y Fruteria La Frontera",
+      "address": "7 N Ayer St, Harvard, Illinois, 60033-2802, United States",
+      "lat": 42.4193988,
+      "lng": -88.6159892,
+      "country": "US"
+    },
+    {
+      "name": "Central Park Fresh Market",
+      "address": "3552 W Grand Ave, Chicago, Illinois, 60651-4009, United States",
+      "lat": 41.9020275,
+      "lng": -87.7148756,
+      "country": "US"
+    },
+    {
+      "name": "Cermak Produce",
+      "address": "1250 N Lake St, Aurora, Illinois, 60506-2453, United States",
+      "lat": 41.7825301,
+      "lng": -88.32016569999999,
+      "country": "US"
+    },
+    {
+      "name": "Cermak Produce",
+      "address": "3311 W 26th St, Chicago, Illinois, 60623-4036, United States",
+      "lat": 41.8439016,
+      "lng": -87.70824909999999,
+      "country": "US"
+    },
+    {
+      "name": "Cermak Produce",
+      "address": "4234 N Kedzie Ave, Chicago, Illinois, 60618-2402, United States",
+      "lat": 41.9584982,
+      "lng": -87.7085131,
+      "country": "US"
+    },
+    {
+      "name": "Cermak Produce",
+      "address": "5129 W Belmont Ave, Chicago, Illinois, 60641-4207, United States",
+      "lat": 41.9384523,
+      "lng": -87.75487509999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1615 Dundee Ave, Elgin, Illinois, 60120-1620, United States",
+      "lat": 42.0682736,
+      "lng": -88.2589899,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1800 W 18th St, Chicago, Illinois, 60608-1314, United States",
+      "lat": 41.85799,
+      "lng": -87.6712581,
+      "country": "US"
+    },
+    {
+      "name": "Dinos Finer Foods",
+      "address": "6768 Barrington Rd, Hanover Park, Illinois, 60133-3937, United States",
+      "lat": 41.99481170000001,
+      "lng": -88.145989,
+      "country": "US"
+    },
+    {
+      "name": "El Guero",
+      "address": "118 E Jackson St, Joliet, Illinois, 60432-1723, United States",
+      "lat": 41.5303897,
+      "lng": -88.07679309999999,
+      "country": "US"
+    },
+    {
+      "name": "El Guero",
+      "address": "1520 Theodore St, Crest Hill, Illinois, 60403-5000, United States",
+      "lat": 41.5529705,
+      "lng": -88.1192184,
+      "country": "US"
+    },
+    {
+      "name": "El Guero",
+      "address": "2101 W Cermak Rd, Chicago, Illinois, 60608-4005, United States",
+      "lat": 41.851843,
+      "lng": -87.6791496,
+      "country": "US"
+    },
+    {
+      "name": "El Guero",
+      "address": "30 N Root St, Aurora, Illinois, 60505-3439, United States",
+      "lat": 41.75517019999999,
+      "lng": -88.3082079,
+      "country": "US"
+    },
+    {
+      "name": "El Guero",
+      "address": "4023 S Archer Ave, Chicago, Illinois, 60632-1139, United States",
+      "lat": 41.820004,
+      "lng": -87.6941014,
+      "country": "US"
+    },
+    {
+      "name": "El Guero",
+      "address": "850 N Farnsworth Ave, Aurora, Illinois, 60505-2411, United States",
+      "lat": 41.7760113,
+      "lng": -88.2836742,
+      "country": "US"
+    },
+    {
+      "name": "El Paso Grande",
+      "address": "2134 W Galena Blvd, Aurora, Illinois, 60506-3212, United States",
+      "lat": 41.7629587,
+      "lng": -88.3696112,
+      "country": "US"
+    },
+    {
+      "name": "El Paso Grande",
+      "address": "634 E New York St, Aurora, Illinois, 60505-3510, United States",
+      "lat": 41.7544835,
+      "lng": -88.3018598,
+      "country": "US"
+    },
+    {
+      "name": "El Porvenir",
+      "address": "3012 S Laramie Ave, Cicero, Illinois, 60804-3557, United States",
+      "lat": 41.8377878,
+      "lng": -87.75408159999999,
+      "country": "US"
+    },
+    {
+      "name": "El Prado",
+      "address": "131 N Main St, Crystal Lake, Illinois, 60014-4432, United States",
+      "lat": 42.2448512,
+      "lng": -88.3157707,
+      "country": "US"
+    },
+    {
+      "name": "Elgin Fresh Market",
+      "address": "306 McLean Blvd, Elgin, Illinois, 60123-7137, United States",
+      "lat": 42.0262525,
+      "lng": -88.3144733,
+      "country": "US"
+    },
+    {
+      "name": "Elgin Fresh Market",
+      "address": "822 Summit St, Elgin, Illinois, 60120-4316, United States",
+      "lat": 42.0473273,
+      "lng": -88.2600198,
+      "country": "US"
+    },
+    {
+      "name": "Farmers Best",
+      "address": "23 W North Ave, Northlake, Illinois, 60164-2381, United States",
+      "lat": 41.9065549,
+      "lng": -87.90456309999999,
+      "country": "US"
+    },
+    {
+      "name": "Farmers Best Market",
+      "address": "6420 W Fullerton Ave, Chicago, Illinois, 60707-3598, United States",
+      "lat": 41.9239785,
+      "lng": -87.78696939999999,
+      "country": "US"
+    },
+    {
+      "name": "Fiesta Market",
+      "address": "160 N Bolingbrook Dr, Bolingbrook, Illinois, 60440-2350, United States",
+      "lat": 41.6999595,
+      "lng": -88.06717189999999,
+      "country": "US"
+    },
+    {
+      "name": "Fiesta Market",
+      "address": "1902 S Elmhurst Rd, Mt Prospect, Illinois, 60056-5712, United States",
+      "lat": 42.0272599,
+      "lng": -87.9406295,
+      "country": "US"
+    },
+    {
+      "name": "Fiesta Market",
+      "address": "400 Chrysler Dr, Belvidere, Illinois, 61008-6026, United States",
+      "lat": 42.2394499,
+      "lng": -88.8434788,
+      "country": "US"
+    },
+    {
+      "name": "Fiesta Market",
+      "address": "939 E Irving Park Rd, Streamwood, Illinois, 60107-3168, United States",
+      "lat": 42.0090818,
+      "lng": -88.15962809999999,
+      "country": "US"
+    },
+    {
+      "name": "Fresh Market Place",
+      "address": "2600 N Central Ave, Chicago, Illinois, 60639-1324, United States",
+      "lat": 41.9284553,
+      "lng": -87.76641649999999,
+      "country": "US"
+    },
+    {
+      "name": "Fruteria Y Carniceria El Mexicano",
+      "address": "2765 Washington St, Waukegan, Illinois, 60085, United States",
+      "lat": 42.3587493,
+      "lng": -87.8705421,
+      "country": "US"
+    },
+    {
+      "name": "Garden Fresh Market",
+      "address": "400 Townline Rd, Mundelein, Illinois, 60060-4405, United States",
+      "lat": 42.2414241,
+      "lng": -87.996088,
+      "country": "US"
+    },
+    {
+      "name": "Garden Fresh Market",
+      "address": "770 S Buffalo Grove Rd, Buffalo Grove, Illinois, 60089, United States",
+      "lat": 42.1409007,
+      "lng": -87.9602814,
+      "country": "US"
+    },
+    {
+      "name": "Gonzalez Supermercado",
+      "address": "652 N Collins St, Joliet, Illinois, 60432-1857, United States",
+      "lat": 41.5366387,
+      "lng": -88.07244089999999,
+      "country": "US"
+    },
+    {
+      "name": "Guanajuatos Carniceria",
+      "address": "3140 N California Ave, Chicago, Illinois, 60618-7034, United States",
+      "lat": 41.9387722,
+      "lng": -87.698127,
+      "country": "US"
+    },
+    {
+      "name": "Height Fresh Market",
+      "address": "1657 Chicago Rd, Chicago Heights, Illinois, 60411-3403, United States",
+      "lat": 41.5003311,
+      "lng": -87.6392278,
+      "country": "US"
+    },
+    {
+      "name": "International Foods",
+      "address": "4404 W Fullerton Ave, Chicago, Illinois, 60639-1932, United States",
+      "lat": 41.9246255,
+      "lng": -87.7368896,
+      "country": "US"
+    },
+    {
+      "name": "Jerry'S Fruit",
+      "address": "7901 N Milwaukee Ave, Niles, Illinois, 60714-3146, United States",
+      "lat": 42.0248255,
+      "lng": -87.812184,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "2070 N Rand Rd, Palatine, Illinois, 60074-2595, United States",
+      "lat": 42.1472102,
+      "lng": -88.03188759999999,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "240 W Lake St, Addison, Illinois, 60101-2611, United States",
+      "lat": 41.9366013,
+      "lng": -87.9944103,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "3850 W Fullerton Ave, Chicago, Illinois, 60647-2246, United States",
+      "lat": 41.924826,
+      "lng": -87.72349550000001,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "3850 W North Ave, Chicago, Illinois, 60647-4641, United States",
+      "lat": 41.9102392,
+      "lng": -87.7234769,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "4204 W North Ave, Chicago, Illinois, 60639-4829, United States",
+      "lat": 41.9100415,
+      "lng": -87.73198649999999,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "5322 W Belmont Ave, Chicago, Illinois, 60641-4103, United States",
+      "lat": 41.9389152,
+      "lng": -87.7600936,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "559 Main St, West Chicago, Illinois, 60185-2842, United States",
+      "lat": 41.8824936,
+      "lng": -88.195551,
+      "country": "US"
+    },
+    {
+      "name": "Jimenez Carniceria",
+      "address": "717 N 19th Ave, Melrose Park, Illinois, 60160-3723, United States",
+      "lat": 41.8939367,
+      "lng": -87.8562515,
+      "country": "US"
+    },
+    {
+      "name": "La Chiquita",
+      "address": "1414 S Main St, Rockford, Illinois, 61102-3248, United States",
+      "lat": 42.2577547,
+      "lng": -89.10071219999999,
+      "country": "US"
+    },
+    {
+      "name": "La Chiquita",
+      "address": "1525 Douglas Rd, Montgomery, Illinois, 60538, United States",
+      "lat": 41.7242069,
+      "lng": -88.3209778,
+      "country": "US"
+    },
+    {
+      "name": "La Chiquita",
+      "address": "219 W Main St, Bensenville, Illinois, 60106-2134, United States",
+      "lat": 41.9579326,
+      "lng": -87.9435134,
+      "country": "US"
+    },
+    {
+      "name": "La Chiquita",
+      "address": "4926 W Cermak Rd, Cicero, Illinois, 60804-2436, United States",
+      "lat": 41.8516129,
+      "lng": -87.7475334,
+      "country": "US"
+    },
+    {
+      "name": "La Esquinita De Oro",
+      "address": "4225 Charles St, Rockford, Illinois, 61108-6230, United States",
+      "lat": 42.2536643,
+      "lng": -89.0333101,
+      "country": "US"
+    },
+    {
+      "name": "La Hacienda Brands",
+      "address": "2420 S Wood St, Chicago, Illinois, 60608-5348, United States",
+      "lat": 41.8463266,
+      "lng": -87.67121809999999,
+      "country": "US"
+    },
+    {
+      "name": "La Huerta",
+      "address": "396 W Lake St, Addison, Illinois, 60101-2518, United States",
+      "lat": 41.9368858,
+      "lng": -87.99852159999999,
+      "country": "US"
+    },
+    {
+      "name": "La Ilusion",
+      "address": "100 N Kennedy Dr, Carpentersville, Illinois, 60110-1616, United States",
+      "lat": 42.13147840000001,
+      "lng": -88.2584638,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita",
+      "address": "1190 E Dundee Rd, Palatine, Illinois, 60074-8305, United States",
+      "lat": 42.1404038,
+      "lng": -88.0157467,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita",
+      "address": "230 W Virginia St, Crystal Lake, Illinois, 60014-1200, United States",
+      "lat": 42.2298123,
+      "lng": -88.3286377,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita",
+      "address": "325 N Seymour Ave, Mundelein, Illinois, 60060, United States",
+      "lat": 42.269016,
+      "lng": -88.0011791,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita",
+      "address": "500 E North Ave, Glendale Heights, Illinois, 60139-3119, United States",
+      "lat": 41.903844,
+      "lng": -88.065929,
+      "country": "US"
+    },
+    {
+      "name": "La Rosita Food Market",
+      "address": "1805 W Algonquin Rd, Mt Prospect, Illinois, 60056-4805, United States",
+      "lat": 42.0372191,
+      "lng": -87.9657702,
+      "country": "US"
+    },
+    {
+      "name": "La Villita",
+      "address": "7540 W 63rd St, Summit Argo, Illinois, 60501-1814, United States",
+      "lat": 41.7773854,
+      "lng": -87.8099112,
+      "country": "US"
+    },
+    {
+      "name": "Lewis",
+      "address": "1600 N Lewis Ave, Waukegan, Illinois, 60085-1762, United States",
+      "lat": 42.3813948,
+      "lng": -87.8563566,
+      "country": "US"
+    },
+    {
+      "name": "Lewis",
+      "address": "2727 Grand Ave, Waukegan, Illinois, 60085-2406, United States",
+      "lat": 42.3699326,
+      "lng": -87.8694072,
+      "country": "US"
+    },
+    {
+      "name": "Lindo Michoacan",
+      "address": "3142 W Lawrence Ave, Chicago, Illinois, 60625-4228, United States",
+      "lat": 41.9687282,
+      "lng": -87.7078726,
+      "country": "US"
+    },
+    {
+      "name": "Meijer Central Illinois",
+      "address": "2401 N Prospect Ave, Champaign, Illinois, 61822, United States",
+      "lat": 40.143913,
+      "lng": -88.26020439999999,
+      "country": "US"
+    },
+    {
+      "name": "Meijer North Chicago",
+      "address": "225 N Weber Rd, Bolingbrook, Illinois, 60490, United States",
+      "lat": 41.7009568,
+      "lng": -88.1276135,
+      "country": "US"
+    },
+    {
+      "name": "Meijer North Chicago",
+      "address": "400 S Randall Rd, Algonquin, Illinois, 60102-9723, United States",
+      "lat": 42.1702865,
+      "lng": -88.3388088,
+      "country": "US"
+    },
+    {
+      "name": "Meijer North Chicago",
+      "address": "808 N Route 59, Aurora, Illinois, 60504-4912, United States",
+      "lat": 41.7824225,
+      "lng": -88.205556,
+      "country": "US"
+    },
+    {
+      "name": "Meijer North Chicago",
+      "address": "855 Randall Rd, St Charles, Illinois, 60174, United States",
+      "lat": 41.900612,
+      "lng": -88.3436658,
+      "country": "US"
+    },
+    {
+      "name": "Meijer South Chicago",
+      "address": "15701 S 71st Ct, Orland Park, Illinois, 60462-6800, United States",
+      "lat": 41.604722,
+      "lng": -87.7908489,
+      "country": "US"
+    },
+    {
+      "name": "Morelia Supermercado",
+      "address": "4833 W Diversey Ave, Chicago, Illinois, 60639-1703, United States",
+      "lat": 41.9311902,
+      "lng": -87.7478057,
+      "country": "US"
+    },
+    {
+      "name": "Petes Fresh Market",
+      "address": "2526 W Cermak Rd, Chicago, Illinois, 60608-3710, United States",
+      "lat": 41.8532112,
+      "lng": -87.6893876,
+      "country": "US"
+    },
+    {
+      "name": "Petes Fresh Market",
+      "address": "4300 S Pulaski Rd, Chicago, Illinois, 60632-4009, United States",
+      "lat": 41.8150103,
+      "lng": -87.7243318,
+      "country": "US"
+    },
+    {
+      "name": "Petes Fresh Market",
+      "address": "4700 S Kedzie Ave, Chicago, Illinois, 60632-3002, United States",
+      "lat": 41.8075419,
+      "lng": -87.70527969999999,
+      "country": "US"
+    },
+    {
+      "name": "Petes Fresh Market",
+      "address": "5724 S Kedzie Ave, Chicago, Illinois, 60629-2408, United States",
+      "lat": 41.7888366,
+      "lng": -87.7037905,
+      "country": "US"
+    },
+    {
+      "name": "Rico Fresh",
+      "address": "3552 W Armitage Ave, Chicago, Illinois, 60647-3609, United States",
+      "lat": 41.9175366,
+      "lng": -87.7154955,
+      "country": "US"
+    },
+    {
+      "name": "Rio Valley",
+      "address": "2745 N Mannheim Rd, Franklin Park, Illinois, 60131-2219, United States",
+      "lat": 41.9288621,
+      "lng": -87.88453559999999,
+      "country": "US"
+    },
+    {
+      "name": "Rio Valley",
+      "address": "3307 W 63rd St, Chicago, Illinois, 60629-3316, United States",
+      "lat": 41.7787044,
+      "lng": -87.706294,
+      "country": "US"
+    },
+    {
+      "name": "Riveras Fresh",
+      "address": "3512 E State St, Rockford, Illinois, 61108-1914, United States",
+      "lat": 42.2668335,
+      "lng": -89.0416331,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1012 14th St, North Chicago, Illinois, 60064-1416, United States",
+      "lat": 42.3343296,
+      "lng": -87.8444236,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1055 N Salem Dr, Schaumburg, Illinois, 60194-1331, United States",
+      "lat": 42.04554510000001,
+      "lng": -88.09910029999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "10736 S Ewing Ave, Chicago, Illinois, 60617-6605, United States",
+      "lat": 41.6998438,
+      "lng": -87.5356704,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "109 E 1st Ave, Monmouth, Illinois, 61462-1710, United States",
+      "lat": 40.9109426,
+      "lng": -90.6477594,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "11 W 16th St, Chicago Heights, Illinois, 60411-3422, United States",
+      "lat": 41.5026825,
+      "lng": -87.6412624,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "12 E 33rd Pl, Steger, Illinois, 60475-1181, United States",
+      "lat": 41.4705473,
+      "lng": -87.63494430000002,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1204 Shirland Ave, South Beloit, Illinois, 61080-1255, United States",
+      "lat": 42.4957415,
+      "lng": -89.0531942,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1219 W 4th St, Sterling, Illinois, 61081-3114, United States",
+      "lat": 41.7893236,
+      "lng": -89.7135986,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "12255 Western Ave, Blue Island, Illinois, 60406-1300, United States",
+      "lat": 41.6703239,
+      "lng": -87.6797636,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1314 Meriden St, Mendota, Illinois, 61342-1030, United States",
+      "lat": 41.5556933,
+      "lng": -89.1291356,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "133 W Roosevelt Rd, Villa Park, Illinois, 60181-3518, United States",
+      "lat": 41.85994110000001,
+      "lng": -88.01911609999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "133 W Roosevelt Rd, West Chicago, Illinois, 60185, United States",
+      "lat": 41.8667859,
+      "lng": -88.2055536,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1402 N Illinois Ave, Carbondale, Illinois, 62901-5601, United States",
+      "lat": 37.7424981,
+      "lng": -89.21968269999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1515 Washington St, Waukegan, Illinois, 60085-5346, United States",
+      "lat": 42.3594953,
+      "lng": -87.8501027,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1529 N Cedar Lake Rd, Round Lake, Illinois, 60046-7237, United States",
+      "lat": 42.36384570000001,
+      "lng": -88.0895135,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1580 Bloomingdale Rd, Glendale Heights, Illinois, 60139-2734, United States",
+      "lat": 41.9167225,
+      "lng": -88.08182850000001,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1611 N Baldwin Rd, Palatine, Illinois, 60074-1703, United States",
+      "lat": 42.14026459999999,
+      "lng": -88.0137208,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1711 W Cermak Rd, Chicago, Illinois, 60608-4315, United States",
+      "lat": 41.8517932,
+      "lng": -87.66913219999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "172 Gary Ave, Carol Stream, Illinois, 60188-2093, United States",
+      "lat": 41.9065404,
+      "lng": -88.12116879999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1818 W York House Rd, Waukegan, Illinois, 60087-2377, United States",
+      "lat": 42.41059,
+      "lng": -87.8543275,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1902 S Wolf Rd, Wheeling, Illinois, 60090-6518, United States",
+      "lat": 42.0966309,
+      "lng": -87.9090006,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2009 Washington St, Waukegan, Illinois, 60085-5131, United States",
+      "lat": 42.3594839,
+      "lng": -87.8573608,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2015 Grand Ave, Waukegan, Illinois, 60085-3403, United States",
+      "lat": 42.3700835,
+      "lng": -87.8574692,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "224 W Green St, Bensenville, Illinois, 60106-2494, United States",
+      "lat": 41.9559181,
+      "lng": -87.9436906,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2264 Sheridan Rd, Zion, Illinois, 60099-2329, United States",
+      "lat": 42.45414419999999,
+      "lng": -87.82591339999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "230 Cedar Lake Rd, Round Lake, Illinois, 60073-3204, United States",
+      "lat": 42.3530285,
+      "lng": -88.0936253,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2400 S Hamlin Ave, Chicago, Illinois, 60623-3803, United States",
+      "lat": 41.8478667,
+      "lng": -87.7200457,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "245 W Broadway St, Bradley, Illinois, 60915-2235, United States",
+      "lat": 41.1426023,
+      "lng": -87.8645878,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2500 N Laramie Ave, Chicago, Illinois, 60639, United States",
+      "lat": 41.9261358,
+      "lng": -87.7566897,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2637 S Pulaski Rd, Chicago, Illinois, 60623-4410, United States",
+      "lat": 41.8433525,
+      "lng": -87.72419219999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2701 W North Ave, Chicago, Illinois, 60647-5236, United States",
+      "lat": 41.909844,
+      "lng": -87.69485890000001,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "2853 W Old Higgins Rd, Elk Grove Village, Illinois, 60007-6416, United States",
+      "lat": 42.00549669999999,
+      "lng": -87.93730359999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3 Clock Tower Plz, Elgin, Illinois, 60120-3504, United States",
+      "lat": 42.03528559999999,
+      "lng": -88.25585249999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "302 W North Ave, Villa Park, Illinois, 60181, United States",
+      "lat": 41.9071596,
+      "lng": -87.98747519999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3403 W 26th St, Chicago, Illinois, 60623-4002, United States",
+      "lat": 41.84429189999999,
+      "lng": -87.7103901,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3435 S Archer Ave, Chicago, Illinois, 60608-6836, United States",
+      "lat": 41.8309466,
+      "lng": -87.6761073,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "350 Lake Marian Rd, Carpentersville, Illinois, 60110-2006, United States",
+      "lat": 42.1222668,
+      "lng": -88.2592742,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "365 W Ruby St, Joliet, Illinois, 60435-6256, United States",
+      "lat": 41.5381985,
+      "lng": -88.0909133,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "379 E Cass St, Joliet, Illinois, 60432-2834, United States",
+      "lat": 41.5280805,
+      "lng": -88.0735423,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3821 W 26th St, Chicago, Illinois, 60623-3808, United States",
+      "lat": 41.8440709,
+      "lng": -87.7205171,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "3835 W 26th St, Chicago, Illinois, 60623-3810, United States",
+      "lat": 41.8440722,
+      "lng": -87.7210963,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4135 W 26th St, Chicago, Illinois, 60623-4314, United States",
+      "lat": 41.843963,
+      "lng": -87.7283811,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4401 W Armitage Ave, Chicago, Illinois, 60639-3523, United States",
+      "lat": 41.9169159,
+      "lng": -87.7366943,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "448 Railroad Ave, Moline, Illinois, 61265-1167, United States",
+      "lat": 41.5063591,
+      "lng": -90.5303771,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "451 N Collins St, Joliet, Illinois, 60432-2349, United States",
+      "lat": 41.53288149999999,
+      "lng": -88.0730198,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4605 W Elm St, McHenry, Illinois, 60050-4014, United States",
+      "lat": 42.3475031,
+      "lng": -88.2873066,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "468 Collins St, Joliet, Illinois, 60432-2380, United States",
+      "lat": 41.5333207,
+      "lng": -88.0722536,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "4806 W Belmont Ave, Chicago, Illinois, 60641-5842, United States",
+      "lat": 41.93896530000001,
+      "lng": -87.74730149999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "515 N Cedar Lake Rd, Round Lake, Illinois, 60073-2803, United States",
+      "lat": 42.3583839,
+      "lng": -88.09169659999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "516 Main St, West Chicago, Illinois, 60185-2843, United States",
+      "lat": 41.88149600000001,
+      "lng": -88.19748849999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5220 S Pulaski Rd, Chicago, Illinois, 60632-4222, United States",
+      "lat": 41.7983428,
+      "lng": -87.7248098,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5447 St Charles Rd, Berkeley, Illinois, 60163-1245, United States",
+      "lat": 41.8887225,
+      "lng": -87.9051437,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "5524 W 79th St, Burbank, Illinois, 60459-1302, United States",
+      "lat": 41.7491549,
+      "lng": -87.75917919999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "617 Lake St, Maywood, Illinois, 60153-2551, United States",
+      "lat": 41.8903336,
+      "lng": -87.8413666,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "6509 S Kedzie Ave, Chicago, Illinois, 60629-3430, United States",
+      "lat": 41.7750051,
+      "lng": -87.7028188,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "6623 N Damen Ave, Chicago, Illinois, 60645-5146, United States",
+      "lat": 42.0025266,
+      "lng": -87.67937839999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "710 Foran Ln, Aurora, Illinois, 60506-2709, United States",
+      "lat": 41.7714514,
+      "lng": -88.3384294,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7220 S Cicero Ave, Bedford Park, Illinois, 60629-5815, United States",
+      "lat": 41.7613899,
+      "lng": -87.743088,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "726 Belvidere St, Waukegan, Illinois, 60085-6365, United States",
+      "lat": 42.3526712,
+      "lng": -87.8408845,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7300 N Western Ave, Chicago, Illinois, 60645-1833, United States",
+      "lat": 42.0141409,
+      "lng": -87.6914674,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7307 S Meade Ave, Bedford Park, Illinois, 60638-6122, United States",
+      "lat": 41.7584956,
+      "lng": -87.7719912,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "733 S Jackson St, Waukegan, Illinois, 60085-7355, United States",
+      "lat": 42.3450834,
+      "lng": -87.8445747,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "7354 N Clark St, Chicago, Illinois, 60626-1604, United States",
+      "lat": 42.015403,
+      "lng": -87.6753423,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "755 15th Ave, East Moline, Illinois, 61244-2133, United States",
+      "lat": 41.516237,
+      "lng": -90.4430318,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "802 Theodore St, Crest Hill, Illinois, 60403-5337, United States",
+      "lat": 41.552563,
+      "lng": -88.1022297,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "821 10th St, North Chicago, Illinois, 60064-1206, United States",
+      "lat": 42.34105599999999,
+      "lng": -87.8419004,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "845 1st St, La Salle, Illinois, 61301-2507, United States",
+      "lat": 41.3286026,
+      "lng": -89.0932369,
+      "country": "US"
+    },
+    {
+      "name": "Tony'S Fresh Market",
+      "address": "1700 Lewis Ave, Waukegan, Illinois, 60085-1764, United States",
+      "lat": 42.3835515,
+      "lng": -87.85666359999999,
+      "country": "US"
+    },
+    {
+      "name": "Torres Fresh Market",
+      "address": "124 N 19th Ave, Melrose Park, Illinois, 60160-3703, United States",
+      "lat": 41.8920818,
+      "lng": -87.8569272,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1100 Randall Rd, Elgin, Illinois, 60123-4109, United States",
+      "lat": 42.0037169,
+      "lng": -88.33911239999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1205 S IL-31, Crystal Lake, Illinois, 60014-8213, United States",
+      "lat": 42.2092602,
+      "lng": -88.2832182,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1275 Lake Ave, Woodstock, Illinois, 60098-7415, United States",
+      "lat": 42.2976762,
+      "lng": -88.42296999999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1401 Brook Forest Ave, Shorewood, Illinois, 60404, United States",
+      "lat": 41.542564,
+      "lng": -88.1995646,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "150 Smith Rd, St Charles, Illinois, 60174-5203, United States",
+      "lat": 41.9237276,
+      "lng": -88.2606393,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1730 E Jackson St, Macomb, Illinois, 61455-2531, United States",
+      "lat": 40.4609955,
+      "lng": -90.6414429,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1941 W Morton Ave, Jacksonville, Illinois, 62650-2620, United States",
+      "lat": 39.7198912,
+      "lng": -90.2709931,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2080 W State Route 102, Bourbonnais, Illinois, 60914, United States",
+      "lat": 41.1869814,
+      "lng": -87.9431263,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2552 75th St, Naperville, Illinois, 60564-7572, United States",
+      "lat": 41.7471948,
+      "lng": -88.19812739999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2680 N IL Route 83, Round Lake Beach, Illinois, 60073-4983, United States",
+      "lat": 42.39699030000001,
+      "lng": -88.0690046,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2900 Kirk Rd, Aurora, Illinois, 60502-6015, United States",
+      "lat": 41.8157065,
+      "lng": -88.2831867,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "314 W Army Trail Rd, Bloomingdale, Illinois, 60108-2300, United States",
+      "lat": 41.93660320000001,
+      "lng": -88.1026698,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3320 S Cicero Ave, Cicero, Illinois, 60804-4531, United States",
+      "lat": 41.83095730000001,
+      "lng": -87.74728209999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3930 44th Avenue Dr, Moline, Illinois, 61265-6401, United States",
+      "lat": 41.4698674,
+      "lng": -90.4630396,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4000 IL Route 173, Zion, Illinois, 60099-5107, United States",
+      "lat": 42.4664966,
+      "lng": -87.8675578,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4626 W Diversey Ave, Chicago, Illinois, 60639, United States",
+      "lat": 41.9351176,
+      "lng": -87.7425765,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "505 Riverstone Pkwy, Kankakee, Illinois, 60901-7207, United States",
+      "lat": 41.0805113,
+      "lng": -87.8611073,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "845 Broadmeadow Rd, Rantoul, Illinois, 61866-2119, United States",
+      "lat": 40.3057482,
+      "lng": -88.1788323,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "850 S Barrington Rd, Streamwood, Illinois, 60107-2255, United States",
+      "lat": 42.0152248,
+      "lng": -88.1476048,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8915 N Allen Rd, Peoria, Illinois, 61615-1562, United States",
+      "lat": 40.7957038,
+      "lng": -89.6339912,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9450 Joliet Rd, Hodgkins, Illinois, 60525-4156, United States",
+      "lat": 41.7787067,
+      "lng": -87.8622252,
+      "country": "US"
+    }
+  ]
+}

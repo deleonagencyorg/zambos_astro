@@ -1,0 +1,41 @@
+{
+  "state_code": "SD",
+  "count": 5,
+  "stores": [
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "1025 S Cleveland Ave, Sioux Falls, South Dakota, 57103-2823, United States",
+      "lat": 43.5371443,
+      "lng": -96.69184159999999,
+      "country": "US"
+    },
+    {
+      "name": "SALE OUT LA BODEGA 10-17-2025_Standardized (Gilberto Mar Vite).csv",
+      "address": "905 E 8th St, Sioux Falls, South Dakota, 57103-1603, United States",
+      "lat": 43.54824869999999,
+      "lng": -96.7152358,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "100 Stumer Rd, Rapid City, South Dakota, 57701-6417, United States",
+      "lat": 44.0338752,
+      "lng": -103.2182169,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1201 29th St SE, Watertown, South Dakota, 57201-9179, United States",
+      "lat": 44.8867986,
+      "lng": -97.06988179999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2825 1st Ave, Spearfish, South Dakota, 57783-3261, United States",
+      "lat": 44.4782459,
+      "lng": -103.8096984,
+      "country": "US"
+    }
+  ]
+}

@@ -79,11 +79,13 @@ const availableCategories = ORDER.filter(cat =>
 const featuredRecipes = allRecipes.slice(0, 3);
 ---
 
-<div class="min-h-screen">
+<div class="min-h-screen relative">
+  <!-- Mobile background - full page width and height -->
+  <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat md:hidden -z-10" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgmobileusrecipe.webp');"></div>
   <div class=" ">
     
     <!-- Hero Section with Featured Recipe Carousel -->
-    <section class="pt-12 pb-20 md:pb-32 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgrecipesus.webp');">
+    <section class="pt-12 pb-20 md:pb-32 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgrecipesusnew.webp');">
      <div class="container mx-auto">
        <!-- Title -->
       <div class="mb-8">
@@ -293,10 +295,10 @@ const featuredRecipes = allRecipes.slice(0, 3);
           <p class="text-center text-gray-600">{noRecipesText}</p>
         ) : (
           <>
-            <div class="relative">
+            <div class="relative recipes-carousel-container px-12 sm:px-16 md:px-20">
               <button
                 type="button"
-                class="carousel-grid-prev absolute -left-2 sm:-left-14 md:-left-12 lg:-left-10 top-[45%] sm:top-1/2 z-[60] bg-us-red text-white w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center opacity-100 bg-opacity-100 hover:scale-105 transition-all duration-200 shadow-2xl"
+                class="carousel-grid-prev pointer-events-auto absolute left-0 sm:left-2 md:left-4 top-1/2 z-[70] bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer"
                 style="transform: translateY(-50%);"
                 aria-label="Previous"
               >
@@ -305,7 +307,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
                 </svg>
               </button>
 
-              <div id="recipesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 lg:gap-12 max-w-6xl mx-auto px-12 sm:px-0">
+              <div id="recipesGrid" class="recipes-grid w-full overflow-hidden relative z-10">
                 {allRecipes.map((recipe: Recipe) => (
                   <div class="recipe-card" data-type={normalizeType(recipe)} data-title={recipe.title.toLowerCase()} style="display:none">
                     <RecipeCard
@@ -323,7 +325,7 @@ const featuredRecipes = allRecipes.slice(0, 3);
 
               <button
                 type="button"
-                class="carousel-grid-next absolute -right-2 sm:-right-14 md:-right-12 lg:-right-10 top-[45%] sm:top-1/2 z-[60] bg-us-red text-white w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-xl flex items-center justify-center opacity-100 bg-opacity-100 hover:scale-105 transition-all duration-200 shadow-2xl"
+                class="carousel-grid-next pointer-events-auto absolute right-0 sm:right-2 md:right-4 top-1/2 z-[70] bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer"
                 style="transform: translateY(-50%);"
                 aria-label="Next"
               >
@@ -454,16 +456,27 @@ const featuredRecipes = allRecipes.slice(0, 3);
       const matching = getMatchingCards();
       const itemsPerPage = getItemsPerPage();
       const totalPages = Math.max(1, Math.ceil(matching.length / itemsPerPage));
+      
+      // Asegurar que la página esté en rango válido
       page = Math.max(0, Math.min(page, totalPages - 1));
       currentCarouselPage = page;
 
-      cards.forEach((c) => (c.style.display = 'none'));
+      console.log('[Recipes Carousel] Showing page:', page, 'of', totalPages, 'items per page:', itemsPerPage, 'matching cards:', matching.length);
+
+      // Ocultar todas las cards primero
+      cards.forEach((c) => {
+        c.style.display = 'none';
+        c.style.opacity = '0';
+      });
       
+      // Mostrar solo las cards de la página actual
       const visibleCards = matching.slice(page * itemsPerPage, page * itemsPerPage + itemsPerPage);
       
-      // Animacion para las cards delm carrusel de recipes
+      console.log('[Recipes Carousel] Visible cards:', visibleCards.length);
+      
+      // Animacion para las cards del carousel de recipes
       visibleCards.forEach((c, index) => {
-        c.style.display = '';
+        c.style.display = 'block';
         c.style.opacity = '0';
         c.style.transform = 'translateY(30px)';
         
@@ -474,8 +487,15 @@ const featuredRecipes = allRecipes.slice(0, 3);
         }, index * 100);
       });
 
-      carouselPrevBtns.forEach(btn => { btn.style.opacity = page === 0 ? '0.6' : '1'; });
-      carouselNextBtns.forEach(btn => { btn.style.opacity = page >= totalPages - 1 ? '0.6' : '1'; });
+      // Actualizar estado de los botones
+      carouselPrevBtns.forEach(btn => { 
+        btn.style.opacity = page === 0 ? '0.4' : '1'; 
+        (btn as HTMLButtonElement).disabled = page === 0;
+      });
+      carouselNextBtns.forEach(btn => { 
+        btn.style.opacity = page >= totalPages - 1 ? '0.4' : '1'; 
+        (btn as HTMLButtonElement).disabled = page >= totalPages - 1;
+      });
 
       if (noResultsEl) {
         if (matching.length === 0) {
@@ -517,8 +537,28 @@ const featuredRecipes = allRecipes.slice(0, 3);
       });
     });
 
-    carouselPrevBtns.forEach(btn => btn.addEventListener('click', () => showCarouselPage(currentCarouselPage - 1)));
-    carouselNextBtns.forEach(btn => btn.addEventListener('click', () => showCarouselPage(currentCarouselPage + 1)));
+    // Debug: verificar que se encontraron los botones
+    console.log('[Recipes Carousel] Found prev buttons:', carouselPrevBtns.length);
+    console.log('[Recipes Carousel] Found next buttons:', carouselNextBtns.length);
+    console.log('[Recipes Carousel] Found cards:', cards.length);
+
+    carouselPrevBtns.forEach((btn, index) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('[Recipes Carousel] Prev clicked, current page:', currentCarouselPage);
+        showCarouselPage(currentCarouselPage - 1);
+      });
+    });
+
+    carouselNextBtns.forEach((btn, index) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('[Recipes Carousel] Next clicked, current page:', currentCarouselPage);
+        showCarouselPage(currentCarouselPage + 1);
+      });
+    });
 
     // Initialize default filter
     const defaultBtn = filterButtons.find(b => b.getAttribute('data-filter') === 'all');
@@ -681,5 +721,99 @@ const featuredRecipes = allRecipes.slice(0, 3);
     .recipe-card:hover {
       transform: translateY(-4px) scale(1.01);
     }
+  }
+
+  /* Estilos para el carousel de recetas - Desktop: 2 cards exactas, Mobile: 1 card */
+  .recipes-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .recipes-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .recipes-grid .recipe-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  /* Mobile: 1 card por página con 100% ancho */
+  @media (max-width: 639px) {
+    .recipes-grid {
+      justify-content: center;
+    }
+    
+    .recipes-grid .recipe-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  /* Desktop: siempre 2 cards exactas con gap del 4% */
+  @media (min-width: 640px) {
+    .recipes-grid {
+      gap: 4%;
+    }
+    
+    .recipes-grid .recipe-card {
+      flex: 0 0 48%;
+      max-width: 48%;
+      width: 48%;
+    }
+  }
+
+  /* Mejoras visuales para los botones del carousel */
+  .carousel-grid-prev,
+  .carousel-grid-next {
+    background-color: #B71C1C;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 15px rgba(183, 28, 28, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .carousel-grid-prev:hover,
+  .carousel-grid-next:hover {
+    background-color: #9A1616;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(183, 28, 28, 0.5);
+    cursor: pointer;
+  }
+
+  .carousel-grid-prev:active,
+  .carousel-grid-next:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  .carousel-grid-prev:disabled,
+  .carousel-grid-next:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: translateY(-50%) scale(1);
+  }
+
+  /* Asegurar que las tarjetas se muestren correctamente */
+  .recipe-card {
+    display: block !important;
+  }
+
+  .recipe-card[style*="display:none"] {
+    display: none !important;
   }
 </style>

@@ -1,0 +1,62 @@
+{
+  "state_code": "DE",
+  "count": 8,
+  "stores": [
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "15 Layton Ave, Georgetown, Delaware, 19947-1486, United States",
+      "lat": 38.692192,
+      "lng": -75.384941,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "209 NE Front St, Milford, Delaware, 19963-1431, United States",
+      "lat": 38.9156525,
+      "lng": -75.4253228,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "217 NE Front St, Milford, Delaware, 19963-1431, United States",
+      "lat": 38.9157721,
+      "lng": -75.4251635,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Bank St, Delaware, Ohio, 43015, United States",
+      "lat": 40.2947151,
+      "lng": -83.0523582,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "2809 Northeast Blvd, Wilmington, Delaware, 19802-3703, United States",
+      "lat": 39.7513578,
+      "lng": -75.5265689,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "117 Wilton Blvd, New Castle, Delaware, 19720-3979, United States",
+      "lat": 39.6535369,
+      "lng": -75.6219325,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "36 Jerome Dr, Dover, Delaware, 19901-2300, United States",
+      "lat": 39.2164961,
+      "lng": -75.57042849999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4 College Park Ln, Georgetown, Delaware, 19947-2178, United States",
+      "lat": 38.7026139,
+      "lng": -75.4043992,
+      "country": "US"
+    }
+  ]
+}

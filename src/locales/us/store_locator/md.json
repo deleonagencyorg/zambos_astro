@@ -1,0 +1,1175 @@
+{
+  "state_code": "MD",
+  "count": 167,
+  "stores": [
+    {
+      "name": "Americana Grocery",
+      "address": "4900 Annapolis Rd, Bladensburg, Maryland, 20710, United States",
+      "lat": 38.9401893,
+      "lng": -76.9338076,
+      "country": "US"
+    },
+    {
+      "name": "Annapolis Latino Market",
+      "address": "1927 West St, Annapolis, Maryland, 21401-3930, United States",
+      "lat": 38.9802983,
+      "lng": -76.5269258,
+      "country": "US"
+    },
+    {
+      "name": "Atlantic Supermarket",
+      "address": "7901 New Hampshire Ave, Hyattsville, Maryland, 20783, United States",
+      "lat": 38.9889699,
+      "lng": -76.9856975,
+      "country": "US"
+    },
+    {
+      "name": "Bestway Adelphi",
+      "address": "9145 Riggs Rd, Hyattsville, Maryland, 20783-1635, United States",
+      "lat": 39.0035906,
+      "lng": -76.9696168,
+      "country": "US"
+    },
+    {
+      "name": "Bestway Hamilton",
+      "address": "3511 Hamilton St, Hyattsville, Maryland, 20782-3944, United States",
+      "lat": 38.9538981,
+      "lng": -76.95971519999999,
+      "country": "US"
+    },
+    {
+      "name": "Brito Latino Market",
+      "address": "2015 Lord Baltimore Dr, Windsor Mill, Maryland, 21244-2558, United States",
+      "lat": 39.314425,
+      "lng": -76.7517273,
+      "country": "US"
+    },
+    {
+      "name": "Bueno Market",
+      "address": "2340 University Blvd E, Hyattsville, Maryland, 20783-2600, United States",
+      "lat": 38.9852212,
+      "lng": -76.97015689999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3912 Ironwood Pl, Hyattsville, Maryland, 20785-2310, United States",
+      "lat": 38.9426943,
+      "lng": -76.8614265,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "8795 Darcy Rd, District Heights, Maryland, 20747-2611, United States",
+      "lat": 38.85685429999999,
+      "lng": -76.8549031,
+      "country": "US"
+    },
+    {
+      "name": "Divina Providencia Grocery",
+      "address": "1908 Forest Dr, Annapolis, Maryland, 21401-4340, United States",
+      "lat": 38.9749076,
+      "lng": -76.5261896,
+      "country": "US"
+    },
+    {
+      "name": "El Rancho Grocery",
+      "address": "7430 Annapolis Rd, Hyattsville, Maryland, 20784-2314, United States",
+      "lat": 38.9490112,
+      "lng": -76.8880847,
+      "country": "US"
+    },
+    {
+      "name": "Food Way New C",
+      "address": "8484 Annapolis Rd, New Carrollton, Maryland, 20784-3013, United States",
+      "lat": 38.9586786,
+      "lng": -76.8705647,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "1009 Fairlawn Ave, Laurel, Maryland, 20707-4807, United States",
+      "lat": 39.0967649,
+      "lng": -76.8558309,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "11221 New Hampshire Ave, Silver Spring, Maryland, 20904-2631, United States",
+      "lat": 39.04101319999999,
+      "lng": -76.9888776,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "12028 Cherry Hill Rd, Silver Spring, Maryland, 20904-1985, United States",
+      "lat": 39.05489,
+      "lng": -76.9565645,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "1280 East-West Hwy, Silver Spring, Maryland, 20910-3242, United States",
+      "lat": 38.99134069999999,
+      "lng": -77.03128939999999,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "20044 Goshen Rd, Gaithersburg, Maryland, 20879-1604, United States",
+      "lat": 39.1872658,
+      "lng": -77.1881379,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "5150 Sinclair Ln, Baltimore, Maryland, 21206-5939, United States",
+      "lat": 39.3236018,
+      "lng": -76.5443256,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "6620 Reisterstown Rd, Baltimore, Maryland, 21215-2305, United States",
+      "lat": 39.35510910000001,
+      "lng": -76.70731599999999,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "7200 Cradlerock Way, Columbia, Maryland, 21045-5170, United States",
+      "lat": 39.1864415,
+      "lng": -76.842996,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "8100 Loch Raven Blvd, Towson, Maryland, 21286-8305, United States",
+      "lat": 39.3871214,
+      "lng": -76.57690769999999,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "842 Muddy Branch Rd, Gaithersburg, Maryland, 20878-2780, United States",
+      "lat": 39.1149262,
+      "lng": -77.2177019,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "857 E Fort Ave, Baltimore, Maryland, 21230-5117, United States",
+      "lat": 39.2709179,
+      "lng": -76.6026389,
+      "country": "US"
+    },
+    {
+      "name": "Giant",
+      "address": "8750 Arliss St, Silver Spring, Maryland, 20901-3905, United States",
+      "lat": 38.9994615,
+      "lng": -77.0025564,
+      "country": "US"
+    },
+    {
+      "name": "Global Food",
+      "address": "5470 St Barnabas Rd, Oxon Hill, Maryland, 20745-3622, United States",
+      "lat": 38.8126301,
+      "lng": -76.9625957,
+      "country": "US"
+    },
+    {
+      "name": "Global Food",
+      "address": "6606 Security Blvd, Gwynn Oak, Maryland, 21207, United States",
+      "lat": 39.3134537,
+      "lng": -76.7362674,
+      "country": "US"
+    },
+    {
+      "name": "Global Foods",
+      "address": "13814 Outlet Dr, Silver Spring, Maryland, 20904-4970, United States",
+      "lat": 39.0842094,
+      "lng": -76.94621169999999,
+      "country": "US"
+    },
+    {
+      "name": "H Mart",
+      "address": "12015 Georgia Ave, Silver Spring, Maryland, 20902, United States",
+      "lat": 39.0525331,
+      "lng": -77.0498238,
+      "country": "US"
+    },
+    {
+      "name": "H Mart",
+      "address": "3301 N Ridge Rd, Ellicott City, Maryland, 21043-7500, United States",
+      "lat": 39.2808462,
+      "lng": -76.8164792,
+      "country": "US"
+    },
+    {
+      "name": "H Mart Gairtherburg",
+      "address": "9639 Lost Knife Rd, Gaithersburg, Maryland, 20877-2618, United States",
+      "lat": 39.153513,
+      "lng": -77.19775899999999,
+      "country": "US"
+    },
+    {
+      "name": "H Mart Supermarket",
+      "address": "1063 W Patrick St, Frederick, Maryland, 21702, United States",
+      "lat": 39.41871889999999,
+      "lng": -77.4467116,
+      "country": "US"
+    },
+    {
+      "name": "Hazlo Supermarket",
+      "address": "3800 E Lombard St, Baltimore, Maryland, 21224, United States",
+      "lat": 39.2922085,
+      "lng": -76.5652485,
+      "country": "US"
+    },
+    {
+      "name": "Hillcres Latino Market",
+      "address": "10 Hillcrest Dr, Frederick, Maryland, 21703-6107, United States",
+      "lat": 39.4151773,
+      "lng": -77.4453868,
+      "country": "US"
+    },
+    {
+      "name": "International Market",
+      "address": "1450 W Patrick St, Frederick, Maryland, 21702-3202, United States",
+      "lat": 39.420649,
+      "lng": -77.4654915,
+      "country": "US"
+    },
+    {
+      "name": "Jalapenos Market",
+      "address": "1790 Merritt Blvd, Dundalk, Maryland, 21222-3212, United States",
+      "lat": 39.2678381,
+      "lng": -76.50627829999999,
+      "country": "US"
+    },
+    {
+      "name": "Jumbo Fresh Supermarket",
+      "address": "1205 W Pratt St, Baltimore, Maryland, 21223-2600, United States",
+      "lat": 39.2844553,
+      "lng": -76.6352969,
+      "country": "US"
+    },
+    {
+      "name": "Korean Korner",
+      "address": "12207 Veirs Mill Rd, Silver Spring, Maryland, 20906-4506, United States",
+      "lat": 39.0572966,
+      "lng": -77.08225829999999,
+      "country": "US"
+    },
+    {
+      "name": "La Bendicion Supermarket",
+      "address": "6285 Oxon Hill Rd, Oxon Hill, Maryland, 20745-6012, United States",
+      "lat": 38.803965,
+      "lng": -76.98835609999999,
+      "country": "US"
+    },
+    {
+      "name": "La Bodeguita",
+      "address": "510 E Patapsco Ave, Baltimore, Maryland, 21225-2991, United States",
+      "lat": 39.2368661,
+      "lng": -76.6033499,
+      "country": "US"
+    },
+    {
+      "name": "La Colonia International",
+      "address": "4901 Allentown Rd, Suitland, Maryland, 20746-3926, United States",
+      "lat": 38.8192061,
+      "lng": -76.8916424,
+      "country": "US"
+    },
+    {
+      "name": "La Grande",
+      "address": "5821 Riverdale Rd, Riverdale, Maryland, 20737-2169, United States",
+      "lat": 38.9575968,
+      "lng": -76.9173993,
+      "country": "US"
+    },
+    {
+      "name": "La Mart",
+      "address": "5896 Robert Oliver Pl, Columbia, Maryland, 21045-3736, United States",
+      "lat": 39.2102027,
+      "lng": -76.84504869999999,
+      "country": "US"
+    },
+    {
+      "name": "La Mart",
+      "address": "640 University Blvd E, Silver Spring, Maryland, 20901, United States",
+      "lat": 39.0004781,
+      "lng": -76.99491259999999,
+      "country": "US"
+    },
+    {
+      "name": "La Mart Supermarket",
+      "address": "2159 W Patapsco Ave, Baltimore, Maryland, 21230-2946, United States",
+      "lat": 39.2500378,
+      "lng": -76.6465055,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1 Western Dr, Frederick, Maryland, 21702-3741, United States",
+      "lat": 39.422795,
+      "lng": -77.46907589999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1065 W Patrick St, Frederick, Maryland, 21702-3903, United States",
+      "lat": 39.4181883,
+      "lng": -77.4470422,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1105 University Blvd E, Takoma Park, Maryland, 20912-7444, United States",
+      "lat": 38.9900441,
+      "lng": -76.9903216,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "111 Bowie Rd, Laurel, Maryland, 20707-4631, United States",
+      "lat": 39.0958648,
+      "lng": -76.84768129999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "11218 Georgia Ave, Silver Spring, Maryland, 20902-4668, United States",
+      "lat": 39.0391321,
+      "lng": -77.05149879999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "11417 Georgia Ave, Silver Spring, Maryland, 20902-1906, United States",
+      "lat": 39.0420853,
+      "lng": -77.051329,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "11441 Amherst Ave, Silver Spring, Maryland, 20902-4501, United States",
+      "lat": 39.0428775,
+      "lng": -77.0475092,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1170 W Patrick St, Frederick, Maryland, 21703-3901, United States",
+      "lat": 39.4174928,
+      "lng": -77.4497148,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "11790 Parklawn Dr, Rockville, Maryland, 20852-2533, United States",
+      "lat": 39.0482439,
+      "lng": -77.10238629999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "12 E Diamond Ave, Gaithersburg, Maryland, 20877-3003, United States",
+      "lat": 39.1422097,
+      "lng": -77.1978938,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1201 Dual Hwy, Hagerstown, Maryland, 21740-5994, United States",
+      "lat": 39.6297261,
+      "lng": -77.70146199999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "12214 Veirs Mill Rd, Silver Spring, Maryland, 20906-4505, United States",
+      "lat": 39.0563034,
+      "lng": -77.0840231,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "12335 Georgia Ave, Silver Spring, Maryland, 20906-3647, United States",
+      "lat": 39.0593762,
+      "lng": -77.0499925,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "12611 Wisteria Dr, Germantown, Maryland, 20874-5399, United States",
+      "lat": 39.1707963,
+      "lng": -77.26083129999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13069 Wisteria Dr, Germantown, Maryland, 20874-2621, United States",
+      "lat": 39.17847630000001,
+      "lng": -77.2713622,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13600 Laurel Bowie Rd, Laurel, Maryland, 20708-1562, United States",
+      "lat": 39.0764437,
+      "lng": -76.8503546,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13623 Georgia Ave, Silver Spring, Maryland, 20906-5200, United States",
+      "lat": 39.079429,
+      "lng": -77.072231,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13625 Georgia Ave, Silver Spring, Maryland, 20906-5242, United States",
+      "lat": 39.0799637,
+      "lng": -77.07164639999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "13781 Connecticut Ave, Silver Spring, Maryland, 20906-2916, United States",
+      "lat": 39.0796066,
+      "lng": -77.0787732,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1407 Forest Dr, Annapolis, Maryland, 21403-1445, United States",
+      "lat": 38.9611024,
+      "lng": -76.5112561,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1490 W Patapsco Ave, Baltimore, Maryland, 21230-3400, United States",
+      "lat": 39.2489003,
+      "lng": -76.6388121,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1507 W Patrick St, Frederick, Maryland, 21702-4573, United States",
+      "lat": 39.4238945,
+      "lng": -77.4685156,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1525 University Blvd E, Hyattsville, Maryland, 20783-4621, United States",
+      "lat": 38.9843676,
+      "lng": -76.9821839,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1535 University Blvd E, Hyattsville, Maryland, 20783-4687, United States",
+      "lat": 38.9840233,
+      "lng": -76.981932,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1590 W Patapsco Ave, Baltimore, Maryland, 21230-3420, United States",
+      "lat": 39.2497538,
+      "lng": -76.6411576,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1701 Crain Hwy S, Glen Burnie, Maryland, 21061-5597, United States",
+      "lat": 39.1430361,
+      "lng": -76.6312664,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1786 Merritt Blvd, Dundalk, Maryland, 21222-3212, United States",
+      "lat": 39.2680978,
+      "lng": -76.50619929999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1900 Fairfax Rd, Annapolis, Maryland, 21401-4303, United States",
+      "lat": 38.9741776,
+      "lng": -76.52529340000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "1902 Veirs Mill Rd, Rockville, Maryland, 20851-1821, United States",
+      "lat": 39.0763768,
+      "lng": -77.1171695,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "19609 Frederick Rd, Germantown, Maryland, 20876-1305, United States",
+      "lat": 39.1779732,
+      "lng": -77.2381577,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "20 E Diamond Ave, Gaithersburg, Maryland, 20877-3077, United States",
+      "lat": 39.1423168,
+      "lng": -77.19672469999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2011 Veirs Mill Rd, Rockville, Maryland, 20851-1889, United States",
+      "lat": 39.0747919,
+      "lng": -77.11626129999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "203 S Broadway, Baltimore, Maryland, 21231-2406, United States",
+      "lat": 39.2891126,
+      "lng": -76.5932907,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "221 Muddy Branch Rd, Gaithersburg, Maryland, 20878-3004, United States",
+      "lat": 39.128462,
+      "lng": -77.207768,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "225 North Point Blvd, Baltimore, Maryland, 21224-1852, United States",
+      "lat": 39.2945129,
+      "lng": -76.5230811,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "229 Muddy Branch Rd, Gaithersburg, Maryland, 20878, United States",
+      "lat": 39.1279309,
+      "lng": -77.2060243,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2307 University Blvd W, Silver Spring, Maryland, 20902-4507, United States",
+      "lat": 39.0419781,
+      "lng": -77.0494126,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2340 Maryland Ave, Linthicum Heights, Maryland, 21090, United States",
+      "lat": 39.19920740000001,
+      "lng": -76.6789252,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2400 University Blvd E, Hyattsville, Maryland, 20783-2661, United States",
+      "lat": 38.9849767,
+      "lng": -76.96799659999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "2441 Chillum Rd, Hyattsville, Maryland, 20782-3630, United States",
+      "lat": 38.9512489,
+      "lng": -76.9688967,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "32 N Dundalk Ave, Dundalk, Maryland, 21222-4223, United States",
+      "lat": 39.2595816,
+      "lng": -76.5251205,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3201 Brinkley Rd, Temple Hills, Maryland, 20748-6301, United States",
+      "lat": 38.8035553,
+      "lng": -76.95341379999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3210 Hollins Ferry Rd, Baltimore, Maryland, 21227-1102, United States",
+      "lat": 39.2509247,
+      "lng": -76.64744569999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3248 Hudson St, Baltimore, Maryland, 21224-5036, United States",
+      "lat": 39.2824327,
+      "lng": -76.5701189,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "33 Dalamar St, Gaithersburg, Maryland, 20877-2501, United States",
+      "lat": 39.1455778,
+      "lng": -77.2055154,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3301 Annapolis Rd, Baltimore, Maryland, 21230-3404, United States",
+      "lat": 39.250452,
+      "lng": -76.6386273,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3400 Annapolis Rd, Baltimore, Maryland, 21227-1120, United States",
+      "lat": 39.247343,
+      "lng": -76.6425347,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "365 N Ridge Rd, McHenry, Maryland, 21541-1123, United States",
+      "lat": 39.5570072,
+      "lng": -79.3163604,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3801 Eastern Ave, Mt Rainier, Maryland, 20712-2027, United States",
+      "lat": 38.9369545,
+      "lng": -76.965308,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3831 Bladensburg Rd, Brentwood, Maryland, 20722-1832, United States",
+      "lat": 38.9348135,
+      "lng": -76.94981279999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "3909 Hollins Ferry Rd, Halethorpe, Maryland, 21227-3416, United States",
+      "lat": 39.2423133,
+      "lng": -76.6497258,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "401 N Frederick Ave, Gaithersburg, Maryland, 20877-2453, United States",
+      "lat": 39.1465559,
+      "lng": -77.2031446,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "41 S Highland Ave, Baltimore, Maryland, 21224-2328, United States",
+      "lat": 39.29145219999999,
+      "lng": -76.56906359999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4213 Randolph Rd, Silver Spring, Maryland, 20906-4504, United States",
+      "lat": 39.0574593,
+      "lng": -77.0812582,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4301 Randolph Rd, Silver Spring, Maryland, 20906-4630, United States",
+      "lat": 39.0560072,
+      "lng": -77.08373619999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4315 St Barnabas Rd, Temple Hills, Maryland, 20748-1833, United States",
+      "lat": 38.8302077,
+      "lng": -76.9423454,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4321 Kenilworth Ave, Bladensburg, Maryland, 20710-1213, United States",
+      "lat": 38.9435864,
+      "lng": -76.932234,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "450 Maryland Ave, Pasadena, Maryland, 21122-5414, United States",
+      "lat": 39.0929002,
+      "lng": -76.4708002,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "4600 Cooper Ln, Hyattsville, Maryland, 20784-1327, United States",
+      "lat": 38.9418876,
+      "lng": -76.9035305,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5002 Jackson St, Hyattsville, Maryland, 20781-1046, United States",
+      "lat": 38.9308929,
+      "lng": -76.92977739999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5550 Kenilworth Ave, Riverdale, Maryland, 20737-3106, United States",
+      "lat": 38.957808,
+      "lng": -76.9220818,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5613 Sargent Rd, Hyattsville, Maryland, 20782-2335, United States",
+      "lat": 38.958673,
+      "lng": -76.9856763,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5621 Landover Rd, Hyattsville, Maryland, 20784-1228, United States",
+      "lat": 38.9362247,
+      "lng": -76.9205289,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5701 Fleet St, Baltimore, Maryland, 21224, United States",
+      "lat": 39.2863466,
+      "lng": -76.54800039999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5800 Silver Hill Rd, District Heights, Maryland, 20747-1103, United States",
+      "lat": 38.8554384,
+      "lng": -76.9076676,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5801 Riverdale Rd, Riverdale, Maryland, 20737-2100, United States",
+      "lat": 38.9592527,
+      "lng": -76.91733649999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5840 Allentown Way, Temple Hills, Maryland, 20748-2614, United States",
+      "lat": 38.8011057,
+      "lng": -76.9063601,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5865 Robert Oliver Pl, Columbia, Maryland, 21045-3745, United States",
+      "lat": 39.2105271,
+      "lng": -76.84559899999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "5922 Allentown Way, Temple Hills, Maryland, 20748-2617, United States",
+      "lat": 38.8015159,
+      "lng": -76.905211,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6000 66th Ave, Riverdale, Maryland, 20737-1718, United States",
+      "lat": 38.9601904,
+      "lng": -76.90411820000001,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6300 Columbia Park Rd, Hyattsville, Maryland, 20785-3215, United States",
+      "lat": 38.918923,
+      "lng": -76.8991494,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6406 Baltimore National Pike, Catonsville, Maryland, 21228-3903, United States",
+      "lat": 39.2852849,
+      "lng": -76.7572102,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6422 Baltimore National Pike, Catonsville, Maryland, 21228-3903, United States",
+      "lat": 39.2855952,
+      "lng": -76.75799909999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6490 Dobbin Rd, Columbia, Maryland, 21045-5826, United States",
+      "lat": 39.1928761,
+      "lng": -76.8201741,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6500 Eastern Ave, Baltimore, Maryland, 21224-2900, United States",
+      "lat": 39.2893312,
+      "lng": -76.5358806,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6573 Ager Rd, Hyattsville, Maryland, 20782-1633, United States",
+      "lat": 38.9715834,
+      "lng": -76.9782853,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "6820 Riverdale Rd, Riverdale, Maryland, 20737-1802, United States",
+      "lat": 38.9649845,
+      "lng": -76.89707229999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "706 Crain Hwy N, Glen Burnie, Maryland, 21061-3066, United States",
+      "lat": 39.1751601,
+      "lng": -76.6201513,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "706 University Blvd E, Silver Spring, Maryland, 20903-2937, United States",
+      "lat": 38.9990543,
+      "lng": -76.99459159999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7128 Governor Ritchie Hwy, Glen Burnie, Maryland, 21061, United States",
+      "lat": 39.179776,
+      "lng": -76.6155472,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7454 Annapolis Rd, Hyattsville, Maryland, 20784-2314, United States",
+      "lat": 38.9497897,
+      "lng": -76.88746309999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7645 New Hampshire Ave, Takoma Park, Maryland, 20912-7504, United States",
+      "lat": 38.9871202,
+      "lng": -76.9873027,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7734 Landover Rd, Hyattsville, Maryland, 20785, United States",
+      "lat": 38.92746,
+      "lng": -76.88121079999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "7880 Washington Blvd, Elkridge, Maryland, 21075-6616, United States",
+      "lat": 39.1734161,
+      "lng": -76.7847294,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8000 New Hampshire Ave, Hyattsville, Maryland, 20783-4611, United States",
+      "lat": 38.9912888,
+      "lng": -76.9880227,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8035 Snouffer School Rd, Gaithersburg, Maryland, 20879-4729, United States",
+      "lat": 39.1612346,
+      "lng": -77.1629858,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8401 Annapolis Rd, New Carrollton, Maryland, 20784-3002, United States",
+      "lat": 38.9561793,
+      "lng": -76.86903319999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8411 Snouffer School Rd, Gaithersburg, Maryland, 20879-5500, United States",
+      "lat": 39.167537,
+      "lng": -77.172354,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8525 Baltimore National Pike, Ellicott City, Maryland, 21043-4290, United States",
+      "lat": 39.2838535,
+      "lng": -76.80708179999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8530 Washington Blvd, Jessup, Maryland, 20794-9670, United States",
+      "lat": 39.1483476,
+      "lng": -76.8070959,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8539 Piney Branch Rd, Silver Spring, Maryland, 20901-3920, United States",
+      "lat": 38.9977818,
+      "lng": -77.00101409999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8540 Piney Branch Rd, Silver Spring, Maryland, 20901-3918, United States",
+      "lat": 38.9990788,
+      "lng": -77.0023403,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "860 N Rolling Rd, Catonsville, Maryland, 21228-4136, United States",
+      "lat": 39.2830376,
+      "lng": -76.7548766,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8639 Flower Ave, Takoma Park, Maryland, 20912-6606, United States",
+      "lat": 38.9976723,
+      "lng": -77.0032418,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "8815 Baltimore National Pike, Ellicott City, Maryland, 21043-4154, United States",
+      "lat": 39.2777564,
+      "lng": -76.816744,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "908 Dual Hwy, Hagerstown, Maryland, 21740-5913, United States",
+      "lat": 39.6343681,
+      "lng": -77.70308059999999,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "9108 Rothbury Dr, Montgomery Village, Maryland, 20886-1400, United States",
+      "lat": 39.1847344,
+      "lng": -77.1882131,
+      "country": "US"
+    },
+    {
+      "name": "Listado de Clientes East Coast (Zambos) - clean_Standardized_Christian_Beltran.csv",
+      "address": "Blank Aly, Woodsboro, Maryland, 21798, United States",
+      "lat": 39.5308451,
+      "lng": -77.3143601,
+      "country": "US"
+    },
+    {
+      "name": "Lolos Market",
+      "address": "1002 Taylor Ave, Towson, Maryland, 21286-8312, United States",
+      "lat": 39.3850696,
+      "lng": -76.5750115,
+      "country": "US"
+    },
+    {
+      "name": "Lotte Plaza Silver Sp",
+      "address": "Silver Spring, Maryland, 20904, United States",
+      "lat": 39.0533891,
+      "lng": -76.9758274,
+      "country": "US"
+    },
+    {
+      "name": "Maya Dely And Grocery",
+      "address": "Annapolis Rd, Hyattsville, Maryland, 20784, United States",
+      "lat": 38.9464537,
+      "lng": -76.8942332,
+      "country": "US"
+    },
+    {
+      "name": "Megamart Takoma Park",
+      "address": "1101 University Blvd E, Takoma Park, Maryland, 20912-7444, United States",
+      "lat": 38.9885709,
+      "lng": -76.9891476,
+      "country": "US"
+    },
+    {
+      "name": "Najarros Tienda Latina",
+      "address": "1748 Taylor Ave, Parkville, Maryland, 21234-6110, United States",
+      "lat": 39.3814625,
+      "lng": -76.5590512,
+      "country": "US"
+    },
+    {
+      "name": "Omega Grocery",
+      "address": "222 North Point Blvd, Baltimore, Maryland, 21224-1813, United States",
+      "lat": 39.2959313,
+      "lng": -76.5208061,
+      "country": "US"
+    },
+    {
+      "name": "Save Mart",
+      "address": "1900 Forest Dr, Annapolis, Maryland, 21401-4315, United States",
+      "lat": 38.9744411,
+      "lng": -76.5256844,
+      "country": "US"
+    },
+    {
+      "name": "Super 24 Market",
+      "address": "6240 Washington Blvd, Elkridge, Maryland, 21075-5235, United States",
+      "lat": 39.2094335,
+      "lng": -76.7251196,
+      "country": "US"
+    },
+    {
+      "name": "Super 24 Market",
+      "address": "7705 Quarterfield Rd, Glen Burnie, Maryland, 21061-4427, United States",
+      "lat": 39.1479522,
+      "lng": -76.63848039999999,
+      "country": "US"
+    },
+    {
+      "name": "The Market At Highlandtown",
+      "address": "3801 Eastern Ave, Baltimore, Maryland, 21224-4222, United States",
+      "lat": 39.2860132,
+      "lng": -76.5647042,
+      "country": "US"
+    },
+    {
+      "name": "Tienda Latina Mary",
+      "address": "22 Church Ln, Cockeysville, Maryland, 21030-4972, United States",
+      "lat": 39.4637243,
+      "lng": -76.6377515,
+      "country": "US"
+    },
+    {
+      "name": "Towson Market Mercado Latino",
+      "address": "714 York Rd, Towson, Maryland, 21204-2505, United States",
+      "lat": 39.4045959,
+      "lng": -76.6052569,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11930 Acton Ln, Waldorf, Maryland, 20601-3689, United States",
+      "lat": 38.6391781,
+      "lng": -76.89497879999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "17850 Garland Groh Blvd, Hagerstown, Maryland, 21740-1944, United States",
+      "lat": 39.6581445,
+      "lng": -77.749112,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2399 North Point Blvd, Dundalk, Maryland, 21222-1623, United States",
+      "lat": 39.2856429,
+      "lng": -76.4976089,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2421 Monocacy Blvd, Frederick, Maryland, 21701-3275, United States",
+      "lat": 39.472221,
+      "lng": -77.397993,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2702 N Salisbury Blvd, Salisbury, Maryland, 21801-2143, United States",
+      "lat": 38.4170907,
+      "lng": -75.5695169,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3549 Russett Grn E, Laurel, Maryland, 20724-1810, United States",
+      "lat": 39.098893,
+      "lng": -76.8026556,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3601 Washington Blvd, Halethorpe, Maryland, 21227, United States",
+      "lat": 39.2484595,
+      "lng": -76.6676583,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "407 George Clauss Blvd, Severn, Maryland, 21144, United States",
+      "lat": 39.1464995,
+      "lng": -76.6466801,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6210 Annapolis Rd, Hyattsville, Maryland, 20784-1308, United States",
+      "lat": 38.9395569,
+      "lng": -76.9082566,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6400 Ridge Rd, Sykesville, Maryland, 21784, United States",
+      "lat": 39.3974559,
+      "lng": -76.9340896,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6405 Dobbin Rd, Columbia, Maryland, 21045-4736, United States",
+      "lat": 39.1957835,
+      "lng": -76.8198616,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8118 Perry Hills Rd, Nottingham, Maryland, 21236-3514, United States",
+      "lat": 39.3791546,
+      "lng": -76.5101719,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8730 Liberty Rd, Randallstown, Maryland, 21133, United States",
+      "lat": 39.3661015,
+      "lng": -76.7818005,
+      "country": "US"
+    }
+  ]
+}
