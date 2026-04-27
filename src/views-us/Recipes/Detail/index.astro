@@ -1,10 +1,8 @@
 ---
 // src/views/Recipes/Detail/index.astro
 import './styles.css';
-import RecipesCarousel from '../../../components/recipes/RecipesCarousel.astro';
 import Breadcrumb from '../../../components/common/Breadcrumb/Breadcrumb.astro';
 import LazyImage from '../../../components/common/LazyImage.astro';
-import IngredientsCarousel from '../../../components/recipes/IngredientsCarousel.astro';
 import ShareModal from '../../../components/common/ShareModal.astro';
 import ShareButton from '../../../components/common/ShareButton.astro';
 import Subscription from '../../../components/subscription/index.astro';
@@ -19,7 +17,13 @@ interface RecipeItem {
   servings: number;
   image?: string;
   tags?: string[];
-  product_image?: string;
+  products?: string[];
+}
+
+interface ProductItem {
+  id: string;
+  name: string;
+  image: string;
 }
 
 const { currentLang, recipeId } = Astro.props;
@@ -34,6 +38,10 @@ for (const path in recipeModules) {
     allRecipes.push(mod.default);
   }
 }
+
+// Import products for the current language
+const productsData = await import(`../../../locales/${currentLang}/products.json`);
+const allProducts: ProductItem[] = productsData.default?.items || [];
 
 // Find current recipe
 const recipe = allRecipes.find((item: RecipeItem) => item.id === recipeId);
@@ -54,6 +62,9 @@ const recipesAssets = {
   related_recipes: currentLang === 'es' ? 'Recetas relacionadas' : 'Related recipes'
 };
 
+// Amazon URL for buy button
+const amazonBuyUrl = "https://www.amazon.com/stores/Zambos/Homepage/page/AB6B3C05-CBE2-49FD-8A2C-E5A7B1F57E2D";
+
 function formatTime(minutes: number): string {
   const hours = Math.floor(minutes / 60);
   const mins = minutes % 60;
@@ -68,362 +79,389 @@ function formatTime(minutes: number): string {
       : `${mins}m`;
   }
 }
+
+// Get product info from recipe's products array (first product - position 0)
+const productSlugs = recipe.products || [];
+const firstProductSlug = productSlugs.length > 0 ? productSlugs[0] : null;
+const productData = firstProductSlug ? allProducts.find((p: ProductItem) => p.id === firstProductSlug) : null;
+
+// Use product data from products.json or defaults
+const productName = productData?.name || (currentLang === 'es' ? 'Zambos' : 'Zambos');
+const productImage = productData?.image || 'https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-3d.png';
+const servings = recipe.servings || 4;
 ---
-<div class=" min-h-screen   bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/recetasdetalleus.webp');">
 
+<div class="min-h-screen md:bg-white recipe-detail-container relative">
+   
+  <!-- Mobile background - full page width and height of content -->
+  <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat md:hidden z-0" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgmobileusrecipe.webp');"></div>
+  
+  <!-- ===== HERO SECTION ===== -->
+  <!-- Mobile: Stack vertical | Desktop: Side by side with equal heights -->
+  <section class="relative w-full flex flex-col md:flex-row md:min-h-[600px] lg:min-h-[650px] py-20 md:py-0">
+      <img 
+      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
+      alt="" 
+      class="hidden md:block absolute -bottom-10 left-0 w-screen z-20 pointer-events-none"
+    /> 
+    <!-- Recipe Image - Full width on mobile, narrower on desktop -->
+    <div class="w-full md:w-[42%] lg:w-[100%] relative md:h-[600px] lg:h-[650px] overflow-hidden">
+      {recipe.image && (
+        <img 
+          src={recipe.image} 
+          alt={recipe.title}
+          class="w-full h-full object-cover md:absolute md:inset-0"
+        />
+      )}
+    </div>
+    
+    <!-- Recipe Info - Wider on desktop -->
+    <div class="w-full md:w-[70%] lg:w-[90%] relative flex flex-col justify-center md:h-[600px] lg:h-[650px] md:ml-[-15%] md:px-4 md:px-0 lg:px-20">
+      <!-- Mobile background layer -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgrecipestimeusmobile.webp');"></div>
+      <!-- Desktop background layer -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/detailzambosusrecipe.webp');"></div>
+      
+      <!-- Content layer -->
+      <div class="relative z-10">
 
-  <!-- Main Recipe Card -->
-  <section class="flex  justify-center items-center py-6 sm:py-8 px-2 sm:px-4">
-    <div class=" border-2 bg-us-green border-white/20 rounded-3xl p-4 sm:p-6 md:p-12 w-full max-w-6xl">
-      <div class="flex flex-col md:flex-row gap-8">
+      
+      <div class="p-[6%] md:p-[8%] lg:p-[10%] w-full">
+        <!-- Title - Centered on mobile, left on desktop -->
+        <h1 class="font-bold text-[7vw] md:text-[3.5vw] lg:text-[2.8vw] text-white uppercase mb-[4%] leading-[1.1] text-center md:text-left">
+          {recipe.title}
+        </h1>
         
-        <!-- Left Side - Images -->
-        <div class="w-full md:w-1/2">
-          <!-- Main Image -->
-          <div class="relative rounded-3xl overflow-hidden mb-4">
-            {recipe.image && (
-              <LazyImage
-                src={recipe.image} 
-                alt={recipe.title}
-                class="w-full h-[320px] sm:h-[400px] object-cover"
-                transition:name={`recipe-image-${recipe.id}`}
-              />
-            )}
-            
-            <!-- Tags on image -->
-            <div class="absolute top-4 left-4 flex gap-2">
-              <span class="px-4 py-2 bg-us-red text-white font-bold rounded-full text-xs uppercase">
-                APPETIZER
-              </span>
-              <span class="px-4 py-2 bg-us-red text-white font-bold rounded-full text-xs uppercase">
-                NEW
-              </span>
+        <!-- Description -->
+        <p class="text-white/90 text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] mb-[6%] leading-relaxed text-center md:text-left max-w-full md:max-w-[90%]">
+          {recipe.description || (currentLang === 'es' 
+            ? 'Crujientes dedos de pescado cubiertos con Zambos Ceviche triturados y cítricos frescos. Un platillo dorado ideal para compartir y acompañar con tu salsa favorita.' 
+            : 'Crispy fish fingers coated with crunchy Zambos Ceviche crumbs and fresh citrus flavors. A tasty, golden dish ideal for sharing and pairing with your favorite sauce.')}
+        </p>
+        
+        <!-- Icons Row - Time and Servings -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-[6%] mb-[6%]">
+          <!-- Prep Time -->
+          <div class="flex flex-col items-center text-white">
+            <div class="w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[48px] max-h-[48px] mb-[5%]">
+              <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zambostime.png" alt="Prep time" class="w-full h-full object-contain" />
             </div>
+            <span class="text-[2.8vw] md:text-[0.9vw] uppercase font-semibold opacity-90">{currentLang === 'es' ? 'Prep time' : 'Prep time'}</span>
+            <span class="text-[4vw] md:text-[1.4vw] font-bold">{formatTime(recipe.preparation_time)}</span>
+          </div>
+          
+          <!-- Servings -->
+          <div class="flex flex-col items-center text-white">
+            <div class="w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[48px] max-h-[48px] mb-[5%]">
+              <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zambosportions.png" alt="Servings" class="w-full h-full object-contain" />
+            </div>
+            <span class="text-[2.8vw] md:text-[0.9vw] uppercase font-semibold opacity-90">{currentLang === 'es' ? 'Servings' : 'Servings'}</span>
+            <span class="text-[4vw] md:text-[1.4vw] font-bold">{servings}-{servings + 1} {currentLang === 'es' ? 'portions' : 'portions'}</span>
           </div>
         </div>
-
-        <!-- Right Side - Info -->
-        <div class="w-full md:w-1/2">
-          <!-- Title -->
-          <h1 class="font-title text-xl md:text-2xl font-bold text-white mb-6 uppercase">
-            {recipe.title}
-          </h1>
-
-          <!-- Time & Difficulty -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-            <!-- Time -->
-            <div class="bg-white rounded-2xl p-4">
-              <div class="flex items-center gap-2 text-us-green mb-1">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <span class="text-xs sm:text-sm font-bold uppercase">{currentLang === 'es' ? 'Tiempo' : 'Time'}</span>
-              </div>
-              <p class="text-us-green font-bold">{formatTime(recipe.preparation_time)}</p>
-            </div>
-
-            <!-- Difficulty -->
-            <div class="bg-white rounded-2xl p-4">
-              <div class="flex items-center gap-2 text-us-green mb-1">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                </svg>
-                <span class="text-xs sm:text-sm font-bold uppercase">{currentLang === 'es' ? 'Dificultad' : 'Difficulty'}</span>
-              </div>
-              <p class="text-us-green font-bold">
-                {currentLang === 'es' ? 'Fácil' : 'Easy'}
-              </p>
-            </div>
-          </div>
-
-          <!-- Tab Buttons -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
-            <button 
-              id="ingredientsTab"
-              class="tab-btn tab-active bg-us-red text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:opacity-90 transition text-sm sm:text-base"
-            >
-              {recipesAssets.recipes}
-            </button>
-            <button 
-              id="preparationTab"
-              class="tab-btn tab-inactive bg-white text-us-green border-2 border-us-green font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl uppercase hover:bg-gray-100 transition text-sm sm:text-base"
-            >
-              {recipesAssets.preparation}
-            </button>
-          </div>
-
-          <!-- Content Area -->
-          <div class="bg-white rounded-2xl p-4 sm:p-6 mb-6 min-h-[200px]">
-            <!-- Ingredients Content -->
-            <div id="ingredientsContent" class="tab-content">
-              <ul class="space-y-3">
-                {recipe.ingredients.map((ingredient: string) => (
-                  <li class="flex items-start gap-3">
-                    <span class="text-us-green mt-1">•</span>
-                    <span class="text-us-green">{ingredient}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <!-- Preparation Content -->
-            <div id="preparationContent" class="tab-content hidden">
-              <ol class="space-y-4">
-                {recipe.instructions.map((instruction: string, index: number) => (
-                  <li class="flex items-start gap-3">
-                    <span class="font-bold text-us-green">{index + 1}.</span>
-                    <span class="text-us-green">{instruction}</span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-          </div>
-
-          <!-- Social Buttons -->
-          <div class="flex gap-3">
-            <div class="bg-us-red rounded-full w-12 h-12 flex items-center justify-center hover:opacity-90 transition shadow-md">
-              <ShareButton platform="instagram" url={canonicalShareUrl} className="w-6 h-6 text-white [&_svg]:fill-white [&_svg]:stroke-white" />
-            </div>
-            <div class="bg-us-red rounded-full w-12 h-12 flex items-center justify-center hover:opacity-90 transition shadow-md">
-              <ShareButton platform="facebook" url={canonicalShareUrl} className="w-6 h-6 text-white [&_svg]:fill-white [&_svg]:stroke-white" />
-            </div>
-            <div class="bg-us-red rounded-full w-12 h-12 flex items-center justify-center hover:opacity-90 transition shadow-md">
-              <ShareButton platform="tiktok" url={canonicalShareUrl} className="w-6 h-6 text-white [&_svg]:fill-white [&_svg]:stroke-white" />
-            </div>
-          </div>
+        
+        <!-- Social Share Icons - Light green rounded squares -->
+        <div class="flex justify-center md:justify-start gap-[3%]">
+          <button 
+            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            aria-label="Share on Instagram"
+            onclick="window.open('https://instagram.com', '_blank')"
+          >
+            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </button>
+          <button 
+            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            aria-label="Share on Facebook"
+            onclick="window.open('https://facebook.com', '_blank')"
+          >
+            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </button>
+          <button 
+            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            aria-label="Share Recipe"
+            onclick="document.getElementById('shareModal-recipe')?.classList.remove('hidden')"
+          >
+            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <circle cx="18" cy="5" r="3"/>
+              <circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </button>
+          <button 
+            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            aria-label="Copy Link"
+            onclick="navigator.clipboard.writeText(window.location.href)"
+          >
+            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- White decorative line - full viewport width at bottom of hero, desktop only -->
+
   </section>
 
-  <!-- Related Recipes Section -->
-  <!-- Explore More Recipes Section -->
-  <section class="py-12 px-4 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bg-explore-more.webp');">
-    <div class="w-full max-w-6xl mx-auto">
-      <!-- Title -->
-      <div class="mb-10">
-        <h2 class="font-us-title font-bold uppercase leading-none">
-          <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-[#A8D648]" style="white-space: nowrap;">
+  <section class="relative w-full pb-[8%] md:pb-[5%] pt-[10%] md:pt-[0]">
+
+    
+    <div class="relative flex flex-col items-center text-center px-[5%]">
+      <!-- Product Package Image - More spacing from top section -->
+      <div class="relative w-[50%] md:w-[30%] lg:w-[25%] max-w-[400px] mb-[3%] z-10 drop-shadow-2xl mt-[5%] md:mt-[3%]">
+        <img 
+          src={productImage} 
+          alt={productName}
+          class="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+      
+      <!-- Made With Text - Red color matching design -->
+      <p class="text-white md:text-[#B71C1C] font-bold text-[4vw] md:text-[1.5vw] lg:text-[1.2vw] uppercase tracking-wider mb-[1%]">
+        {currentLang === 'es' ? 'Hecho con' : 'Made With'}
+      </p>
+      
+      <!-- Product Name - Green color matching design -->
+      <div class="relative inline-block mb-[4%]">
+        <h2 class="text-white md:text-[#0E6D20] font-bold text-[7vw] md:text-[3vw] lg:text-[2.5vw] uppercase leading-tight">
+          {productName}
+        </h2>
+        <!-- Floating chip - desktop only -->
+        <div class="absolute -right-[50%] -top-[20%] w-[20%] md:w-[40%] pointer-events-none animate-float hidden md:block">
+          <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip1zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
+        </div>
+      </div>
+      
+      <!-- Buy Product Button - Red pill with white text -->
+      <a 
+        href={amazonBuyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-[8px] bg-[#B71C1C] text-white font-bold px-[6%] py-[2.5%] md:px-[3%] md:py-[1.2%] rounded-full hover:bg-[#9A1616] transition-all shadow-lg text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] active:scale-95 hover:shadow-xl"
+      >
+        <span class="uppercase tracking-wide">{currentLang === 'es' ? 'COMPRAR PRODUCTO' : 'BUY PRODUCT'}</span>
+        <svg class="w-[4vw] h-[4vw] md:w-[1.2vw] md:h-[1.2vw] max-w-[18px] max-h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+   <section class="w-full py-[8%] md:py-[5%] relative">
+
+    <div class="w-full px-[5%] md:px-[8%] lg:px-[10%] max-w-[1400px] mx-auto">
+      <!-- Mobile: Stack vertical | Desktop: Side by side -->
+      <div class="flex flex-col lg:flex-row gap-[6%]">
+        
+        <!-- Ingredients Column -->
+        <div class="w-full lg:w-[47%] mb-[8%] lg:mb-0">
+          <!-- Red Header Pill -->
+          <div class="flex justify-center lg:justify-start mb-[4%]">
+            <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] md:py-[1.5%] md:px-[4%] rounded-full inline-block">
+              <h2 class="font-bold text-[4vw] md:text-[1.5vw] lg:text-[1.2vw] uppercase tracking-wider whitespace-nowrap">
+                {recipesAssets.recipes}
+              </h2>
+            </div>
+          </div>
+          
+           <!-- Ingredients List with Checkbox Style -->
+          <ul class="space-y-[3%]">
+            {recipe.ingredients.map((ingredient: string) => (
+              <li class="flex items-start gap-[3%] text-[#0E6D20]">
+                <!-- Checkbox square with red border matching design -->
+                <span class="w-[4vw] h-[4vw] md:w-[1.2vw] md:h-[1.2vw] max-w-[16px] max-h-[16px] border-2 border-[#B71C1C] rounded-sm mt-[0.5%] flex-shrink-0 flex items-center justify-center">
+                  <span class="w-[60%] h-[60%] bg-[#B71C1C] rounded-[1px]"></span>
+                </span>
+                <span class="text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] leading-relaxed font-medium">{ingredient}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <!-- Desktop chip below Ingredients -->
+          <div class="hidden lg:block absolute -bottom-[20%] left-[5%] w-[12%]  pointer-events-none animate-float z-20">
+            <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip2zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
+          </div>
+        </div>
+        
+        <!-- Preparation Column -->
+        <div class="w-full lg:w-[47%]">
+          <!-- Red Header Pill -->
+          <div class="flex justify-center lg:justify-start mb-[4%]">
+            <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] md:py-[1.5%] md:px-[4%] rounded-full inline-block">
+              <h2 class="font-bold text-[4vw] md:text-[1.5vw] lg:text-[1.2vw] uppercase tracking-wider whitespace-nowrap">
+                {recipesAssets.preparation}
+              </h2>
+            </div>
+          </div>
+          
+          <!-- Preparation Steps with Styled Numbers -->
+          <ol class="space-y-[4%]">
+            {recipe.instructions.map((instruction: string, index: number) => (
+              <li class="flex items-start gap-[4%]">
+                <!-- Number in green with underline decoration matching design -->
+                <span class="flex-shrink-0 text-[#B71C1C] font-bold text-[4vw] md:text-[1.4vw] lg:text-[1.2vw] leading-none pt-[0.5%]">
+                  {index + 1}.
+                </span>
+                <p class="text-[#0E6D20] text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] leading-relaxed font-medium">{instruction}</p>
+              </li>
+            ))}
+          </ol>
+          
+          <!-- Desktop chip below Preparation -->
+          <div class="hidden lg:block absolute -bottom-[10%] right-[5%] w-[8%]  pointer-events-none animate-float z-20" style="animation-delay: 0.8s;">
+            <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip3zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
+          </div>
+        </div>
+        
+        <!-- Mobile chip below Preparation, right-aligned overlapping Explore More -->
+        <div class="lg:hidden absolute -bottom-[5%] right-[3%] w-[15%] max-w-[80px] pointer-events-none animate-float z-30">
+          <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip1zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
+        </div>
+        
+      </div>
+    </div>
+    
+  </section>
+  
+ <!-- ===== EXPLORE MORE RECIPES SECTION ===== -->
+  <section class="w-full py-[8%] md:py-[5%] bg-cover bg-center bg-no-repeat relative overflow-hidden" >
+    
+
+    
+    
+  </section>
+
+<div class="w-full min-h-screen pt-[10%] md:py-[5%] explore-more-bg relative z-[1]">
+ 
+<div class="w-full px-[5%] md:px-[8%] md:pt-[20%] lg:px-[10%] max-w-[1400px] mx-auto">
+      <!-- Title left-aligned -->
+      <div class="mb-[5%]">
+        <h2 class="font-bold uppercase leading-[1.05]">
+          <span class="block text-[9vw] md:text-[5vw] lg:text-[4vw] text-[#A8D648]">
             {currentLang === 'es' ? 'EXPLORA MÁS' : 'EXPLORE MORE'}
           </span>
-          <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white" style="white-space: nowrap;">
+          <span class="block text-[9vw] md:text-[5vw] lg:text-[4vw] text-white">
             {currentLang === 'es' ? 'RECETAS ZAMBOS' : 'ZAMBOS RECIPES'}
           </span>
         </h2>
       </div>
-
-      <!-- Carousel with White Cards -->
-      <div class="relative explore-carousel-container">
-        <!-- Prev Button -->
-        <button
-          type="button"
-          class="explore-carousel-prev absolute left-0 top-1/2 z-50 bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl"
-          style="transform: translateY(-50%);"
-          aria-label="Previous"
-        >
-          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
-          </svg>
-        </button>
-
-        <!-- Carousel Grid -->
-        <div class="explore-recipes-grid flex gap-4 overflow-hidden px-12 sm:px-16">
-          {relatedRecipes.slice(0, 6).map((recipe) => (
-            <div class="explore-recipe-card flex-shrink-0 w-full sm:w-[calc(50%-8px)]" data-recipe-id={recipe.id}>
-              <a href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`} class="block group h-full">
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02] h-full flex flex-col">
-                  <!-- Image -->
-                  <div class="relative h-48 sm:h-56 overflow-hidden">
-                    <img
-                      src={recipe.image || '/images/recipes/placeholder.jpg'}
-                      alt={recipe.title}
-                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <!-- Content -->
-                  <div class="p-4 flex flex-col flex-1">
-                    <!-- Category Badge -->
-                    <span class="inline-block self-start px-3 py-1 bg-[#0E6D20] text-white font-bold text-xs uppercase rounded-md mb-2">
-                      APPETIZER
-                    </span>
-                    <!-- Title -->
-                    <h3 class="font-bold text-[#0E6D20] text-sm sm:text-base uppercase leading-tight mb-2 flex-1">
-                      {recipe.title}
-                    </h3>
-                    <!-- Description -->
-                    <p class="text-[#B71C1C] text-xs sm:text-sm line-clamp-3">
-                      {recipe.description || (currentLang === 'es' ? 'Deliciosa receta preparada con Zambos.' : 'Delicious recipe prepared with Zambos.')}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
+    <!-- Floating chip decoration - desktop only, absolute left -->
+    <div class="hidden md:block absolute top-[58%] left-[2%] w-[17%] pointer-events-none animate-float z-30">
+      <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip1zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
+    </div>
+      <!-- Carousel Container -->
+      <div class="relative">
+        <!-- Recipe Cards Carousel -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory gap-[4%] pb-[3%] md:pb-0 md:gap-[2%] scrollbar-hide" id="recipeCarousel">
+          {relatedRecipes.slice(0, 6).map((relatedRecipe, index) => (
+            <a 
+              href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${relatedRecipe.id}`}
+              class="group block bg-white rounded-[3vw] md:rounded-[1.5vw] lg:rounded-[1vw] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-[92%] md:w-[48%] snap-start"
+            >
+              <!-- Image -->
+              <div class="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={relatedRecipe.image || '/images/recipes/placeholder.jpg'}
+                  alt={relatedRecipe.title}
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <!-- Content -->
+              <div class="p-[5%] md:p-[4%]">
+                <!-- Category Badge -->
+                <span class="inline-block px-[3%] py-[1%] bg-[#0E6D20] text-white font-bold text-[2.5vw] md:text-[0.8vw] lg:text-[0.7vw] uppercase rounded-md mb-[2%]">
+                  {currentLang === 'es' ? 'APERITIVO' : 'APPETIZER'}
+                </span>
+                <!-- Title -->
+                <h3 class="font-bold text-[#0E6D20] text-[3.5vw] md:text-[1.3vw] lg:text-[1.1vw] uppercase leading-tight mb-[2%]">
+                  {relatedRecipe.title}
+                </h3>
+                <!-- Description -->
+                <p class="text-[#0E6D20]/70 text-[3vw] md:text-[0.9vw] lg:text-[0.8vw] line-clamp-2">
+                  {relatedRecipe.description || (currentLang === 'es' 
+                    ? 'Deliciosa receta preparada con Zambos.' 
+                    : 'Delicious recipe prepared with Zambos.')}
+                </p>
+              </div>
+            </a>
           ))}
         </div>
-
-        <!-- Next Button -->
-        <button
-          type="button"
-          class="explore-carousel-next absolute right-0 top-1/2 z-50 bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl"
-          style="transform: translateY(-50%);"
-          aria-label="Next"
+        
+        <!-- Navigation Arrows - Red square with white icon -->
+        <button 
+          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[50%] md:-translate-x-[80%] w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[40px] max-h-[40px] bg-[#B71C1C] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#9A1616] transition-colors z-30 active:scale-95"
+          onclick="document.getElementById('recipeCarousel').scrollBy({left: -300, behavior: 'smooth'})"
+          aria-label="Previous recipe"
         >
-          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+          <svg class="w-[4vw] h-[4vw] md:w-[1.5vw] md:h-[1.5vw] max-w-[20px] max-h-[20px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button 
+          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[50%] md:translate-x-[80%] w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[40px] max-h-[40px] bg-[#B71C1C] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#9A1616] transition-colors z-30 active:scale-95"
+          onclick="document.getElementById('recipeCarousel').scrollBy({left: 300, behavior: 'smooth'})"
+          aria-label="Next recipe"
+        >
+          <svg class="w-[4vw] h-[4vw] md:w-[1.5vw] md:h-[1.5vw] max-w-[20px] max-h-[20px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
           </svg>
         </button>
       </div>
 
-      <style>
-        .explore-carousel-container {
-          position: relative;
-          width: 100%;
-        }
-
-        .explore-recipes-grid {
-          display: flex;
-          flex-wrap: nowrap;
-          justify-content: flex-start;
-          align-items: stretch;
-        }
-
-        .explore-recipe-card {
-          flex: 0 0 100%;
-          max-width: 100%;
-          transition: all 0.3s ease;
-        }
-
-        /* Mobile: 1 card */
-        @media (max-width: 639px) {
-          .explore-recipe-card {
-            flex: 0 0 100%;
-            max-width: 100%;
-          }
-        }
-
-        /* Desktop: 2 cards */
-        @media (min-width: 640px) {
-          .explore-recipes-grid {
-            gap: 16px;
-          }
-          
-          .explore-recipe-card {
-            flex: 0 0 calc(50% - 8px);
-            max-width: calc(50% - 8px);
-          }
-        }
-
-        .explore-carousel-prev,
-        .explore-carousel-next {
-          cursor: pointer;
-          pointer-events: auto;
-        }
-
-        .explore-carousel-prev:hover,
-        .explore-carousel-next:hover {
-          transform: translateY(-50%) scale(1.1);
-        }
-
-        .explore-carousel-prev:active,
-        .explore-carousel-next:active {
-          transform: translateY(-50%) scale(0.95);
-        }
-      </style>
-
-      <script>
-        (function() {
-          const container = document.querySelector('.explore-carousel-container');
-          if (!container) return;
-
-          const prevBtn = container.querySelector('.explore-carousel-prev');
-          const nextBtn = container.querySelector('.explore-carousel-next');
-          const track = container.querySelector('.explore-recipes-grid');
-          const cards = container.querySelectorAll('.explore-recipe-card');
-
-          if (!prevBtn || !nextBtn || !track || !cards.length) return;
-
-          let currentPage = 0;
-          const itemsPerPage = window.innerWidth < 640 ? 1 : 2;
-          const totalPages = Math.ceil(cards.length / itemsPerPage);
-
-          function showPage(page) {
-            page = Math.max(0, Math.min(page, totalPages - 1));
-            currentPage = page;
-
-            const offset = page * 100;
-            track.style.transform = `translateX(-${offset}%)`;
-
-            // Update button states
-            prevBtn.style.opacity = currentPage === 0 ? '0.4' : '1';
-            nextBtn.style.opacity = currentPage >= totalPages - 1 ? '0.4' : '1';
-          }
-
-          prevBtn.addEventListener('click', () => showPage(currentPage - 1));
-          nextBtn.addEventListener('click', () => showPage(currentPage + 1));
-
-          // Initialize
-          showPage(0);
-
-          // Handle resize
-          window.addEventListener('resize', () => {
-            const newItemsPerPage = window.innerWidth < 640 ? 1 : 2;
-            if (newItemsPerPage !== itemsPerPage) {
-              location.reload();
-            }
-          });
-        })();
-      </script>
-
-      <!-- View All Button -->
-      <div class="flex justify-center mt-8">
-        <a
-          href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}`}
-          class="bg-us-red text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition uppercase"
-        >
-          {currentLang === 'es' ? 'VER TODAS' : 'VIEW ALL'}
-        </a>
+      <!-- Floating chip - mobile only, below carousel, right-aligned -->
+      <div class="flex md:hidden justify-end mt-[4%] pr-[2%]">
+        <div class="w-[18%] max-w-[80px] pointer-events-none animate-float">
+          <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip1zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
+        </div>
       </div>
-  </section>
 
+      <!-- Dots indicator for mobile scroll -->
+      <div class="flex justify-center gap-[2%] mt-[4%] md:hidden">
+        {relatedRecipes.slice(0, 4).map((_, index) => (
+          <div class={`w-[2vw] h-[2vw] max-w-[10px] max-h-[10px] rounded-full ${index === 0 ? 'bg-white' : 'bg-white/40'}`}></div>
+        ))}
+      </div>
+    </div>
+ 
+
+  <!-- ===== ALL NATURAL / IT'S THAT VIBE SECTION ===== -->
+  <section class="w-full relative overflow-hidden">
+    <!-- Container centered with max width -->
+    <div class="w-full md:w-[90%] lg:w-[85%] max-w-[1400px] mx-auto py-[5%]">
+      <!-- Mobile: Stack vertical centered at 80% width | Desktop: Side by side vertically aligned -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-[4%]">
+        <!-- Left Image - All Natural -->
+        <div class="w-[80%] md:w-[38%] relative mx-auto md:mx-0">
+          <img 
+            src="https://snack.yummiespromociones.com/SnacksyummiesAssets/allnaturalus2.webp" 
+            alt="All Natural All Vegan All Plantain"
+            class="w-full h-auto object-cover rounded-[2vw] md:rounded-[1vw]"
+          />
+        </div>
+        <!-- Right Image - It's That Vibe -->
+        <div class="w-[80%] md:w-[28%] relative mt-[4%] md:mt-0 mx-auto md:mx-0">
+          <img 
+            src="https://snack.yummiespromociones.com/SnacksyummiesAssets/itsvibesusrecipes.webp" 
+            alt="It's That Vibe"
+            class="w-full h-auto object-cover rounded-[2vw] md:rounded-[1vw]"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
   
 </div>
 
-<!-- Tab Switching Script -->
-<script>
-  function initRecipeTabs() {
-    const ingredientsTab = document.getElementById('ingredientsTab');
-    const preparationTab = document.getElementById('preparationTab');
-    const ingredientsContent = document.getElementById('ingredientsContent');
-    const preparationContent = document.getElementById('preparationContent');
-
-    if (!ingredientsTab || !preparationTab || !ingredientsContent || !preparationContent) return;
-    if (ingredientsTab.dataset.bound === 'true') return;
-    ingredientsTab.dataset.bound = 'true';
-
-    ingredientsTab.addEventListener('click', () => {
-      ingredientsTab.classList.add('tab-active', 'bg-us-red', 'text-white');
-      ingredientsTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
-      preparationTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
-      preparationTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
-      ingredientsContent.classList.remove('hidden');
-      preparationContent.classList.add('hidden');
-    });
-
-    preparationTab.addEventListener('click', () => {
-      preparationTab.classList.add('tab-active', 'bg-us-red', 'text-white');
-      preparationTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
-      ingredientsTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
-      ingredientsTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
-      preparationContent.classList.remove('hidden');
-      ingredientsContent.classList.add('hidden');
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', initRecipeTabs);
-  document.addEventListener('astro:page-load', initRecipeTabs);
-  document.addEventListener('astro:after-swap', initRecipeTabs);
-</script>
-
 <!-- Share Modal -->
 <ShareModal
   id="shareModal-recipe"
@@ -440,69 +478,75 @@ function formatTime(minutes: number): string {
   acceptTextEn="Accept"
 />
 
-<!-- Ingredients Carousel Script -->
-<script>
-  // Initialize the ingredients carousel if the element exists
-  document.addEventListener('DOMContentLoaded', () => {
-    const ingredientsCarousel = document.querySelector('[data-ingredients-carousel]');
-    if (ingredientsCarousel) {
-      // Add any specific initialization if needed
-      console.log('Ingredients carousel initialized');
+<style>
+  /* Hide scrollbar for horizontal scroll */
+  .snap-x::-webkit-scrollbar {
+    display: none;
+  }
+  .snap-x {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
     }
-  });
-</script>
-
- 
-</div>
-
-<!-- Tab Switching Script -->
-<script>
-  function initRecipeTabs() {
-    const ingredientsTab = document.getElementById('ingredientsTab');
-    const preparationTab = document.getElementById('preparationTab');
-    const ingredientsContent = document.getElementById('ingredientsContent');
-    const preparationContent = document.getElementById('preparationContent');
-
-    if (!ingredientsTab || !preparationTab || !ingredientsContent || !preparationContent) return;
-    if (ingredientsTab.dataset.bound === 'true') return;
-    ingredientsTab.dataset.bound = 'true';
-
-    ingredientsTab.addEventListener('click', () => {
-      ingredientsTab.classList.add('tab-active', 'bg-us-red', 'text-white');
-      ingredientsTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
-      preparationTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
-      preparationTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
-      ingredientsContent.classList.remove('hidden');
-      preparationContent.classList.add('hidden');
-    });
-
-    preparationTab.addEventListener('click', () => {
-      preparationTab.classList.add('tab-active', 'bg-us-red', 'text-white');
-      preparationTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
-      ingredientsTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
-      ingredientsTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
-      preparationContent.classList.remove('hidden');
-      ingredientsContent.classList.add('hidden');
-    });
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Line clamp utility */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Active states for touch devices */
+  @media (hover: none) {
+    button:active, a:active {
+      transform: scale(0.95);
+      transition: transform 0.1s;
+    }
+  }
+  
+  /* Ensure proper aspect ratios */
+  .aspect-\[4\/3\] {
+    aspect-ratio: 4 / 3;
+  }
+  
+  .aspect-\[16\/10\] {
+    aspect-ratio: 16 / 10;
+  }
+  
+  /* Recipe detail container */
+  .recipe-detail-container {
+    overflow-x: hidden;
   }
 
-  document.addEventListener('DOMContentLoaded', initRecipeTabs);
-  document.addEventListener('astro:page-load', initRecipeTabs);
-  document.addEventListener('astro:after-swap', initRecipeTabs);
-</script>
-
-<!-- Share Modal -->
-<ShareModal
-  id="shareModal-recipe"
-  url={canonicalShareUrl}
-  title={recipe.title}
-  description={recipe.description}
-  hashtags={recipe.tags || []}
-  showLabels={false}
-  iconSize={40}
-  round={true}
-  openTextEs="Comparte esta receta en tus redes sociales"
-  openTextEn="Share this recipe on your social networks"
-  acceptTextEs="Aceptar"
-  acceptTextEn="Accept"
-/>
+  /* Explore More background - only on md+ */
+  .explore-more-bg {
+    background-image: none;
+  }
+  @media (min-width: 768px) {
+    .explore-more-bg {
+      background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgitsveganusrecipes.webp');
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+</style>

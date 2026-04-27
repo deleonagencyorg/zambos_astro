@@ -98,7 +98,7 @@
   width: 100%;
   padding: 0.85em 1.4em;
   border: none;
-  border-radius: 2rem;
+  border-radius: 9999px;
   font-size: clamp(0.85rem, 1.4vw, 1rem);
   font-weight: 600;
   background: #ffffff;

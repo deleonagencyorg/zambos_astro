@@ -47,7 +47,6 @@
     "Paso 6: Agrega el repollo encima de los zambos, luego la carne, y termina con el chismol.",
     "Paso 7: Para preparar el aderezo, mezcla todos los ingredientes en un recipiente y sírvelos encima."
   ],
-  "brand": [
-    "zambos"
-  ]
+  "brand": ["zambos"],
+  "products": ["zambos-platano-originales"]
 }

@@ -79,7 +79,9 @@ const availableCategories = ORDER.filter(cat =>
 const featuredRecipes = allRecipes.slice(0, 3);
 ---
 
-<div class="min-h-screen">
+<div class="min-h-screen relative">
+  <!-- Mobile background - full page width and height -->
+  <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat md:hidden -z-10" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgmobileusrecipe.webp');"></div>
   <div class=" ">
     
     <!-- Hero Section with Featured Recipe Carousel -->

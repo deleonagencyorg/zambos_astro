@@ -33,7 +33,6 @@
     "Step 2: In a frying pan, place oil and cook the cake to the desired finish. Place ketchup sauce on one of the bread slices. Add lettuce to taste.",
     "Step 3: Place a portion of Zambos Plantain Originals, on top of the avocado, the meat, the cheese and that\"s it."
   ],
-  "brand": [
-    "zambos"
-  ]
+  "brand": ["zambos"],
+  "products": ["zambos-originals"]
 }
