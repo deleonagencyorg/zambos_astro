@@ -265,6 +265,8 @@ const sortedForCarousel = posts
 </style>
 
 <script>
+  let blogResizeTimeout: number | null = null;
+
   function initBlogCarousel() {
     const carousel = document.getElementById('blogCarousel') as HTMLElement | null;
     const prevBtn = document.getElementById('blogPrevBtn') as HTMLButtonElement | null;
@@ -331,7 +333,7 @@ const sortedForCarousel = posts
       // Show current page cards
       const visibleCards = sorted.slice(page * itemsPerPage, page * itemsPerPage + itemsPerPage);
       visibleCards.forEach((c, index) => {
-        c.style.display = 'block';
+        c.style.display = '';
         c.style.opacity = '0';
         c.style.transform = 'translateY(30px)';
 
@@ -397,10 +399,9 @@ const sortedForCarousel = posts
     });
 
     // Resize handler
-    let resizeTimeout: number | null = null;
     window.addEventListener('resize', () => {
-      if (resizeTimeout) clearTimeout(resizeTimeout);
-      resizeTimeout = window.setTimeout(() => {
+      if (blogResizeTimeout) clearTimeout(blogResizeTimeout);
+      blogResizeTimeout = window.setTimeout(() => {
         showPage(0);
       }, 250);
     });
@@ -419,5 +420,7 @@ const sortedForCarousel = posts
     initBlogCarousel();
   }
   document.addEventListener('astro:page-load', initBlogCarousel);
-  document.addEventListener('astro:after-swap', initBlogCarousel);
+  document.addEventListener('astro:before-swap', () => {
+    if (blogResizeTimeout) clearTimeout(blogResizeTimeout);
+  });
 </script>
