@@ -100,13 +100,13 @@ const sortedForCarousel = posts
       {posts.length === 0 ? (
         <p class="text-white text-center py-12">{noPostsText}</p>
       ) : (
-        <div class="relative blog-carousel-wrapper px-12 sm:px-16 md:px-20">
+        <div class="relative blog-carousel-wrapper overflow-hidden">
           <!-- Prev Arrow -->
           <button
             type="button"
             id="blogPrevBtn"
-            class="absolute left-0 sm:left-2 md:left-4 top-1/2 z-30 bg-white text-[#0E6D20] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer active:scale-95"
-            style="transform: translateY(-50%);"
+            class="absolute left-[12px] sm:left-[14px] md:left-[16px] top-1/2 z-40 bg-white text-[#0E6D20] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer active:scale-95 opacity-50 hover:opacity-100 enabled:opacity-100 disabled:opacity-40"
+            style="transform: translateY(-50%);" 
             aria-label="Previous"
           >
             <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,8 +164,8 @@ const sortedForCarousel = posts
           <button
             type="button"
             id="blogNextBtn"
-            class="absolute right-0 sm:right-2 md:right-4 top-1/2 z-30 bg-white text-[#0E6D20] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer active:scale-95"
-            style="transform: translateY(-50%);"
+            class="absolute right-[12px] sm:right-[14px] md:right-[16px] top-1/2 z-40 bg-white text-[#0E6D20] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer active:scale-95 opacity-50 hover:opacity-100 enabled:opacity-100 disabled:opacity-40"
+            style="transform: translateY(-50%);" 
             aria-label="Next"
           >
             <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -424,3 +424,22 @@ const sortedForCarousel = posts
     if (blogResizeTimeout) clearTimeout(blogResizeTimeout);
   });
 </script>
+
+<style>
+  /* Limit blog carousel to show 2 cards on tablet, 1 on desktop */
+  #blogCarousel {
+    max-width: 100%;
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet: show 2 cards (48% each + 4% gap) */
+    #blogCarousel {
+      width: calc(100% - 4px);
+    }
+  }
+  @media (min-width: 1024px) {
+    /* Desktop: show 1 card (48% width) */
+    #blogCarousel {
+      width: calc(48% + 2%);
+    }
+  }
+</style>

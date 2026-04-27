@@ -359,63 +359,73 @@ const servings = recipe.servings || 4;
     <div class="hidden md:block absolute top-[58%] left-[2%] w-[17%] pointer-events-none animate-float z-30">
       <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip1zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
     </div>
-      <!-- Carousel Container -->
+      <!-- Carousel Container: relative only, buttons anchor here and are never clipped -->
       <div class="relative">
-        <!-- Recipe Cards Carousel -->
-        <div class="flex overflow-x-auto snap-x snap-mandatory gap-0 md:gap-[4%] pb-[3%] md:pb-0 scrollbar-hide" id="recipeCarousel">
-          {relatedRecipes.slice(0, 6).map((relatedRecipe, index) => (
-            <a 
-              href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${relatedRecipe.id}`}
-              class="group block bg-white rounded-[3vw] md:rounded-[1.5vw] lg:rounded-[1vw] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-full md:w-[48%] snap-start"
-            >
-              <!-- Image -->
-              <div class="relative aspect-[16/10] overflow-hidden">
-                <img
-                  src={relatedRecipe.image || '/images/recipes/placeholder.jpg'}
-                  alt={relatedRecipe.title}
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <!-- Content -->
-              <div class="p-[5%] md:p-[4%]">
-                <!-- Category Badge -->
-                <span class="inline-block px-[3%] py-[1%] bg-[#0E6D20] text-white font-bold text-[2.5vw] md:text-[0.8vw] lg:text-[0.7vw] uppercase rounded-md mb-[2%]">
-                  {currentLang === 'es' ? 'APERITIVO' : 'APPETIZER'}
-                </span>
-                <!-- Title -->
-                <h3 class="font-bold text-[#0E6D20] text-[3.5vw] md:text-[1.3vw] lg:text-[1.1vw] uppercase leading-tight mb-[2%]">
-                  {relatedRecipe.title}
-                </h3>
-                <!-- Description -->
-                <p class="text-[#0E6D20]/70 text-[3vw] md:text-[0.9vw] lg:text-[0.8vw] line-clamp-2">
-                  {relatedRecipe.description || (currentLang === 'es' 
-                    ? 'Deliciosa receta preparada con Zambos.' 
-                    : 'Delicious recipe prepared with Zambos.')}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
-        
-        <!-- Navigation Arrows - Red square with white icon -->
+
+        <!-- Prev Button: half outside left edge of inner track -->
         <button 
-          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[50%] md:-translate-x-[80%] w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[40px] max-h-[40px] bg-[#B71C1C] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#9A1616] transition-colors z-30 active:scale-95"
-          onclick="document.getElementById('recipeCarousel').scrollBy({left: -300, behavior: 'smooth'})"
+          id="recipeCarouselPrev"
+          class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[11vw] h-[11vw] md:w-[3.5vw] md:h-[3.5vw] max-w-[48px] max-h-[48px] bg-[#B71C1C] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#9A1616] transition-all duration-300 z-40 active:scale-95 opacity-50 hover:opacity-100 disabled:opacity-30 disabled:hover:bg-[#B71C1C] disabled:cursor-not-allowed"
           aria-label="Previous recipe"
         >
-          <svg class="w-[4vw] h-[4vw] md:w-[1.5vw] md:h-[1.5vw] max-w-[20px] max-h-[20px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+          <svg class="w-[4.5vw] h-[4.5vw] md:w-[1.6vw] md:h-[1.6vw] max-w-[22px] max-h-[22px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
           </svg>
         </button>
+
+        <!-- Next Button: half outside right edge of inner track -->
         <button 
-          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[50%] md:translate-x-[80%] w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[40px] max-h-[40px] bg-[#B71C1C] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#9A1616] transition-colors z-30 active:scale-95"
-          onclick="document.getElementById('recipeCarousel').scrollBy({left: 300, behavior: 'smooth'})"
+          id="recipeCarouselNext"
+          class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-[11vw] h-[11vw] md:w-[3.5vw] md:h-[3.5vw] max-w-[48px] max-h-[48px] bg-[#B71C1C] rounded-lg flex items-center justify-center shadow-lg hover:bg-[#9A1616] transition-all duration-300 z-40 active:scale-95 opacity-50 hover:opacity-100 disabled:opacity-30 disabled:hover:bg-[#B71C1C] disabled:cursor-not-allowed"
           aria-label="Next recipe"
         >
-          <svg class="w-[4vw] h-[4vw] md:w-[1.5vw] md:h-[1.5vw] max-w-[20px] max-h-[20px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+          <svg class="w-[4.5vw] h-[4.5vw] md:w-[1.6vw] md:h-[1.6vw] max-w-[22px] max-h-[22px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
           </svg>
         </button>
+
+        <!-- Inner clip: overflow-hidden stops 3rd card from peeking, buttons live OUTSIDE this -->
+        <div class="overflow-hidden">
+          <!-- Scroll track: gap-[4%] + cards w-[48%] each = 100% exact (2 visible) -->
+          <div
+            id="recipeCarousel"
+            class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-[4%] pb-[3%] md:pb-0"
+          >
+            {relatedRecipes.slice(0, 6).map((relatedRecipe, index) => (
+              <a
+                href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${relatedRecipe.id}`}
+                class="group block rounded-[3vw] md:rounded-[1.5vw] lg:rounded-[1vw] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex-shrink-0 w-full md:w-[48%] snap-start bg-[#A8D648]"
+              >
+                <!-- Image -->
+                <div class="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={relatedRecipe.image || '/images/recipes/placeholder.jpg'}
+                    alt={relatedRecipe.title}
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <!-- Content -->
+                <div class="p-[6%] md:p-[5%]">
+                  <!-- Category Badge -->
+                  <span class="inline-block px-[4%] py-[1.2%] bg-[#0E6D20] text-white font-bold text-[2.8vw] md:text-[0.8vw] lg:text-[0.7vw] uppercase rounded-md mb-[3%]">
+                    {currentLang === 'es' ? 'APERITIVO' : 'APPETIZER'}
+                  </span>
+                  <!-- Title -->
+                  <h3 class="font-bold text-[#0E6D20] text-[4.2vw] md:text-[1.35vw] lg:text-[1.15vw] uppercase leading-tight mb-[3%]">
+                    {relatedRecipe.title}
+                  </h3>
+                  <!-- Description -->
+                  <p class="text-white text-[3.4vw] md:text-[0.95vw] lg:text-[0.85vw] leading-relaxed line-clamp-4 font-medium">
+                    {relatedRecipe.description || (currentLang === 'es'
+                      ? 'Deliciosa receta preparada con Zambos.'
+                      : 'Delicious recipe prepared with Zambos.')}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
       </div>
 
       <!-- Floating chip - mobile only, below carousel, right-aligned -->
@@ -551,3 +561,44 @@ const servings = recipe.servings || 4;
     }
   }
 </style>
+
+<script>
+  function initRecipeCarouselNav() {
+    const carousel = document.getElementById('recipeCarousel') as HTMLElement | null;
+    const prev = document.getElementById('recipeCarouselPrev') as HTMLButtonElement | null;
+    const next = document.getElementById('recipeCarouselNext') as HTMLButtonElement | null;
+    if (!carousel || !prev || !next) return;
+
+    const carouselEl = carousel;
+    const prevBtn = prev;
+    const nextBtn = next;
+
+    function update() {
+      const maxScrollLeft = carouselEl.scrollWidth - carouselEl.clientWidth;
+      const left = carouselEl.scrollLeft;
+      const atStart = left <= 2;
+      const atEnd = left >= maxScrollLeft - 2;
+      prevBtn.disabled = atStart;
+      nextBtn.disabled = atEnd;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      carouselEl.scrollBy({ left: -carouselEl.clientWidth, behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', () => {
+      carouselEl.scrollBy({ left: carouselEl.clientWidth, behavior: 'smooth' });
+    });
+
+    update();
+    carouselEl.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    document.addEventListener('astro:after-swap', update);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initRecipeCarouselNav);
+  } else {
+    initRecipeCarouselNav();
+  }
+  document.addEventListener('astro:page-load', initRecipeCarouselNav);
+</script>
