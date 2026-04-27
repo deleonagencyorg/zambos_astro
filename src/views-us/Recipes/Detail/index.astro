@@ -91,32 +91,36 @@ const productImage = productData?.image || 'https://snack.yummiespromociones.com
 const servings = recipe.servings || 4;
 ---
 
-<div class="min-h-screen md:bg-white recipe-detail-container relative">
+<div class="min-h-screen lg:bg-white recipe-detail-container relative">
    
-  <!-- Mobile background - full page width and height of content -->
-  <div class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat md:hidden z-0" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgmobileusrecipe4.webp');"></div>
+  <!-- Mobile/tablet background -->
+  <div class="absolute inset-0 w-full h-full lg:hidden z-0 " style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgmobileusrecipe4.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100%;"></div>
   
   <!-- ===== HERO SECTION ===== -->
   <!-- Mobile: Stack vertical | Desktop: Side by side with equal heights -->
-  <section class="relative w-full flex flex-col md:flex-row md:min-h-[800px] -mt-[80px] md:-mt-0 lg:min-h-[920px] py-20 md:py-0">
+  <section class="relative w-full flex flex-col lg:flex-row lg:min-h-[800px] -mt-[80px] lg:-mt-0 xl:min-h-[920px] lg:py-0">
     
-    <!-- Recipe Image - Full width on mobile, narrower on desktop -->
-    <div class="w-full md:w-[42%] lg:w-[60%] relative md:h-[800px] lg:h-[920px] overflow-hidden">
+    <!-- Recipe Image - Full width on mobile/tablet, narrower on desktop -->
+    <div class="w-full lg:w-[42%] xl:w-[60%] relative lg:h-[800px] xl:h-[920px] overflow-hidden">
+      <!-- Mobile/tablet: title overlaid at top of image, centered -->
+      <div class="absolute top-0 left-0 right-0 z-10 lg:hidden px-[8%] pt-[22%] pb-[20%] bg-gradient-to-b from-transparent via-black/60 to-transparent text-center">
+        <h1 class="font-bold text-white text-[5.5vw] uppercase leading-tight drop-shadow-lg">
+          {recipe.title}
+        </h1>
+      </div>
       {recipe.image && (
         <img 
           src={recipe.image} 
           alt={recipe.title}
-          class="w-full h-full object-cover md:absolute md:inset-0"
+          class="w-full h-full object-cover lg:absolute lg:inset-0"
         />
       )}
     </div>
     
-    <!-- Recipe Info - Wider on desktop -->
-    <div class="w-full md:w-[70%] lg:w-[90%] relative flex flex-col justify-center md:h-[800px] lg:h-[920px] md:ml-[-15%] md:px-0 lg:px-20">
-      <!-- Mobile background layer -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden" style=""></div>
+    <!-- Recipe Info - Desktop only (hidden on mobile/tablet) -->
+    <div class="hidden lg:flex lg:w-[70%] xl:w-[90%] relative flex-col justify-center lg:h-[800px] xl:h-[920px] lg:ml-[-15%] lg:px-0 xl:px-20">
       <!-- Desktop background layer -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/detailzambosusrecipe.webp');"></div>
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/detailzambosusrecipe.webp');"></div>
       
       <!-- Content layer -->
       <div class="relative z-10">
@@ -210,16 +214,16 @@ const servings = recipe.servings || 4;
     <img 
       src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
       alt="" 
-      class="hidden md:block absolute bottom-0 left-0 w-full z-20 pointer-events-none"
+      class="hidden lg:block absolute bottom-0 left-0 w-full z-20 pointer-events-none"
     />
 
   </section>
 
-  <section class="relative w-full pb-[8%] md:pb-[5%] pt-[2%] md:pt-[0]">
+  <section class="relative w-full pb-[3%] lg:pb-[5%] pt-[2%] lg:pt-[0]">
     
     <div class="relative flex flex-col items-center text-center px-[5%]">
       <!-- Product Package Image - More spacing from top section -->
-      <div class="relative w-[80%] md:w-[30%] lg:w-[25%] max-w-[400px] mb-[3%] z-30 drop-shadow-2xl mt-[0] md:-mt-[30%] lg:-mt-[16%] mx-auto">
+      <div class="relative w-[85%] lg:w-[30%] xl:w-[25%] max-w-[400px] mb-[3%] z-30 drop-shadow-2xl -mt-[18%] lg:-mt-[30%] xl:-mt-[16%] mx-auto">
         <img 
           src={productImage} 
           alt={productName}
@@ -228,17 +232,17 @@ const servings = recipe.servings || 4;
       </div>
       
       <!-- Made With Text - Red color matching design -->
-      <p class="text-white md:text-[#B71C1C] font-bold text-[4vw] md:text-[1.5vw] lg:text-[1.2vw] uppercase tracking-wider mb-[1%]">
+      <p class="text-white lg:text-[#B71C1C] font-bold text-[4vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.2vw] uppercase tracking-wider mb-[1%]">
         {currentLang === 'es' ? 'Hecho con' : 'Made With'}
       </p>
       
       <!-- Product Name - Green color matching design -->
       <div class="relative inline-block mb-[4%]">
-        <h2 class="text-white md:text-[#0E6D20] font-bold text-[7vw] md:text-[3vw] lg:text-[2.5vw] uppercase leading-tight">
+        <h2 class="text-white lg:text-[#0E6D20] font-bold text-[7vw] md:text-[4vw] lg:text-[3vw] xl:text-[2.5vw] uppercase leading-tight">
           {productName}
         </h2>
         <!-- Floating chip - desktop only -->
-        <div class="absolute -right-[50%] -top-[20%] w-[20%] md:w-[40%] pointer-events-none animate-float hidden md:block">
+        <div class="absolute -right-[50%] -top-[20%] w-[40%] pointer-events-none animate-float hidden lg:block">
           <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/chip1zambosus.webp" alt="" class="w-full h-auto object-contain drop-shadow-lg" />
         </div>
       </div>
@@ -248,16 +252,64 @@ const servings = recipe.servings || 4;
         href={amazonBuyUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-[8px] bg-[#B71C1C] text-white font-bold px-[6%] py-[2.5%] md:px-[3%] md:py-[1.2%] rounded-full hover:bg-[#9A1616] transition-all shadow-lg text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] active:scale-95 hover:shadow-xl"
+        class="inline-flex items-center gap-[6px] bg-[#B71C1C] text-white font-bold px-[6%] py-[2.5%] md:px-[4%] md:py-[1.5%] lg:px-[3%] lg:py-[1.2%] rounded-full hover:bg-[#9A1616] transition-all shadow-lg text-[3.5vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw] active:scale-95 hover:shadow-xl mb-[4%]"
       >
         <span class="uppercase tracking-wide">{currentLang === 'es' ? 'COMPRAR PRODUCTO' : 'BUY PRODUCT'}</span>
-        <svg class="w-[4vw] h-[4vw] md:w-[1.2vw] md:h-[1.2vw] max-w-[18px] max-h-[18px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+        <svg class="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] max-w-[20px] max-h-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/>
         </svg>
       </a>
+
+      <!-- Mobile only: social share icons below buy button -->
+      <div class="flex lg:hidden justify-center gap-[4%] pb-[6%]">
+        <button 
+          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+          aria-label="Share on Instagram"
+          onclick="window.open('https://instagram.com', '_blank')"
+        >
+          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </button>
+        <button 
+          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+          aria-label="Share on Facebook"
+          onclick="window.open('https://facebook.com', '_blank')"
+        >
+          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </button>
+        <button 
+          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+          aria-label="Share Recipe"
+          onclick="document.getElementById('shareModal-recipe')?.classList.remove('hidden')"
+        >
+          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <circle cx="18" cy="5" r="3"/>
+            <circle cx="6" cy="12" r="3"/>
+            <circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+        </button>
+        <button 
+          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+          aria-label="Copy Link"
+          onclick="navigator.clipboard.writeText(window.location.href)"
+        >
+          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+        </button>
+      </div>
+
     </div>
   </section>
-   <section class="w-full py-[8%] md:py-[5%] relative">
+   <section class="w-full pt-[2%] pb-[8%] lg:py-[5%] relative">
 
     <div class="w-full px-[5%] md:px-[8%] lg:px-[10%] max-w-[1400px] mx-auto">
       <!-- Mobile: Stack vertical | Desktop: Side by side -->
@@ -267,8 +319,8 @@ const servings = recipe.servings || 4;
         <div class="w-full lg:w-[47%] mb-[8%] lg:mb-0">
           <!-- Red Header Pill -->
           <div class="flex justify-center lg:justify-start mb-[4%]">
-            <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] md:py-[1.5%] md:px-[4%] rounded-full inline-block">
-              <h2 class="font-bold text-[4vw] md:text-[1.5vw] lg:text-[1.2vw] uppercase tracking-wider whitespace-nowrap">
+            <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] lg:py-[1.5%] lg:px-[4%] rounded-full inline-block">
+              <h2 class="font-bold text-[5.5vw] md:text-[3vw] lg:text-[1.5vw] xl:text-[1.2vw] uppercase tracking-wider whitespace-nowrap text-white">
                 {recipesAssets.recipes}
               </h2>
             </div>
@@ -277,7 +329,7 @@ const servings = recipe.servings || 4;
            <!-- Ingredients List with Checkbox Style -->
           <ul class="space-y-[3%]">
             {recipe.ingredients.map((ingredient: string) => (
-              <li class="flex items-start gap-[3%] text-white md:text-[#0E6D20]">
+              <li class="flex items-start gap-[3%] text-white lg:text-[#0E6D20]">
                 <!-- Checkbox square with red border matching design -->
                 <span class="w-[4vw] h-[4vw] md:w-[1.2vw] md:h-[1.2vw] max-w-[16px] max-h-[16px] border-2 border-[#B71C1C] rounded-sm mt-[0.5%] flex-shrink-0 flex items-center justify-center">
                   <span class="w-[60%] h-[60%] bg-[#B71C1C] rounded-[1px]"></span>
@@ -297,8 +349,8 @@ const servings = recipe.servings || 4;
         <div class="w-full lg:w-[47%]">
           <!-- Red Header Pill -->
           <div class="flex justify-center lg:justify-start mb-[4%]">
-            <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] md:py-[1.5%] md:px-[4%] rounded-full inline-block">
-              <h2 class="font-bold text-[4vw] md:text-[1.5vw] lg:text-[1.2vw] uppercase tracking-wider whitespace-nowrap">
+            <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] lg:py-[1.5%] lg:px-[4%] rounded-full inline-block">
+              <h2 class="font-bold text-[5.5vw] md:text-[3vw] lg:text-[1.5vw] xl:text-[1.2vw] uppercase tracking-wider whitespace-nowrap text-white">
                 {recipesAssets.preparation}
               </h2>
             </div>
@@ -309,10 +361,10 @@ const servings = recipe.servings || 4;
             {recipe.instructions.map((instruction: string, index: number) => (
               <li class="flex items-start gap-[4%]">
                 <!-- Number in green with underline decoration matching design -->
-                <span class="flex-shrink-0 text-white md:text-[#B71C1C] font-bold text-[4vw] md:text-[1.4vw] lg:text-[1.2vw] leading-none pt-[0.5%]">
+                <span class="flex-shrink-0 text-white lg:text-[#B71C1C] font-bold text-[4vw] md:text-[2vw] lg:text-[1.4vw] xl:text-[1.2vw] leading-none pt-[0.5%]">
                   {index + 1}.
                 </span>
-                <p class="text-white md:text-[#0E6D20] text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] leading-relaxed font-medium">{instruction}</p>
+                <p class="text-white lg:text-[#0E6D20] text-[3.5vw] md:text-[1.8vw] lg:text-[1.2vw] xl:text-[1vw] leading-relaxed font-medium">{instruction}</p>
               </li>
             ))}
           </ol>
@@ -341,9 +393,9 @@ const servings = recipe.servings || 4;
     
   </section>
 
-<div class="w-full min-h-screen pt-[10%] md:py-[5%] explore-more-bg relative z-[1]">
+<div class="w-full min-h-screen md:min-h-0 pt-[10%] md:pt-[2%] md:pb-[0] lg:py-[5%] explore-more-bg relative z-[1] -mt-[5%]">
  
-<div class="w-full px-[5%] md:px-[8%] md:pt-[20%] lg:px-[10%] max-w-[1400px] mx-auto">
+<div class="w-full px-[5%] md:px-[8%] md:pt-[5%] lg:pt-[20%] lg:px-[10%] max-w-[1400px] mx-auto">
       <!-- Title left-aligned -->
       <div class="mb-[5%]">
         <h2 class="font-bold uppercase leading-[1.05]">
@@ -436,16 +488,24 @@ const servings = recipe.servings || 4;
       </div>
 
       <!-- Dots indicator for mobile scroll -->
-      <div class="flex justify-center gap-[2%] mt-[4%] md:hidden">
+      <div class="flex justify-center gap-[2%] mt-[4%] md:hidden ">
         {relatedRecipes.slice(0, 4).map((_, index) => (
           <div class={`w-[2vw] h-[2vw] max-w-[10px] max-h-[10px] rounded-full ${index === 0 ? 'bg-white' : 'bg-white/40'}`}></div>
         ))}
       </div>
+
     </div>
  
 
+  <!-- White decorative line - tablet only -->
+  <img 
+    src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp" 
+    alt="" 
+    class="hidden md:block lg:hidden w-full pointer-events-none"
+  />
+
   <!-- ===== ALL NATURAL / IT'S THAT VIBE SECTION ===== -->
-  <section class="w-full relative overflow-hidden">
+  <section class="w-full relative overflow-hidden bg-transparent md:bg-white lg:bg-transparent lg:mt-0">
     <!-- Container centered with max width -->
     <div class="w-full md:w-[90%] lg:w-[85%] max-w-[1400px] mx-auto py-[5%]">
       <!-- Mobile: Stack vertical centered at 80% width | Desktop: Side by side vertically aligned -->
@@ -552,13 +612,18 @@ const servings = recipe.servings || 4;
   .explore-more-bg {
     background-image: none;
   }
-  @media (min-width: 768px) {
+
+
+  @media (min-width: 769px) {
     .explore-more-bg {
       background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgitsveganusrecipes.webp');
       background-size: 100% 100%;
       background-position: center;
       background-repeat: no-repeat;
     }
+
+
+  
   }
 </style>
 
