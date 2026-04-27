@@ -294,19 +294,23 @@ const featuredRecipes = availableCategories
           <p class="text-center text-gray-600">{noRecipesText}</p>
         ) : (
           <>
-            <div class="relative recipes-carousel-container px-12 sm:px-16 md:px-20">
-              <button
-                type="button"
-                class="carousel-grid-prev pointer-events-auto absolute left-0 sm:left-2 md:left-4 top-1/2 z-[70] bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer"
-                style="transform: translateY(-50%);"
-                aria-label="Previous"
-              >
-                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
-                </svg>
-              </button>
+            <!-- Outer: relative only — buttons anchor here, never clipped -->
+          <div class="relative recipes-carousel-container">
 
-              <div id="recipesGrid" class="recipes-grid w-full overflow-hidden relative z-10">
+            <!-- Prev Button: half outside left edge -->
+            <button
+              type="button"
+              class="carousel-grid-prev pointer-events-auto absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] bg-[#B71C1C] text-white w-[11vw] h-[11vw] sm:w-12 sm:h-12 max-w-[48px] max-h-[48px] rounded-xl flex items-center justify-center opacity-50 hover:opacity-100 disabled:opacity-30 hover:bg-[#9A1616] transition-all duration-300 shadow-xl cursor-pointer disabled:cursor-not-allowed active:scale-95"
+              aria-label="Previous"
+            >
+              <svg class="w-[4.5vw] h-[4.5vw] sm:w-6 sm:h-6 max-w-[22px] max-h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+
+            <!-- Inner clip: overflow-hidden stops cards from peeking, buttons live OUTSIDE -->
+            <div class="overflow-hidden">
+              <div id="recipesGrid" class="recipes-grid w-full relative z-10">
                 {allRecipes.map((recipe: Recipe) => (
                   <div class="recipe-card" data-type={normalizeType(recipe)} data-title={recipe.title.toLowerCase()} style="display:none">
                     <RecipeCard
@@ -321,18 +325,20 @@ const featuredRecipes = availableCategories
                   </div>
                 ))}
               </div>
-
-              <button
-                type="button"
-                class="carousel-grid-next pointer-events-auto absolute right-0 sm:right-2 md:right-4 top-1/2 z-[70] bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer"
-                style="transform: translateY(-50%);"
-                aria-label="Next"
-              >
-                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
-                </svg>
-              </button>
             </div>
+
+            <!-- Next Button: half outside right edge -->
+            <button
+              type="button"
+              class="carousel-grid-next pointer-events-auto absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-[70] bg-[#B71C1C] text-white w-[11vw] h-[11vw] sm:w-12 sm:h-12 max-w-[48px] max-h-[48px] rounded-xl flex items-center justify-center opacity-50 hover:opacity-100 disabled:opacity-30 hover:bg-[#9A1616] transition-all duration-300 shadow-xl cursor-pointer disabled:cursor-not-allowed active:scale-95"
+              aria-label="Next"
+            >
+              <svg class="w-[4.5vw] h-[4.5vw] sm:w-6 sm:h-6 max-w-[22px] max-h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+              </svg>
+            </button>
+
+          </div>
 
             <div id="noResults" class="hidden mt-8 items-center justify-center h-48">
               <span class="text-gray-700 text-lg md:text-xl font-semibold">{noFilterResultsText}</span>
@@ -654,18 +660,11 @@ const featuredRecipes = availableCategories
   .carousel-grid-prev,
   .carousel-grid-next {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(8px);
   }
 
   .carousel-grid-prev:hover,
   .carousel-grid-next:hover {
-    transform: translateY(-50%) scale(1.1);
     box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.4), 0 10px 10px -5px rgba(239, 68, 68, 0.2);
-  }
-
-  .carousel-grid-prev:active,
-  .carousel-grid-next:active {
-    transform: translateY(-50%) scale(0.95);
   }
 
   #recipesGrid {
@@ -729,10 +728,6 @@ const featuredRecipes = availableCategories
     }
   }
 
-  .carousel-grid-prev[style*="opacity: 1"],
-  .carousel-grid-next[style*="opacity: 1"] {
-    animation: subtlePulse 2s ease-in-out infinite;
-  }
 
   @media (max-width: 767px) {
     #recipesGrid {
@@ -796,36 +791,16 @@ const featuredRecipes = availableCategories
     }
   }
 
-  /* Mejoras visuales para los botones del carousel */
+  /* Botones del carousel — transforms manejados por Tailwind */
   .carousel-grid-prev,
   .carousel-grid-next {
-    background-color: #B71C1C;
-    border-radius: 0.75rem;
     box-shadow: 0 4px 15px rgba(183, 28, 28, 0.4);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    pointer-events: auto;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
 
   .carousel-grid-prev:hover,
   .carousel-grid-next:hover {
-    background-color: #9A1616;
-    transform: translateY(-50%) scale(1.1);
     box-shadow: 0 6px 20px rgba(183, 28, 28, 0.5);
-    cursor: pointer;
-  }
-
-  .carousel-grid-prev:active,
-  .carousel-grid-next:active {
-    transform: translateY(-50%) scale(0.95);
-  }
-
-  .carousel-grid-prev:disabled,
-  .carousel-grid-next:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-    transform: translateY(-50%) scale(1);
   }
 </style>
