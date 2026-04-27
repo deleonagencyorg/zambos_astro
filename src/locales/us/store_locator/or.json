@@ -1,0 +1,69 @@
+{
+  "state_code": "OR",
+  "count": 9,
+  "stores": [
+    {
+      "name": "Folletts Kcd",
+      "address": "E 30th Ave, Eugene, Oregon, 97405-0640, United States",
+      "lat": 44.0241742,
+      "lng": -123.079341,
+      "country": "US"
+    },
+    {
+      "name": "Fred Meyer",
+      "address": "3333 W 11th Ave, Eugene, Oregon, 97402-3053, United States",
+      "lat": 44.0494154,
+      "lng": -123.1422906,
+      "country": "US"
+    },
+    {
+      "name": "USAMEX DISTRIBUTORS",
+      "address": "2233 NE 244th Ave, Wood Village, Oregon, 97060-1069, United States",
+      "lat": 45.539547,
+      "lng": -122.4132705,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1350 N 1st St, Hermiston, Oregon, 97838-1102, United States",
+      "lat": 45.8506274,
+      "lng": -119.2867783,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1940 Turner Rd SE, Salem, Oregon, 97302-2003, United States",
+      "lat": 44.9137448,
+      "lng": -122.9965322,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2659 Olympic St, Springfield, Oregon, 97477-3473, United States",
+      "lat": 44.0571803,
+      "lng": -122.988071,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "300 NW Oak Tree Ln, Redmond, Oregon, 97756-1694, United States",
+      "lat": 44.2920478,
+      "lng": -121.1705992,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7650 NE Shaleen St, Hillsboro, Oregon, 97006-6764, United States",
+      "lat": 45.5157615,
+      "lng": -122.8983737,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "901 Row River Rd, Cottage Grove, Oregon, 97424-9558, United States",
+      "lat": 43.80020649999999,
+      "lng": -123.0432801,
+      "country": "US"
+    }
+  ]
+}

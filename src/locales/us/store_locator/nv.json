@@ -1,0 +1,615 @@
+{
+  "state_code": "NV",
+  "count": 87,
+  "stores": [
+    {
+      "name": "Cardenas Market",
+      "address": "2400 E Bonanza Rd, Las Vegas, Nevada, 89101-3452, United States",
+      "lat": 36.1725071,
+      "lng": -115.1175801,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "2545 S Eastern Ave, Las Vegas, Nevada, 89169-1804, United States",
+      "lat": 36.1435275,
+      "lng": -115.1205759,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "4015 S Buffalo Dr, Las Vegas, Nevada, 89147-7455, United States",
+      "lat": 36.115988,
+      "lng": -115.2626138,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "4421 E Bonanza Rd, Las Vegas, Nevada, 89110-6342, United States",
+      "lat": 36.1722017,
+      "lng": -115.0790336,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "4500 E Tropicana Ave, Las Vegas, Nevada, 89121-6705, United States",
+      "lat": 36.1008737,
+      "lng": -115.0755602,
+      "country": "US"
+    },
+    {
+      "name": "Cardenas Market",
+      "address": "4700 Meadows Ln, Las Vegas, Nevada, 89107-2506, United States",
+      "lat": 36.1714641,
+      "lng": -115.204666,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "1255 S Lamb Blvd, Las Vegas, Nevada, 89104-5526, United States",
+      "lat": 36.1579022,
+      "lng": -115.0820653,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "2021 E Lake Mead Blvd, North Las Vegas, Nevada, 89030-7135, United States",
+      "lat": 36.1946161,
+      "lng": -115.1193405,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "2475 E Tropicana Ave, Las Vegas, Nevada, 89121-5418, United States",
+      "lat": 36.0987897,
+      "lng": -115.1168376,
+      "country": "US"
+    },
+    {
+      "name": "El Super",
+      "address": "4610 W Sahara Ave, Las Vegas, Nevada, 89102-3796, United States",
+      "lat": 36.1454451,
+      "lng": -115.2047559,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "3200 E Cheyenne Ave, North Las Vegas, Nevada, 89030-4228, United States",
+      "lat": 36.2223427,
+      "lng": -115.1056535,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita",
+      "address": "2021 Civic Center Dr, North Las Vegas, Nevada, 89030-6311, United States",
+      "lat": 36.1967941,
+      "lng": -115.120267,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita",
+      "address": "2500 E Desert Inn Rd, Las Vegas, Nevada, 89121-3611, United States",
+      "lat": 36.1308728,
+      "lng": -115.1166535,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita",
+      "address": "2672 N Las Vegas Blvd, North Las Vegas, Nevada, 89030-5809, United States",
+      "lat": 36.2073999,
+      "lng": -115.1076659,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita",
+      "address": "2851 N Green Valley Pkwy, Henderson, Nevada, 89014-0402, United States",
+      "lat": 36.073197,
+      "lng": -115.0832859,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita",
+      "address": "4120 S Rainbow Blvd, Las Vegas, Nevada, 89103-3106, United States",
+      "lat": 36.1131366,
+      "lng": -115.2419316,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita",
+      "address": "6000 W Cheyenne Ave, Las Vegas, Nevada, 89108-4239, United States",
+      "lat": 36.2180888,
+      "lng": -115.2245917,
+      "country": "US"
+    },
+    {
+      "name": "Marianas",
+      "address": "1431 W Sunset Rd, Henderson, Nevada, 89014-6611, United States",
+      "lat": 36.0619006,
+      "lng": -115.0478039,
+      "country": "US"
+    },
+    {
+      "name": "Marianas",
+      "address": "268 N Jones Blvd, Las Vegas, Nevada, 89107-1478, United States",
+      "lat": 36.175945,
+      "lng": -115.2229453,
+      "country": "US"
+    },
+    {
+      "name": "Marianas",
+      "address": "4151 S Eastern Ave, Las Vegas, Nevada, 89119-5427, United States",
+      "lat": 36.1131425,
+      "lng": -115.1204999,
+      "country": "US"
+    },
+    {
+      "name": "Marketon",
+      "address": "3736 E Desert Inn Rd, Las Vegas, Nevada, 89121-3339, United States",
+      "lat": 36.1304363,
+      "lng": -115.0929331,
+      "country": "US"
+    },
+    {
+      "name": "Marketon",
+      "address": "755 N Nellis Blvd, Las Vegas, Nevada, 89110-5385, United States",
+      "lat": 36.176906,
+      "lng": -115.0625354,
+      "country": "US"
+    },
+    {
+      "name": "Marketon",
+      "address": "840 N Decatur Blvd, Las Vegas, Nevada, 89107-1905, United States",
+      "lat": 36.1803067,
+      "lng": -115.2045707,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "1000 N Green Valley Pkwy, Henderson, Nevada, 89074-6170, United States",
+      "lat": 36.0277788,
+      "lng": -115.0847788,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "10100 W Tropicana Ave, Las Vegas, Nevada, 89147-8459, United States",
+      "lat": 36.101598,
+      "lng": -115.3132057,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "10600 Southern Highlands Pkwy, Las Vegas, Nevada, 89141-4368, United States",
+      "lat": 35.9966997,
+      "lng": -115.205786,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "10616 S Eastern Ave, Henderson, Nevada, 89052-2926, United States",
+      "lat": 35.9995306,
+      "lng": -115.102477,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "1421 N Jones Blvd, Las Vegas, Nevada, 89108-1610, United States",
+      "lat": 36.1865577,
+      "lng": -115.2251003,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "2211 N Rampart Blvd, Las Vegas, Nevada, 89128-7640, United States",
+      "lat": 36.2015281,
+      "lng": -115.2834976,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "2255 E Centennial Pkwy, North Las Vegas, Nevada, 89081-5601, United States",
+      "lat": 36.2759857,
+      "lng": -115.1182252,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "2255 Las Vegas Blvd N, North Las Vegas, Nevada, 89030-5840, United States",
+      "lat": 36.2022454,
+      "lng": -115.1218421,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "2385 E Windmill Ln, Las Vegas, Nevada, 89123-2037, United States",
+      "lat": 36.0414508,
+      "lng": -115.1195971,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "2540 S Maryland Pkwy, Las Vegas, Nevada, 89109-1627, United States",
+      "lat": 36.1434822,
+      "lng": -115.1349986,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "3013 W Craig Rd, North Las Vegas, Nevada, 89032-0598, United States",
+      "lat": 36.238559,
+      "lng": -115.1811346,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "3160 N Rainbow Blvd, Las Vegas, Nevada, 89108-4533, United States",
+      "lat": 36.2171685,
+      "lng": -115.2406939,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "3602 E Bonanza Rd, Las Vegas, Nevada, 89110-2161, United States",
+      "lat": 36.1742802,
+      "lng": -115.0955218,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "3850 E Flamingo Rd, Las Vegas, Nevada, 89121-6227, United States",
+      "lat": 36.1164787,
+      "lng": -115.08989,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "4001 S Decatur Blvd, Las Vegas, Nevada, 89103-5800, United States",
+      "lat": 36.1171494,
+      "lng": -115.2092947,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "450 N Nellis Blvd, Las Vegas, Nevada, 89110-5304, United States",
+      "lat": 36.1677412,
+      "lng": -115.0605,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "4600 E Sunset Rd, Henderson, Nevada, 89014-2202, United States",
+      "lat": 36.0712901,
+      "lng": -115.0734461,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "4700 W Ann Rd, North Las Vegas, Nevada, 89031-3463, United States",
+      "lat": 36.2619278,
+      "lng": -115.2053812,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "4840 W Desert Inn Rd, Las Vegas, Nevada, 89102-9125, United States",
+      "lat": 36.1314304,
+      "lng": -115.2064186,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "4965 E Sahara Ave, Las Vegas, Nevada, 89104-6393, United States",
+      "lat": 36.142933,
+      "lng": -115.067053,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "55 S Valle Verde Dr, Henderson, Nevada, 89012-3110, United States",
+      "lat": 36.0253682,
+      "lng": -115.0637434,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "5564 Camino al Norte, North Las Vegas, Nevada, 89031-0810, United States",
+      "lat": 36.2610687,
+      "lng": -115.1538073,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "6130 W Tropicana Ave, Las Vegas, Nevada, 89103-4604, United States",
+      "lat": 36.1015064,
+      "lng": -115.2264167,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "6855 Aliante Pkwy, North Las Vegas, Nevada, 89084-3195, United States",
+      "lat": 36.2849701,
+      "lng": -115.1788602,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "7130 N Durango Dr, Las Vegas, Nevada, 89149-4466, United States",
+      "lat": 36.2907666,
+      "lng": -115.2857958,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "8050 S Rainbow Blvd, Las Vegas, Nevada, 89139-6477, United States",
+      "lat": 36.04167230000001,
+      "lng": -115.2427547,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "8180 S Las Vegas Blvd, Las Vegas, Nevada, 89123-1015, United States",
+      "lat": 36.0403402,
+      "lng": -115.170574,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "830 S Boulder Hwy, Henderson, Nevada, 89015-7521, United States",
+      "lat": 36.0270041,
+      "lng": -114.9658698,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "850 S Rancho Dr, Las Vegas, Nevada, 89106-3810, United States",
+      "lat": 36.1611704,
+      "lng": -115.1744762,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "8555 W Sahara Ave, Las Vegas, Nevada, 89117-1819, United States",
+      "lat": 36.1429704,
+      "lng": -115.2776534,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "9350 W Flamingo Rd, Las Vegas, Nevada, 89147-6414, United States",
+      "lat": 36.1160252,
+      "lng": -115.2963451,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "9750 S Maryland Pkwy, Las Vegas, Nevada, 89183-7119, United States",
+      "lat": 36.0120691,
+      "lng": -115.1341673,
+      "country": "US"
+    },
+    {
+      "name": "Smiths",
+      "address": "9851 W Charleston Blvd, Las Vegas, Nevada, 89117-7516, United States",
+      "lat": 36.1578029,
+      "lng": -115.3122257,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1255 Baring Blvd, Sparks, Nevada, 89434, United States",
+      "lat": 39.5547497,
+      "lng": -119.7221527,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1341 US Highway 395 N, Gardnerville, Nevada, 89410-5301, United States",
+      "lat": 38.9370615,
+      "lng": -119.7393464,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1740 Mountain City Hwy, Elko, Nevada, 89801-2411, United States",
+      "lat": 40.8349906,
+      "lng": -115.7847515,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "175 Lemmon Dr, Reno, Nevada, 89506-6757, United States",
+      "lat": 39.6140814,
+      "lng": -119.8509893,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1855 Wendover Blvd, West Wendover, Nevada, 89883-4981, United States",
+      "lat": 40.7400703,
+      "lng": -114.0776033,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2200 US Highway 50 E, Dayton, Nevada, 89403-7352, United States",
+      "lat": 39.2635111,
+      "lng": -119.5821723,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2255 Las Vegas Blvd S, Las Vegas, Nevada, 89104, United States",
+      "lat": 36.1449626,
+      "lng": -115.1563248,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "350 N Sandhill Blvd, Mesquite, Nevada, 89027-4776, United States",
+      "lat": 36.808343,
+      "lng": -114.062604,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "350 N Sandhill Blvd, Mesquite, Nevada, 89027-4797, United States",
+      "lat": 36.808343,
+      "lng": -114.062604,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4001 S Decatur Blvd, Las Vegas, Nevada, 89103-5860, United States",
+      "lat": 36.1171494,
+      "lng": -115.2092947,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "55 S Valle Verde Dr, Henderson, Nevada, 89012-3433, United States",
+      "lat": 36.0253682,
+      "lng": -115.0637434,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "599 US-50 E, Carson City, Nevada, 89701-4033, United States",
+      "lat": 39.1660992,
+      "lng": -119.7383983,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "601 S NV-160, Pahrump, Nevada, 89048, United States",
+      "lat": 36.2114172,
+      "lng": -115.9863392,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "750 S Meadows Pkwy, Reno, Nevada, 89521-4877, United States",
+      "lat": 39.43733539999999,
+      "lng": -119.756795,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "8525 W Warm Springs Rd, Las Vegas, Nevada, 89113-3625, United States",
+      "lat": 36.054143,
+      "lng": -115.277415,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "9710 W Skye Canyon Park Dr, Las Vegas, Nevada, 89166-6569, United States",
+      "lat": 36.3136187,
+      "lng": -115.3154743,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "Baring Blvd, Sparks, Nevada, 89434-8673, United States",
+      "lat": 39.5564226,
+      "lng": -119.7205178,
+      "country": "US"
+    },
+    {
+      "name": "STORE LIST (cesar flores)_Standardized.csv",
+      "address": "1955 N Nellis Blvd, Las Vegas, Nevada, 89115-3647, United States",
+      "lat": 36.1949165,
+      "lng": -115.0637247,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2425 E 2nd St, Reno, Nevada, 89502-1218, United States",
+      "lat": 39.5288484,
+      "lng": -119.7818779,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2944 Mountain City Hwy, Elko, Nevada, 89801-4495, United States",
+      "lat": 40.8408161,
+      "lng": -115.7925331,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3010 Potato Rd, Winnemucca, Nevada, 89445-3665, United States",
+      "lat": 40.9534815,
+      "lng": -117.7457678,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3950 W Lake Mead Blvd, North Las Vegas, Nevada, 89032-4895, United States",
+      "lat": 36.20103599999999,
+      "lng": -115.1916936,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4505 W Charleston Blvd, Las Vegas, Nevada, 89102-1501, United States",
+      "lat": 36.1560977,
+      "lng": -115.2009532,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5065 Pyramid Way, Sparks, Nevada, 89436-7703, United States",
+      "lat": 39.5840611,
+      "lng": -119.7466126,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5198 Boulder Hwy, Las Vegas, Nevada, 89122-6002, United States",
+      "lat": 36.1085904,
+      "lng": -115.0630947,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5200 S Fort Apache Rd, Las Vegas, Nevada, 89148-1722, United States",
+      "lat": 36.09915489999999,
+      "lng": -115.295797,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "540 Marks St, Henderson, Nevada, 89014-6654, United States",
+      "lat": 36.0600624,
+      "lng": -115.0327051,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5545 Simmons St, North Las Vegas, Nevada, 89031-9005, United States",
+      "lat": 36.260347,
+      "lng": -115.1816559,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5850 W Craig Rd, Las Vegas, Nevada, 89130-2558, United States",
+      "lat": 36.2401748,
+      "lng": -115.2240615,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6464 N Decatur Blvd, Las Vegas, Nevada, 89131-2959, United States",
+      "lat": 36.2776791,
+      "lng": -115.2030912,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6973 Blue Diamond Rd, Las Vegas, Nevada, 89178-9213, United States",
+      "lat": 36.0203958,
+      "lng": -115.2454174,
+      "country": "US"
+    }
+  ]
+}

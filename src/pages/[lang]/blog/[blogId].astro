@@ -14,8 +14,12 @@ export async function getStaticPaths() {
   for (const path in blogModules) {
     const lang = path.split('/')[4];
     if (locales.includes(lang)) {
-      const mod: any = await blogModules[path]();
-      postsByLocale[lang].push(mod.default || mod);
+      try {
+        const mod: any = await blogModules[path]();
+        postsByLocale[lang].push(mod.default || mod);
+      } catch (e) {
+        console.warn(`[Blog Detail] Skipping missing file: ${path}`);
+      }
     }
   }
 

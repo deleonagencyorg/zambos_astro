@@ -1,0 +1,209 @@
+{
+  "state_code": "OK",
+  "count": 29,
+  "stores": [
+    {
+      "name": "LOS COMPAS",
+      "address": "1125 SW 29th St, Oklahoma City, Oklahoma, 73109-2307, United States",
+      "lat": 35.4355604,
+      "lng": -97.53583689999999,
+      "country": "US"
+    },
+    {
+      "name": "LOS COMPAS",
+      "address": "5 E Oklahoma City Blvd, Oklahoma City, Oklahoma, 73129, United States",
+      "lat": 35.4622182,
+      "lng": -97.5131069,
+      "country": "US"
+    },
+    {
+      "name": "LOS COMPAS",
+      "address": "Oklahoma City, Oklahoma, 73109, United States",
+      "lat": 35.4355991,
+      "lng": -97.51930929999999,
+      "country": "US"
+    },
+    {
+      "name": "LOS COMPAS",
+      "address": "Oklahoma City, Oklahoma, 73119, United States",
+      "lat": 35.4213103,
+      "lng": -97.57347829999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "100 SE 74th St, Oklahoma City, Oklahoma, 73149, United States",
+      "lat": 35.3914069,
+      "lng": -97.5103597,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1000 W Shawnee St, Muskogee, Oklahoma, 74401-3509, United States",
+      "lat": 35.7725915,
+      "lng": -95.373131,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1002 NW Sheridan Rd, Lawton, Oklahoma, 73505-5208, United States",
+      "lat": 34.6196437,
+      "lng": -98.424696,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "12101 E 96th St N, Owasso, Oklahoma, 74055-5320, United States",
+      "lat": 36.2948967,
+      "lng": -95.83893529999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "13503 S Santa Fe Ave, Oklahoma City, Oklahoma, 73170-7314, United States",
+      "lat": 35.3329195,
+      "lng": -97.513008,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "19801 Robson Rd, Catoosa, Oklahoma, 74015-1510, United States",
+      "lat": 36.1652811,
+      "lng": -95.7561366,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "200 W Starlite Dr, Kingfisher, Oklahoma, 73750, United States",
+      "lat": 35.8287549,
+      "lng": -97.93666830000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "207 S Memorial Dr, Tulsa, Oklahoma, 74112-2201, United States",
+      "lat": 36.1594226,
+      "lng": -95.8832537,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "220 S Highway 97, Sand Springs, Oklahoma, 74063-6571, United States",
+      "lat": 36.1349479,
+      "lng": -96.1204159,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2217 NW 23rd St, Oklahoma City, Oklahoma, 73107-2403, United States",
+      "lat": 35.4945911,
+      "lng": -97.5505913,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2500 N Main St, Altus, Oklahoma, 73521-1614, United States",
+      "lat": 34.6642273,
+      "lng": -99.3312874,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2600 N Highway 64, Guymon, Oklahoma, 73942, United States",
+      "lat": 36.7057399,
+      "lng": -101.4880489,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3108 N Broadway St, Poteau, Oklahoma, 74953-5410, United States",
+      "lat": 35.0946441,
+      "lng": -94.6284096,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3116 S Garnett Rd, Tulsa, Oklahoma, 74146-1933, United States",
+      "lat": 36.1181361,
+      "lng": -95.8536833,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3215 Williams Ave, Woodward, Oklahoma, 73801-6738, United States",
+      "lat": 36.4123026,
+      "lng": -99.3841676,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3301 SW 104th St, Oklahoma City, Oklahoma, 73159-7043, United States",
+      "lat": 35.3658998,
+      "lng": -97.5768652,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "333 N Interstate Dr, Norman, Oklahoma, 73069, United States",
+      "lat": 35.2216038,
+      "lng": -97.4811198,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3712 W Main St, Durant, Oklahoma, 74701-4529, United States",
+      "lat": 34.0003344,
+      "lng": -96.4133588,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4404 S Peoria Ave, Tulsa, Oklahoma, 74105-3926, United States",
+      "lat": 36.0993175,
+      "lng": -95.9771138,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4420 S Western Ave, Oklahoma City, Oklahoma, 73109-3414, United States",
+      "lat": 35.4216706,
+      "lng": -97.527709,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4900 S Sooner Rd, Oklahoma City, Oklahoma, 73135-5428, United States",
+      "lat": 35.4153809,
+      "lng": -97.4222502,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5401 Tinker Diagonal St, Del City, Oklahoma, 73115, United States",
+      "lat": 35.4483766,
+      "lng": -97.42578830000001,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6100 W Reno Ave, Oklahoma City, Oklahoma, 73127-6507, United States",
+      "lat": 35.4635026,
+      "lng": -97.6226054,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9011 NE 23rd St, Oklahoma City, Oklahoma, 73141-3005, United States",
+      "lat": 35.495863,
+      "lng": -97.3693722,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9411 S Delaware Ave, Tulsa, Oklahoma, 74137-5632, United States",
+      "lat": 36.027652,
+      "lng": -95.947018,
+      "country": "US"
+    }
+  ]
+}

@@ -17,21 +17,8 @@ const { currentLang, headerColorConfig } = Astro.props;
 const socialMedia = t('social_media', { namespace: 'common', locale: currentLang }) as any;
 const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) as any[];
 
-// Reordenar: asegurar que "Blog" esté antes de "Contacto/Contact"
-const orderedMenuItems = (() => {
-  const arr = Array.isArray(menuItems) ? [...menuItems] : [];
-  const isEs = currentLang === 'es';
-  const blogIdx = arr.findIndex(i => (i.text || '').toLowerCase() === 'blog');
-  const contactIdx = arr.findIndex(i => {
-    const txt = (i.text || '').toLowerCase();
-    return txt === (isEs ? 'contacto' : 'contact');
-  });
-  if (blogIdx >= 0 && contactIdx >= 0 && blogIdx > contactIdx) {
-    const [blogItem] = arr.splice(blogIdx, 1);
-    arr.splice(contactIdx, 0, blogItem);
-  }
-  return arr;
-})();
+// Use menu items directly (Blog already removed from JSON)
+const orderedMenuItems = Array.isArray(menuItems) ? [...menuItems] : [];
 
 // Traducciones
 const openMenuLabel = t('menu_labels.open_main_menu', { namespace: 'common', locale: currentLang }) || 'Open main menu';
@@ -116,15 +103,23 @@ const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', l
     )}
 
     {currentLang === 'us' && (
-      <div class="mt-4 flex justify-center">
+      <div class="mt-4 flex flex-col items-center gap-3">
         <a
           href="https://www.amazon.com/stores/Zambos/Homepage/page/AB6B3C05-CBE2-49FD-8A2C-E5A7B1F57E2D?utm_source=Publicidad+Movil&utm_medium=Amazon&utm_campaign=Zambos&utm_term=Standard+Botton"
           target="_blank"
           rel="noopener noreferrer"
-          class="font-title text-xl uppercase font-bold py-2 px-8 rounded-md text-white transition-colors"
-          style="background-color: #dc2626;"
+          class="font-title text-lg uppercase font-bold py-2 px-8 rounded-full text-white transition-colors bg-[#B71C1C] hover:bg-[#9A1616]"
         >
           BUY
+        </a>
+        <a
+          href="tel:+18773064453"
+          class="flex items-center gap-2 bg-white text-[#0E6D20] font-bold py-2 px-6 rounded-full transition-all text-base hover:bg-gray-100"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          1-877-306-4453
         </a>
       </div>
     )}

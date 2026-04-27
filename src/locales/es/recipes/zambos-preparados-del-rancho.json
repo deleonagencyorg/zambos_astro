@@ -40,5 +40,6 @@
     "Paso 3: Agrega la sal, el consomé, la crema y la mayonesa.",
     "Paso 4: Licúa hasta tener una mezcla homogénea. Si está muy espeso agrega un poco de agua."
   ],
-  "brand": ["zambos", "delrancho"]
+  "brand": ["zambos", "delrancho"],
+  "products": ["zambos-platano-con-chicharron-del-rancho"]
 }

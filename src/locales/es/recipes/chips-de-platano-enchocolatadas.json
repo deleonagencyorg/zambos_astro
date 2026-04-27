@@ -24,7 +24,6 @@
     "Paso 4. Rompe los Zambos y déjalos caer en el chocolate. Revuelve y divide la mezcla en partes iguales en el molde para cupcakes.",
     "Paso 5. Deja enfriar en el refrigerador hasta que estén completamente firmes y desmolda."
   ],
-  "brand": [
-    "zambos"
-  ]
+  "brand": ["zambos"],
+  "products": ["zambos-platano-originales"]
 }

@@ -11,7 +11,7 @@
   ],
   "type": "image",
   "category": "snack",
-  "preparation_time": 1440 ,
+  "preparation_time": 1440,
   "ingredients": [
     "1 cebolla blanca en julianas",
     "1 chile dulce en julianas",
@@ -26,5 +26,6 @@
     "Paso 1: Colocar todos los ingredientes en un tazón, luego mezclarlo y dejarlo reposar. (Tiempo estimado de reposo 24 hrs).",
     "Paso 2: Sirva acompañado con Zambos Plátano Salsa Verde"
   ],
-  "brand": ["zambos"]
+  "brand": ["zambos"],
+  "products": ["zambos-platano-salsa-verde"]
 }

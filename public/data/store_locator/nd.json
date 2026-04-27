@@ -1,0 +1,22 @@
+{
+  "state_code": "ND",
+  "count": 2,
+  "stores": [
+    {
+      "name": "Walmart",
+      "address": "4001 2nd Ave W, Williston, North Dakota, 58801-2603, United States",
+      "zip": "58801",
+      "lat": 48.1823808,
+      "lng": -103.6300885,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5755 Gateway Dr, Grand Forks, North Dakota, 58203-1008, United States",
+      "zip": "58203",
+      "lat": 47.9303369,
+      "lng": -97.1133958,
+      "country": "US"
+    }
+  ]
+}

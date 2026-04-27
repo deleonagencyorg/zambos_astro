@@ -1,0 +1,1566 @@
+{
+  "state_code": "NC",
+  "count": 195,
+  "stores": [
+    {
+      "name": "Carniceria El Caporal",
+      "address": "831 Conover Blvd W, Conover, North Carolina, 28613-2919, United States",
+      "zip": "28613",
+      "lat": 35.6933968,
+      "lng": -81.2385884,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1144 Ballina Way, Charlotte, North Carolina, 28214-7156, United States",
+      "zip": "28214",
+      "lat": 35.313227,
+      "lng": -80.9800071,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "1216 Industrial Ave, Gastonia, North Carolina, 28054-4629, United States",
+      "zip": "28054",
+      "lat": 35.2690821,
+      "lng": -81.1612525,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2051 Champagne Dr, Asheboro, North Carolina, 27203-3282, United States",
+      "zip": "27203",
+      "lat": 35.7575516,
+      "lng": -79.8095175,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "2810 Yonkers Rd, Raleigh, North Carolina, 27604-3206, United States",
+      "zip": "27604",
+      "lat": 35.8028129,
+      "lng": -78.59592289999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "321 W College St, Whiteville, North Carolina, 28472-3107, United States",
+      "zip": "28472",
+      "lat": 34.3336451,
+      "lng": -78.7100135,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3331 Presson Rd, Monroe, North Carolina, 28112-9139, United States",
+      "zip": "28112",
+      "lat": 34.9806921,
+      "lng": -80.4677538,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3536 Carolina Beach Rd, Wilmington, North Carolina, 28412-6302, United States",
+      "zip": "28412",
+      "lat": 34.1815392,
+      "lng": -77.9291538,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "3808 Tarheel Dr, Raleigh, North Carolina, 27609-7521, United States",
+      "zip": "27609",
+      "lat": 35.8314517,
+      "lng": -78.6071767,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "4999 Smith Farm Rd, Matthews, North Carolina, 28104-8135, United States",
+      "zip": "28104",
+      "lat": 35.0860661,
+      "lng": -80.6706078,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "5427 N Sharon Amity Rd, Charlotte, North Carolina, 28215-3978, United States",
+      "zip": "28215",
+      "lat": 35.2316862,
+      "lng": -80.74170889999999,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "6945 Northpark Blvd, Charlotte, North Carolina, 28216-0079, United States",
+      "zip": "28216",
+      "lat": 35.3158703,
+      "lng": -80.8489185,
+      "country": "US"
+    },
+    {
+      "name": "Clientes Ene a Ago 25 (Pavel Trejo)_Standardized.csv",
+      "address": "7209 Rock Dove Ct, Gastonia, North Carolina, 28056-9513, United States",
+      "zip": "28056",
+      "lat": 35.1764418,
+      "lng": -81.11844889999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "1040 Summit Ave, Greensboro, North Carolina, 27405, United States",
+      "zip": "27405",
+      "lat": 36.0867148,
+      "lng": -79.7747694,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "1159 N Bragg Blvd, Spring Lake, North Carolina, 28390, United States",
+      "zip": "28390",
+      "lat": 35.1819333,
+      "lng": -78.98449819999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "1233 University Dr, Durham, North Carolina, 27707-1652, United States",
+      "zip": "27707",
+      "lat": 35.98494160000001,
+      "lng": -78.9096845,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "155 Bonanza Dr, Fayetteville, North Carolina, 28303-2767, United States",
+      "zip": "28303",
+      "lat": 35.0805358,
+      "lng": -78.99049959999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "2000 Avondale Dr, Durham, North Carolina, 27704-4356, United States",
+      "zip": "27704",
+      "lat": 36.017376,
+      "lng": -78.886031,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "201 W Arrowood Rd, Charlotte, North Carolina, 28217-4054, United States",
+      "zip": "28217",
+      "lat": 35.1338712,
+      "lng": -80.8932911,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "2455 RB Nelson Hwy, Goldsboro, North Carolina, 27530, United States",
+      "zip": "27530",
+      "lat": 35.3913549,
+      "lng": -77.9612907,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "2701 Freedom Dr, Charlotte, North Carolina, 28208-3853, United States",
+      "zip": "28208",
+      "lat": 35.2370682,
+      "lng": -80.8858015,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "301 E Williams St, Apex, North Carolina, 27502-2146, United States",
+      "zip": "27502",
+      "lat": 35.72644590000001,
+      "lng": -78.85064729999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "305 Rawls Church Rd, Angier, North Carolina, 27501, United States",
+      "zip": "27501",
+      "lat": 35.5145403,
+      "lng": -78.7419857,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "3112 Milton Rd, Charlotte, North Carolina, 28215-5526, United States",
+      "zip": "28215",
+      "lat": 35.2353466,
+      "lng": -80.73729209999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "3600 N Sharon Amity Rd, Charlotte, North Carolina, 28205-5932, United States",
+      "zip": "28205",
+      "lat": 35.2076597,
+      "lng": -80.75702179999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "372 N Fayetteville St, Asheboro, North Carolina, 27203-5506, United States",
+      "zip": "27203",
+      "lat": 35.7105349,
+      "lng": -79.8112013,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "4000 Ward Blvd, Wilson, North Carolina, 27893-3279, United States",
+      "zip": "27893",
+      "lat": 35.7386718,
+      "lng": -77.9052289,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "410 W Gannon Ave, Zebulon, North Carolina, 27597-2508, United States",
+      "zip": "27597",
+      "lat": 35.8215809,
+      "lng": -78.32264649999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "421 E Second St, Clayton, North Carolina, 27520, United States",
+      "zip": "27520",
+      "lat": 35.6493093,
+      "lng": -78.4571933,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "4300 N Tryon St, Charlotte, North Carolina, 28213-6919, United States",
+      "zip": "28213",
+      "lat": 35.257715,
+      "lng": -80.7935734,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "5304 Sunset Rd, Charlotte, North Carolina, 28269-3749, United States",
+      "zip": "28269",
+      "lat": 35.306554,
+      "lng": -80.8408062,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "5601 South Blvd, Charlotte, North Carolina, 28217-4129, United States",
+      "zip": "28217",
+      "lat": 35.1602194,
+      "lng": -80.87486439999999,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "818 E Arrowood Rd, Charlotte, North Carolina, 28217-5811, United States",
+      "zip": "28217",
+      "lat": 35.1363412,
+      "lng": -80.8785955,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "826 S 3rd St, Smithfield, North Carolina, 27577, United States",
+      "zip": "27577",
+      "lat": 35.500214,
+      "lng": -78.3525325,
+      "country": "US"
+    },
+    {
+      "name": "Compare Foods",
+      "address": "951 Silas Creek Pkwy, Winston-Salem, North Carolina, 27127-5625, United States",
+      "zip": "27127",
+      "lat": 36.0681698,
+      "lng": -80.2524297,
+      "country": "US"
+    },
+    {
+      "name": "Connect Direct",
+      "address": "801 Dickinson Ave, Greenville, North Carolina, 27834, United States",
+      "zip": "27834",
+      "lat": 35.6087219,
+      "lng": -77.3770584,
+      "country": "US"
+    },
+    {
+      "name": "C-Town",
+      "address": "7012 Albemarle Rd, Charlotte, North Carolina, 28227-8123, United States",
+      "zip": "28227",
+      "lat": 35.201679,
+      "lng": -80.723124,
+      "country": "US"
+    },
+    {
+      "name": "Dannys Supermarket",
+      "address": "6129 The Plaza, Charlotte, North Carolina, 28215-2460, United States",
+      "zip": "28215",
+      "lat": 35.2491167,
+      "lng": -80.7522766,
+      "country": "US"
+    },
+    {
+      "name": "El Mandado",
+      "address": "2950 E Millbrook Rd, Raleigh, North Carolina, 27604-2816, United States",
+      "zip": "27604",
+      "lat": 35.8488878,
+      "lng": -78.5822664,
+      "country": "US"
+    },
+    {
+      "name": "El Rey",
+      "address": "6300 South Blvd, Charlotte, North Carolina, 28217-4402, United States",
+      "zip": "28217",
+      "lat": 35.1494888,
+      "lng": -80.8769499,
+      "country": "US"
+    },
+    {
+      "name": "El Toro",
+      "address": "3609 Junction Blvd, Raleigh, North Carolina, 27603-3636, United States",
+      "zip": "27603",
+      "lat": 35.7308156,
+      "lng": -78.6569828,
+      "country": "US"
+    },
+    {
+      "name": "Food Lion",
+      "address": "4317 Falls of Neuse Rd, Raleigh, North Carolina, 27609, United States",
+      "zip": "27609",
+      "lat": 35.8406703,
+      "lng": -78.6132721,
+      "country": "US"
+    },
+    {
+      "name": "Food Lion",
+      "address": "4510 Capital Blvd, Raleigh, North Carolina, 27604-4353, United States",
+      "zip": "27604",
+      "lat": 35.8452744,
+      "lng": -78.5786827,
+      "country": "US"
+    },
+    {
+      "name": "Food Lion",
+      "address": "5633 Creedmoor Rd, Raleigh, North Carolina, 27612-6316, United States",
+      "zip": "27612",
+      "lat": 35.8589692,
+      "lng": -78.682508,
+      "country": "US"
+    },
+    {
+      "name": "Food Lion",
+      "address": "7400 The Plaza, Charlotte, North Carolina, 28215-1926, United States",
+      "zip": "28215",
+      "lat": 35.25761,
+      "lng": -80.73427,
+      "country": "US"
+    },
+    {
+      "name": "Food Lion",
+      "address": "9101 Leesville Rd, Raleigh, North Carolina, 27613, United States",
+      "zip": "27613",
+      "lat": 35.8961451,
+      "lng": -78.7252273,
+      "country": "US"
+    },
+    {
+      "name": "Food Lion",
+      "address": "9112 S Tryon St, Charlotte, North Carolina, 28273-3639, United States",
+      "zip": "28273",
+      "lat": 35.1346281,
+      "lng": -80.9407315,
+      "country": "US"
+    },
+    {
+      "name": "Food Lion",
+      "address": "9848 Monroe Rd, Charlotte, North Carolina, 28270-1457, United States",
+      "zip": "28270",
+      "lat": 35.1377801,
+      "lng": -80.7397171,
+      "country": "US"
+    },
+    {
+      "name": "Frutas Y Verduras Rosy",
+      "address": "2320 S Brightleaf Blvd, Smithfield, North Carolina, 27577-8362, United States",
+      "zip": "27577",
+      "lat": 35.483393,
+      "lng": -78.367626,
+      "country": "US"
+    },
+    {
+      "name": "Interfood 3 Hermanos",
+      "address": "4020 Capital Blvd, Raleigh, North Carolina, 27604-3450, United States",
+      "zip": "27604",
+      "lat": 35.8358565,
+      "lng": -78.5786827,
+      "country": "US"
+    },
+    {
+      "name": "Interfood 3 Hermanos",
+      "address": "526 Village Ct, Garner, North Carolina, 27529-3600, United States",
+      "zip": "27529",
+      "lat": 35.7076834,
+      "lng": -78.61817289999999,
+      "country": "US"
+    },
+    {
+      "name": "Interfood Plaza Latina",
+      "address": "1689 N Market Dr, Raleigh, North Carolina, 27609-6267, United States",
+      "zip": "27609",
+      "lat": 35.8400492,
+      "lng": -78.6073328,
+      "country": "US"
+    },
+    {
+      "name": "International Foods",
+      "address": "2215 New Hope Church Rd, Raleigh, North Carolina, 27604-1600, United States",
+      "zip": "27604",
+      "lat": 35.8363856,
+      "lng": -78.60087469999999,
+      "country": "US"
+    },
+    {
+      "name": "International Foods",
+      "address": "421 Chapanoke Rd, Raleigh, North Carolina, 27603-3450, United States",
+      "zip": "27603",
+      "lat": 35.7343977,
+      "lng": -78.6537962,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita",
+      "address": "836 E Chatham St, Cary, North Carolina, 27511, United States",
+      "zip": "27511",
+      "lat": 35.7903326,
+      "lng": -78.76070419999999,
+      "country": "US"
+    },
+    {
+      "name": "La Bonita Clayton",
+      "address": "11360 Clayton Blvd, Clayton, North Carolina, 27520, United States",
+      "zip": "11360",
+      "lat": 35.6509836,
+      "lng": -78.4701865,
+      "country": "US"
+    },
+    {
+      "name": "La Cumplidora",
+      "address": "826 S Horner Blvd, Sanford, North Carolina, 27330-5310, United States",
+      "zip": "27330",
+      "lat": 35.4704338,
+      "lng": -79.1707699,
+      "country": "US"
+    },
+    {
+      "name": "La Marqueta Tienda Y Carniceria",
+      "address": "4701 Hillsborough Rd, Durham, North Carolina, 27705-2225, United States",
+      "zip": "27705",
+      "lat": 36.0323106,
+      "lng": -78.98218969999999,
+      "country": "US"
+    },
+    {
+      "name": "La Superior",
+      "address": "3325 N Roxboro St, Durham, North Carolina, 27704-3255, United States",
+      "zip": "27704",
+      "lat": 36.0336265,
+      "lng": -78.89198170000002,
+      "country": "US"
+    },
+    {
+      "name": "La Tapatia Super Market",
+      "address": "1700 St Albans Dr, Raleigh, North Carolina, 27609-6252, United States",
+      "zip": "27609",
+      "lat": 35.8330519,
+      "lng": -78.61036949999999,
+      "country": "US"
+    },
+    {
+      "name": "La Unica Supermarket",
+      "address": "5323 E Independence Blvd, Charlotte, North Carolina, 28212-0508, United States",
+      "zip": "28212",
+      "lat": 35.187315,
+      "lng": -80.75685,
+      "country": "US"
+    },
+    {
+      "name": "Las Carolinas Fresh Market",
+      "address": "2107 Allendown Dr, Durham, North Carolina, 27713-9279, United States",
+      "zip": "27713",
+      "lat": 35.8992079,
+      "lng": -78.89528899999999,
+      "country": "US"
+    },
+    {
+      "name": "Lupitas Supermarket",
+      "address": "26 Pine St NW, Concord, North Carolina, 28025-4924, United States",
+      "zip": "28025",
+      "lat": 35.40611,
+      "lng": -80.58892159999999,
+      "country": "US"
+    },
+    {
+      "name": "Moroleon Supermarket",
+      "address": "1109 N Miami Blvd, Durham, North Carolina, 27703-2231, United States",
+      "zip": "27703",
+      "lat": 35.994106,
+      "lng": -78.87112540000001,
+      "country": "US"
+    },
+    {
+      "name": "Piggly Wiggly",
+      "address": "2412 S Horner Blvd, Sanford, North Carolina, 27330-5826, United States",
+      "zip": "27330",
+      "lat": 35.4597146,
+      "lng": -79.14766569999999,
+      "country": "US"
+    },
+    {
+      "name": "Plaza Latina Graham",
+      "address": "502 W Elm St, Graham, North Carolina, 27253, United States",
+      "zip": "27253",
+      "lat": 36.07084,
+      "lng": -79.4099518,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1018 Lake Park Blvd N, Carolina Beach, North Carolina, 28428-4127, United States",
+      "zip": "28428",
+      "lat": 34.0440888,
+      "lng": -77.89549699999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1020 Bradford Plaza Way, Cary, North Carolina, 27519-9230, United States",
+      "zip": "27519",
+      "lat": 35.7932487,
+      "lng": -78.84479999999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1030 Forestville Rd, Wake Forest, North Carolina, 27587-9361, United States",
+      "zip": "27587",
+      "lat": 35.94585319999999,
+      "lng": -78.5080308,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1065 Yunus Rd, Durham, North Carolina, 27703-7200, United States",
+      "zip": "27703",
+      "lat": 35.94157140000001,
+      "lng": -78.8533544,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "11122 Providence Rd W, Charlotte, North Carolina, 28277-1534, United States",
+      "zip": "11122",
+      "lat": 35.0425732,
+      "lng": -80.8476008,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "11525 Carmel Commons Blvd, Charlotte, North Carolina, 28226-5302, United States",
+      "zip": "11525",
+      "lat": 35.08674260000001,
+      "lng": -80.84381979999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "124 N Frazier St, Waynesville, North Carolina, 28786-2806, United States",
+      "zip": "28786",
+      "lat": 35.5043798,
+      "lng": -82.993872,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1254 Coddle Creek Hwy, Mooresville, North Carolina, 28115-7787, United States",
+      "zip": "28115",
+      "lat": 35.5611406,
+      "lng": -80.7912162,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "12925 Albemarle Rd, Charlotte, North Carolina, 28227, United States",
+      "zip": "12925",
+      "lat": 35.224975,
+      "lng": -80.6363179,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "134 Venture Ln, Statesville, North Carolina, 28625-2740, United States",
+      "zip": "28625",
+      "lat": 35.8182774,
+      "lng": -80.878509,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1441 Kelly Rd, Apex, North Carolina, 27502-9572, United States",
+      "zip": "27502",
+      "lat": 35.73763599999999,
+      "lng": -78.8933093,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "15010 Village Crossing Rd, Huntersville, North Carolina, 28078-4001, United States",
+      "zip": "15010",
+      "lat": 35.4527957,
+      "lng": -80.8044132,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1530 N Croatan Hwy, Kill Devil Hills, North Carolina, 27948-9485, United States",
+      "zip": "27948",
+      "lat": 36.02733509999999,
+      "lng": -75.6710734,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "16100 NC-50 N, Garner, North Carolina, 27529-8063, United States",
+      "zip": "16100",
+      "lat": 35.5914205,
+      "lng": -78.5976396,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1615 S Providence Rd, Marvin, North Carolina, 28173-8314, United States",
+      "zip": "28173",
+      "lat": 34.9876589,
+      "lng": -80.7708415,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1620 Blowing Rock Rd, Boone, North Carolina, 28607-6144, United States",
+      "zip": "28607",
+      "lat": 36.1991228,
+      "lng": -81.6614548,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1830 Hendersonville Rd, Asheville, North Carolina, 28803-3207, United States",
+      "zip": "28803",
+      "lat": 35.5047592,
+      "lng": -82.522435,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "1949 Hoffman Rd, Gastonia, North Carolina, 28054-6574, United States",
+      "zip": "28054",
+      "lat": 35.2255661,
+      "lng": -81.1329171,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2001 Marlin Dr, Jacksonville, North Carolina, 28546-0107, United States",
+      "zip": "28546",
+      "lat": 34.7964518,
+      "lng": -77.4074015,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2004 S Glenburnie Rd, New Bern, North Carolina, 28562-5227, United States",
+      "zip": "28562",
+      "lat": 35.1002796,
+      "lng": -77.1006337,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2005 N Main St, High Point, North Carolina, 27262-2167, United States",
+      "zip": "27262",
+      "lat": 35.9813754,
+      "lng": -80.02476039999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2222 South Blvd, Charlotte, North Carolina, 28203-6581, United States",
+      "zip": "28203",
+      "lat": 35.2066127,
+      "lng": -80.8624066,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2257 Wendell Falls Pkwy, Wendell, North Carolina, 27591, United States",
+      "zip": "27591",
+      "lat": 35.7764816,
+      "lng": -78.435727,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2750 S Church St, Burlington, North Carolina, 27215-5104, United States",
+      "zip": "27215",
+      "lat": 36.0798959,
+      "lng": -79.4857336,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "2765 NC Highway 210 E, Hampstead, North Carolina, 28443-8951, United States",
+      "zip": "28443",
+      "lat": 35.5059377,
+      "lng": -78.40404520000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3110 Fincher Farm Rd, Matthews, North Carolina, 28105-5462, United States",
+      "zip": "28105",
+      "lat": 35.0823049,
+      "lng": -80.72871769999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3114 Raeford Rd, Fayetteville, North Carolina, 28303-5378, United States",
+      "zip": "28303",
+      "lat": 35.0453832,
+      "lng": -78.9320446,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3150 Gammon Ln, Clemmons, North Carolina, 27012-9052, United States",
+      "zip": "27012",
+      "lat": 36.0400809,
+      "lng": -80.38907240000002,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "34 Miller St, Winston-Salem, North Carolina, 27104-4212, United States",
+      "zip": "27104",
+      "lat": 36.0950182,
+      "lng": -80.27594549999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "3480 Kildaire Farm Rd, Cary, North Carolina, 27518-1541, United States",
+      "zip": "27518",
+      "lat": 35.7049811,
+      "lng": -78.7972903,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4055 Harris Square Dr, Harrisburg, North Carolina, 28075-5104, United States",
+      "zip": "28075",
+      "lat": 35.3202987,
+      "lng": -80.6457848,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "417 W Peace St, Raleigh, North Carolina, 27603-5017, United States",
+      "zip": "27603",
+      "lat": 35.78801929999999,
+      "lng": -78.6450156,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "425 Emissary Dr, Cary, North Carolina, 27519-2608, United States",
+      "zip": "27519",
+      "lat": 35.8251333,
+      "lng": -78.9030738,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4348 NC-42 E, Clayton, North Carolina, 27527, United States",
+      "zip": "27527",
+      "lat": 35.6524878,
+      "lng": -78.3534593,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "4425 Randolph Rd, Charlotte, North Carolina, 28211-2325, United States",
+      "zip": "28211",
+      "lat": 35.1778134,
+      "lng": -80.7997973,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5015 Weddington Rd, Concord, North Carolina, 28027-9034, United States",
+      "zip": "28027",
+      "lat": 35.3962763,
+      "lng": -80.6613899,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "513 Brentwood Rd, Denver, North Carolina, 28037-0269, United States",
+      "zip": "28037",
+      "lat": 35.4480812,
+      "lng": -80.99323700000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5132 Old Monroe Rd, Indian Trail, North Carolina, 28079-5320, United States",
+      "zip": "28079",
+      "lat": 35.0609115,
+      "lng": -80.66765280000001,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "5525 Robin Lark Cir, Winston-Salem, North Carolina, 27106-9906, United States",
+      "zip": "27106",
+      "lat": 36.1206827,
+      "lng": -80.3697036,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "6029 W Gate City Blvd, Greensboro, North Carolina, 27407, United States",
+      "zip": "27407",
+      "lat": 35.9999691,
+      "lng": -79.9060834,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "631 Brawley School Rd, Mooresville, North Carolina, 28117-6204, United States",
+      "zip": "28117",
+      "lat": 35.581638,
+      "lng": -80.8754441,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "635 Greenville Hwy, Hendersonville, North Carolina, 28792, United States",
+      "zip": "28792",
+      "lat": 35.305503,
+      "lng": -82.4588193,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "6828 Matthews Mint Hill Rd, Mint Hill, North Carolina, 28227-9489, United States",
+      "zip": "28227",
+      "lat": 35.1708679,
+      "lng": -80.65956949999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "705 Greenville Blvd SE, Greenville, North Carolina, 27858-5102, United States",
+      "zip": "27858",
+      "lat": 35.5880512,
+      "lng": -77.3698627,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "7144 Market St, Wilmington, North Carolina, 28411-9730, United States",
+      "zip": "28411",
+      "lat": 34.27084,
+      "lng": -77.81970799999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "716 Bragg Dr, Wilmington, North Carolina, 28412-0914, United States",
+      "zip": "28412",
+      "lat": 34.1806284,
+      "lng": -77.8933565,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "7856 Village Ctr N, Terrell, North Carolina, 28682, United States",
+      "zip": "28682",
+      "lat": 35.5860361,
+      "lng": -80.98857509999999,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8120 S Tryon St, Charlotte, North Carolina, 28273-3325, United States",
+      "zip": "28273",
+      "lat": 35.1460836,
+      "lng": -80.9298519,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "821 S Main St, Rolesville, North Carolina, 27571-9264, United States",
+      "zip": "27571",
+      "lat": 35.9082869,
+      "lng": -78.476877,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8315 Magnolia Estates Dr, Cornelius, North Carolina, 28031-7837, United States",
+      "zip": "28031",
+      "lat": 35.4754456,
+      "lng": -80.8887963,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "8800 Crew Dr, Emerald Isle, North Carolina, 28594-1916, United States",
+      "zip": "28594",
+      "lat": 34.6623425,
+      "lng": -77.0516255,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "9640 Leesville Rd, Raleigh, North Carolina, 27613-5970, United States",
+      "zip": "27613",
+      "lat": 35.9057772,
+      "lng": -78.7275157,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "9815 Rose Commons Dr, Huntersville, North Carolina, 28078-3334, United States",
+      "zip": "28078",
+      "lat": 35.4085302,
+      "lng": -80.8643096,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "Benfield Rd, Charlotte, North Carolina, 28269, United States",
+      "zip": "28269",
+      "lat": 35.370655,
+      "lng": -80.7893719,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "S Tryon St, Charlotte, North Carolina, 28273-6949, United States",
+      "zip": "28273",
+      "lat": 35.1224467,
+      "lng": -80.9472298,
+      "country": "US"
+    },
+    {
+      "name": "Publix Charlotte",
+      "address": "Weaverville Rd, Weaverville, North Carolina, 28787, United States",
+      "zip": "28787",
+      "lat": 35.674869,
+      "lng": -82.5792277,
+      "country": "US"
+    },
+    {
+      "name": "Riveras Supermarket",
+      "address": "1718 S Horner Blvd, Sanford, North Carolina, 27330-5717, United States",
+      "zip": "27330",
+      "lat": 35.4656989,
+      "lng": -79.1595712,
+      "country": "US"
+    },
+    {
+      "name": "Sav Way",
+      "address": "4459 Central Ave, Charlotte, North Carolina, 28205-5701, United States",
+      "zip": "28205",
+      "lat": 35.2142067,
+      "lng": -80.7679448,
+      "country": "US"
+    },
+    {
+      "name": "Selma Iga Inc Supermarket",
+      "address": "212 N Pollock St, Selma, North Carolina, 27576-2523, United States",
+      "zip": "27576",
+      "lat": 35.5375592,
+      "lng": -78.28291689999999,
+      "country": "US"
+    },
+    {
+      "name": "Super G Mart",
+      "address": "4927 W Market St, Greensboro, North Carolina, 27407-1852, United States",
+      "zip": "27407",
+      "lat": 36.0665701,
+      "lng": -79.8750963,
+      "country": "US"
+    },
+    {
+      "name": "Super G Mart",
+      "address": "7323 E Independence Blvd, Charlotte, North Carolina, 28227-9401, United States",
+      "zip": "28227",
+      "lat": 35.1629146,
+      "lng": -80.73755190000001,
+      "country": "US"
+    },
+    {
+      "name": "Supermarket El Paraiso",
+      "address": "1205 16th St NE, Hickory, North Carolina, 28601-4210, United States",
+      "zip": "28601",
+      "lat": 35.7424863,
+      "lng": -81.3045669,
+      "country": "US"
+    },
+    {
+      "name": "Tropicana",
+      "address": "1001 N Miami Blvd, Durham, North Carolina, 27703-2229, United States",
+      "zip": "27703",
+      "lat": 35.994358,
+      "lng": -78.8697576,
+      "country": "US"
+    },
+    {
+      "name": "Tropicana Clinton",
+      "address": "403 Southeast Blvd, Clinton, North Carolina, 28328, United States",
+      "zip": "28328",
+      "lat": 34.9997923,
+      "lng": -78.3072248,
+      "country": "US"
+    },
+    {
+      "name": "Tropicana Foods",
+      "address": "603 Pender St S, Wilson, North Carolina, 27893-5234, United States",
+      "zip": "27893",
+      "lat": 35.7152948,
+      "lng": -77.9054123,
+      "country": "US"
+    },
+    {
+      "name": "Tropicana Greenville",
+      "address": "1204 N Memorial Dr, Greenville, North Carolina, 27834, United States",
+      "zip": "27834",
+      "lat": 35.6316454,
+      "lng": -77.3779304,
+      "country": "US"
+    },
+    {
+      "name": "Tropicana Supermarket",
+      "address": "1917 W Cumberland St, Dunn, North Carolina, 28334-4513, United States",
+      "zip": "28334",
+      "lat": 35.3171925,
+      "lng": -78.6299198,
+      "country": "US"
+    },
+    {
+      "name": "Tropicana Supermarket",
+      "address": "2971 Wendell Blvd, Wendell, North Carolina, 27591, United States",
+      "zip": "27591",
+      "lat": 35.7906303,
+      "lng": -78.3763122,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1001 N Green St, Morganton, North Carolina, 28655-9029, United States",
+      "zip": "28655",
+      "lat": 35.7529211,
+      "lng": -81.71775769999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1001 Shiloh Glenn Dr, Morrisville, North Carolina, 27560-5416, United States",
+      "zip": "27560",
+      "lat": 35.8671767,
+      "lng": -78.8471118,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1112 New Pointe Blvd, Leland, North Carolina, 28451-4115, United States",
+      "zip": "28451",
+      "lat": 34.2097444,
+      "lng": -78.0229278,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1130 S Main St, Kernersville, North Carolina, 27284-7480, United States",
+      "zip": "27284",
+      "lat": 36.1087069,
+      "lng": -80.10415309999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "120 Morganton Heights Blvd, Morganton, North Carolina, 28655-5215, United States",
+      "zip": "28655",
+      "lat": 35.7271327,
+      "lng": -81.7047578,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "121 W Elmsley St, Greensboro, North Carolina, 27406-8276, United States",
+      "zip": "27406",
+      "lat": 36.0020527,
+      "lng": -79.7990112,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1226 E Dixie Dr, Asheboro, North Carolina, 27203-8856, United States",
+      "zip": "27203",
+      "lat": 35.6924282,
+      "lng": -79.7896483,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1299 N Brightleaf Blvd, Smithfield, North Carolina, 27577-4229, United States",
+      "zip": "27577",
+      "lat": 35.5231945,
+      "lng": -78.3091816,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1318 Mebane Oaks Rd, Mebane, North Carolina, 27302-9681, United States",
+      "zip": "27302",
+      "lat": 36.0669261,
+      "lng": -79.27331819999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "14215 US Highway 64 W, Siler City, North Carolina, 27344-6451, United States",
+      "zip": "14215",
+      "lat": 35.7324594,
+      "lng": -79.4288949,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "150 Concord Commons Pl SW, Concord, North Carolina, 28027-5026, United States",
+      "zip": "28027",
+      "lat": 35.3891341,
+      "lng": -80.6227055,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1550 Skibo Rd, Fayetteville, North Carolina, 28303-3478, United States",
+      "zip": "28303",
+      "lat": 35.0817999,
+      "lng": -78.9572006,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1624 NC-14, Reidsville, North Carolina, 27320-9666, United States",
+      "zip": "27320",
+      "lat": 36.3834299,
+      "lng": -79.6670618,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "169 Norman Station Blvd, Mooresville, North Carolina, 28117-6396, United States",
+      "zip": "28117",
+      "lat": 35.5891693,
+      "lng": -80.8552243,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1725 New Hope Church Rd, Raleigh, North Carolina, 27609-6285, United States",
+      "zip": "27609",
+      "lat": 35.8372848,
+      "lng": -78.60741279999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "201 Zelkova Ct NW, Conover, North Carolina, 28613-9377, United States",
+      "zip": "28613",
+      "lat": 35.7274145,
+      "lng": -81.2110172,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2107 Pyramids Village Blvd, Greensboro, North Carolina, 27405-5100, United States",
+      "zip": "27405",
+      "lat": 36.1090551,
+      "lng": -79.7568861,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2241 Rockford St, Mt Airy, North Carolina, 27030-5051, United States",
+      "zip": "27030",
+      "lat": 36.4718996,
+      "lng": -80.6184905,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2324 S New Hope Rd, Gastonia, North Carolina, 28054-6508, United States",
+      "zip": "28054",
+      "lat": 35.2437297,
+      "lng": -81.124865,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2406 W Roosevelt Blvd, Monroe, North Carolina, 28110-8430, United States",
+      "zip": "28110",
+      "lat": 35.0139295,
+      "lng": -80.5640418,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2420 Supercenter Dr NE, Kannapolis, North Carolina, 28083-6426, United States",
+      "zip": "28083",
+      "lat": 35.4627898,
+      "lng": -80.5945271,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "25 Northridge Commons Pkwy, Weaverville, North Carolina, 28787-7533, United States",
+      "zip": "28787",
+      "lat": 35.7034016,
+      "lng": -82.57960849999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "250 Highlands Square Dr, Hendersonville, North Carolina, 28792-5721, United States",
+      "zip": "28792",
+      "lat": 35.3494202,
+      "lng": -82.4375544,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2500 Forest Hills Rd W, Wilson, North Carolina, 27893-3461, United States",
+      "zip": "27893",
+      "lat": 35.7340866,
+      "lng": -77.9486994,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2514 Halltown Rd, Spruce Pine, North Carolina, 28777-5461, United States",
+      "zip": "28777",
+      "lat": 35.8711055,
+      "lng": -82.0443074,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2520 Cuthbertson Rd, Waxhaw, North Carolina, 28173-7441, United States",
+      "zip": "28173",
+      "lat": 34.9583906,
+      "lng": -80.75617,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "261 Cooper Creek Dr, Mocksville, North Carolina, 27028-5967, United States",
+      "zip": "27028",
+      "lat": 35.9277427,
+      "lng": -80.5875191,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2750 NC 55 Hwy, Cary, North Carolina, 27519-6205, United States",
+      "zip": "27519",
+      "lat": 35.7863571,
+      "lng": -78.869462,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3030 N Main St, Hope Mills, North Carolina, 28348-1722, United States",
+      "zip": "28348",
+      "lat": 34.9800675,
+      "lng": -78.96508349999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "320 E Hanes Mill Rd, Winston-Salem, North Carolina, 27105-9139, United States",
+      "zip": "27105",
+      "lat": 36.1925118,
+      "lng": -80.2744594,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3209 Pineville Matthews Rd, Charlotte, North Carolina, 28226-9301, United States",
+      "zip": "28226",
+      "lat": 35.0968024,
+      "lng": -80.78222799999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "323 S Arlington St, Salisbury, North Carolina, 28144-5163, United States",
+      "zip": "28144",
+      "lat": 35.6551708,
+      "lng": -80.4665163,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3475 Parkway Village Cir, Winston-Salem, North Carolina, 27127, United States",
+      "zip": "27127",
+      "lat": 36.0270117,
+      "lng": -80.2625912,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3905 Concord Pkwy S, Concord, North Carolina, 28027-9058, United States",
+      "zip": "28027",
+      "lat": 35.3666075,
+      "lng": -80.66596349999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4102 Precision Way, High Point, North Carolina, 27265, United States",
+      "zip": "27265",
+      "lat": 36.0288183,
+      "lng": -79.9648667,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4431 New Bern Ave, Raleigh, North Carolina, 27610-1443, United States",
+      "zip": "27610",
+      "lat": 35.8004546,
+      "lng": -78.5600094,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4500 Fayetteville Rd, Raleigh, North Carolina, 27603-3614, United States",
+      "zip": "27603",
+      "lat": 35.7198254,
+      "lng": -78.6587677,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4550 Kester Mill Rd, Winston-Salem, North Carolina, 27103-1247, United States",
+      "zip": "27103",
+      "lat": 36.0672461,
+      "lng": -80.3375799,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4780 Hickory Blvd, Granite Falls, North Carolina, 28630-8237, United States",
+      "zip": "28630",
+      "lat": 35.78141859999999,
+      "lng": -81.3948813,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "483 US-70 SW, Hickory, North Carolina, 28602-5019, United States",
+      "zip": "28602",
+      "lat": 35.7418397,
+      "lng": -81.52053579999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "501 Hampton Pointe Blvd, Hillsborough, North Carolina, 27278-9012, United States",
+      "zip": "27278",
+      "lat": 36.0559806,
+      "lng": -79.0853355,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5070 Fayetteville Rd, Lumberton, North Carolina, 28358-2108, United States",
+      "zip": "28358",
+      "lat": 34.66402679999999,
+      "lng": -79.0059156,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5135 Carolina Beach Rd, Wilmington, North Carolina, 28412-2516, United States",
+      "zip": "28412",
+      "lat": 34.1460679,
+      "lng": -77.89710389999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5175 Brookberry Park Ave, Winston-Salem, North Carolina, 27104-3784, United States",
+      "zip": "27104",
+      "lat": 36.0940813,
+      "lng": -80.36733919999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5226 Sigmon Rd, Wilmington, North Carolina, 28403-1666, United States",
+      "zip": "28403",
+      "lat": 34.2427702,
+      "lng": -77.87460089999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "530 S Graham Hopedale Rd, Burlington, North Carolina, 27217-4322, United States",
+      "zip": "27217",
+      "lat": 36.0911961,
+      "lng": -79.4033781,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5450 New Hope Commons Dr, Durham, North Carolina, 27707-9716, United States",
+      "zip": "27707",
+      "lat": 35.9551693,
+      "lng": -78.9990078,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "548 CC Camp Rd, Elkin, North Carolina, 28621-8704, United States",
+      "zip": "28621",
+      "lat": 36.2759949,
+      "lng": -80.8323614,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "561 Yopp Rd, Jacksonville, North Carolina, 28540-3591, United States",
+      "zip": "28540",
+      "lat": 34.7514329,
+      "lng": -77.4645439,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5625 S NC 41 Hwy, Wallace, North Carolina, 28466-6095, United States",
+      "zip": "28466",
+      "lat": 34.7390305,
+      "lng": -77.96904669999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5825 Thunder Rd, Concord, North Carolina, 28027, United States",
+      "zip": "28027",
+      "lat": 35.3786577,
+      "lng": -80.72486459999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "590 E Jackson Blvd, Erwin, North Carolina, 28339-9629, United States",
+      "zip": "28339",
+      "lat": 35.3205552,
+      "lng": -78.6480297,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "60 Airport Rd, Arden, North Carolina, 28704-9405, United States",
+      "zip": "28704",
+      "lat": 35.4561288,
+      "lng": -82.5234536,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8035 Market St, Wilmington, North Carolina, 28411-9385, United States",
+      "zip": "28411",
+      "lat": 34.2959736,
+      "lng": -77.79915749999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "805 Town Centre Blvd, Clayton, North Carolina, 27520-2179, United States",
+      "zip": "27520",
+      "lat": 35.6624404,
+      "lng": -78.4976305,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8180 S Tryon St, Charlotte, North Carolina, 28273-3325, United States",
+      "zip": "28273",
+      "lat": 35.1458255,
+      "lng": -80.93256,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "966 E Iredell Ave, Mooresville, North Carolina, 28115-2432, United States",
+      "zip": "28115",
+      "lat": 35.577862,
+      "lng": -80.7914892,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "970 Strickland Bridge Rd, Fayetteville, North Carolina, 28304-2797, United States",
+      "zip": "28304",
+      "lat": 35.0402598,
+      "lng": -78.99933879999999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9820 Callabridge Ct, Charlotte, North Carolina, 28216-7669, United States",
+      "zip": "28216",
+      "lat": 35.3295322,
+      "lng": -80.9457649,
+      "country": "US"
+    },
+    {
+      "name": "Wow Foods",
+      "address": "1230 E Roosevelt Blvd, Monroe, North Carolina, 28112-5183, United States",
+      "zip": "28112",
+      "lat": 34.9741251,
+      "lng": -80.50884289999999,
+      "country": "US"
+    },
+    {
+      "name": "Wow Foods",
+      "address": "6407 South Blvd, Charlotte, North Carolina, 28217-4401, United States",
+      "zip": "28217",
+      "lat": 35.1474137,
+      "lng": -80.8756992,
+      "country": "US"
+    }
+  ]
+}

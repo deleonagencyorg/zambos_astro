@@ -1,0 +1,13 @@
+{
+  "state_code": "ME",
+  "count": 1,
+  "stores": [
+    {
+      "name": "Walmart",
+      "address": "1930 Main St, Sanford, Maine, 04073-4479, United States",
+      "lat": 43.400425,
+      "lng": -70.6990488,
+      "country": "US"
+    }
+  ]
+}

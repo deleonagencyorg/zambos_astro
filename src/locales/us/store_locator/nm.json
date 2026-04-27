@@ -1,0 +1,377 @@
+{
+  "state_code": "NM",
+  "count": 53,
+  "stores": [
+    {
+      "name": "Affiliated Lowe's",
+      "address": "2400 7th St, Las Vegas, New Mexico, 87701-4967, United States",
+      "lat": 35.6171804,
+      "lng": -105.2239603,
+      "country": "US"
+    },
+    {
+      "name": "Market Street",
+      "address": "2200 Unser Blvd SE, Rio Rancho, New Mexico, 87124, United States",
+      "lat": 35.2430989,
+      "lng": -106.6990771,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "2101 Cerrillos Rd, Santa Fe, New Mexico, 87505-3267, United States",
+      "lat": 35.6622332,
+      "lng": -105.9796503,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "4327 Airport Rd, Santa Fe, New Mexico, 87507-1816, United States",
+      "lat": 35.6389361,
+      "lng": -106.0235077,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1000 Rio Rancho Blvd SE, Rio Rancho, New Mexico, 87124-1051, United States",
+      "lat": 35.2403911,
+      "lng": -106.6556405,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1000 Rio Rancho Dr SE, Rio Rancho, New Mexico, 87124-1051, United States",
+      "lat": 35.2401565,
+      "lng": -106.6556658,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "111 Coors Blvd NW, Albuquerque, New Mexico, 87121-2006, United States",
+      "lat": 35.079882,
+      "lng": -106.7128445,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "1601 Arenal Rd SW, Albuquerque, New Mexico, 87105-4048, United States",
+      "lat": 35.05435,
+      "lng": -106.6796648,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2 NM-344, Edgewood, New Mexico, 87015-6849, United States",
+      "lat": 35.0616195,
+      "lng": -106.1895874,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "200 Tramway Blvd SE, Albuquerque, New Mexico, 87123-3925, United States",
+      "lat": 35.0668298,
+      "lng": -106.4961752,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "200 Tramway Blvd SE, Albuquerque, New Mexico, 87123-3934, United States",
+      "lat": 35.0668298,
+      "lng": -106.4961752,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2010 S Pacheco St, Santa Fe, New Mexico, 87505-5472, United States",
+      "lat": 35.6589189,
+      "lng": -105.9602418,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2110 S Pacheco St, Santa Fe, New Mexico, 87505-5463, United States",
+      "lat": 35.6574555,
+      "lng": -105.9597978,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "224 Paseo del Pueblo Sur, Taos, New Mexico, 87571-6413, United States",
+      "lat": 36.4036113,
+      "lng": -105.5751004,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2308 Cerrillos Rd, Santa Fe, New Mexico, 87505-3264, United States",
+      "lat": 35.6599481,
+      "lng": -105.9800864,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "2580 Main St NE, Los Lunas, New Mexico, 87031-6340, United States",
+      "lat": 34.808932,
+      "lng": -106.7009905,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "31 Sherwood Blvd, White Rock, New Mexico, 87547-3730, United States",
+      "lat": 35.8260776,
+      "lng": -106.2106865,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "320 Yale Blvd SE, Albuquerque, New Mexico, 87106-4016, United States",
+      "lat": 35.0761315,
+      "lng": -106.6216702,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "3701 Constitution Ave NE, Albuquerque, New Mexico, 87110-5623, United States",
+      "lat": 35.0958471,
+      "lng": -106.6033817,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4 NM-344, Edgewood, New Mexico, 87015-6849, United States",
+      "lat": 35.0623957,
+      "lng": -106.1907691,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4016 Louisiana Blvd NE, Albuquerque, New Mexico, 87110-1447, United States",
+      "lat": 35.1294711,
+      "lng": -106.5674617,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4700 Tramway Blvd NE, Albuquerque, New Mexico, 87111-2979, United States",
+      "lat": 35.1328935,
+      "lng": -106.4968196,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "4800 McMahon Blvd NW, Albuquerque, New Mexico, 87114-5010, United States",
+      "lat": 35.2050663,
+      "lng": -106.6772994,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "5850 Eubank Blvd NE, Albuquerque, New Mexico, 87111-6111, United States",
+      "lat": 35.1477939,
+      "lng": -106.5259041,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "5850 Eubank Blvd NE, Albuquerque, New Mexico, 87111-6132, United States",
+      "lat": 35.1477939,
+      "lng": -106.5259041,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "600 E 20th St, Farmington, New Mexico, 87401, United States",
+      "lat": 36.7492367,
+      "lng": -108.1988308,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "6001 Lomas Blvd NE, Albuquerque, New Mexico, 87110-6600, United States",
+      "lat": 35.0880742,
+      "lng": -106.579211,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "6001 Lomas Blvd NE, Albuquerque, New Mexico, 87110-6618, United States",
+      "lat": 35.0880742,
+      "lng": -106.579211,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "6125 4th St NW, Albuquerque, New Mexico, 87107-5726, United States",
+      "lat": 35.1467543,
+      "lng": -106.6407356,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "6125 4th St NW, Albuquerque, New Mexico, 87107-5755, United States",
+      "lat": 35.1467543,
+      "lng": -106.6407356,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "700 E Roosevelt Ave, Grants, New Mexico, 87020, United States",
+      "lat": 35.161581,
+      "lng": -107.8330258,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "751 Trinity Dr, Los Alamos, New Mexico, 87544-3356, United States",
+      "lat": 35.8795526,
+      "lng": -106.2951072,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "8040 Academy Rd NE, Albuquerque, New Mexico, 87111-1159, United States",
+      "lat": 35.145917,
+      "lng": -106.5490159,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "8100 Wyoming Blvd NE, Albuquerque, New Mexico, 87113-1946, United States",
+      "lat": 35.1747521,
+      "lng": -106.5569776,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "8301 Golf Course Rd NW, Albuquerque, New Mexico, 87120-5801, United States",
+      "lat": 35.1788378,
+      "lng": -106.6901518,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "E 20th St, Farmington, New Mexico, 87401-2108, United States",
+      "lat": 36.748262,
+      "lng": -108.1842686,
+      "country": "US"
+    },
+    {
+      "name": "Smith's",
+      "address": "E Roosevelt Ave, Grants, New Mexico, 87020-2220, United States",
+      "lat": 35.1611898,
+      "lng": -107.8241014,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1021 E Pine St, Deming, New Mexico, 88030-7009, United States",
+      "lat": 32.270536,
+      "lng": -107.747133,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10224 Coors Byp NW, Albuquerque, New Mexico, 87114-4398, United States",
+      "lat": 35.2046306,
+      "lng": -106.6562182,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "150 N Sonoma Ranch Blvd, Las Cruces, New Mexico, 88011-1608, United States",
+      "lat": 32.3280667,
+      "lng": -106.7223582,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1610 N Riverside Dr, Espanola, New Mexico, 87532-8063, United States",
+      "lat": 36.0154581,
+      "lng": -106.0669919,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1650 W Maloney Ave, Gallup, New Mexico, 87301-3305, United States",
+      "lat": 35.5283758,
+      "lng": -108.7693799,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2250 Main St NW, Los Lunas, New Mexico, 87031-4807, United States",
+      "lat": 34.8172884,
+      "lng": -106.7631409,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2266 Wyoming Blvd NE, Albuquerque, New Mexico, 87112-2620, United States",
+      "lat": 35.10693759999999,
+      "lng": -106.5492,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2401 S Canal St, Carlsbad, New Mexico, 88220-6523, United States",
+      "lat": 32.394099,
+      "lng": -104.2230623,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2501 Highway 180 E, Silver City, New Mexico, 88061-7791, United States",
+      "lat": 32.7894154,
+      "lng": -108.2484564,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2550 Coors Blvd NW, Albuquerque, New Mexico, 87120-2123, United States",
+      "lat": 35.11046049999999,
+      "lng": -106.7002452,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2609 7th St, Las Vegas, New Mexico, 87701-4982, United States",
+      "lat": 35.6195741,
+      "lng": -105.2274715,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2701 Carlisle Blvd NE, Albuquerque, New Mexico, 87110-2830, United States",
+      "lat": 35.1121497,
+      "lng": -106.6078778,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3331 N Rinconada Blvd, Las Cruces, New Mexico, 88011-7193, United States",
+      "lat": 32.3602672,
+      "lng": -106.7460104,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3728 N Prince St, Clovis, New Mexico, 88101-9744, United States",
+      "lat": 34.4376094,
+      "lng": -103.2004521,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3800 N Lovington Hwy, Hobbs, New Mexico, 88240-1033, United States",
+      "lat": 32.7435328,
+      "lng": -103.1604377,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4500 N Main St, Roswell, New Mexico, 88201-0305, United States",
+      "lat": 33.4495339,
+      "lng": -104.5254745,
+      "country": "US"
+    }
+  ]
+}

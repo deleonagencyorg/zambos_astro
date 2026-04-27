@@ -1,0 +1,347 @@
+/* ============================================================
+   STORE LOCATOR — Zambos USA
+   ============================================================ */
+
+/* ── Page wrapper ─────────────────────────────────────────── */
+.sl-page {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+  width: 100%;
+  animation: sl-fade-in 0.4s ease-out;
+}
+
+@keyframes sl-fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Title bar ────────────────────────────────────────────── */
+.sl-title-bar {
+  width: 100%;
+  text-align: center;
+  padding: 2.5% 5% 1.5%;
+}
+
+.sl-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-shadow: 2px 3px 8px rgba(0,0,0,0.25);
+}
+
+/* ── Status bar ───────────────────────────────────────────── */
+.sl-status {
+  padding: 0.6rem 5%;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+}
+
+.sl-status--loading { background: rgba(255,248,225,0.9); color: #E65100; }
+.sl-status--info    { background: rgba(232,245,233,0.9); color: #1B5E20; }
+.sl-status--error   { background: rgba(255,235,238,0.9); color: #B71C1C; }
+
+/* ── Main layout ──────────────────────────────────────────── */
+.sl-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  padding: 0 4% 4%;
+  gap: 5%;
+}
+
+@media (min-width: 768px) {
+  .sl-main {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 4% 4%;
+    gap: 4%;
+  }
+}
+
+/* ── Form column (left) ───────────────────────────────────── */
+.sl-form-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .sl-form-col {
+    width: 38%;
+    flex-shrink: 0;
+  }
+}
+
+/* ── Field ────────────────────────────────────────────────── */
+.sl-field {
+  margin-bottom: 3%;
+}
+
+.sl-label {
+  display: block;
+  color: #ffffff;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-weight: 700;
+  margin-bottom: 0.4em;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.sl-input {
+  width: 100%;
+  padding: 0.85em 1.4em;
+  border: none;
+  border-radius: 9999px;
+  font-size: clamp(0.85rem, 1.4vw, 1rem);
+  font-weight: 600;
+  background: #ffffff;
+  color: #0E6D20;
+  outline: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  transition: box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.sl-input:focus {
+  box-shadow: 0 0 0 3px rgba(183,28,28,0.35), 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.sl-input::placeholder {
+  color: #0E6D20;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* ── Find Store button ────────────────────────────────────── */
+.sl-find-btn {
+  width: 100%;
+  padding: 0.9em 1.5em;
+  background: #B71C1C;
+  color: #ffffff;
+  border: none;
+  border-radius: 2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  margin-top: 1.5%;
+  margin-bottom: 2%;
+  box-shadow: 0 4px 16px rgba(183,28,28,0.4);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.sl-find-btn:hover {
+  background: #9a1616;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(183,28,28,0.5);
+}
+
+.sl-find-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Locate (use my location) ─────────────────────────────── */
+.sl-locate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.65em 1.2em;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 2rem;
+  font-size: clamp(0.78rem, 1.2vw, 0.9rem);
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: inherit;
+  margin-bottom: 3%;
+}
+
+.sl-locate-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+
+/* ── Store count ──────────────────────────────────────────── */
+.sl-count {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 700;
+  margin-bottom: 1%;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* ── Store list ───────────────────────────────────────────── */
+.sl-list-wrap {
+  background: rgba(255,255,255,0.95);
+  border-radius: 1rem;
+  overflow: hidden;
+  max-height: 40vh;
+}
+
+@media (min-width: 768px) {
+  .sl-list-wrap {
+    max-height: 50vh;
+  }
+}
+
+.sl-sidebar__list {
+  overflow-y: auto;
+  max-height: 40vh;
+}
+
+@media (min-width: 768px) {
+  .sl-sidebar__list {
+    max-height: 50vh;
+  }
+}
+
+.sl-sidebar__list::-webkit-scrollbar { width: 4px; }
+.sl-sidebar__list::-webkit-scrollbar-track { background: #f0f0f0; }
+.sl-sidebar__list::-webkit-scrollbar-thumb { background: #0E6D20; border-radius: 4px; }
+
+/* ── Store card ───────────────────────────────────────────── */
+.sl-store-card {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.15s, border-left-color 0.15s;
+}
+
+.sl-store-card:hover  { background: #f0faf2; border-left-color: #0E6D20; }
+.sl-store-card.active { background: #e8f5ec; border-left-color: #B71C1C; }
+.sl-store-card:focus  { outline: 2px solid #0E6D20; outline-offset: -2px; }
+
+.sl-store-card__name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.2rem;
+}
+
+.sl-store-card__address {
+  font-size: 0.78rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 0.3rem;
+}
+
+.sl-store-card__directions {
+  font-size: 0.75rem;
+  color: #B71C1C;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.sl-store-card__directions:hover { text-decoration: underline; }
+
+/* ── Empty ────────────────────────────────────────────────── */
+.sl-empty {
+  padding: 1.5rem;
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+}
+
+/* ── Map column (right) ───────────────────────────────────── */
+.sl-map-col {
+  flex: 1;
+  width: 100%;
+  min-height: 50vw;
+}
+
+@media (min-width: 768px) {
+  .sl-map-col {
+    width: 58%;
+    min-height: 460px;
+  }
+}
+
+.sl-map {
+  width: 100%;
+  height: 100%;
+  min-height: 50vw;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.6);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.25);
+  background: #e8eef0;
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+  /* iOS Safari/Chrome: force GPU compositing to prevent blank tiles */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.sl-map.loading {
+  opacity: 0.7;
+}
+
+/* Skeleton loader for map */
+.sl-map::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #e8eef0 25%, #d1dde3 50%, #e8eef0 75%);
+  background-size: 200% 100%;
+  animation: sl-skeleton-loading 1.5s infinite;
+  z-index: 1;
+  border-radius: 1rem;
+}
+
+.sl-map.loaded::before {
+  display: none;
+}
+
+@keyframes sl-skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+@media (min-width: 768px) {
+  .sl-map {
+    min-height: 460px;
+  }
+}
+
+/* ── Autocomplete dropdown ────────────────────────────────── */
+.pac-container {
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  font-family: inherit;
+  z-index: 9999;
+}
+
+.pac-item {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.pac-item:hover { background: #f0faf2; }
+.pac-item-selected .pac-item-query,
+.pac-item:hover .pac-item-query { color: #0E6D20; }

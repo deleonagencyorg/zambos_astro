@@ -1,0 +1,1588 @@
+{
+  "state_code": "CO",
+  "count": 226,
+  "stores": [
+    {
+      "name": "AFS Independent, All Other",
+      "address": "103 W Main St, Oak Creek, Colorado, 80467-9990, United States",
+      "lat": 40.2756607,
+      "lng": -106.9587805,
+      "country": "US"
+    },
+    {
+      "name": "AFS Independent, All Other",
+      "address": "2796 Federal Blvd, Denver, Colorado, 80211-4116, United States",
+      "lat": 39.7572404,
+      "lng": -105.0251667,
+      "country": "US"
+    },
+    {
+      "name": "AFS Independent, All Other",
+      "address": "5036 W 92nd Ave, Westminster, Colorado, 80031-6302, United States",
+      "lat": 39.8622895,
+      "lng": -105.0512665,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "103 Market St, Eagle, Colorado, 81631-6326, United States",
+      "lat": 39.6625974,
+      "lng": -106.8257135,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "122 Gunnison River Dr, Delta, Colorado, 81416-1856, United States",
+      "lat": 38.74759969999999,
+      "lng": -108.0722586,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "128 S Townsend Ave, Montrose, Colorado, 81401-3988, United States",
+      "lat": 38.4769615,
+      "lng": -107.8772696,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "13 Market St, Eagle, Colorado, 81631-6315, United States",
+      "lat": 39.6628082,
+      "lng": -106.8257716,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "131 Market St, Alamosa, Colorado, 81101-2238, United States",
+      "lat": 37.4758195,
+      "lng": -105.8916953,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "1320 Railroad Ave, Rifle, Colorado, 81650-3326, United States",
+      "lat": 39.5426045,
+      "lng": -107.78272,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "135 S Plum St, Fruita, Colorado, 81521-2524, United States",
+      "lat": 39.1577557,
+      "lng": -108.7352305,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "1410 Grand Ave, Glenwood Springs, Colorado, 81601-3808, United States",
+      "lat": 39.5386221,
+      "lng": -107.3232582,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "16400 S Townsend Ave, Montrose, Colorado, 81401-5404, United States",
+      "lat": 38.4528855,
+      "lng": -107.8648799,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "165 Country Center Dr, Pagosa Springs, Colorado, 81147-8935, United States",
+      "lat": 37.2564232,
+      "lng": -107.0764597,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "1703 Fremont Dr, Canon City, Colorado, 81212-2405, United States",
+      "lat": 38.4487047,
+      "lng": -105.2239603,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "2109 N Frontage Rd W, Vail, Colorado, 81657-4891, United States",
+      "lat": 39.6323367,
+      "lng": -106.416249,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "2109 N Frontage Rd W, Vail, Colorado, 81657-4897, United States",
+      "lat": 39.6323367,
+      "lng": -106.416249,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "250 E Valley Rd, Carbondale, Colorado, 81623-7736, United States",
+      "lat": 39.3914489,
+      "lng": -107.0877145,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "2600 N 12th St, Grand Junction, Colorado, 81501-8190, United States",
+      "lat": 39.0906542,
+      "lng": -108.55114,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "2770 Highway 50, Grand Junction, Colorado, 81503-2294, United States",
+      "lat": 39.0372156,
+      "lng": -108.5397711,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "300 Dillon Ridge Way, Dillon, Colorado, 80435-5406, United States",
+      "lat": 39.6305849,
+      "lng": -106.0557517,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "3130 Main Ave, Durango, Colorado, 81301-4247, United States",
+      "lat": 37.2998913,
+      "lng": -107.8701145,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "32 Rd, Grand Junction, Colorado, 81504, United States",
+      "lat": 39.0877987,
+      "lng": -108.4599642,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "400 N Park Ave, Breckenridge, Colorado, 80424-8709, United States",
+      "lat": 39.48879609999999,
+      "lng": -106.0468429,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "505 W Victory Way, Craig, Colorado, 81625-2929, United States",
+      "lat": 40.5150826,
+      "lng": -107.5537519,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "508 E Main St, Cortez, Colorado, 81321-3307, United States",
+      "lat": 37.3499397,
+      "lng": -108.577856,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "569 32 Rd, Clifton, Colorado, 81504-6084, United States",
+      "lat": 39.0869952,
+      "lng": -108.4621011,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "6 TMN Plaza St, Durango, Colorado, 81301-5104, United States",
+      "lat": 37.2739528,
+      "lng": -107.8792499,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "6 Town Plz, Durango, Colorado, 81301, United States",
+      "lat": 37.2742074,
+      "lng": -107.8822521,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "630 24 Rd, Grand Junction, Colorado, 81505-1239, United States",
+      "lat": 39.0964692,
+      "lng": -108.6075428,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "72 Beaver Creek Pl, Avon, Colorado, 81620-5435, United States",
+      "lat": 39.6337407,
+      "lng": -106.517715,
+      "country": "US"
+    },
+    {
+      "name": "City Market",
+      "address": "905 Highway 133, Carbondale, Colorado, 81623-1833, United States",
+      "lat": 39.400368,
+      "lng": -107.2204,
+      "country": "US"
+    },
+    {
+      "name": "Clark's Market",
+      "address": "7059 E Lowry Blvd, Denver, Colorado, 80230-6987, United States",
+      "lat": 39.71695270000001,
+      "lng": -104.9064228,
+      "country": "US"
+    },
+    {
+      "name": "El Mercado De Colorado",
+      "address": "11505 E Colfax Ave, Aurora, Colorado, 80010-2706, United States",
+      "lat": 39.7407007,
+      "lng": -104.8537592,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "5900 S Santa Fe Dr, Littleton, Colorado, 80120-1801, United States",
+      "lat": 39.6080824,
+      "lng": -105.0187252,
+      "country": "US"
+    },
+    {
+      "name": "Folletts Kcd",
+      "address": "900 Auraria Pkwy, Denver, Colorado, 80204-1852, United States",
+      "lat": 39.7450774,
+      "lng": -105.005976,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "10351 Federal Blvd, Westminster, Colorado, 80260-7438, United States",
+      "lat": 39.8833858,
+      "lng": -105.0277978,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "1155 S Havana St, Aurora, Colorado, 80012-4017, United States",
+      "lat": 39.6951586,
+      "lng": -104.8680829,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "12167 Sheridan Blvd, Broomfield, Colorado, 80020-2417, United States",
+      "lat": 39.9170996,
+      "lng": -105.0555588,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "15051 E 104th Ave, Commerce City, Colorado, 80022-9706, United States",
+      "lat": 39.8874933,
+      "lng": -104.8109439,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "15109 E Colfax Ave, Aurora, Colorado, 80011-5729, United States",
+      "lat": 39.7412076,
+      "lng": -104.8122661,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "3570 Hartsel Dr, Colorado Springs, Colorado, 80920-4165, United States",
+      "lat": 38.9400951,
+      "lng": -104.7602979,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "4850 E 62nd Ave, Commerce City, Colorado, 80022-3288, United States",
+      "lat": 39.808747,
+      "lng": -104.9301075,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "500 E Bromley Ln, Brighton, Colorado, 80601-5504, United States",
+      "lat": 39.97021,
+      "lng": -104.8160961,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "5125 W Florida Ave, Denver, Colorado, 80219-3605, United States",
+      "lat": 39.6907256,
+      "lng": -105.0520419,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "5152 W Florida Ave, Denver, Colorado, 80219-3601, United States",
+      "lat": 39.6895496,
+      "lng": -105.0527081,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "6350 Sheridan Blvd, Arvada, Colorado, 80003-6645, United States",
+      "lat": 39.8110721,
+      "lng": -105.0515405,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "655 N Peoria St, Aurora, Colorado, 80011-8228, United States",
+      "lat": 39.7266239,
+      "lng": -104.8494966,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "6930 N Academy Blvd, Colorado Springs, Colorado, 80918-1127, United States",
+      "lat": 38.9310157,
+      "lng": -104.7968969,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "750 E 104th Ave, Thornton, Colorado, 80233-4300, United States",
+      "lat": 39.883949,
+      "lng": -104.9746635,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "8031 Wadsworth Blvd, Arvada, Colorado, 80005, United States",
+      "lat": 39.8434311,
+      "lng": -105.0838725,
+      "country": "US"
+    },
+    {
+      "name": "King Sooper",
+      "address": "8055 Sheridan Blvd, Arvada, Colorado, 80003-1910, United States",
+      "lat": 39.8435809,
+      "lng": -105.0568427,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "100 N 50th Ave, Brighton, Colorado, 80601-8300, United States",
+      "lat": 39.9888822,
+      "lng": -104.7497281,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "100 W Littleton Blvd, Littleton, Colorado, 80120-2406, United States",
+      "lat": 39.6121624,
+      "lng": -104.9898169,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "101 Englewood Pkwy, Englewood, Colorado, 80110-2427, United States",
+      "lat": 39.65575920000001,
+      "lng": -104.9894517,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "102 W 29th St, Pueblo, Colorado, 81008-1002, United States",
+      "lat": 38.2974807,
+      "lng": -104.6065421,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "10351 Federal Blvd, Westminster, Colorado, 80260-7431, United States",
+      "lat": 39.8833858,
+      "lng": -105.0277978,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "10406 E 29th Dr, Denver, Colorado, 80238-2326, United States",
+      "lat": 39.7586559,
+      "lng": -104.8669147,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "10406 Martin Luther King Blvd, Denver, Colorado, 80238-3104, United States",
+      "lat": 39.7596344,
+      "lng": -104.8664455,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1045 S 1st St, Bennett, Colorado, 80102, United States",
+      "lat": 39.7429454,
+      "lng": -104.4348492,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1150 US Highway 287, Broomfield, Colorado, 80020-7001, United States",
+      "lat": 39.9332002,
+      "lng": -105.0880744,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1155 E 9th Ave, Denver, Colorado, 80218-4802, United States",
+      "lat": 39.7310829,
+      "lng": -104.9734769,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1155 S Havana St, Aurora, Colorado, 80012-4019, United States",
+      "lat": 39.6951586,
+      "lng": -104.8680829,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "12043 W Alameda Pkwy, Lakewood, Colorado, 80228-2701, United States",
+      "lat": 39.7086331,
+      "lng": -105.1373167,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "12167 Sheridan Blvd, Broomfield, Colorado, 80020-2459, United States",
+      "lat": 39.9170996,
+      "lng": -105.0555588,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "12350 W 64th Ave, Arvada, Colorado, 80004-4016, United States",
+      "lat": 39.8111941,
+      "lng": -105.1365857,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "12959 S Parker Rd, Parker, Colorado, 80134-3447, United States",
+      "lat": 39.4795174,
+      "lng": -104.7597509,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1331 Speer Blvd, Denver, Colorado, 80204-2512, United States",
+      "lat": 39.73730219999999,
+      "lng": -104.9978168,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1355 Krameria St, Denver, Colorado, 80220-2729, United States",
+      "lat": 39.7376309,
+      "lng": -104.9175966,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "13700 Colorado Blvd, Thornton, Colorado, 80602-7024, United States",
+      "lat": 39.9446246,
+      "lng": -104.937745,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1520 Main St, Windsor, Colorado, 80550-7909, United States",
+      "lat": 40.4814253,
+      "lng": -104.9277519,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "15250 E Mississippi Ave, Aurora, Colorado, 80012-3768, United States",
+      "lat": 39.6951005,
+      "lng": -104.8109431,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1545 S Kipling Pkwy, Lakewood, Colorado, 80232-6236, United States",
+      "lat": 39.6905432,
+      "lng": -105.1195126,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1545 S Kipling Pkwy, Lakewood, Colorado, 80232-6374, United States",
+      "lat": 39.6905432,
+      "lng": -105.1195126,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1555 Quail St, Lakewood, Colorado, 80215-6251, United States",
+      "lat": 39.7421148,
+      "lng": -105.1253473,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1575 W 84th Ave, Denver, Colorado, 80260-4786, United States",
+      "lat": 39.8503795,
+      "lng": -105.0046816,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1611 Pace St, Longmont, Colorado, 80504-3052, United States",
+      "lat": 40.186645,
+      "lng": -105.0760629,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1650 30th St, Boulder, Colorado, 80301-1014, United States",
+      "lat": 40.0150377,
+      "lng": -105.2532955,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "17000 E Iliff Ave, Aurora, Colorado, 80013-1520, United States",
+      "lat": 39.6722383,
+      "lng": -104.7896533,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "17031 Lincoln Ave, Parker, Colorado, 80134-3144, United States",
+      "lat": 39.534933,
+      "lng": -104.7902711,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "17031 Lincoln Ave, Parker, Colorado, 80134-3161, United States",
+      "lat": 39.534933,
+      "lng": -104.7902711,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "17171 S Golden Rd, Golden, Colorado, 80401-7334, United States",
+      "lat": 39.7394054,
+      "lng": -105.1929718,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1725 Sheridan Blvd, Edgewater, Colorado, 80214-1303, United States",
+      "lat": 39.74624230000001,
+      "lng": -105.0550108,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1725 Sheridan Blvd, Edgewater, Colorado, 80214-1323, United States",
+      "lat": 39.74624230000001,
+      "lng": -105.0550108,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1750 W Uintah St, Colorado Springs, Colorado, 80904-2926, United States",
+      "lat": 38.8490225,
+      "lng": -104.8471037,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1750 W Uintah St, Colorado Springs, Colorado, 80904-2972, United States",
+      "lat": 38.8490225,
+      "lng": -104.8471037,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "18211 E Hampden Ave, Aurora, Colorado, 80013-3532, United States",
+      "lat": 39.655105,
+      "lng": -104.776164,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1842 N College Ave, Fort Collins, Colorado, 80524-1323, United States",
+      "lat": 40.6117271,
+      "lng": -105.0740078,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "18605 Green Valley Ranch Blvd, Denver, Colorado, 80249-6832, United States",
+      "lat": 39.7851234,
+      "lng": -104.7701899,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1891 State Highway 7, Erie, Colorado, 80516-8003, United States",
+      "lat": 40.0022288,
+      "lng": -105.0099019,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1927 S Wadsworth Blvd, Lakewood, Colorado, 80227-3271, United States",
+      "lat": 39.6813014,
+      "lng": -105.0832331,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "1950 Chestnut Pl, Denver, Colorado, 80202-6059, United States",
+      "lat": 39.7570993,
+      "lng": -104.9988,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "19711 E Smoky Hill Rd, Centennial, Colorado, 80015-5194, United States",
+      "lat": 39.6144195,
+      "lng": -104.7582924,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2100 35th Ave, Greeley, Colorado, 80634-3910, United States",
+      "lat": 40.4047742,
+      "lng": -104.7330443,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2205 W Wildcat Reserve Pkwy, Littleton, Colorado, 80129-5496, United States",
+      "lat": 39.5364574,
+      "lng": -105.0136452,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2255 Main St, Longmont, Colorado, 80501-1417, United States",
+      "lat": 40.1976969,
+      "lng": -105.1030394,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2255 Main St, Longmont, Colorado, 80501-1488, United States",
+      "lat": 40.1976969,
+      "lng": -105.1030394,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2325 S College Ave, Fort Collins, Colorado, 80525-1721, United States",
+      "lat": 40.557004,
+      "lng": -105.0786039,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2355 W 136th Ave, Broomfield, Colorado, 80023-9331, United States",
+      "lat": 39.94409,
+      "lng": -105.0141018,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "253 E 29th St, Loveland, Colorado, 80538-2721, United States",
+      "lat": 40.4234289,
+      "lng": -105.0769114,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2602 S Timberline Rd, Fort Collins, Colorado, 80525, United States",
+      "lat": 40.5519654,
+      "lng": -105.0379169,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2712 11th Ave, Greeley, Colorado, 80631-8443, United States",
+      "lat": 40.3925161,
+      "lng": -104.6946786,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2727 W Evans Ave, Denver, Colorado, 80219-5507, United States",
+      "lat": 39.67982550000001,
+      "lng": -105.021041,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2750 S Colorado Blvd, Denver, Colorado, 80222-6602, United States",
+      "lat": 39.6666983,
+      "lng": -104.937204,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2810 Quebec St, Denver, Colorado, 80207-2900, United States",
+      "lat": 39.7562436,
+      "lng": -104.9026975,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2910 S Academy Blvd, Colorado Springs, Colorado, 80916-3000, United States",
+      "lat": 38.7904609,
+      "lng": -104.7606625,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "2910 S Academy Blvd, Colorado Springs, Colorado, 80916-3004, United States",
+      "lat": 38.7904609,
+      "lng": -104.7606625,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3050 S Peoria St, Aurora, Colorado, 80014-3153, United States",
+      "lat": 39.66119,
+      "lng": -104.8445708,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3050 W Northern Ave, Pueblo, Colorado, 81005-2317, United States",
+      "lat": 38.2424483,
+      "lng": -104.6469755,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3100 S Sheridan Blvd, Denver, Colorado, 80227-5501, United States",
+      "lat": 39.6560037,
+      "lng": -105.0508573,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3100 S Sheridan Blvd, Denver, Colorado, 80227-5541, United States",
+      "lat": 39.6560037,
+      "lng": -105.0508573,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "325 Crossing Dr, Lafayette, Colorado, 80026-1742, United States",
+      "lat": 40.0006349,
+      "lng": -105.10097,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3250 Centennial Blvd, Colorado Springs, Colorado, 80907-4077, United States",
+      "lat": 38.8764127,
+      "lng": -104.8488096,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3400 Youngfield St, Wheat Ridge, Colorado, 80033-5245, United States",
+      "lat": 39.7650295,
+      "lng": -105.1412457,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3400 Youngfield St, Wheat Ridge, Colorado, 80033-5250, United States",
+      "lat": 39.7650295,
+      "lng": -105.1412457,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3495 S University Blvd, Englewood, Colorado, 80113-3139, United States",
+      "lat": 39.6537035,
+      "lng": -104.9606361,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3600 Table Mesa Dr, Boulder, Colorado, 80305-5800, United States",
+      "lat": 39.9834503,
+      "lng": -105.2513418,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3620 Austin Bluffs Pkwy, Colorado Springs, Colorado, 80918-6631, United States",
+      "lat": 38.8920941,
+      "lng": -104.7610271,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3801 E 120th Ave, Thornton, Colorado, 80233-6700, United States",
+      "lat": 39.914814,
+      "lng": -104.9434923,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "3801 E 120th Ave, Thornton, Colorado, 80233-6701, United States",
+      "lat": 39.914814,
+      "lng": -104.9434923,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "4000 Red Cedar Dr, Littleton, Colorado, 80126-8067, United States",
+      "lat": 39.5255681,
+      "lng": -104.9407106,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "4271 S Buckley Rd, Aurora, Colorado, 80013-2901, United States",
+      "lat": 39.6393879,
+      "lng": -104.7934826,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "4503 John F Kennedy Pkwy, Fort Collins, Colorado, 80525-3250, United States",
+      "lat": 40.5250069,
+      "lng": -105.0733327,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "4600 Leetsdale Dr, Glendale, Colorado, 80246-1311, United States",
+      "lat": 39.7086489,
+      "lng": -104.9324972,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "4910 S Yosemite St, Greenwood Village, Colorado, 80111-1383, United States",
+      "lat": 39.6265596,
+      "lng": -104.8841927,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "500 E Bromley Ln, Brighton, Colorado, 80601-5505, United States",
+      "lat": 39.97021,
+      "lng": -104.8160961,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "5050 S Federal Blvd, Englewood, Colorado, 80110-6342, United States",
+      "lat": 39.6263496,
+      "lng": -105.0246933,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "5050 S Federal Blvd, Englewood, Colorado, 80110-6361, United States",
+      "lat": 39.6263496,
+      "lng": -105.0246933,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "5301 W 38th Ave, Wheat Ridge, Colorado, 80212-7058, United States",
+      "lat": 39.7694437,
+      "lng": -105.0546144,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "5544 Promenade Pkwy, Castle Rock, Colorado, 80108-1903, United States",
+      "lat": 39.4154874,
+      "lng": -104.8797594,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "5801 Silverstone Dr, Frederick, Colorado, 80504-6066, United States",
+      "lat": 40.0899593,
+      "lng": -104.9437451,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "6030 Stetson Hills Blvd, Colorado Springs, Colorado, 80923-3562, United States",
+      "lat": 38.9122475,
+      "lng": -104.7158891,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "6110 Firestone Blvd, Firestone, Colorado, 80504-6425, United States",
+      "lat": 40.1590738,
+      "lng": -104.9394329,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "6412 S Parker Rd, Aurora, Colorado, 80016-3011, United States",
+      "lat": 39.6001698,
+      "lng": -104.8030488,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "6470 E Hampden Ave, Denver, Colorado, 80222-7605, United States",
+      "lat": 39.6518351,
+      "lng": -104.9141556,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "6922 W 10th St, Greeley, Colorado, 80634-9726, United States",
+      "lat": 40.4199148,
+      "lng": -104.7922062,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "750 N Ridge Rd, Castle Rock, Colorado, 80104-8950, United States",
+      "lat": 39.3746415,
+      "lng": -104.8273095,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "7530 Falcon Market Pl, Peyton, Colorado, 80831, United States",
+      "lat": 38.9431915,
+      "lng": -104.6100951,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "7915 Constitution Ave, Colorado Springs, Colorado, 80951-8901, United States",
+      "lat": 38.8662243,
+      "lng": -104.6803001,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "7984 W Alameda Ave, Lakewood, Colorado, 80226-3025, United States",
+      "lat": 39.7096917,
+      "lng": -105.0853178,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "8126 S Wadsworth Blvd, Littleton, Colorado, 80128-9118, United States",
+      "lat": 39.5684929,
+      "lng": -105.0814977,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "815 Cheyenne Meadows Rd, Colorado Springs, Colorado, 80906-4902, United States",
+      "lat": 38.7769141,
+      "lng": -104.8148295,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "815 Cheyenne Meadows Rd, Colorado Springs, Colorado, 80906-4929, United States",
+      "lat": 38.7769141,
+      "lng": -104.8148295,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "825 Colorado Blvd, Denver, Colorado, 80206-4037, United States",
+      "lat": 39.7296591,
+      "lng": -104.9410815,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "825 S Colorado Blvd, Denver, Colorado, 80246, United States",
+      "lat": 39.7017587,
+      "lng": -104.9411669,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "890 S Monaco Pkwy, Denver, Colorado, 80224-1569, United States",
+      "lat": 39.7010176,
+      "lng": -104.911327,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "890 S Monaco Pkwy, Denver, Colorado, 80224-1574, United States",
+      "lat": 39.7010176,
+      "lng": -104.911327,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "9731 W 58th Ave, Arvada, Colorado, 80002-2009, United States",
+      "lat": 39.8031546,
+      "lng": -105.1065889,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "9820 W Belleview Ave, Littleton, Colorado, 80123-2101, United States",
+      "lat": 39.6232678,
+      "lng": -105.1074383,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "995 S Hover St, Longmont, Colorado, 80501-7908, United States",
+      "lat": 40.1505035,
+      "lng": -105.1341187,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "9983 Wadsworth Pkwy, Westminster, Colorado, 80021-4249, United States",
+      "lat": 39.8763553,
+      "lng": -105.0977733,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "S 1st St, Bennett, Colorado, 80102-7912, United States",
+      "lat": 39.7475379,
+      "lng": -104.433298,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "S Timberline Rd, Fort Collins, Colorado, 80525-2401, United States",
+      "lat": 40.5232146,
+      "lng": -105.0392256,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "Silverstone Dr, Frederick, Colorado, 80504-6070, United States",
+      "lat": 40.0991506,
+      "lng": -104.9371993,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "US Highway 287, Lafayette, Colorado, 80026-8919, United States",
+      "lat": 40.0182431,
+      "lng": -105.1029429,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers",
+      "address": "Wadsworth Blvd, Arvada, Colorado, 80003-1645, United States",
+      "lat": 39.8338946,
+      "lng": -105.0817468,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers Marketp",
+      "address": "13525 Quebec St, Thornton, Colorado, 80602-8632, United States",
+      "lat": 39.9417471,
+      "lng": -104.9057794,
+      "country": "US"
+    },
+    {
+      "name": "King Soopers Marketp",
+      "address": "14967 Candelas Pkwy, Arvada, Colorado, 80007-7710, United States",
+      "lat": 39.860906,
+      "lng": -105.1675637,
+      "country": "US"
+    },
+    {
+      "name": "Lowes",
+      "address": "10777 E Colfax Ave, Aurora, Colorado, 80010-2402, United States",
+      "lat": 39.7412517,
+      "lng": -104.8627089,
+      "country": "US"
+    },
+    {
+      "name": "Lowes",
+      "address": "1320 S Federal Blvd, Denver, Colorado, 80219-4236, United States",
+      "lat": 39.6924999,
+      "lng": -105.0241454,
+      "country": "US"
+    },
+    {
+      "name": "Lowes",
+      "address": "7305 Pecos St, Denver, Colorado, 80221-2763, United States",
+      "lat": 39.8295757,
+      "lng": -105.0075011,
+      "country": "US"
+    },
+    {
+      "name": "Mi Pueblo Market",
+      "address": "15585 E Colfax Ave, Aurora, Colorado, 80011-5914, United States",
+      "lat": 39.74077279999999,
+      "lng": -104.8066603,
+      "country": "US"
+    },
+    {
+      "name": "Mi Pueblo Market",
+      "address": "6040 E 64th Ave, Commerce City, Colorado, 80022-3319, United States",
+      "lat": 39.8119779,
+      "lng": -104.9191743,
+      "country": "US"
+    },
+    {
+      "name": "Mi Pueblo Market",
+      "address": "9171 Washington St, Thornton, Colorado, 80229-4304, United States",
+      "lat": 39.8632096,
+      "lng": -104.9790168,
+      "country": "US"
+    },
+    {
+      "name": "Mundo ABBA Distribution_reportes de clientes_Standardized (Cesar Flores).csv",
+      "address": "614 Main St, Alamosa, Colorado, 81101-2558, United States",
+      "lat": 37.46792680000001,
+      "lng": -105.8661632,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "1000 W 104th Ave, Northglenn, Colorado, 80234-3802, United States",
+      "lat": 39.8838055,
+      "lng": -104.9982372,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "15220 E 6th Ave, Aurora, Colorado, 80011, United States",
+      "lat": 39.7241463,
+      "lng": -104.812164,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "1750 Main St, Longmont, Colorado, 80501-2062, United States",
+      "lat": 40.1914466,
+      "lng": -105.1010915,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "1951 S Federal Blvd, Denver, Colorado, 80219-5509, United States",
+      "lat": 39.6812701,
+      "lng": -105.025926,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "3045 W 74th Ave, Westminster, Colorado, 80030-4934, United States",
+      "lat": 39.8317419,
+      "lng": -105.026787,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "405 S Circle Dr, Colorado Springs, Colorado, 80910-2318, United States",
+      "lat": 38.8247547,
+      "lng": -104.779337,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "4255 W Florida Ave, Denver, Colorado, 80219-6302, United States",
+      "lat": 39.6905703,
+      "lng": -105.0423849,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "4860 Pecos St, Denver, Colorado, 80221, United States",
+      "lat": 39.7846106,
+      "lng": -105.0055651,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "4874 Chambers Rd, Denver, Colorado, 80239, United States",
+      "lat": 39.7860844,
+      "lng": -104.808531,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "630 W 84th Ave, Thornton, Colorado, 80260-4818, United States",
+      "lat": 39.8481973,
+      "lng": -104.9954769,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "7150 Leetsdale Dr, Denver, Colorado, 80224-1999, United States",
+      "lat": 39.6982272,
+      "lng": -104.90494,
+      "country": "US"
+    },
+    {
+      "name": "Save A Lot",
+      "address": "816 25th St, Greeley, Colorado, 80631-8424, United States",
+      "lat": 40.39664459999999,
+      "lng": -104.6923383,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "10900 E Briarwood Ave, Englewood, Colorado, 80112-3820, United States",
+      "lat": 39.5905638,
+      "lng": -104.8618094,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "11101 S Parker Rd, Parker, Colorado, 80134-4773, United States",
+      "lat": 39.5141239,
+      "lng": -104.7674401,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1155 S Camino del Rio, Durango, Colorado, 81303-6698, United States",
+      "lat": 37.2299984,
+      "lng": -107.8656151,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1250 E Magnolia St, Fort Collins, Colorado, 80524, United States",
+      "lat": 40.586224,
+      "lng": -105.0547234,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "14000 E Exposition Ave, Aurora, Colorado, 80012-2538, United States",
+      "lat": 39.7024825,
+      "lng": -104.825796,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1575 Space Center Dr, Colorado Springs, Colorado, 80915-2441, United States",
+      "lat": 38.8553772,
+      "lng": -104.7221989,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "1622 S Academy Blvd, Colorado Springs, Colorado, 80916-4521, United States",
+      "lat": 38.8076084,
+      "lng": -104.7585659,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "16750 S Townsend Ave, Montrose, Colorado, 81401-5410, United States",
+      "lat": 38.4492491,
+      "lng": -107.8631999,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "171 Yoder Ave, Avon, Colorado, 81620, United States",
+      "lat": 39.6277237,
+      "lng": -106.5005793,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "200 W 136th Ave, Westminster, Colorado, 80234-1204, United States",
+      "lat": 39.94079809999999,
+      "lng": -104.9911611,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2000 W Victory Way, Craig, Colorado, 81625-3440, United States",
+      "lat": 40.5115413,
+      "lng": -107.569604,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2285 E Ken Pratt Blvd, Longmont, Colorado, 80504-5223, United States",
+      "lat": 40.15812349999999,
+      "lng": -105.0484486,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "250 W 65th St, Loveland, Colorado, 80538, United States",
+      "lat": 40.4567837,
+      "lng": -105.0798535,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2545 Rimrock Ave, Grand Junction, Colorado, 81505-8664, United States",
+      "lat": 39.0762355,
+      "lng": -108.5817099,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2770 W Evans Ave, Denver, Colorado, 80219-5575, United States",
+      "lat": 39.6777029,
+      "lng": -105.0216102,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2881 North Ave, Grand Junction, Colorado, 81501-5064, United States",
+      "lat": 39.0761334,
+      "lng": -108.5188608,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "2921 Toupal Dr, Trinidad, Colorado, 81082, United States",
+      "lat": 37.1387108,
+      "lng": -104.5232765,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3010 Blake Ave, Glenwood Springs, Colorado, 81601-4400, United States",
+      "lat": 39.5220117,
+      "lng": -107.3198286,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3103 S 23rd Ave, Greeley, Colorado, 80631-8702, United States",
+      "lat": 40.3907393,
+      "lng": -104.7158787,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3201 E Platte Ave, Colorado Springs, Colorado, 80909, United States",
+      "lat": 38.8374238,
+      "lng": -104.77051,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3301 Tower Rd, Aurora, Colorado, 80011-3509, United States",
+      "lat": 39.7616489,
+      "lng": -104.7744106,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "3333 Clark St, Alamosa, Colorado, 81101-2050, United States",
+      "lat": 37.48192280000001,
+      "lng": -105.9046347,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4080 W Northern Ave, Pueblo, Colorado, 81005-3503, United States",
+      "lat": 38.2322758,
+      "lng": -104.6649638,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4200 Dillon Dr, Pueblo, Colorado, 81008-2113, United States",
+      "lat": 38.3138791,
+      "lng": -104.6102624,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "440 Wadsworth Blvd, Lakewood, Colorado, 80226-1510, United States",
+      "lat": 39.7222064,
+      "lng": -105.0809619,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "4425 Venetucci Blvd, Colorado Springs, Colorado, 80906-4013, United States",
+      "lat": 38.7686723,
+      "lng": -104.7811381,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "500 Summit Blvd, Broomfield, Colorado, 80021-8219, United States",
+      "lat": 39.925813,
+      "lng": -105.135976,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5141 N Chambers Rd, Denver, Colorado, 80239-4231, United States",
+      "lat": 39.7862243,
+      "lng": -104.8113543,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5650 S Chambers Rd, Aurora, Colorado, 80015-1184, United States",
+      "lat": 39.6138182,
+      "lng": -104.8115933,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5957 W 44th Ave, Lakeside, Colorado, 80212-7410, United States",
+      "lat": 39.7788039,
+      "lng": -105.0612333,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "5990 Dahlia St, Commerce City, Colorado, 80022-3708, United States",
+      "lat": 39.8045287,
+      "lng": -104.9280665,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6 Conley Rd, La Junta, Colorado, 81050-9640, United States",
+      "lat": 37.9981629,
+      "lng": -103.5932018,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "60 W Bromley Ln, Brighton, Colorado, 80601-3026, United States",
+      "lat": 39.9691446,
+      "lng": -104.8238839,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "601 Englewood Pkwy, Englewood, Colorado, 80110, United States",
+      "lat": 39.6558471,
+      "lng": -104.995041,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6101 S Aurora Pkwy, Aurora, Colorado, 80016-5801, United States",
+      "lat": 39.6063102,
+      "lng": -104.7048842,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6310 S US-85-87, Fountain, Colorado, 80817-1006, United States",
+      "lat": 38.7403649,
+      "lng": -104.7369634,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "665 N Murray Blvd, Colorado Springs, Colorado, 80915-3405, United States",
+      "lat": 38.8431142,
+      "lng": -104.7468059,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "6675 Business Center Dr, Littleton, Colorado, 80130-3603, United States",
+      "lat": 39.5623584,
+      "lng": -104.9107795,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7101 E 128th Ave, Brighton, Colorado, 80602-9101, United States",
+      "lat": 39.9309175,
+      "lng": -104.9053708,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7101 E 128th Ave, Thornton, Colorado, 80602-9101, United States",
+      "lat": 39.9309175,
+      "lng": -104.9053708,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7155 Sheridan Blvd, Westminster, Colorado, 80003-3803, United States",
+      "lat": 39.8250334,
+      "lng": -105.0557624,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "745 US Highway 287, Lafayette, Colorado, 80026, United States",
+      "lat": 40.0057779,
+      "lng": -105.1050833,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7455 W Colfax Ave, Lakewood, Colorado, 80214-5405, United States",
+      "lat": 39.7426766,
+      "lng": -105.079456,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "78 N McCulloch Blvd, Pueblo, Colorado, 81007-4444, United States",
+      "lat": 38.3366612,
+      "lng": -104.740107,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "7800 Smith Rd, Denver, Colorado, 80207-1719, United States",
+      "lat": 39.7696229,
+      "lng": -104.8973183,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "8250 Razorback Rd, Colorado Springs, Colorado, 80920-3995, United States",
+      "lat": 38.9497411,
+      "lng": -104.8005946,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "850 E 88th Ave, Thornton, Colorado, 80229-4999, United States",
+      "lat": 39.8549885,
+      "lng": -104.9752091,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9400 E Hampden Ave, Denver, Colorado, 80231-5414, United States",
+      "lat": 39.6518006,
+      "lng": -104.8783294,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9400 Ralston Rd, Arvada, Colorado, 80002-2370, United States",
+      "lat": 39.8005201,
+      "lng": -105.1026902,
+      "country": "US"
+    },
+    {
+      "name": "Walmart",
+      "address": "9901 Grant St, Thornton, Colorado, 80229-2157, United States",
+      "lat": 39.8762395,
+      "lng": -104.9862003,
+      "country": "US"
+    }
+  ]
+}
