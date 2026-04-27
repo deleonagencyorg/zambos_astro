@@ -313,8 +313,14 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
         setTimeout(callback, 400);
         return;
       }
+      // Script already injected but still loading – just update the callback
+      if (document.querySelector('script[data-sl-maps]')) {
+        window.__slMapReady = callback;
+        return;
+      }
       window.__slMapReady = callback;
       var s = document.createElement("script");
+      s.setAttribute('data-sl-maps', '1');
       s.src =
         "https://maps.googleapis.com/maps/api/js" +
         "?key=" +
@@ -502,6 +508,13 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
           sl.map.setZoom(10);
           hideStatus();
           hideSkeleton();
+          // Extra resize triggers for iOS/Android/Chrome after skeleton removed
+          [300, 700, 1200].forEach(function (d) {
+            setTimeout(function () {
+              if (sl.map) google.maps.event.trigger(sl.map, "resize");
+            }, d);
+          });
+          showStatus("Loading stores near your location\u2026", "loading");
           reverseGeocodeState(lat, lng, function (code) {
             if (code) {
               loadStoresForState(code, lat, lng);
@@ -527,6 +540,11 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
       if (c) {
         sl.map.setCenter({ lat: c.lat, lng: c.lng });
         sl.map.setZoom(6);
+        // Pre-fill form so user sees Florida is selected
+        var stateInput = $("sl-state-input");
+        if (stateInput) stateInput.value = "FL";
+        var cityInput = $("sl-city");
+        if (cityInput) cityInput.value = "Florida";
         loadStoresForState(defaultState, c.lat, c.lng);
       }
     }
@@ -889,12 +907,10 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || "";
       loadMapsApi(mapsApiKey, initMap);
     }
 
+    // astro:page-load fires on both initial load and Astro navigations
+    // Do NOT add DOMContentLoaded/readyState fallback – it causes boot() to run
+    // twice on the initial load, injecting the Maps script twice → blank map.
     document.addEventListener("astro:page-load", boot);
-    if (document.readyState !== "loading") {
-      boot();
-    } else {
-      document.addEventListener("DOMContentLoaded", boot);
-    }
   })();
 </script>
 
