@@ -210,12 +210,19 @@ const servings = recipe.servings || 4;
     </div>
     </div>
 
-    <!-- White decorative line - full viewport width at bottom of hero, mobile and tablet -->
-    <img
-      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/lineblueus.webp"
-      alt=""
-      class="block lg:hidden w-full pointer-events-none absolute -bottom-[16%] md:-bottom-[20%] left-0 z-20"
-    />
+      <!-- White decorative line - desktop only -->
+      <img
+        src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp"
+        alt=""
+        class="hidden lg:block w-full pointer-events-none absolute bottom-0 left-0 z-20"
+      />
+
+      <!-- Blue decorative line - mobile and tablet only -->
+      <img
+        src="https://snack.yummiespromociones.com/SnacksyummiesAssets/lineblueus.webp"
+        alt=""
+        class="block lg:hidden w-full pointer-events-none absolute -bottom-[16%] md:-bottom-[20%] left-0 z-20"
+      />
 
   </section>
 
@@ -501,7 +508,7 @@ const servings = recipe.servings || 4;
   <img
     src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp"
     alt=""
-    class="block lg:hidden w-full pointer-events-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]"
+    class="block lg:hidden w-full pointer-events-none "
   />
 
   <!-- ===== ALL NATURAL / IT'S THAT VIBE SECTION ===== -->
