@@ -14,7 +14,7 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || '';
   </div>
 
   <!-- Status bar -->
-  <div id="sl-status" class="sl-status" style="display:none;"></div>
+  <div id="sl-status" class="sl-status sl-status--loading" style="display: block;">Loading store locator...</div>
 
   <!-- Main layout: form col + map col -->
   <div class="sl-main">
@@ -80,7 +80,7 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || '';
 
     <!-- RIGHT: Map -->
     <div class="sl-map-col">
-      <div id="sl-map" class="sl-map"></div>
+      <div id="sl-map" class="sl-map loading"></div>
     </div>
 
   </div>
@@ -210,6 +210,13 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || '';
       ],
     });
 
+    // Map loading state management
+    container.classList.add('loaded');
+    container.classList.remove('loading');
+    
+    // Hide loading status after map is initialized
+    hideStatus();
+    
     sl.infoWindow = new google.maps.InfoWindow();
 
     setupAutocomplete();
@@ -304,7 +311,11 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || '';
 
   // ── Geolocation ────────────────────────────────────────────────────────────
   function requestGeolocation() {
-    if (!navigator.geolocation) return;
+    if (!navigator.geolocation) {
+      // Si no hay geolocalización disponible, cargar California por defecto
+      loadDefaultState();
+      return;
+    }
     showStatus('Detecting your location…', 'loading');
     navigator.geolocation.getCurrentPosition(
       function (pos) {
@@ -326,9 +337,22 @@ const mapsApiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY || '';
       },
       function () {
         hideStatus();
+        // Si el usuario rechaza o hay error, cargar California por defecto
+        loadDefaultState();
       },
       { timeout: 10000, enableHighAccuracy: false }
     );
+  }
+
+  function loadDefaultState() {
+    // Cargar California (CA) por defecto - estado con más tiendas
+    var defaultState = 'CA';
+    var c = STATE_CENTROIDS[defaultState];
+    if (c) {
+      sl.map.setCenter({ lat: c.lat, lng: c.lng });
+      sl.map.setZoom(6);
+      loadStoresForState(defaultState, c.lat, c.lng);
+    }
   }
 
   function reverseGeocodeState(lat, lng, callback) {

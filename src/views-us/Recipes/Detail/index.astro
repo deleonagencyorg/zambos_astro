@@ -197,18 +197,184 @@ function formatTime(minutes: number): string {
   </section>
 
   <!-- Related Recipes Section -->
-  <section class="py-12 px-4">
+  <!-- Explore More Recipes Section -->
+  <section class="py-12 px-4 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bg-explore-more.webp');">
     <div class="w-full max-w-6xl mx-auto">
-      <div class="flex flex-col items-center mb-8 gap-4 text-center">
-        <h2 class="text-3xl md:text-5xl font-bold font-title uppercase">
-          <span class="text-us-green">{currentLang === 'es' ? 'RECETAS ' : 'SIMILAR '}</span><span class="text-us-red">{currentLang === 'es' ? 'SIMILARES' : 'RECIPES'}</span>
+      <!-- Title -->
+      <div class="mb-10">
+        <h2 class="font-us-title font-bold uppercase leading-none">
+          <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-[#A8D648]" style="white-space: nowrap;">
+            {currentLang === 'es' ? 'EXPLORA MÁS' : 'EXPLORE MORE'}
+          </span>
+          <span class="block text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white" style="white-space: nowrap;">
+            {currentLang === 'es' ? 'RECETAS ZAMBOS' : 'ZAMBOS RECIPES'}
+          </span>
         </h2>
-        <p class="text-us-green font-bold text-sm md:text-base">
-          {currentLang === 'es' ? 'Descubre mas recetas de la familia Zambos.' : 'Discover more recipes from the Zambos family.'}
-        </p>
       </div>
 
-      <RecipesCarousel items={relatedRecipes} />
+      <!-- Carousel with White Cards -->
+      <div class="relative explore-carousel-container">
+        <!-- Prev Button -->
+        <button
+          type="button"
+          class="explore-carousel-prev absolute left-0 top-1/2 z-50 bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl"
+          style="transform: translateY(-50%);"
+          aria-label="Previous"
+        >
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+
+        <!-- Carousel Grid -->
+        <div class="explore-recipes-grid flex gap-4 overflow-hidden px-12 sm:px-16">
+          {relatedRecipes.slice(0, 6).map((recipe) => (
+            <div class="explore-recipe-card flex-shrink-0 w-full sm:w-[calc(50%-8px)]" data-recipe-id={recipe.id}>
+              <a href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`} class="block group h-full">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-[1.02] h-full flex flex-col">
+                  <!-- Image -->
+                  <div class="relative h-48 sm:h-56 overflow-hidden">
+                    <img
+                      src={recipe.image || '/images/recipes/placeholder.jpg'}
+                      alt={recipe.title}
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <!-- Content -->
+                  <div class="p-4 flex flex-col flex-1">
+                    <!-- Category Badge -->
+                    <span class="inline-block self-start px-3 py-1 bg-[#0E6D20] text-white font-bold text-xs uppercase rounded-md mb-2">
+                      APPETIZER
+                    </span>
+                    <!-- Title -->
+                    <h3 class="font-bold text-[#0E6D20] text-sm sm:text-base uppercase leading-tight mb-2 flex-1">
+                      {recipe.title}
+                    </h3>
+                    <!-- Description -->
+                    <p class="text-[#B71C1C] text-xs sm:text-sm line-clamp-3">
+                      {recipe.description || (currentLang === 'es' ? 'Deliciosa receta preparada con Zambos.' : 'Delicious recipe prepared with Zambos.')}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          ))}
+        </div>
+
+        <!-- Next Button -->
+        <button
+          type="button"
+          class="explore-carousel-next absolute right-0 top-1/2 z-50 bg-[#B71C1C] text-white w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center opacity-100 hover:scale-110 transition-all duration-300 shadow-xl"
+          style="transform: translateY(-50%);"
+          aria-label="Next"
+        >
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <style>
+        .explore-carousel-container {
+          position: relative;
+          width: 100%;
+        }
+
+        .explore-recipes-grid {
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: stretch;
+        }
+
+        .explore-recipe-card {
+          flex: 0 0 100%;
+          max-width: 100%;
+          transition: all 0.3s ease;
+        }
+
+        /* Mobile: 1 card */
+        @media (max-width: 639px) {
+          .explore-recipe-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+
+        /* Desktop: 2 cards */
+        @media (min-width: 640px) {
+          .explore-recipes-grid {
+            gap: 16px;
+          }
+          
+          .explore-recipe-card {
+            flex: 0 0 calc(50% - 8px);
+            max-width: calc(50% - 8px);
+          }
+        }
+
+        .explore-carousel-prev,
+        .explore-carousel-next {
+          cursor: pointer;
+          pointer-events: auto;
+        }
+
+        .explore-carousel-prev:hover,
+        .explore-carousel-next:hover {
+          transform: translateY(-50%) scale(1.1);
+        }
+
+        .explore-carousel-prev:active,
+        .explore-carousel-next:active {
+          transform: translateY(-50%) scale(0.95);
+        }
+      </style>
+
+      <script>
+        (function() {
+          const container = document.querySelector('.explore-carousel-container');
+          if (!container) return;
+
+          const prevBtn = container.querySelector('.explore-carousel-prev');
+          const nextBtn = container.querySelector('.explore-carousel-next');
+          const track = container.querySelector('.explore-recipes-grid');
+          const cards = container.querySelectorAll('.explore-recipe-card');
+
+          if (!prevBtn || !nextBtn || !track || !cards.length) return;
+
+          let currentPage = 0;
+          const itemsPerPage = window.innerWidth < 640 ? 1 : 2;
+          const totalPages = Math.ceil(cards.length / itemsPerPage);
+
+          function showPage(page) {
+            page = Math.max(0, Math.min(page, totalPages - 1));
+            currentPage = page;
+
+            const offset = page * 100;
+            track.style.transform = `translateX(-${offset}%)`;
+
+            // Update button states
+            prevBtn.style.opacity = currentPage === 0 ? '0.4' : '1';
+            nextBtn.style.opacity = currentPage >= totalPages - 1 ? '0.4' : '1';
+          }
+
+          prevBtn.addEventListener('click', () => showPage(currentPage - 1));
+          nextBtn.addEventListener('click', () => showPage(currentPage + 1));
+
+          // Initialize
+          showPage(0);
+
+          // Handle resize
+          window.addEventListener('resize', () => {
+            const newItemsPerPage = window.innerWidth < 640 ? 1 : 2;
+            if (newItemsPerPage !== itemsPerPage) {
+              location.reload();
+            }
+          });
+        })();
+      </script>
+
+      <!-- View All Button -->
       <div class="flex justify-center mt-8">
         <a
           href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}`}
@@ -217,8 +383,74 @@ function formatTime(minutes: number): string {
           {currentLang === 'es' ? 'VER TODAS' : 'VIEW ALL'}
         </a>
       </div>
-    </div>
   </section>
+
+  
+</div>
+
+<!-- Tab Switching Script -->
+<script>
+  function initRecipeTabs() {
+    const ingredientsTab = document.getElementById('ingredientsTab');
+    const preparationTab = document.getElementById('preparationTab');
+    const ingredientsContent = document.getElementById('ingredientsContent');
+    const preparationContent = document.getElementById('preparationContent');
+
+    if (!ingredientsTab || !preparationTab || !ingredientsContent || !preparationContent) return;
+    if (ingredientsTab.dataset.bound === 'true') return;
+    ingredientsTab.dataset.bound = 'true';
+
+    ingredientsTab.addEventListener('click', () => {
+      ingredientsTab.classList.add('tab-active', 'bg-us-red', 'text-white');
+      ingredientsTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
+      preparationTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
+      preparationTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
+      ingredientsContent.classList.remove('hidden');
+      preparationContent.classList.add('hidden');
+    });
+
+    preparationTab.addEventListener('click', () => {
+      preparationTab.classList.add('tab-active', 'bg-us-red', 'text-white');
+      preparationTab.classList.remove('tab-inactive', 'bg-white', 'text-us-green');
+      ingredientsTab.classList.add('tab-inactive', 'bg-white', 'text-us-green');
+      ingredientsTab.classList.remove('tab-active', 'bg-us-red', 'text-white');
+      preparationContent.classList.remove('hidden');
+      ingredientsContent.classList.add('hidden');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initRecipeTabs);
+  document.addEventListener('astro:page-load', initRecipeTabs);
+  document.addEventListener('astro:after-swap', initRecipeTabs);
+</script>
+
+<!-- Share Modal -->
+<ShareModal
+  id="shareModal-recipe"
+  url={canonicalShareUrl}
+  title={recipe.title}
+  description={recipe.description}
+  hashtags={recipe.tags || []}
+  showLabels={false}
+  iconSize={40}
+  round={true}
+  openTextEs="Comparte esta receta en tus redes sociales"
+  openTextEn="Share this recipe on your social networks"
+  acceptTextEs="Aceptar"
+  acceptTextEn="Accept"
+/>
+
+<!-- Ingredients Carousel Script -->
+<script>
+  // Initialize the ingredients carousel if the element exists
+  document.addEventListener('DOMContentLoaded', () => {
+    const ingredientsCarousel = document.querySelector('[data-ingredients-carousel]');
+    if (ingredientsCarousel) {
+      // Add any specific initialization if needed
+      console.log('Ingredients carousel initialized');
+    }
+  });
+</script>
 
  
 </div>

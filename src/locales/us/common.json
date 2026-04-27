@@ -99,7 +99,16 @@
       "text": "Products",
       "href": "/us/products"
     },
-
+    {
+      "id": "recipes",
+      "text": "Recipes",
+      "href": "/us/recipes"
+    },
+    {
+      "id": "news",
+      "text": "Blog",
+      "href": "/us/blog"
+    },
     {
       "id": "contact",
       "text": "Contact",
