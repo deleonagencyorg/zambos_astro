@@ -5,6 +5,7 @@ import MainLayout from '../../layouts/MainLayoutUS.astro';
 import './styles.css';
 import BlogCard from '../../components/blog/BlogCard.astro';
 import NewsCarousel from '../../components/blog/NewsCarousel.astro';
+import LazyImage from '../../components/common/LazyImage.astro';
 
 export interface Props {
   currentLang: Locale;
@@ -16,61 +17,79 @@ const { currentLang, blogPosts } = Astro.props;
 const posts = Array.isArray(blogPosts) ? blogPosts : [];
 
 const filterLabels = {
-  oldest: 'OLDEST',
-  newest: 'NEWEST',
-  all: 'ALL'
+  oldest: 'OLDER POSTS',
+  newest: 'NEWER POSTS',
+  all: 'VIEW ALL'
 };
 
 const pageTitle = 'News';
 const pageDescription = 'Stay updated with our latest news and articles.';
 const noPostsText = 'No blog posts available at this time.';
-const loadMoreText = 'LOAD MORE';
+const searchPlaceholder = currentLang === 'es' ? 'Buscar blog...' : 'Search blog post...';
 
 const sortedForCarousel = posts
   .slice()
   .sort((a, b) => String(b.published_date || '').localeCompare(String(a.published_date || '')));
 ---
-<MainLayout title={pageTitle} description={pageDescription} preloadImages={['https://snack.yummiespromociones.com/SnacksyummiesAssets/blogus.webp']}>
+<MainLayout title={pageTitle} description={pageDescription} preloadImages={['https://snack.yummiespromociones.com/SnacksyummiesAssets/bgblogus2.webp']}>
   <ViewTransitions />
-  <div class="-mt-px -mb-px overflow-hidden pb-15 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/blogus.webp');">
+  <div class="-mt-px -mb-px overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgblogus2.webp');">
     <div class="container mx-auto px-4 pb-16 mt-12">
+
+      <!-- Hero Title -->
+      <div class="mb-8">
+        <h1 class="text-white font-bold text-[10vw] md:text-[6vw] lg:text-[5vw] uppercase leading-[1.05] mb-[2%]">
+          {currentLang === 'es' ? "QUÉ HAY DE NUEVO EN ZAMBOS" : "WHAT'S NEW AT ZAMBOS"}
+        </h1>
+        <p class="text-white text-[3.5vw] md:text-[1.5vw] lg:text-[1.2vw] opacity-90">
+          {currentLang === 'es' 
+            ? 'Actualizaciones frescas, sabores audaces e historias que vale la pena compartir.'
+            : 'Fresh updates, bold flavors, and stories worth sharing.'}
+        </p>
+      </div>
 
       <!-- News Carousel: shows the latest post as featured -->
       <div class="mx-auto mb-8">
         <NewsCarousel currentLang={currentLang} items={sortedForCarousel} />
       </div>
-      <div class="flex justify-start mb-8">
-        <a
-          href={`/${currentLang}`}
-          class="inline-flex items-center gap-2 bg-us-red text-white font-bold px-6 py-3 rounded-full hover:opacity-90 transition uppercase text-sm"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-          </svg>
-          {currentLang === 'es' ? 'VOLVER AL INICIO' : 'BACK TO HOME'}
-        </a>
-      </div>
 
-      <div class="flex flex-col md:flex-row gap-4 mb-8">
-        <!-- Sort Filters -->
+
+      <!-- Search Bar + Filter Buttons Row -->
+      <div class="flex flex-col lg:flex-row gap-4 mb-8 items-start lg:items-center">
+        <!-- Search Bar -->
+        <div class="flex-1 w-full lg:max-w-[400px]">
+          <div class="relative">
+            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input
+              type="text"
+              id="blogSearchInput"
+              placeholder={searchPlaceholder}
+              class="w-full pl-12 pr-4 py-3 md:py-4 rounded-full bg-white text-gray-800 font-medium text-sm md:text-base outline-none focus:ring-2 focus:ring-[#A8D648] transition-all"
+            />
+          </div>
+        </div>
+
+        <!-- Sort Filters - White/transparent pill buttons -->
         <div id="blogFilters" class="flex flex-wrap gap-3">
           <button
             type="button"
-            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-us-red text-white font-bold transition-all whitespace-nowrap"
-            data-filter="newest"
-          >
-            {filterLabels.newest}
-          </button>
-          <button
-            type="button"
-            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap"
+            class="filter-btn px-6 py-2 md:py-3 rounded-full border-2 border-white bg-transparent text-white font-bold transition-all whitespace-nowrap uppercase text-sm"
             data-filter="oldest"
           >
             {filterLabels.oldest}
           </button>
           <button
             type="button"
-            class="filter-btn px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap"
+            class="filter-btn px-6 py-2 md:py-3 rounded-full border-2 border-white bg-white text-gray-900 font-bold transition-all whitespace-nowrap uppercase text-sm"
+            data-filter="newest"
+          >
+            {filterLabels.newest}
+          </button>
+          <button
+            type="button"
+            class="filter-btn px-6 py-2 md:py-3 rounded-full border-2 border-white bg-transparent text-white font-bold transition-all whitespace-nowrap uppercase text-sm"
             data-filter="all"
           >
             {filterLabels.all}
@@ -81,41 +100,107 @@ const sortedForCarousel = posts
       {posts.length === 0 ? (
         <p class="text-white text-center py-12">{noPostsText}</p>
       ) : (
-        <div id="recipesGrid" class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
-          {posts.map((post: any, index: number) => (
-            <div
-              class="recipe-card"
-              data-date={String(post.published_date || '')}
-              data-order={String(index)}
-              style={index < 4 ? '' : 'display:none'}
-            >
-              <BlogCard
-                image={post.image || `/images/${currentLang}/slider1.png`}
-                title={post.title}
-                id={post.id}
-                slug={post.slug}
-                currentLang={currentLang}
-                category={String(post.category || '').toUpperCase()}
-                date={post.published_date}
-              />
-            </div>
-          ))}
-        </div>
-      )}
-
-      {posts.length > 4 && (
-        <div class="flex justify-center mt-8">
+        <div class="relative blog-carousel-wrapper px-12 sm:px-16 md:px-20">
+          <!-- Prev Arrow -->
           <button
-            id="loadMoreBtn"
             type="button"
-            class="bg-us-red text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition"
+            id="blogPrevBtn"
+            class="absolute left-0 sm:left-2 md:left-4 top-1/2 z-30 bg-white text-[#0E6D20] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer active:scale-95"
+            style="transform: translateY(-50%);"
+            aria-label="Previous"
           >
-            {loadMoreText}
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+
+          <!-- Blog Cards Carousel -->
+          <div id="blogCarousel" class="flex overflow-x-auto snap-x snap-mandatory gap-0 md:gap-[4%] pb-[3%] md:pb-0 scrollbar-hide">
+            {posts.map((post: any, index: number) => (
+              <div
+                class="blog-carousel-card flex-shrink-0 w-full md:w-[48%] snap-start"
+                data-date={String(post.published_date || '')}
+                data-order={String(index)}
+                data-title={String(post.title || '').toLowerCase()}
+              >
+                <!-- Custom Blog Card with green background -->
+                <a 
+                  href={`/${currentLang}/blog/${post.slug || post.id}`}
+                  class="block group overflow-hidden rounded-3xl transition-transform duration-300 hover:scale-[1.02] w-full h-full"
+                >
+                  <!-- Image -->
+                  <div class="relative aspect-[16/10] overflow-hidden">
+                    <LazyImage
+                      src={post.image || `/images/${currentLang}/slider1.png`}
+                      alt={post.title}
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                  <!-- Content - Light green background, fixed height -->
+                  <div class="bg-[#97E66C] p-[5%] md:p-[4%] h-[140px] sm:h-[150px] md:h-[160px] lg:h-[170px] flex flex-col">
+                    <!-- Date -->
+                    {post.published_date && (
+                      <span class="text-[#0E6D20] font-semibold text-[2.5vw] md:text-[0.85vw] lg:text-[0.75vw] italic mb-[1%] block">
+                        {post.published_date}
+                      </span>
+                    )}
+                    <!-- Title - White bold, max 2 lines with ellipsis -->
+                    <h3 class="font-bold text-white text-[4vw] md:text-[1.4vw] lg:text-[1.2vw] uppercase leading-tight mb-[2%] blog-card-title" style="text-shadow: 0 1px 3px rgba(0,0,0,0.15);">
+                      {post.title}
+                    </h3>
+                    <!-- Description - Dark green -->
+                    <p class="text-[#0E6D20] text-[3vw] md:text-[0.9vw] lg:text-[0.8vw] line-clamp-2 mt-auto">
+                      {post.summary || post.content?.replace(/<[^>]*>/g, '').slice(0, 120) || (currentLang === 'es' 
+                        ? 'Descubre más sobre esta noticia de Zambos.'
+                        : 'Discover more about this Zambos news.')}
+                    </p>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <!-- Next Arrow -->
+          <button
+            type="button"
+            id="blogNextBtn"
+            class="absolute right-0 sm:right-2 md:right-4 top-1/2 z-30 bg-white text-[#0E6D20] w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center hover:bg-gray-100 hover:scale-110 transition-all duration-300 shadow-xl cursor-pointer active:scale-95"
+            style="transform: translateY(-50%);"
+            aria-label="Next"
+          >
+            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+            </svg>
           </button>
         </div>
       )}
     </div>
+     <section class="w-full relative overflow-hidden">
+    <div class="w-full md:w-[90%] lg:w-[85%] max-w-[1400px] mx-auto py-[5%]">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-[4%]">
+        <!-- Left Image - Tajín Product -->
+        <div class="w-[80%] md:w-[38%] relative mx-auto md:mx-0">
+          <img 
+            src="https://snack.yummiespromociones.com/SnacksyummiesAssets/tajinusrecipe.webp" 
+            alt="Tajín Zambos"
+            class="w-full h-auto object-cover rounded-[2vw] md:rounded-[1vw]"
+          />
+        </div>
+        <!-- Right Image - Text Tajín -->
+        <div class="w-[80%] md:w-[38%] relative mt-[4%] md:mt-0 mx-auto md:mx-0">
+          <img 
+            src="https://snack.yummiespromociones.com/SnacksyummiesAssets/texttajinus.webp" 
+            alt="Tajín Text"
+            class="w-full h-auto object-cover rounded-[2vw] md:rounded-[1vw]"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
   </div>
+
+  <!-- Tajín Section - Two Images Side by Side -->
+ 
 </MainLayout>
 
 <style>
@@ -123,20 +208,80 @@ const sortedForCarousel = posts
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Line clamp utility */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Title truncation - max 2 lines */
+  .blog-card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Filter button styles */
+  .filter-btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  }
+
+  /* Carousel arrows */
+  #blogPrevBtn,
+  #blogNextBtn {
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #blogPrevBtn:hover,
+  #blogNextBtn:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  #blogPrevBtn:disabled,
+  #blogNextBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 </style>
 
 <script>
-  function initBlogLoadMore() {
-    const grid = document.getElementById('recipesGrid');
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
+  function initBlogCarousel() {
+    const carousel = document.getElementById('blogCarousel') as HTMLElement | null;
+    const prevBtn = document.getElementById('blogPrevBtn') as HTMLButtonElement | null;
+    const nextBtn = document.getElementById('blogNextBtn') as HTMLButtonElement | null;
     const filterButtons = Array.from(document.querySelectorAll<HTMLElement>('#blogFilters .filter-btn'));
+    const searchInput = document.getElementById('blogSearchInput') as HTMLInputElement | null;
 
-    if (!(grid instanceof HTMLElement) || !(loadMoreBtn instanceof HTMLButtonElement)) return;
+    if (!carousel || !prevBtn || !nextBtn) return;
 
-    const cards = Array.from(grid.querySelectorAll<HTMLElement>('.recipe-card'));
-    const pageSize = 4;
-    let revealedCount = 0;
+    const allCards = Array.from(carousel.querySelectorAll<HTMLElement>('.blog-carousel-card'));
     let currentMode = 'newest';
+    let currentPage = 0;
+    let currentQuery = '';
+
+    function getItemsPerPage() {
+      return window.innerWidth < 768 ? 1 : 2;
+    }
 
     function parseDate(v: unknown): number {
       const s = String(v || '').trim();
@@ -144,12 +289,18 @@ const sortedForCarousel = posts
       return Number.isFinite(ts) ? ts : 0;
     }
 
-    function hideAll() {
-      cards.forEach((c) => { c.style.display = 'none'; });
-    }
+    function getFilteredAndSortedCards(): HTMLElement[] {
+      let list = allCards.slice();
+      
+      // Filter by search query
+      if (currentQuery) {
+        list = list.filter((card) => {
+          const title = (card.dataset.title || '').toLowerCase();
+          return title.includes(currentQuery);
+        });
+      }
 
-    function sortedCards(): HTMLElement[] {
-      const list = cards.slice();
+      // Sort
       if (currentMode === 'newest') {
         list.sort((a, b) => parseDate(b.dataset.date) - parseDate(a.dataset.date));
       } else if (currentMode === 'oldest') {
@@ -160,33 +311,57 @@ const sortedForCarousel = posts
       return list;
     }
 
-    function reorderDom(list: HTMLElement[]) {
-      list.forEach((el) => grid!.appendChild(el));
-    }
+    function showPage(page: number) {
+      const sorted = getFilteredAndSortedCards();
+      const itemsPerPage = getItemsPerPage();
+      const totalPages = Math.max(1, Math.ceil(sorted.length / itemsPerPage));
 
-    function revealNextPage() {
-      const ordered = sortedCards();
-      reorderDom(ordered);
-      const nextBatch = ordered.slice(revealedCount, revealedCount + pageSize);
-      nextBatch.forEach((card) => { card.style.display = ''; });
-      revealedCount += nextBatch.length;
-      loadMoreBtn!.classList.toggle('hidden', revealedCount >= ordered.length);
+      page = Math.max(0, Math.min(page, totalPages - 1));
+      currentPage = page;
+
+      // Hide all cards
+      allCards.forEach((c) => {
+        c.style.display = 'none';
+        c.style.opacity = '0';
+      });
+
+      // Reorder DOM
+      sorted.forEach((el) => carousel!.appendChild(el));
+
+      // Show current page cards
+      const visibleCards = sorted.slice(page * itemsPerPage, page * itemsPerPage + itemsPerPage);
+      visibleCards.forEach((c, index) => {
+        c.style.display = 'block';
+        c.style.opacity = '0';
+        c.style.transform = 'translateY(30px)';
+
+        setTimeout(() => {
+          c.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+          c.style.opacity = '1';
+          c.style.transform = 'translateY(0)';
+        }, index * 100);
+      });
+
+      // Update button states
+      prevBtn!.style.opacity = page === 0 ? '0.4' : '1';
+      prevBtn!.disabled = page === 0;
+      nextBtn!.style.opacity = page >= totalPages - 1 ? '0.4' : '1';
+      nextBtn!.disabled = page >= totalPages - 1;
     }
 
     function setActive(btn: HTMLElement) {
       filterButtons.forEach((b) => {
-        b.classList.remove('bg-us-red', 'text-white');
-        b.classList.add('bg-white', 'text-gray-700');
+        b.classList.remove('bg-white', 'text-gray-900');
+        b.classList.add('bg-transparent', 'text-white');
       });
-      btn.classList.remove('bg-white', 'text-gray-700');
-      btn.classList.add('bg-us-red', 'text-white');
+      btn.classList.remove('bg-transparent', 'text-white');
+      btn.classList.add('bg-white', 'text-gray-900');
     }
 
     function applyMode(mode: string) {
       currentMode = mode;
-      revealedCount = 0;
-      hideAll();
-      revealNextPage();
+      currentPage = 0;
+      showPage(0);
     }
 
     filterButtons.forEach((btn) => {
@@ -198,11 +373,39 @@ const sortedForCarousel = posts
       });
     });
 
-    loadMoreBtn.addEventListener('click', (e) => {
+    // Search input handler
+    if (searchInput) {
+      let searchTimeout: number | null = null;
+      searchInput.addEventListener('input', () => {
+        if (searchTimeout) clearTimeout(searchTimeout);
+        searchTimeout = window.setTimeout(() => {
+          currentQuery = searchInput.value.trim().toLowerCase();
+          currentPage = 0;
+          showPage(0);
+        }, 300);
+      });
+    }
+
+    prevBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      revealNextPage();
+      showPage(currentPage - 1);
     });
 
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showPage(currentPage + 1);
+    });
+
+    // Resize handler
+    let resizeTimeout: number | null = null;
+    window.addEventListener('resize', () => {
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      resizeTimeout = window.setTimeout(() => {
+        showPage(0);
+      }, 250);
+    });
+
+    // Initialize - newest is active by default
     const defaultBtn = filterButtons.find((b) => b.getAttribute('data-filter') === 'newest');
     if (defaultBtn) {
       setActive(defaultBtn);
@@ -211,10 +414,10 @@ const sortedForCarousel = posts
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBlogLoadMore);
+    document.addEventListener('DOMContentLoaded', initBlogCarousel);
   } else {
-    initBlogLoadMore();
+    initBlogCarousel();
   }
-  document.addEventListener('astro:page-load', initBlogLoadMore);
-  document.addEventListener('astro:after-swap', initBlogLoadMore);
+  document.addEventListener('astro:page-load', initBlogCarousel);
+  document.addEventListener('astro:after-swap', initBlogCarousel);
 </script>
