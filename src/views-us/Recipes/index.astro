@@ -166,7 +166,7 @@ const newestRecipeId = [...allRecipes]
                       <span class="px-4 py-2 bg-[#0E6D20] text-white font-bold rounded-full text-sm">
                         {normalizeType(recipe).toUpperCase()}
                       </span>
-                      {recipe.id === newestRecipeId && (
+                      {index === 0 && (
                         <span class="px-4 py-2 bg-white text-us-red font-bold rounded-full text-sm">
                           {currentLang === 'es' ? 'NUEVO' : 'NEW'}
                         </span>
