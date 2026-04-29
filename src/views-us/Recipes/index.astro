@@ -12,6 +12,7 @@ interface Recipe {
   image?: string;
   preparation_time: number;
   type?: string;
+  date?: string;
 }
 
 const currentLang = getLocale();
@@ -75,6 +76,11 @@ const availableCategories = ORDER.filter(cat =>
 const featuredRecipes = availableCategories
   .map(cat => allRecipes.find(r => normalizeType(r) === cat))
   .filter((r): r is Recipe => !!r);
+
+// Most recent recipe id (by `date` field) – used to show the NEW tag
+const newestRecipeId = [...allRecipes]
+  .filter(r => !!r.date)
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''))[0]?.id;
 ---
 
 <div class="min-h-screen relative">
@@ -154,49 +160,49 @@ const featuredRecipes = availableCategories
                   ></a>
                   
                   <!-- Recipe Info Overlay -->
-                  <div class="absolute bottom-0 left-0 p-8 md:p-12 pb-20 md:pb-12 z-10 pointer-events-none">
+                  <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 pb-20 md:pb-12 z-10 pointer-events-none pr-[110px] md:pr-[140px]">
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
-                      <span class="px-4 py-2 bg-us-red text-white font-bold rounded-full text-sm">
+                      <span class="px-4 py-2 bg-[#0E6D20] text-white font-bold rounded-full text-sm">
                         {normalizeType(recipe).toUpperCase()}
                       </span>
                       {index === 0 && (
-                        <span class="px-4 py-2 bg-red text-white font-bold rounded-full text-sm">
+                        <span class="px-4 py-2 bg-white text-us-red font-bold rounded-full text-sm">
                           {currentLang === 'es' ? 'NUEVO' : 'NEW'}
                         </span>
                       )}
                     </div>
                     
                     <!-- Title -->
-                    <h2 class="text-white font-bold text-2xl md:text-3xl lg:text-4xl mb-2">
+                    <h2 class="text-white font-bold text-xl md:text-3xl lg:text-4xl mb-2 line-clamp-2">
                       {recipe.title}
                     </h2>
                     
                     <!-- Description (if available) -->
-                    <p class="text-white text-sm md:text-base opacity-90">
+                    <p class="text-white text-sm md:text-base opacity-90 line-clamp-2">
                       {(recipe as any).description || `${currentLang === 'es' ? 'Deliciosa receta preparada con nuestros Zambos favoritos. Perfecta para compartir en familia.' : 'Delicious recipe prepared with our favorite Zambos. Perfect for sharing with family.'}`}
                     </p>
                   </div>
 
-                  <!-- Carousel Navigation - Desktop only (inside carousel) -->
+                  <!-- Carousel Navigation - Same style and position on mobile and desktop -->
                   {featuredRecipes.length > 1 && (
-                    <div class="hidden md:flex absolute bottom-[40px] right-[10px] gap-4 z-40 pointer-events-auto">
-                      <button 
-                        id="prevBtn-desktop"
-                        class="carousel-prev-btn bg-us-red hover:bg-us-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                    <div class="flex absolute bottom-6 md:bottom-12 right-6 md:right-12 gap-2 md:gap-4 z-40 pointer-events-auto">
+                      <button
+                        type="button"
+                        class="carousel-prev-btn bg-us-red text-white w-10 h-10 md:w-12 md:h-12 rounded-md flex items-center justify-center transition-all duration-300 shadow-lg opacity-50 hover:opacity-100 hover:bg-us-red/90 disabled:opacity-30 disabled:cursor-not-allowed active:scale-95"
                         aria-label="Anterior"
                       >
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
                       </button>
-                      
-                      <button 
-                        id="nextBtn-desktop"
-                        class="carousel-next-btn bg-us-red hover:bg-us-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+
+                      <button
+                        type="button"
+                        class="carousel-next-btn bg-us-red text-white w-10 h-10 md:w-12 md:h-12 rounded-md flex items-center justify-center transition-all duration-300 shadow-lg opacity-50 hover:opacity-100 hover:bg-us-red/90 disabled:opacity-30 disabled:cursor-not-allowed active:scale-95"
                         aria-label="Siguiente"
                       >
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
                       </button>
@@ -206,31 +212,6 @@ const featuredRecipes = availableCategories
               </div>
             ))}
           </div>
-
-          <!-- Carousel Navigation - Mobile only (outside carousel) -->
-          {featuredRecipes.length > 1 && (
-            <div class="flex md:hidden justify-center gap-4 mt-6">
-              <button 
-                id="prevBtn-mobile"
-                class="carousel-prev-btn bg-us-red hover:bg-us-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                aria-label="Anterior"
-              >
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                </svg>
-              </button>
-              
-              <button 
-                id="nextBtn-mobile"
-                class="carousel-next-btn bg-us-red hover:bg-us-red/80 text-white w-12 h-12 rounded-md flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-                aria-label="Siguiente"
-              >
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-              </button>
-            </div>
-          )}
 
           <!-- Carousel Dots -->
           {featuredRecipes.length > 1 && (
