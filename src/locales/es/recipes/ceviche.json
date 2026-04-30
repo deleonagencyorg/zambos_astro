@@ -1,0 +1,39 @@
+{
+    "date": "30/04/2026",
+    "id": "ceviche",
+    "slug": "ceviche",
+    "title": "Ceviche",
+    "people": "4",
+    "difficulty": "Medio",
+    "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche.webp",
+    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "gallery": [
+        "ceviche.webp"
+    ],
+    "type": "image",
+    "preparation_time": 15,
+    "category": "Almuerzo",
+    "ingredients": [
+        "500 g de filete de pescado blanco fresco en cubos",
+        "Jugo de 8 limones",
+        "½ cebolla morada finamente picada",
+        "1 tomate picado",
+        "2 cucharadas de salsa inglesa",
+        "2 cucharadas de salsa kétchup",
+        "Cilantro fresco picado al gusto",
+        "Sal al gusto",
+        "Zambos Plátano Originales para servir"
+    ],
+    "instructions": [
+        "Paso 1. Coloca el pescado en un recipiente y cúbrelo con el jugo de limón; deja reposar hasta que el pescado esté opaco y bien marinado.",
+        "Paso 2. Agrega la cebolla morada, el tomate, el cilantro y sal al gusto, mezclando suavemente.",
+        "Paso 3. Agrega la salsa inglesa y la salsa kétchup.",
+        "Paso 4. Sirve el ceviche frío acompañado de Zambos Plátano para usar como cucharita al momento de comer."
+    ],
+    "brand": [
+        "Zambos"
+    ],
+    "product": [
+        "Zambos Plátano Originales"
+    ]
+}

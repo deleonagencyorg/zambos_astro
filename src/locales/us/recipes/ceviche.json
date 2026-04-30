@@ -1,0 +1,39 @@
+{
+    "date": "30/04/2026",
+    "id": "ceviche",
+    "slug": "ceviche",
+    "title": "Ceviche",
+    "people": "4",
+    "difficulty": "Medium",
+    "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-usa.webp",
+    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "gallery": [
+        "ceviche.webp"
+    ],
+    "type": "image",
+    "preparation_time": 15,
+    "category": "Lunch",
+    "ingredients": [
+        "500 g of fresh white fish fillet, cubed",
+        "Juice of 8 lemons",
+        "½ red onion, finely chopped",
+        "1 tomato, chopped",
+        "2 tablespoons of Worcestershire sauce",
+        "2 tablespoons of ketchup",
+        "Fresh cilantro, chopped, to taste",
+        "Salt to taste",
+        "Zambos Original Plantain Chips to serve"
+    ],
+    "instructions": [
+        "Step 1. Place the fish in a bowl and cover with the lemon juice; let it rest until the fish is opaque and well marinated.",
+        "Step 2. Add the red onion, tomato, cilantro, and salt to taste, mixing gently.",
+        "Step 3. Add the Worcestershire sauce and ketchup.",
+        "Step 4. Serve the ceviche cold, accompanied by Zambos Original Plantain Chips to use as a spoon when eating."
+    ],
+    "brand": [
+        "Zambos"
+    ],
+    "product": [
+        "Zambos Original Plantain Chips"
+    ]
+}
