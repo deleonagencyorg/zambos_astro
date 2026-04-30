@@ -1,0 +1,32 @@
+{
+    "date": "30/04/2026",
+    "id": "queso-crema-y-miel",
+    "slug": "queso-crema-y-miel",
+    "title": "Cream Cheese and Honey",
+    "people": "5",
+    "difficulty": "Easy",
+    "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/queso-crema-y-miel-usa.webp",
+    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "gallery": [
+        "queso-crema-y-miel.webp"
+    ],
+    "type": "image",
+    "preparation_time": 5,
+    "category": "Dessert",
+    "ingredients": [
+        "Zambos Original Plantain Chips",
+        "½ cup of cream cheese, at room temperature",
+        "Honey to taste"
+    ],
+    "instructions": [
+        "Step 1. Place the Zambos Original Plantain Chips on a plate or tray to share.",
+        "Step 2. Soften the cream cheese by mixing it lightly until it has a creamy, spreadable texture, and place it in the center or in small dots over the plantain chips.",
+        "Step 3. Finish with a drizzle of honey on top and serve immediately as a sweet and savory snack to share."
+    ],
+    "brand": [
+        "Zambos"
+    ],
+    "product": [
+        "Zambos Original Plantain Chips"
+    ]
+}

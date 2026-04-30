@@ -1,0 +1,36 @@
+{
+    "date": "30/04/2026",
+    "id": "ensalada-de-pepino-y-queso",
+    "slug": "ensalada-de-pepino-y-queso",
+    "title": "Ensalada de Pepino y Queso",
+    "people": "4",
+    "difficulty": "",
+    "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ensalada-pepino.webp",
+    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "gallery": [
+        "ensalada-de-pepino-y-queso.webp"
+    ],
+    "type": "image",
+    "preparation_time": 10,
+    "category": "Almuerzo",
+    "ingredients": [
+        "2 pepinos en rodajas o cubos",
+        "1 taza de queso fresco en cubos",
+        "Jugo de 1 limón",
+        "2 cucharadas de aceite de oliva",
+        "Sal al gusto",
+        "1 taza de Zambos Picositas"
+    ],
+    "instructions": [
+        "Paso 1. Coloca el pepino y el queso fresco en un recipiente grande y mezcla suavemente.",
+        "Paso 2. Agrega el jugo de limón, el aceite de oliva y sal al gusto, mezclando con cuidado.",
+        "Paso 3. Incorpora las Zambos Picositas justo antes de servir y mezcla ligeramente para que se integren sin perder su textura crujiente.",
+        "Paso 4. Sirve de inmediato."
+    ],
+    "brand": [
+        "Zambos"
+    ],
+    "product": [
+        "Zambos Picositas"
+    ]
+}
