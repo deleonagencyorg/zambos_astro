@@ -117,14 +117,14 @@
       "href": "/us/"
     },
      {
-      "id": "history",
-      "text": "Our Story",
-      "href": "/us/about-us"
+      "id": "contact-us",
+      "text": "Contact US",
+      "href": "/us/contact"
     },
     {
-      "id": "contact",
-      "text": "Contact",
-      "href": "/us/contact"
+      "id": "products",
+      "text": "Products",
+      "href": "/us/products"
     }
  
   ],
