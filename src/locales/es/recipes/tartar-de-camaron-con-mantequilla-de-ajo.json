@@ -1,5 +1,5 @@
 {
-    "date": "2025-04-30",
+    "date": "2026-04-30",
     "id": "tartar-de-camaron-con-mantequilla-de-ajo",
     "slug": "tartar-de-camaron-con-mantequilla-de-ajo",
     "title": "Tartar de Camarón con Mantequilla de Ajo",
@@ -33,5 +33,6 @@
     "brand": [
         "Zambos"
     ],
-  "products": ["zambos-yuquitas-chile-toreado"]
+  "products": ["zambos-yuquitas-chile-toreado"],   
+   "new":true
 }

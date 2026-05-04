@@ -72,14 +72,15 @@ const hasContent = showTrigger ? !!videoId : true;
 )}
 
 <script>
-  (function() {
-    if ((window as any).__youtubeModalInit) return;
-    (window as any).__youtubeModalInit = true;
-
+  function initYouTubeModal() {
     const modal = document.getElementById('youtubeModal');
     const iframe = document.getElementById('youtubeIframe') as HTMLIFrameElement | null;
     const closeBtn = document.getElementById('youtubeModalClose');
     if (!modal || !iframe || !closeBtn) return;
+
+    // Avoid duplicate listeners on the same elements
+    if ((modal as any).__ytModalBound) return;
+    (modal as any).__ytModalBound = true;
 
     function openModal(url: string) {
       iframe!.src = url;
@@ -95,16 +96,6 @@ const hasContent = showTrigger ? !!videoId : true;
       document.body.style.overflow = '';
     }
 
-    document.addEventListener('click', (e) => {
-      const trigger = (e.target as HTMLElement).closest('[data-youtube-url]');
-      if (trigger) {
-        e.preventDefault();
-        e.stopPropagation();
-        const url = trigger.getAttribute('data-youtube-url');
-        if (url) openModal(url);
-      }
-    });
-
     closeBtn.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
@@ -112,9 +103,35 @@ const hasContent = showTrigger ? !!videoId : true;
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      if (e.key === 'Escape' && !modal!.classList.contains('hidden')) {
         closeModal();
       }
     });
-  })();
+  }
+
+  // Listen for clicks globally (only bind once)
+  if (!(window as any).__ytClickBound) {
+    (window as any).__ytClickBound = true;
+    document.addEventListener('click', (e) => {
+      const trigger = (e.target as HTMLElement).closest('[data-youtube-url]');
+      if (trigger) {
+        e.preventDefault();
+        e.stopPropagation();
+        const url = trigger.getAttribute('data-youtube-url');
+        if (url) {
+          const modal = document.getElementById('youtubeModal');
+          const iframe = document.getElementById('youtubeIframe') as HTMLIFrameElement | null;
+          if (modal && iframe) {
+            iframe.src = url;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+        }
+      }
+    });
+  }
+
+  initYouTubeModal();
+  document.addEventListener('astro:page-load', initYouTubeModal);
 </script>

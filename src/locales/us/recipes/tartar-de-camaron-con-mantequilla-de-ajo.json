@@ -1,5 +1,5 @@
 {
-    "date": "2025-04-30",
+    "date": "2026-04-30",
     "id": "tartar-de-camaron-con-mantequilla-de-ajo",
     "slug": "tartar-de-camaron-con-mantequilla-de-ajo",
     "title": "Shrimp Tartare with Garlic Butter",
@@ -35,5 +35,6 @@
     ],
     "products": [
         "zambos-yuquitas-chile-toreado"
-    ]
+    ],
+    "new":true
 }

@@ -1,5 +1,5 @@
 {
-    "date": "2025-04-30",
+    "date": "2026-04-30",
     "id": "ensalada-de-pepino-y-queso",
     "slug": "ensalada-de-pepino-y-queso",
     "title": "Cucumber and Cheese Salad",
@@ -32,5 +32,6 @@
     ],
     "products": [
         "zambos-chile-limon"
-    ]
+    ],
+        "new":true
 }

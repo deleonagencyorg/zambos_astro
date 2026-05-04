@@ -1,5 +1,5 @@
 {
-    "date": "2025-04-30",
+    "date": "2026-04-30",
     "id": "queso-crema-y-miel",
     "slug": "queso-crema-y-miel",
     "title": "Cream Cheese and Honey",
@@ -28,5 +28,6 @@
     ],
     "products": [
         "zambos-originals"
-    ]
+    ],
+    "new":true
 }
