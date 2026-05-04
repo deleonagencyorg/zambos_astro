@@ -1,12 +1,12 @@
 {
-    "date": "30/04/2026",
+    "date": "2025-04-30",
     "id": "queso-crema-y-miel",
     "slug": "queso-crema-y-miel",
     "title": "Queso Crema y Miel",
     "people": "5",
     "difficulty": "Fácil",
     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/queso-crema-y-miel.webp",
-    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "video": "https://www.youtube.com/shorts/m8C7cDvhMzk",
     "gallery": [
         "queso-crema-y-miel.webp"
     ],
@@ -26,7 +26,5 @@
     "brand": [
         "Zambos"
     ],
-    "product": [
-        "Zambos Plátano Originales"
-    ]
+    "product": ["zambos-platano-originales"]
 }

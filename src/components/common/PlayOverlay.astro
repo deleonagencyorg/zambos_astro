@@ -1,0 +1,51 @@
+---
+interface Props {
+  video: string;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const { video, size = 'md' } = Astro.props;
+
+function extractYouTubeId(url: string): string | null {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+    /youtube\.com\/watch\?.*v=([a-zA-Z0-9_-]{11})/,
+    /^([a-zA-Z0-9_-]{11})$/
+  ];
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) return match[1];
+  }
+  return null;
+}
+
+const videoId = extractYouTubeId(video);
+const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
+
+const sizeClasses = {
+  sm: 'w-10 h-10',
+  md: 'w-14 h-14 md:w-16 md:h-16',
+  lg: 'w-16 h-16 md:w-20 md:h-20'
+};
+
+const iconSizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6 md:w-7 md:h-7',
+  lg: 'w-7 h-7 md:w-8 md:h-8'
+};
+---
+
+{videoId && (
+  <button
+    type="button"
+    class={`play-overlay-btn absolute inset-0 z-10 flex items-center justify-center bg-black/30 hover:bg-black/50 transition-all duration-300 group/overlay cursor-pointer`}
+    data-youtube-url={embedUrl}
+    aria-label="Play video"
+  >
+    <span class={`${sizeClasses[size]} rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/overlay:scale-110 border-2 border-red-600`}>
+      <svg class={`${iconSizeClasses[size]} text-red-600 ml-0.5`} fill="currentColor" viewBox="0 0 24 24">
+        <path d="M8 5v14l11-7z"/>
+      </svg>
+    </span>
+  </button>
+)}

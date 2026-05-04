@@ -1,12 +1,12 @@
 {
-    "date": "30/04/2026",
+    "date": "2025-04-30",
     "id": "tartar-de-camaron-con-mantequilla-de-ajo",
     "slug": "tartar-de-camaron-con-mantequilla-de-ajo",
     "title": "Tartar de Camarón con Mantequilla de Ajo",
     "people": "4",
     "difficulty": "Medio",
     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/tartar-de-camaron.webp",
-    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "video": "https://www.youtube.com/shorts/IRnOZwy1iEk",
     "gallery": [
         "tartar-de-camaron-con-mantequilla-de-ajo.webp"
     ],
@@ -33,7 +33,5 @@
     "brand": [
         "Zambos"
     ],
-    "product": [
-        "Zambos Yuquitas Chile Toreado"
-    ]
+  "products": ["zambos-yuquitas-chile-toreado"]
 }

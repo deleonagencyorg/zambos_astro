@@ -1,12 +1,12 @@
 {
-    "date": "30/04/2026",
+    "date": "2025-04-30",
     "id": "ensalada-de-pepino-y-queso",
     "slug": "ensalada-de-pepino-y-queso",
     "title": "Ensalada de Pepino y Queso",
     "people": "4",
     "difficulty": "",
     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ensalada-pepino.webp",
-    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "video": "https://www.youtube.com/shorts/I8OKSMXHuQg",
     "gallery": [
         "ensalada-de-pepino-y-queso.webp"
     ],
@@ -31,6 +31,6 @@
         "Zambos"
     ],
     "product": [
-        "Zambos Picositas"
+        "zambos-platano-picositas"
     ]
 }

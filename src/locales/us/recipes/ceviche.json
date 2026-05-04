@@ -1,12 +1,12 @@
 {
-    "date": "30/04/2026",
+    "date": "2025-04-30",
     "id": "ceviche",
     "slug": "ceviche",
     "title": "Ceviche",
     "people": "4",
     "difficulty": "Medium",
     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-usa.webp",
-    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "video": "https://www.youtube.com/shorts/L_yyNPgxXwc",
     "gallery": [
         "ceviche.webp"
     ],
@@ -33,7 +33,7 @@
     "brand": [
         "Zambos"
     ],
-    "product": [
-        "Zambos Original Plantain Chips"
+    "products": [
+        "zambos-originals"
     ]
 }
