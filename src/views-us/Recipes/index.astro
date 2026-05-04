@@ -5,6 +5,7 @@ import './styles.css';
 import Subscription from '../../components/subscription/index.astro';
 import RecipeCard from '../../components/recipes/RecipeCard.astro';
 import RecipeSearch from '../../components/recipes/RecipeSearch.astro';
+import PlayOverlay from '../../components/common/PlayOverlay.astro';
 
 interface Recipe {
   id: string;
@@ -13,6 +14,7 @@ interface Recipe {
   preparation_time: number;
   type?: string;
   date?: string;
+  video?: string;
 }
 
 const currentLang = getLocale();
@@ -29,6 +31,9 @@ for (const path in recipeModules) {
     allRecipes.push(module.default);
   }
 }
+
+// Sort by date: newest first
+allRecipes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 // Shared translations
 const noRecipesText = currentLang === 'es' 
@@ -72,15 +77,11 @@ const availableCategories = ORDER.filter(cat =>
   allRecipes.some(r => normalizeType(r) === cat)
 );
 
-// 1 representative per available category so every filter has a slide in the hero carousel
+// Newest recipe per available category, sorted by date (newest first)
 const featuredRecipes = availableCategories
   .map(cat => allRecipes.find(r => normalizeType(r) === cat))
-  .filter((r): r is Recipe => !!r);
-
-// Most recent recipe id (by `date` field) – used to show the NEW tag
-const newestRecipeId = [...allRecipes]
-  .filter(r => !!r.date)
-  .sort((a, b) => (b.date || '').localeCompare(a.date || ''))[0]?.id;
+  .filter((r): r is Recipe => !!r)
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 ---
 
 <div class="min-h-screen relative">
@@ -153,36 +154,41 @@ const newestRecipeId = [...allRecipes]
                     class="w-full h-full object-cover"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
+
+                  <!-- Play overlay on image area -->
+                  {(recipe as any).video && (
+                    <div class="absolute top-0 left-0 right-0 h-[65%] z-30">
+                      <PlayOverlay video={(recipe as any).video} size="lg" />
+                    </div>
+                  )}
+
+                  <!-- Recipe Info Overlay -->
                   <a
                     href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`}
-                    aria-label={recipe.title}
-                    class="absolute inset-0 z-20"
-                  ></a>
-                  
-                  <!-- Recipe Info Overlay -->
-                  <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 pb-20 md:pb-12 z-10 pointer-events-none pr-[110px] md:pr-[140px]">
+                    class="absolute bottom-0 left-0 right-0 p-6 md:p-12 pb-20 md:pb-12 z-20 pr-[110px] md:pr-[140px]"
+                  >
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
                       <span class="px-4 py-2 bg-[#0E6D20] text-white font-bold rounded-full text-sm">
                         {normalizeType(recipe).toUpperCase()}
                       </span>
-                      {index === 0 && (
+                      {(recipe as any).new === true && (
                         <span class="px-4 py-2 bg-white text-us-red font-bold rounded-full text-sm">
                           {currentLang === 'es' ? 'NUEVO' : 'NEW'}
                         </span>
                       )}
                     </div>
-                    
+
                     <!-- Title -->
                     <h2 class="text-white font-bold text-xl md:text-3xl lg:text-4xl mb-2 line-clamp-2">
                       {recipe.title}
                     </h2>
-                    
+
                     <!-- Description (if available) -->
                     <p class="text-white text-sm md:text-base opacity-90 line-clamp-2">
                       {(recipe as any).description || `${currentLang === 'es' ? 'Deliciosa receta preparada con nuestros Zambos favoritos. Perfecta para compartir en familia.' : 'Delicious recipe prepared with our favorite Zambos. Perfect for sharing with family.'}`}
                     </p>
-                  </div>
+                  </a>
 
                   <!-- Carousel Navigation - Same style and position on mobile and desktop -->
                   {featuredRecipes.length > 1 && (
@@ -301,7 +307,8 @@ const newestRecipeId = [...allRecipes]
                       id={recipe.id}
                       description={(recipe as any).description}
                       category={normalizeType(recipe).toUpperCase()}
-                      isNew={(recipe as any).isNew || false}
+                      isNew={(recipe as any).new === true}
+                      video={(recipe as any).video || ''}
                     />
                   </div>
                 ))}

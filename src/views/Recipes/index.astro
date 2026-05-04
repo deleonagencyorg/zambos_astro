@@ -5,6 +5,7 @@ import './styles.css';
 import Subscription from '../../components/subscription/index.astro';
 import RecipeCard from '../../components/recipes/RecipeCard.astro';
 import RecipeSearch from '../../components/recipes/RecipeSearch.astro';
+import PlayOverlay from '../../components/common/PlayOverlay.astro';
 
 interface Recipe {
   id: string;
@@ -12,6 +13,8 @@ interface Recipe {
   image?: string;
   preparation_time: number;
   type?: string;
+  date?: string;
+  video?: string;
 }
 
 const currentLang = getLocale();
@@ -28,6 +31,9 @@ for (const path in recipeModules) {
     allRecipes.push(module.default);
   }
 }
+
+// Sort by date: newest first
+allRecipes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 // Shared translations
 const noRecipesText = currentLang === 'es' 
@@ -141,43 +147,48 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
                 class={`carousel-slide ${index === 0 ? '' : 'hidden'}`}
                 data-slide={index}
               >
-                <a href={`${recipesBasePath}/${recipe.id}`} class="block relative h-[400px] md:h-[500px] lg:h-[600px] cursor-pointer">
+                <div class="relative h-[400px] md:h-[500px] lg:h-[600px]">
                   <img 
                     src={recipe.image || '/images/recipes/placeholder.jpg'} 
                     alt={recipe.title}
                     class="w-full h-full object-cover"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
-                  <a
-                    href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`}
-                    aria-label={recipe.title}
-                    class="absolute inset-0 z-20"
-                  ></a>
-                  
+
+                  <!-- Play overlay on image area -->
+                  {(recipe as any).video && (
+                    <div class="absolute top-0 left-0 right-0 h-[65%] z-30">
+                      <PlayOverlay video={(recipe as any).video} size="lg" />
+                    </div>
+                  )}
+
                   <!-- Recipe Info Overlay -->
-                  <div class="absolute bottom-0 left-0 p-8 md:p-12 pb-20 md:pb-12 z-10 pointer-events-none">
+                  <a
+                    href={`${recipesBasePath}/${recipe.id}`}
+                    class="absolute bottom-0 left-0 right-0 p-8 md:p-12 pb-20 md:pb-12 z-20"
+                  >
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
                       <span class="px-4 py-2 bg-[#0DB04A] text-white font-bold rounded-full text-sm">
                         {normalizeType(recipe).toUpperCase()}
                       </span>
-                      {index === 0 && (
+                      {(recipe as any).new === true && (
                         <span class="px-4 py-2 bg-red text-white font-bold rounded-full text-sm">
                           {currentLang === 'es' ? 'NUEVO' : 'NEW'}
                         </span>
                       )}
                     </div>
-                    
+
                     <!-- Title -->
                     <h2 class="text-white font-bold text-2xl md:text-3xl lg:text-4xl mb-2">
                       {recipe.title}
                     </h2>
-                    
+
                     <!-- Description (if available) -->
                     <p class="text-white text-sm md:text-base opacity-90">
                       {(recipe as any).description || `${currentLang === 'es' ? 'Deliciosa receta preparada con nuestros Zambos favoritos. Perfecta para compartir en familia.' : 'Delicious recipe prepared with our favorite Zambos. Perfect for sharing with family.'}`}
                     </p>
-                  </div>
+                  </a>
 
                   <!-- Carousel Navigation - Desktop only (inside carousel) -->
                   {featuredRecipes.length > 1 && (
@@ -266,7 +277,8 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
                   id={recipe.id}
                   description={(recipe as any).description}
                   category={normalizeType(recipe).toUpperCase()}
-                  isNew={(recipe as any).isNew || false}
+                  isNew={(recipe as any).new === true}
+                  video={(recipe as any).video || ''}
                 />
               </div>
             ))}

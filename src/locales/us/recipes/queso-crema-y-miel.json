@@ -1,12 +1,12 @@
 {
-    "date": "30/04/2026",
+    "date": "2026-04-30",
     "id": "queso-crema-y-miel",
     "slug": "queso-crema-y-miel",
     "title": "Cream Cheese and Honey",
     "people": "5",
     "difficulty": "Easy",
     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/queso-crema-y-miel-usa.webp",
-    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "video": "https://www.youtube.com/shorts/m8C7cDvhMzk",
     "gallery": [
         "queso-crema-y-miel.webp"
     ],
@@ -26,7 +26,8 @@
     "brand": [
         "Zambos"
     ],
-    "product": [
-        "Zambos Original Plantain Chips"
-    ]
+    "products": [
+        "zambos-originals"
+    ],
+    "new":true
 }

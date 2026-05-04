@@ -1,12 +1,12 @@
 {
-    "date": "30/04/2026",
+    "date": "2026-04-30",
     "id": "tartar-de-camaron-con-mantequilla-de-ajo",
     "slug": "tartar-de-camaron-con-mantequilla-de-ajo",
     "title": "Shrimp Tartare with Garlic Butter",
     "people": "4",
     "difficulty": "Medium",
     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/tartar-de-camaron-usa.webp",
-    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "video": "https://www.youtube.com/shorts/IRnOZwy1iEk",
     "gallery": [
         "tartar-de-camaron-con-mantequilla-de-ajo.webp"
     ],
@@ -33,7 +33,8 @@
     "brand": [
         "Zambos"
     ],
-    "product": [
-        "Zambos Yuquitas Chile Toreado"
-    ]
+    "products": [
+        "zambos-yuquitas-chile-toreado"
+    ],
+    "new":true
 }

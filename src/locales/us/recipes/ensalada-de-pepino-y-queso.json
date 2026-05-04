@@ -1,12 +1,12 @@
 {
-    "date": "30/04/2026",
+    "date": "2026-04-30",
     "id": "ensalada-de-pepino-y-queso",
     "slug": "ensalada-de-pepino-y-queso",
     "title": "Cucumber and Cheese Salad",
     "people": "4",
     "difficulty": "",
     "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ensalada-pepino-usa.webp",
-    "video": "https://youtu.be/i6xS4fL2kRo?si=ouVyQVRBZFHaX1z9",
+    "video": "https://www.youtube.com/shorts/I8OKSMXHuQg",
     "gallery": [
         "ensalada-de-pepino-y-queso.webp"
     ],
@@ -30,7 +30,8 @@
     "brand": [
         "Zambos"
     ],
-    "product": [
-        "Zambos Picositas"
-    ]
+    "products": [
+        "zambos-chile-limon"
+    ],
+        "new":true
 }

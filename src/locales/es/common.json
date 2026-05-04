@@ -223,26 +223,46 @@
     "title": "NUESTRAS RECETAS",
     "items": [
       {
+        "title": "Ceviche",
+        "description": "Deliciosa receta con Zambos Ceviche.",
+        "url": "https://www.youtube.com/shorts/L_yyNPgxXwc"
+      },
+      {
+        "title": "Ensalada de Pepino y Queso",
+        "description": "Fresca ensalada con Zambos Picositas.",
+        "url": "https://www.youtube.com/shorts/I8OKSMXHuQg"
+      },
+      {
+        "title": "Queso Crema y Miel",
+        "description": "Snack dulce y salado con Zambos Plátano Originales.",
+        "url": "https://www.youtube.com/shorts/m8C7cDvhMzk"
+      },
+      {
+        "title": "Tartar de Camarón con Mantequilla de Ajo",
+        "description": "Elegante tartar acompañado de Yuquitas Chile Toreado.",
+        "url": "https://www.youtube.com/shorts/IRnOZwy1iEk"
+      },
+      {
         "title": "Zambos Preparados",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
         "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4"
       },
-            {
+      {
         "title": "¡Unos ZAMBOS con CHOCOLATE!",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
         "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be"
       },
-            {
+      {
         "title": "¡Disfrutá de este platillo tradicional de una forma diferente!",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
         "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be"
       },
-            {
+      {
         "title": "Deliciosa receta con Zambos Ceviche 🍤",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
         "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be"
       },
-            {
+      {
         "title": "Zambos Costeños",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
         "url": "https://www.youtube.com/watch?v=DEDSda5mneA"
