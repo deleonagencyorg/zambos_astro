@@ -221,7 +221,7 @@ const featuredRecipes = availableCategories
 
           <!-- Carousel Dots -->
           {featuredRecipes.length > 1 && (
-            <div class="hidden justify-center gap-2 mt-4">
+            <div class="flex md:hidden justify-center gap-2 mt-4">
               {featuredRecipes.map((_, index) => (
                 <button
                   class={`carousel-dot w-3 h-3 rounded-full transition-all ${index === 0 ? 'bg-red w-8' : 'bg-white/50'}`}
