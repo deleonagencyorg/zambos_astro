@@ -302,6 +302,7 @@ const featuredRecipes = availableCategories
                   <div class="recipe-card" data-type={normalizeType(recipe)} data-title={recipe.title.toLowerCase()} style="display:none">
                     <RecipeCard
                       image={recipe.image || '/images/recipes/placeholder.jpg'}
+                      previewImage={(recipe as any)['preview-image'] || undefined}
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
