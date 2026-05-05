@@ -19,9 +19,9 @@
         "Honey to taste"
     ],
     "instructions": [
-        "Step 1. Place the Zambos Original Plantain Chips on a plate or tray to share.",
-        "Step 2. Soften the cream cheese by mixing it lightly until it has a creamy, spreadable texture, and place it in the center or in small dots over the plantain chips.",
-        "Step 3. Finish with a drizzle of honey on top and serve immediately as a sweet and savory snack to share."
+        "Place the Zambos Original Plantain Chips on a plate or tray to share.",
+        "Soften the cream cheese by mixing it lightly until it has a creamy, spreadable texture, and place it in the center or in small dots over the plantain chips.",
+        "Finish with a drizzle of honey on top and serve immediately as a sweet or savory snack to share."
     ],
     "brand": [
         "Zambos"
@@ -29,5 +29,5 @@
     "products": [
         "zambos-originals"
     ],
-    "new":true
+    "new": true
 }

@@ -25,14 +25,18 @@
     "Aceite vegetal"
   ],
   "instructions": [
-    "Paso 1: En un recipiente bate con un tenedor o batidor de mano los huevos con la sal y la pimienta.",
-    "Paso 2: En otro recipiente machaca bien las papas, agregando la sal, la pimienta, los zambos y el perejil.",
-    "Paso 3: Mezcla todo bien y poco a poco agrega los huevos batidos.",
-    "Paso 4: Agrega el atún y la cebolla asegurándote que todo quede bien mezclado.",
-    "Paso 5: Coloca un poco de harina en tus manos y forma tortitas del tamaño que consideres apropiado.",
-    "Paso 6: Pásalas por harina cubriéndolas bien y colócalas separadas en una bandeja o molde tipo “Pyrex”.",
-    "Paso 7: Calienta abundante aceite en un sartén, y cuando esté caliente, reduce la temperatura a fuego medio y fríe las tortitas de lado y lado hasta que estén doradas."
+    "Paso 1. En un recipiente bate con un tenedor o batidor de mano los huevos con la sal y la pimienta.",
+    "Paso 2. En otro recipiente machaca bien las papas, agregando la sal, la pimienta, los zambos y el perejil.",
+    "Paso 3. Mezcla todo bien y poco a poco agrega los huevos batidos.",
+    "Paso 4. Agrega el atún y la cebolla asegurándote que todo quede bien mezclado.",
+    "Paso 5. Coloca un poco de harina en tus manos y forma tortitas del tamaño que consideres apropiado.",
+    "Paso 6. Pásalas por harina cubriéndolas bien y colócalas separadas en una bandeja o molde tipo “Pyrex”.",
+    "Paso 7. Calienta abundante aceite en un sartén, y cuando esté caliente, reduce la temperatura a fuego medio y fríe las tortitas de lado y lado hasta que estén doradas."
   ],
-  "brand": ["zambos"],
-  "products": ["zambos-platano-picositas"]
+  "brand": [
+    "zambos"
+  ],
+  "products": [
+    "zambos-platano-picositas"
+  ]
 }

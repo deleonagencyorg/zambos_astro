@@ -20,10 +20,12 @@
     "1 Zambos Plátano Picositas"
   ],
   "instructions": [
-    "Paso 1: Colocar en un sartén el filete de cerdo cortado en cubos, sofreír y sazonar con sal y pimienta.",
-    "Paso 2: Agregar la salsa barbacoa.",
-    "Paso 3: Agregar los ingredientes dentro del empaque de Zambos, agregar el repollo, la carne y la cebolla encurtida.",
-    "Paso 4: Verter aderezo rosado al gusto."
+    "Paso 1. Colocar en un sartén el filete de cerdo cortado en cubos, sofreír y sazonar con sal y pimienta.",
+    "Paso 2. Agregar la salsa barbacoa.",
+    "Paso 3. Agregar los ingredientes dentro del empaque de Zambos, agregar el repollo, la carne y la cebolla encurtida.",
+    "Paso 4. Verter aderezo rosado al gusto."
   ],
-  "brand": ["zambos"]
+  "brand": [
+    "zambos"
+  ]
 }
