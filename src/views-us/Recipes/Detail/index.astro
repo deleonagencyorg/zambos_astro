@@ -331,7 +331,7 @@ const servings = recipe.servings || 4;
       <div class="flex flex-col lg:flex-row gap-[6%]">
         
         <!-- Ingredients Column -->
-        <div class="w-full lg:w-[47%] mb-[8%] lg:mb-0">
+        <div class="w-full lg:w-[47%] mb-[8%] lg:mb-0 px-10 md:px-0">
           <!-- Red Header Pill -->
           <div class="flex justify-center lg:justify-start mb-[4%]">
             <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] lg:py-[1.5%] lg:px-[4%] rounded-full inline-block">
@@ -361,7 +361,7 @@ const servings = recipe.servings || 4;
         </div>
         
         <!-- Preparation Column -->
-        <div class="w-full lg:w-[47%]">
+        <div class="w-full lg:w-[47%] px-10 md:px-0">
           <!-- Red Header Pill -->
           <div class="flex justify-center lg:justify-start mb-[4%]">
             <div class="bg-[#B71C1C] text-white py-[2%] px-[6%] lg:py-[1.5%] lg:px-[4%] rounded-full inline-block">
@@ -372,7 +372,7 @@ const servings = recipe.servings || 4;
           </div>
           
           <!-- Preparation Steps with Styled Numbers -->
-          <ol class="space-y-[4%]">
+          <ol class="space-y-[4%] ">
             {recipe.instructions.map((instruction: string, index: number) => (
               <li class="flex items-start gap-[4%]">
                 <span class="flex-shrink-0 text-white lg:text-[#B71C1C] font-bold text-[4vw] md:text-[2vw] lg:text-[1.4vw] xl:text-[1.2vw] leading-none pt-[0.5%]">
@@ -533,7 +533,7 @@ const servings = recipe.servings || 4;
           />
         </div>
         <!-- Right Image - It's That Vibe -->
-        <div class="w-[80%] md:w-[28%] relative mt-[4%] md:mt-0 mx-auto md:mx-0">
+        <div class="w-[80%] md:w-[28%] relative  md:mt-0 mx-auto md:mx-0 -mt-[15px] ">
           <img 
             src="https://snack.yummiespromociones.com/SnacksyummiesAssets/itsvibesusrecipes.webp" 
             alt="It's That Vibe"
