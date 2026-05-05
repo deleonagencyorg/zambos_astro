@@ -272,6 +272,7 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
               <div class="recipe-card" data-type={normalizeType(recipe)} data-title={recipe.title.toLowerCase()} style={index < 4 ? '' : 'display:none'}>
                 <RecipeCard
                   image={recipe.image || '/images/recipes/placeholder.jpg'}
+                  previewImage={(recipe as any)['preview-image'] || undefined}
                   title={recipe.title}
                   time={`${recipe.preparation_time}MIN`}
                   id={recipe.id}
