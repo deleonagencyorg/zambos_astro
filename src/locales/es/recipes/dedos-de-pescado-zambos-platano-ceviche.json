@@ -24,11 +24,15 @@
     "Aceite para freír"
   ],
   "instructions": [
-    "Paso 1: En un procesador de alimentos colocamos el pescado cocido previamente",
-    "Paso 2: Las cebollas, cilantro, jugo de limón, sal y pimienta. Dejamos procesar hasta tener una pasta.",
-    "Paso 3: Formar los dedos y pasar por la harina, huevo y miga triturada de Zambos. Luego freír y servir.",
-    "Paso 4: Puedes acompañar con una salsa tártara o disfrutar con una tortilla y limón."
+    "Paso 1. En un procesador de alimentos colocamos el pescado cocido previamente",
+    "Paso 2. Las cebollas, cilantro, jugo de limón, sal y pimienta. Dejamos procesar hasta tener una pasta.",
+    "Paso 3. Formar los dedos y pasar por la harina, huevo y miga triturada de Zambos. Luego freír y servir.",
+    "Paso 4. Puedes acompañar con una salsa tártara o disfrutar con una tortilla y limón."
   ],
-  "brand": ["zambos"],
-  "products": ["zambos-platano-ceviche"]
+  "brand": [
+    "zambos"
+  ],
+  "products": [
+    "zambos-platano-ceviche"
+  ]
 }

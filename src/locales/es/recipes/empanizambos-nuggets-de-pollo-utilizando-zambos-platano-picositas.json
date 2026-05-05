@@ -27,6 +27,10 @@
     "Paso 5. Calentar el aceite y freír cada pieza.",
     "Paso 6. Servir al gusto salsa BBQ o lo bañas otra vez de la misma salsa."
   ],
-  "brand": ["zambos"],
-  "products": ["zambos-platano-picositas"]
+  "brand": [
+    "zambos"
+  ],
+  "products": [
+    "zambos-platano-picositas"
+  ]
 }

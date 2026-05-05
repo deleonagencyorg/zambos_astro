@@ -22,6 +22,11 @@
   "instructions": [
     "Paso 1. Unta los frijoles en la tortilla. Sigue con el aguacate, luego agrega el chorizo y termina con los Zambos. Enrolla y disfruta."
   ],
-  "brand": ["zambos", "delrancho"],
-  "products": ["zambos-platano-con-chicharron-del-rancho"]
+  "brand": [
+    "zambos",
+    "delrancho"
+  ],
+  "products": [
+    "zambos-platano-con-chicharron-del-rancho"
+  ]
 }

@@ -26,9 +26,13 @@
     "1 bolsa familiar de Zambos Plátano Picositas"
   ],
   "instructions": [
-    "Paso 1: Colocar todos los ingredientes en un tazón y dejar reposar en la Refrigeradora por lo menos 24 horas.",
-    "Paso 2: Servir acompañado de Zambos Plátano Picositas"
+    "Paso 1. Colocar todos los ingredientes en un tazón y dejar reposar en la Refrigeradora por lo menos 24 horas.",
+    "Paso 2. Servir acompañado de Zambos Plátano Picositas"
   ],
-  "brand": ["zambos"],
-  "products": ["zambos-platano-picositas"]
+  "brand": [
+    "zambos"
+  ],
+  "products": [
+    "zambos-platano-picositas"
+  ]
 }

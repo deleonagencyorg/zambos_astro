@@ -14,7 +14,7 @@
     "preparation_time": 20,
     "category": "Lunch",
     "ingredients": [
-        "400 g of cooked shrimp, peeled and chopped into small cubes",
+        "400g of cooked shrimp, peeled and chopped into small cubes",
         "2 tablespoons of butter",
         "1 teaspoon of finely chopped garlic",
         "Juice of 1 lemon",
@@ -25,10 +25,10 @@
         "Yuquitas Chile Toreado to serve"
     ],
     "instructions": [
-        "Step 1. In a small skillet, melt the butter over low heat, add the garlic and cook for 1 to 2 minutes until fragrant without browning; remove from heat and let cool slightly.",
-        "Step 2. Place the cooked and chopped shrimp in a bowl, add the lemon juice, olive oil, salt, and pepper, and mix gently.",
-        "Step 3. Fold in the warm garlic butter and mix carefully until the flavors are well integrated.",
-        "Step 4. Adjust seasoning and finish with chopped parsley or chives. Serve immediately accompanied by Yuquitas Chile Toreado to use as a spoon."
+        "In a small skillet, melt the butter over low heat, add the garlic and cook for 1 to 2 minutes until fragrant without browning; remove from heat and let cool slightly.",
+        "Place the cooked and chopped shrimp in a bowl, add the lemon juice, olive oil, salt, and pepper, and mix gently.",
+        "Fold in the warm garlic butter and mix carefully until the flavors are well integrated.",
+        "Adjust seasoning and finish with chopped parsley or chives. Serve immediately accompanied by Yuquitas Chile Toreado to use as a spoon."
     ],
     "brand": [
         "Zambos"
@@ -36,5 +36,5 @@
     "products": [
         "zambos-yuquitas-chile-toreado"
     ],
-    "new":true
+    "new": true
 }
