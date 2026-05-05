@@ -39,13 +39,11 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => nor
   <div class="container mx-auto px-4 py-12 relative z-10">
     <!-- Encabezado -->
     <div class="text-center mb-8">
-      <h1 class="text-3xl sm:text-5xl md:text-7xl font-black italic text-white mb-2 tracking-wide font-title">
+      <h1 class="text-3xl sm:text-5xl md:text-7xl font-black  text-white mb-2 tracking-wide font-title">
         {currentLang === 'es' ? 'PRODUCTOS' : 'PRODUCTS'}
       </h1>
-      <p class="text-white text-base sm:text-lg md:text-xl font-bold uppercase tracking-widest mb-3">
-        #1 Plantain Chip in USA
-      </p>
-      <p class="text-white text-lg md:text-2xl italic">
+
+      <p class="w-[95%] md:w-full text-white text-xl md:text-4xl ">
         <span>Discover all our </span>
         <span class="text-us-green">variety of flavors</span>
       </p>
@@ -86,7 +84,7 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => nor
             >
             <!-- Badge de categoría -->
             <div class="absolute top-1.5 right-1.5 sm:top-2 sm:right-2 md:top-4 md:right-4 z-10">
-              <span class="bg-[#e16468] text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-1.5 rounded-md font-bold uppercase tracking-wide">
+              <span class="bg-[#e16468] text-white text-[9px] sm:text-[11px] md:text-xs px-1.5 sm:px-2 md:px-4 py-0.5 sm:py-1 md:py-4 rounded-md font-bold uppercase tracking-wide">
                 {categories[product.category] || product.category}
               </span>
             </div>

@@ -26,7 +26,7 @@ module.exports = {
     extend: {
       colors: {
         // ES (default) palette
-        primary: '#0DB14A',
+        primary: '#0D6D20',
         secondary: '#FFED7A',
         tertiary: '#FF0001',
         cuaternary: '#009337',
@@ -35,15 +35,15 @@ module.exports = {
         white: '#FFFFFF',
         brown: '#5B3F2E',
         blue: '#0167F7',
-        green: '#0DB14A',
-        orange: '#FD6600',
+        green: '#0D6D20',
+        orange: '#070707',
         yellow: '#FFED7A',
         pink: '#FF4DFF',
         lemon: '#BEDE89',
         greenDark: '#009337',
 
         // US palette (use with bg-us-primary, text-us-secondary, etc.)
-        'us-primary': '#0E6D20',
+        'us-primary': 'foo',
         'us-secondary': '#F5A623',
         'us-tertiary': '#B71C1C',
         'us-cuaternary': '#16A085',
