@@ -29,11 +29,15 @@
     "1 bolsa familiar de Zambos Plátano Originales"
   ],
   "instructions": [
-    "Paso 1: Colocar en un tazón la carne con las especias mencionadas. Ajo, comino, orégano, sal, pimienta, salsa negra y cilantro. Mezclarlos bien.",
-    "Paso 2: Elaborar torta de carne.",
-    "Paso 3: Colocar en una sartén aceite y cocinar la torta al término deseado.",
-    "Paso 4: Coloque salsa kétchup en una de las rebanadas de pan. Coloque lechuga al gusto. Coloque una porción de Zambos Plátano Originales, encima el aguacate, la carne, el queso y listo."
+    "Paso 1. Colocar en un tazón la carne con las especias mencionadas. Ajo, comino, orégano, sal, pimienta, salsa negra y cilantro. Mezclarlos bien.",
+    "Paso 2. Elaborar torta de carne.",
+    "Paso 3. Colocar en una sartén aceite y cocinar la torta al término deseado.",
+    "Paso 4. Coloque salsa kétchup en una de las rebanadas de pan. Coloque lechuga al gusto. Coloque una porción de Zambos Plátano Originales, encima el aguacate, la carne, el queso y listo."
   ],
-  "brand": ["zambos"],
-  "products": ["zambos-platano-originales"]
+  "brand": [
+    "zambos"
+  ],
+  "products": [
+    "zambos-platano-originales"
+  ]
 }
