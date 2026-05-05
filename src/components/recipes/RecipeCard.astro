@@ -5,6 +5,7 @@ import { getLocale } from '../../i18n/i18n';
 
 interface Props {
   image: string;
+  previewImage?: string;
   title: string;
   time?: string;
   id: string;
@@ -16,6 +17,7 @@ interface Props {
 
 const { 
   image, 
+  previewImage,
   title, 
   time = "30MIN", 
   id,
@@ -24,6 +26,8 @@ const {
   isNew = false,
   video = ''
 } = Astro.props;
+
+const displayImage = previewImage || image;
 
 const currentLocale = getLocale();
 const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'recipes'}/${id}`;
@@ -38,7 +42,7 @@ const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 're
       <!-- Imagen -->
       <div class={`relative overflow-hidden ${currentLocale !== 'es' ? 'h-[150px] sm:h-[180px] md:h-[210px] lg:h-[250px]' : 'h-[160px] sm:h-[180px] md:h-[250px]'}`}>
         <LazyImage
-          src={image}
+          src={displayImage}
           alt={title}
           class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
         />

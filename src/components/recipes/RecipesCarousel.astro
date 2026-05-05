@@ -120,6 +120,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
                 <div class="flex-shrink-0 w-full sm:w-[48%] md:w-[31%]" data-recipes-provided-item>
                   <RecipeCard
                     image={recipe.image}
+                    previewImage={(recipe as any)['preview-image'] || undefined}
                     title={recipe.title}
                     time={`${recipe.preparation_time}MIN`}
                     id={recipe.id}
@@ -170,6 +171,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
                   <div class="recipe-slide flex justify-center" data-category={getCategoryKey(recipe)}>
                     <RecipeCard
                       image={recipe.image}
+                      previewImage={(recipe as any)['preview-image'] || undefined}
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
@@ -211,6 +213,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
               <div class="recipe-slide flex-shrink-0 group-hover-container" data-index={index} data-category={getCategoryKey(recipe)}>
                 <RecipeCard
                   image={recipe.image}
+                  previewImage={(recipe as any)['preview-image'] || undefined}
                   title={recipe.title}
                   time={`${recipe.preparation_time}MIN`}
                   id={recipe.id}
