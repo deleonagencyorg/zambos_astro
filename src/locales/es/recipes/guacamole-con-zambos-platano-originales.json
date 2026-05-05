@@ -23,10 +23,14 @@
     "1 bolsa familiar de Zambos Plátano Originales"
   ],
   "instructions": [
-    "Paso 1: En el procesador de alimentos colocar el aguacate, la cebolla, el culantro, mantequilla crema, el limón y huevo. Luego procesar hasta tener una mezcla homogénea.",
-    "Paso 2: Sazonar con sal y pimienta al gusto.",
-    "Paso 3: Refrigerar y servir colocando una porción en las canastitas. Acompañar con los Zambos Plátano Originales."
+    "Paso 1. En el procesador de alimentos colocar el aguacate, la cebolla, el culantro, mantequilla crema, el limón y huevo. Luego procesar hasta tener una mezcla homogénea.",
+    "Paso 2. Sazonar con sal y pimienta al gusto.",
+    "Paso 3. Refrigerar y servir colocando una porción en las canastitas. Acompañar con los Zambos Plátano Originales."
   ],
-  "brand": ["zambos"],
-  "products": ["zambos-platano-originales"]
+  "brand": [
+    "zambos"
+  ],
+  "products": [
+    "zambos-platano-originales"
+  ]
 }

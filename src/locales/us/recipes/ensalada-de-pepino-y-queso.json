@@ -22,10 +22,10 @@
         "1 cup of Zambos Picositas"
     ],
     "instructions": [
-        "Step 1. Place the cucumber and fresh cheese in a large bowl and mix gently.",
-        "Step 2. Add the lemon juice, olive oil, and salt to taste, mixing carefully.",
-        "Step 3. Fold in the Zambos Picositas just before serving and mix lightly so they integrate without losing their crunchy texture.",
-        "Step 4. Serve immediately."
+        "Place the cucumber and fresh cheese in a large bowl and mix gently.",
+        "Add the lemon juice, olive oil, and salt to taste, mixing carefully.",
+        "Fold in the Zambos Picositas just before serving and mix lightly so they integrate without losing their crunchy texture.",
+        "Serve immediately."
     ],
     "brand": [
         "Zambos"
@@ -33,5 +33,5 @@
     "products": [
         "zambos-chile-limon"
     ],
-        "new":true
+    "new": true
 }

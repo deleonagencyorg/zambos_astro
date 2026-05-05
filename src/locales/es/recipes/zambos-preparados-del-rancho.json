@@ -35,11 +35,16 @@
     "½ taza de mayonesa"
   ],
   "instructions": [
-    "Paso 1: Coloca todos los vegetales en una olla con un poco de agua y cocina a fuego medio por 20 minutos.",
-    "Paso 2: Retira del fuego, escurre y coloca en una licuadora.",
-    "Paso 3: Agrega la sal, el consomé, la crema y la mayonesa.",
-    "Paso 4: Licúa hasta tener una mezcla homogénea. Si está muy espeso agrega un poco de agua."
+    "Paso 1. Coloca todos los vegetales en una olla con un poco de agua y cocina a fuego medio por 20 minutos.",
+    "Paso 2. Retira del fuego, escurre y coloca en una licuadora.",
+    "Paso 3. Agrega la sal, el consomé, la crema y la mayonesa.",
+    "Paso 4. Licúa hasta tener una mezcla homogénea. Si está muy espeso agrega un poco de agua."
   ],
-  "brand": ["zambos", "delrancho"],
-  "products": ["zambos-platano-con-chicharron-del-rancho"]
+  "brand": [
+    "zambos",
+    "delrancho"
+  ],
+  "products": [
+    "zambos-platano-con-chicharron-del-rancho"
+  ]
 }
