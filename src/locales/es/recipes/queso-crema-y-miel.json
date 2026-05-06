@@ -1,0 +1,34 @@
+{
+  "date": "2026-04-30",
+  "id": "queso-crema-y-miel",
+  "slug": "queso-crema-y-miel",
+  "title": "Queso Crema y Miel",
+  "people": "5",
+  "difficulty": "Fácil",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/14-zambos-platano-originales-queso-crema-y-miel800x800.webp",
+  "preview-image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/14-zambos-platano-originales-queso-crema-y-miel1920x840.webp",
+  "video": "https://www.youtube.com/shorts/m8C7cDvhMzk",
+  "gallery": [
+    "https://snack.yummiespromociones.com/SnacksyummiesAssets/crema-y-miel-1920.jpg"
+  ],
+  "type": "image",
+  "preparation_time": 5,
+  "category": "Snack",
+  "ingredients": [
+    "Zambos Plátano Originales",
+    "½ taza de queso crema a temperatura ambiente",
+    "Miel al gusto"
+  ],
+  "instructions": [
+    "Paso 1. Coloca los Zambos Plátano Originales en un plato o charola para compartir.",
+    "Paso 2. Suaviza el queso crema mezclándolo ligeramente hasta obtener una textura cremosa y untable, y colócalo en el centro o en pequeños puntos sobre los plátanos.",
+    "Paso 3. Termina con un hilo de miel por encima y sirve de inmediato como snack dulce o salado para compartir."
+  ],
+  "brand": [
+    "Zambos"
+  ],
+  "product": [
+    "zambos-platano-originales"
+  ],
+  "new": true
+}

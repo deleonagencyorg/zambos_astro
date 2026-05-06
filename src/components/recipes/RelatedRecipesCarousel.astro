@@ -10,6 +10,7 @@ interface RecipeItem {
   difficulty?: string;
   servings?: number;
   rating?: number;
+  video?: string;
 }
 
 export interface Props {
@@ -34,11 +35,11 @@ const currentLang = getLocale();
             <div class="w-[360px] flex-shrink-0">
               <RecipeCard
                 image={recipe.image || '/images/recipes/placeholder.jpg'}
+                previewImage={(recipe as any)['preview-image'] || undefined}
                 title={recipe.title}
                 time={`${recipe.preparation_time}MIN`}
                 id={recipe.id}
-                textColor="text-white"
-                iconColor="text-white"
+                video={recipe.video || ''}
               />
             </div>
           ))}
@@ -61,11 +62,11 @@ const currentLang = getLocale();
             <div class="w-[85%] flex-shrink-0">
               <RecipeCard
                 image={recipe.image || '/images/recipes/placeholder.jpg'}
+                previewImage={(recipe as any)['preview-image'] || undefined}
                 title={recipe.title}
                 time={`${recipe.preparation_time}MIN`}
                 id={recipe.id}
-                textColor="text-white"
-                iconColor="text-white"
+                video={recipe.video || ''}
               />
             </div>
           ))}

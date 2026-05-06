@@ -1,0 +1,38 @@
+{
+    "date": "2026-04-30",
+    "id": "ensalada-de-pepino-y-queso",
+    "slug": "ensalada-de-pepino-y-queso",
+    "title": "Cucumber and Cheese Salad",
+    "people": "4",
+    "difficulty": "",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/13-zambos-picositas-ensalada-de-pepino-y-queso800x800.webp",
+  "preview-image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/13-zambos-picositas-ensalada-de-pepino-y-queso800x800.webp",
+    "video": "https://www.youtube.com/shorts/I8OKSMXHuQg",
+    "gallery": [
+        "ensalada-de-pepino-y-queso.webp"
+    ],
+    "type": "image",
+    "preparation_time": 10,
+    "category": "Lunch",
+    "ingredients": [
+        "2 cucumbers, sliced or cubed",
+        "1 cup of fresh cheese, cubed",
+        "Juice of 1 lemon",
+        "2 tablespoons of olive oil",
+        "Salt to taste",
+        "1 cup of Zambos Picositas"
+    ],
+    "instructions": [
+        "Place the cucumber and fresh cheese in a large bowl and mix gently.",
+        "Add the lemon juice, olive oil, and salt to taste, mixing carefully.",
+        "Fold in the Zambos Picositas just before serving and mix lightly so they integrate without losing their crunchy texture.",
+        "Serve immediately."
+    ],
+    "brand": [
+        "Zambos"
+    ],
+    "products": [
+        "zambos-chile-limon"
+    ],
+    "new": true
+}

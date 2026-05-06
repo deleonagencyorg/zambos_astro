@@ -8,6 +8,7 @@ import IngredientsCarousel from '../../../components/recipes/IngredientsCarousel
 import ShareModal from '../../../components/common/ShareModal.astro';
 import ShareButton from '../../../components/common/ShareButton.astro';
 import Subscription from '../../../components/subscription/index.astro';
+import PlayOverlay from '../../../components/common/PlayOverlay.astro';
 
 interface RecipeItem {
   id: string;
@@ -20,6 +21,8 @@ interface RecipeItem {
   image?: string;
   tags?: string[];
   product_image?: string;
+  video?: string;
+  date?: string;
 }
 
 const { currentLang, recipeId } = Astro.props;
@@ -38,7 +41,9 @@ for (const path in recipeModules) {
 // Find current recipe
 const recipe = allRecipes.find((item: RecipeItem) => item.id === recipeId);
 
-const relatedRecipes = allRecipes.filter((item: RecipeItem) => item.id !== recipeId);
+const relatedRecipes = allRecipes
+  .filter((item: RecipeItem) => item.id !== recipeId)
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 const RELATED_PAGE_SIZE = 12;
 
 const canonicalShareUrl = new URL(`${Astro.url.pathname}${Astro.url.search}${Astro.url.hash}`, 'https://zambos.com').href;
@@ -82,19 +87,22 @@ function formatTime(minutes: number): string {
   <!-- Main Recipe Card -->
   <section class="flex justify-center items-center py-6 sm:py-8 px-2 sm:px-4">
     <div class="bg-[#FFED7A] rounded-3xl p-4 sm:p-6 md:p-12 w-full max-w-6xl">
-      <div class="flex flex-col md:flex-row gap-8">
+      <div class="flex flex-col md:flex-row gap-8 md:items-center">
         
         <!-- Left Side - Images -->
         <div class="w-full md:w-1/2">
           <!-- Main Image -->
           <div class="relative rounded-3xl overflow-hidden mb-4">
             {recipe.image && (
-              <LazyImage
-                src={recipe.image} 
-                alt={recipe.title}
-                class="w-full h-[320px] sm:h-[400px] object-cover"
-                transition:name={`recipe-image-${recipe.id}`}
-              />
+              <>
+                <LazyImage
+                  src={recipe.image} 
+                  alt={recipe.title}
+                  class="w-full h-[320px] sm:h-[400px] object-cover md:h-auto md:object-contain md:max-h-[80%]"
+                  transition:name={`recipe-image-${recipe.id}`}
+                />
+                {recipe.video && <PlayOverlay video={recipe.video} size="lg" />}
+              </>
             )}
             
             <!-- Tags on image -->
@@ -185,9 +193,8 @@ function formatTime(minutes: number): string {
             <!-- Preparation Content -->
             <div id="preparationContent" class="tab-content hidden">
               <ol class="space-y-4">
-                {recipe.instructions.map((instruction: string, index: number) => (
+                {recipe.instructions.map((instruction: string) => (
                   <li class="flex items-start gap-3">
-                    <span class="font-bold text-gray-900">{index + 1}.</span>
                     <span class="text-gray-900">{instruction}</span>
                   </li>
                 ))}

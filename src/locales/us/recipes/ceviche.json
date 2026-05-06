@@ -1,0 +1,41 @@
+{
+    "date": "2026-04-30",
+    "id": "ceviche-casero-con-zambos",
+    "slug": "ceviche-casero-con-zambos",
+    "title": "Ceviche casero con Zambos",
+    "people": "4",
+    "difficulty": "Medium",
+  "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/15-zambos-platano-ceviche800x800.webp",
+  "preview-image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/15-zambos-platano-ceviche800x800.webp",
+    "video": "https://www.youtube.com/shorts/L_yyNPgxXwc",
+    "gallery": [
+        "ceviche.webp"
+    ],
+    "type": "image",
+    "preparation_time": 15,
+    "category": "Lunch",
+    "ingredients": [
+        "500g of fresh white fish fillet, cubed",
+        "Juice of 8 lemons",
+        "½ red onion, finely chopped",
+        "1 tomato, chopped",
+        "2 tablespoons of Worcestershire sauce",
+        "2 tablespoons of ketchup",
+        "Fresh cilantro, chopped, to taste",
+        "Salt to taste",
+        "Zambos Ceviche to serve"
+    ],
+    "instructions": [
+        "Place the fish in a bowl and cover with the lemon juice; let it rest until the fish is opaque and well marinated.",
+        "Add the red onion, tomato, cilantro, and salt to taste, mixing gently.",
+        "Add the Worcestershire sauce and ketchup.",
+        "Serve the ceviche cold, accompanied by Zambos Ceviche to use as a spoon when eating."
+    ],
+    "brand": [
+        "Zambos"
+    ],
+    "products": [
+        "zambos-ceviche"
+    ],
+    "new": true
+}

@@ -5,6 +5,7 @@ import './styles.css';
 import Subscription from '../../components/subscription/index.astro';
 import RecipeCard from '../../components/recipes/RecipeCard.astro';
 import RecipeSearch from '../../components/recipes/RecipeSearch.astro';
+import PlayOverlay from '../../components/common/PlayOverlay.astro';
 
 interface Recipe {
   id: string;
@@ -13,6 +14,7 @@ interface Recipe {
   preparation_time: number;
   type?: string;
   date?: string;
+  video?: string;
 }
 
 const currentLang = getLocale();
@@ -29,6 +31,9 @@ for (const path in recipeModules) {
     allRecipes.push(module.default);
   }
 }
+
+// Sort by date: newest first
+allRecipes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 
 // Shared translations
 const noRecipesText = currentLang === 'es' 
@@ -72,15 +77,11 @@ const availableCategories = ORDER.filter(cat =>
   allRecipes.some(r => normalizeType(r) === cat)
 );
 
-// 1 representative per available category so every filter has a slide in the hero carousel
+// Newest recipe per available category, sorted by date (newest first)
 const featuredRecipes = availableCategories
   .map(cat => allRecipes.find(r => normalizeType(r) === cat))
-  .filter((r): r is Recipe => !!r);
-
-// Most recent recipe id (by `date` field) – used to show the NEW tag
-const newestRecipeId = [...allRecipes]
-  .filter(r => !!r.date)
-  .sort((a, b) => (b.date || '').localeCompare(a.date || ''))[0]?.id;
+  .filter((r): r is Recipe => !!r)
+  .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 ---
 
 <div class="min-h-screen relative">
@@ -93,15 +94,15 @@ const newestRecipeId = [...allRecipes]
      <div class="container mx-auto px-4">
        <!-- Title -->
       <div class="mb-8">
-        <h1 class="text-white font-bold text-3xl md:text-4xl lg:text-5xl mb-4 uppercase">
-          {currentLang === 'es' 
-            ? 'DESCUBRE NUESTRA RECETA DESTACADA' 
-            : 'DISCOVER OUR FEATURED RECIPE'}
+        <h1 class="text-white font-bold text-3xl md:text-5xl lg:text-6xl mb-4 uppercase">
+       DISCOVER OUR
         </h1>
-        <p class="text-white text-sm md:text-base">
-          {currentLang === 'es'
-            ? 'Visita nuestra sección de recetas y descubre todo lo que puedes preparar con nuestros deliciosos Zambos.'
-            : 'Visit our recipes section and discover everything you can prepare with our delicious Zambos.'}
+          <h1 class="text-white font-bold text-3xl md:text-5xl lg:text-5xl mb-4 uppercase">
+       FEATURED RECIPE
+        </h1>
+
+        <p class="text-white text-xl  lg:text-xl  md:text-justify">
+          Visit our recipes section and discover everything you can prepare with our delicious Zambos.
         </p>
       </div>
 
@@ -127,7 +128,7 @@ const newestRecipeId = [...allRecipes]
           {availableCategories.map(cat => (
             <button 
               type="button" 
-              class="filter-btn text-md md:text-lg px-8 py-2 md:py-4 rounded-full bg-white text-gray-700 font-bold transition-all whitespace-nowrap" 
+              class="filter-btn text-sm md:text-md px-8 py-2 md:py-4 rounded-full bg-white text-us-red font-bold transition-all whitespace-nowrap" 
               data-filter={cat}
             >
               {filterLabels[cat]}
@@ -153,36 +154,41 @@ const newestRecipeId = [...allRecipes]
                     class="w-full h-full object-cover"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
+
+                  <!-- Play overlay on image area -->
+                  {(recipe as any).video && (
+                    <div class="absolute top-0 left-0 right-0 h-[65%] z-30">
+                      <PlayOverlay video={(recipe as any).video} size="lg" />
+                    </div>
+                  )}
+
+                  <!-- Recipe Info Overlay -->
                   <a
                     href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`}
-                    aria-label={recipe.title}
-                    class="absolute inset-0 z-20"
-                  ></a>
-                  
-                  <!-- Recipe Info Overlay -->
-                  <div class="absolute bottom-0 left-0 right-0 p-6 md:p-12 pb-20 md:pb-12 z-10 pointer-events-none pr-[110px] md:pr-[140px]">
+                    class="absolute bottom-0 left-0 right-0 p-6 md:p-12 pb-20 md:pb-12 z-20 pr-[110px] md:pr-[140px]"
+                  >
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
-                      <span class="px-4 py-2 bg-[#0E6D20] text-white font-bold rounded-full text-sm">
+                      <span class="px-4 py-2 bg-[#0E6D20] text-white font-bold rounded-md text-sm">
                         {normalizeType(recipe).toUpperCase()}
                       </span>
-                      {index === 0 && (
-                        <span class="px-4 py-2 bg-white text-us-red font-bold rounded-full text-sm">
+                      {(recipe as any).new === true && (
+                        <span class="px-4 py-2 bg-white text-us-red font-bold rounded-md text-sm">
                           {currentLang === 'es' ? 'NUEVO' : 'NEW'}
                         </span>
                       )}
                     </div>
-                    
+
                     <!-- Title -->
                     <h2 class="text-white font-bold text-xl md:text-3xl lg:text-4xl mb-2 line-clamp-2">
                       {recipe.title}
                     </h2>
-                    
+
                     <!-- Description (if available) -->
                     <p class="text-white text-sm md:text-base opacity-90 line-clamp-2">
                       {(recipe as any).description || `${currentLang === 'es' ? 'Deliciosa receta preparada con nuestros Zambos favoritos. Perfecta para compartir en familia.' : 'Delicious recipe prepared with our favorite Zambos. Perfect for sharing with family.'}`}
                     </p>
-                  </div>
+                  </a>
 
                   <!-- Carousel Navigation - Same style and position on mobile and desktop -->
                   {featuredRecipes.length > 1 && (
@@ -215,7 +221,7 @@ const newestRecipeId = [...allRecipes]
 
           <!-- Carousel Dots -->
           {featuredRecipes.length > 1 && (
-            <div class="hidden justify-center gap-2 mt-4">
+            <div class="flex md:hidden justify-center gap-2 mt-4">
               {featuredRecipes.map((_, index) => (
                 <button
                   class={`carousel-dot w-3 h-3 rounded-full transition-all ${index === 0 ? 'bg-red w-8' : 'bg-white/50'}`}
@@ -231,16 +237,16 @@ const newestRecipeId = [...allRecipes]
     </section>
 
     <!-- Seccion del carruserl de recetas -->
-    <section class="py-16 px-8 md:px-0">
+    <section class="py-0 px-8 md:px-0 -mt-4 md:mt-0">
       <div class="container mx-auto px-4">
         <!-- Two-tone title matching Figma -->
         <div class="mb-10">
           <h2 class="font-us-title font-bold uppercase leading-none">
-            <span class="block text-[9vw] md:text-[5vw] lg:text-[4vw]" style="color: #A8D648;">
-              {currentLang === 'es' ? 'EXPLORA MÁS' : 'EXPLORE MORE'}
+            <span class="block text-2xl md:text-6xl lg:text-7xl" style="color: #A8D648;">
+             EXPLORE MORE
             </span>
-            <span class="block text-[9vw] md:text-[5vw] lg:text-[4vw] text-us-green">
-              {currentLang === 'es' ? 'RECETAS ZAMBOS' : 'ZAMBOS RECIPES'}
+            <span class="block text-xl md:text-5xl lg:text-6xl   text-us-green  lg:tracking-[2] tracking-[0.03em]">
+              ZAMBOS RECIPES
             </span>
           </h2>
         </div>
@@ -296,12 +302,14 @@ const newestRecipeId = [...allRecipes]
                   <div class="recipe-card" data-type={normalizeType(recipe)} data-title={recipe.title.toLowerCase()} style="display:none">
                     <RecipeCard
                       image={recipe.image || '/images/recipes/placeholder.jpg'}
+                      previewImage={(recipe as any)['preview-image'] || undefined}
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
                       description={(recipe as any).description}
                       category={normalizeType(recipe).toUpperCase()}
-                      isNew={(recipe as any).isNew || false}
+                      isNew={(recipe as any).new === true}
+                      video={(recipe as any).video || ''}
                     />
                   </div>
                 ))}

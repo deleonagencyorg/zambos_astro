@@ -17,6 +17,8 @@ interface Recipe {
   difficulty?: string;
   servings?: number;
   rating?: number;
+  date?: string;
+  video?: string;
 }
 
 // Optional items can be passed from parent (e.g., related recipes)
@@ -42,6 +44,8 @@ if (!recipeItems.length) {
       recipeItems.push(mod.default);
     }
   }
+  // Sort by date: newest first
+  recipeItems.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 }
 
 // Determine if we are in provided-items mode (hide filters/CTA)
@@ -116,12 +120,14 @@ for (let i = 0; i < recipeItems.length; i += 1) {
                 <div class="flex-shrink-0 w-full sm:w-[48%] md:w-[31%]" data-recipes-provided-item>
                   <RecipeCard
                     image={recipe.image}
+                    previewImage={(recipe as any)['preview-image'] || undefined}
                     title={recipe.title}
                     time={`${recipe.preparation_time}MIN`}
                     id={recipe.id}
                     description={(recipe as any).description}
                     category={(recipe as any).category || 'breakfast'}
-                    isNew={(recipe as any).isNew || false}
+                    isNew={(recipe as any).new === true}
+                    video={(recipe as any).video || ''}
                   />
                 </div>
               ))}
@@ -165,12 +171,14 @@ for (let i = 0; i < recipeItems.length; i += 1) {
                   <div class="recipe-slide flex justify-center" data-category={getCategoryKey(recipe)}>
                     <RecipeCard
                       image={recipe.image}
+                      previewImage={(recipe as any)['preview-image'] || undefined}
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
                       description={(recipe as any).description}
                       category={getCategoryKey(recipe).toUpperCase()}
-                      isNew={(recipe as any).isNew || false}
+                      isNew={(recipe as any).new === true}
+                      video={(recipe as any).video || ''}
                     />
                   </div>
                 ))}
@@ -205,12 +213,14 @@ for (let i = 0; i < recipeItems.length; i += 1) {
               <div class="recipe-slide flex-shrink-0 group-hover-container" data-index={index} data-category={getCategoryKey(recipe)}>
                 <RecipeCard
                   image={recipe.image}
+                  previewImage={(recipe as any)['preview-image'] || undefined}
                   title={recipe.title}
                   time={`${recipe.preparation_time}MIN`}
                   id={recipe.id}
                   description={(recipe as any).description}
                   category={getCategoryKey(recipe).toUpperCase()}
-                  isNew={(recipe as any).isNew || false}
+                  isNew={(recipe as any).new === true}
+                  video={(recipe as any).video || ''}
                 />
               </div>
             ))}
