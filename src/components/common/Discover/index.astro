@@ -19,6 +19,8 @@ export interface Props {
 
 const { title, images } = Astro.props;
 const locale = getLocale() || 'es';
+const uid = `discover-${Math.random().toString(36).slice(2,9)}`;
+const isEnglish = locale !== 'es';
 
 // Get Instagram posts from locale
 const instagramPosts = locale === 'es' 
@@ -26,14 +28,15 @@ const instagramPosts = locale === 'es'
   : enCommon.home.socialmedia.instagramPosts;
 ---
 
-<div class="box-border flex flex-col gap-12 items-left justify-center container mx-auto  py-0 relative w-full text-center ">
+<div class="box-border flex flex-col gap-12 items-left justify-center container mx-auto py-0 relative w-full text-center">
 
-  <div class="max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 w-full">
+  <!-- DESKTOP: grid normal de reels -->
+  <div class="hidden md:grid w-full max-w-full md:max-w-6xl grid-cols-4 gap-6 md:gap-8">
     {instagramPosts.map((post: any) => (
       <div class="w-full overflow-hidden rounded-xl">
         <iframe
           src={post.embedUrl}
-          class="w-full h-[700px] md:h-[370px] lg:h-[500px] rounded-md"
+          class="w-full md:h-[370px] lg:h-[500px] rounded-md"
           allowtransparency="true"
           allowfullscreen
           frameborder="0"
@@ -45,7 +48,145 @@ const instagramPosts = locale === 'es'
           </a>
         ) : null}
       </div>
-     
     ))}
   </div>
-</div>
+
+  <!-- MOBILE: carrusel de reels -->
+  <div
+    class="md:hidden relative w-full max-w-full px-2 discover-carousel"
+    data-uid={uid}
+    data-locale={locale}
+  >
+    <!-- Botón Prev -->
+    <button
+      id={uid + '-prev'}
+      aria-label="Anterior"
+      class="discover-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition"
+      style="top: calc(50% - 40px);"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Track -->
+    <div class="discover-track overflow-hidden w-full rounded-lg">
+      <div class="discover-inner flex transition-transform duration-300 ease-in-out" style="will-change: transform;">
+        {instagramPosts.map((post: any) => (
+          <div class={"discover-slide flex-shrink-0 min-w-full w-full overflow-hidden rounded-xl " + (isEnglish ? 'border border-gray-200' : '')}>
+            <iframe
+              src={post.embedUrl}
+              class="w-full h-[700px] rounded-md"
+              allowtransparency="true"
+              allowfullscreen
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+            {post.embedUrl && !post.embedUrl.includes('/reel/') && locale === 'es' ? (
+              <a href={post.postUrl} class="bg-red text-white px-4 py-2 rounded-lg block text-center mt-2" target="_blank" rel="noopener noreferrer">
+                Ver post
+              </a>
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Botón Next -->
+    <button
+      id={uid + '-next'}
+      aria-label="Siguiente"
+      class="discover-next absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition"
+      style="top: calc(50% - 40px);"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+
+<script is:inline>
+(function () {
+  function initDiscoverCarousel(container) {
+    var locale = container.dataset.locale || 'es';
+    var isEn = locale !== 'es';
+    var inner = container.querySelector('.discover-inner');
+    var prevBtn = container.querySelector('.discover-prev');
+    var nextBtn = container.querySelector('.discover-next');
+    var dots = container.querySelectorAll('.discover-dot');
+    var slides = container.querySelectorAll('.discover-slide');
+
+    if (!inner || !prevBtn || !nextBtn || slides.length === 0) return;
+    if (container.dataset.carouselReady === 'true') return;
+    container.dataset.carouselReady = 'true';
+
+    var total = slides.length;
+    var current = 0;
+
+    function updateDots() {
+      dots.forEach(function (d, i) {
+        d.classList.remove('bg-white', 'bg-white/40', 'bg-red-600', 'bg-red-300', 'scale-125');
+        if (i === current) {
+          d.classList.add('scale-125');
+          d.classList.add(isEn ? 'bg-red-600' : 'bg-white');
+        } else {
+          d.classList.add(isEn ? 'bg-red-300' : 'bg-white/40');
+        }
+      });
+    }
+
+    function goTo(index) {
+      current = ((index % total) + total) % total;
+      inner.style.transform = 'translateX(-' + (current * 100) + '%)';
+      updateDots();
+    }
+
+    prevBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      goTo(current - 1);
+    });
+
+    nextBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      goTo(current + 1);
+    });
+
+    dots.forEach(function (d) {
+      d.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        goTo(parseInt(d.dataset.index, 10));
+      });
+    });
+
+    // Initialize state
+    goTo(0);
+  }
+
+  function initAll() {
+    document.querySelectorAll('.discover-carousel').forEach(function (container) {
+      initDiscoverCarousel(container);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
+  document.addEventListener('astro:page-load', function () {
+    document.querySelectorAll('.discover-carousel').forEach(function (c) {
+      c.removeAttribute('data-carousel-ready');
+    });
+    initAll();
+  });
+  document.addEventListener('astro:after-swap', function () {
+    document.querySelectorAll('.discover-carousel').forEach(function (c) {
+      c.removeAttribute('data-carousel-ready');
+    });
+    initAll();
+  });
+})();
+</script>
