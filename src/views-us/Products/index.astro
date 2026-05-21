@@ -115,12 +115,14 @@ const uniqueCategories = Array.from(new Set((products || []).map((p: any) => nor
 
             <!-- Contenido -->
             <div class="px-3 sm:px-4 md:px-6 pb-4 md:pb-6 flex flex-col flex-1">
-              <h3 class="text-sm sm:text-base md:text-lg font-black text-white mb-2 md:mb-3 uppercase leading-tight tracking-wide">
+              <h3 class="text-sm sm:text-base md:text-lg font-black text-white mb-2 md:mb-3 uppercase leading-tight tracking-wide min-h-[4rem] sm:min-h-[4rem] md:min-h-[3.5rem]">
                 {product.name || product.title}
               </h3>
-              <p class="text-white text-xs sm:text-sm md:text-sm mb-3 md:mb-5 md:line-clamp-2 leading-relaxed flex-1">
-                {product.short_description || product.description}
-              </p>
+              {currentLang === 'us' ? null : (
+                <p class="text-white text-xs sm:text-sm md:text-sm mb-3 md:mb-5 md:line-clamp-2 leading-relaxed flex-1">
+                  {product.short_description || product.description}
+                </p>
+              )}
               <a 
                 href={`/${currentLang}/products/${product.slug || product.id}`} 
                 class="mt-auto block w-full bg-us-red hover:bg-[#c0392b] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"

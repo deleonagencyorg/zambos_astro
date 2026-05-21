@@ -30,6 +30,53 @@
     }
   ],
   "items": [
+      {
+      "id": "zambos-sea-salt",
+      "name": "Zambos Sea Salt",
+      "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_seasalt.png",
+      "background_color": "#64A70B",
+      "header_color": "#FFFFFF",
+      "text_color": "#64A70B",
+      "header_background": "#64A70B",
+      "header_text_color": "#FFFFFF",
+      "color_button": "#64A70B",
+      "description": "Crispy plantain chips lightly seasoned with natural sea salt. Simple, crunchy, and full of authentic flavor.",
+      "available": "https://snack.yummiespromociones.com/taqueritos/banderas.webp",
+      "background_image": "https://snack.yummiespromociones.com/snacksyummies/zambos-grande2.webp",
+      "new": true,
+      "sizes": [
+        {
+          "value": "150",
+          "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_seasalt.png"
+        }
+      ],
+      "weight": [
+        "1oz - 28g"
+      ],
+      "category": "Plantain",
+        "nutrition": {
+        "title": "Nutrition details",
+        "serving": "Serving size: 1oz (28g). Servings per container: 1.18",
+        "rows": [
+          { "label": "Polyunaturated Fat", "value": "0.5g" },
+          { "label": "Monounsaturated Fat", "value": "3g" },
+          { "label": "Total fat", "value": "6g" },
+          { "label": "Saturated fat", "value": "3g - 15%" },
+          { "label": "Trans fat", "value": "0g" },
+          { "label": "Cholesterol", "value": "0%" },
+          { "label": "Sodium", "value": "120mg - 5%" },
+          { "label": "Total carbohydrates", "value": "19g - 7%" },
+          { "label": "Dietary fiber", "value": "1g" },
+          { "label": "Sugars", "value": "<1g" },
+          { "label": "Protein", "value": "<1g" },
+          { "label": "Vitamin D", "value": "0%" },
+          { "label": "Calcium", "value": "0%" },
+          { "label": "Iron", "value": "0%" },
+          { "label": "Potassium", "value": "4%" }
+        ],
+        "disclaimer": ""
+      }
+    },
     {
       "id": "zambos-originals",
       "name": "Zambos Originals",
