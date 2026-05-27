@@ -21,6 +21,7 @@ function extractYouTubeId(url: string): string | null {
 
 const videoId = extractYouTubeId(video);
 const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
+const isShort = /youtube\.com\/shorts\//.test(video);
 
 const sizeClasses = {
   sm: 'w-10 h-10',
@@ -40,6 +41,7 @@ const iconSizeClasses = {
     type="button"
     class={`play-overlay-btn absolute inset-0 z-10 flex items-center justify-center bg-transparent hover:bg-transparent transition-all duration-300 group/overlay cursor-pointer`}
     data-youtube-url={embedUrl}
+    data-youtube-is-short={isShort ? 'true' : undefined}
     aria-label="Play video"
   >
     <span class={`${sizeClasses[size]} rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/overlay:scale-110 border-2 border-red-600`}>
