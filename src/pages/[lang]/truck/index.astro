@@ -1,7 +1,7 @@
 ---
 import TruckView from '../../../views/Truck/index.astro';
 import TruckViewUS from '../../../views-us/Truck/index.astro';
-import { type Locale } from '../../../i18n/i18n';
+import { type Locale, setLocale } from '../../../i18n/i18n';
 import { getHeaderColors } from '../../../config/headerColors';
 
 export async function getStaticPaths() {
@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { currentLang } = Astro.props;
+setLocale(currentLang);
 
 // Set header color config for white background and primary color text using the getHeaderColors function
 const headerColorConfig = getHeaderColors('truck');
