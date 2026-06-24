@@ -1,6 +1,8 @@
 ---
 // src/views/Truck/index.astro
-import { getLocale } from '../../i18n/i18n';
+import Layout from '../../layouts/MainLayout.astro';
+import type { Locale } from '../../i18n/i18n';
+import type { HeaderColorConfig } from '../../config/headerColors';
 import './styles.css';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 import Carousel from '../../components/common/Carousel/index.astro';
@@ -10,7 +12,12 @@ import FormContact from '../../components/contact/FormContact.astro';
 import Subscription from '../../components/subscription/index.astro';
 import SimpleGallery from '../../components/common/Gallery/SimpleGallery.astro';
 
-const currentLang = getLocale();
+export interface Props {
+  currentLang: Locale;
+  headerColorConfig: HeaderColorConfig;
+}
+
+const { currentLang, headerColorConfig } = Astro.props;
 const data = truckEs; // Solo ES
 
 const gallerySlides = (data.gallery?.images || []).map((url) => ({
@@ -38,6 +45,7 @@ for (const path in recipeModules) {
 
 const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs as any).images : [];
 ---
+<Layout title="Zambos Truck" description="Zambos Truck - Snacks preparados" headerColors={headerColorConfig}>
 <div class="w-full text-center flex flex-col items-center justify-center">
   <diV class=" md:container">
 <section class="md:max-w-8xl px-4 sm:px-6 lg:px-8 mt-6 py-12">
@@ -328,7 +336,7 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
         <div class="w-[96%] sm:w-[48%] bg-white rounded-2xl p-6 shadow-sm mx-auto">
           <h3 class="text-[#0A6A2E] font-black text-lg sm:text-2xl">Descarga nuestro catálogo con toda la información</h3>
           <div class="mt-4">
-            <a href="https://snack.yummiespromociones.com/SnacksyummiesAssets/YUMMIES-Catalogo-Zambos-Truck.pdf" target="_blank" class="inline-block bg-[#CA0203] hover:bg-[#A50202] text-white font-bold py-3 px-6 rounded-full transition">Catálogo Zambos Truck</a>
+            <a href="https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos-truck.pdf" target="_blank" class="inline-block bg-[#CA0203] hover:bg-[#A50202] text-white font-bold py-3 px-6 rounded-full transition">Catálogo Zambos Truck</a>
           </div>
         </div>
       </div>
@@ -548,3 +556,4 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 </style>
+</Layout>
