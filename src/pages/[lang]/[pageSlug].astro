@@ -2,6 +2,7 @@
 // src/pages/[lang]/[pageSlug].astro
 import { routesConfig, findRouteBySlug } from '../../config/routes';
 import { setLocale, t, type Locale } from '../../i18n/i18n';
+import { getHeaderColors } from '../../config/headerColors';
 import MainLayout from '../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../layouts/MainLayoutUS.astro';
 import RecipeDetail from '../../views/Recipes/Detail/index.astro';
@@ -155,6 +156,8 @@ if (!isRecipeDetail) {
   pageTitle = currentRoute.metaTitleKey ? t(currentRoute.metaTitleKey) : 'Page';
   pageDescription = currentRoute.metaDescriptionKey ? t(currentRoute.metaDescriptionKey) : '';
 }
+
+const headerColorConfig = getHeaderColors(routeId);
 ---
 
 {isRecipeDetail && langCode === 'us' && (
@@ -171,12 +174,12 @@ if (!isRecipeDetail) {
 
 {!isRecipeDetail && lang === 'us' && (
   <MainLayoutUS title={pageTitle} description={pageDescription} preloadImages={usBgImages[Astro.props.routeId] ?? []}>
-    <ContentComponent />
+    <ContentComponent currentLang={lang} headerColorConfig={headerColorConfig} />
   </MainLayoutUS>
 )}
 
 {!isRecipeDetail && lang !== 'us' && (
   <MainLayout title={pageTitle} description={pageDescription}>
-    <ContentComponent />
+    <ContentComponent currentLang={lang} headerColorConfig={headerColorConfig} />
   </MainLayout>
 )}
