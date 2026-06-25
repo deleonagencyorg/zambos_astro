@@ -19,20 +19,23 @@ export interface Props {
 
 const { currentLang, headerColorConfig } = Astro.props;
 
-// Get translations from common.json
-const title = t('about_us.title', { namespace: 'common', locale: currentLang });
-const metaDescription = t('meta.about_us.description', { namespace: 'common', locale: currentLang });
+// Blindaje contra variables de idioma no definidas durante el build
+const safeLang = currentLang || 'es';
 
-// Importar contenido específico de aboutus.json
-const aboutUsContent = await import(`../../locales/${currentLang}/aboutus.json`);
+// Get translations from common.json
+const title = t('about_us.title', { namespace: 'common', locale: safeLang });
+const metaDescription = t('meta.about_us.description', { namespace: 'common', locale: safeLang });
+
+// Importar contenido específico de aboutus.json usando la variable segura
+const aboutUsContent = await import(`../../locales/${safeLang}/aboutus.json`);
 const historyTitle = aboutUsContent.title;
 const historySubtitle = aboutUsContent.subtitle;
 const historyIntro = aboutUsContent.intro;
 const historyItems = aboutUsContent.items;
 const historyConclusion = aboutUsContent.conclusion;
 
-// Get social media data from common.json
-const commonContent = await import(`../../locales/${currentLang}/common.json`);
+// Get social media data from common.json usando la variable segura
+const commonContent = await import(`../../locales/${safeLang}/common.json`);
 const socialMediaArray = Object.values(commonContent.social_media);
 
 // Video and image URLs for hero section
@@ -88,7 +91,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
                       alt={item.title ?? item.year ?? 'about-us item'}
                     />
 
-                    {currentLang === 'es' && (
+                    {safeLang === 'es' && (
                       <>
                         <button 
                           class="mobile-prev-btn nav-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-quinary text-black rounded-full w-10 h-10 md:hidden z-40 flex items-center justify-center shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
@@ -119,7 +122,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
             <div
             class="absolute z-30 bottom-[60px] left-4 sm:left-8 md:left-12 lg:left-[100px] hidden lg:block"
             >
-              <p class="text-white pb-2 text-sm md:text-base">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
+              <p class="text-white pb-2 text-sm md:text-base">{safeLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
               <div class="flex flex-row gap-5">
                 {socialMediaArray.map((social: any) => {
                   const platform = String(social?.name ?? '').toLowerCase();
@@ -149,7 +152,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
             <div
             class="absolute z-30 bottom-[60px] left-4 sm:left-8 md:left-12 hidden md:block lg:hidden"
             >
-              <p class="text-white pb-2 text-sm md:text-base">{currentLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
+              <p class="text-white pb-2 text-sm md:text-base">{safeLang==='es' ? 'Síguenos en nuestras redes' : 'Follow us on our social media'}</p>
               <div class="flex flex-row gap-5">
                 {socialMediaArray.map((social: any) => {
                   const platform = String(social?.name ?? '').toLowerCase();
@@ -202,7 +205,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
 
         <!-- Navigation Arrows - Ahora son blancos -->
         <div class={
-          `navigation-arrows ${currentLang === 'es' ? 'hidden md:flex' : 'flex'} justify-end gap-3 md:gap-4 mt-4 mb-8 md:mb-[40px] pr-4 sm:pr-8 md:pr-12 lg:pr-[60px]`
+          `navigation-arrows ${safeLang === 'es' ? 'hidden md:flex' : 'flex'} justify-end gap-3 md:gap-4 mt-4 mb-8 md:mb-[40px] pr-4 sm:pr-8 md:pr-12 lg:pr-[60px]`
         }>
           <button 
             id="prevBtn"
@@ -236,7 +239,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
           ))}
         </div>
 
-        {currentLang === 'es' && (
+        {safeLang === 'es' && (
           <div class="relative z-30 mt-6 block md:hidden text-center">
             <p class="text-white pb-2 text-sm text-center">Síguenos en nuestras redes</p>
             <div class="flex justify-center gap-5">
@@ -274,6 +277,7 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
       <Subscription />
     </section>
   </div>
+</div>
 </Layout>
 
 <style>

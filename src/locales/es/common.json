@@ -156,32 +156,32 @@
       "instagramPosts": [
         {
           "id": "post1",
-          "postUrl": "https://www.instagram.com/reel/DTtQ9z4jzam/?igsh=ODdvcjBhYmxnYXZ2",
-          "embedUrl": "https://www.instagram.com/p/DYlQO9dCjMG/embed",
+          "postUrl": "https://www.instagram.com/p/DZgMxCLiVrh/?igsh=ODdvcjBhYmxnYXZ2",
+          "embedUrl": "https://www.instagram.com/p/DZgMxCLiVrh/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-1.jpg",
           "fallbackImage": "/images/instagram-fallback-1.jpg",
           "alt": "Zambos Instagram Post 1"
         },
         {
           "id": "post2",
-          "postUrl": "https://www.instagram.com/reel/DTn0Ec4D8nR/?igsh=MXRhcWlqY3ZxY2hhaQ==",
-          "embedUrl": "https://www.instagram.com/p/DYkz-VWPfsA/embed",
+          "postUrl": "https://www.instagram.com/p/DZa92PMiWSm/?igsh=MXRhcWlqY3ZxY2hhaQ==",
+          "embedUrl": "https://www.instagram.com/p/DZa92PMiWSm/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-2.jpg",
           "fallbackImage": "/images/instagram-fallback-2.jpg",
           "alt": "Zambos Instagram Post 2"
         },
         {
           "id": "post3",
-          "postUrl": "https://www.instagram.com/reel/DTdvDZMj3gT/?igsh=MTRhYW1waThwa21ucw==",
-          "embedUrl": "https://www.instagram.com/p/DYYPAeUjNl-/embed",
+          "postUrl": "https://www.instagram.com/p/DZWI13-hN2i/?igsh=MTRhYW1waThwa21ucw==",
+          "embedUrl": "https://www.instagram.com/p/DZWI13-hN2i/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-3.jpg",
           "fallbackImage": "/images/instagram-fallback-3.jpg",
           "alt": "Zambos Instagram Post 3"
         },
         {
           "id": "post4",
-          "postUrl": "https://www.instagram.com/reel/DTOsANljZUa/?igsh=cDA5eWtqN2pkaHJ4",
-          "embedUrl": "https://www.instagram.com/p/DYYI1uZOhM9/embed",
+          "postUrl": "https://www.instagram.com/p/DZVY7sJFexJ/?igsh=cDA5eWtqN2pkaHJ4",
+          "embedUrl": "https://www.instagram.com/p/DZVY7sJFexJ/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-4.jpg",
           "fallbackImage": "/images/instagram-fallback-4.jpg",
           "alt": "Zambos Instagram Post 4"
