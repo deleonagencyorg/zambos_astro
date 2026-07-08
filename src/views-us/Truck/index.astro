@@ -390,26 +390,20 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
   filters={Array.isArray(data.gallery?.filters) ? data.gallery.filters : []}
 />
 
-    <section id="truck-form" class="truck-truck-form-section pb-16">
-      <div class="mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-[0.7fr_1.3fr] gap-8 lg:gap-12 xl:gap-16 items-stretch">
-          <!-- Columna de texto -->
-          <div class="flex items-center justify-center text-center">
-            <div class="max-w-md">
-              <h2 class="text-white font-black uppercase leading-[0.95] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-                {truckEs.form.title}
-              </h2>
-              <p class="text-white/90 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">
-                Completa el siguiente formulario
-              </p>
-            </div>
+    <section id="truck-form" class="truck-truck-form-section w-full pb-16">
+      <div class="w-full px-0 sm:px-4">
+        <div class="mx-auto w-full max-w-[760px]">
+          <div class="mb-8 text-center">
+            <h2 class="text-white font-black uppercase leading-[0.95] text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              {truckEs.form.title}
+            </h2>
+            <p class="text-white/90 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">
+              Completa el siguiente formulario
+            </p>
           </div>
 
-          <!-- Columna de formulario -->
-          <div class="flex lg:justify-end">
-            <div class="w-full lg:w-[90%] xl:w-[80%]">
-              <FormContact currentLang="es" formType="zambostruck" hideContactReason={true} />
-            </div>
+          <div class="w-full">
+            <FormContact currentLang="es" formType="zambostruck" hideContactReason={true} />
           </div>
         </div>
       </div>
