@@ -1,6 +1,8 @@
 ---
 import TruckView from '../../../views/Truck/index.astro';
 import TruckViewUS from '../../../views-us/Truck/index.astro';
+import MainLayout from '../../../layouts/MainLayout.astro';
+import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
 import { type Locale, setLocale } from '../../../i18n/i18n';
 import { getHeaderColors } from '../../../config/headerColors';
 
@@ -20,7 +22,11 @@ const headerColorConfig = getHeaderColors('truck');
 ---
 
 {currentLang === 'us' ? (
-  <TruckViewUS currentLang={currentLang} headerColorConfig={headerColorConfig} />
+  <MainLayoutUS title="Zambos Truck" description="Discover Zambos Truck packages" headerColors={headerColorConfig}>
+    <TruckViewUS currentLang={currentLang} headerColorConfig={headerColorConfig} />
+  </MainLayoutUS>
 ) : (
-  <TruckView currentLang={currentLang} headerColorConfig={headerColorConfig} />
+  <MainLayout title="Zambos Truck" description="Descubre los paquetes de Zambos Truck" headerColors={headerColorConfig}>
+    <TruckView currentLang={currentLang} headerColorConfig={headerColorConfig} />
+  </MainLayout>
 )}
