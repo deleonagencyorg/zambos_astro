@@ -34,7 +34,7 @@
     }
   },
   "social_media": {
-   "facebook": {
+    "facebook": {
       "name": "Facebook",
       "url": "https://www.facebook.com/zamboslatam",
       "alt": "Facebook de Zambos",
@@ -66,16 +66,26 @@
     "slidermask": "https://snack.yummiespromociones.com/snacksyummies/BGHeader_1_.webp",
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
-      {  "id": "slide0",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/bannerzambosnew.webp",
+      {
+        "id": "slide0",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_desk.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/Zambos_Mobil.webp",
+        "alt": "Zambos",
+        "title": "",
+        "type": "image",
+        "description": "",
+        "link": "#"
+      },
+      {
+        "id": "slide1",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_desk2.webp",
         "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/bgzambosmobile.webp",
         "alt": "Zambos",
         "title": "",
-        "type":"image",
+        "type": "image",
         "description": "",
         "link": "#"
       }
- 
     ]
   },
   "menu_labels": {
@@ -83,7 +93,7 @@
     "explore": "Explorar"
   },
   "menu_items": [
-     {
+    {
       "id": "home",
       "text": "Inicio",
       "href": "/es/"
@@ -143,16 +153,16 @@
       "title": " Zambos - Disfruta tus Zambos en todo momento",
       "description": "Tus hojuelas de papa frita favoritas llegan con sabores naturalmente auténticos para todos los gustos."
     },
-    "newsletter":{
-      "placeholder":"tucorreo@email.com",
-      "buttonText":"Suscribirse"
+    "newsletter": {
+      "placeholder": "tucorreo@email.com",
+      "buttonText": "Suscribirse"
     },
-       "socialmedia":{
-      "title":"MIRA NUESTRO FEED",
-      "images":[],
-      "tagtitle":"on social media",
-      "description":"Follow us on our social media - Snacks Yummies",
-      "newsletter":"Stay up to date with all our news and promotions",
+    "socialmedia": {
+      "title": "MIRA NUESTRO FEED",
+      "images": [],
+      "tagtitle": "on social media",
+      "description": "Follow us on our social media - Snacks Yummies",
+      "newsletter": "Stay up to date with all our news and promotions",
       "instagramPosts": [
         {
           "id": "post1",
@@ -203,11 +213,11 @@
     "privacy_policy_url": "/es/politica-privacidad",
     "contact_title": "DINANT - Contacto"
   },
-  "messagetop":[
+  "messagetop": [
     {
-      "id":"1",
-      "title":"😎 ¡Bienvenidos a Zambos! Si se te antoja un snack, estás en el lugar correcto 🎉",
-      "link":""
+      "id": "1",
+      "title": "😎 ¡Bienvenidos a Zambos! Si se te antoja un snack, estás en el lugar correcto 🎉",
+      "link": ""
     }
   ],
   "form_validation": {
