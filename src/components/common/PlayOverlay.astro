@@ -7,6 +7,7 @@ interface Props {
 const { video, size = 'md' } = Astro.props;
 
 function extractYouTubeId(url: string): string | null {
+  if (!url) return null;
   const patterns = [
     /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
     /youtube\.com\/watch\?.*v=([a-zA-Z0-9_-]{11})/,
@@ -20,7 +21,7 @@ function extractYouTubeId(url: string): string | null {
 }
 
 const videoId = extractYouTubeId(video);
-const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
+const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : video;
 const isShort = /youtube\.com\/shorts\//.test(video);
 
 const sizeClasses = {
@@ -36,11 +37,12 @@ const iconSizeClasses = {
 };
 ---
 
-{videoId && (
+{video && (
   <button
     type="button"
     class={`play-overlay-btn absolute inset-0 z-10 flex items-center justify-center bg-transparent hover:bg-transparent transition-all duration-300 group/overlay cursor-pointer`}
     data-youtube-url={embedUrl}
+    data-video-url={video}
     data-youtube-is-short={isShort ? 'true' : undefined}
     aria-label="Play video"
   >
@@ -51,3 +53,4 @@ const iconSizeClasses = {
     </span>
   </button>
 )}
+

@@ -7,6 +7,7 @@ interface Props {
 const { videoUrl = '', showTrigger = true } = Astro.props;
 
 function extractYouTubeId(url: string): string | null {
+  if (!url) return null;
   const patterns = [
     /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
     /youtube\.com\/watch\?.*v=([a-zA-Z0-9_-]{11})/,
@@ -20,17 +21,18 @@ function extractYouTubeId(url: string): string | null {
 }
 
 const videoId = extractYouTubeId(videoUrl);
-const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : '';
-const hasContent = showTrigger ? !!videoId : true;
+const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : videoUrl;
+const hasContent = showTrigger ? !!videoUrl : true;
 ---
 
 {hasContent && (
   <>
-    {showTrigger && videoId && (
+    {showTrigger && videoUrl && (
       <button
         type="button"
         class="youtube-modal-trigger inline-flex items-center justify-center"
         data-youtube-url={embedUrl}
+        data-video-url={videoUrl}
         aria-label="Play video"
       >
         <slot />
@@ -55,16 +57,23 @@ const hasContent = showTrigger ? !!videoId : true;
           </svg>
         </button>
 
-        <div id="youtubeIframeContainer" class="relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl">
+        <div id="youtubeIframeContainer" class="relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl flex items-center justify-center">
           <iframe
             id="youtubeIframe"
-            class="absolute inset-0 w-full h-full"
+            class="absolute inset-0 w-full h-full hidden"
             src=""
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
+          <video
+            id="youtubeVideoPlayer"
+            class="w-full h-full object-contain hidden"
+            controls
+            playsinline
+            preload="metadata"
+          ></video>
         </div>
       </div>
     </div>
@@ -72,112 +81,163 @@ const hasContent = showTrigger ? !!videoId : true;
 )}
 
 <script>
-  function initYouTubeModal() {
+  function isYouTube(url: string): boolean {
+    if (!url) return false;
+    return /youtu\.be|youtube\.com/.test(url);
+  }
+
+  function extractYouTubeId(url: string): string | null {
+    if (!url) return null;
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+      /youtube\.com\/watch\?.*v=([a-zA-Z0-9_-]{11})/,
+      /^([a-zA-Z0-9_-]{11})$/
+    ];
+    for (const pattern of patterns) {
+      const match = url.match(pattern);
+      if (match) return match[1];
+    }
+    return null;
+  }
+
+  function openVideoModalGlobal(rawUrl: string, isShort = false) {
     const modal = document.getElementById('youtubeModal');
     const iframe = document.getElementById('youtubeIframe') as HTMLIFrameElement | null;
+    const videoPlayer = document.getElementById('youtubeVideoPlayer') as HTMLVideoElement | null;
+    const inner = document.getElementById('youtubeModalInner');
+    const container = document.getElementById('youtubeIframeContainer');
     const closeBtn = document.getElementById('youtubeModalClose');
-    if (!modal || !iframe || !closeBtn) return;
+    if (!modal) return;
 
-    // Avoid duplicate listeners on the same elements
+    const isMobile = window.innerWidth < 768;
+
+    if (isYouTube(rawUrl)) {
+      const ytId = extractYouTubeId(rawUrl);
+      const embedUrl = ytId ? `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0` : rawUrl;
+
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.src = '';
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+        videoPlayer.classList.add('hidden');
+      }
+
+      if (isShort && isMobile) {
+        modal.classList.remove('bg-black/80', 'backdrop-blur-sm');
+        modal.classList.add('bg-black');
+        if (inner) inner.className = 'fixed inset-0 w-full h-full';
+        if (container) container.className = 'w-full h-full';
+        if (closeBtn) closeBtn.className = 'fixed top-4 right-4 z-[10000] text-white hover:text-gray-300 transition-colors';
+      } else {
+        modal.classList.add('bg-black/80', 'backdrop-blur-sm');
+        modal.classList.remove('bg-black');
+        if (inner) inner.className = 'relative w-full max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px]';
+        if (container) container.className = 'relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl flex items-center justify-center';
+        if (closeBtn) closeBtn.className = 'absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors';
+      }
+
+      if (iframe) {
+        iframe.src = embedUrl;
+        iframe.classList.remove('hidden');
+      }
+    } else {
+      if (iframe) {
+        iframe.src = '';
+        iframe.classList.add('hidden');
+      }
+
+      if (isMobile) {
+        modal.classList.remove('bg-black/80', 'backdrop-blur-sm');
+        modal.classList.add('bg-black');
+        if (inner) inner.className = 'fixed inset-0 w-full h-full';
+        if (container) container.className = 'w-full h-full flex items-center justify-center';
+        if (closeBtn) closeBtn.className = 'fixed top-4 right-4 z-[10000] text-white hover:text-gray-300 transition-colors';
+      } else {
+        modal.classList.add('bg-black/80', 'backdrop-blur-sm');
+        modal.classList.remove('bg-black');
+        if (inner) inner.className = 'relative w-full max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px] max-h-[85vh]';
+        if (container) container.className = 'relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl flex items-center justify-center';
+        if (closeBtn) closeBtn.className = 'absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors';
+      }
+
+      if (videoPlayer) {
+        videoPlayer.src = rawUrl;
+        videoPlayer.classList.remove('hidden');
+        videoPlayer.play().catch((err) => {
+          console.warn('Autoplay prevented by browser:', err);
+        });
+      }
+    }
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeVideoModalGlobal() {
+    const modal = document.getElementById('youtubeModal');
+    const iframe = document.getElementById('youtubeIframe') as HTMLIFrameElement | null;
+    const videoPlayer = document.getElementById('youtubeVideoPlayer') as HTMLVideoElement | null;
+    if (!modal) return;
+
+    if (iframe) {
+      iframe.src = '';
+      iframe.classList.add('hidden');
+    }
+
+    if (videoPlayer) {
+      videoPlayer.pause();
+      videoPlayer.src = '';
+      videoPlayer.removeAttribute('src');
+      videoPlayer.load();
+      videoPlayer.classList.add('hidden');
+    }
+
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  (window as any).openVideoModal = openVideoModalGlobal;
+  (window as any).__openVideoModal = openVideoModalGlobal;
+  (window as any).closeVideoModal = closeVideoModalGlobal;
+  (window as any).__closeVideoModal = closeVideoModalGlobal;
+
+  function initYouTubeModal() {
+    const modal = document.getElementById('youtubeModal');
+    const closeBtn = document.getElementById('youtubeModalClose');
+    if (!modal || !closeBtn) return;
+
     if ((modal as any).__ytModalBound) return;
     (modal as any).__ytModalBound = true;
 
-    function openModal(url: string, isShort = false) {
-      const inner = document.getElementById('youtubeModalInner');
-      const container = document.getElementById('youtubeIframeContainer');
-      const isMobile = window.innerWidth < 768;
-
-      if (isShort && isMobile) {
-        // Fullscreen en mobile
-        modal!.classList.remove('bg-black/80', 'backdrop-blur-sm');
-        modal!.classList.add('bg-black');
-        if (inner) {
-          inner.className = 'fixed inset-0 w-full h-full';
-        }
-        if (container) {
-          container.className = 'w-full h-full';
-        }
-        if (closeBtn) {
-          closeBtn.className = 'fixed top-4 right-4 z-[10000] text-white hover:text-gray-300 transition-colors';
-        }
-      } else {
-        modal!.classList.add('bg-black/80', 'backdrop-blur-sm');
-        modal!.classList.remove('bg-black');
-        if (inner) {
-          inner.className = 'relative w-full max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px]';
-        }
-        if (container) {
-          container.className = 'relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl';
-        }
-        if (closeBtn) {
-          closeBtn.className = 'absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors';
-        }
-      }
-
-      iframe!.src = url;
-      modal!.classList.remove('hidden');
-      modal!.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-      iframe!.src = '';
-      modal!.classList.add('hidden');
-      modal!.classList.remove('flex');
-      document.body.style.overflow = '';
-    }
-
-    closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeVideoModalGlobal);
 
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
+      if (e.target === modal) closeVideoModalGlobal();
     });
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal!.classList.contains('hidden')) {
-        closeModal();
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closeVideoModalGlobal();
       }
     });
   }
 
-  // Listen for clicks globally (only bind once)
   if (!(window as any).__ytClickBound) {
     (window as any).__ytClickBound = true;
     document.addEventListener('click', (e) => {
-      const trigger = (e.target as HTMLElement).closest('[data-youtube-url]');
+      const trigger = (e.target as HTMLElement).closest('[data-youtube-url], [data-video-url], [data-video]');
       if (trigger) {
         e.preventDefault();
         e.stopPropagation();
-        const url = trigger.getAttribute('data-youtube-url');
+        const url = trigger.getAttribute('data-video-url') || trigger.getAttribute('data-youtube-url') || trigger.getAttribute('data-video');
         if (url) {
-          const modal = document.getElementById('youtubeModal');
-          const iframe = document.getElementById('youtubeIframe') as HTMLIFrameElement | null;
-          if (modal && iframe) {
-            const isShort = trigger.getAttribute('data-youtube-is-short') === 'true';
-            const inner = document.getElementById('youtubeModalInner');
-            const container = document.getElementById('youtubeIframeContainer');
-            const closeBtn = document.getElementById('youtubeModalClose');
-            const isMobile = window.innerWidth < 768;
-
-            if (isShort && isMobile) {
-              modal.classList.remove('bg-black/80', 'backdrop-blur-sm');
-              modal.classList.add('bg-black');
-              if (inner) inner.className = 'fixed inset-0 w-full h-full';
-              if (container) container.className = 'w-full h-full';
-              if (closeBtn) closeBtn.className = 'fixed top-4 right-4 z-[10000] text-white hover:text-gray-300 transition-colors';
-            } else {
-              modal.classList.add('bg-black/80', 'backdrop-blur-sm');
-              modal.classList.remove('bg-black');
-              if (inner) inner.className = 'relative w-full max-w-[90vw] md:max-w-[80vw] lg:max-w-[900px]';
-              if (container) container.className = 'relative w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl';
-              if (closeBtn) closeBtn.className = 'absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors';
-            }
-
-            iframe.src = url;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-          }
+          const isShort = trigger.getAttribute('data-youtube-is-short') === 'true';
+          openVideoModalGlobal(url, isShort);
         }
       }
     });
@@ -189,10 +249,7 @@ const hasContent = showTrigger ? !!videoId : true;
 
 <style>
   #youtubeIframeContainer iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
     border: none;
   }
 </style>
+
