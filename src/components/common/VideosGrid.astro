@@ -5,6 +5,7 @@ interface VideoItem {
   title: string;
   description?: string;
   url: string;
+  image?: string;
 }
 
 export interface Props {
@@ -48,7 +49,7 @@ function getYouTubeThumbnail(url: string): string | null {
 
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
   {Array.isArray(items) && items.map((video) => {
-    const thumb = getYouTubeThumbnail(video.url) || '/images/recipes/placeholder.jpg';
+    const thumb = video.image || getYouTubeThumbnail(video.url) || '/images/recipes/placeholder.jpg';
     const id = getYouTubeId(video.url);
     const embedUrl = id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : '';
     const isShort = /shorts\//.test(String(video.url || ''));
@@ -80,11 +81,11 @@ function getYouTubeThumbnail(url: string): string | null {
     }
 
     return (
-      <a
-        href={video.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="h-full rounded-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] flex flex-col"
+      <button
+        type="button"
+        data-video-url={video.url}
+        class="h-full rounded-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] flex flex-col text-left cursor-pointer"
+        aria-label={`Play ${video.title}`}
       >
         <div class="relative w-full overflow-hidden" style="aspect-ratio: 16 / 9;">
           <LazyImage
@@ -106,7 +107,7 @@ function getYouTubeThumbnail(url: string): string | null {
             {video.title}
           </h3>
         </div>
-      </a>
+      </button>
     );
   })}
 </div>

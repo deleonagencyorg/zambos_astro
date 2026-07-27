@@ -1,6 +1,5 @@
 ---
 // src/views/Truck/index.astro
-import Layout from '../../layouts/MainLayout.astro';
 import type { Locale } from '../../i18n/i18n';
 import type { HeaderColorConfig } from '../../config/headerColors';
 import './styles.css';
@@ -13,11 +12,11 @@ import Subscription from '../../components/subscription/index.astro';
 import SimpleGallery from '../../components/common/Gallery/SimpleGallery.astro';
 
 export interface Props {
-  currentLang: Locale;
-  headerColorConfig: HeaderColorConfig;
+  currentLang?: Locale;
+  headerColorConfig?: HeaderColorConfig;
 }
 
-const { currentLang, headerColorConfig } = Astro.props;
+const { currentLang = 'es', headerColorConfig } = Astro.props;
 const data = truckEs; // Solo ES
 
 const gallerySlides = (data.gallery?.images || []).map((url) => ({
@@ -45,7 +44,6 @@ for (const path in recipeModules) {
 
 const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs as any).images : [];
 ---
-<Layout title="Zambos Truck" description="Zambos Truck - Snacks preparados" headerColors={headerColorConfig}>
 <div class="w-full text-center flex flex-col items-center justify-center">
   <diV class=" md:container">
 <section class="md:max-w-8xl px-4 sm:px-6 lg:px-8 mt-6 py-12">
@@ -542,6 +540,9 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
   document.addEventListener('astro:after-swap', initTruckPackagesCarousel);
 </script>
 
+  <section class="w-full">
+    <Subscription currentLang={currentLang} />
+  </section>
 </div>
 
 <style>
@@ -556,4 +557,3 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
 </style>
-</Layout>
