@@ -1,4 +1,14 @@
 {
+  "rewrites": [
+    {
+      "source": "/invertir",
+      "destination": "https://zambos-truck-franchise.vercel.app/invertir"
+    },
+    {
+      "source": "/invertir/:path*",
+      "destination": "https://zambos-truck-franchise.vercel.app/invertir/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
