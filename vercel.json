@@ -5,6 +5,10 @@
       "destination": "https://zambos-truck-franchise.vercel.app/"
     },
     {
+      "source": "/zambos-truck-franquicia/",
+      "destination": "https://zambos-truck-franchise.vercel.app/"
+    },
+    {
       "source": "/zambos-truck-franquicia/:path*",
       "destination": "https://zambos-truck-franchise.vercel.app/:path*"
     }
