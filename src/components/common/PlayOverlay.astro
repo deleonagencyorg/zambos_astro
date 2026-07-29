@@ -7,7 +7,6 @@ interface Props {
 const { video, size = 'md' } = Astro.props;
 
 function extractYouTubeId(url: string): string | null {
-  if (!url) return null;
   const patterns = [
     /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
     /youtube\.com\/watch\?.*v=([a-zA-Z0-9_-]{11})/,
@@ -21,8 +20,9 @@ function extractYouTubeId(url: string): string | null {
 }
 
 const videoId = extractYouTubeId(video);
-const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : video;
+const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1` : '';
 const isShort = /youtube\.com\/shorts\//.test(video);
+const isYouTube = Boolean(videoId);
 
 const sizeClasses = {
   sm: 'w-10 h-10',
@@ -40,10 +40,13 @@ const iconSizeClasses = {
 {video && (
   <button
     type="button"
-    class={`play-overlay-btn absolute inset-0 z-10 flex items-center justify-center bg-transparent hover:bg-transparent transition-all duration-300 group/overlay cursor-pointer`}
-    data-youtube-url={embedUrl}
-    data-video-url={video}
-    data-youtube-is-short={isShort ? 'true' : undefined}
+    class="play-overlay-btn absolute inset-0 z-10 flex items-center justify-center bg-transparent hover:bg-transparent transition-all duration-300 group/overlay cursor-pointer"
+    {...(isYouTube
+      ? {
+          'data-youtube-url': embedUrl,
+          ...(isShort ? { 'data-youtube-is-short': 'true' } : {})
+        }
+      : { 'data-video-url': video })}
     aria-label="Play video"
   >
     <span class={`${sizeClasses[size]} rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-300 group-hover/overlay:scale-110 border-2 border-red-600`}>
@@ -53,4 +56,3 @@ const iconSizeClasses = {
     </span>
   </button>
 )}
-

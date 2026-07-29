@@ -51,8 +51,8 @@ function getYouTubeThumbnail(url: string): string | null {
   {Array.isArray(items) && items.map((video) => {
     const thumb = video.image || getYouTubeThumbnail(video.url) || '/images/recipes/placeholder.jpg';
     const id = getYouTubeId(video.url);
-    const embedUrl = id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : '';
-    const isShort = /shorts\//.test(String(video.url || ''));
+    const embedUrl = id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&playsinline=1` : '';
+    const isShort = /youtube\.com\/shorts\//.test(String(video.url || ''));
     if (embedUrl) {
       return (
         <button type="button" data-youtube-url={embedUrl} data-youtube-is-short={isShort ? 'true' : undefined} class="h-full rounded-xl overflow-hidden transition-transform duration-300 hover:scale-[1.02] flex flex-col" aria-label={`Play ${video.title}`}>
@@ -61,6 +61,7 @@ function getYouTubeThumbnail(url: string): string | null {
               src={thumb}
               alt={video.title}
               class="absolute inset-0 w-full h-full object-cover"
+              fallbackSrc="/images/recipes/placeholder.jpg"
             />
 
             <div class="absolute inset-0 flex items-center justify-center">
@@ -92,6 +93,7 @@ function getYouTubeThumbnail(url: string): string | null {
             src={thumb}
             alt={video.title}
             class="absolute inset-0 w-full h-full object-cover"
+            fallbackSrc="/images/recipes/placeholder.jpg"
           />
 
           <div class="absolute inset-0 flex items-center justify-center">

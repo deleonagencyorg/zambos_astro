@@ -247,37 +247,44 @@
       {
         "title": "Queso Crema y Miel",
         "description": "Snack dulce y salado con Zambos Plátano Originales.",
-        "url": "https://www.youtube.com/shorts/m8C7cDvhMzk"
+        "url": "https://www.youtube.com/shorts/m8C7cDvhMzk",
+        "image": "https://img.youtube.com/vi/m8C7cDvhMzk/hqdefault.jpg"
       },
       {
         "title": "Tartar de Camarón con Mantequilla de Ajo",
         "description": "Elegante tartar acompañado de Yuquitas Chile Toreado.",
-        "url": "https://www.youtube.com/shorts/IRnOZwy1iEk"
+        "url": "https://www.youtube.com/shorts/IRnOZwy1iEk",
+        "image": "https://img.youtube.com/vi/IRnOZwy1iEk/hqdefault.jpg"
       },
       {
         "title": "Zambos Preparados",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
-        "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4"
+        "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4",
+        "image": "https://img.youtube.com/vi/wpvhxbgfBy4/hqdefault.jpg"
       },
       {
         "title": "¡Unos ZAMBOS con CHOCOLATE!",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
-        "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be"
+        "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be",
+        "image": "https://img.youtube.com/vi/SB1RfCJQJOA/hqdefault.jpg"
       },
       {
         "title": "¡Disfrutá de este platillo tradicional de una forma diferente!",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
-        "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be"
+        "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be",
+        "image": "https://img.youtube.com/vi/sy2AqLzs87E/hqdefault.jpg"
       },
       {
         "title": "Deliciosa receta con Zambos Ceviche 🍤",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
-        "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be"
+        "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be",
+        "image": "https://img.youtube.com/vi/kzMAt5AE0r0/hqdefault.jpg"
       },
       {
         "title": "Zambos Costeños",
         "description": "Descubre ideas para preparar tus snacks Zambos.",
-        "url": "https://www.youtube.com/watch?v=DEDSda5mneA"
+        "url": "https://www.youtube.com/watch?v=DEDSda5mneA",
+        "image": "https://img.youtube.com/vi/DEDSda5mneA/hqdefault.jpg"
       }
     ]
   }

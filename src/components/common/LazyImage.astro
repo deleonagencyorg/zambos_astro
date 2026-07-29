@@ -153,9 +153,12 @@ function getHueRotate(color: string) {
 
 // Generar srcset para imágenes responsivas
 const isExternal = src.startsWith('http');
+const isYouTubeThumbnail = isExternal && /(?:img\.youtube\.com|i\.ytimg\.com)/i.test(src);
 let srcset = '';
 
-if (isExternal && src.includes('assets.doguiygatibienestar.com')) {
+if (isYouTubeThumbnail) {
+  srcset = '';
+} else if (isExternal && src.includes('assets.doguiygatibienestar.com')) {
     srcset = [
       `${src}?w=640 640w`,
       `${src}?w=768 768w`,
