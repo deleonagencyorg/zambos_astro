@@ -96,6 +96,20 @@ const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', l
 
     {currentLang === 'es' && (
       <div class="mt-4 flex justify-center">
+        <a
+          href="https://www.zambos.com/franquicias"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-title text-lg uppercase font-bold py-2 px-8 rounded-full text-white transition-colors bg-[#B71C1C] hover:bg-[#9A1616]"
+        >
+          FRANQUICIAS
+        </a>
+      </div>
+    )}
+
+
+    {currentLang === 'es' && (
+      <div class="mt-4 flex justify-center">
         <a id="zambos-truck-mobile" href="/zambostruck" class="hidden">
           <img src={logos.secondary.url} alt={logos.secondary.alt} class="h-12 w-auto" />
         </a>
