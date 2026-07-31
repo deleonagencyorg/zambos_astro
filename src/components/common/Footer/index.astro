@@ -9,6 +9,7 @@ export interface Props {
 const { currentLang } = Astro.props;
 
 const menuItems = t('menu_items_header', { namespace: 'common', locale: currentLang }) as any[];
+const footerMenuItems = Array.isArray(menuItems) ? menuItems.filter(i => String(i.href || '').toLowerCase() !== '/zambostruck') : [];
 
 const logoSrc = t('assets.logo', { namespace: 'common', locale: currentLang });
 
@@ -41,7 +42,7 @@ const phones = [
     <!-- Links -->
     <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 md:pr-[25px]">
       <nav class="hidden md:flex items-center space-x-8">
-        {menuItems.map(item => (
+        {footerMenuItems.map(item => (
           <a
             href={item.href}
             class="text-white font-sans text-[20px] md:text-[22px] font-medium hover:opacity-80 transition"
