@@ -9,6 +9,7 @@ export interface Props {
 const { currentLang } = Astro.props;
 
 const menuItems = t('menu_items_header', { namespace: 'common', locale: currentLang }) as any[];
+const footerMenuItems = Array.isArray(menuItems) ? menuItems.filter(i => String(i.href || '').toLowerCase() !== '/zambostruck') : [];
 const logoSrc = t('assets.logo', { namespace: 'common', locale: currentLang });
 const instagramUrl = t('social_media.instagram.url', { namespace: 'common', locale: currentLang });
 const facebookUrl = t('social_media.facebook.url', { namespace: 'common', locale: currentLang });
@@ -32,7 +33,7 @@ const footerData = t('footer', { namespace: 'common', locale: currentLang }) as 
 
       <!-- Nav links -->
       <nav class="footer-us-nav">
-        {menuItems.map(item => (
+        {footerMenuItems.map(item => (
           <a href={item.href} class="footer-us-link">
             {item.text}
           </a>

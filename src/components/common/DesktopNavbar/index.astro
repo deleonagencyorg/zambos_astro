@@ -71,6 +71,19 @@ const orderedMenuItems = Array.isArray(menuItems) ? [...menuItems] : [];
       ))}
     </div>
     
+    {/* FRANQUICIAS button */}
+    {currentLang === 'es' && (
+      <a
+        href="https://www.zambos.com/franquicias"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ml-2 lg:ml-3 font-title text-lg uppercase font-bold py-2 px-8 rounded-full text-white transition-colors bg-[#B71C1C] hover:bg-[#9A1616] whitespace-nowrap flex items-center"
+        style="font-size: clamp(0.6rem, 0.85vw, 0.875rem);"
+      >
+        FRANQUICIAS
+      </a>
+    )}
+
     <!-- BUY Button for US -->
     {currentLang === 'us' && (
       <a 
