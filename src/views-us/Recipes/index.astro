@@ -15,6 +15,8 @@ interface Recipe {
   type?: string;
   date?: string;
   video?: string;
+  category?: string;
+  products?: string[];
 }
 
 const currentLang = getLocale();
@@ -42,40 +44,47 @@ const noRecipesText = currentLang === 'es'
 const noFilterResultsText = currentLang === 'es'
   ? 'No se encontraron resultados para la selección'
   : 'No results found for the selection';
-// Filter labels
-const filterLabels: Record<string, string> = currentLang === 'es'
-  ? { 
-      all: 'TODOS',
-      breakfast: 'DESAYUNO', 
-      brunch: 'BRUNCH',
-      lunch: 'ALMUERZO',
-      snack: 'SNACK',
-      other: 'OTROS'
-    }
-  : {
-      all: 'ALL',
-      breakfast: 'BREAKFAST',
-      brunch: 'BRUNCH',
-      lunch: 'LUNCH',
-      snack: 'SNACK',
-      other: 'OTHER'
-    };
+const filterLabels: Record<string, string> = {
+  all: currentLang === 'es' ? 'TODOS' : 'ALL',
+  originales: 'ORIGINALS',
+  ceviche: 'CEVICHE',
+  chicharron: 'CHICHARRÓN',
+  picositas: 'PICOSITAS',
+  yuquitas: 'YUQUITAS'
+};
 
-// Normaliza la categoría de receta (solo usa 'category', no 'type' que es image/video).
-function normalizeType(r: Recipe): string {
-  const raw = String((r as any).category || '').toLowerCase().trim();
-  if (['breakfast', 'desayuno'].includes(raw)) return 'breakfast';
-  if (['brunch'].includes(raw)) return 'brunch';
-  if (['lunch', 'almuerzo'].includes(raw)) return 'lunch';
-  if (['snack', 'merienda'].includes(raw)) return 'snack';
-  return 'other';
+function normalizeText(value: unknown): string {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
 }
 
-// Categorías únicas presentes en las recetas (ordenadas)
-const ORDER = ['breakfast', 'brunch', 'lunch', 'snack', 'other'];
-const availableCategories = ORDER.filter(cat =>
-  allRecipes.some(r => normalizeType(r) === cat)
-);
+function normalizeType(r: Recipe): string {
+  const raw = normalizeText(r.category);
+  const title = normalizeText(r.title);
+  const products = Array.isArray(r.products)
+    ? r.products.map((product) => normalizeText(product)).join(' ')
+    : '';
+  const signature = `${raw} ${title} ${products}`;
+
+  if (signature.includes('yuquitas')) return 'yuquitas';
+  if (signature.includes('ceviche')) return 'ceviche';
+  if (signature.includes('chicharron') || signature.includes('del rancho')) return 'chicharron';
+  if (signature.includes('picositas') || signature.includes('chile limon')) return 'picositas';
+  if (signature.includes('originales') || signature.includes('originals')) return 'originales';
+
+  return raw;
+}
+
+const ORDER = ['originales', 'ceviche', 'chicharron', 'picositas', 'yuquitas'];
+const categoryCounts = allRecipes.reduce((counts, recipe) => {
+  const category = normalizeType(recipe);
+  counts[category] = (counts[category] || 0) + 1;
+  return counts;
+}, {} as Record<string, number>);
+const availableCategories = ORDER.filter((cat) => (categoryCounts[cat] || 0) >= 2);
 
 // Newest recipe per available category, sorted by date (newest first)
 const featuredRecipes = availableCategories
@@ -170,7 +179,7 @@ const featuredRecipes = availableCategories
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
                       <span class="px-4 py-2 bg-[#0E6D20] text-white font-bold rounded-md text-sm">
-                        {normalizeType(recipe).toUpperCase()}
+                        {filterLabels[normalizeType(recipe)] || normalizeType(recipe).toUpperCase()}
                       </span>
                       {(recipe as any).new === true && (
                         <span class="px-4 py-2 bg-white text-us-red font-bold rounded-md text-sm">
@@ -287,7 +296,7 @@ const featuredRecipes = availableCategories
             <!-- Prev Button: half outside left edge -->
             <button
               type="button"
-              class="carousel-grid-prev pointer-events-auto absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] bg-[#B71C1C] text-white w-[11vw] h-[11vw] sm:w-12 sm:h-12 max-w-[48px] max-h-[48px] rounded-xl flex items-center justify-center opacity-50 hover:opacity-100 disabled:opacity-30 hover:bg-[#9A1616] transition-all duration-300 shadow-xl cursor-pointer disabled:cursor-not-allowed active:scale-95"
+              class="carousel-grid-prev hidden pointer-events-auto absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] bg-[#B71C1C] text-white w-[11vw] h-[11vw] sm:w-12 sm:h-12 max-w-[48px] max-h-[48px] rounded-xl items-center justify-center opacity-50 hover:opacity-100 disabled:opacity-30 hover:bg-[#9A1616] transition-all duration-300 shadow-xl cursor-pointer disabled:cursor-not-allowed active:scale-95"
               aria-label="Previous"
             >
               <svg class="w-[4.5vw] h-[4.5vw] sm:w-6 sm:h-6 max-w-[22px] max-h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -307,7 +316,7 @@ const featuredRecipes = availableCategories
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
                       description={(recipe as any).description}
-                      category={normalizeType(recipe).toUpperCase()}
+                      category={filterLabels[normalizeType(recipe)] || normalizeType(recipe).toUpperCase()}
                       isNew={(recipe as any).new === true}
                       video={(recipe as any).video || ''}
                     />
@@ -319,7 +328,7 @@ const featuredRecipes = availableCategories
             <!-- Next Button: half outside right edge -->
             <button
               type="button"
-              class="carousel-grid-next pointer-events-auto absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-[70] bg-[#B71C1C] text-white w-[11vw] h-[11vw] sm:w-12 sm:h-12 max-w-[48px] max-h-[48px] rounded-xl flex items-center justify-center opacity-50 hover:opacity-100 disabled:opacity-30 hover:bg-[#9A1616] transition-all duration-300 shadow-xl cursor-pointer disabled:cursor-not-allowed active:scale-95"
+              class="carousel-grid-next hidden pointer-events-auto absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 z-[70] bg-[#B71C1C] text-white w-[11vw] h-[11vw] sm:w-12 sm:h-12 max-w-[48px] max-h-[48px] rounded-xl items-center justify-center opacity-50 hover:opacity-100 disabled:opacity-30 hover:bg-[#9A1616] transition-all duration-300 shadow-xl cursor-pointer disabled:cursor-not-allowed active:scale-95"
               aria-label="Next"
             >
               <svg class="w-[4.5vw] h-[4.5vw] sm:w-6 sm:h-6 max-w-[22px] max-h-[22px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -344,8 +353,6 @@ const featuredRecipes = availableCategories
 <script>
   let recipesIO: IntersectionObserver | null = null;
   let carouselInterval: number | null = null;
-  let resizeTimeout: number | null = null;
-
   function initializeRecipes() {
     // Carousel functionality
     const featuredCarousel = document.getElementById('featuredCarousel') as HTMLElement | null;
@@ -427,18 +434,8 @@ const featuredRecipes = availableCategories
 
     startCarouselAutoplay();
 
-    // ── Paginacion Carousel
-    function getItemsPerPage() {
-      return window.innerWidth < 640 ? 1 : 2; // 1 en mobile, 2 en desktop
-    }
-    
-    let currentCarouselPage = 0;
-
     const filterButtons = Array.from(document.querySelectorAll('#recipeFilters .filter-btn')) as HTMLButtonElement[];
     const noResultsEl = document.getElementById('noResults') as HTMLElement | null;
-    const carouselPrevBtns = Array.from(document.querySelectorAll('.carousel-grid-prev')) as HTMLButtonElement[];
-    const carouselNextBtns = Array.from(document.querySelectorAll('.carousel-grid-next')) as HTMLButtonElement[];
-
     const cards = Array.from(document.querySelectorAll('#recipesGrid .recipe-card')) as HTMLElement[];
 
     function setFeaturedCarouselVisibility() {
@@ -469,30 +466,14 @@ const featuredRecipes = availableCategories
       });
     }
 
-    function showCarouselPage(page: number) {
+    function renderMatchingCards() {
       const matching = getMatchingCards();
-      const itemsPerPage = getItemsPerPage();
-      const totalPages = Math.max(1, Math.ceil(matching.length / itemsPerPage));
-      
-      // Asegurar que la página esté en rango válido
-      page = Math.max(0, Math.min(page, totalPages - 1));
-      currentCarouselPage = page;
-
-      console.log('[Recipes Carousel] Showing page:', page, 'of', totalPages, 'items per page:', itemsPerPage, 'matching cards:', matching.length);
-
-      // Ocultar todas las cards primero
       cards.forEach((c) => {
         c.style.display = 'none';
         c.style.opacity = '0';
       });
-      
-      // Mostrar solo las cards de la página actual
-      const visibleCards = matching.slice(page * itemsPerPage, page * itemsPerPage + itemsPerPage);
-      
-      console.log('[Recipes Carousel] Visible cards:', visibleCards.length);
-      
-      // Animacion para las cards del carousel de recipes
-      visibleCards.forEach((c, index) => {
+
+      matching.forEach((c, index) => {
         c.style.display = '';
         c.style.opacity = '0';
         c.style.transform = 'translateY(30px)';
@@ -502,16 +483,6 @@ const featuredRecipes = availableCategories
           c.style.opacity = '1';
           c.style.transform = 'translateY(0)';
         }, index * 100);
-      });
-
-      // Actualizar estado de los botones
-      carouselPrevBtns.forEach(btn => { 
-        btn.style.opacity = page === 0 ? '0.4' : '1'; 
-        (btn as HTMLButtonElement).disabled = page === 0;
-      });
-      carouselNextBtns.forEach(btn => { 
-        btn.style.opacity = page >= totalPages - 1 ? '0.4' : '1'; 
-        (btn as HTMLButtonElement).disabled = page >= totalPages - 1;
       });
 
       if (noResultsEl) {
@@ -528,13 +499,13 @@ const featuredRecipes = availableCategories
     function applyFilter(filter: string) {
       currentFilter = filter;
       setFeaturedCarouselVisibility();
-      showCarouselPage(0);
+      renderMatchingCards();
     }
 
     function applyQuery(query: string) {
       currentQuery = String(query || '').trim().toLowerCase();
       setFeaturedCarouselVisibility();
-      showCarouselPage(0);
+      renderMatchingCards();
     }
 
     function setActiveFilter(btn: HTMLButtonElement) {
@@ -554,29 +525,6 @@ const featuredRecipes = availableCategories
       });
     });
 
-    // Debug: verificar que se encontraron los botones
-    console.log('[Recipes Carousel] Found prev buttons:', carouselPrevBtns.length);
-    console.log('[Recipes Carousel] Found next buttons:', carouselNextBtns.length);
-    console.log('[Recipes Carousel] Found cards:', cards.length);
-
-    carouselPrevBtns.forEach((btn, index) => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('[Recipes Carousel] Prev clicked, current page:', currentCarouselPage);
-        showCarouselPage(currentCarouselPage - 1);
-      });
-    });
-
-    carouselNextBtns.forEach((btn, index) => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('[Recipes Carousel] Next clicked, current page:', currentCarouselPage);
-        showCarouselPage(currentCarouselPage + 1);
-      });
-    });
-
     // Initialize default filter
     const defaultBtn = filterButtons.find(b => b.getAttribute('data-filter') === 'all');
     if (defaultBtn) {
@@ -585,14 +533,6 @@ const featuredRecipes = availableCategories
     }
 
     setFeaturedCarouselVisibility();
-
-    window.addEventListener('resize', () => {
-      if (resizeTimeout) clearTimeout(resizeTimeout);
-      resizeTimeout = window.setTimeout(() => {
-        showCarouselPage(0);
-      }, 250);
-    });
-
     // Search event from RecipeSearch component
     window.addEventListener('recipe-search', (e: Event) => {
       const ce = e as CustomEvent;
@@ -743,6 +683,7 @@ const featuredRecipes = availableCategories
     align-items: stretch;
     width: 100%;
     box-sizing: border-box;
+    gap: 1.25rem;
   }
 
   .recipes-grid .recipe-card {
@@ -758,6 +699,7 @@ const featuredRecipes = availableCategories
   @media (max-width: 639px) {
     .recipes-grid {
       justify-content: center;
+      gap: 1rem;
     }
     
     .recipes-grid .recipe-card {
@@ -770,13 +712,25 @@ const featuredRecipes = availableCategories
   /* Desktop: siempre 2 cards exactas con gap del 4% */
   @media (min-width: 640px) {
     .recipes-grid {
-      gap: 4%;
+      gap: 1.5rem;
     }
     
     .recipes-grid .recipe-card {
-      flex: 0 0 48%;
-      max-width: 48%;
-      width: 48%;
+      flex: 0 0 calc(50% - 0.75rem);
+      max-width: calc(50% - 0.75rem);
+      width: calc(50% - 0.75rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .recipes-grid {
+      gap: 2rem;
+    }
+
+    .recipes-grid .recipe-card {
+      flex: 0 0 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+      width: calc(50% - 1rem);
     }
   }
 
