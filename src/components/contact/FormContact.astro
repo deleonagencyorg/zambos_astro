@@ -328,8 +328,10 @@ const options = dynamicOptions[locale];
         {contact.form.phone.label}
       </label>
       <input 
-        type="number" 
+        type="tel" 
+        inputmode="numeric"
         name="phone" 
+        maxlength="15"
         placeholder={contact.form.phone.placeholder}
         class={`w-full font-semibold uppercase flex justify-center items-center gap-5 p-[15px_20px] border-[1.5px] rounded-full focus:ring-2 focus:ring-primary focus:border-transparent transition-all ${locale !== 'es' ? 'text-white bg-us-green border-white placeholder:text-white/70 focus:text-black focus:bg-white' : 'text-[#009337] bg-[#FFED7A] border-[#009337] placeholder:text-[#009337] focus:text-black focus:bg-white'}`}
       />
@@ -640,6 +642,23 @@ const options = dynamicOptions[locale];
   let dynamicFields;
   let form;
 
+  const phonePlaceholderByCountry = {
+    'Guatemala': '51234567',
+    'El Salvador': '71234567',
+    'Honduras': '98765432',
+    'Nicaragua': '81234567',
+    'Costa Rica': '81234567',
+    'República Dominicana': '8091234567'
+  };
+
+  function updatePhonePlaceholder(selectedCountry) {
+    const phoneInput = document.querySelector('input[name="phone"]');
+    if (!phoneInput) return;
+
+    const fallbackPlaceholder = locale === 'es' ? 'Número de celular' : 'Mobile number';
+    phoneInput.setAttribute('placeholder', phonePlaceholderByCountry[selectedCountry] || fallbackPlaceholder);
+  }
+
   function toggleExportLocationFields(selectedReason) {
     const isExports = selectedReason === 'Exportaciones' || selectedReason === 'Exports';
 
@@ -772,6 +791,7 @@ const options = dynamicOptions[locale];
     // Handle country change
     countrySelect.onchange = function() {
       const selectedCountry = this.value;
+      updatePhonePlaceholder(selectedCountry);
       
       // Clear city options
       citySelect.innerHTML = `<option value="">${departmentPlaceholder}</option>`;
@@ -801,6 +821,10 @@ const options = dynamicOptions[locale];
       if (typeof countrySelect.onchange === 'function') {
         countrySelect.onchange();
       }
+    } else if (countrySelect) {
+      const countryKeys = Object.keys(countriesData || {});
+      const defaultCountry = countryKeys.length ? countryKeys[0] : '';
+      updatePhonePlaceholder(countrySelect.value || defaultCountry);
     }
 
     // Handle form submission

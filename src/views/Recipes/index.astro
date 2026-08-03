@@ -15,6 +15,8 @@ interface Recipe {
   type?: string;
   date?: string;
   video?: string;
+  category?: string;
+  products?: string[];
 }
 
 const currentLang = getLocale();
@@ -46,40 +48,50 @@ const loadMoreText = currentLang === 'es'
   ? 'CARGAR MÁS'
   : 'LOAD MORE';
 
-// Filter labels
-const filterLabels: Record<string, string> = currentLang === 'es'
-  ? { 
-      all: 'TODOS',
-      breakfast: 'DESAYUNO', 
-      brunch: 'BRUNCH',
-      lunch: 'ALMUERZO',
-      snack: 'SNACK',
-      other: 'OTROS'
-    }
-  : {
-      all: 'ALL',
-      breakfast: 'BREAKFAST',
-      brunch: 'BRUNCH',
-      lunch: 'LUNCH',
-      snack: 'SNACK',
-      other: 'OTHER'
-    };
+const filterLabels: Record<string, string> = {
+  all: currentLang === 'es' ? 'TODOS' : 'ALL',
+  originales: 'ORIGINALES',
+  ceviche: 'CEVICHE',
+  chicharron: 'CHICHARRÓN',
+  picositas: 'PICOSITAS',
+  yuquitas: 'YUQUITAS'
+};
 
-// Categorías únicas presentes en las recetas (ordenadas)
-const ORDER = ['breakfast', 'brunch', 'lunch', 'snack', 'other'];
-const availableCategories = ORDER.filter(cat =>
-  allRecipes.some(r => normalizeType(r) === cat)
-);
+const ORDER = ['originales', 'ceviche', 'chicharron', 'picositas', 'yuquitas'];
 
-// Normaliza la categoría de receta (solo usa 'category', no 'type' que es image/video).
-function normalizeType(r: Recipe): string {
-  const raw = String((r as any).category || '').toLowerCase().trim();
-  if (['breakfast', 'desayuno'].includes(raw)) return 'breakfast';
-  if (['brunch'].includes(raw)) return 'brunch';
-  if (['lunch', 'almuerzo'].includes(raw)) return 'lunch';
-  if (['snack', 'merienda'].includes(raw)) return 'snack';
-  return 'other';
+function normalizeText(value: unknown): string {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
 }
+
+// recetas filtradas por category
+function normalizeType(r: Recipe): string {
+  const raw = normalizeText(r.category);
+  const title = normalizeText(r.title);
+  const products = Array.isArray(r.products)
+    ? r.products.map((product) => normalizeText(product)).join(' ')
+    : '';
+  const signature = `${raw} ${title} ${products}`;
+
+  if (signature.includes('yuquitas')) return 'yuquitas';
+  if (signature.includes('ceviche')) return 'ceviche';
+  if (signature.includes('chicharron') || signature.includes('del rancho')) return 'chicharron';
+  if (signature.includes('picositas') || signature.includes('chile limon')) return 'picositas';
+  if (signature.includes('originales') || signature.includes('originals')) return 'originales';
+
+  return raw;
+}
+
+const categoryCounts = allRecipes.reduce((counts, recipe) => {
+  const category = normalizeType(recipe);
+  counts[category] = (counts[category] || 0) + 1;
+  return counts;
+}, {} as Record<string, number>);
+
+const availableCategories = ORDER.filter((cat) => (categoryCounts[cat] || 0) >= 2);
 
 // Get featured recipes for carousel (first 3)
 const featuredRecipes = allRecipes.slice(0, 3);
@@ -170,7 +182,7 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
                     <!-- Category Tags -->
                     <div class="flex gap-3 mb-4">
                       <span class="px-4 py-2 bg-[#0DB04A] text-white font-bold rounded-full text-sm">
-                        {normalizeType(recipe).toUpperCase()}
+                        {filterLabels[normalizeType(recipe)] || normalizeType(recipe).toUpperCase()}
                       </span>
                       {(recipe as any).new === true && (
                         <span class="px-4 py-2 bg-red text-white font-bold rounded-full text-sm">
@@ -277,7 +289,7 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
                   time={`${recipe.preparation_time}MIN`}
                   id={recipe.id}
                   description={(recipe as any).description}
-                  category={normalizeType(recipe).toUpperCase()}
+                  category={filterLabels[normalizeType(recipe)] || normalizeType(recipe).toUpperCase()}
                   isNew={(recipe as any).new === true}
                   video={(recipe as any).video || ''}
                 />
@@ -290,16 +302,6 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
             <span class="text-white text-lg md:text-xl font-semibold">{noFilterResultsText}</span>
           </div>
 
-          <div class="flex justify-center mt-8">
-            <button
-              id="loadMoreBtn"
-              type="button"
-              class="bg-red text-white font-bold px-10 py-4 rounded-full hover:opacity-90 transition"
-            >
-              {loadMoreText}
-            </button>
-          </div>
-      
         </>
       )}
     </section>
@@ -389,13 +391,8 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
     // Filter functionality
     const filterButtons = Array.from(document.querySelectorAll('#recipeFilters .filter-btn')) as HTMLButtonElement[];
     const noResultsEl = document.getElementById('noResults') as HTMLElement | null;
-    const loadMoreBtn = document.getElementById('loadMoreBtn') as HTMLButtonElement | null;
-
     const cards = Array.from(document.querySelectorAll('#recipesGrid .recipe-card')) as HTMLElement[];
-
-    const pageSize = 4;
     let currentFilter = 'all';
-    let revealedCount = 0;
     let currentQuery = '';
 
     function setFeaturedCarouselVisibility() {
@@ -423,15 +420,9 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
       });
     }
 
-    function revealNextPage() {
+    function renderMatchingCards() {
       const matching = getMatchingCards(currentFilter);
-      const nextBatch = matching.slice(revealedCount, revealedCount + pageSize);
-      nextBatch.forEach((card) => (card.style.display = ''));
-      revealedCount += nextBatch.length;
-
-      if (loadMoreBtn) {
-        loadMoreBtn.classList.toggle('hidden', revealedCount >= matching.length);
-      }
+      matching.forEach((card) => (card.style.display = ''));
 
       const anyVisible = matching.length > 0;
       if (noResultsEl) {
@@ -447,18 +438,16 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
 
     function applyFilter(filter: string) {
       currentFilter = filter;
-      revealedCount = 0;
       setFeaturedCarouselVisibility();
       hideAll();
-      revealNextPage();
+      renderMatchingCards();
     }
 
     function applyQuery(query: string) {
       currentQuery = String(query || '').trim().toLowerCase();
       setFeaturedCarouselVisibility();
-      revealedCount = 0;
       hideAll();
-      revealNextPage();
+      renderMatchingCards();
     }
 
     function setActiveFilter(btn: HTMLButtonElement) {
@@ -479,11 +468,6 @@ const recipesBasePath = `/${currentLang}/${currentLang === 'es' ? 'recetas' : 'r
         setActiveFilter(btn);
         applyFilter(filter);
       });
-    });
-
-    loadMoreBtn?.addEventListener('click', (e) => {
-      e.preventDefault();
-      revealNextPage();
     });
 
     // Initialize default filter
