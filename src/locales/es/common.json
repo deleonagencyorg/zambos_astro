@@ -67,9 +67,20 @@
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
       {
+        "id": "franquicias_hero",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_truck.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_truck_mobil.webp",
+        "alt": "Franquicias Zambos",
+        "title": "",
+        "type": "image",
+        "description": "",
+        "link": "https://www.zambos.com/franquicias",
+        "isLink": true
+      },
+      {
         "id": "slide0",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_desk4.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_mobil3.webp",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_amigos.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_amigos_mob.webp",
         "alt": "Zambos",
         "title": "",
         "type": "image",
@@ -78,8 +89,8 @@
       },
       {
         "id": "slide1",
-        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_amigos.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_amigos_mob.webp",
+        "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_desk4.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_mobil3.webp",
         "alt": "Zambos",
         "title": "",
         "type": "image",
