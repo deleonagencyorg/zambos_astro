@@ -642,21 +642,12 @@ const options = dynamicOptions[locale];
   let dynamicFields;
   let form;
 
-  const phonePlaceholderByCountry = {
-    'Guatemala': '51234567',
-    'El Salvador': '71234567',
-    'Honduras': '98765432',
-    'Nicaragua': '81234567',
-    'Costa Rica': '81234567',
-    'República Dominicana': '8091234567'
-  };
-
   function updatePhonePlaceholder(selectedCountry) {
     const phoneInput = document.querySelector('input[name="phone"]');
     if (!phoneInput) return;
 
-    const fallbackPlaceholder = locale === 'es' ? 'Número de celular' : 'Mobile number';
-    phoneInput.setAttribute('placeholder', phonePlaceholderByCountry[selectedCountry] || fallbackPlaceholder);
+    const phonePlaceholder = locale === 'es' ? 'Tel\u00E9fono' : 'Phone number';
+    phoneInput.setAttribute('placeholder', phonePlaceholder);
   }
 
   function toggleExportLocationFields(selectedReason) {
