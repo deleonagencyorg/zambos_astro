@@ -1,48 +1,66 @@
 ---
 // src/pages/[lang]/recipes/[recipeId].astro
-import { t, setLocale, type Locale } from '../../../i18n/i18n';
-import MainLayout from '../../../layouts/MainLayout.astro';
-import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
-import RecipeDetail from '../../../views/Recipes/Detail/index.astro';
-import RecipeDetailUS from '../../../views-us/Recipes/Detail/index.astro';
+import { t, setLocale, type Locale } from "../../../i18n/i18n";
+import MainLayout from "../../../layouts/MainLayout.astro";
+import MainLayoutUS from "../../../layouts/MainLayoutUS.astro";
+import RecipeDetail from "../../../views/Recipes/Detail/index.astro";
+import RecipeDetailUS from "../../../views-us/Recipes/Detail/index.astro";
+import { getAllRecipes } from "../../../services/api/recipes";
 
 export async function getStaticPaths() {
   const paths: any[] = [];
-  // Cargar recetas EN
-  const enModules = import.meta.glob('../../../locales/us/recipes/*.json', { eager: true });
-  const enFiles = Object.values(enModules) as any[];
-  for (const mod of enFiles) {
-    const recipe = (mod as any).default;
-    if (!recipe?.id) continue;
-    paths.push({
-      params: { lang: 'us', recipeId: recipe.id },
-      props: { recipe, currentLang: 'us' }
+  const locales = ["us", "es"];
+
+  for (const locale of locales) {
+    const cmsRecipes = await getAllRecipes(locale);
+    const modules = import.meta.glob("../../../locales/*/recipes/*.json", { eager: true });
+    const localRecipes = Object.entries(modules)
+      .filter(([p]) => p.includes(`/${locale}/`))
+      .map(([, mod]: [string, any]) => mod.default)
+      .filter(Boolean);
+
+    const recipesMap = new Map();
+    localRecipes.forEach((r: any) => {
+      if (r.id) recipesMap.set(r.id, r);
+      if (r.slug) recipesMap.set(r.slug, r);
     });
-  }
-  // Cargar recetas ES
-  const esModules = import.meta.glob('../../../locales/es/recipes/*.json', { eager: true });
-  const esFiles = Object.values(esModules) as any[];
-  for (const mod of esFiles) {
-    const recipe = (mod as any).default;
-    if (!recipe?.id) continue;
-    paths.push({
-      params: { lang: 'es', recipeId: recipe.id },
-      props: { recipe, currentLang: 'es' }
+    cmsRecipes.forEach((r: any) => {
+      if (r.id) recipesMap.set(r.id, r);
+      if (r.slug) recipesMap.set(r.slug, r);
     });
+
+    const allRecipes = Array.from(new Set(recipesMap.values()));
+
+    for (const recipe of allRecipes) {
+      const primaryKey = recipe.slug || recipe.id;
+      if (primaryKey) {
+        paths.push({
+          params: { lang: locale, recipeId: primaryKey },
+          props: { recipe, currentLang: locale }
+        });
+      }
+
+      if (recipe.id && recipe.slug && recipe.id !== recipe.slug) {
+        paths.push({
+          params: { lang: locale, recipeId: recipe.id },
+          props: { recipe, currentLang: locale }
+        });
+      }
+    }
   }
+
   return paths;
 }
 
 const { recipe, currentLang } = Astro.props;
 const { lang, recipeId } = Astro.params;
 
-// Establecer el idioma para las traducciones
 setLocale(lang as Locale);
-const isUS = currentLang === 'us';
+const isUS = currentLang === "us";
 const Layout = isUS ? MainLayoutUS : MainLayout;
 const Detail = isUS ? RecipeDetailUS : RecipeDetail;
 ---
 
-<Layout title={recipe.title} preloadImages={isUS ? ['https://snack.yummiespromociones.com/SnacksyummiesAssets/recetasdetalleus.webp'] : []}>
+<Layout title={recipe?.title || "Zambos Recipe"} preloadImages={isUS ? ["https://snack.yummiespromociones.com/SnacksyummiesAssets/recetasdetalleus.webp"] : []}>
   <Detail currentLang={currentLang} recipeId={recipeId} />
 </Layout>

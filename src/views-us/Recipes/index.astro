@@ -173,7 +173,7 @@ const featuredRecipes = availableCategories
 
                   <!-- Recipe Info Overlay -->
                   <a
-                    href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`}
+                    href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${(recipe as any).slug || recipe.id}`}
                     class="absolute bottom-0 left-0 right-0 p-6 md:p-12 pb-20 md:pb-12 z-20 pr-[110px] md:pr-[140px]"
                   >
                     <!-- Category Tags -->
@@ -315,6 +315,7 @@ const featuredRecipes = availableCategories
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
+                      slug={(recipe as any).slug || recipe.id}
                       description={(recipe as any).description}
                       category={filterLabels[normalizeType(recipe)] || normalizeType(recipe).toUpperCase()}
                       isNew={(recipe as any).new === true}

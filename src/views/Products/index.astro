@@ -6,8 +6,12 @@ import { getLocale } from '../../i18n/i18n';
 import './styles.css';
 import Subscription from '../../components/subscription/index.astro';
 
+import { getAllProducts } from "../../services/api/products";
+
 const currentLang = getLocale();
-const products = t('items', { namespace: 'products', locale: currentLang }) || [];
+const cmsProducts = await getAllProducts(currentLang);
+const localProducts = t("items", { namespace: "products", locale: currentLang }) || [];
+const products = cmsProducts.length > 0 ? cmsProducts : localProducts;
 const categoriesRaw = t('categories', { namespace: 'products', locale: currentLang });
 const categories: Record<string, string> = categoriesRaw && typeof categoriesRaw === 'object' ? categoriesRaw : {};
 const pageAssets = t('page', { namespace: 'products', locale: currentLang }) || {};
@@ -123,7 +127,7 @@ const uniqueCategories = Array.from(new Set((products as any[]).map((p) => p.cat
                 {product.short_description || product.description}
               </p>
               <a 
-                href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`} 
+                href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.slug || product.id}`} 
                 class="mt-auto block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"
               >
                 {pageAssets?.view_details || 'Ver detalles'}

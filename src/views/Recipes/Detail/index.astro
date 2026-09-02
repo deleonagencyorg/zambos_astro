@@ -8,7 +8,8 @@ import IngredientsCarousel from '../../../components/recipes/IngredientsCarousel
 import ShareModal from '../../../components/common/ShareModal.astro';
 import ShareButton from '../../../components/common/ShareButton.astro';
 import Subscription from '../../../components/subscription/index.astro';
-import PlayOverlay from '../../../components/common/PlayOverlay.astro';
+import PlayOverlay from "../../../components/common/PlayOverlay.astro";
+import { getRecipeBySlug, getAllRecipes } from "../../../services/api/recipes";
 
 interface RecipeItem {
   id: string;
@@ -38,12 +39,33 @@ for (const path in recipeModules) {
   }
 }
 
-// Find current recipe
-const recipe = allRecipes.find((item: RecipeItem) => item.id === recipeId);
+// Intentar obtener la receta desde el CMS
+let cmsRecipe = await getRecipeBySlug(recipeId, currentLang);
+const cmsAll = await getAllRecipes(currentLang);
 
-const relatedRecipes = allRecipes
-  .filter((item: RecipeItem) => item.id !== recipeId)
+if (!cmsRecipe && cmsAll.length > 0) {
+  cmsRecipe = cmsAll.find((item) => item.id === recipeId || (item as any).slug === recipeId) || null;
+}
+
+const recipe = cmsRecipe || allRecipes.find((item: RecipeItem) => item.id === recipeId || (item as any).slug === recipeId);
+
+const allRecipesSource = cmsAll.length > 0 ? cmsAll : allRecipes;
+const currentId = recipe?.id;
+const currentSlug = (recipe as any)?.slug;
+
+let relatedRecipes = (allRecipesSource as any[])
+  .filter((item: RecipeItem) => {
+    const itemId = item.id;
+    const itemSlug = (item as any).slug;
+    return itemId !== recipeId && itemSlug !== recipeId && itemId !== currentId && itemSlug !== currentSlug;
+  })
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+if (relatedRecipes.length === 0 && allRecipes.length > 0) {
+  relatedRecipes = allRecipes
+    .filter((item: RecipeItem) => item.id !== recipeId && (item as any).slug !== recipeId && item.id !== currentId && (item as any).slug !== currentSlug)
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+}
 const RELATED_PAGE_SIZE = 12;
 
 const canonicalShareUrl = new URL(`${Astro.url.pathname}${Astro.url.search}${Astro.url.hash}`, 'https://zambos.com').href;

@@ -1,5 +1,6 @@
 ---
 import RecipeCard from './RecipeCard.astro';
+import { getAllRecipes } from '../../services/api/recipes';
 import { getLocale } from '../../i18n/i18n';
 
 // Import all recipe files dynamically (use static glob and filter by lang)
@@ -33,23 +34,28 @@ const {
   items
 } = Astro.props as { textButton?: string; items?: any[] };
 
-// If items provided, use them; otherwise load all by lang
-let recipeItems: Recipe[] = Array.isArray(items) ? (items as unknown as Recipe[]) : [];
-if (!recipeItems.length) {
+const providedMode = Array.isArray(items);
+
+let recipeItems: Recipe[] = [];
+
+if (providedMode) {
+  recipeItems = (items as unknown as Recipe[]) || [];
+} else {
+  const cmsRecipes = await getAllRecipes(currentLang);
   const recipeModules = import.meta.glob<{ default: Recipe }>("../../locales/*/recipes/*.json");
+  const localRecipes: Recipe[] = [];
   for (const path in recipeModules) {
-    const lang = path.split('/') [3];
+    const lang = path.split('/')[3];
     if (lang === currentLang) {
       const mod = await recipeModules[path]();
-      recipeItems.push(mod.default);
+      localRecipes.push(mod.default);
     }
   }
-  // Sort by date: newest first
-  recipeItems.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  recipeItems = cmsRecipes.length > 0 ? (cmsRecipes as any) : localRecipes;
+  recipeItems.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 }
 
-// Determine if we are in provided-items mode (hide filters/CTA)
-const providedMode = Array.isArray(items) && items.length > 0;
+// Mode determined above by providedMode
 
 // Normalizar categoría (usando claves en inglés para el filtrado)
 function getCategoryKey(recipe: any): string {
@@ -124,6 +130,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
                     title={recipe.title}
                     time={`${recipe.preparation_time}MIN`}
                     id={recipe.id}
+                    slug={(recipe as any).slug || recipe.id}
                     description={(recipe as any).description}
                     category={(recipe as any).category || 'breakfast'}
                     isNew={(recipe as any).new === true}
@@ -175,6 +182,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
+                    slug={(recipe as any).slug || recipe.id}
                       description={(recipe as any).description}
                       category={getCategoryKey(recipe).toUpperCase()}
                       isNew={(recipe as any).new === true}
@@ -217,6 +225,7 @@ for (let i = 0; i < recipeItems.length; i += 1) {
                   title={recipe.title}
                   time={`${recipe.preparation_time}MIN`}
                   id={recipe.id}
+                    slug={(recipe as any).slug || recipe.id}
                   description={(recipe as any).description}
                   category={getCategoryKey(recipe).toUpperCase()}
                   isNew={(recipe as any).new === true}
