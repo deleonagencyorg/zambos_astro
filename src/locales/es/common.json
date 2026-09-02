@@ -69,7 +69,7 @@
       {
         "id": "franquicias_hero",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_truck.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_truck_mobil.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_truck_mobil_up.webp",
         "alt": "Franquicias Zambos",
         "title": "",
         "type": "image",
@@ -80,7 +80,7 @@
       {
         "id": "slide0",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_amigos.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_amigos_mob.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_amigos_mob_up.webp",
         "alt": "Zambos",
         "title": "",
         "type": "image",
@@ -90,7 +90,7 @@
       {
         "id": "slide1",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_desk4.webp",
-        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_mobil3.webp",
+        "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos_mobil3_up.webp",
         "alt": "Zambos",
         "title": "",
         "type": "image",
@@ -247,23 +247,25 @@
         "title": "Ceviche",
         "description": "Deliciosa receta con Zambos Ceviche.",
         "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ceviche_zambos.webm",
-        "image": "https://img.youtube.com/vi/L_yyNPgxXwc/hqdefault.jpg"
+        "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ceviche_preview.webp"
       },
       {
         "title": "Ensalada de Pepino y Queso",
         "description": "Fresca ensalada con Zambos Picositas.",
         "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/ensalada_zambos.webm",
-        "image": "https://img.youtube.com/vi/I8OKSMXHuQg/hqdefault.jpg"
+        "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/pepino_y_queso_preview.webp"
       },
       {
         "title": "Queso Crema y Miel",
         "description": "Snack dulce y salado con Zambos Plátano Originales.",
-        "url": "https://www.youtube.com/shorts/m8C7cDvhMzk"
+        "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/queso_crema_y_miel.webm",
+        "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/crema_y_miel_preview.webp"
       },
       {
         "title": "Tartar de Camarón con Mantequilla de Ajo",
         "description": "Elegante tartar acompañado de Yuquitas Chile Toreado.",
-        "url": "https://www.youtube.com/shorts/IRnOZwy1iEk"
+        "url": "https://snack.yummiespromociones.com/SnacksyummiesAssets/tartar_de_camaron.webm",
+        "image": "https://snack.yummiespromociones.com/SnacksyummiesAssets/camaron_con_ajo_preview.webp"
       },
       {
         "title": "Zambos Preparados",
