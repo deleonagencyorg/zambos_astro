@@ -12,9 +12,10 @@ interface Props {
   currentLang?: Locale;
   formType?: string;
   hideContactReason?: boolean;
+  submitLabel?: string;
 }
 
-const { currentLang, formType = 'default', hideContactReason = false } = Astro.props;
+const { currentLang, formType = 'default', hideContactReason = false, submitLabel } = Astro.props;
 
 // Get current locale if not provided
 const locale = currentLang || getLocale();
@@ -385,7 +386,7 @@ const options = dynamicOptions[locale];
       id="submitButton"
       class={`w-full py-3 px-6 uppercase font-bold text-2xl transition-all rounded-full ${locale !== 'es' ? 'bg-white text-us-green hover:bg-gray-100' : 'bg-[#009337] text-white hover:bg-primary-dark'}`}
     >
-      {contact.form.submit}
+      {submitLabel || contact.form.submit}
     </button>
   </div>
 </form>
