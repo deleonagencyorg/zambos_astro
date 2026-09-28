@@ -131,9 +131,9 @@ const sortedForCarousel = posts
                   <!-- Image -->
                   <div class="relative aspect-[16/10] overflow-hidden">
                     <LazyImage
-                      src={post.image || `/images/${currentLang}/slider1.png`}
+                      src={post.imagenpreview || post.image || post.imagenmobilepreview || post.imagemobile || `/images/${currentLang}/slider1.png`}
                       alt={post.title}
-                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-2xl"
                     />
                   </div>
                   <!-- Content - Light green background, fixed height -->

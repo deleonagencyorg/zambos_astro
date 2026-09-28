@@ -3,7 +3,10 @@ import { t, getLocale, type Locale } from '../../i18n/i18n';
 import LazyImage from '../common/LazyImage.astro';
 
 interface Props {
-  image: string;
+  image?: string;
+  imagenpreview?: string;
+  imagemobile?: string;
+  imagenmobilepreview?: string;
   title: string;
   id: string;
   slug?: string;
@@ -15,7 +18,10 @@ interface Props {
 }
 
 const {
-  image, 
+  image,
+  imagenpreview,
+  imagemobile,
+  imagenmobilepreview,
   title, 
   id,
   slug,
@@ -25,6 +31,8 @@ const {
   isNew = false,
   currentLang: propLang
 } = Astro.props;
+
+const displayImage = imagenpreview || image || imagenmobilepreview || imagemobile;
 
 const currentLang = (propLang || getLocale()) as Locale;
 const labels = t('labels', { namespace: 'blog', locale: currentLang });
@@ -36,9 +44,9 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
     <!-- Image Container -->
     <div class="blog-card__image-container">
       <LazyImage
-        src={image || `/images/${currentLang}/slider1.png`}
+        src={displayImage || `/images/${currentLang}/slider1.png`}
         alt={title}
-        class="blog-card__image"
+        class="blog-card__image w-full h-full object-cover rounded-2xl"
         fallbackSrc={`/images/${currentLang}/slider1.png`}
       />
       
@@ -106,20 +114,8 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
   .blog-card__image-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
-  }
-
-  @media (min-width: 768px) {
-    .blog-card__image-container {
-      aspect-ratio: 4 / 3;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .blog-card__image-container {
-      aspect-ratio: 16 / 9;
-    }
   }
 
   .blog-card__image {
@@ -130,6 +126,7 @@ const blogLink = `/${currentLang}/blog/${slug || id}`;
     height: 100%;
     object-fit: cover;
     object-position: center center;
+    border-radius: 1rem;
     transition: transform 0.5s ease-out;
   }
 
