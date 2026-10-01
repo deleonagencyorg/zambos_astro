@@ -1,16 +1,19 @@
 ---
 // src/components/pages/ProductsPage.astro
-import { t } from '../../i18n/i18n';
 import type { Locale } from '../../i18n/i18n';
 import { getLocale } from '../../i18n/i18n';
 import './styles.css';
 import Subscription from '../../components/subscription/index.astro';
 
+import { getAllProducts } from "../../services/api/products";
+import { getProductCategories } from "../../services/api/product-categories";
+import { getSiteTextMap } from "../../services/api/site-texts";
+
 const currentLang = getLocale();
-const products = t('items', { namespace: 'products', locale: currentLang }) || [];
-const categoriesRaw = t('categories', { namespace: 'products', locale: currentLang });
-const categories: Record<string, string> = categoriesRaw && typeof categoriesRaw === 'object' ? categoriesRaw : {};
-const pageAssets = t('page', { namespace: 'products', locale: currentLang }) || {};
+const products = await getAllProducts(currentLang);
+const [productCategories, siteTexts] = await Promise.all([getProductCategories(currentLang), getSiteTextMap(currentLang)]);
+const categories: Record<string, string> = Object.fromEntries(productCategories.map((category) => [category.key, category.label]));
+const pageAssets = { view_details: siteTexts['products.page.view_details'] || '' };
 
 // Ordenar: nuevos primero, luego por categoría, luego por nombre
 const sortedProducts = [...(products as any[])].sort((a, b) => {
@@ -123,7 +126,7 @@ const uniqueCategories = Array.from(new Set((products as any[]).map((p) => p.cat
                 {product.short_description || product.description}
               </p>
               <a 
-                href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`} 
+                href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.slug || product.id}`} 
                 class="mt-auto block w-full bg-[#00A650] hover:bg-[#008C44] text-white text-center py-3 sm:py-4 rounded-xl font-bold text-sm md:text-base uppercase tracking-wider transition-colors duration-300"
               >
                 {pageAssets?.view_details || 'Ver detalles'}

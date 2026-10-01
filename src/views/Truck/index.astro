@@ -5,11 +5,10 @@ import type { HeaderColorConfig } from '../../config/headerColors';
 import './styles.css';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 import Carousel from '../../components/common/Carousel/index.astro';
-import truckEs from '../../locales/es/zambostruck.json';
-import galleryEs from '../../locales/es/gallery.json';
 import FormContact from '../../components/contact/FormContact.astro';
 import Subscription from '../../components/subscription/index.astro';
 import SimpleGallery from '../../components/common/Gallery/SimpleGallery.astro';
+import { getZambosTruck, emptyZambosTruck } from '../../services/api/zambos-truck';
 
 export interface Props {
   currentLang?: Locale;
@@ -17,32 +16,11 @@ export interface Props {
 }
 
 const { currentLang = 'es', headerColorConfig } = Astro.props;
-const data = truckEs; // Solo ES
+const data = (await getZambosTruck(currentLang)) ?? emptyZambosTruck;
 
-const gallerySlides = (data.gallery?.images || []).map((url) => ({
-  desktop: url,
-  mobile: url,
-  alt: data.gallery?.title || 'Zambos Truck',
-  title: '',
-  subtitle: '',
-}));
-
-type RecipeItem = { id: string; title: string; image: string; price?: string };
-
-const recipeModules = import.meta.glob<{ default: RecipeItem }>("../../locales/*/recipes/*.json");
-const recipeItems: RecipeItem[] = [];
-
-for (const path in recipeModules) {
-  const parts = path.split('/');
-  const localesIndex = parts.lastIndexOf('locales');
-  const lang = localesIndex >= 0 ? parts[localesIndex + 1] : '';
-  if (lang === currentLang) {
-    const mod = await recipeModules[path]();
-    recipeItems.push(mod.default);
-  }
-}
-
-const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs as any).images : [];
+const galleryFilters = data.gallery.images.length
+  ? ['Todos', ...Array.from(new Set(data.gallery.images.map((img) => img.category).filter(Boolean)))]
+  : [];
 ---
 <div class="w-full text-center flex flex-col items-center justify-center">
   <diV class=" md:container">
@@ -64,7 +42,7 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
   <section class="md:w-full bg-green py-10 sm:py-12">
     <div class="w-[80%] md:max-w-6xl mx-auto px-4">
       <h2 class="titles text-white text-center mb-6">
-        {currentLang === 'es' ? 'Paquetes disponibles' : 'Available packages'}
+        {data.packages.title || (currentLang === 'es' ? 'Paquetes disponibles' : 'Available packages')}
       </h2>
 
       <div class="relative">
@@ -343,54 +321,39 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
   <section class="w-full bg-green py-8 sm:py-10">
   <div class="w-[95%] sm:w-[92%] lg:w-[90%] xl:w-[85%] mx-auto text-center">
     <h2 class="titles text-white">
-      {currentLang === 'es' ? 'Modelos disponibles' : 'Available models'}
+      {data.models.title || (currentLang === 'es' ? 'Modelos disponibles' : 'Available models')}
     </h2>
   </div>
 </section>
- 
-<!-- Modelos: dos columnas con imágenes responsive en % -->
+
+<!-- Modelos: columnas con imágenes responsive en % -->
 <section class="w-full bg-green pb-4 sm:pb-10">
   <div class="w-[95%] sm:w-[92%] lg:w-[90%] xl:w-[85%] mx-auto">
     <div class="flex flex-col sm:flex-row sm:justify-between gap-4 sm:gap-[4%]">
-      <!-- Columna 1 -->
-      <div class="w-[96%] sm:w-[48%] bg-white/5 rounded-3xl p-3 sm:p-4 mx-auto">
-        <div class="rounded-2xl overflow-hidden bg-white/10">
-          <div class="w-full aspect-[4/3]">
-            <img
-              src="https://snack.yummiespromociones.com/SnacksyummiesAssets/TUCTUC-2.png"
-              alt="Tuc Tuc"
-              class="w-full h-full object-contain"
-              loading="lazy"
-              decoding="async"
-            />
+      {data.models.items.map((model) => (
+        <div class="w-[96%] sm:w-[48%] bg-white/5 rounded-3xl p-3 sm:p-4 mx-auto">
+          <div class="rounded-2xl overflow-hidden bg-white/10">
+            <div class="w-full aspect-[4/3]">
+              <img
+                src={model.image}
+                alt={model.name}
+                class="w-full h-full object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
+          <p class="text-white font-title font-black uppercase text-center mt-3">{model.name}</p>
         </div>
-        <p class="text-white font-title font-black uppercase text-center mt-3">TUC TUC</p>
-      </div>
- 
-      <!-- Columna 2 -->
-      <div class="w-[96%] sm:w-[48%] bg-white/5 rounded-3xl p-3 sm:p-4 mx-auto">
-        <div class="rounded-2xl overflow-hidden bg-white/10">
-          <div class="w-full aspect-[4/3]">
-            <img
-              src="https://snack.yummiespromociones.com/SnacksyummiesAssets/CARRETILLA-2.png"
-              alt="Carretilla"
-              class="w-full h-full object-contain"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-        <p class="text-white font-title font-black uppercase text-center mt-3">CARRETILLA</p>
-      </div>
+      ))}
     </div>
   </div>
 </section>
 
-<SimpleGallery 
-  images={Array.isArray(data.gallery?.images) ? data.gallery.images : []} 
-  title={data.gallery?.title} 
-  filters={Array.isArray(data.gallery?.filters) ? data.gallery.filters : []}
+<SimpleGallery
+  images={data.gallery.images}
+  title={data.gallery.title}
+  filters={galleryFilters}
 />
 
     <section id="truck-form" class="truck-truck-form-section pb-16">
@@ -400,7 +363,7 @@ const eventGalleryItems = Array.isArray((galleryEs as any)?.images) ? (galleryEs
           <div class="flex items-center justify-center text-center">
             <div class="max-w-md">
               <h2 class="text-white font-black uppercase leading-[0.95] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
-                {truckEs.form.title}
+                {data.form.title}
               </h2>
               <p class="text-white/90 mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg">
                 Completa el siguiente formulario

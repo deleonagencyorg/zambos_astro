@@ -4,38 +4,19 @@ import BlogDetailUS from '../../../views-us/Blog/Detail/index.astro';
 import { setLocale, type Locale } from '../../../i18n/i18n';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
+import { getBlogPosts } from '../../../services/api/news';
 
 export async function getStaticPaths() {
-  const locales = ['us', 'es'];
   const paths: any[] = [];
-  const blogModules = import.meta.glob('../../../locales/*/blogs/*.json');
-  const postsByLocale: Record<string, any[]> = { us: [], es: [] };
-
-  for (const path in blogModules) {
-    const lang = path.split('/')[4];
-    if (locales.includes(lang)) {
-      try {
-        const mod: any = await blogModules[path]();
-        postsByLocale[lang].push(mod.default || mod);
-      } catch (e) {
-        console.warn(`[Blog Detail] Skipping missing file: ${path}`);
-      }
-    }
-  }
-
-  for (const locale of locales) {
-    const allPosts = postsByLocale[locale];
+  for (const locale of ['us', 'es']) {
+    const allPosts = await getBlogPosts(locale);
     for (const blogPost of allPosts) {
-      const blogId = blogPost.slug || blogPost.id;
-      if (blogId) {
-        paths.push({
-          params: { lang: locale, blogId },
-          props: { blogPost, currentLang: locale as Locale, allBlogPosts: allPosts }
-        });
-      }
+      paths.push({
+        params: { lang: locale, blogId: blogPost.slug },
+        props: { blogPost, currentLang: locale as Locale, allBlogPosts: allPosts },
+      });
     }
   }
-
   return paths;
 }
 

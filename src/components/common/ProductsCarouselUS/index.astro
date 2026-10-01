@@ -46,7 +46,7 @@ const productsItems = Array.isArray(products) ? products : [];
                 <div class="product-us-left">
                   <h3 class="product-us-name">{product.name}</h3>
                   <a
-                    href={`/${currentLang}/products/${product.id}`}
+                    href={`/${currentLang}/products/${product.slug || product.id}`}
                     class="product-us-btn"
                     data-no-swipe="true"
                   >
@@ -55,7 +55,7 @@ const productsItems = Array.isArray(products) ? products : [];
                 </div>
                 <div class="product-us-right">
                   <a
-                    href={`/${currentLang}/products/${product.id}`}
+                    href={`/${currentLang}/products/${product.slug || product.id}`}
                     class="product-us-img-link"
                     data-no-swipe="true"
                   >

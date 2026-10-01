@@ -1,6 +1,10 @@
 ---
-import { t, type Locale } from '../../../i18n/i18n';
+import { type Locale } from '../../../i18n/i18n';
 import LazyImage from '../LazyImage.astro';
+import { getFooterLinks, getFooterPhones } from '../../../services/api/sections';
+import { getFooterLabels } from '../../../services/api/footer';
+import { getSiteInfo } from '../../../services/api/site';
+import { getSocialMediaLinks, socialUrl } from '../../../services/api/social-media';
 
 export interface Props {
   currentLang: Locale;
@@ -8,23 +12,19 @@ export interface Props {
 
 const { currentLang } = Astro.props;
 
-const menuItems = t('menu_items_header', { namespace: 'common', locale: currentLang }) as any[];
-const footerMenuItems = Array.isArray(menuItems) ? menuItems.filter(i => String(i.href || '').toLowerCase() !== '/zambostruck') : [];
+const [footerMenuItems, phones, site, footer, socialLinks] = await Promise.all([
+  getFooterLinks(currentLang),
+  getFooterPhones(currentLang),
+  getSiteInfo(),
+  getFooterLabels(currentLang),
+  getSocialMediaLinks(currentLang),
+]);
 
-const logoSrc = t('assets.logo', { namespace: 'common', locale: currentLang });
-
-const instagramUrl = t('social_media.instagram.url', { namespace: 'common', locale: currentLang });
-const facebookUrl = t('social_media.facebook.url', { namespace: 'common', locale: currentLang });
-const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: currentLang });
-const footerContactTitle = t('footer.contact_title', { namespace: 'common', locale: currentLang }) as string;
-const phones = [
-  { flag: '🇬🇹', number: '(+502) 2502-7050' },
-  { flag: '🇩🇴', number: '(+001) 809-2731042' },
-  { flag: '🇸🇻', number: '(+503) 2510-8300' },
-  { flag: '🇳🇮', number: '(+505) 2255-7480' },
-  { flag: '🇨🇷', number: '(+506) 2271-0665' },
-  { flag: '🇭🇳', number: '(+504) 2275-3370' }
-];
+const logoSrc = site.logoUrl;
+const instagramUrl = socialUrl(socialLinks, 'instagram');
+const facebookUrl = socialUrl(socialLinks, 'facebook');
+const tiktokUrl = socialUrl(socialLinks, 'tiktok');
+const footerContactTitle = footer.contactTitle;
 ---
 
 <footer class="bg-greenDark w-full ">
@@ -32,11 +32,13 @@ const phones = [
 
     <!-- Logo -->
     <a href={`/${currentLang}/`} class="flex items-center justify-center md:justify-start">
-      <LazyImage
-        src={logoSrc}
-        alt="Zambos"
-        class="h-16 md:h-28 w-auto"
-      />
+      {logoSrc && (
+        <LazyImage
+          src={logoSrc}
+          alt={site.name || 'Zambos'}
+          class="h-16 md:h-28 w-auto"
+        />
+      )}
     </a>
 
     <!-- Links -->
@@ -54,23 +56,23 @@ const phones = [
   
       <!-- Social -->
       <div class="flex items-center space-x-4">
-        <a href={instagramUrl} target="_blank" aria-label="Instagram">
+        {instagramUrl && <a href={instagramUrl} target="_blank" aria-label="Instagram">
           <svg class="w-6 h-6 md:w-7 md:h-7 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
             <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zM12 7.1A4.9 4.9 0 1 0 12 17a4.9 4.9 0 0 0 0-9.8zM18.4 6.6a1.15 1.15 0 1 0 0-2.3 1.15 1.15 0 0 0 0 2.3z"/>
           </svg>
-        </a>
+        </a>}
   
-        <a href={facebookUrl} target="_blank" aria-label="Facebook">
+        {facebookUrl && <a href={facebookUrl} target="_blank" aria-label="Facebook">
           <svg class="w-6 h-6 md:w-7 md:h-7 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
             <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.5V12H16l-.5 3h-2.5v7A10 10 0 0 0 22 12z"/>
           </svg>
-        </a>
+        </a>}
   
-        <a href={tiktokUrl} target="_blank" aria-label="TikTok">
+        {tiktokUrl && <a href={tiktokUrl} target="_blank" aria-label="TikTok">
           <svg class="w-6 h-6 md:w-7 md:h-7 text-white hover:opacity-80" fill="currentColor" viewBox="0 0 24 24">
             <path d="M21 8.3a6.7 6.7 0 0 1-4.3-1.5v8.6a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.1a2.8 2.8 0 1 0 2.1 2.7V2h3.3A6.7 6.7 0 0 0 21 6.3v2z"/>
           </svg>
-        </a>
+        </a>}
       </div>
     </div>
 

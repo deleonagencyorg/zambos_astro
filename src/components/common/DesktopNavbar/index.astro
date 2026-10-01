@@ -1,6 +1,8 @@
 ---
 import LanguageSwitcher from '../../i18n/LanguageSwitcher.astro';
-import { t, type Locale } from '../../../i18n/i18n';
+import { type Locale } from '../../../i18n/i18n';
+import { getNavigation } from '../../../services/api/navigation';
+import { getSiteTextMap, text } from '../../../services/api/site-texts';
 import { logos } from '../../../config/assets';
 import type { HeaderColorConfig } from '../../../config/headerColors';
 
@@ -15,11 +17,9 @@ const { currentLang, headerColorConfig } = Astro.props;
 const { pathname } = Astro.url;
 const currentPath = pathname;
 
-// Obtener los datos de social media y menú desde las traducciones
-const menuItems = t('menu_items', { namespace: 'common', locale: currentLang }) as any[];
-
-// Use menu items directly (Blog already removed from JSON)
-const orderedMenuItems = Array.isArray(menuItems) ? [...menuItems] : [];
+const [navigation, siteTexts] = await Promise.all([getNavigation(currentLang), getSiteTextMap(currentLang)]);
+const orderedMenuItems = navigation.items;
+const amazonBuyUrl = text(siteTexts, 'delivery.amazon_buy_url', '#');
 ---
 
 <!-- Desktop Navigation -->
@@ -87,7 +87,7 @@ const orderedMenuItems = Array.isArray(menuItems) ? [...menuItems] : [];
     <!-- BUY Button for US -->
     {currentLang === 'us' && (
       <a 
-        href={t('delivery.amazon_buy_url', { namespace: 'common', locale: currentLang })}
+        href={amazonBuyUrl}
         target="_blank"
         rel="noopener noreferrer"
         class="ml-2 lg:ml-3 bg-[#B71C1C] hover:bg-[#9A1616] text-white font-bold uppercase px-3 lg:px-5 py-1.5 lg:py-2 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap flex items-center"

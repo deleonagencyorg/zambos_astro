@@ -8,7 +8,8 @@ import IngredientsCarousel from '../../../components/recipes/IngredientsCarousel
 import ShareModal from '../../../components/common/ShareModal.astro';
 import ShareButton from '../../../components/common/ShareButton.astro';
 import Subscription from '../../../components/subscription/index.astro';
-import PlayOverlay from '../../../components/common/PlayOverlay.astro';
+import PlayOverlay from "../../../components/common/PlayOverlay.astro";
+import { getRecipeBySlug, getAllRecipes } from "../../../services/api/recipes";
 
 interface RecipeItem {
   id: string;
@@ -28,22 +29,15 @@ interface RecipeItem {
 
 const { currentLang, recipeId } = Astro.props;
 
-// Import all recipe files with static glob and filter by language
-const recipeModules = import.meta.glob<{ default: RecipeItem }>("../../../locales/*/recipes/*.json");
-const allRecipes: RecipeItem[] = [];
-for (const path in recipeModules) {
-  const lang = path.split('/') [4];
-  if (lang === currentLang) {
-    const mod = await recipeModules[path]();
-    allRecipes.push(mod.default);
-  }
-}
+const [recipe, allRecipesSource] = await Promise.all([
+  getRecipeBySlug(recipeId, currentLang),
+  getAllRecipes(currentLang),
+]);
+const currentId = recipe?.id;
+const currentSlug = recipe?.slug;
 
-// Find current recipe
-const recipe = allRecipes.find((item: RecipeItem) => item.id === recipeId);
-
-const relatedRecipes = allRecipes
-  .filter((item: RecipeItem) => item.id !== recipeId)
+const relatedRecipes = (allRecipesSource as any[])
+  .filter((item) => item.id !== recipeId && item.slug !== recipeId && item.id !== currentId && item.slug !== currentSlug)
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 const RELATED_PAGE_SIZE = 12;
 

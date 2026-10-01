@@ -9,6 +9,7 @@ interface Props {
   title: string;
   time?: string;
   id: string;
+  slug?: string;
   description?: string;
   category?: string;
   isNew?: boolean;
@@ -21,6 +22,7 @@ const {
   title, 
   time = "30MIN", 
   id,
+  slug,
   description = '',
   category = 'breakfast',
   isNew = false,
@@ -30,7 +32,8 @@ const {
 const displayImage = previewImage || image;
 
 const currentLocale = getLocale();
-const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'recipes'}/${id}`;
+const identifier = slug || id;
+const recipeLink = `/${currentLocale}/${currentLocale === 'es' ? 'recetas' : 'recipes'}/${identifier}`;
 ---
 
 <div class="relative group h-full w-full">

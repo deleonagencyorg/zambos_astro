@@ -73,7 +73,7 @@ const productsItems = Array.isArray(products) ? products : [];
                   </div>
                   
                   <a 
-                    href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`}
+                    href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.slug || product.id}`}
                     class="view-detail-btn"
                     data-no-swipe="true"
                   >
@@ -84,7 +84,7 @@ const productsItems = Array.isArray(products) ? products : [];
                 <div class="right-content">
                   <div class="product-image-wrapper">
                     <a
-                      href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.id}`}
+                      href={`/${currentLang}/${currentLang === 'es' ? 'productos' : 'products'}/${product.slug || product.id}`}
                       class="product-image-link"
                       data-no-swipe="true"
                     >

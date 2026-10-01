@@ -8,7 +8,10 @@ import ProductsCarousel from '../../../components/common/ProductsCarousel/index.
 import LazyImage from '../../../components/common/LazyImage.astro';
 import Subscription from '../../../components/subscription/index.astro';
 import ExperiencesCarousel from '../../../components/common/Experiences/index.astro';
-import RecipesCarousel from '../../../components/recipes/RecipesCarousel.astro';
+import RecipesCarousel from "../../../components/recipes/RecipesCarousel.astro";
+import { getProductBySlug, getAllProducts } from "../../../services/api/products";
+import { getAllRecipes } from "../../../services/api/recipes";
+import { getSiteTextMap, text } from "../../../services/api/site-texts";
 
 // Interfaces locales
 interface ProductSize {
@@ -58,39 +61,27 @@ interface Product {
 
 const { currentLang, productId } = Astro.props;
 
-// Obtener datos desde traducciones
-const productsAssets = t('home', { namespace: 'products', locale: currentLang }) || {};
-const products = t('items', { namespace: 'products', locale: currentLang as Locale }) || [];
-const stockists = t('stockist', { namespace: 'products', locale: currentLang as Locale }) || [];
-const product = products.find((item: Product) => item.id === productId);
+const [product, products, recommendedRecipes, siteTexts] = await Promise.all([
+  getProductBySlug(productId, currentLang),
+  getAllProducts(currentLang),
+  getAllRecipes(currentLang),
+  getSiteTextMap(currentLang),
+]);
 const brandsAssets = t('', { namespace: 'brands', locale: currentLang }) || {};
-const newsAssets =  t('', { namespace: 'news', locale: currentLang }) || {};
 const brandsList = brandsAssets.brands || [];
 const zambosBrand = brandsList.find((brand: any) => brand.id === 'Zambos');
 const zambosProducts = (zambosBrand?.products || []).filter((product: any) => product.id !== productId);
 const experiences = t('experiences', { namespace: 'experiences', locale: currentLang }) || [];
 
-// Recetas (mismo origen que src/views/Recipes)
-const recipeModules = import.meta.glob<{ default: Recipe }>("../../../locales/*/recipes/*.json");
-const recommendedRecipes: Recipe[] = [];
-for (const path in recipeModules) {
-  const parts = path.split('/');
-  const localesIdx = parts.lastIndexOf('locales');
-  const lang = localesIdx >= 0 ? parts[localesIdx + 1] : '';
-  if (lang === currentLang) {
-    const mod = await recipeModules[path]();
-    recommendedRecipes.push(mod.default);
-  }
-}
-
 // Limitar cantidad para el carrusel
 const recommendedRecipesSlice = recommendedRecipes
   .filter((r) => r && typeof r.id === 'string')
+  .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
   .slice(0, 8);
 
 // Si el producto no existe, lanzar error
 if (!product || Object.keys(product).length === 0) {
-  throw new Error(t('errors.product_not_found', { locale: currentLang }));
+  throw new Error(text(siteTexts, 'errors.product_not_found', `Product not found: ${productId}`));
 }
 
 // Asegurar que todas las propiedades necesarias existan
@@ -130,8 +121,7 @@ const nutritionRows: Array<{ label: string; value: string }> =
   nutritionObj && Array.isArray(nutritionObj.rows) ? nutritionObj.rows : [];
 
 // Obtener todos los productos como un array
-const productsData = t('items', { locale: currentLang, namespace: 'products' }) || [];
-const allProductsArray = Array.isArray(productsData) ? productsData : [];
+const allProductsArray = products;
 
 // Filtrar productos relacionados - simplificado para evitar errores
 let relatedProducts: any[] = [];

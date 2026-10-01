@@ -1,11 +1,13 @@
 ---
 import { routesConfig, getRouteById } from '../../config/routes';
-import { setLocale, t, type Locale } from '../../i18n/i18n';
+import { setLocale, type Locale } from '../../i18n/i18n';
 import MainLayout from '../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../layouts/MainLayoutUS.astro';
 import ProductsCarousel from '../../components/common/ProductsCarousel/index.astro';
 import Subscription from '../../components/subscription/index.astro';
 import LazyImage from '../../components/common/LazyImage.astro';
+import { getSiteTextMap } from '../../services/api/site-texts';
+import { getAllProducts } from '../../services/api/products';
 
 export async function getStaticPaths() {
   return [
@@ -17,13 +19,14 @@ export async function getStaticPaths() {
 const { lang } = Astro.params as { lang: Locale };
 setLocale(lang);
 
-const pageTitle = lang === 'es' ? 'Página No Encontrada - Zambos' : 'Page Not Found - Zambos';
-const pageDescription = lang === 'es' 
+const siteTexts = await getSiteTextMap(lang);
+const defaultPageTitle = lang === 'es' ? 'Página No Encontrada - Zambos' : 'Page Not Found - Zambos';
+const pageTitle = siteTexts['not_found.title'] || defaultPageTitle;
+const pageDescription = siteTexts['not_found.description'] || (lang === 'es' 
   ? '¡Ups! Esta página de Zambos no existe. Explora nuestros deliciosos snacks.'
-  : 'Oops! This Zambos page doesn\'t exist. Explore our delicious snacks.';
+  : 'Oops! This Zambos page doesn\'t exist. Explore our delicious snacks.');
 
-const products = t('items', { namespace: 'products', locale: lang }) || [];
-const homeAssets = t('home', { namespace: 'common', locale: lang }) || {};
+const products = await getAllProducts(lang);
 
 // SEO Keywords based on language
 const seoKeywords = lang === 'es' 
@@ -56,11 +59,11 @@ const Layout = lang === 'us' ? MainLayoutUS : MainLayout;
         <!-- 404 Number -->
         <div class="relative mb-8">
           <h1 class="text-9xl md:text-[12rem] font-bold text-green-600 opacity-20">
-            404
+            {siteTexts['not_found.code'] || '404'}
           </h1>
           <div class="absolute inset-0 flex items-center justify-center">
             <LazyImage
-              src={homeAssets?.snackImage || "https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-grande2.webp"}
+              src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-grande2.webp"
               alt="Zambos Snack"
               class="w-32 h-32 md:w-48 md:h-48 object-contain animate-bounce"
               loading="eager"
@@ -70,14 +73,13 @@ const Layout = lang === 'us' ? MainLayoutUS : MainLayout;
 
         <!-- Error Message -->
         <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          {lang === 'es' ? '¡Snack-tastrofia!' : 'Snack-tastrophe!'}
+          {siteTexts['not_found.title'] || (lang === 'es' ? '¡Snack-tastrofia!' : 'Snack-tastrophe!')}
         </h2>
         
         <p class="text-xl md:text-2xl text-gray-600 mb-6 max-w-2xl mx-auto">
-          {lang === 'es' 
+          {siteTexts['not_found.description'] || (lang === 'es' 
             ? '¡Ups! Parece que esta página se perdió en el camino... igual que ese último chip en el fondo de la bolsa!'
-            : 'Oops! It seems this page got lost on its way... just like that last chip at the bottom of the bag!'
-          }
+            : 'Oops! It seems this page got lost on its way... just like that last chip at the bottom of the bag!')}
         </p>
 
         <p class="text-lg text-gray-500 mb-8 max-w-xl mx-auto">
@@ -96,7 +98,7 @@ const Layout = lang === 'us' ? MainLayoutUS : MainLayout;
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
             </svg>
-            {lang === 'es' ? 'Volver al Inicio' : 'Go Home'}
+            {siteTexts['not_found.go_home'] || (lang === 'es' ? 'Volver al Inicio' : 'Go Home')}
           </a>
           
           <a 
@@ -106,7 +108,7 @@ const Layout = lang === 'us' ? MainLayoutUS : MainLayout;
             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
             </svg>
-            {lang === 'es' ? 'Ver Productos' : 'View Products'}
+            {siteTexts['not_found.explore_products'] || (lang === 'es' ? 'Ver Productos' : 'View Products')}
           </a>
         </div>
       </div>
@@ -117,7 +119,7 @@ const Layout = lang === 'us' ? MainLayoutUS : MainLayout;
       <div class="container mx-auto px-4">
         <div class="text-center mb-12">
           <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            {lang === 'es' ? 'Descubre Nuestros Snacks Favoritos' : 'Discover Our Favorite Snacks'}
+            {siteTexts['not_found.products_title'] || (lang === 'es' ? 'Descubre Nuestros Snacks Favoritos' : 'Discover Our Favorite Snacks')}
           </h3>
           <p class="text-lg text-gray-600 max-w-2xl mx-auto">
             {lang === 'es' 

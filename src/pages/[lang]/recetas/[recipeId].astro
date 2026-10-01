@@ -1,41 +1,29 @@
 ---
 // src/pages/[lang]/recetas/[recipeId].astro
-import { t, setLocale, type Locale } from '../../../i18n/i18n';
-import MainLayout from '../../../layouts/MainLayout.astro';
-import RecipeDetail from '../../../views/Recipes/Detail/index.astro';
+import { setLocale, type Locale } from "../../../i18n/i18n";
+import MainLayout from "../../../layouts/MainLayout.astro";
+import RecipeDetail from "../../../views/Recipes/Detail/index.astro";
+import { getAllRecipes } from "../../../services/api/recipes";
 
 export async function getStaticPaths() {
-  const paths: any[] = [];
-  const locale = 'es';
-  // Cargar recetas desde archivos JSON con glob estático
-  const modules = import.meta.glob('../../../locales/es/recipes/*.json', { eager: true });
-  const files = Object.values(modules) as any[];
-  console.log(`Encontradas ${files.length} recetas para idioma ${locale}`);
-  for (const mod of files) {
-    const recipe = (mod as any).default;
-    if (!recipe?.id) continue;
-    paths.push({
-      params: { lang: locale, recipeId: recipe.id },
-      props: { recipe, currentLang: locale }
-    });
-  }
-  console.log(`Generadas ${paths.length} rutas de recetas en español`);
-  return paths;
+  const locale = "es";
+  const recipes = await getAllRecipes(locale);
+  return recipes.map((recipe) => ({
+    params: { lang: locale, recipeId: recipe.slug },
+    props: { recipe, currentLang: locale },
+  }));
 }
 
 const { recipe, currentLang } = Astro.props;
 const { lang, recipeId } = Astro.params;
 
-// Establecer el idioma para las traducciones
 setLocale(lang as Locale);
 
-if (!recipe) {
-  return Astro.redirect(`/${lang === 'en' ? 'en/recipes' : 'es/recetas'}`);
+if (!recipe && !recipeId) {
+  return Astro.redirect(`/${lang === "en" ? "en/recipes" : "es/recetas"}`);
 }
-
-console.log(`Renderizando receta: ${recipeId} en idioma: ${lang}`);
 ---
 
-<MainLayout title={recipe.title}>
+<MainLayout title={recipe?.title || "Receta Zambos"}>
   <RecipeDetail currentLang={currentLang} recipeId={recipeId} />
 </MainLayout>

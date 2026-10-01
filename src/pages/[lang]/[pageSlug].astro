@@ -1,12 +1,12 @@
 ---
 // src/pages/[lang]/[pageSlug].astro
 import { routesConfig, findRouteBySlug } from '../../config/routes';
-import { setLocale, t, type Locale } from '../../i18n/i18n';
+import { setLocale, type Locale } from '../../i18n/i18n';
 import { getHeaderColors } from '../../config/headerColors';
 import MainLayout from '../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../layouts/MainLayoutUS.astro';
-import RecipeDetail from '../../views/Recipes/Detail/index.astro';
-import RecipeDetailUS from '../../views-us/Recipes/Detail/index.astro';
+import { getAllPages, isHomePage, type CMSPage } from '../../services/api/pages';
+import { getSiteTextMap } from '../../services/api/site-texts';
 
 // Define the expected structure of the dynamically imported modules
 interface PageModule {
@@ -28,85 +28,53 @@ const pageComponents = await Astro.glob('../../views/*/index.astro');
 const pageComponentsUS = await Astro.glob('../../views-us/*/index.astro');
 
 export async function getStaticPaths() {
-  const paths = [];
+  const paths: Array<{ params: { lang: string; pageSlug: string }; props: { routeId: string; cmsPage?: CMSPage; siteTexts: Record<string, string> } }> = [];
   for (const route of routesConfig) {
     if (route.id === 'home') continue; // La página de inicio se maneja en [lang]/index.astro
 
     for (const lang in route.slugs) {
+      const siteTexts = await getSiteTextMap(lang);
       paths.push({
         params: { lang, pageSlug: route.slugs[lang] },
-        props: { routeId: route.id }
+        props: { routeId: route.id, siteTexts },
       });
     }
   }
+
+  for (const lang of ['es', 'us']) {
+    const [cmsPages, siteTexts] = await Promise.all([getAllPages(lang), getSiteTextMap(lang)]);
+    const configuredSlugs = new Set(
+      routesConfig.map((route) => route.slugs[lang]).filter(Boolean)
+    );
+    for (const cmsPage of cmsPages) {
+      if (!cmsPage.slug || cmsPage.slug.includes('/') || configuredSlugs.has(cmsPage.slug) || isHomePage(cmsPage)) continue;
+      paths.push({
+        params: { lang, pageSlug: cmsPage.slug },
+        props: { routeId: 'cms_page', cmsPage, siteTexts },
+      });
+    }
+  }
+
   return paths;
 }
 
 const { lang, pageSlug } = Astro.params as { lang: Locale; pageSlug: string };
-const { routeId } = Astro.props as { routeId: string };
+const { routeId, cmsPage, siteTexts = {} } = Astro.props as {
+  routeId: string;
+  cmsPage?: CMSPage;
+  siteTexts?: Record<string, string>;
+};
 
 setLocale(lang);
 
-// Logging para depuración
-console.log('URL completa:', Astro.url.pathname);
-const urlParts = Astro.url.pathname.split('/').filter(Boolean);
-console.log('Partes de URL:', urlParts);
-
-// Variables para el renderizado condicional
-let isRecipeDetail = false;
-let recipeData = null;
-let recipeId = '';
-let langCode = '';
-
-// Verificar si es una ruta de detalle de receta
-// Formato: /es/recetas/[id] o /en/recipes/[id]
-if (urlParts.length === 3) {
-  langCode = urlParts[0];
-  const section = urlParts[1];
-  const detailId = urlParts[2];
-  
-  console.log(`Verificando ruta: /${langCode}/${section}/${detailId}`);
-  
-  // Verificar si es una ruta de recetas
-  const isRecipesRoute = 
-    (langCode === 'es' && section === 'recetas') || 
-    (langCode === 'us' && section === 'recipes');
-  
-  if (isRecipesRoute) {
-    console.log(`Detectada ruta de receta: ${detailId}`);
-    
-    try {
-      // Cargar datos de recetas directamente
-      const allRecipes = t('items', { namespace: 'recipes', locale: langCode as Locale }) || [];
-      console.log(`Total de recetas cargadas: ${allRecipes.length}`);
-      console.log('IDs de recetas disponibles:', allRecipes.map((r: any) => r.id));
-      
-      const recipe = allRecipes.find((r: any) => r.id === detailId);
-      console.log('Receta encontrada:', recipe ? recipe.id : 'NO');
-      
-      if (recipe) {
-        console.log('Renderizando detalle de receta:', recipe.title);
-        // Preparar datos para renderizado en la sección de plantilla
-        isRecipeDetail = true;
-        recipeData = recipe;
-        recipeId = detailId;
-      } else {
-        console.error(`Receta con ID ${detailId} no encontrada`);
-        return Astro.redirect(`/${langCode}/404`);
-      }
-    } catch (error) {
-      console.error('Error al cargar receta:', error);
-      return Astro.redirect(`/${langCode}/404`);
-    }
-  }
-}
-
-// Si no es una receta, seguir con el flujo normal de páginas
 let pageTitle = '';
 let pageDescription = '';
 let ContentComponent;
 
-if (!isRecipeDetail) {
+if (cmsPage) {
+  pageTitle = cmsPage.metaTitle || cmsPage.title;
+  pageDescription = cmsPage.metaDescription || cmsPage.excerpt || '';
+} else {
   // Obtener la ruta actual para páginas normales
   const currentRoute = findRouteBySlug(lang, pageSlug);
   console.log('Ruta encontrada:', currentRoute?.id);
@@ -153,33 +121,42 @@ if (!isRecipeDetail) {
     return Astro.redirect(`/${lang}/404`);
   }
 
-  pageTitle = currentRoute.metaTitleKey ? t(currentRoute.metaTitleKey) : 'Page';
-  pageDescription = currentRoute.metaDescriptionKey ? t(currentRoute.metaDescriptionKey) : '';
+  pageTitle = siteTexts[`meta.${currentRoute.id}.title`] || '';
+  pageDescription = siteTexts[`meta.${currentRoute.id}.description`] || '';
 }
 
-const headerColorConfig = getHeaderColors(routeId);
+const headerColorConfig = getHeaderColors(routeId || 'cms_page');
+const cmsFeaturedImage = cmsPage?.featuredImage?.seoUrl || cmsPage?.featuredImage?.originalUrl;
 ---
 
-{isRecipeDetail && langCode === 'us' && (
-  <MainLayoutUS title={recipeData.title ?? ''} description="">
-    <RecipeDetailUS currentLang={langCode as Locale} recipeId={recipeId} />
-  </MainLayoutUS>
-)}
-
-{isRecipeDetail && langCode !== 'us' && (
-  <MainLayout title={recipeData.title ?? ''} description="">
-    <RecipeDetail currentLang={langCode as Locale} recipeId={recipeId} />
-  </MainLayout>
-)}
-
-{!isRecipeDetail && lang === 'us' && (
+{!cmsPage && lang === 'us' && (
   <MainLayoutUS title={pageTitle} description={pageDescription} preloadImages={usBgImages[Astro.props.routeId] ?? []}>
     <ContentComponent currentLang={lang} headerColorConfig={headerColorConfig} />
   </MainLayoutUS>
 )}
 
-{!isRecipeDetail && lang !== 'us' && (
+{!cmsPage && lang !== 'us' && (
   <MainLayout title={pageTitle} description={pageDescription}>
     <ContentComponent currentLang={lang} headerColorConfig={headerColorConfig} />
+  </MainLayout>
+)}
+
+{cmsPage && lang === 'us' && (
+  <MainLayoutUS title={pageTitle} description={pageDescription}>
+    <main class="container mx-auto max-w-5xl px-4 py-12">
+      {cmsPage.showPageTitle !== false && <h1 class="mb-8 text-4xl font-bold">{cmsPage.title}</h1>}
+      {cmsFeaturedImage && <img class="mb-8 h-auto w-full rounded-lg object-cover" src={cmsFeaturedImage} alt={cmsPage.title} />}
+      <article class="cms-page-content" set:html={cmsPage.content || ''} />
+    </main>
+  </MainLayoutUS>
+)}
+
+{cmsPage && lang !== 'us' && (
+  <MainLayout title={pageTitle} description={pageDescription}>
+    <main class="container mx-auto max-w-5xl px-4 py-12">
+      {cmsPage.showPageTitle !== false && <h1 class="mb-8 text-4xl font-bold">{cmsPage.title}</h1>}
+      {cmsFeaturedImage && <img class="mb-8 h-auto w-full rounded-lg object-cover" src={cmsFeaturedImage} alt={cmsPage.title} />}
+      <article class="cms-page-content" set:html={cmsPage.content || ''} />
+    </main>
   </MainLayout>
 )}

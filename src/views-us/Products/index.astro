@@ -1,17 +1,19 @@
 ---
 // src/components/pages/ProductsPage.astro
-import { t } from '../../i18n/i18n';
 import type { Locale } from '../../i18n/i18n';
 import { getLocale } from '../../i18n/i18n';
 import './styles.css';
 import Subscription from '../../components/subscription/index.astro';
+import { getAllProducts } from '../../services/api/products';
+import { getProductCategories } from '../../services/api/product-categories';
+import { getSiteTextMap } from '../../services/api/site-texts';
 
 const currentLang = getLocale();
-const products = t('items', { namespace: 'products', locale: currentLang });
-const categories = t('categories', { namespace: 'products', locale: currentLang });
-const pageAssets = t('page', { namespace: 'products', locale: currentLang });
+const products = await getAllProducts(currentLang);
+const [productCategories, siteTexts] = await Promise.all([getProductCategories(currentLang), getSiteTextMap(currentLang)]);
+const categories: Record<string, string> = Object.fromEntries(productCategories.map((category) => [category.key, category.label]));
+const pageAssets = { view_details: siteTexts['products.page.view_details'] || '' };
 
-// Respetar el orden definido en el JSON
 const sortedProducts = (products || []) as any[];
 
 // Normalizar categorías (unificar variantes del mismo nombre)
