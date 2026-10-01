@@ -8,6 +8,8 @@ import ShareButton from '../../../components/common/ShareButton.astro';
 import Subscription from '../../../components/subscription/index.astro';
 import PlayOverlay from '../../../components/common/PlayOverlay.astro';
 import { getRecipeBySlug, getAllRecipes } from '../../../services/api/recipes';
+import { getAllProducts } from '../../../services/api/products';
+import { getSiteTextMap, text } from '../../../services/api/site-texts';
 
 interface RecipeItem {
   id: string;
@@ -32,26 +34,15 @@ interface ProductItem {
 
 const { currentLang, recipeId } = Astro.props;
 
-// Import all recipe files with static glob and filter by language
-const recipeModules = import.meta.glob<{ default: RecipeItem }>("../../../locales/*/recipes/*.json");
-const allRecipes: RecipeItem[] = [];
-for (const path in recipeModules) {
-  const lang = path.split('/') [4];
-  if (lang === currentLang) {
-    const mod = await recipeModules[path]();
-    allRecipes.push(mod.default);
-  }
-}
-
-// Import products for the current language
-const productsData = await import(`../../../locales/${currentLang}/products.json`);
-const allProducts: ProductItem[] = productsData.default?.items || [];
-
-// Find current recipe
-const recipe = allRecipes.find((item: RecipeItem) => item.id === recipeId);
+const [recipe, allRecipes, allProducts, siteTexts] = await Promise.all([
+  getRecipeBySlug(recipeId, currentLang),
+  getAllRecipes(currentLang),
+  getAllProducts(currentLang),
+  getSiteTextMap(currentLang),
+]);
 
 const relatedRecipes = allRecipes
-  .filter((item: RecipeItem) => item.id !== recipeId)
+  .filter((item) => item.id !== recipeId && item.slug !== recipeId)
   .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 const RELATED_PAGE_SIZE = 12;
 
@@ -68,8 +59,7 @@ const recipesAssets = {
   related_recipes: currentLang === 'es' ? 'Recetas relacionadas' : 'Related recipes'
 };
 
-// Amazon URL for buy button
-const amazonBuyUrl = "https://www.amazon.com/stores/Zambos/Homepage/page/AB6B3C05-CBE2-49FD-8A2C-E5A7B1F57E2D";
+const amazonBuyUrl = text(siteTexts, 'delivery.amazon_buy_url', '#');
 
 function formatTime(minutes: number): string {
   const hours = Math.floor(minutes / 60);
@@ -89,12 +79,11 @@ function formatTime(minutes: number): string {
 // Get product info from recipe's products array (first product - position 0)
 const productSlugs = recipe.products || [];
 const firstProductSlug = productSlugs.length > 0 ? productSlugs[0] : null;
-const productData = firstProductSlug ? allProducts.find((p: ProductItem) => p.id === firstProductSlug) : null;
+const productData = firstProductSlug ? allProducts.find((p) => p.id === firstProductSlug || p.slug === firstProductSlug) : null;
 
-// Use product data from products.json or defaults
 const productName = productData?.name || (currentLang === 'es' ? 'Zambos' : 'Zambos');
 const productImage = productData?.image || 'https://snack.yummiespromociones.com/SnacksyummiesAssets/zambos-ceviche-3d.png';
-const servings = recipe.servings || 4;
+const servings = (recipe as any).servings || 4;
 ---
 
 <div class="min-h-screen lg:bg-white recipe-detail-container relative">

@@ -29,12 +29,25 @@ const galleryFilters = data.gallery.images.length
     <div class=" mx-auto">
       <div class="relative w-full overflow-hidden rounded-xl sm:rounded-[32px] lg:rounded-[40px] bg-black/5">
         <div class="w-full">
-          <img
-            src={data.hero?.bannerImage}
-            alt={data.hero?.title || 'Zambos Truck'}
-            class="w-full h-auto object-cover block"
-            loading="lazy"
-          />
+          {data.hero.videoUrl ? (
+            <video
+              src={data.hero.videoUrl}
+              poster={data.hero.bannerImage || undefined}
+              class="w-full h-auto object-cover block"
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            />
+          ) : (
+            <img
+              src={data.hero.bannerImage}
+              alt={data.hero?.title || 'Zambos Truck'}
+              class="w-full h-auto object-cover block"
+              loading="lazy"
+            />
+          )}
         </div>
         {(data.hero.title || data.hero.subtitle || data.hero.cta) && (
           <div class="absolute inset-x-0 bottom-0 bg-black/55 p-5 text-left text-white">
@@ -305,6 +318,7 @@ const galleryFilters = data.gallery.images.length
           <!-- Info -->
           <div class="mt-3 rounded-xl px-4 py-4 text-center">
             <p class="text-[#0A6A2E] font-title font-black uppercase text-sm sm:text-base text-center">{r.desc}</p>
+            {r.price && <p class="mt-2 text-[#0A6A2E] font-bold">{r.price}</p>}
           </div>
         </div>
       ))}
@@ -390,6 +404,7 @@ const galleryFilters = data.gallery.images.length
               formType="zambostruck"
               hideContactReason={true}
               submitLabel={data.form.submit}
+              dynamicFields={data.form.fields}
             />
           </div>
         </div>

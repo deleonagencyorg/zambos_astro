@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/MainLayoutUS.astro';
-import { t } from '../../i18n/i18n';
+import { getSocialMediaLinks, socialUrl } from '../../services/api/social-media';
 import type { Locale } from '../../i18n/i18n';
 import type { HeaderColorConfig } from '../../config/headerColors';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
@@ -8,6 +8,8 @@ import { fade } from 'astro:transitions';
 import VideoHero from '../../components/common/VideoHero/VideoHero.astro';
 import LazyImage from '../../components/common/LazyImage.astro';
 import Subscription from '../../components/subscription/index.astro';
+import { getSiteTextMap } from '../../services/api/site-texts';
+import { getPageBySlug } from '../../services/api/pages';
 
 // Importar estilos separados
 import './styles.css';
@@ -22,25 +24,18 @@ const { currentLang, headerColorConfig } = Astro.props;
 // Blindaje contra variables de idioma no definidas durante el build
 const safeLang: Locale = (currentLang || 'us') as Locale;
 
-// Get translations from common.json
-const title = 'Our Story';
-const metaDescription = t('meta.about_us.description', { namespace: 'common', locale: safeLang });
+const [siteTexts, aboutPage] = await Promise.all([getSiteTextMap(safeLang), getPageBySlug('about-us', safeLang)]);
+const title = siteTexts['about_us.title'] || 'Our Story';
+const metaDescription = aboutPage?.metaDescription || '';
+const aboutSubtitle = siteTexts['about_us.subtitle'] || 'Our Premium Plantain Chips';
+const aboutIntro = siteTexts['about_us.intro'] || '';
+const aboutConclusion = siteTexts['about_us.conclusion'] || '';
 
-// Importar contenido específico de aboutus.json
-const aboutUsContent = await import(`../../locales/${safeLang}/aboutus.json`);
-const historyTitle = aboutUsContent.title;
-const historySubtitle = aboutUsContent.subtitle;
-const historyIntro = aboutUsContent.intro;
-const historyItems = aboutUsContent.items;
-const historyConclusion = aboutUsContent.conclusion;
 
-// Get social media data from common.json
-const commonContent = await import(`../../locales/${safeLang}/common.json`);
-const socialMediaArray = Object.values(commonContent.social_media);
-
-const instagramUrl = t('social_media.instagram.url', { namespace: 'common', locale: safeLang });
-const facebookUrl = t('social_media.facebook.url', { namespace: 'common', locale: safeLang });
-const tiktokUrl = t('social_media.tiktok.url', { namespace: 'common', locale: safeLang });
+const socialMediaArray = await getSocialMediaLinks(safeLang);
+const instagramUrl = socialUrl(socialMediaArray, 'instagram');
+const facebookUrl = socialUrl(socialMediaArray, 'facebook');
+const tiktokUrl = socialUrl(socialMediaArray, 'tiktok');
 
 // Video and image URLs for hero section
 const videoUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAssets/YUMMIES_INSTITUCIONAL_1920X1080.webm';
@@ -54,11 +49,12 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
     <img src="https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp" alt="Zambos About Us" class="w-56 md:w-[500px]" />
   </div>
     <div class="w-full flex flex-col items-center justify-center text-center">
-      <h1 class="text-md md:text-4xl text-white text-center md:leading-[2] tracking-wider">Our Premium Plantain Chips</h1>
+      <h1 class="text-md md:text-4xl text-white text-center md:leading-[2] tracking-wider">{aboutSubtitle}</h1>
       <h1 class="text-xl md:text-5xl text-white text-center ">
         have a history of over
       </h1>
       <h1 class="text-5xl md:text-8xl lg:text-9xl text-white text-center">40 years</h1>
+      {aboutIntro && <p class="mx-auto mt-6 max-w-3xl px-4 text-lg text-white">{aboutIntro}</p>}
       <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zambosusus.webp" class="w-[90%] md:w-1/3 mt-12" alt="Zambos About Us" />
     </div>
 </section>
@@ -169,5 +165,10 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
   </div>
   
 </section>
+{aboutConclusion && (
+  <section class="mx-auto max-w-5xl px-6 py-12 text-center">
+    <p class="text-lg leading-relaxed">{aboutConclusion}</p>
+  </section>
+)}
 </div>
 </Layout>

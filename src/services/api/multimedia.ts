@@ -43,3 +43,8 @@ export function videoPlaybackUrl(media?: CmsMultimedia | null): string {
 
   return media.externalUrl || media.originalUrl || media.embedCode || '';
 }
+
+export function isEmbedVideoUrl(url: string): boolean {
+  if (!url) return false;
+  return /youtube\.com|youtu\.be|vimeo\.com/.test(url);
+}

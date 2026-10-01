@@ -41,17 +41,7 @@ let recipeItems: Recipe[] = [];
 if (providedMode) {
   recipeItems = (items as unknown as Recipe[]) || [];
 } else {
-  const cmsRecipes = await getAllRecipes(currentLang);
-  const recipeModules = import.meta.glob<{ default: Recipe }>("../../locales/*/recipes/*.json");
-  const localRecipes: Recipe[] = [];
-  for (const path in recipeModules) {
-    const lang = path.split('/')[3];
-    if (lang === currentLang) {
-      const mod = await recipeModules[path]();
-      localRecipes.push(mod.default);
-    }
-  }
-  recipeItems = cmsRecipes.length > 0 ? (cmsRecipes as any) : localRecipes;
+  recipeItems = (await getAllRecipes(currentLang)) as unknown as Recipe[];
   recipeItems.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
 }
 

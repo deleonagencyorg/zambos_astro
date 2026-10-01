@@ -1,10 +1,12 @@
 ---
 import { routesConfig, getRouteById } from '../../config/routes';
-import { setLocale, t, type Locale } from '../../i18n/i18n';
+import { setLocale, type Locale } from '../../i18n/i18n';
 import MainLayout from '../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../layouts/MainLayoutUS.astro';
 import HomePageContent from '../../views/Home/index.astro';
 import HomePageContentUS from '../../views-us/Home/index.astro';
+import { getHomePage } from '../../services/api/pages';
+import { getSiteInfo } from '../../services/api/site';
 
 export async function getStaticPaths() {
   const homeRoute = getRouteById('home');
@@ -25,8 +27,9 @@ if (!homeRoute) {
   throw new Error("Home route configuration is missing.");
 }
 
-const pageTitle = homeRoute.metaTitleKey ? t(homeRoute.metaTitleKey) : 'Home';
-const pageDescription = homeRoute.metaDescriptionKey ? t(homeRoute.metaDescriptionKey) : '';
+const [homePage, site] = await Promise.all([getHomePage(lang), getSiteInfo()]);
+const pageTitle = homePage?.metaTitle || site.defaultMetaTitle;
+const pageDescription = homePage?.metaDescription || site.defaultMetaDescription;
 
 const isUS = lang === 'us';
 const Layout = isUS ? MainLayoutUS : MainLayout;
@@ -139,4 +142,3 @@ const seoKeywords = lang === 'es'
   </Fragment>
   <ContentComponent isHonduras={isHonduras} />
 </Layout>
-

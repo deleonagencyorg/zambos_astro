@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/MainLayout.astro';
-import { t } from '../../i18n/i18n';
+import { getSocialMediaLinks, socialUrl } from '../../services/api/social-media';
 import type { Locale } from '../../i18n/i18n';
 import type { HeaderColorConfig } from '../../config/headerColors';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
@@ -8,6 +8,9 @@ import { fade } from 'astro:transitions';
 import VideoHero from '../../components/common/VideoHero/VideoHero.astro';
 import LazyImage from '../../components/common/LazyImage.astro';
 import Subscription from '../../components/subscription/index.astro';
+import { getSiteTextMap } from '../../services/api/site-texts';
+import { getPageBySlug } from '../../services/api/pages';
+import { getAboutTimeline } from '../../services/api/sections';
 
 // Importar estilos separados
 import './styles.css';
@@ -22,21 +25,26 @@ const { currentLang, headerColorConfig } = Astro.props;
 // Blindaje contra variables de idioma no definidas durante el build
 const safeLang = currentLang || 'es';
 
-// Get translations from common.json
-const title = t('about_us.title', { namespace: 'common', locale: safeLang });
-const metaDescription = t('meta.about_us.description', { namespace: 'common', locale: safeLang });
+const [siteTexts, aboutPage, timeline] = await Promise.all([
+  getSiteTextMap(safeLang),
+  getPageBySlug('nosotros', safeLang),
+  getAboutTimeline(safeLang),
+]);
+const title = aboutPage?.metaTitle || aboutPage?.title || '';
+const metaDescription = aboutPage?.metaDescription || '';
+const introTitle = siteTexts['about_us.title'] || '';
+const introSubtitle = siteTexts['about_us.subtitle'] || '';
+const introText = siteTexts['about_us.intro'] || '';
+const conclusionText = siteTexts['about_us.conclusion'] || '';
 
-// Importar contenido específico de aboutus.json usando la variable segura
-const aboutUsContent = await import(`../../locales/${safeLang}/aboutus.json`);
-const historyTitle = aboutUsContent.title;
-const historySubtitle = aboutUsContent.subtitle;
-const historyIntro = aboutUsContent.intro;
-const historyItems = aboutUsContent.items;
-const historyConclusion = aboutUsContent.conclusion;
+const historyItems = timeline.map((item) => ({
+  year: item.year || undefined,
+  title: item.title,
+  image: item.imageUrl,
+  text: item.text,
+}));
 
-// Get social media data from common.json usando la variable segura
-const commonContent = await import(`../../locales/${safeLang}/common.json`);
-const socialMediaArray = Object.values(commonContent.social_media);
+const socialMediaArray = await getSocialMediaLinks(safeLang);
 
 // Video and image URLs for hero section
 const videoUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAssets/YUMMIES_INSTITUCIONAL_1920X1080.webm';
@@ -45,6 +53,13 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
 
 <Layout title={title} class="bg-[#0DB04A]" description={metaDescription}>
 <div>
+  {(introTitle || introSubtitle || introText) && (
+    <section class="mx-auto max-w-5xl px-6 py-12 text-center text-white">
+      {introTitle && <h1 class="mb-3 text-3xl font-bold md:text-5xl">{introTitle}</h1>}
+      {introSubtitle && <h2 class="mb-4 text-xl font-semibold md:text-2xl">{introSubtitle}</h2>}
+      {introText && <p class="mx-auto max-w-3xl text-lg leading-relaxed">{introText}</p>}
+    </section>
+  )}
   <div class="mx-auto ">
     <div class="mt-12">
       <!-- Timeline Container -->
@@ -273,6 +288,11 @@ const fallbackImageUrl = 'https://snack.yummiespromociones.com/SnacksyummiesAsse
       
     </div>
 
+    {conclusionText && (
+      <section class="mx-auto max-w-5xl px-6 py-12 text-center text-white">
+        <p class="text-lg leading-relaxed">{conclusionText}</p>
+      </section>
+    )}
     <section>
       <Subscription currentLang={safeLang} />
     </section>

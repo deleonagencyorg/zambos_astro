@@ -22,20 +22,7 @@ interface Recipe {
 
 const currentLang = getLocale();
 
-const cmsRecipes = await getAllRecipes(currentLang);
-
-const recipeModules = import.meta.glob<{default: Recipe}>("../../locales/*/recipes/*.json");
-const localRecipes: Recipe[] = [];
-
-for (const path in recipeModules) {
-  const lang = path.split("/")[3];
-  if (lang === currentLang) {
-    const module = await recipeModules[path]();
-    localRecipes.push(module.default);
-  }
-}
-
-const allRecipes: Recipe[] = cmsRecipes.length > 0 ? (cmsRecipes as any) : localRecipes;
+const allRecipes: Recipe[] = (await getAllRecipes(currentLang)) as unknown as Recipe[];
 
 // Sort by date: newest first
 allRecipes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));

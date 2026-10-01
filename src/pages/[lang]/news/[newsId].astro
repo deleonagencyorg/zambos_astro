@@ -5,15 +5,17 @@ import MainLayout from '../../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
 import BlogDetail from '../../../views/Blog/Detail/index.astro';
 import BlogDetailUS from '../../../views-us/Blog/Detail/index.astro';
+import { getBlogPosts } from '../../../services/api/news';
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   // Obtener todos los idiomas y noticias disponibles
   const locales = ['us'];
   const paths = [];
 
   for (const locale of locales) {
     // Obtener noticias para este idioma
-    const blogPosts = t('items', { namespace: 'news', locale: locale as Locale }) || [];
+    const cmsPosts = await getBlogPosts(locale);
+    const blogPosts = cmsPosts;
     console.log(`Found ${blogPosts.length} blog posts for language ${locale}`);
     
     // Para cada noticia, crear una ruta

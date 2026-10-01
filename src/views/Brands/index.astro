@@ -9,6 +9,7 @@ import SkeletonLoader from '../../components/common/SkeletonLoader.astro';
 import Breadcrumb from '../../components/common/Breadcrumb/Breadcrumb.astro';
 import CrownTitle from '../../components/common/CrownTitle/CrownTitle.astro';
 import FloatingChip from '../../components/common/FloatingChip/index.astro';
+import { getAllBrands } from '../../services/api/brands';
 import { fade } from 'astro:transitions';
 import './styles.css';
 
@@ -25,8 +26,26 @@ let pageDescription = '';
 let homeAssets:any = [];
 
 try {
-  // Cargar datos de marcas
-  brandsData = t('brands', { namespace: 'brands', locale: currentLang }) || [];
+  const localBrands = t('brands', { namespace: 'brands', locale: currentLang }) || [];
+  const cmsBrands = await getAllBrands(currentLang);
+  brandsData = cmsBrands.length > 0
+    ? cmsBrands.map((cmsBrand) => {
+        const localBrand = localBrands.find(
+          (brand: any) => brand.slug?.toLowerCase() === cmsBrand.slug.toLowerCase()
+        );
+        return {
+          ...localBrand,
+          id: cmsBrand.id,
+          slug: cmsBrand.slug,
+          title: cmsBrand.name,
+          logo: cmsBrand.logoUrl || localBrand?.logo || '',
+          bgColor: cmsBrand.background || localBrand?.bgColor || '#ffffff',
+          description: cmsBrand.caption || localBrand?.description || '',
+          link: cmsBrand.link || localBrand?.link || '',
+          products: localBrand?.products || [],
+        };
+      })
+    : localBrands;
   homeAssets = t('home', { namespace: 'brands', locale: currentLang }) || [];
   
   // Cargar título y descripción

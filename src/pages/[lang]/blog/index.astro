@@ -2,29 +2,18 @@
 import BlogListing from '../../../views/Blog/index.astro';
 import BlogListingUS from '../../../views-us/Blog/index.astro';
 import { type Locale } from '../../../i18n/i18n';
+import { getBlogPosts } from '../../../services/api/news';
 
 export async function getStaticPaths() {
   const locales = ['us', 'es'];
-  const blogModules = import.meta.glob('../../../locales/*/blogs/*.json');
-  const postsByLocale: Record<string, any[]> = { us: [], es: [] };
-
-  for (const path in blogModules) {
-    const lang = path.split('/')[4];
-    if (locales.includes(lang)) {
-      try {
-        const mod: any = await blogModules[path]();
-        postsByLocale[lang].push(mod.default || mod);
-      } catch (e) {
-        // Skip missing or broken blog JSON files gracefully
-        console.warn(`[Blog] Skipping missing file: ${path}`);
-      }
-    }
+  const paths = [];
+  for (const locale of locales) {
+    paths.push({
+      params: { lang: locale },
+      props: { currentLang: locale as Locale, blogPosts: await getBlogPosts(locale) },
+    });
   }
-
-  return locales.map((locale) => ({
-    params: { lang: locale },
-    props: { currentLang: locale as Locale, blogPosts: postsByLocale[locale] }
-  }));
+  return paths;
 }
 
 const { currentLang, blogPosts } = Astro.props;

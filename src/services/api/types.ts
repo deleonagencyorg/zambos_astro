@@ -6,6 +6,11 @@ export interface ProductSize {
 }
 
 export interface Product {
+  cmsId?: string;
+  available?: string;
+  background_image?: string;
+  header_background?: string;
+  new?: boolean;
   id: string;
   slug?: string;
   name: string;
@@ -50,6 +55,8 @@ export interface Product {
 }
 
 export interface CMSProductRaw {
+  available?: string;
+  backgroundImage?: string;
   id: string;
   slug?: string;
   name: string;
@@ -98,6 +105,17 @@ export interface Brand {
   slug: string;
   name: string;
   logoUrl?: string;
+  background?: string;
+  link?: string;
+  caption?: string;
+}
+
+export interface CMSBrandLanguageRaw {
+  name: string;
+  link?: string;
+  logoUrl?: string;
+  caption?: string;
+  code?: string;
 }
 
 export interface CMSBrandRaw {
@@ -106,6 +124,8 @@ export interface CMSBrandRaw {
   name: string;
   logoUrl?: string;
   logo_url?: string;
+  background?: string;
+  brandLanguages?: CMSBrandLanguageRaw[];
 }
 
 export interface CMSBrandsResponse {
@@ -113,6 +133,14 @@ export interface CMSBrandsResponse {
 }
 
 export interface Recipe {
+  cmsId?: string;
+  'preview-image'?: string;
+  type?: string;
+  video?: string;
+  date?: string;
+  products?: string[];
+  new?: boolean;
+  isNew?: boolean;
   id: string;
   slug?: string;
   title: string;
@@ -136,6 +164,14 @@ export interface Recipe {
 }
 
 export interface CMSRecipeRaw {
+  preparationTime?: number;
+  type?: string;
+  gallery?: string[];
+  video?: string;
+  date?: string;
+  isNew?: boolean;
+  brands?: Array<{ id: string; slug: string; name: string }>;
+  products?: Array<{ id: string; slug: string; name: string }>;
   id: string;
   slug?: string;
   title: string;

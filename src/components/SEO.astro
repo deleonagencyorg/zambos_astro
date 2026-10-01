@@ -1,6 +1,7 @@
 ---
-import { t, type Locale } from '../../i18n/i18n';
-import config from '../../i18n/config';
+import { type Locale } from '../i18n/i18n';
+import { getSiteInfo } from '../services/api/site';
+import { getSocialMediaLinks, socialUrl } from '../services/api/social-media';
 
 export interface Props {
   currentLang: Locale;
@@ -12,20 +13,16 @@ export interface Props {
 
 const { currentLang, title, description, canonicalUrl, imageUrl } = Astro.props;
 
-// Get translations for meta tags
-const meta = t('meta', { namespace: 'common', locale: currentLang }) as any;
-const socialMedia = t('social_media', { namespace: 'common', locale: currentLang }) as any;
-
-// Default values
-const pageTitle = title || meta.home.title;
-const pageDescription = description || meta.home.description;
+const [site, socialLinks] = await Promise.all([getSiteInfo(), getSocialMediaLinks(currentLang)]);
+const pageTitle = title || site.defaultMetaTitle;
+const pageDescription = description || site.defaultMetaDescription;
 const pageImage = imageUrl || 'https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp';
 const pageUrl = canonicalUrl || `https://zambos.com/${currentLang}`;
 
-// Social media URLs
-const facebookUrl = socialMedia?.facebook?.url || '';
-const instagramUrl = socialMedia?.instagram?.url || '';
-const twitterUrl = socialMedia?.twitter?.url || '';
+const facebookUrl = socialUrl(socialLinks, 'facebook');
+const instagramUrl = socialUrl(socialLinks, 'instagram');
+const twitterUrl = socialUrl(socialLinks, 'twitter');
+---
 
 <!-- Primary Meta Tags -->
 <meta charset="UTF-8" />
@@ -69,11 +66,7 @@ const twitterUrl = socialMedia?.twitter?.url || '';
   "name": "Zambos",
   "url": "https://zambos.com",
   "logo": "https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp",
-  "sameAs": [
-    socialMedia.facebook?.url,
-    socialMedia.instagram?.url,
-    socialMedia.tiktok?.url
-  ].filter(Boolean)
+  "sameAs": socialLinks.map((link) => link.url).filter(Boolean)
 })}></script>
 
 <!-- Breadcrumbs Structured Data -->
