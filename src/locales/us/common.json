@@ -34,7 +34,7 @@
     }
   },
   "social_media": {
-   "facebook": {
+    "facebook": {
       "name": "Facebook",
       "url": "https://www.facebook.com/zambosusa/",
       "alt": "Facebook de Zambos",
@@ -66,8 +66,7 @@
     "slidermask": "https://snack.yummiespromociones.com/snacksyummies/BGHeader_1_.webp",
     "slidermaskmobile": "https://snack.yummiespromociones.com/snacksyummies/bg-front-mobile_1_.webp",
     "slider": [
-
-       {
+      {
         "id": "slide0",
         "desktop": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banneruszambos.webp",
         "mobile": "https://snack.yummiespromociones.com/SnacksyummiesAssets/banner_mobil_up_en.webp",
@@ -116,7 +115,7 @@
       "text": "Home",
       "href": "/us/"
     },
-     {
+    {
       "id": "contact-us",
       "text": "Contact US",
       "href": "/us/contact"
@@ -126,7 +125,6 @@
       "text": "Products",
       "href": "/us/products"
     }
- 
   ],
   "about_us": {
     "title": "Discover Our",
@@ -140,45 +138,45 @@
       "title": "Zambos - Enjoy your Zambos at any moment",
       "description": "Your favorite potato chip flakes come with naturally authentic flavors for all tastes."
     },
-    "newsletter":{
-      "placeholder":"email@email.com",
-      "buttonText":"Subscribe"
+    "newsletter": {
+      "placeholder": "email@email.com",
+      "buttonText": "Subscribe"
     },
-    "socialmedia":{
-      "title":"CHECK OUT OUR FEED",
-      "tagtitle":"on social media",
-      "description":"Follow us on our social media - Snacks Yummies",
-      "newsletter":"Stay up to date with all our news and promotions",
-      "images":[],
+    "socialmedia": {
+      "title": "CHECK OUT OUR FEED",
+      "tagtitle": "on social media",
+      "description": "Follow us on our social media - Snacks Yummies",
+      "newsletter": "Stay up to date with all our news and promotions",
+      "images": [],
       "instagramPosts": [
         {
           "id": "post1",
-          "postUrl": "https://www.instagram.com/p/DZl00i_BW1Q/?igsh=cGM1Yjl5NGUxd2hl",
-          "embedUrl": "https://www.instagram.com/p/DZl00i_BW1Q/embed",
+          "postUrl": "https://www.instagram.com/p/Dd43nJrhLIi/?igsh=cGM1Yjl5NGUxd2hl",
+          "embedUrl": "https://www.instagram.com/p/Dd43nJrhLIi/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-1.jpg",
           "fallbackImage": "/images/instagram-fallback-1.jpg",
           "alt": "Zambos US Instagram Post 1"
         },
         {
           "id": "post2",
-          "postUrl": "https://www.instagram.com/p/DZ3NBsTh_br/?igsh=MW1lMnYzbHpvOGsxYw",
-          "embedUrl": "https://www.instagram.com/p/DZ3NBsTh_br/embed",
+          "postUrl": "https://www.instagram.com/p/Ddt7BBYRiaX/?igsh=MW1lMnYzbHpvOGsxYw",
+          "embedUrl": "https://www.instagram.com/p/Ddt7BBYRiaX/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-2.jpg",
           "fallbackImage": "/images/instagram-fallback-2.jpg",
           "alt": "Zambos US Instagram Post 2"
         },
         {
           "id": "post3",
-          "postUrl": "https://www.instagram.com/p/DZfqUOfJtNq/?igsh=cGM1Yjl5NGUxd2hl",
-          "embedUrl": "https://www.instagram.com/p/DZfqUOfJtNq/embed",
+          "postUrl": "https://www.instagram.com/p/DdmtBKEB3VX/?igsh=cGM1Yjl5NGUxd2hl",
+          "embedUrl": "https://www.instagram.com/p/DdmtBKEB3VX/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-3.jpg",
           "fallbackImage": "/images/instagram-fallback-3.jpg",
           "alt": "Zambos US Instagram Post 3"
         },
         {
           "id": "post4",
-          "postUrl": "https://www.instagram.com/p/DZT9GLLNARG/?igsh=cGM1Yjl5NGUxd2hl",
-          "embedUrl": "https://www.instagram.com/p/DZT9GLLNARG/embed",
+          "postUrl": "https://www.instagram.com/p/DdW4W5Ph-KP/?igsh=cGM1Yjl5NGUxd2hl",
+          "embedUrl": "https://www.instagram.com/p/DdW4W5Ph-KP/embed",
           "imageUrl": "https://snack.yummiespromociones.com/yumminuts/instagram-4.jpg",
           "fallbackImage": "/images/instagram-fallback-4.jpg",
           "alt": "Zambos US Instagram Post 4"
@@ -200,11 +198,11 @@
     "privacy_policy_url": "/es/politica-privacidad",
     "contact_title": "DINANT - Contact"
   },
-  "messagetop":[
+  "messagetop": [
     {
-      "id":"1",
-      "title":"😎 Welcome to Zambos! If you're craving a snack, you're in the right place 🎉",
-      "link":""
+      "id": "1",
+      "title": "😎 Welcome to Zambos! If you're craving a snack, you're in the right place 🎉",
+      "link": ""
     }
   ],
   "form_validation": {
@@ -219,27 +217,27 @@
   "videos": {
     "title": "OUR RECIPES",
     "items": [
-           {
+      {
         "title": "Zambos Preparados",
         "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=wpvhxbgfBy4"
       },
-            {
+      {
         "title": "ZAMBOS with CHOCOLATE!",
         "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=SB1RfCJQJOA&feature=youtu.be"
       },
-            {
+      {
         "title": "Enjoy this traditional dish in a different way!",
         "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=sy2AqLzs87E&feature=youtu.be"
       },
-            {
+      {
         "title": "Delicious recipe with Zambos Ceviche 🍤",
         "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=kzMAt5AE0r0&feature=youtu.be"
       },
-            {
+      {
         "title": "Zambos Costeños",
         "description": "Discover ideas to prepare your Zambos snacks.",
         "url": "https://www.youtube.com/watch?v=DEDSda5mneA"
