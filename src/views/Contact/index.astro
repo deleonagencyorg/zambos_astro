@@ -56,7 +56,12 @@ const headerColors = {
         </h2>
 
         <h1 class="text-white titles">
-          {contact.subtitle}
+          <span class="block md:hidden">
+            {locale === 'es' ? 'CONTACTANOS PARA MAYOR INFORMACIÓN.' : 'CONTACT US FOR MORE INFORMATION.'}
+          </span>
+          <span class="hidden md:block">
+            {contact.subtitle}
+          </span>
         </h1>
 
         <p class="text-white font-bold text-2xl lg:text-2xl mb-8 leading-relaxed ">

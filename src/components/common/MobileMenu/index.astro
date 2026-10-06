@@ -27,7 +27,7 @@ const closeMenuLabel = t('menu_labels.close_main_menu', { namespace: 'common', l
 ---
 
 <!-- Menú Móvil Global -->
-<div id="mobile-menu" class="hidden md:hidden fixed inset-0 w-screen h-screen z-[2147483647] bg-greenDark  overflow-y-auto" data-current-lang={currentLang}>
+<div id="mobile-menu" class="hidden lg:hidden fixed inset-0 w-screen h-screen z-[2147483647] bg-greenDark  overflow-y-auto" data-current-lang={currentLang}>
   <div class="container mx-auto px-4 py-8">
     <div class="flex justify-between items-center mb-8">
       <a href={`/${currentLang}/`} class="block">
@@ -207,7 +207,7 @@ function handleMenuLinkClick(e: Event): void {
 
 // Cerrar menú al cambiar a desktop (por resize)
 function handleResizeCloseIfDesktop(): void {
-  if (window.innerWidth >= 768) {
+  if (window.innerWidth >= 1024) {
     handleCloseButtonClick();
   }
 }
@@ -220,6 +220,10 @@ function handleCloseButtonClick() {
     document.body.style.overflow = '';
     
     // Actualizar el botón del header
+    const logoMenuBtn = document.getElementById('mobile-logo-menu-btn');
+    if (logoMenuBtn) {
+      logoMenuBtn.setAttribute('aria-expanded', 'false');
+    }
     const menuButton = document.getElementById('mobile-menu-button');
     const menuIconContainer = document.getElementById('menu-icon-container');
     if (menuButton && menuIconContainer) {

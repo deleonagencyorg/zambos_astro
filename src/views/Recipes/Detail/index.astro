@@ -23,6 +23,7 @@ interface RecipeItem {
   product_image?: string;
   video?: string;
   date?: string;
+  difficulty?: string;
 }
 
 const { currentLang, recipeId } = Astro.props;
@@ -57,7 +58,9 @@ if (!recipe) {
 const recipesAssets = {
   recipes: currentLang === 'es' ? 'Ingredientes' : 'Ingredients',
   preparation: currentLang === 'es' ? 'Preparación' : 'Preparation',
-  related_recipes: currentLang === 'es' ? 'Recetas relacionadas' : 'Related recipes'
+  related_recipes: currentLang === 'es' ? 'Recetas relacionadas' : 'Related recipes',
+  prep_time: currentLang === 'es' ? 'Tiempo de preparación' : 'Prep time',
+  difficulty: currentLang === 'es' ? 'Dificultad' : 'Difficulty'
 };
 
 function formatTime(minutes: number): string {
@@ -66,12 +69,12 @@ function formatTime(minutes: number): string {
   
   if (currentLang === 'es') {
     return hours > 0 
-      ? `${hours}h ${mins}min` 
-      : `${mins}min`;
+      ? `${hours}h ${mins} min` 
+      : `${mins} min`;
   } else {
     return hours > 0 
-      ? `${hours}h ${mins}m` 
-      : `${mins}m`;
+      ? `${hours}h ${mins} min` 
+      : `${mins} min`;
   }
 }
 ---
@@ -132,9 +135,9 @@ function formatTime(minutes: number): string {
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-                <span class="text-xs sm:text-sm font-bold uppercase">Tiempo</span>
+                <span class="text-xs sm:text-sm font-bold">{recipesAssets.prep_time}</span>
               </div>
-              <p class="text-gray-900 font-bold">{formatTime(recipe.preparation_time)}</p>
+              <p class="text-gray-900 font-title font-bold text-lg sm:text-xl">{formatTime(recipe.preparation_time)}</p>
             </div>
 
             <!-- Difficulty -->
@@ -143,10 +146,10 @@ function formatTime(minutes: number): string {
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                 </svg>
-                <span class="text-xs sm:text-sm font-bold uppercase">Dificultad</span>
+                <span class="text-xs sm:text-sm font-bold">{recipesAssets.difficulty}</span>
               </div>
-              <p class="text-gray-900 font-bold">
-                {currentLang === 'es' ? 'Fácil' : 'Easy'}
+              <p class="text-gray-900 font-normal">
+                {recipe.difficulty || (currentLang === 'es' ? 'Fácil' : 'Easy')}
               </p>
             </div>
           </div>

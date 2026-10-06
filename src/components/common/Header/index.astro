@@ -1,7 +1,6 @@
 ---
 // src/components/Header.astro
 import DesktopNavbar from '../DesktopNavbar/index.astro';
-import MobileMenuButton from '../MobileMenuButton/index.astro';
 import LocalizedImage from '../LazyImage.astro';
 import MessageCarousel from '../MessageCarousel/index.astro';
 import { t, type Locale } from '../../../i18n/i18n';
@@ -79,24 +78,25 @@ if (headerColors) {
       class={`mobile-nav lg:hidden w-full py-2 px-4 flex items-center justify-between bg-greenDark`}
       style={`background-color: #009337`}
     >
-      <!-- Hamburger izquierda -->
+      <!-- Logo a la izquierda (abre el menú al hacer click) -->
       <div class="flex-shrink-0">
-        <MobileMenuButton currentLang={currentLang} headerColorConfig={customHeaderConfig} />
-      </div>
-
-      <!-- Logo centrado -->
-      <div class="flex-1 flex justify-center">
-        <a href={`/${currentLang}/`}>
+        <button
+          id="mobile-logo-menu-btn"
+          type="button"
+          class="flex items-center focus:outline-none cursor-pointer p-1 -ml-1 transition-transform active:scale-95"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
           <LocalizedImage
             src={logosData.principal.url}
             alt={logosData.principal.alt || "Zambos Logo"}
-            class="h-10 w-auto object-contain"
+            class="h-10 w-auto object-contain pointer-events-none"
             loading="eager"
             width="120"
             height="40"
             priority={true}
           />
-        </a>
+        </button>
       </div>
 
       <!-- Iconos sociales derecha -->
@@ -150,18 +150,50 @@ function initHeaderScrollBehavior() {
   handleScroll();
 }
 
+// Función para controlar la apertura del menú móvil al hacer click en el logo
+function initMobileLogoMenu() {
+  const logoBtn = document.getElementById('mobile-logo-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (!logoBtn || !mobileMenu) return;
+
+  logoBtn.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const isHidden = mobileMenu.classList.contains('hidden');
+    if (isHidden) {
+      mobileMenu.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      logoBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      mobileMenu.classList.add('hidden');
+      document.body.style.overflow = '';
+      logoBtn.setAttribute('aria-expanded', 'false');
+    }
+  };
+}
+
 // Ensure the script runs after the DOM is fully loaded
 if (typeof window !== 'undefined') {
   if (document.readyState === 'loading') { // Still loading
-    document.addEventListener('DOMContentLoaded', initHeaderScrollBehavior);
+    document.addEventListener('DOMContentLoaded', () => {
+      initHeaderScrollBehavior();
+      initMobileLogoMenu();
+    });
   } else { // `DOMContentLoaded` has already fired
     initHeaderScrollBehavior();
+    initMobileLogoMenu();
   }
 }
 
 // Reinicializar cuando Astro navega a una nueva página
-document.addEventListener('astro:page-load', initHeaderScrollBehavior);
-document.addEventListener('astro:after-swap', initHeaderScrollBehavior);
+document.addEventListener('astro:page-load', () => {
+  initHeaderScrollBehavior();
+  initMobileLogoMenu();
+});
+document.addEventListener('astro:after-swap', () => {
+  initHeaderScrollBehavior();
+  initMobileLogoMenu();
+});
 
 const TAG = '[hn-visibility]';
 
