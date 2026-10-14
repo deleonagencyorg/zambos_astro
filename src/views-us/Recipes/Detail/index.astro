@@ -102,100 +102,89 @@ const servings = recipe.servings || 4;
   <div class="absolute inset-0 w-full h-full lg:hidden z-0 " style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/bgmobileusrecipe4.webp'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100%;"></div>
   
   <!-- ===== HERO SECTION ===== -->
-  <!-- Mobile: Stack vertical | Desktop: Side by side with equal heights -->
-  <section class="relative w-full flex flex-col lg:flex-row lg:items-center lg:min-h-[800px] -mt-[80px] lg:-mt-0 xl:min-h-[920px] lg:py-0">
+  <section class="relative w-full flex flex-col lg:flex-row lg:items-center min-h-0 lg:h-[800px] xl:h-[920px]">
     
-    <!-- Recipe Image - Full width on mobile/tablet, narrower on desktop -->
-    <div class="w-full lg:w-[42%] xl:w-[60%] relative min-h-[65vh] lg:min-h-0 lg:h-[800px] xl:h-[920px] overflow-hidden lg:flex lg:items-center lg:justify-center">
-      <!-- Mobile/tablet: title overlaid at top of image, centered -->
-      <div class="absolute top-0 left-0 right-0 z-10 lg:hidden px-[8%] pt-[38%] md:pt-[30%] pb-[20%] bg-gradient-to-b from-transparent via-black/60 to-transparent text-center">
-        <h1 class="font-bold text-white text-[5.5vw] uppercase leading-tight drop-shadow-lg">
-          {recipe.title}
-        </h1>
-      </div>
+    <div class="w-full lg:w-[42%] xl:w-[45%] relative h-[320px] sm:h-[400px] md:h-[460px] lg:h-full overflow-hidden flex-shrink-0 z-10">
       {recipe.image && (
         <>
           <img
             src={recipe.image}
             alt={recipe.title}
-            class="w-full h-full object-cover absolute inset-0 lg:static lg:w-auto lg:h-auto lg:object-contain lg:max-h-[80%] lg:max-w-full"
+            class="w-[calc(100%+4px)] h-full object-cover absolute -left-[2px] top-0 max-w-none"
           />
           {recipe.video && <PlayOverlay video={recipe.video} size="lg" />}
         </>
       )}
     </div>
     
-    <!-- Recipe Info - Desktop only (hidden on mobile/tablet) -->
-    <div class="hidden lg:flex lg:w-[70%] xl:w-[90%] relative flex-col justify-center lg:h-[800px] xl:h-[920px] lg:ml-[-15%] lg:px-0 xl:px-20">
-      <!-- Desktop background layer -->
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/detailzambosusrecipe.webp');"></div>
+    <!-- Recipe Info -->
+    <div class="w-full lg:flex-1 relative flex flex-col justify-center min-h-0 lg:h-full lg:ml-[-12%] z-10">
+      <!-- Desktop background layer with torn edge -->
+      <div class="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://snack.yummiespromociones.com/SnacksyummiesAssets/detailzambosusrecipe.webp');"></div>
       
       <!-- Content layer -->
-      <div class="relative z-10">
-
-      
-      <div class="p-[6%] md:p-[8%] lg:p-[10%] lg:pt-[12%] lg:pb-[16%] lg:pl-[22%] xl:pl-[30%] w-full">
-        <!-- Title - Centered on mobile, left on desktop -->
-        <h1 class="font-bold text-[7vw] md:text-[3.5vw] lg:text-[2.8vw] text-white uppercase mb-[4%] leading-[1.1] text-center md:text-left">
+      <div class="relative z-30 p-6 sm:p-8 md:p-10 lg:p-10 lg:pl-[18%] xl:pl-[24%] xl:pr-16 lg:pb-32 w-full text-center lg:text-left">
+        <!-- Title -->
+        <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl text-white uppercase mb-3 md:mb-4 leading-tight">
           {recipe.title}
         </h1>
         
         <!-- Description -->
-        <p class="text-white/90 text-[3.5vw] md:text-[1.2vw] lg:text-[1vw] mb-[6%] leading-relaxed text-center md:text-left max-w-full md:max-w-[90%]">
+        <p class="text-white/90 text-sm sm:text-base md:text-base lg:text-sm xl:text-base mb-6 leading-relaxed max-w-full lg:max-w-[95%]">
           {recipe.description || (currentLang === 'es' 
             ? 'Crujientes dedos de pescado cubiertos con Zambos Ceviche triturados y cítricos frescos. Un platillo dorado ideal para compartir y acompañar con tu salsa favorita.' 
             : 'Crispy fish fingers coated with crunchy Zambos Ceviche crumbs and fresh citrus flavors. A tasty, golden dish ideal for sharing and pairing with your favorite sauce.')}
         </p>
         
-        <!-- Icons Row - Time and Servings -->
-        <div class="flex flex-wrap justify-center md:justify-start gap-[6%] mb-[6%]">
+        <!-- Icons Row  -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-8 mb-6">
           <!-- Prep Time -->
           <div class="flex flex-col items-center text-white">
-            <div class="w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[48px] max-h-[48px] mb-[5%]">
+            <div class="w-10 h-10 mb-1">
               <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zambostime.png" alt="Prep time" class="w-full h-full object-contain" />
             </div>
-            <span class="text-[2.8vw] md:text-[0.9vw] uppercase font-semibold opacity-90">{currentLang === 'es' ? 'Prep time' : 'Prep time'}</span>
-            <span class="text-[4vw] md:text-[1.4vw] font-bold">{formatTime(recipe.preparation_time)}</span>
+            <span class="text-xs uppercase font-semibold text-white/90">{currentLang === 'es' ? 'Prep time' : 'Prep time'}</span>
+            <span class="text-sm sm:text-base font-bold text-white">{formatTime(recipe.preparation_time)}</span>
           </div>
           
           <!-- Servings -->
           <div class="flex flex-col items-center text-white">
-            <div class="w-[8vw] h-[8vw] md:w-[3vw] md:h-[3vw] max-w-[48px] max-h-[48px] mb-[5%]">
+            <div class="w-10 h-10 mb-1">
               <img src="https://snack.yummiespromociones.com/SnacksyummiesAssets/zambosportions.png" alt="Servings" class="w-full h-full object-contain" />
             </div>
-            <span class="text-[2.8vw] md:text-[0.9vw] uppercase font-semibold opacity-90">{currentLang === 'es' ? 'Servings' : 'Servings'}</span>
-            <span class="text-[4vw] md:text-[1.4vw] font-bold">{servings}-{servings + 1} {currentLang === 'es' ? 'portions' : 'portions'}</span>
+            <span class="text-xs uppercase font-semibold text-white/90">{currentLang === 'es' ? 'Servings' : 'Servings'}</span>
+            <span class="text-sm sm:text-base font-bold text-white">{servings}-{servings + 1} {currentLang === 'es' ? 'portions' : 'portions'}</span>
           </div>
         </div>
         
-        <!-- Social Share Icons - Light green rounded squares -->
-        <div class="flex justify-center md:justify-start gap-[3%]">
+        <!-- Social Share Icons -->
+        <div class="flex justify-center lg:justify-start gap-3">
           <button 
-            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            class="w-11 h-11 rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
             aria-label="Share on Instagram"
             onclick="window.open('https://instagram.com', '_blank')"
           >
-            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
           </button>
           <button 
-            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            class="w-11 h-11 rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
             aria-label="Share on Facebook"
             onclick="window.open('https://facebook.com', '_blank')"
           >
-            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
             </svg>
           </button>
           <button 
-            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            class="w-11 h-11 rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
             aria-label="Share Recipe"
             onclick="document.getElementById('shareModal-recipe')?.classList.remove('hidden')"
           >
-            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <circle cx="18" cy="5" r="3"/>
               <circle cx="6" cy="12" r="3"/>
               <circle cx="18" cy="19" r="3"/>
@@ -204,11 +193,11 @@ const servings = recipe.servings || 4;
             </svg>
           </button>
           <button 
-            class="w-[12vw] h-[12vw] md:w-[4vw] md:h-[4vw] max-w-[48px] max-h-[48px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
+            class="w-11 h-11 rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
             aria-label="Copy Link"
             onclick="navigator.clipboard.writeText(window.location.href)"
           >
-            <svg class="w-[6vw] h-[6vw] md:w-[2vw] md:h-[2vw] max-w-[24px] max-h-[24px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
               <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
             </svg>
@@ -216,44 +205,36 @@ const servings = recipe.servings || 4;
         </div>
       </div>
     </div>
-    </div>
 
-      <!-- White decorative line - desktop only -->
-      <img
-        src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp"
-        alt=""
-        class="hidden lg:block w-full pointer-events-none absolute bottom-0 left-0 z-20"
-      />
-
-      <!-- Blue decorative line - mobile and tablet only -->
-      <img
-        src="https://snack.yummiespromociones.com/SnacksyummiesAssets/lineblueus.webp"
-        alt=""
-        class="block lg:hidden w-full pointer-events-none absolute -bottom-[16%] md:-bottom-[20%] left-0 z-20"
-      />
+    <!-- White decorative line -->
+    <img
+      src="https://snack.yummiespromociones.com/SnacksyummiesAssets/linewhiteus.webp"
+      alt=""
+      class="hidden lg:block w-full pointer-events-none absolute bottom-0 left-0 z-20"
+    />
 
   </section>
 
-  <section class="relative w-full pb-[3%] lg:pb-[5%] pt-[2%] lg:pt-[0]">
+  <section class="relative w-full pb-[3%] lg:pb-[5%] pt-6 lg:pt-0">
     
     <div class="relative flex flex-col items-center text-center px-[5%]">
-      <!-- Product Package Image - More spacing from top section -->
-      <div class="relative w-[85%] lg:w-[30%] xl:w-[25%] max-w-[400px] mb-[3%] z-30 drop-shadow-2xl -mt-[18%] lg:-mt-[200px] xl:-mt-[200px] mx-auto">
+      <!-- Product Package Image -->
+      <div class="relative w-[70%] sm:w-[50%] md:w-[38%] lg:w-[24%] xl:w-[20%] max-w-[340px] mb-4 z-30 drop-shadow-2xl mt-4 sm:mt-6 lg:-mt-[150px] xl:-mt-[180px] mx-auto">
         <img 
           src={productImage} 
           alt={productName}
-          class="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300 "
+          class="w-full h-auto object-contain transform hover:scale-105 transition-transform duration-300"
         />
       </div>
       
       <!-- Made With Text - Red color matching design -->
-      <p class="text-white lg:text-[#B71C1C] font-bold text-[4vw] md:text-[2vw] lg:text-[1.5vw] xl:text-[1.2vw] uppercase tracking-wider mb-[1%]">
+      <p class="text-white lg:text-[#B71C1C] font-bold text-lg sm:text-xl md:text-lg lg:text-xl uppercase tracking-wider mb-2">
         {currentLang === 'es' ? 'Hecho con' : 'Made With'}
       </p>
       
       <!-- Product Name - Green color matching design -->
-      <div class="relative inline-block mb-[4%]">
-        <h2 class="text-white lg:text-[#0E6D20] font-bold text-[7vw] md:text-[4vw] lg:text-[3vw] xl:text-[2.5vw] uppercase leading-tight">
+      <div class="relative inline-block mb-4">
+        <h2 class="text-white lg:text-[#0E6D20] font-bold text-2xl sm:text-3xl md:text-3xl lg:text-4xl uppercase leading-tight">
           {productName}
         </h2>
         <!-- Floating chip - desktop only -->
@@ -267,60 +248,13 @@ const servings = recipe.servings || 4;
         href={amazonBuyUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-[6px] bg-[#B71C1C] text-white font-bold px-[6%] py-[2.5%] md:px-[4%] md:py-[1.5%] lg:px-[3%] lg:py-[1.2%] rounded-full hover:bg-[#9A1616] transition-all shadow-lg text-[3.5vw] md:text-[2vw] lg:text-[1.2vw] xl:text-[1vw] active:scale-95 hover:shadow-xl mb-[4%]"
+        class="inline-flex items-center gap-2 bg-[#B71C1C] text-white font-bold px-8 py-3 rounded-full hover:bg-[#9A1616] transition-all shadow-lg text-sm sm:text-base active:scale-95 hover:shadow-xl mb-4"
       >
         <span class="uppercase tracking-wide">{currentLang === 'es' ? 'COMPRAR PRODUCTO' : 'BUY PRODUCT'}</span>
-        <svg class="w-[4.5vw] h-[4.5vw] md:w-[1.2vw] md:h-[1.2vw] max-w-[20px] max-h-[20px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3">
           <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H7M17 7V17"/>
         </svg>
       </a>
-
-      <!-- Mobile only: social share icons below buy button -->
-      <div class="flex lg:hidden justify-center gap-[4%] pb-[6%]">
-        <button 
-          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
-          aria-label="Share on Instagram"
-          onclick="window.open('https://instagram.com', '_blank')"
-        >
-          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-        </button>
-        <button 
-          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
-          aria-label="Share on Facebook"
-          onclick="window.open('https://facebook.com', '_blank')"
-        >
-          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-          </svg>
-        </button>
-        <button 
-          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
-          aria-label="Share Recipe"
-          onclick="document.getElementById('shareModal-recipe')?.classList.remove('hidden')"
-        >
-          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <circle cx="18" cy="5" r="3"/>
-            <circle cx="6" cy="12" r="3"/>
-            <circle cx="18" cy="19" r="3"/>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-          </svg>
-        </button>
-        <button 
-          class="w-[13vw] h-[13vw] max-w-[52px] max-h-[52px] rounded-xl bg-[#A8D648] flex items-center justify-center hover:bg-[#9AC43F] transition-colors shadow-md active:scale-95" 
-          aria-label="Copy Link"
-          onclick="navigator.clipboard.writeText(window.location.href)"
-        >
-          <svg class="w-[6.5vw] h-[6.5vw] max-w-[26px] max-h-[26px] text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-          </svg>
-        </button>
-      </div>
 
     </div>
   </section>
