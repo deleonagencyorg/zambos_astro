@@ -91,7 +91,7 @@ const headerColors = {
                 </h3>
                 
                 <div class="flex items-start space-x-3">
-                  <p id="officeAddress" class="text-white leading-relaxed font-semibold text-lg md:text-xl lg:text-2xl">  {`+ ${contact.offices.locations["+504"].address}`}</p>
+                  <p id="officeAddress" class="text-white leading-relaxed font-semibold text-lg md:text-xl lg:text-2xl">  {`${contact.offices.locations["+504"].address}`}</p>
                 </div>
                 
                 <div class="flex items-center space-x-3">
@@ -184,7 +184,7 @@ const headerColors = {
             if (!office) return;
 
             if (officeName) officeName.textContent = office.name;
-            if (officeAddress) officeAddress.textContent = `+ ${office.address}`;
+            if (officeAddress) officeAddress.textContent = office.address;
 
             if (officePhones) {
               officePhones.innerHTML = '';
@@ -192,7 +192,7 @@ const headerColors = {
                 const phoneContainer = document.createElement('div');
                 const phoneLink = document.createElement('a');
                 phoneLink.href = `tel:${phone}`;
-                phoneLink.textContent = `+${phone}`;
+                phoneLink.textContent = `${phone}`;
                 phoneLink.className = 'text-white hover:text-primary font-medium font-semibold transition-colors';
                 phoneContainer.appendChild(phoneLink);
                 officePhones.appendChild(phoneContainer);
