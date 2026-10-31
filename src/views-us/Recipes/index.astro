@@ -6,6 +6,7 @@ import Subscription from '../../components/subscription/index.astro';
 import RecipeCard from '../../components/recipes/RecipeCard.astro';
 import RecipeSearch from '../../components/recipes/RecipeSearch.astro';
 import PlayOverlay from '../../components/common/PlayOverlay.astro';
+import { getAllRecipes } from '../../services/api/recipes';
 
 interface Recipe {
   id: string;
@@ -21,18 +22,7 @@ interface Recipe {
 
 const currentLang = getLocale();
 
-// Get all recipe files with correct Vite glob typing
-const recipeModules = import.meta.glob<{default: Recipe}>('../../locales/*/recipes/*.json');
-const allRecipes: Recipe[] = [];
-
-// Process each file
-for (const path in recipeModules) {
-  const lang = path.split('/')[3]; // Extract language from path
-  if (lang === currentLang) {
-    const module = await recipeModules[path]();
-    allRecipes.push(module.default);
-  }
-}
+const allRecipes: Recipe[] = (await getAllRecipes(currentLang)) as unknown as Recipe[];
 
 // Sort by date: newest first
 allRecipes.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
@@ -173,7 +163,7 @@ const featuredRecipes = availableCategories
 
                   <!-- Recipe Info Overlay -->
                   <a
-                    href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${recipe.id}`}
+                    href={`/${currentLang}/${currentLang === 'es' ? 'recetas' : 'recipes'}/${(recipe as any).slug || recipe.id}`}
                     class="absolute bottom-0 left-0 right-0 p-6 md:p-12 pb-20 md:pb-12 z-20 pr-[110px] md:pr-[140px]"
                   >
                     <!-- Category Tags -->
@@ -315,6 +305,7 @@ const featuredRecipes = availableCategories
                       title={recipe.title}
                       time={`${recipe.preparation_time}MIN`}
                       id={recipe.id}
+                      slug={(recipe as any).slug || recipe.id}
                       description={(recipe as any).description}
                       category={filterLabels[normalizeType(recipe)] || normalizeType(recipe).toUpperCase()}
                       isNew={(recipe as any).new === true}

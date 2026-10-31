@@ -1,5 +1,6 @@
 ---
-import { t, type Locale } from '../../../i18n/i18n';
+import { type Locale } from '../../../i18n/i18n';
+import { getTopMessages } from '../../../services/api/top-messages';
 
 interface Props {
   currentLang: Locale;
@@ -12,8 +13,7 @@ interface Message {
 
 const { currentLang } = Astro.props;
 
-// Obtener los mensajes del archivo de traducción
-const messages = t('messagetop', { namespace: 'common', locale: currentLang }) as Message[] || [];
+const messages: Message[] = await getTopMessages(currentLang);
 ---
 
 <div id="message-carousel" class="w-full bg-[#ca0203]  text-white py-8 md:py-4  relative overflow-hidden z-10">

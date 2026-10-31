@@ -1,17 +1,20 @@
 ---
+import { resolveStaticPath } from '../../../utils/staticPaths';
 // src/pages/[lang]/noticias/[newsId].astro
 import { t, setLocale, type Locale } from '../../../i18n/i18n';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import BlogDetail from '../../../views/Blog/Detail/index.astro';
+import { getBlogPosts } from '../../../services/api/news';
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   // Obtener todos los idiomas y entradas de blog disponibles
   const locales = ['es'];
   const paths = [];
 
   for (const locale of locales) {
     // Obtener entradas de blog para este idioma
-    const blogPosts = t('items', { namespace: 'news', locale: locale as Locale }) || [];
+    const cmsPosts = await getBlogPosts(locale);
+    const blogPosts = cmsPosts;
     console.log(`Encontradas ${blogPosts.length} entradas de blog para idioma ${locale}`);
     
     // Para cada entrada de blog, crear una ruta
@@ -27,7 +30,12 @@ export function getStaticPaths() {
   return paths;
 }
 
-const { blogPost, currentLang } = Astro.props;
+const staticPath = await resolveStaticPath(getStaticPaths, Astro.params);
+if (!staticPath) {
+  return Astro.rewrite('/404');
+}
+
+const { blogPost, currentLang } = staticPath.props;
 const { lang, newsId } = Astro.params;
 
 // Establecer el idioma para las traducciones

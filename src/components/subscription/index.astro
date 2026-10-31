@@ -1,14 +1,18 @@
 ---
 // NewsletterSignup.astro
 import { getLocale } from '../../i18n/i18n';
+import { getSiteTextMap } from '../../services/api/site-texts';
 
 export interface Props {
   currentLang?: string;
 }
 
 const { currentLang = getLocale() } = Astro.props;
+const siteTexts = await getSiteTextMap(currentLang);
 
 const backgroundImageSrc = '/images/es/subscription.png';
+const title = siteTexts['home.newsletter.title'] || (currentLang === 'es' ? 'ÚNETE A NUESTRA FAMILIA' : 'JOIN OUR FAMILY');
+const buttonText = siteTexts['home.newsletter.button'] || (currentLang === 'es' ? 'Suscríbete' : 'Subscribe');
 ---
 
 <section
@@ -19,7 +23,7 @@ const backgroundImageSrc = '/images/es/subscription.png';
   <!-- Contenido Principal - Por encima de la imagen -->
   <div class="content">
     <div class="container">
-      <h1 class="title">{currentLang === 'es' ? 'ÚNETE A NUESTRA FAMILIA' : 'JOIN OUR FAMILY'}</h1>
+      <h1 class="title">{title}</h1>
       
       <p class="subtitle">
         {currentLang === 'es' ? 'Entérate de nuestras últimas novedades en experiencias, sabores y más.' : 'Stay updated on our latest news in experiences, flavors, and more.'}
@@ -31,7 +35,7 @@ const backgroundImageSrc = '/images/es/subscription.png';
           target="_blank"
           rel="noopener noreferrer"
         >
-          {currentLang === 'es' ? 'Suscríbete' : 'Subscribe'}
+          {buttonText}
         </a>
 
      

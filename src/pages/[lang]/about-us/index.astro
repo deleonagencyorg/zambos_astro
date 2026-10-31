@@ -1,4 +1,5 @@
 ---
+import { resolveStaticPath } from '../../../utils/staticPaths';
 import AboutUsView from '../../../views/AboutUs/index.astro';
 import AboutUsViewUS from '../../../views-us/AboutUs/index.astro';
 import { type Locale } from '../../../i18n/i18n';
@@ -12,7 +13,12 @@ export async function getStaticPaths() {
   }));
 }
 
-const { currentLang } = Astro.props;
+const staticPath = await resolveStaticPath(getStaticPaths, Astro.params);
+if (!staticPath) {
+  return Astro.rewrite('/404');
+}
+
+const { currentLang } = staticPath.props;
 
 // Set header color config for white background and primary color text using the getHeaderColors function
 const headerColorConfig = getHeaderColors('about_us');

@@ -1,21 +1,11 @@
 // Sistema de internacionalización simple
-import esCommon from '../locales/es/common.json';
-import enCommon from '../locales/us/common.json';
-import esRecipes from '../locales/es/recipes.json';
-import esNews from '../locales/es/news.json';
-import esProducts from '../locales/es/products.json';
 import esBrands from '../locales/es/brands.json';
 import esNewProducts from '../locales/es/newproducts.json';
 import esGallery from '../locales/es/gallery.json';
-import esAboutUs from '../locales/es/aboutus.json';
 import esExperiences from '../locales/es/experiences.json';
-import enRecipes from '../locales/us/recipes.json';
-import enNews from '../locales/us/news.json';
-import enProducts from '../locales/us/products.json';
 import enBrands from '../locales/us/brands.json';
 import enNewProducts from '../locales/us/newproducts.json';
 import enGallery from '../locales/us/gallery.json';
-import enAboutUs from '../locales/us/aboutus.json';
 import enExperiences from '../locales/us/experiences.json';
 import enBlog from '../locales/us/blog.json';
 import esBlog from '../locales/es/blog.json';
@@ -27,26 +17,16 @@ export type TranslationKey = string;
 // Estructura de traducciones
 const translations = {
   es: {
-    common: esCommon,
-    recipes: esRecipes,
-    news: esNews,
-    products: esProducts,
     brands: esBrands,
     newproducts: esNewProducts,
     gallery: esGallery,
-    aboutus: esAboutUs,
     experiences: esExperiences,
     blog: esBlog
   },
   us: {
-    common: enCommon,
-    recipes: enRecipes,
-    news: enNews,
-    products: enProducts,
     brands: enBrands,
     newproducts: enNewProducts,
     gallery: enGallery,
-    aboutus: enAboutUs,
     experiences: enExperiences,
     blog: enBlog
   }
@@ -79,7 +59,7 @@ currentLocale = detectInitialLocale();
  * @returns Texto traducido
  */
 export function t(key: TranslationKey, options?: { locale?: Locale, namespace?: string }): any {
-  const locale = options?.locale || currentLocale;
+  const locale = options?.locale || getLocale();
   const namespace = options?.namespace || 'common';
   
   try {
@@ -125,6 +105,11 @@ export function t(key: TranslationKey, options?: { locale?: Locale, namespace?: 
  * @param locale Nuevo idioma
  */
 export function setLocale(locale: Locale): void {
+  const store = requestLocaleStore();
+  if (store) {
+    if (locale in translations) store.locale = locale;
+    return;
+  }
   if (locale in translations) {
     if (locale !== currentLocale) {
       currentLocale = locale;
@@ -143,7 +128,11 @@ export function setLocale(locale: Locale): void {
  * @returns Código de idioma actual
  */
 export function getLocale(): Locale {
-  return currentLocale;
+  return requestLocaleStore()?.locale ?? currentLocale;
+}
+
+function requestLocaleStore(): { locale: Locale } | undefined {
+  return (globalThis as any).__requestLocale?.getStore();
 }
 
 // Sincronizar entre pestañas

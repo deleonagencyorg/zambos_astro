@@ -1,5 +1,6 @@
 ---
-import { t, type Locale } from '../../../i18n/i18n';
+import { type Locale } from '../../../i18n/i18n';
+import { getSiteTextMap, text } from '../../../services/api/site-texts';
 
 export interface Props {
   currentLang: Locale;
@@ -21,26 +22,13 @@ const {
   class: className = ''
 } = Astro.props;
 
-// Obtener textos desde los archivos de traducción, usando namespace específico según variante
-const namespace = variant === 'home' ? 'home' : 'common';
-
-// Intentar usar textos personalizados, si no hay, usar los de traducciones
-const title = customTitle || (variant === 'home' 
-  ? t('socialmedia.newsletter', { namespace: 'home', locale: currentLang }) 
-  : t('footer.newsletter_title', { namespace: 'common', locale: currentLang }));
-
-const placeholder = customPlaceholder || (variant === 'home'
-  ? t('newsletter.placeholder', { namespace: 'home', locale: currentLang })
-  : t('footer.newsletter_placeholder', { namespace: 'common', locale: currentLang }));
-
-const buttonText = customButtonText || (variant === 'home'
-  ? t('newsletter.buttonText', { namespace: 'home', locale: currentLang })
-  : t('footer.newsletter_button', { namespace: 'common', locale: currentLang }));
-
-// Mensajes de validación
-const requiredMessage = t('form_validation.required', { namespace: 'common', locale: currentLang });
-const invalidEmailMessage = t('form_validation.invalid_email', { namespace: 'common', locale: currentLang });
-const successMessage = t('subscribe.success', { namespace: 'common', locale: currentLang, fallback: '¡Gracias por suscribirte!' });
+const siteTexts = await getSiteTextMap(currentLang);
+const title = customTitle || text(siteTexts, 'home.newsletter.title');
+const placeholder = customPlaceholder || text(siteTexts, 'home.newsletter.placeholder');
+const buttonText = customButtonText || text(siteTexts, 'home.newsletter.button');
+const requiredMessage = text(siteTexts, 'form_validation.required');
+const invalidEmailMessage = text(siteTexts, 'form_validation.invalid_email');
+const successMessage = text(siteTexts, 'subscribe.success');
 
 // Variables de entorno para la API
 const apiHost = import.meta.env.PUBLIC_CONTACT_API_HOST;

@@ -1,5 +1,6 @@
 ---
 import { t, type Locale } from '../../i18n/i18n';
+import { getSocialMediaLinks } from '../../services/api/social-media';
 import MainLayout from '../../layouts/MainLayoutUS.astro';
 import juradosData from '../../locales/es/jurados.json';
 import PixelGrid from '../../components/atoms/PixelGrid.astro';
@@ -28,7 +29,8 @@ const allJurors = countries.flatMap(country =>
 );
 
 // Social media icons and urls from i18n common namespace
-const socialMedia = t('social_media', { namespace: 'common', locale: lang as Locale }) as any;
+const socialLinks = await getSocialMediaLinks(lang);
+const instagramLink = socialLinks.find((link) => link.platform === 'instagram');
 ---
 
 <MainLayout title={juradosData.meta.title} description={juradosData.meta.description} headerColors={headerColor}>
@@ -100,7 +102,7 @@ const socialMedia = t('social_media', { namespace: 'common', locale: lang as Loc
                     <div class="uppercase font-title font-black text-lg md:text-xl mb-4">Redes sociales:</div>
                     <div class="flex flex-col gap-4 items-center md:items-start">
                       <a href={person.instagramLink} target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group">
-                        <LazyImage src={socialMedia?.instagram?.iconUrl} alt={socialMedia?.instagram?.alt || 'Instagram'} class="w-5 h-5 md:w-6 md:h-6" color='white' loading="lazy" />
+                        <LazyImage src={instagramLink?.iconUrl} alt={instagramLink?.alt || 'Instagram'} class="w-5 h-5 md:w-6 md:h-6" color='white' loading="lazy" />
                         <span class="font-title italic font-bold text-xl group-hover:underline">@{person.instagram}</span>
                       </a>
                     </div>
