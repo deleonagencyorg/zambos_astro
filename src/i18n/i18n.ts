@@ -59,7 +59,7 @@ currentLocale = detectInitialLocale();
  * @returns Texto traducido
  */
 export function t(key: TranslationKey, options?: { locale?: Locale, namespace?: string }): any {
-  const locale = options?.locale || currentLocale;
+  const locale = options?.locale || getLocale();
   const namespace = options?.namespace || 'common';
   
   try {
@@ -105,6 +105,11 @@ export function t(key: TranslationKey, options?: { locale?: Locale, namespace?: 
  * @param locale Nuevo idioma
  */
 export function setLocale(locale: Locale): void {
+  const store = requestLocaleStore();
+  if (store) {
+    if (locale in translations) store.locale = locale;
+    return;
+  }
   if (locale in translations) {
     if (locale !== currentLocale) {
       currentLocale = locale;
@@ -123,7 +128,11 @@ export function setLocale(locale: Locale): void {
  * @returns Código de idioma actual
  */
 export function getLocale(): Locale {
-  return currentLocale;
+  return requestLocaleStore()?.locale ?? currentLocale;
+}
+
+function requestLocaleStore(): { locale: Locale } | undefined {
+  return (globalThis as any).__requestLocale?.getStore();
 }
 
 // Sincronizar entre pestañas

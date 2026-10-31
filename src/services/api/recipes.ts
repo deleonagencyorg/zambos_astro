@@ -13,6 +13,7 @@ function mapRecipe(item: CMSRecipeRaw): Recipe {
     cmsId: item.id,
     slug,
     title: item.title,
+    description: item.description || "",
     image,
     "preview-image": image,
     preparation_time: item.preparationTime ?? 0,

@@ -9,6 +9,7 @@ export interface CmsNewsItem {
   subtitle?: string;
   image?: string;
   imageMobile?: string;
+  video?: string;
   gallery?: string[];
   content?: string;
   excerpt?: string;
@@ -50,6 +51,7 @@ export interface BlogPost {
   image?: string;
   image_banner?: string;
   imageMobile?: string;
+  video?: string;
   gallery?: string[];
   category?: string;
   tags?: string[];
@@ -69,6 +71,7 @@ export function toBlogPost(item: CmsNewsItem): BlogPost {
     image: item.image,
     image_banner: item.image,
     imageMobile: item.imageMobile,
+    video: item.video || undefined,
     gallery: item.gallery,
     category: item.category,
     tags: item.tags,

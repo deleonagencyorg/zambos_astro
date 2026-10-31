@@ -42,14 +42,8 @@ const [siteTexts, products, homePage, discover, videosList, socialLinks] = await
   getHomeVideos(currentLang),
   getSocialMediaLinks(currentLang),
 ]);
-const galleryAssets =
-  t("", { namespace: "gallery", locale: currentLang }) || {};
-const brandsAssets = t("", { namespace: "brands", locale: currentLang }) || {};
 const experiences =
   t("experiences", { namespace: "experiences", locale: currentLang }) || [];
-const brandsList = brandsAssets.brands || [];
-const zambosBrand = brandsList.find((brand: any) => brand.id === "zambos");
-const zambosProducts = zambosBrand?.products || [];
 const productsSectionTitle = siteTexts["home.products.title"] || "";
 
 const discoverAssets = { title: discover.title, images: [] };
@@ -73,51 +67,6 @@ const slides = getPageBanners(homePage).map((banner) => ({
   subtitle: banner.description || banner.subtitle,
   link: banner.link,
 }));
-
-// Load latest blog posts by current language from markdown
-const blogModules = import.meta.glob("../../locales/*/blog/*.md");
-let latestBlogPosts: Array<{
-  id: string;
-  slug: string;
-  title: string;
-  image?: string;
-  published_date?: string;
-}> = [];
-for (const path in blogModules) {
-  const lang = path.split("/")[3];
-  if (lang === currentLang) {
-    const mod: any = await blogModules[path]();
-    const fm = mod.frontmatter || {};
-    if (fm && fm.id && fm.slug && fm.title) {
-      latestBlogPosts.push({
-        id: String(fm.id),
-        slug: String(fm.slug),
-        title: String(fm.title),
-        image: fm.image ? String(fm.image) : "/images/blog/placeholder.jpg",
-        published_date: fm.published_date ? String(fm.published_date) : "",
-      });
-    }
-  }
-}
-function toDate(s?: string) {
-  if (!s) return 0;
-  if (/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(s)) {
-    const [d, m, y] = s.split("/").map(Number);
-    return new Date(y, (m || 1) - 1, d || 1).getTime();
-  }
-  const t = Date.parse(s);
-  return isNaN(t) ? 0 : t;
-}
-latestBlogPosts = latestBlogPosts
-  .sort((a, b) => toDate(b.published_date) - toDate(a.published_date))
-  .slice(0, 5);
-const noNewsText =
-  currentLang === "es"
-    ? "No se encuentra novedades aún para mostrar"
-    : "There are no updates to show yet";
-const topNewsLabel =
-  currentLang === "es" ? "NOTICIAS MÁS IMPORTANTES" : "TOP NEWS";
-const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
 ---
 
 <!-- src/views/Home/index.astro -->
@@ -216,13 +165,11 @@ const featuredLabel = currentLang === "es" ? "DESTACADOS" : "FEATURED";
         />
 
         <div class="container mx-auto px-4 relative z-10">
-          {(productsSectionTitle || brandsAssets.home?.title) && (
+          {productsSectionTitle && (
             <div class="text-center mb-2 relative z-20">
-              {productsSectionTitle && (
-                <h1 class="lg:text-[84px] text-[40px] italic font-bold uppercase text-white">
-                  {productsSectionTitle}
-                </h1>
-              )}
+              <h1 class="lg:text-[84px] text-[40px] italic font-bold uppercase text-white">
+                {productsSectionTitle}
+              </h1>
             </div>
           )}
 

@@ -33,3 +33,8 @@ export const cmsClient = {
     return response.json() as Promise<T>;
   },
 };
+
+export function responseItems<T>(response: { data?: T[] } | T[] | null | undefined): T[] {
+  if (Array.isArray(response)) return response;
+  return Array.isArray(response?.data) ? response.data : [];
+}

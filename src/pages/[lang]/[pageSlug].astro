@@ -1,4 +1,5 @@
 ---
+import { resolveStaticPath } from '../../utils/staticPaths';
 // src/pages/[lang]/[pageSlug].astro
 import { routesConfig, findRouteBySlug } from '../../config/routes';
 import { setLocale, type Locale } from '../../i18n/i18n';
@@ -6,7 +7,6 @@ import { getHeaderColors } from '../../config/headerColors';
 import MainLayout from '../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../layouts/MainLayoutUS.astro';
 import { getAllPages, isHomePage, type CMSPage } from '../../services/api/pages';
-import { getSiteTextMap } from '../../services/api/site-texts';
 
 // Define the expected structure of the dynamically imported modules
 interface PageModule {
@@ -28,21 +28,21 @@ const pageComponents = await Astro.glob('../../views/*/index.astro');
 const pageComponentsUS = await Astro.glob('../../views-us/*/index.astro');
 
 export async function getStaticPaths() {
-  const paths: Array<{ params: { lang: string; pageSlug: string }; props: { routeId: string; cmsPage?: CMSPage; siteTexts: Record<string, string> } }> = [];
+  const paths: Array<{ params: { lang: string; pageSlug: string }; props: { routeId: string; cmsPage?: CMSPage; seoPage?: CMSPage } }> = [];
   for (const route of routesConfig) {
     if (route.id === 'home') continue; // La página de inicio se maneja en [lang]/index.astro
 
     for (const lang in route.slugs) {
-      const siteTexts = await getSiteTextMap(lang);
+      const seoPage = (await getAllPages(lang)).find((page) => page.slug === route.slugs[lang]);
       paths.push({
         params: { lang, pageSlug: route.slugs[lang] },
-        props: { routeId: route.id, siteTexts },
+        props: { routeId: route.id, seoPage },
       });
     }
   }
 
   for (const lang of ['es', 'us']) {
-    const [cmsPages, siteTexts] = await Promise.all([getAllPages(lang), getSiteTextMap(lang)]);
+    const cmsPages = await getAllPages(lang);
     const configuredSlugs = new Set(
       routesConfig.map((route) => route.slugs[lang]).filter(Boolean)
     );
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
       if (!cmsPage.slug || cmsPage.slug.includes('/') || configuredSlugs.has(cmsPage.slug) || isHomePage(cmsPage)) continue;
       paths.push({
         params: { lang, pageSlug: cmsPage.slug },
-        props: { routeId: 'cms_page', cmsPage, siteTexts },
+        props: { routeId: 'cms_page', cmsPage },
       });
     }
   }
@@ -58,11 +58,16 @@ export async function getStaticPaths() {
   return paths;
 }
 
+const staticPath = await resolveStaticPath(getStaticPaths, Astro.params);
+if (!staticPath) {
+  return Astro.rewrite('/404');
+}
+
 const { lang, pageSlug } = Astro.params as { lang: Locale; pageSlug: string };
-const { routeId, cmsPage, siteTexts = {} } = Astro.props as {
+const { routeId, cmsPage, seoPage } = staticPath.props as {
   routeId: string;
   cmsPage?: CMSPage;
-  siteTexts?: Record<string, string>;
+  seoPage?: CMSPage;
 };
 
 setLocale(lang);
@@ -121,8 +126,8 @@ if (cmsPage) {
     return Astro.redirect(`/${lang}/404`);
   }
 
-  pageTitle = siteTexts[`meta.${currentRoute.id}.title`] || '';
-  pageDescription = siteTexts[`meta.${currentRoute.id}.description`] || '';
+  pageTitle = seoPage?.metaTitle || seoPage?.title || pageSlug.charAt(0).toUpperCase() + pageSlug.slice(1).replace(/-/g, ' ');
+  pageDescription = seoPage?.metaDescription || seoPage?.excerpt || '';
 }
 
 const headerColorConfig = getHeaderColors(routeId || 'cms_page');

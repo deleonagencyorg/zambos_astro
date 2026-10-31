@@ -48,3 +48,11 @@ export function isEmbedVideoUrl(url: string): boolean {
   if (!url) return false;
   return /youtube\.com|youtu\.be|vimeo\.com/.test(url);
 }
+
+export function cmsMediaSrc(
+  value?: string | { url?: string; originalUrl?: string; optimizedUrl?: string; seoUrl?: string } | null
+): string {
+  if (!value) return '';
+  if (typeof value === 'string') return value;
+  return value.optimizedUrl || value.originalUrl || value.url || value.seoUrl || '';
+}
