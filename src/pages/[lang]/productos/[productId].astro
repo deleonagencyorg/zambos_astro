@@ -3,6 +3,7 @@
 import { t, setLocale, type Locale } from '../../../i18n/i18n';
 import MainLayout from '../../../layouts/MainLayout.astro';
 import ProductDetail from '../../../views/Products/Detail/index.astro';
+import { productJsonLd, productMetaDescription, productPageTitle } from '../../../lib/productSeo';
 
 export function getStaticPaths() {
   // Obtener todos los idiomas y productos disponibles
@@ -45,6 +46,7 @@ const headerColors = {
 };
 ---
 
-<MainLayout title={product.name} headerColors={headerColors}>
+<MainLayout title={productPageTitle(product.name)} description={productMetaDescription(product, 'es')} headerColors={headerColors}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(productJsonLd(product, `/es/productos/${product.id}/`))} />
   <ProductDetail currentLang={currentLang} productId={productId} />
 </MainLayout>

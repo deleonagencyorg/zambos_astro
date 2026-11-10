@@ -1,36 +1,103 @@
 ---
-// Replace with your actual GTM ID
-const gtmId = import.meta.env.PUBLIC_GTM_ID || 'GTM-XXXXXX';
+const FALLBACK_GTM_ID = 'GTM-P3S5R7XT';
+const configured = import.meta.env.PUBLIC_GTM_ID;
+const missing =
+  !configured || configured === 'GTM-XXXXXX' || configured === 'GTM-EXAMPLE-ID';
+// Sin env, o con el placeholder, igual se carga el contenedor de producción.
+// data-astro-transition-persist evita que View Transitions borre gtm.js del head.
+const gtmId = missing ? FALLBACK_GTM_ID : configured;
 
-// Validar que el GTM ID esté configurado
-if (!gtmId || gtmId === 'GTM-XXXXXX') {
-  console.warn('GTM ID no está configurado correctamente. Verifica tu archivo .env');
+interface Props {
+  noscript?: boolean;
 }
+
+const { noscript = false } = Astro.props;
 ---
 
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-  <iframe 
-    src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
-    height="0" 
-    width="0" 
-    style="display:none;visibility:hidden">
-  </iframe>
-</noscript>
+{
+  noscript ? (
+    <noscript>
+      <iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      />
+    </noscript>
+  ) : (
+    <>
+      <script is:inline define:vars={{ gtmId }}>
+        (function (id) {
+          if (!id) return;
+          var w = window;
+          w.dataLayer = w.dataLayer || [];
 
-<!-- Google Tag Manager -->
-<script is:inline define:vars={{ gtmId }}>
-  if (gtmId && gtmId !== 'GTM-XXXXXX') {
-    (function(w,d,s,l,i){
-      w[l]=w[l]||[];
-      w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-      var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-      j.async=true;
-      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-      f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer',gtmId);
-  } else {
-    console.warn('GTM no inicializado: ID no válido');
-  }
-</script>
+          function containerReady() {
+            return !!(w.google_tag_manager && w.google_tag_manager[id]);
+          }
+
+          function findLoader() {
+            return document.querySelector('script[data-astro-transition-persist="zambos-gtm"]');
+          }
+
+          function watch(script) {
+            if (!script || script.getAttribute('data-gtm-watch') === '1') return;
+            script.setAttribute('data-gtm-watch', '1');
+            script.addEventListener('error', function () {
+              script.setAttribute('data-gtm-failed', '1');
+            });
+          }
+
+          function inject() {
+            if (containerReady()) return;
+            var existing = findLoader();
+            if (existing && existing.getAttribute('data-gtm-failed') !== '1') {
+              watch(existing);
+              return;
+            }
+            if (existing) existing.remove();
+            w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtm.js?id=' + encodeURIComponent(id);
+            script.setAttribute('data-astro-transition-persist', 'zambos-gtm');
+            watch(script);
+            var parent = document.head || document.documentElement;
+            if (parent) parent.appendChild(script);
+          }
+
+          function trackPage() {
+            w.dataLayer.push({
+              event: 'page_view',
+              page_location: w.location.href,
+              page_path: w.location.pathname + w.location.search,
+              page_title: document.title,
+            });
+          }
+
+          if (!w.__zambosGtmBound) {
+            w.__zambosGtmBound = true;
+            w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+            var firstLoad = true;
+            document.addEventListener('astro:page-load', function () {
+              inject();
+              if (firstLoad) {
+                firstLoad = false;
+                return;
+              }
+              trackPage();
+            });
+          }
+
+          watch(findLoader());
+        })(gtmId);
+      </script>
+      <script
+        is:inline
+        async
+        data-astro-transition-persist="zambos-gtm"
+        src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
+      />
+    </>
+  )
+}

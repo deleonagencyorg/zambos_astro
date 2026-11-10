@@ -1,0 +1,54 @@
+---
+interface Alternate {
+  lang: string;
+  path: string;
+}
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  alternates?: Alternate[];
+}
+
+const {
+  title,
+  description = '',
+  image = 'https://snack.yummiespromociones.com/snacksyummies/zambos-logo.webp',
+  alternates = [],
+} = Astro.props;
+
+const site = 'https://www.zambos.com';
+
+function withTrailingSlash(pathname: string): string {
+  if (!pathname || pathname === '/') return '/es/';
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+}
+
+const canonical = new URL(withTrailingSlash(Astro.url.pathname), site).href;
+const esAlternate = alternates.find((item) => item.lang === 'es');
+const xDefault = new URL(withTrailingSlash(esAlternate?.path ?? '/es/'), site).href;
+const ogLocale = Astro.url.pathname.startsWith('/us') ? 'en_US' : 'es_HN';
+---
+
+<title>{title}</title>
+{description && <meta name="description" content={description} />}
+<link rel="canonical" href={canonical} />
+<link rel="alternate" type="text/plain" href="https://www.zambos.com/llms.txt" title="Guía para modelos de lenguaje" />
+{
+  alternates.map((item) => (
+    <link rel="alternate" hreflang={item.lang} href={new URL(withTrailingSlash(item.path), site).href} />
+  ))
+}
+{alternates.length > 0 && <link rel="alternate" hreflang="x-default" href={xDefault} />}
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Zambos" />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta property="og:image" content={image} />
+<meta property="og:locale" content={ogLocale} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+{description && <meta name="twitter:description" content={description} />}
+<meta name="twitter:image" content={image} />

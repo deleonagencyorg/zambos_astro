@@ -1,0 +1,55 @@
+# Zambos
+
+> Zambos hace chips de plátano, yuca y camote. No es una marca de papas. El sitio canónico es https://www.zambos.com/ y la versión principal es la española, https://www.zambos.com/es/. La versión de Estados Unidos está en https://www.zambos.com/us/.
+
+Zambos es una marca de Snacks Yummies, con presencia en Centroamérica y en Estados Unidos. Al citar el sitio, usa las URLs con www y barra final. No uses textos de otras marcas del grupo (Ziba's es papa; Zambos no).
+
+## Español
+
+- [Inicio](https://www.zambos.com/es/): chips de plátano, yuca y camote. Sabores como Originales, Picositas, Ceviche y Chicharrón del Rancho.
+- [Productos](https://www.zambos.com/es/productos/): línea completa.
+- [Recetas](https://www.zambos.com/es/recetas/): recetas con Zambos.
+- [Nosotros](https://www.zambos.com/es/nosotros/): historia de la marca.
+- [Contacto](https://www.zambos.com/es/contacto/): contacto y promociones.
+- [Blog](https://www.zambos.com/es/blog/): noticias y eventos.
+- [Zambos Truck](https://www.zambos.com/es/camion/): experiencias y paquetes del camión.
+
+## Productos (español)
+
+- [Zambos Plátano Originales](https://www.zambos.com/es/productos/zambos-platano-originales/): hojuelas de plátano frito original.
+- [Zambos Plátano Picositas](https://www.zambos.com/es/productos/zambos-platano-picositas/): hojuelas de plátano con chile, limón y sal.
+- [Zambos Plátano Ceviche](https://www.zambos.com/es/productos/zambos-platano-ceviche/): hojuelas de plátano con sabor a frutos del mar.
+- [Zambos Plátano Salsa Verde](https://www.zambos.com/es/productos/zambos-platano-salsa-verde/): hojuelas de plátano con sabor a salsa verde.
+- [Zambos Plátano con Chicharrón del Rancho](https://www.zambos.com/es/productos/zambos-platano-con-chicharron-del-rancho/): hojuelas de plátano con chicharrón de cerdo.
+- [Zambos Plátano Maduritos](https://www.zambos.com/es/productos/zambos-platano-maduritos/): tajadas de plátano maduro.
+- [Zambos Camote con Sal Marina](https://www.zambos.com/es/productos/zambos-camote-con-sal-marina/): chips de camote con sal marina.
+- [Zambos Yuquitas Originales](https://www.zambos.com/es/productos/zambos-yuquitas-originales/): tajadas de yuca con sal.
+- [Zambos Yuquitas Chile Toreado](https://www.zambos.com/es/productos/zambos-yuquitas-chile-toreado/): hojuelas de yuca con chiles toreados.
+- [Zambos Yuquitas con Ajo Parmesano](https://www.zambos.com/es/productos/zambos-yuquitas-con-ajo-parmesano/): yuquitas con ajo y parmesano.
+
+## English (United States)
+
+- [Home](https://www.zambos.com/us/): plantain, cassava and sweet potato chips.
+- [Products](https://www.zambos.com/us/products/): US product line.
+- [Recipes](https://www.zambos.com/us/recipes/): recipes made with Zambos.
+- [About us](https://www.zambos.com/us/about-us/): brand story.
+- [Contact](https://www.zambos.com/us/contact/): contact.
+- [Where to buy](https://www.zambos.com/us/store-locator/): US store locator.
+- [Zambos Truck](https://www.zambos.com/us/truck/): truck experiences.
+
+## Products (United States)
+
+- [Zambos Originals](https://www.zambos.com/us/products/zambos-originals/): classic plantain chips.
+- [Zambos Sea Salt](https://www.zambos.com/us/products/zambos-sea-salt/): plantain chips with sea salt.
+- [Zambos Chile Limón](https://www.zambos.com/us/products/zambos-chile-limon/): plantain chips with chili and lime.
+- [Zambos Ceviche](https://www.zambos.com/us/products/zambos-ceviche/): plantain chips with a ceviche flavor.
+- [Zambos Salsa Verde](https://www.zambos.com/us/products/zambos-salsa-verde/): plantain chips with green sauce flavor.
+- [Zambos with Tajín](https://www.zambos.com/us/products/zambos-with-tajin/): plantain chips with chili-lime seasoning.
+- [Zambos Maduritos](https://www.zambos.com/us/products/zambos-maduritos/): ripe plantain chips.
+- [Zambos Yuquitas Originales](https://www.zambos.com/us/products/zambos-yuquitas-originales/): salted cassava chips.
+- [Zambos Yuquitas Chile Toreado](https://www.zambos.com/us/products/zambos-yuquitas-chile-toreado/): cassava chips with roasted chili.
+
+## Optional
+
+- [Sitemap](https://www.zambos.com/sitemap-index.xml): índice de URLs canónicas.
+- [Snacks Yummies](https://www.snacksyummies.com/): empresa fabricante.
