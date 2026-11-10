@@ -1,5 +1,7 @@
 ---
 import GoogleTagManager from '../components/common/GoogleTagManager.astro';
+import UsSuggestionBanner from '../components/common/UsSuggestionBanner.astro';
+import SEOHead from '../components/SEOHead.astro';
 import Favicon from '../components/Favicon.astro';
 // import GoogleTagManager from './i18n/GoogleTagManager.astro';
 // import GoogleTagManagerNoScript from './i18n/GoogleTagManagerNoScript.astro';
@@ -10,6 +12,8 @@ import MobileMenu from '../components/common/MobileMenu/index.astro';
 import I18nProvider from '../components/i18n/I18nProvider.astro';
 import YouTubeVideoModal from '../components/common/YouTubeVideoModal.astro';
 import { routesConfig } from '../config/routes';
+import esProducts from '../locales/es/products.json';
+import usProducts from '../locales/us/products.json';
 import { getHeaderColors } from '../config/headerColors';
 import { ViewTransitions } from 'astro:transitions';
 import "../styles/global.css";
@@ -37,24 +41,46 @@ const currentLang = validLocales.includes(langFromUrl) ? langFromUrl : 'es'; // 
 const htmlLang = currentLang === 'us' ? 'en' : 'es';
 
 const { pathname } = Astro.url;
-const BASE_URL = 'https://zambos.com';
-const canonicalUrl = `${BASE_URL}${pathname}`;
 
-// Compute hreflang alternate paths using routesConfig slug mapping
-function getAlternatePath(toLang: string): string {
+const recipeIds: Record<string, Set<string>> = {
+  es: new Set(
+    Object.keys(import.meta.glob('../locales/es/recipes/*.json')).map((file) => file.split('/').pop()!.replace('.json', ''))
+  ),
+  us: new Set(
+    Object.keys(import.meta.glob('../locales/us/recipes/*.json')).map((file) => file.split('/').pop()!.replace('.json', ''))
+  ),
+};
+const productIds: Record<string, Set<string>> = {
+  es: new Set(esProducts.items.map((item) => item.id)),
+  us: new Set(usProducts.items.map((item) => item.id)),
+};
+
+function getAlternatePath(toLang: 'es' | 'us'): string | undefined {
   const segs = pathname.split('/').filter(Boolean);
   const slug = segs[1] || '';
-  if (!slug) return `/${toLang}`;
-  const route = routesConfig.find((r) => r.slugs[currentLang] === slug);
-  if (route?.slugs[toLang]) {
-    const rest = segs.slice(2).join('/');
-    return rest ? `/${toLang}/${route.slugs[toLang]}/${rest}` : `/${toLang}/${route.slugs[toLang]}`;
+  if (!slug) return `/${toLang}/`;
+  const route = routesConfig.find((item) => item.slugs[currentLang] === slug);
+  const toSlug = route?.slugs[toLang];
+  if (!route || !toSlug) return undefined;
+  const rest = segs.slice(2);
+  if (rest.length === 0) return `/${toLang}/${toSlug}/`;
+  const detailId = rest.length === 1 ? rest[0] : '';
+  if (route.id === 'recipes' && recipeIds[toLang]?.has(detailId)) {
+    return `/${toLang}/${toSlug}/${detailId}/`;
   }
-  return `/${toLang}/${slug}`;
+  if (route.id === 'products' && productIds[toLang]?.has(detailId)) {
+    return `/${toLang}/${toSlug}/${detailId}/`;
+  }
+  return undefined;
 }
 
 const esPath = currentLang === 'es' ? pathname : getAlternatePath('es');
 const enPath = currentLang === 'us' ? pathname : getAlternatePath('us');
+const documentTitle = !title
+  ? 'Zambos'
+  : title.includes('Zambos')
+    ? title
+    : `${title} | Zambos`;
 
 // Obtener configuración de colores basada en la ruta actual
 const headerColorConfig = getHeaderColors(pathname);
@@ -76,20 +102,22 @@ if (headerColors) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <GoogleTagManager />
     <Favicon />
-    
-    {title && <title>Zambos - {title}</title>}
-    {description && <meta name="description" content={description} />}
+    <SEOHead
+      title={documentTitle}
+      description={description}
+      alternates={[
+        ...(esPath ? [{ lang: 'es', path: esPath }] : []),
+        ...(enPath ? [{ lang: 'en-US', path: enPath }] : []),
+      ]}
+    />
     <ViewTransitions />
     <!-- Canonical & hreflang for SERPs -->
-    <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" hreflang="es" href={`${BASE_URL}${esPath}`} />
-    <link rel="alternate" hreflang="en" href={`${BASE_URL}${enPath}`} />
-    <link rel="alternate" hreflang="x-default" href={`${BASE_URL}/es`} />
     <slot name="head" />
     {/* <GoogleTagManager /> */}
   </head>
   <body class={`font-sans min-h-screen flex flex-col ${className || ''}`}>
-    {/* <GoogleTagManagerNoScript /> */}
+    <GoogleTagManager noscript />
+    <UsSuggestionBanner />
     <I18nProvider>
       <slot name="header">
         <Header currentLang={currentLang} headerColors={headerColors} />

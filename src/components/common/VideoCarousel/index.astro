@@ -75,7 +75,10 @@ const {
                         src={slide.desktop} 
                         alt={slide.alt || "Slide background"} 
                         class="slide-image"
+                        width="1600"
+                        height="650"
                         loading={index === 0 ? "eager" : "lazy"}
+                        fetchpriority={index === 0 ? "high" : "auto"}
                       />
                     </picture>
                   </div>
@@ -88,7 +91,10 @@ const {
                       src={slide.desktop} 
                       alt={slide.alt || "Slide background"} 
                       class="slide-image"
+                      width="1600"
+                      height="650"
                       loading={index === 0 ? "eager" : "lazy"}
+                      fetchpriority={index === 0 ? "high" : "auto"}
                     />
                   </picture>
                 </div>
@@ -145,19 +151,27 @@ const {
   .video-carousel-container {
     position: relative;
     width: 100%;
+    height: var(--vc-mobile-height);
     overflow: hidden;
+    aspect-ratio: 16 / 9;
   }
 
-  .video-carousel {
+  .video-carousel,
+  .swiper-slide,
+  .slide-content,
+  .slide-link-wrapper,
+  .image-wrapper,
+  .video-container,
+  .slide-picture {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   /* Link wrapper for clickable slides */
   .slide-link-wrapper {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     text-decoration: none;
     cursor: pointer;
   }
@@ -165,14 +179,14 @@ const {
   .slide-content {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   /* Image wrapper con fondo */
   .image-wrapper {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow: hidden;
     background: #0DB04A;
     display: flex;
@@ -183,17 +197,30 @@ const {
   .slide-picture {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   
   /* Imagen que se ajusta al contenedor sin deformarse ni recortarse */
-  .slide-image {
+  .slide-image,
+  .slide-video {
     width: 100%;
-    height: auto;
+    height: 100%;
     max-width: 100%;
     display: block;
     object-fit: contain;
     object-position: center center;
+  }
+
+  @media (min-width: 768px) {
+    .video-carousel-container {
+      height: var(--vc-tablet-height);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .video-carousel-container {
+      height: var(--vc-desktop-height);
+    }
   }
 
   .image-wrapper[data-fit="contain"] .slide-image {

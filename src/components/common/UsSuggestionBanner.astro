@@ -1,0 +1,18 @@
+---
+---
+
+<div id="us-suggestion" class="hidden bg-[#0DB04A] text-white text-center text-sm md:text-base px-4 py-3 relative z-50" role="region" aria-label="Zambos USA">
+  <p>
+    ¿Estás en EE. UU.?
+    <a class="underline font-semibold" href="/us/">Visita Zambos USA</a>
+  </p>
+</div>
+<script is:inline>
+  (function () {
+    var match = document.cookie.match(/(?:^|; )user_country=([^;]*)/);
+    var country = match ? decodeURIComponent(match[1]) : '';
+    if (country !== 'US') return;
+    var banner = document.getElementById('us-suggestion');
+    if (banner) banner.classList.remove('hidden');
+  })();
+</script>

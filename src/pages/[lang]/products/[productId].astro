@@ -5,6 +5,7 @@ import MainLayout from '../../../layouts/MainLayout.astro';
 import MainLayoutUS from '../../../layouts/MainLayoutUS.astro';
 import ProductDetail from '../../../views/Products/Detail/index.astro';
 import ProductDetailUS from '../../../views-us/Products/Detail/index.astro';
+import { productJsonLd, productMetaDescription, productPageTitle } from '../../../lib/productSeo';
 
 export function getStaticPaths() {
   // Obtener todos los idiomas y productos disponibles
@@ -43,6 +44,7 @@ const headerColors = {
 };
 ---
 
-<Layout title={product.name} headerColors={headerColors} preloadImages={isUS ? ['https://snack.yummiespromociones.com/SnacksyummiesAssets/bgproductdetailus.webp'] : []}>
+<Layout title={productPageTitle(product.name)} description={productMetaDescription(product, 'us')} headerColors={headerColors} preloadImages={isUS ? ['https://snack.yummiespromociones.com/SnacksyummiesAssets/bgproductdetailus.webp'] : []}>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(productJsonLd(product, `/us/products/${product.id}/`))} />
   <Detail currentLang={currentLang} productId={productId} />
 </Layout>
