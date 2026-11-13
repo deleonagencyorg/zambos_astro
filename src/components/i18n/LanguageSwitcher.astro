@@ -42,7 +42,7 @@ const getTranslatedPath = (targetLocale: Locale) => {
   const currentRoute = pathParts.slice(1).join('/');
   
   // Para la ruta raíz (/es o /us)
-  if (pathParts.length <= 1) return `/${targetLocale}`;
+  if (pathParts.length <= 1) return `/${targetLocale}/`;
 
   // Detect if we are on a detail page: /lang/section/id (3 segments)
   if (pathParts.length >= 3) {
@@ -61,7 +61,7 @@ const getTranslatedPath = (targetLocale: Locale) => {
     if (esSection in detailSections) {
       // We are on a detail page — redirect to the listing in the target language
       const targetSection = targetLocale === 'es' ? esSection : enSection;
-      return `/${targetLocale}/${targetSection}`;
+      return `/${targetLocale}/${targetSection}/`;
     }
   }
 
@@ -79,7 +79,7 @@ const getTranslatedPath = (targetLocale: Locale) => {
     currentRoute
   );
 
-  return `/${targetLocale}/${translatedRoute}`;
+  return `/${targetLocale}/${translatedRoute}/`;
 };
 
 const esUrl = activeLocale === 'es' ? currentPath : getTranslatedPath('es');

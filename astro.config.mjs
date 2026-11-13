@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.zambos.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   integrations: [
     react(),
     tailwind({
