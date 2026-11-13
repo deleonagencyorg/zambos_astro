@@ -29,7 +29,7 @@ export const onRequest = defineMiddleware(async ({ request, redirect }, next) =>
 
   // Caso especial para yummiesone: redirigir a home en inglés
   if (section === 'yummiesone' && lang === 'us') {
-    return redirect('/us');
+    return redirect('/us/');
   }
 
   // Verificar si la ruta existe en la configuración
@@ -37,7 +37,7 @@ export const onRequest = defineMiddleware(async ({ request, redirect }, next) =>
   
   // Si la ruta no existe, redirigir al home
   if (!routeExists) {
-    return redirect(`/${lang}`);
+    return redirect(`/${lang}/`);
   }
 
   // Verificar si hay una discrepancia entre el idioma y la sección
